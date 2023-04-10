@@ -1,9 +1,158 @@
 @base_cost = 300
 @city_cost = 500
 
+district_crashed_slaver_ship = {
+	is_capped_by_modifier = yes
+	can_demolish = no
+	exempt_from_ai_planet_specialization = yes
+
+	show_on_uncolonized = {
+		always = no
+	}
+
+	potential = {
+		exists = owner
+		uses_district_set = standard
+		has_deposit = d_crashed_slaver_ship
+	}
+
+	allow = {
+		NOT = { has_modifier = resort_colony }
+		NOT = { has_modifier = slave_colony }
+	}
+
+	conversion_ratio = 1
+	convert_to = {
+		district_city
+		district_arcology_housing
+		district_rw_city
+		district_nexus
+		district_hive
+	}
+
+	resources = {
+		category = planet_districts_cities
+		upkeep = {
+			energy = 2
+		}
+	}
+
+	planet_modifier = {
+		planet_housing_add = 4
+		planet_max_buildings_add = 0.75
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				NOT = { has_country_flag = origin_broken_shackles_crashed_slaver_ship_depleted }
+			}
+		}
+		job_broken_shackles_scavenger_add = 1
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				has_valid_civic = civic_agrarian_idyll
+			}
+		}
+		modifier = {
+			planet_housing_add = -1
+		}
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { has_active_tradition = tr_prosperity_public_works }
+		}
+		modifier = {
+			planet_housing_add = 1
+		}
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				has_technology = tech_housing_1
+			}
+		}
+		modifier = {
+			planet_housing_add = 1
+		}
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				has_technology = tech_housing_2
+				NOT = { has_valid_civic = civic_agrarian_idyll }
+			}
+		}
+		modifier = {
+			planet_housing_add = 1
+		}
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { has_active_tradition = tr_mercantile_trickle_up_economics }
+		}
+		modifier = {
+			job_clerk_add = 1
+		}
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { has_country_flag = origin_broken_shackles_crashed_slaver_ship_depleted }
+		}
+		modifier = {
+			job_clerk_add = 1
+		}
+	}
+
+	triggered_desc = {
+		trigger = {
+			exists = owner
+			owner = {
+				NOT = { has_country_flag = origin_broken_shackles_crashed_slaver_ship_depleted }
+			}
+		}
+		text = job_broken_shackles_scavenger_effect_desc
+	}
+
+	triggered_desc = {
+		trigger = {
+			exists = owner
+			owner = {
+				OR = {
+					has_active_tradition = tr_mercantile_trickle_up_economics
+					has_country_flag = origin_broken_shackles_crashed_slaver_ship_depleted
+				}
+			}
+		}
+		text = job_clerk_effect_desc
+	}
+	ai_resource_production = {
+		energy = 1
+		trigger = {
+			always = yes
+		}
+	}
+}
+
 district_city = {
 	base_buildtime = 480
 	is_capped_by_modifier = no
+	exempt_from_ai_planet_specialization = yes
 
 	show_on_uncolonized = {
 		exists = from
@@ -17,8 +166,22 @@ district_city = {
 	}
 
 	potential = {
-		exists = owner
-		owner = { is_regular_empire = yes }
+		OR = {
+			NOT = { exists = owner } #this condition is needed for galaxy generation
+			AND = {
+				exists = owner
+				owner = {
+					OR = {
+						is_regular_empire = yes
+						AND = {
+							is_country_type = primitive
+							is_hive_empire = no
+						}
+					}
+				}
+			}
+		}
+		NOT = { has_deposit = d_crashed_slaver_ship }
 		OR = {
 			uses_district_set = standard
 			uses_district_set = hive_world
@@ -71,7 +234,10 @@ district_city = {
 		potential = {
 			exists = owner
 			owner = {
-				is_regular_empire = yes
+				OR = {
+					is_regular_empire = yes
+					has_origin = origin_fear_of_the_dark
+				}
 			}
 		}
 		modifier = {
@@ -117,7 +283,7 @@ district_city = {
 	triggered_planet_modifier = {
 		potential = {
 			exists = owner
-			owner = { has_active_tradition = tr_prosperity_interstellar_franchising }
+			owner = { has_active_tradition = tr_mercantile_trickle_up_economics }
 		}
 		modifier = {
 			job_clerk_add = 1
@@ -143,6 +309,7 @@ district_city = {
 district_hive = {
 	base_buildtime = 480
 	is_capped_by_modifier = no
+	exempt_from_ai_planet_specialization = yes
 
 	show_on_uncolonized = {
 		from = { is_hive_empire = yes }
@@ -238,6 +405,7 @@ district_hive = {
 district_nexus = {
 	base_buildtime = 480
 	is_capped_by_modifier = no
+	exempt_from_ai_planet_specialization = yes
 
 	show_on_uncolonized = {
 		from = { is_machine_empire = yes }
@@ -387,7 +555,10 @@ district_industrial = {
 		potential = {
 			exists = owner
 			owner = {
-				is_regular_empire = yes
+				OR = {
+					is_regular_empire = yes
+					has_origin = origin_fear_of_the_dark
+				}
 				is_crafter_empire = no
 			}
 		}
@@ -410,7 +581,10 @@ district_industrial = {
 		potential = {
 			exists = owner
 			owner = {
-				is_regular_empire = yes
+				OR = {
+					is_regular_empire = yes
+					has_origin = origin_fear_of_the_dark
+				}
 				is_catalytic_empire = no
 			}
 		}
@@ -629,6 +803,7 @@ district_industrial = {
 				is_regular_empire = yes
 				is_crafter_empire = no
 			}
+			NOT = { has_designation = col_foundry }
 		}
 		text = job_artisan_effect_desc
 	}
@@ -640,6 +815,7 @@ district_industrial = {
 				is_regular_empire = yes
 				is_crafter_empire = yes
 			}
+			NOT = { has_designation = col_foundry }
 		}
 		text = job_artificer_effect_desc
 	}
@@ -662,6 +838,7 @@ district_industrial = {
 				is_regular_empire = yes
 				is_catalytic_empire = no
 			}
+			NOT = { has_designation = col_factory }
 		}
 		text = job_foundry_effect_desc
 	}
@@ -673,6 +850,7 @@ district_industrial = {
 				is_regular_empire = yes
 				is_catalytic_empire = yes
 			}
+			NOT = { has_designation = col_factory }
 		}
 		text = job_catalytic_technician_effect_desc
 	}
@@ -731,21 +909,6 @@ district_industrial = {
 			}
 		}
 		text = job_maintenance_drone_effect_desc
-	}
-
-	ai_resource_production = {
-		alloys = 1
-		trigger = {
-			always = yes
-		}
-	}
-	ai_resource_production = {
-		consumer_goods = 1
-		trigger = {
-			owner = {
-				country_uses_consumer_goods = yes
-			}
-		}
 	}
 }
 
@@ -850,7 +1013,7 @@ district_srw_commercial = {
 	triggered_desc = {
 		text = job_clerk_effect_desc
 	}
-	
+
 	triggered_desc = {
 		text = job_merchant_effect_desc
 		trigger = {
@@ -881,12 +1044,5 @@ district_srw_commercial = {
 			}
 		}
 		text = job_artificer_effect_desc
-	}
-
-	ai_resource_production = {
-		energy = 1
-		trigger = {
-			always = yes
-		}
 	}
 }

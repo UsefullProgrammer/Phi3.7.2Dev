@@ -1,6 +1,6 @@
 PHI mp balancing
 
-current version 1.0
+current version 1.5b
 
 To be played standalone!
 
@@ -129,3 +129,186 @@ v0.9 (the phantom minaccia)
 v1.0 (alone in the dark)
 -	removed every reference to guilli/stefan
 -	major rebalancing of internal politics
+-	gestalt robots and synthetics cost extra 0.25 alloy/month in maintenance
+-	planet modifiers and terraformation
+-	balanced civics
+-	reworked economic policies
+-	reworked traits
+-	focus on leader exp gains: now it is worth it!
+
+v1.1 (alea iacta est)
+-	solved issues with "random list" not being really random
+-	removed the "trade victory" condition as it seemed redundand with the galactic custodianship
+-	minor fixes and QoL
+
+v1.2 (hello there, general kenobi)
+-	clone army origin requires to be somewhat militarist
+-	clone army has 50% increased empire sprawl malus for "normal" reproducing people; the malus is removed (and more) if clone fertility project is completed
+-	max number of clone vats = 2, but the special project removes this limit
+-	reworked/balanced the traditions
+-	soc tech that gave naval cap +30 are now replaced with naval cap +5%
+-	pimped up catalytic processing (+15% alloys production)
+-	pimped up agrarian idyll (farmers output +1, every 3 agricolture distric give +1 building slot)
+-	removed the point defense sections for corvettes
+-	clones cannot be megacorps
+-	space critters weapons are now better (no alloys costs)
+-	reworked versatility tradition
+-	reworked voidborn origin and traits
+
+v1.3 (sneaky)
+-	each missile tech now gives +5% explosive weapons fire rate
+-	missiles repeatable techs now give +10% fire rate/damage
+-	reworked subterfuge tradition: now it is not too bad!
+-	automatic research/automatic exploration are available at game start
+-	added new edict to run for federation presidency
+-	nerfed a little tradition:discovery bonus to station output (now +50%)
+-	federation allies' space is now considered as connected to your own space for rules' contiguity compliance
+-	now it is possible to build outposts in the L-cluster (connection rules still apply)
+-	mastery of nature perk revamped!
+-	removed the autospawn of rebels when pops are unhappy
+-	nerfed a little the modding bonus, but added +100% megastructures contruction speed
+-	missiles weapons now add to ship speed based on their level
+-	removed limits to private research centers / public relations firms a megacorp can build on branch offices
+-	naval attrition: -10% entering enemy systems / capped @50%
+-	enigmatic engineering perk now also adds +20% engineering research speed
+-	world shaper perk now also adds 3 max district to non-artificial planets
+-	galactic doorstep now has +100% megastructures build speed
+-	an overlord/fed leader can now build proxy meta-signal emitter/transmitters
+-	remnant origins now starts with anti-grav engineering tech option unlocked
+-	shattered ring origin now starts with mega-engineering tech option unlocked
+-	reworked lost colony: motherland can be played (just enter the multi after 2 days have passed from start and select the empire)
+-	in order to escape the galaxy with the project, one must not be either a vassal nor at war
+-	war in heaven now requires everybody to choose sides - no more waiting on the lines!
+
+v1.4 (third law of robotics)
+-	slightly rebalanced the species traits
+-	new "Supranational Authority" bill to create an authoritarian fed from vassals
+-	major update on buildings: research labs are now substituted by engineering/physics labs
+-	maintenance drones now produce +2 society research
+-	added Subterfuge Focus policy
+-	added Adaptability and Versatility Focus policies
+-	"contact" bonus to society research: +5/month per relations
+-	max starbases no more influenced by nb of systems but by nb of pops (+1 starbase/50 pops)
+-	centralizing federations now give juicy bonuses to every member
+-	reworked feds centralization laws - they now come with bonuses to all members!
+-	edict: "blood tribute" available to xenophobe fed leader
+-	rebalanced aristocratic and merchant guilds
+-	pimped up adaptability and synchronicity traditions
+-	machine worlds ap now is now balanced vs gaia/hive perks
+
+v1.5 (noblesse oblige)
+-	noble estates now offer 4 housing and +3 soldier jobs
+-	gaia and oceanic origins come with some extra maluses
+-	reworked diplomatic stance bonuses
+-	tomb world origin starts with 4 additional bomb crater blockers, only removable with terraforming tech
+-	increased materialists' bonus to robot upkeep
+-	mechanist origin pimped up
+-	free haven civic completely reworked
+-	new political planetary decisions: sacrifice stability and influence for powerful bonuses!
+-	buffed up the crew quarters (starbase building)
+-	nerfed anchorage (starbase module)
+-	new "Punish the Offender" edict to set conquest war goal against attackers
+-	gestalt empires now can burn artifacts to get influence
+-	machine worlds now give +2 replicator jobs instead of +1
+-	no retreat fleet policy now reduces the amount of attrition suffered by ships
+-	implemented some checks for joining defensive wars and punishing the offenders
+-	biffed up Galactic Doorstep origin with megastructures cost -50%
+-	probably solved a bug linked to sublimation (unexpected random crashes)
+-	tradition expansion finisher now gives -50% to void dwellers' habitat building cost
+-	emergency election costs reduced to 100 influence (oligarchies and megacorps affected)
+-	megacorp government form now gives +10% trade value (instead of admin cap and over maluses)
+-	added edict "War in Heaven Ongoing": +1000 admin cap as long as the war in heaven is active
+-	ringworld restoration now costs 10000 minerals (instead of alloys) and gives also an arcane generator
+-	colossus now takes "only" 5 yrs to build
+-	colossus AP removed - everybody can build colossi via tech juggernaut
+-	vassals/subsidiaries/tributaries now pay also a rare resources tribute (5% or 10% depending on type)
+-	galactic ambition (under "expansion" tradition) now gives also -20% planet structures upkeep
+-	reworked max health for menacing ships
+-	ap become the crisis now enables no retreat stance
+-	homicidal empires with subterfuge economic policy don't need the envoy to get the bonus
+-	most unity bonuses are now +50% (instead of +100%/+10%/etc...)
+-	pimped devouring swarm bonus to +3 hull / +6 armor daily regen
+-	machine terminators now get also +100% pop assembly speed
+-	wenkwort's modifiers have been made consistent
+-	removed arcane generator from void dwellers' home habitat
+-	planetary prospecting now also adds a phi's planetary modifier
+-	capital planets starts just with pollution modifier
+
+v1.6a (marIA)
+-	marIA (tm) - artificial intelligence
+-	subterfuge econ policy now requires people to actually spy on targets to award bonuses
+-	plunder now gives also some unity (as much as alloys)
+-	pimped up society tech bonuses (+25% society output / +5% empire society research)
+-	reworked grasp the void and interstellar dominion ap
+-	habitable worlds survey now requires just 4 planets to explore
+-	slight improvements to senate laws (ecology & trade)
+-	traits venerable and conformist improved
+-	expropriation planetary decision
+-	branch office buildings now give corresponding jobs (instead of clerks)
+-	machine empires outposts' cost is now 100 as everyone else
+-	agrarian idyll: farmers give +1 unity / +1 building slots per farming district
+-	minor changes to xenophile fed perks
+-	minor changes to pacifist faction
+-	marIA: scorched earth tactics!
+-	better phi_ai.6 (check for bbeg vs weak empires)
+-	solved bug: when in a defensive war, a country should always have humiliation cb available!
+-	gaia, machine and hiveworld terraforming projects now take the same amount of time
+-	survive cannot be used as wg if the attacker is using humiliation
+-	duelists now give +6 unity and +10 naval cap (up from 3u, 2nc)
+-	robots' simulation centers give +25% unity output on planet (cumulative!)
+
+-	subjects don't have bbeg modifiers vs overlord
+-	capital productivity tech now only gives bonuses (no more increased maintenance)
+-	ancient artifact reverse engineering tech now add +0.10 minor artifacts per month
+-	doomsday start comes with a size 6 gaia world in the capital system
+
+
+
+
+pop_percentage
+member_of_faction
+export_trigger_value_to_variable
+
+origine hive world
+
+
+fare un origine orda migratoria, con cb speciale che ti permette di prendere la capitale nemica e consumarla
+vendere le navi
+
+utopia.3190
+
+
+piu' uccidi e piu' prendi punti genetici
+
+
+rifare ecological senate laws --> ogni livello deve togliere jobs upkeep / building upkeep
+penal colony capital
+rifare duelist
+
+
+
+every_fleet_in_system
+auto_move_to_planet
+auto_follow_fleet
+fleet_event
+fleet_size
+
+
+any_envoy = {
+	has_envoy_task = {
+		task = federation
+	}
+}
+
+opposing_ethics_divergence = {
+	steps > 2
+	who = root.contact_country
+}
+
+i vassalli con buoni rapporti devono votare le leggi proposte dall'overlord, a meno di evidenti controindicazioni
+
+ia ritardata mi chiude i confini quando vado a picchiare un purifier
+
+1.	edo		50m
+2.	fuffy	30m
+3.	gobbi	saldato

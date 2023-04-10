@@ -1,13 +1,13 @@
+[b]PHI 1.6a[/b]
+
 Wiki page --> [url=https://stellaris.paradoxwikis.com/Phi_mp_balancing] [b]HERE[/b] [/url]
 
-Strategy Guide --> [url=https://docs.google.com/document/d/e/2PACX-1vRgPf7gUedOMI1AcG9dYW7yw5e0vgwtr9EWGswMq33WkMNpJHrDpHkLcvGNeeqfZW5AOYRDSu4mJKjs/pub] [b]HERE[/b] [/url]
-Complete Changelog --> [url=https://docs.google.com/document/d/e/2PACX-1vTeZuzk3ilJyjXsgS0bjYeyOXJiELclUL0FSiJaw9NlfiLz1TTmCbjO_YH59GMezqPsO8vUiqNlq5TP/pub] [b]HERE[/b] [/url]
+Strategy Guide --> [url=https://stellaris.paradoxwikis.com/Phi_mp_balancing/Phi_strategy_guide] [b]HERE[/b] [/url]
+Complete Changelog --> [url=https://stellaris.paradoxwikis.com/Phi_mp_balancing/Phi_updates_and_changelog] [b]HERE[/b] [/url]
 
-[quote=Mario Minaccia]
-This mod is stable and playable but [b]currently under further development[/b]. I have begun working on it in October '20, and it is now at its [b]1.1 version[/b]. I'm actually using this mod to host long-term campaigns, so save-game uncompatible updates are kept at a minimum...
+This mod is stable and playable AND [b]always under further development[/b]. I have been working on it since October '20, and it is now at its [b]1.6a version[/b]. I'm actually using this mod to host long-term campaigns, so save-game uncompatible updates are kept at a minimum...
 
 If you plan to host a big multi-session mp game using this mod, feel free to send me a [b]direct message[/b] or leave a [b]comment[/b] in order to be sure that any game breaking updates are not planned as long as you finish your game!
-[/quote]
 
 [hr][/hr]
 
@@ -75,6 +75,4 @@ Moreover, each vassal relation will now cost 1 influence per month (with the exc
 [*][b]diplomacy tradition[/b] is now stronger than ever!
 [/list]
 
-And many more things... check out every game changes [url=https://docs.google.com/document/d/e/2PACX-1vTeZuzk3ilJyjXsgS0bjYeyOXJiELclUL0FSiJaw9NlfiLz1TTmCbjO_YH59GMezqPsO8vUiqNlq5TP/pub] [b]HERE[/b] [/url]
-
-And learn the basics strategies to win the game [url=https://docs.google.com/document/d/e/2PACX-1vRgPf7gUedOMI1AcG9dYW7yw5e0vgwtr9EWGswMq33WkMNpJHrDpHkLcvGNeeqfZW5AOYRDSu4mJKjs/pub] [b]HERE[/b] [/url]
+And many more things...

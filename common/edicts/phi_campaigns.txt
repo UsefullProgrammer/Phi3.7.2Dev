@@ -1,12 +1,19 @@
+@Edict1Cost = 20
+@Edict2Cost = 25
+@Edict3Cost = 30
+@EdictDuration = -1
+@n50 = 2
+@n500 = 20
 gears_of_war = {
-	length = 720
+	length = @EdictDuration
 	icon = "GFX_edict_type_time"
 	resources = {
 		category = edicts
-		cost = {
-			influence = 50
-			energy = 500
-			minerals = 500
+		upkeep = {
+			influence = @n50
+			energy = @n500
+			minerals = @n500
+			multiplier = value:edict_size_effect
 		}
 	}
 
@@ -29,14 +36,14 @@ gears_of_war = {
 }
 
 gnam_gnam_gnam = {
-	length = 720
+	length = @EdictDuration
 	icon = "GFX_edict_type_time"
 	resources = {
 		category = edicts
-		cost = {
-			influence = 50
-			energy = 500
-			minerals = 500
+		upkeep = {
+			influence = @n50
+			energy = @n500
+			minerals = @n500
 		}
 	}
 
@@ -59,7 +66,7 @@ gnam_gnam_gnam = {
 }
 
 total_noob = {
-	length = -1
+	length = @EdictDuration
 	icon = "GFX_edict_type_policy"
 	edict_cap_usage = 1
 	
@@ -70,7 +77,8 @@ total_noob = {
 	resources = {
 		category = edicts
 		cost = {
-			influence = 10
+			influence = 5
+			multiplier = value:edict_size_effect
 		}
 	}
 
@@ -82,7 +90,7 @@ total_noob = {
 }
 
 phi_war_in_heaven_ongoing = {
-	length = -1
+	length = @EdictDuration
 	icon = "GFX_edict_type_policy"
 	edict_cap_usage = 1
 	
@@ -97,7 +105,8 @@ phi_war_in_heaven_ongoing = {
 	resources = {
 		category = edicts
 		cost = {
-			influence = 100
+			influence = 50
+			multiplier = value:edict_size_effect
 		}
 	}
 
@@ -518,7 +527,8 @@ illuminate_vassal = {
 	resources = {
 		category = edicts
 		cost = {
-			influence = 500
+			influence = 250
+			multiplier = value:edict_size_effect
 		}
 	}
 }

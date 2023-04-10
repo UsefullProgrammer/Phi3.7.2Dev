@@ -1,20 +1,17 @@
-@minor_artifact_decision_cost = 2
+@minor_artifact_decision_cost = 100
 @minor_artifact_decision_duration = 3600
+@minor_artifact_ai_threshold = 200
 
 artifact_arcane_deciphering = {
 	resources = {
 		category = artifact_actions
 		cost = {
-			minor_artifacts = 5
+			minor_artifacts = 500
 		}
 	}
 
 	ai_weight = {
 		weight = 100
-		modifier = {
-			factor = 0
-			has_resource = { type = minor_artifacts amount < 5 }
-		}
 	}
 
 	potential = {
@@ -53,7 +50,7 @@ artifact_lgate_clue = {
 	resources = {
 		category = artifact_actions
 		cost = {
-			minor_artifacts = 50
+			minor_artifacts = 1000
 		}
 	}
 
@@ -98,7 +95,7 @@ artifact_proclaim_religious_finding = {
 		}
 		modifier = {
 			factor = 0
-			has_resource = { type = minor_artifacts amount < 105 }
+			has_resource = { type = minor_artifacts amount < @minor_artifact_ai_threshold }
 		}
 	}
 
@@ -136,7 +133,7 @@ artifact_proclaim_superiority = {
 		weight = 100
 		modifier = {
 			factor = 0
-			has_resource = { type = minor_artifacts amount < 105 }
+			has_resource = { type = minor_artifacts amount < @minor_artifact_ai_threshold }
 		}
 	}
 
@@ -178,7 +175,7 @@ artifact_celebrate_diversity = {
 		}
 		modifier = {
 			factor = 0
-			has_resource = { type = minor_artifacts amount < 105 }
+			has_resource = { type = minor_artifacts amount < @minor_artifact_ai_threshold }
 		}
 	}
 
@@ -323,7 +320,7 @@ artifact_find_military_applications = {
 	resources = {
 		category = artifact_actions
 		cost = {
-			minor_artifacts = 5
+			minor_artifacts = 150
 		}
 	}
 
@@ -346,7 +343,7 @@ artifact_find_military_applications = {
 		}
 		modifier = {
 			factor = 0
-			has_resource = { type = minor_artifacts amount < 105 }
+			has_resource = { type = minor_artifacts amount < @minor_artifact_ai_threshold }
 		}
 	}
 
@@ -380,7 +377,7 @@ artifact_find_peaceful_applications = {
 	resources = {
 		category = artifact_actions
 		cost = {
-			minor_artifacts = 5
+			minor_artifacts = 150
 		}
 	}
 
@@ -400,7 +397,7 @@ artifact_find_peaceful_applications = {
 		}
 		modifier = {
 			factor = 0
-			has_resource = { type = minor_artifacts amount < 105 }
+			has_resource = { type = minor_artifacts amount < @minor_artifact_ai_threshold }
 		}
 	}
 
@@ -436,7 +433,7 @@ artifact_sell_collector = {
 	resources = {
 		category = artifact_actions
 		cost = {
-			minor_artifacts = 1
+			minor_artifacts = 50
 		}
 	}
 
@@ -448,7 +445,7 @@ artifact_sell_collector = {
 		}
 		modifier = {
 			factor = 0
-			has_resource = { type = minor_artifacts amount < 11 }
+			has_resource = { type = minor_artifacts amount < @minor_artifact_ai_threshold }
 		}
 	}
 	
@@ -469,82 +466,14 @@ artifact_sell_collector = {
 
 	effect = {
 		add_resource = { energy = 500 }
-	}
-}
-
-# PHI
-artifact_burn = {
-	resources = {
-		category = artifact_actions
-		cost = {
-			minor_artifacts = 1
-		}
-	}
-
-	ai_weight = {
-		weight = 100
-		modifier = {
-			factor = 0
-			has_resource = { type = influence amount > 100 }
-		}
-		modifier = {
-			factor = 0
-			has_resource = { type = minor_artifacts amount < 10 }
-		}
-	}
-	
-	potential = {
-		always = yes
-	}
-	
-	allow = {
-		is_gestalt = yes
-	}
-
-	effect = {
-		add_resource = { influence = 40 }
-	}
-}
-
-# PHI
-artifact_buy_black_market = {
-	resources = {
-		category = artifact_actions
-		cost = {
-			energy = 1500
-		}
-	}
-	
-	ai_weight = {
-		weight = 100
-		modifier = {
-			factor = 0
-			has_resource = { type = energy amount < 50000 }
-		}
-		modifier = {
-			factor = 0
-			has_resource = { type = minor_artifacts amount > 80 }
-		}
-	}
-
-	potential = {
-		always = yes
-	}
-
-	allow = {
-		OR = {
-			is_gestalt = no
-			any_relation = {
-				is_country_type = default
-				has_communications = from
-				is_gestalt = no
+		hidden_effect = {
+			add_modifier = {
+				modifier = "artifact_sell_cooldown"
+				days = 180
 			}
 		}
 	}
-
-	effect = {
-		add_resource = { minor_artifacts = 1 }
-	}
+	allow = { NOT = { has_modifier = artifact_sell_cooldown } }
 }
 
 
@@ -592,7 +521,7 @@ artifact_irassian_research = {
 	resources = {
 		category = artifact_actions
 		cost = {
-			minor_artifacts = 50
+			minor_artifacts = 750
 		}
 	}
 
@@ -624,7 +553,7 @@ artifact_yuht_research = {
 	resources = {
 		category = artifact_actions
 		cost = {
-			minor_artifacts = 50
+			minor_artifacts = 750
 		}
 	}
 
@@ -655,7 +584,7 @@ artifact_vultaum_research = {
 	resources = {
 		category = artifact_actions
 		cost = {
-			minor_artifacts = 50
+			minor_artifacts = 750
 		}
 	}
 
@@ -686,7 +615,7 @@ artifact_cybrex_research = {
 	resources = {
 		category = artifact_actions
 		cost = {
-			minor_artifacts = 50
+			minor_artifacts = 750
 		}
 	}
 
@@ -717,7 +646,7 @@ artifact_league_research = {
 	resources = {
 		category = artifact_actions
 		cost = {
-			minor_artifacts = 50
+			minor_artifacts = 750
 		}
 	}
 
@@ -754,7 +683,7 @@ artifact_baol_research = {
 	resources = {
 		category = artifact_actions
 		cost = {
-			minor_artifacts = 50
+			minor_artifacts = 750
 		}
 	}
 
@@ -781,12 +710,11 @@ artifact_baol_research = {
 	}
 }
 
-
 artifact_zroni_research = {
 	resources = {
 		category = artifact_actions
 		cost = {
-			minor_artifacts = 50
+			minor_artifacts = 750
 		}
 	}
 
@@ -817,7 +745,7 @@ artifact_precursor_clue = {
 	resources = {
 		category = artifact_actions
 		cost = {
-			minor_artifacts = 25
+			minor_artifacts = 500
 		}
 	}
 
@@ -849,7 +777,7 @@ artifact_precursor_clue = {
 					}
 				}
 			}
-			AND = { 
+			AND = {
 				has_event_chain = "first_league_chain"
 				any_system_within_border = {
 					has_star_flag = precursor_3

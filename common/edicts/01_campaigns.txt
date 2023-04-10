@@ -3,23 +3,25 @@
 # shorter duration, cost energy
 #################
 
-@Edict1Cost = 100
-@Edict2Cost = 200
-@Edict3Cost = 300
+@Edict1Cost = 20
+@Edict2Cost = 25
+@Edict3Cost = 30
 
-@EdictDuration = 3600
+@EdictDuration = -1
 
 # Sets the cost for all campaigns with this variable
-@campaignCost = 1000
-@campaignDuration = 3600
+@campaignCost = 15
+@hiveFood = 15
+@campaignDuration = -1
 
 fear_campaign = {
 	length = @campaignDuration
 	icon = "GFX_edict_type_time"
 	resources = {
 		category = campaigns
-		cost = {
+		upkeep = {
 			energy = @campaignCost
+			multiplier = value:edict_size_effect
 		}
 	}
 
@@ -48,8 +50,9 @@ education_campaign = {
 	icon = "GFX_edict_type_time"
 	resources = {
 		category = campaigns
-		cost = {
+		upkeep = {
 			energy = @campaignCost
+			multiplier = value:edict_size_effect
 		}
 	}
 
@@ -84,8 +87,9 @@ recycling_campaign = {
 	icon = "GFX_edict_type_time"
 	resources = {
 		category = campaigns
-		cost = {
+		upkeep = {
 			energy = @campaignCost
+			multiplier = value:edict_size_effect
 		}
 	}
 
@@ -115,8 +119,9 @@ healthcare_campaign = {
 	icon = "GFX_edict_type_time"
 	resources = {
 		category = campaigns
-		cost = {
+		upkeep = {
 			energy = @campaignCost
+			multiplier = value:edict_size_effect
 		}
 	}
 
@@ -142,8 +147,9 @@ robot_campaign = {
 	icon = "GFX_edict_type_time"
 	resources = {
 		category = campaigns
-		cost = {
+		upkeep = {
 			energy = @campaignCost
+			multiplier = value:edict_size_effect
 		}
 	}
 
@@ -165,8 +171,9 @@ machine_learning_campaign = {
 	icon = "GFX_edict_type_time"
 	resources = {
 		category = campaigns
-		cost = {
+		upkeep = {
 			energy = @campaignCost
+			multiplier = value:edict_size_effect
 		}
 	}
 
@@ -200,24 +207,24 @@ machine_learning_campaign = {
 # Hive Mind
 #################
 
-@hiveFood = 500
-
 drone_campaign = {
 	length = @campaignDuration
 	icon = "GFX_edict_type_time"
 	resources = {
 		category = campaigns
-		cost = {
+		upkeep = {
 			trigger = {
 				is_lithoid_empire = no
 			}
 			food = @hiveFood
+			multiplier = value:edict_size_effect
 		}
-		cost = {
+		upkeep = {
 			trigger = {
 				is_lithoid_empire = yes
 			}
 			minerals = @hiveFood
+			multiplier = value:edict_size_effect
 		}
 	}
 
@@ -239,17 +246,19 @@ learning_campaign = {
 	icon = "GFX_edict_type_time"
 	resources = {
 		category = campaigns
-		cost = {
+		upkeep = {
 			trigger = {
 				is_lithoid_empire = no
 			}
 			food = @hiveFood
+			multiplier = value:edict_size_effect
 		}
-		cost = {
+		upkeep = {
 			trigger = {
 				is_lithoid_empire = yes
 			}
 			minerals = @hiveFood
+			multiplier = value:edict_size_effect
 		}
 	}
 
@@ -284,17 +293,19 @@ war_drone_campaign = {
 	icon = "GFX_edict_type_time"
 	resources = {
 		category = campaigns
-		cost = {
+		upkeep = {
 			trigger = {
 				is_lithoid_empire = no
 			}
 			food = @hiveFood
+			multiplier = value:edict_size_effect
 		}
-		cost = {
+		upkeep = {
 			trigger = {
 				is_lithoid_empire = yes
 			}
 			minerals = @hiveFood
+			multiplier = value:edict_size_effect
 		}
 	}
 
@@ -326,8 +337,9 @@ terraforming_gas = {
 	icon = "GFX_edict_type_time"
 	resources = {
 		category = rare_edicts
-		cost = {
-			exotic_gases = 25
+		upkeep = {
+			exotic_gases = 0.5
+			multiplier = value:edict_size_effect
 		}
 	}
 
@@ -353,10 +365,13 @@ terraforming_gas = {
 fuel_gases = {
 	length = @EdictDuration
 	icon = "GFX_edict_type_time"
+	is_wartime_edict = yes
+	
 	resources = {
 		category = ship_edicts
-		cost = {
-			exotic_gases = 50
+		upkeep = {
+			exotic_gases = 1
+			multiplier = value:edict_size_effect
 		}
 	}
 
@@ -376,6 +391,7 @@ fuel_gases = {
 		modifier = {
 			weight = @EdictMedPrio
 			is_at_war = yes
+			has_resource = { type = exotic_gases amount > 100 }
 		}
 	}
 }
@@ -383,10 +399,13 @@ fuel_gases = {
 shield_gases = {
 	length = @EdictDuration
 	icon = "GFX_edict_type_time"
+	is_wartime_edict = yes
+
 	resources = {
 		category = ship_edicts
-		cost = {
-			exotic_gases = 50
+		upkeep = {
+			exotic_gases = 1
+			multiplier = value:edict_size_effect
 		}
 	}
 
@@ -406,6 +425,7 @@ shield_gases = {
 		modifier = {
 			weight = @EdictMedPrio
 			is_at_war = yes
+			has_resource = { type = exotic_gases amount > 100 }
 		}
 	}
 }
@@ -415,8 +435,9 @@ clearing_motes = {
 	icon = "GFX_edict_type_time"
 	resources = {
 		category = rare_edicts
-		cost = {
-			volatile_motes = 25
+		upkeep = {
+			volatile_motes = 0.5
+			multiplier = value:edict_size_effect
 		}
 	}
 
@@ -440,10 +461,13 @@ clearing_motes = {
 motes_kinetic = {
 	length = @EdictDuration
 	icon = "GFX_edict_type_time"
+	is_wartime_edict = yes
+
 	resources = {
 		category = ship_edicts
-		cost = {
-			volatile_motes = 50
+		upkeep = {
+			volatile_motes = 1
+			multiplier = value:edict_size_effect
 		}
 	}
 
@@ -463,6 +487,7 @@ motes_kinetic = {
 		modifier = {
 			weight = @EdictHighPrio
 			is_at_war = yes
+			has_resource = { type = volatile_motes amount > 100 }
 		}
 	}
 }
@@ -472,8 +497,9 @@ motes_explosives = {
 	icon = "GFX_edict_type_time"
 	resources = {
 		category = ship_edicts
-		cost = {
-			volatile_motes = 50
+		upkeep = {
+			volatile_motes = 1
+			multiplier = value:edict_size_effect
 		}
 	}
 
@@ -496,10 +522,13 @@ motes_explosives = {
 motes_armor = {
 	length = @EdictDuration
 	icon = "GFX_edict_type_time"
+	is_wartime_edict = yes
+
 	resources = {
 		category = ship_edicts
-		cost = {
-			volatile_motes = 50
+		upkeep = {
+			volatile_motes = 1
+			multiplier = value:edict_size_effect
 		}
 	}
 
@@ -519,6 +548,7 @@ motes_armor = {
 		modifier = {
 			weight = @EdictMedPrio
 			is_at_war = yes
+			has_resource = { type = volatile_motes amount > 100 }
 		}
 	}
 }
@@ -528,8 +558,9 @@ crystalline_sensors = {
 	icon = "GFX_edict_type_time"
 	resources = {
 		category = rare_edicts
-		cost = {
-			rare_crystals = 25
+		upkeep = {
+			rare_crystals = 0.5
+			multiplier = value:edict_size_effect
 		}
 	}
 
@@ -553,10 +584,12 @@ crystalline_sensors = {
 crystal_focus = {
 	length = @EdictDuration
 	icon = "GFX_edict_type_time"
+	is_wartime_edict = yes
 	resources = {
 		category = ship_edicts
-		cost = {
-			rare_crystals = 50
+		upkeep = {
+			rare_crystals = 1
+			multiplier = value:edict_size_effect
 		}
 	}
 
@@ -576,7 +609,104 @@ crystal_focus = {
 		modifier = {
 			weight = @EdictHighPrio
 			is_at_war = yes
+			has_resource = { type = rare_crystals amount > 100 }
 		}
+	}
+}
+
+sight_beyond_sight = {
+	length = @EdictDuration
+	icon = "GFX_edict_type_time"
+	resources = {
+		category = rare_edicts
+		upkeep = {
+			sr_zro = 0.5
+			multiplier = value:edict_size_effect
+		}
+	}
+
+	potential = {
+		has_active_tradition = tr_psionics_mind_readers
+	}
+
+	modifier = {
+		ship_sensor_range_add = 1
+		ship_windup_mult = -0.15
+		ship_winddown_mult = -0.15
+		ship_jumpdrive_cooldown_mult = -0.15
+		catapult_spread_mult = 0.15
+	}
+
+	ai_weight = {
+		weight = 0
+	}
+}
+
+zro_catalysis_utopia = {
+	length = @EdictDuration
+	icon = "GFX_edict_type_time"
+	resources = {
+		category = rare_edicts
+		upkeep = {
+			sr_zro = 0.5
+			multiplier = value:edict_size_effect
+		}
+	}
+
+	potential = {
+		exists = federation
+		federation = {
+			has_federation_perk = zro_catalysis_1
+		}
+		has_utopia = yes
+		OR = {
+			has_resource = { type = sr_zro amount > 0 }
+			has_edict = zro_catalysis_utopia
+		}
+	}
+
+	modifier = {
+		planet_psionic_jobs_produces_mult = 0.15
+	}
+
+	ai_weight = {
+		weight = 0
+		modifier = {
+			weight = @EdictMedPrio
+			species = { has_trait = trait_psionic }
+		}
+	}
+}
+
+zro_catalysis_non_utopia = {
+	length = @EdictDuration
+	icon = "GFX_edict_type_time"
+	resources = {
+		category = rare_edicts
+		upkeep = {
+			sr_zro = 0.5
+			multiplier = value:edict_size_effect
+		}
+	}
+
+	potential = {
+		exists = federation
+		federation = {
+			has_federation_perk = zro_catalysis_1
+		}
+		has_utopia = no
+		OR = {
+			has_resource = { type = sr_zro amount > 0 }
+			has_edict = zro_catalysis_non_utopia
+		}
+	}
+
+	modifier = {
+		planet_jobs_organics_produces_mult = 0.1
+	}
+
+	ai_weight = {
+		weight = @EdictMedPrio
 	}
 }
 
@@ -585,8 +715,9 @@ living_metal_construction = {
 	icon = "GFX_edict_type_time"
 	resources = {
 		category = rare_edicts
-		cost = {
-			sr_living_metal = 50
+		upkeep = {
+			sr_living_metal = 0.5
+			multiplier = value:edict_size_effect
 		}
 	}
 
@@ -602,9 +733,9 @@ living_metal_construction = {
 		weight = 0
 		modifier = {
 			weight = @EdictHighPrio
-			any_megastructure = {
+			count_owned_megastructure = {
 				count >= 1
-				is_upgrading = yes
+				limit = { is_upgrading = yes }
 			}
 		}
 	}
@@ -615,8 +746,9 @@ nanite_actuators = {
 	icon = "GFX_edict_type_time"
 	resources = {
 		category = rare_edicts
-		cost = {
-			nanites = 50
+		upkeep = {
+			nanites = 0.5
+			multiplier = value:edict_size_effect
 		}
 	}
 
@@ -644,8 +776,9 @@ masters_writings_politics = {
 	icon = "GFX_edict_type_time"
 	resources = {
 		category = edicts
-		cost = {
-			influence = @Edict1Cost
+		upkeep = {
+			unity = @Edict1Cost
+			multiplier = value:edict_size_effect
 		}
 	}
 
@@ -672,8 +805,9 @@ masters_writings_diplomacy = {
 	icon = "GFX_edict_type_time"
 	resources = {
 		category = edicts
-		cost = {
-			influence = @Edict1Cost
+		upkeep = {
+			unity = @Edict1Cost
+			multiplier = value:edict_size_effect
 		}
 	}
 
@@ -698,8 +832,9 @@ masters_writings_philosophy = {
 	icon = "GFX_edict_type_time"
 	resources = {
 		category = edicts
-		cost = {
-			influence = @Edict1Cost
+		upkeep = {
+			unity = @Edict1Cost
+			multiplier = value:edict_size_effect
 		}
 	}
 
@@ -725,8 +860,9 @@ masters_writings_war = {
 	icon = "GFX_edict_type_time"
 	resources = {
 		category = edicts
-		cost = {
-			influence = @Edict1Cost
+		upkeep = {
+			unity = @Edict1Cost
+			multiplier = value:edict_size_effect
 		}
 	}
 
@@ -756,8 +892,9 @@ improved_work_environment = {
 	icon = "GFX_edict_type_time"
 	resources = {
 		category = edicts
-		cost = {
-			influence = @Edict2Cost
+		upkeep = {
+			unity = @Edict2Cost
+			multiplier = value:edict_size_effect
 		}
 	}
 
@@ -784,8 +921,9 @@ renewable_energy = {
 	icon = "GFX_edict_type_time"
 	resources = {
 		category = edicts
-		cost = {
-			influence = @Edict2Cost
+		upkeep = {
+			unity = @Edict2Cost
+			multiplier = value:edict_size_effect
 		}
 	}
 
@@ -812,8 +950,9 @@ super_sensors = {
 	icon = "GFX_edict_type_time"
 	resources = {
 		category = edicts
-		cost = {
-			influence = @Edict2Cost
+		upkeep = {
+			unity = @Edict2Cost
+			multiplier = value:edict_size_effect
 		}
 	}
 
@@ -840,8 +979,9 @@ nuumismatic_visualization = {
 
 	resources = {
 		category = edicts
-		cost = {
-			influence = @Edict2Cost
+		upkeep = {
+			unity = @Edict2Cost
+			multiplier = value:edict_size_effect
 		}
 	}
 

@@ -1,0 +1,27 @@
+
+00_weapons_pointdefence.txt è stato cancellato , motivazione: i file erano uguali anche nella vanilla.
+capital_buildings : building_resort_major_capital cambiato "country_admin_cap_add = 75" a da "empire_size_mult = -0.25" testare
+00_country_types :
+{
+	ship_data tolto perchè nella 3.7.2 è stato tolto
+	army_data tolto perchè nella 3.7.2 è stato tolto
+}
+Defines gameplay empirese size_base messo quello della phi.
+Defines AVERAGE_FLEET_SIZE_FACTOR messo 0.9 invece di 0.5 (3.7 è a 1) 
+
+messo action_demand_subjugation e action_ask_to_become_subjugated che deve avere una flotta < inferior prima utilizzava un from fleet_power > 5000 , valore fisso è brutto
+
+In 00_urban_discricts ho aggiunto in district_crashed_slaver_ship:
+{
+	ai_resource_production = {
+		energy = 1
+		trigger = {
+			always = yes
+		}
+	}
+}
+Economic_plans\01_base.txt è stato messo tutto quello che c'è nella 3.7.4 ( fa più schifo eh )
+Economic_plans\01_base.txt è stato cancellato, motivazione: i file erano uguali anche nella vanilla e Paradox ha migliorato l'economic plans
+
+Total_noob , phi_war_in_heaven_ongoing , illuminate_vassal cambiato costo dimmezzandolo e mettendo moltiplicatore di size.
+Total_noob , gnam_gnam_gnam , gears_of_war Messo che durano al'infinito ma hanno una manuntenzione.
