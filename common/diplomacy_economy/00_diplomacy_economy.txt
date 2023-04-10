@@ -1,0 +1,462 @@
+#
+# This file is to store the upkeep / production of objects that are not otherwise scripted
+# right now it ignores the "cost" part of it
+# subjects upkeep/production is not stored here, but in the subject type
+#
+
+once = {
+	# this is applied only once per country
+	federation = {
+		trigger = {
+			has_federation = yes
+		}
+		resources = {
+			category = federation
+			produces = {
+				influence = -1
+			}
+		}
+	}
+}
+
+per_relation = {
+	# this is applied for each such relation with another country
+	# scope: this = current country, FROM : other country in the relation
+	federation = {
+		trigger = {
+			has_federation = yes
+			is_in_federation_with = FROM
+			has_policy_flag = economic_policy_diplomatic
+		}
+		resources = {
+			category = diplo_economic_policy
+			produces = {
+				alloys = 10
+				consumer_goods = 10
+			}
+		}
+	}
+	
+	rivalry = {
+		trigger = {
+			has_rival = FROM
+		}
+		resources = {
+			category = rivalries
+			produces = {
+				influence = 0.5
+			}
+		}
+	}
+	
+	rivalry = {
+		trigger = {
+			has_rival = FROM
+			has_policy_flag = economic_policy_diplomatic
+			OR = {
+				is_harming_relations_with = FROM
+				is_neighbor_of = FROM
+			}
+		}
+		resources = {
+			category = rivalries
+			produces = {
+				alloys = 10
+			}
+		}
+	}
+
+	non_aggression_pact = {
+		trigger = {
+			has_non_aggression_pact = FROM
+		}
+		resources = {
+			category = non_aggression_pacts
+			upkeep = {
+				influence = 0.25
+			}
+		} 
+	}
+	
+	non_aggression_pact = {
+		trigger = {
+			OR = {
+				has_non_aggression_pact = FROM
+				has_association_status = from
+			}
+			has_policy_flag = economic_policy_diplomatic
+			OR = {
+				is_improving_relations_with = FROM
+				is_neighbor_of = FROM
+			}
+		}
+		resources = {
+			category = diplo_economic_policy
+			produces = {
+				consumer_goods = 10
+			}
+		} 
+	}
+	
+	migration_pact = {
+		trigger = {
+			has_diplo_migration_treaty = FROM
+			NOT = {
+				AND = {
+					has_federation = yes
+					federation = { has_federation_perk = diplomacy_upkeep_1 }
+					federation = { any_member = { is_same_value = FROM } }
+				}
+			}
+			NOT = {
+				AND = {
+					has_federation = yes
+					federation = { has_federation_law = free_migration_yes }
+					federation = { any_member = { is_same_value = FROM } }
+				}
+			}
+		}
+		resources = {
+			category = migration_pacts
+			upkeep = {
+				influence = 0.25
+			}
+		}
+	}
+
+	research_agreement = {
+		trigger = {
+			has_research_agreement = FROM
+		}
+
+		resources = {
+			category = research_agreements
+			upkeep = {
+				influence = 0.25
+			}
+		}
+	}
+	
+	research_agreement = {
+		trigger = {
+			has_research_agreement = FROM
+			has_valid_civic = civic_foreign_markets_arbitrage
+		}
+
+		resources = {
+			category = research_agreements
+			produces = {
+				consumer_goods = 10
+				alloys = 10
+				society_research = 25
+			}
+		}
+	}
+
+	commercial_pact = {
+		trigger = {
+			has_commercial_pact = FROM
+			NOT = { has_ascension_perk = ap_universal_transactions }
+		}
+
+		resources = {
+			category = commercial_pacts
+			upkeep = {
+				influence = 0.25
+			}
+		}
+	}
+
+	defensive_pact = {
+		trigger = {
+			has_defensive_pact = FROM
+		}
+
+		resources = {
+			category = defensive_pacts
+			upkeep = {
+				influence = 1
+			}
+		}
+	}
+	
+	defensive_pact = {
+		trigger = {
+			has_defensive_pact = FROM
+			has_policy_flag = economic_policy_diplomatic
+			OR = {
+				is_improving_relations_with = FROM
+				is_neighbor_of = FROM
+			}
+		}
+
+		resources = {
+			category = diplo_economic_policy
+			produces = {
+				consumer_goods = 10
+			}
+		}
+	}
+
+	guarantee = {
+		trigger = {
+			is_guaranteeing = FROM
+		}
+		resources = {
+			category = guarantees
+			upkeep = {
+				influence = 0.5
+			}
+		}
+	}
+	
+	open_borders = {
+		trigger = {
+			is_neighbor_of = from
+			NOT = { has_closed_borders = from }
+			from = {
+				is_country_type = default
+				NOT = { has_closed_borders = this }
+			}
+			relative_power = {
+				who = from
+				category = technology
+				value = inferior
+			}
+			# any_system_within_border = {
+				# from = {
+					# any_system_within_border = {
+						# has_hyperlane_to = prevprev
+					# }
+				# }
+			# }
+		}
+		
+		resources = {
+			category = relative_technology
+			produces = {
+				society_research = 100
+				engineering_research = 100
+				physics_research = 100
+			}
+		}		
+	}
+
+	open_borders = {
+		trigger = {
+			is_neighbor_of = from
+			NOT = { has_closed_borders = from }
+			from = {
+				is_country_type = default
+				has_closed_borders = this
+			}
+			relative_power = {
+				who = from
+				category = technology
+				value = inferior
+			}
+		}
+		
+		resources = {
+			category = relative_technology
+			produces = {
+				society_research = 50
+				engineering_research = 50
+				physics_research = 50
+			}
+		}		
+	}
+	
+	open_borders = {
+		trigger = {
+			is_neighbor_of = from
+			NOT = { has_closed_borders = from }
+			from = {
+				is_country_type = default
+				NOT = { has_closed_borders = this }
+			}
+			relative_power = {
+				who = from
+				category = technology
+				value = pathetic
+			}
+		}
+		
+		resources = {
+			category = relative_technology
+			produces = {
+				society_research = 300
+				engineering_research = 300
+				physics_research = 300
+			}
+		}		
+	}
+	
+	open_borders = {
+		trigger = {
+			is_neighbor_of = from
+			NOT = { has_closed_borders = from }
+			from = {
+				is_country_type = default
+				has_closed_borders = this
+			}
+			relative_power = {
+				who = from
+				category = technology
+				value = pathetic
+			}
+		}
+		
+		resources = {
+			category = relative_technology
+			produces = {
+				society_research = 150
+				engineering_research = 150
+				physics_research = 150
+			}
+		}		
+	}
+
+	closed_borders = {
+		trigger = {
+			is_neighbor_of = from
+			has_closed_borders = from
+			from = {
+				is_country_type = default
+				NOT = { has_closed_borders = this }
+			}
+			relative_power = {
+				who = from
+				category = technology
+				value = inferior
+			}
+		}
+		
+		resources = {
+			category = relative_technology
+			produces = {
+				society_research = 50
+				engineering_research = 50
+				physics_research = 50
+			}
+		}		
+	}
+
+	closed_borders = {
+		trigger = {
+			is_neighbor_of = from
+			has_closed_borders = from
+			from = {
+				is_country_type = default
+				has_closed_borders = this
+			}
+			relative_power = {
+				who = from
+				category = technology
+				value = inferior
+			}
+		}
+		
+		resources = {
+			category = relative_technology
+			produces = {
+				society_research = 25
+				engineering_research = 25
+				physics_research = 25
+			}
+		}		
+	}
+	
+	closed_borders = {
+		trigger = {
+			is_neighbor_of = from
+			has_closed_borders = from
+			from = {
+				is_country_type = default
+				NOT = { has_closed_borders = this }
+			}
+			relative_power = {
+				who = from
+				category = technology
+				value = pathetic
+			}
+		}
+		
+		resources = {
+			category = relative_technology
+			produces = {
+				society_research = 150
+				engineering_research = 150
+				physics_research = 150
+			}
+		}		
+	}
+	
+	closed_borders = {
+		trigger = {
+			is_neighbor_of = from
+			has_closed_borders = from
+			from = {
+				is_country_type = default
+				has_closed_borders = this
+			}
+			relative_power = {
+				who = from
+				category = technology
+				value = pathetic
+			}
+		}
+		
+		resources = {
+			category = relative_technology
+			produces = {
+				society_research = 75
+				engineering_research = 75
+				physics_research = 75
+			}
+		}		
+	}
+	
+	embassy = {
+		trigger = {
+			has_active_tradition = tr_diplomacy_diplomatic_networking
+			has_embassy = from
+		}
+		resources = {
+			category = diplomatic_networking
+			produces = {
+				unity = 10
+			}
+		}
+	}
+	
+	infiltration = {
+		trigger = {
+			has_policy_flag = economic_policy_subterfuge
+			OR = {
+				any_envoy = {
+					has_envoy_task = {
+						task = spy_network
+						target = from
+					}
+				}
+				is_homicidal = yes
+			}
+		}
+		resources = {
+			category = infiltration
+			produces = {
+				society_research = 25
+			}
+		}
+	}
+	
+	contact = {
+		resources = {
+			category = contact
+			produces = {
+				society_research = 5
+			}
+		}
+	}
+}

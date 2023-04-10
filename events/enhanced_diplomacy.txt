@@ -1,0 +1,160 @@
+namespace = enhanced_diplomacy
+
+#Launched from edicts
+#Break truce and add the appropriate modifiers to the country
+#Version for non-homicidal empires
+country_event = {
+	id = enhanced_diplomacy.0
+	hide_window = yes
+
+	is_triggered_only = yes
+	
+	immediate = {
+		random_country = {
+			limit = {
+				root = {
+					has_truce = prev
+					is_harming_relations_with = prev
+					has_claim = prev
+				}
+			}
+			save_event_target_as = war_enemy
+		}
+		if = {
+			limit = { exists = event_target:war_enemy }
+			root = {
+				declare_war = {
+					target = event_target:war_enemy
+					attacker_war_goal = wg_conquest
+				}
+				if = {
+					limit = {
+						or = {
+							has_modifier = truce_breaker
+							has_modifier = infamous_bastard
+						}
+					}
+					remove_modifier = truce_breaker
+					remove_modifier = infamous_bastard
+					add_modifier = {
+						modifier = truce_breaker
+						days = 3600
+					}
+					add_modifier = {
+						modifier = infamous_bastard
+						days = 7200
+					}
+				}
+				else = {
+					add_modifier = {
+						modifier = truce_breaker
+						days = 3600
+					}
+				}
+			}
+		}
+	}
+}
+
+
+#Launched from edicts
+#Break truce and add the appropriate modifiers to the country
+#Version for homicidal empires
+country_event = {
+	id = enhanced_diplomacy.1
+	hide_window = yes
+
+	is_triggered_only = yes
+	
+	immediate = {
+		every_country = {
+			limit = {
+				any_system_within_border = {
+					has_hyperlane_to = root
+				}
+				has_truce = root
+				is_country_type = default
+			}
+			
+			root = {
+				if = {
+					limit = { has_valid_civic = civic_fanatic_purifiers }
+					declare_war = {
+						target = prev
+						attacker_war_goal = wg_cleansing
+					}
+				}
+				if = {
+					limit = { has_valid_civic = civic_machine_terminator }
+					declare_war = {
+						target = prev
+						attacker_war_goal = wg_cleansing
+					}
+				}
+				if = {
+					limit = { has_valid_civic = civic_hive_devouring_swarm }
+					declare_war = {
+						target = prev
+						attacker_war_goal = wg_absorption
+					}
+				}
+				
+				if = {
+					limit = {
+						or = {
+							has_modifier = truce_breaker
+							has_modifier = infamous_bastard
+						}
+					}
+					remove_modifier = truce_breaker
+					remove_modifier = infamous_bastard
+					add_modifier = {
+						modifier = truce_breaker
+						days = 3600
+					}
+					add_modifier = {
+						modifier = infamous_bastard
+						days = 7200
+					}
+				}
+				else = {
+					add_modifier = {
+						modifier = truce_breaker
+						days = 3600
+					}
+				}
+			}
+		}
+	}
+}
+
+#Launched from edicts
+#Join a defensive war if survive cb was used by defender
+country_event = {
+	id = enhanced_diplomacy.2
+	hide_window = yes
+
+	is_triggered_only = yes
+	
+	immediate = {
+		random_country = {
+			limit = {
+				root = { is_improving_relations_with = prev }
+				any_war = { using_war_goal = { type = wg_phi_survive owner = prev } }
+			}
+			random_war = {
+				limit = {
+					using_war_goal = { type = wg_phi_survive owner = defender }
+					any_defender = {
+						root = { is_improving_relations_with = prev }
+					}
+				}
+				save_event_target_as = survive_cb_war
+			}
+		}
+		join_war_on_side = {
+			war = event_target:survive_cb_war
+			side = defenders
+		}
+	}
+}

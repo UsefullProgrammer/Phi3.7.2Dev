@@ -1,0 +1,1288 @@
+namespace = phi_ai
+
+#	phi_ai.0	yearly checked - builds up the capital planet of non gestalt empires
+#	phi_ai.1	yearly checked - builds up the other planets of non gestalt empires
+#	phi_ai.2	yearly checked - manages unemployed pops of non gestalts empires
+#	phi_ai.3	yearly checked - transfers pops between capital and colonies for non gestalts empires
+#	phi_ai.4	yearly checked - market simulator for non gestalts empires
+#	phi_ai.5	yearly checked - refines the capital planet of non-gestalt non-voids empires
+#	phi_ai.6	yearly checked - finds empires lagging behind and flags them
+#	phi_ai.7	yearly checked - better starbases
+#	phi_ai.8	yearly checked - building assault armies
+#	phi_ai.9	monthly checked - destroy "lost cause" starbases
+#	phi_ai.10	yearly checked - send alloys to fed prez
+#	phi_ai.11	monthly checked - set survive cb in defensive wars when hope is lost
+#	phi_ai.12	monthly checked - joins defensive wars of laggers
+#	phi_ai.13	5-yearly checked - shifts ethics towards fed type
+#	phi_ai.14	monthly checked - scorched earth tactics
+#	set_colony_type
+
+country_event = {
+#	phi_ai.0	yearly checked - builds up the capital planet of non-gestalt non-voids empires
+
+	id = phi_ai.0
+	hide_window = yes
+
+	is_triggered_only = yes
+	
+	trigger = {
+		is_ai = yes
+		is_country_type = default
+		NOT = { has_ethic = ethic_gestalt_consciousness }
+		has_resource = { type = minerals amount > 500 }
+		has_monthly_income = { resource = energy value > 20 }
+	}
+	
+	immediate = {
+		random_owned_planet = {
+			limit = {
+				is_capital = yes
+				NOT = { is_planet_class = pc_habitat }
+			}
+			random_list = {
+				50 = {
+					modifier = {
+						factor = 0
+						free_building_slots = 0
+					}
+					modifier = {
+						factor = 0
+						AND = {
+							num_buildings = { type = building_autochthon_monument value < 1 }
+							owner = {
+								NOR = {
+									is_spiritualist = yes
+									is_megacorp = yes
+								}
+							}
+						}
+					}
+					modifier = {
+						factor = 0
+						AND = {
+							num_buildings = { type = building_temple value < 2 }
+							owner = {
+								is_spiritualist = yes
+							}
+						}
+					}
+					modifier = {
+						factor = 0
+						AND = {
+							num_buildings = { type = building_corporate_monument value < 1 }
+							owner = {
+								is_megacorp = yes
+							}
+						}
+					}
+					modifier = {
+						factor = 10
+						AND = {
+							num_buildings = { type = building_engineering_lab_1 value > 2 }
+						}
+					}
+					add_building = building_physics_lab_1
+					owner = { add_resource = { minerals = -400 } }
+				}
+				50 = {
+					modifier = {
+						factor = 0
+						free_building_slots = 0
+					}
+					modifier = {
+						factor = 0
+						AND = {
+							num_buildings = { type = building_autochthon_monument value < 1 }
+							owner = {
+								NOR = {
+									is_spiritualist = yes
+									is_megacorp = yes
+								}
+							}
+						}
+					}
+					modifier = {
+						factor = 0
+						AND = {
+							num_buildings = { type = building_temple value < 2 }
+							owner = {
+								is_spiritualist = yes
+							}
+						}
+					}
+					modifier = {
+						factor = 0
+						AND = {
+							num_buildings = { type = building_corporate_monument value < 1 }
+							owner = {
+								is_megacorp = yes
+							}
+						}
+					}
+					modifier = {
+						factor = 10
+						AND = {
+							num_buildings = { type = building_physics_lab_1 value > 2 }
+						}
+					}
+					add_building = building_engineering_lab_1
+					owner = { add_resource = { minerals = -400 } }
+				}
+				100 = {
+					modifier = {
+						factor = 0
+						free_building_slots = 0
+					}
+					modifier = {
+						factor = 0
+						owner = {
+							OR = {
+								is_spiritualist = yes
+								is_megacorp = yes
+							}
+						}
+					}
+					modifier = {
+						factor = 0
+						num_buildings = { type = building_autochthon_monument value > 0 }
+					}
+					add_building = building_autochthon_monument
+					owner = { add_resource = { minerals = -400 } }
+				}
+				100 = {
+					modifier = {
+						factor = 0
+						free_building_slots = 0
+					}
+					modifier = {
+						factor = 0
+						owner = { is_spiritualist = no }
+					}
+					modifier = {
+						factor = 0
+						num_buildings = { type = building_temple value > 1 }
+					}
+					add_building = building_temple
+					owner = { add_resource = { minerals = -400 } }
+				}
+				100 = {
+					modifier = {
+						factor = 0
+						free_building_slots = 0
+					}
+					modifier = {
+						factor = 0
+						owner = {
+							OR = {
+								is_spiritualist = yes
+								is_megacorp = no
+							}
+						}
+					}
+					modifier = {
+						factor = 0
+						num_buildings = { type = building_corporate_monument value > 1 }
+					}
+					add_building = building_corporate_monument
+					owner = { add_resource = { minerals = -400 } }
+				}
+				100 = {
+					modifier = {
+						factor = 0
+						num_free_districts = { type = district_city value = 0 }
+					}
+					modifier = {
+						factor = 0
+						free_building_slots > 0
+					}
+					add_district = district_city
+					owner = { add_resource = { minerals = -400 } }
+				}
+			}
+		}
+	}
+}
+
+country_event = {
+#	phi_ai.1	yearly checked - builds up the other planets of non gestalt empires
+
+	id = phi_ai.1
+	hide_window = yes
+
+	is_triggered_only = yes
+	
+	trigger = {
+		is_ai = yes
+		is_country_type = default
+		NOT = { has_ethic = ethic_gestalt_consciousness }
+		any_owned_planet = {
+			is_capital = no
+			is_under_colonization = no
+		}
+		has_resource = { type = minerals amount > 400 }
+		has_monthly_income = { resource = energy value > 20 }
+	}
+	
+	immediate = {
+		random_owned_planet = {
+			limit = {
+				is_capital = no
+			}
+			random_list = {
+				20 = {
+					modifier = {
+						factor = 0
+						num_free_districts = { type = district_generator value = 0 }
+					}
+					modifier = {
+						factor = 0
+						owner = { has_monthly_income = { resource = energy value > 20 } }
+					}
+					add_district = district_generator
+					owner = { add_resource = { minerals = -300 } }
+				}
+				20 = {
+					modifier = {
+						factor = 0
+						num_free_districts = { type = district_mining value = 0 }
+					}
+					modifier = {
+						factor = 0
+						owner = { has_monthly_income = { resource = minerals value > 100 } }
+					}
+					modifier = {
+						factor = 10
+						owner = { has_monthly_income = { resource = minerals value < 50 } }
+					}
+					add_district = district_mining
+					owner = { add_resource = { minerals = -300 } }
+				}
+				20 = {
+					modifier = {
+						factor = 0
+						num_free_districts = { type = district_farming value = 0 }
+					}
+					modifier = {
+						factor = 0
+						owner = { has_monthly_income = { resource = food value > 10 } }
+					}
+					add_district = district_farming
+					owner = { add_resource = { minerals = -300 } }
+				}
+				20 = {
+					modifier = {
+						factor = 0
+						num_free_districts = { type = district_industrial value = 0 }
+					}
+					add_district = district_industrial
+					owner = { add_resource = { minerals = -400 } }
+				}
+				20 = {
+					modifier = {
+						factor = 0
+						num_free_districts = { type = district_city value = 0 }
+					}
+					modifier = {
+						factor = 0.1
+						free_building_slots > 0
+					}
+					modifier = {
+						factor = 100
+						free_housing < 0
+					}
+					add_district = district_city
+					owner = { add_resource = { minerals = -400 } }
+				}
+				100 = {
+					modifier = {
+						factor = 0
+						free_building_slots = 0
+					}
+					modifier = {
+						factor = 0
+						num_buildings = { type = building_foundry_1 value > 0 }
+					}
+					add_building = building_foundry_1
+					owner = { add_resource = { minerals = -400 } }
+				}
+				100 = {
+					modifier = {
+						factor = 0
+						free_building_slots = 0
+					}
+					modifier = {
+						factor = 0
+						num_buildings = { type = building_factory_1 value > 0 }
+					}
+					modifier = {
+						factor = 0
+						owner = { has_monthly_income = { resource = consumer_goods value > 10 } }
+					}
+					add_building = building_factory_1
+					owner = { add_resource = { minerals = -400 } }
+				}
+			}
+		}
+	}
+}
+
+country_event = {
+#	phi_ai.2	yearly checked - manages unemployed pops
+
+	id = phi_ai.2
+	hide_window = yes
+
+	is_triggered_only = yes
+	
+	trigger = {
+		is_ai = yes
+		is_country_type = default
+		NOT = { has_ethic = ethic_gestalt_consciousness }
+		any_owned_pop = { is_unemployed = yes }
+		any_owned_planet = {
+			is_capital = no
+			is_under_colonization = no
+		}
+		OR = {
+			AND = {
+				has_resource = { type = energy amount > 500 }
+				has_resource = { type = influence amount > 100 }
+			}
+			has_civic = civic_corvee_system
+		}
+	}
+	
+	immediate = {
+		while = {
+			limit = {
+				OR = {
+					AND = {
+						has_resource = { type = energy amount > 500 }
+						has_resource = { type = influence amount > 100 }
+					}
+					has_civic = civic_corvee_system
+				}
+				any_owned_pop = {
+					is_unemployed = yes
+				}
+				any_owned_planet = {
+					free_jobs > 0
+				}
+			}
+			random_owned_pop = {
+				limit = { is_unemployed = yes }
+				root = {
+					random_owned_planet = {
+						limit = { free_jobs > 0 }
+						create_pop = {
+							species = prevprev
+						}
+					}
+				}
+				kill_pop = yes
+			}
+			if = {
+				limit = { NOT = { has_civic = civic_corvee_system } }
+				add_resource = { energy = -100 }
+				add_resource = { influence = -10 }
+			}
+		}
+	}
+}
+
+country_event = {
+#	phi_ai.3	yearly checked - transfers pops between capital and colonies for non gestalts empires
+
+	id = phi_ai.3
+	hide_window = yes
+
+	is_triggered_only = yes
+	
+	trigger = {
+		is_ai = yes
+		is_country_type = default
+		NOT = { has_ethic = ethic_gestalt_consciousness }
+		capital_scope = {
+			num_pops > 50
+			free_amenities > 5
+			any_owned_pop = { has_job = clerk }
+		}
+		any_owned_planet = {
+			is_capital = no
+			free_jobs > 0
+		}
+		OR = {
+			AND = {
+				has_resource = { type = energy amount > 500 }
+				has_resource = { type = influence amount > 300 }
+			}
+			has_civic = civic_corvee_system
+		}
+	}
+	
+	immediate = {
+		while = {
+			limit = {
+				OR = {
+					AND = {
+						has_resource = { type = energy amount > 500 }
+						has_resource = { type = influence amount > 300 }
+					}
+					has_civic = civic_corvee_system
+				}
+				capital_scope = {
+					num_pops > 50
+					free_amenities > 5
+					any_owned_pop = { has_job = clerk }
+				}
+				any_owned_planet = {
+					is_capital = no
+					free_jobs > 0
+				}				
+			}
+			capital_scope = {
+				random_owned_pop = {
+					limit = { has_job = clerk }
+					root = {
+						random_owned_planet = {
+							limit = {
+								is_capital = no
+								free_jobs > 0
+							}
+							create_pop = {
+								species = prevprev
+							}
+						}
+					}
+					kill_pop = yes
+				}
+			}
+			if = {
+				limit = { NOT = { has_civic = civic_corvee_system } }
+				add_resource = { energy = -100 }
+				add_resource = { influence = -10 }
+			}
+		}
+	}
+}
+
+country_event = {
+#	phi_ai.4	yearly checked - market simulator for non gestalts empires
+
+	id = phi_ai.4
+	hide_window = yes
+
+	is_triggered_only = yes
+	
+	trigger = {
+		is_ai = yes
+		is_country_type = default
+		NOT = { has_ethic = ethic_gestalt_consciousness }
+	}
+	
+	immediate = {
+		while = {
+			limit = {
+				has_resource = { type = consumer_goods amount > 500 }
+				has_monthly_income = { resource = consumer_goods value > 0 }
+			}
+			add_resource = { consumer_goods = -100 }
+			add_resource = { energy = 100 }
+		}
+		if = {
+			limit = {
+				has_resource = { type = energy amount > 500 }
+				has_resource = { type = food amount < 500 }
+				has_monthly_income = { resource = food value < 0 }
+			}
+			add_resource = { food = 500 }
+			add_resource = { energy = -500 }
+		}
+		if = {
+			limit = {
+				has_resource = { type = energy amount > 1000 }
+				has_resource = { type = minerals amount < 500 }
+			}
+			add_resource = { minerals = 500 }
+			add_resource = { energy = -500 }
+		}
+		if = {
+			limit = {
+				has_resource = { type = energy amount > 1000 }
+				has_resource = { type = minerals amount < 1000 }
+			}
+			add_resource = { minerals = 500 }
+			add_resource = { energy = -500 }
+		}
+		if = {
+			limit = {
+				has_resource = { type = minerals amount > 12000 }
+				has_resource = { type = alloys amount < 10000 }
+			}
+			add_resource = { alloys = 300 }
+			add_resource = { minerals = -2000 }
+		}
+		if = {
+			limit = {
+				has_resource = { type = minerals amount > 12000 }
+				has_resource = { type = energy amount < 20000 }
+			}
+			add_resource = { energy = 2000 }
+			add_resource = { minerals = -2000 }
+		}
+		if = {
+			limit = {
+				has_resource = { type = energy amount > 11000 }
+				has_resource = { type = alloys amount < 10000 }
+			}
+			add_resource = { alloys = 1000 }
+			add_resource = { energy = -6000 }
+		}
+	}
+}
+
+country_event = {
+#	phi_ai.5	yearly checked - refines the capital planet of non-gestalt non-voids empires
+
+	id = phi_ai.5
+	hide_window = yes
+
+	is_triggered_only = yes
+	
+	trigger = {
+		is_ai = yes
+		is_country_type = default
+		NOT = { has_ethic = ethic_gestalt_consciousness }
+	}
+	
+	immediate = {
+		random_owned_planet = {
+			limit = {
+				is_capital = yes
+				NOT = { is_planet_class = pc_habitat }
+			}
+			if = {
+				limit = {
+					owner = {
+						has_monthly_income = { resource = food value > 20 }
+						NOT = { has_valid_civic = civic_agrarian_idyll }
+					}
+					num_districts = { type = district_farming value > 0 }
+				}
+				remove_district = district_farming
+				random_list = {
+					50 = {
+						modifier = {
+							factor = 0
+							num_free_districts = { type = district_generator value = 0 }
+						}
+						modifier = {
+							factor = 0
+							owner = { has_monthly_income = { resource = energy value > 20 } }
+						}
+						modifier = {
+							factor = 0
+							free_jobs > 0
+						}
+						add_district = district_generator
+					}
+					50 = {
+						modifier = {
+							factor = 0
+							owner = { has_resource = { type = minerals amount < 100 } }
+						}
+						owner = { add_resource = { minerals = -100 } }
+						add_district = district_city
+					}
+				}
+			}
+			if = {
+				limit = {
+					owner = { has_monthly_income = { resource = minerals value > 100 } }
+					num_districts = { type = district_mining value > 0 }
+				}
+				remove_district = district_mining
+				random_list = {
+					50 = {
+						modifier = {
+							factor = 0
+							num_free_districts = { type = district_generator value = 0 }
+						}
+						modifier = {
+							factor = 0
+							owner = { has_monthly_income = { resource = energy value > 20 } }
+						}
+						modifier = {
+							factor = 0
+							free_jobs > 0
+						}
+						add_district = district_generator
+					}
+					50 = {
+						modifier = {
+							factor = 0
+							owner = { has_resource = { type = minerals amount < 100 } }
+						}
+						modifier = {
+							factor = 0
+							owner = { has_valid_civic = civic_agrarian_idyll }
+							num_free_districts = { type = district_farming value > 0 }
+						}
+						owner = { add_resource = { minerals = -100 } }
+						add_district = district_city
+					}
+					50 = {
+						modifier = {
+							factor = 0
+							num_free_districts = { type = district_farming value = 0 }
+						}
+						modifier = {
+							factor = 0
+							owner = { NOT = { has_valid_civic = civic_agrarian_idyll } }
+						}
+						add_district = district_farming
+					}
+				}
+			}
+		}
+	}
+}
+
+country_event = {
+#	phi_ai.6	yearly checked - finds empires lagging behind and flags them
+
+	id = phi_ai.6
+	hide_window = yes
+
+	is_triggered_only = yes
+	
+	trigger = {
+		is_country_type = default
+	}
+	
+	immediate = {
+		# clears the flag for the country
+		if = {
+			limit = { has_country_flag = phi_lagger }
+			remove_country_flag = phi_lagger
+		}
+		
+		# let's assume the country is a big bad evil guy
+		set_country_flag = phi_bbeg
+		
+		if = {
+			limit = {
+				
+				#check 1: if root is in a federation, is the prez weak?
+				OR = {
+					has_federation = no
+					is_federation_leader = yes
+					any_federation_ally = {
+						is_federation_leader = yes
+						any_country = {
+							is_country_type = default
+							has_communications = prev
+							relative_power = {
+								who = prev
+								category = technology
+								value > equivalent
+							}
+						}
+					}
+				}
+				
+				#check 2: is root weak?
+				any_country = {
+					is_country_type = default
+					has_communications = root
+					NOT = { is_in_federation_with = root }
+					OR = {
+						AND = {
+							relative_power = {
+								who = root
+								category = fleet
+								value > equivalent
+							}
+							OR = {
+								fleet_power > 20000
+								root = { fleet_power > 4000 }
+							}
+						}
+						relative_power = {
+							who = root
+							category = technology
+							value > equivalent
+						}
+					}
+				}
+			}
+			remove_country_flag = phi_bbeg
+			set_country_flag = phi_lagger
+		}
+		
+		#human players are never weak
+		if = {
+			limit = {
+				is_ai = no
+				has_country_flag = phi_lagger
+			}
+			remove_country_flag = phi_lagger
+		}
+		
+		#excludes the baddies from weak definition
+		if = {
+			limit = {
+				has_country_flag = phi_lagger
+				OR = {
+					is_homicidal = yes
+					has_valid_civic = civic_criminal_heritage
+				}
+			}
+			remove_country_flag = phi_lagger
+		}
+	}
+}
+
+
+country_event = {
+#	phi_ai.7	yearly checked - better starbases
+
+	id = phi_ai.7
+	hide_window = yes
+
+	is_triggered_only = yes
+	
+	trigger = {
+		is_ai = yes
+		is_country_type = default
+	}
+	
+	immediate = {
+		if = {
+			limit = { has_technology = "tech_hydroponics" }
+			every_owned_starbase = {
+				limit = { has_starbase_building = listening_post }
+				remove_starbase_building = { building = listening_post }
+			}
+		}
+	}
+}
+
+country_event = {
+#	phi_ai.8	yearly checked - building assault armies
+
+	id = phi_ai.8
+	hide_window = yes
+
+	is_triggered_only = yes
+	
+	trigger = {
+		is_ai = yes
+		is_country_type = default
+		fleet_power > 5000
+		num_armies < 30
+		has_resource = { type = minerals amount > 2000 }
+	}
+	
+	immediate = {
+		capital_scope = {
+			while = {
+				count = 8
+				create_army = {
+					name = random
+					owner = root
+					species = root
+					type = "assault_army"
+				}
+				owner = { add_resource = { minerals = -100 } }
+			}
+		}
+	}
+}
+
+country_event = {
+#	phi_ai.9	monthly checked - destroy "lost cause" starbases
+
+	id = phi_ai.9
+	hide_window = yes
+
+	is_triggered_only = yes
+	
+	trigger = {
+		is_ai = yes
+		is_country_type = default
+		is_at_war = yes
+	}
+	
+	immediate = {
+		every_owned_starbase = {
+			limit = {
+				has_starbase_size > starbase_outpost
+				solar_system = {
+					is_capital_system = no
+					any_neighbor_system = {
+						any_fleet_in_system = {
+							exists = owner
+							owner = { is_at_war_with = root }
+							fleet_power > 4000
+						}
+					}
+				}
+			}
+			remove_starbase_module = { slot = all }
+			remove_starbase_building = { slot = all }
+			set_starbase_size = starbase_outpost
+		}
+	}
+}
+
+country_event = {
+#	phi_ai.10	yearly checked - send alloys to fed prez
+
+	id = phi_ai.10
+	hide_window = yes
+
+	is_triggered_only = yes
+	
+	trigger = {
+		is_ai = yes
+		is_country_type = default
+		is_homicidal = no
+		is_subject = no
+		has_federation = yes
+		is_federation_leader = no
+		has_resource = { type = alloys amount > 500 }
+		has_monthly_income = { resource = alloys value > 10 }
+	}
+	
+	immediate = {
+		random_federation_ally = {
+			limit = {
+				is_federation_leader = yes
+				is_ai = yes
+				has_resource = { type = alloys amount < 10000 }
+				has_monthly_income = { resource = alloys value < 200 }
+			}
+			add_resource = { alloys = 250 }
+			root = { add_resource = { alloys = -250 } }
+		}
+	}
+}
+
+country_event = {
+#	phi_ai.11	monthly checked - set survive cb in defensive wars when hope is lost
+
+	id = phi_ai.11
+	hide_window = yes
+
+	is_triggered_only = yes
+	
+	trigger = {
+		is_ai = yes
+		is_country_type = default
+		is_at_war = yes
+		any_war = {
+			any_defender = {
+				is_same_value = root
+				is_war_leader = yes
+			}
+			NOR = {
+				using_war_goal = { type = wg_phi_survive owner = root }
+				using_war_goal = { type = wg_humiliation owner = attacker }
+			}
+			any_attacker = {
+				relative_power = {
+					who = root
+					category = fleet
+					value > equivalent
+				}
+			}
+		}
+		is_homicidal = no
+		has_country_flag = phi_lagger
+	}
+	
+	immediate = {
+		every_war = {
+			limit = {
+				any_defender = {
+					is_same_value = root
+				}
+				any_attacker = {
+					relative_power = {
+						who = root
+						category = fleet
+						value > equivalent
+					}
+				}
+				NOR = {
+					using_war_goal = { type = wg_phi_survive owner = root }
+					using_war_goal = { type = wg_humiliation owner = attacker }
+				}
+			}
+			set_war_goal = { type = wg_phi_survive target = root }
+		}
+	}
+}
+
+country_event = {
+#	phi_ai.12	monthly checked - joins defensive wars of laggers
+
+	id = phi_ai.12
+	hide_window = yes
+
+	is_triggered_only = yes
+	
+	trigger = {
+		is_ai = yes
+		is_country_type = default
+		is_subject = no
+		OR = {
+			has_federation = no
+			is_federation_leader = yes
+		}
+		NAND = {
+			is_at_war = yes
+			any_war = {
+				any_attacker = {
+					is_same_value = root
+				}
+			}
+		}
+		is_homicidal = no
+		has_country_flag = phi_lagger
+		any_country = {
+			has_communications = root
+			has_country_flag = phi_lagger
+			is_at_war = yes
+		}
+	}
+	
+	immediate = {
+		random_country = {
+			limit = {
+				has_communications = root
+				has_country_flag = phi_lagger
+				any_war = {
+					using_war_goal = { type = wg_phi_survive owner = prev }
+					NOT = { is_war_participant = { who = root } }
+				}
+			}
+			random_war = {
+				limit = {
+					NOT = { is_war_participant = { who = root } }
+					using_war_goal = { type = wg_phi_survive owner = defender }
+					any_defender = {
+						is_same_value = prevprev
+					}
+				}
+				save_event_target_as = survive_cb_war
+			}
+		}
+		root = {
+			join_war_on_side = {
+				war = event_target:survive_cb_war
+				side = defenders
+			}
+			if = {
+				limit = { is_federation_leader = yes }
+				every_federation_ally = {
+					join_war_on_side = {
+						war = event_target:survive_cb_war
+						side = defenders
+					}
+				}
+			}
+		}
+	}
+}
+
+country_event = {
+#	phi_ai.13	yearly checked - shifts ethics towards fed type
+
+	id = phi_ai.13
+	hide_window = yes
+
+	is_triggered_only = yes
+	
+	trigger = {
+		is_ai = yes
+		is_country_type = default
+		has_federation = yes
+		NOT = { has_ethic = ethic_gestalt_consciousness }
+		has_resource = { type = influence amount > 500 }
+	}
+	
+	immediate = {
+		if = {
+			limit = {
+				federation = { has_federation_type = xenophile_federation }
+				NOT = { has_ethic = ethic_fanatic_xenophile }
+			}
+			shift_ethic = ethic_xenophile
+			add_resource = { influence = -500 }
+		}
+		if = {
+			limit = {
+				federation = { has_federation_type = militarist_federation }
+				NOT = { has_ethic = ethic_fanatic_militarist }
+			}
+			shift_ethic = ethic_militarist
+			add_resource = { influence = -500 }
+		}
+		if = {
+			limit = {
+				federation = { has_federation_type = pacifist_federation }
+				NOT = { has_ethic = ethic_fanatic_pacifist }
+			}
+			shift_ethic = ethic_pacifist
+			add_resource = { influence = -500 }
+		}
+		if = {
+			limit = {
+				federation = { has_federation_type = spiritualist_federation }
+				NOT = { has_ethic = ethic_fanatic_spiritualist }
+			}
+			shift_ethic = ethic_spiritualist
+			add_resource = { influence = -500 }
+		}
+		if = {
+			limit = {
+				federation = { has_federation_type = materialist_federation }
+				NOT = { has_ethic = ethic_fanatic_materialist }
+			}
+			shift_ethic = ethic_materialist
+			add_resource = { influence = -500 }
+		}
+		if = {
+			limit = {
+				federation = { has_federation_type = authoritarian_federation }
+				NOT = { has_ethic = ethic_fanatic_authoritarian }
+			}
+			shift_ethic = ethic_authoritarian
+			add_resource = { influence = -500 }
+		}
+		if = {
+			limit = {
+				federation = { has_federation_type = egalitarian_federation }
+				NOT = { has_ethic = ethic_fanatic_egalitarian }
+			}
+			shift_ethic = ethic_egalitarian
+			add_resource = { influence = -500 }
+		}
+	}
+}
+
+country_event = {
+#	phi_ai.14	monthly checked - scorched earth tactics
+
+	id = phi_ai.14
+	hide_window = yes
+
+	is_triggered_only = yes
+	
+	trigger = {
+		is_ai = yes
+		is_country_type = default
+		is_at_war = yes
+	}
+	
+	immediate = {
+		every_owned_fleet = {
+			limit = {
+				OR = {
+					is_ship_size = mining_station
+					is_ship_size = research_station
+					is_ship_size = observation_station
+				}
+				solar_system = {
+					NOT = { owner = { is_same_value = root } }
+				}
+			}
+			destroy_fleet = this
+		}
+	}
+}
+
+country_event = {
+#	phi_ai.15	yearly checked - attack bbeg
+
+	id = phi_ai.15
+	hide_window = yes
+
+	is_triggered_only = yes
+	
+	trigger = {
+		is_ai = yes
+		is_country_type = default
+		is_at_war = no
+		has_federation = yes
+		is_federation_leader = yes
+		any_playable_country = {
+			has_country_flag = phi_bbeg
+			has_communications = root
+			NOR = {
+				has_truce = root
+				has_association_status = root
+				is_in_federation_with = root
+			}
+		}
+	}
+	
+	immediate = {
+		federation = {
+			export_trigger_value_to_variable = {
+				trigger = fleet_power
+				variable = phi_total_fleet
+			}
+		}
+		random_playable_country = {
+			limit = {
+				has_country_flag = phi_bbeg
+				has_communications = root
+				NOR = {
+					has_truce = root
+					has_association_status = root
+					is_in_federation_with = root
+				}
+				OR = {
+					#if bbeg has no federation, checks for its fleet
+					AND = {
+						has_federation = no
+						check_variable_arithmetic = {
+							which = root.federation.phi_total_fleet
+							subtract = trigger:fleet_power
+							value > 10000
+						}
+					}
+					#if bbeg has a federation, checks for its fed total power
+					AND = {
+						has_federation = yes
+						check_variable_arithmetic = {
+							which = root.federation.phi_total_fleet
+							subtract = federation.trigger:fleet_power
+							value > 10000
+						}
+					}
+				}
+			}
+			root = {
+				if = {
+					limit = {
+						any_federation_ally = {
+							any_system_within_border = {
+								has_hyperlane_to = prevprevprev
+							}
+						}
+					}
+					if = {
+						limit = {
+							prev = {
+								OR = {
+									has_valid_civic = civic_fanatic_purifiers
+									has_valid_civic = civic_machine_terminator
+									has_valid_civic = civic_hive_devouring_swarm
+									has_valid_civic = civic_machine_assimilator
+								}
+							}
+						}
+						if = {
+							limit = {
+								prev = {
+									OR = {
+										has_valid_civic = civic_fanatic_purifiers
+										has_valid_civic = civic_machine_terminator
+									}
+								}
+							}
+							declare_war = {
+								target = prev
+								attacker_war_goal = wg_end_threat
+							}
+						}
+						else_if = {
+							limit = {
+								prev = {
+									has_valid_civic = civic_hive_devouring_swarm
+								}
+							}
+							declare_war = {
+								target = prev
+								attacker_war_goal = wg_end_threat_swarm
+							}
+						}
+						else_if = {
+							limit = {
+								prev = {
+									has_valid_civic = civic_machine_assimilator
+								}
+							}
+							declare_war = {
+								target = prev
+								attacker_war_goal = wg_end_threat_assimilators
+							}
+						}
+					}
+				}
+				else_if = {
+					limit = {
+						has_tradition = tr_domination_adopt
+						prev = { is_homicidal = no }
+					}
+					if = {
+						limit = { has_authority = auth_corporate }
+						declare_war = {
+							target = prev
+							attacker_war_goal = wg_megacorp_subjugate
+						}
+					}
+					else = {
+						declare_war = {
+							target = prev
+							attacker_war_goal = wg_subjugation
+						}
+					}
+				}
+				else_if = {
+					limit = {
+						any_federation_ally = {
+							has_claim = prevprev
+						}
+						prev = { is_homicidal = no }
+					}
+					declare_war = {
+						target = prev
+						attacker_war_goal = wg_conquest
+					}
+				}
+				else_if = {
+					limit = {
+						prev = { is_homicidal = no }
+					}
+					declare_war = {
+						target = prev
+						attacker_war_goal = wg_humiliation
+					}
+				}
+			}
+		}
+	}
+}
+
+country_event = {
+#	phi_ai.777	test event
+
+	id = phi_ai.777
+	
+	hide_window = yes
+
+	is_triggered_only = yes
+	
+	trigger = {
+	
+	}
+	
+	immediate = {
+		
+	}
+}

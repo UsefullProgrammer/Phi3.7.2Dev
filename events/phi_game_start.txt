@@ -1,0 +1,177 @@
+namespace = phi_game_start
+
+# EXPLAINER:
+#	phi_game_start.0		game start gatekeeper
+#	phi_game_start.1		phi game start menu
+#	phi_game_start.2		messages from the developer for players not restarting games while mod is being upgraded
+
+event = {
+	id = phi_game_start.0
+	hide_window = yes
+	is_triggered_only = yes
+
+	trigger = {
+		NOT = {
+			has_global_flag = phi_initialisation_menu
+		}
+		is_ai = no
+	}
+
+	immediate = {
+		every_country = {
+			every_owned_planet = {
+				limit = { is_capital = yes }
+				remove_phi_planet_modifiers_3 = yes
+				remove_deposit = d_phi_exotic_gas_1
+				remove_deposit = d_phi_volatile_motes_1
+				remove_deposit = d_phi_rare_crystals_1
+				add_modifier = { modifier = phi_pm_atmospheric_pollution }
+				if = {
+					limit = { 
+						planet_size < 20
+						OR = {
+							is_planet_class = pc_tundra
+							is_planet_class = pc_arctic
+							is_planet_class = pc_alpine
+							is_planet_class = pc_arid
+							is_planet_class = pc_desert
+							is_planet_class = pc_savannah
+							is_planet_class = pc_continental
+							is_planet_class = pc_ocean
+							is_planet_class = pc_tropical
+							is_planet_class = pc_nuked
+						}
+					}
+					change_planet_size = 1
+				}
+			}
+		}
+		set_global_flag = phi_initialisation_menu
+		set_global_flag = phi_border_gore_disallowed
+		set_global_flag = phi_sublimation_allowed
+		set_global_flag = phi_emperor_win_allowed
+		country_event = { id = phi_game_start.1 }
+	}
+}
+
+country_event = {
+	id = phi_game_start.1
+	title = phi_game_start.1.name
+	picture = GFX_evt_phi_mp_balancing
+	desc = phi_game_start.1.desc
+
+	is_triggered_only = yes
+	
+	trigger = {
+		is_ai = no
+	}
+
+	# BORDER GORE
+	option = {
+		trigger = {
+			has_global_flag = phi_border_gore_allowed
+		}
+		name = phi_game_start.1.border_gore_allowed
+		custom_tooltip = phi_game_start.1.border_gore_allowedTT
+		set_global_flag = phi_border_gore_disallowed
+		remove_global_flag = phi_border_gore_allowed
+		hidden_effect = {
+			country_event = { id = phi_game_start.1 }
+		}
+	}
+
+	option = {
+		trigger = {
+			has_global_flag = phi_border_gore_disallowed
+		}
+		name = phi_game_start.1.border_gore_disallowed
+		custom_tooltip = phi_game_start.1.border_gore_disallowedTT
+		set_global_flag = phi_border_gore_allowed
+		remove_global_flag = phi_border_gore_disallowed
+		hidden_effect = {
+			country_event = { id = phi_game_start.1 }
+		}
+	}
+
+	# SUBLIMATION
+	option = {
+		trigger = {
+			has_global_flag = phi_sublimation_allowed
+		}
+		name = phi_game_start.1.sublimation_allowed
+		custom_tooltip = phi_game_start.1.sublimation_allowedTT
+		set_global_flag = phi_sublimation_disallowed
+		remove_global_flag = phi_sublimation_allowed
+		hidden_effect = {
+			country_event = { id = phi_game_start.1 }
+		}
+	}
+
+	option = {
+		trigger = {
+			has_global_flag = phi_sublimation_disallowed
+		}
+		name = phi_game_start.1.sublimation_disallowed
+		custom_tooltip = phi_game_start.1.sublimation_disallowedTT
+		set_global_flag = phi_sublimation_allowed
+		remove_global_flag = phi_sublimation_disallowed
+		hidden_effect = {
+			country_event = { id = phi_game_start.1 }
+		}
+	}
+
+	# EMPEROR WINS
+	option = {
+		trigger = {
+			has_global_flag = phi_emperor_win_allowed
+		}
+		name = phi_game_start.1.emperor_win_allowed
+		custom_tooltip = phi_game_start.1.emperor_win_allowedTT
+		set_global_flag = phi_emperor_win_disallowed
+		remove_global_flag = phi_emperor_win_allowed
+		hidden_effect = {
+			country_event = { id = phi_game_start.1 }
+		}
+	}
+
+	option = {
+		trigger = {
+			has_global_flag = phi_emperor_win_disallowed
+		}
+		name = phi_game_start.1.emperor_win_disallowed
+		custom_tooltip = phi_game_start.1.emperor_win_disallowedTT
+		set_global_flag = phi_emperor_win_allowed
+		remove_global_flag = phi_emperor_win_disallowed
+		hidden_effect = {
+			country_event = { id = phi_game_start.1 }
+		}
+	}
+
+	option = {
+		name = OK
+		hidden_effect = {
+			set_country_flag = phi_changelog_1_5c
+		}
+	}
+}
+
+country_event = {
+	id = phi_game_start.2
+	title = phi_game_start.1.name
+	picture = GFX_evt_phi_mp_balancing
+	desc = phi_game_start.2.desc
+
+	is_triggered_only = yes
+	
+	trigger = {
+		is_ai = no
+		NOT = { has_country_flag = phi_changelog_1_5c }
+	}
+
+	option = {
+		name = OK
+		hidden_effect = {
+			set_country_flag = phi_changelog_1_5c
+		}
+	}
+}

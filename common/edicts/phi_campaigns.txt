@@ -1,0 +1,524 @@
+gears_of_war = {
+	length = 720
+	icon = "GFX_edict_type_time"
+	resources = {
+		category = edicts
+		cost = {
+			influence = 50
+			energy = 500
+			minerals = 500
+		}
+	}
+
+	modifier = {
+		pop_resettlement_cost_mult = -0.75
+	}
+
+	potential = {
+		has_technology = tech_planetary_unification
+		NOT = { has_ethic = ethic_gestalt_consciousness }
+	}
+
+	ai_weight = {
+		weight = 0
+		modifier = {
+			weight = @EdictMedPrio
+			is_at_war = yes
+		}
+	}
+}
+
+gnam_gnam_gnam = {
+	length = 720
+	icon = "GFX_edict_type_time"
+	resources = {
+		category = edicts
+		cost = {
+			influence = 50
+			energy = 500
+			minerals = 500
+		}
+	}
+
+	modifier = {
+		pop_resettlement_cost_mult = -0.75
+	}
+
+	potential = {
+		has_technology = tech_planetary_unification
+		has_ethic = ethic_gestalt_consciousness
+	}
+
+	ai_weight = {
+		weight = 0
+		modifier = {
+			weight = @EdictMedPrio
+			is_at_war = yes
+		}
+	}
+}
+
+total_noob = {
+	length = -1
+	icon = "GFX_edict_type_policy"
+	edict_cap_usage = 1
+	
+	potential = {
+		is_ai = no
+	}
+
+	resources = {
+		category = edicts
+		cost = {
+			influence = 10
+		}
+	}
+
+	modifier = {
+		all_technology_research_speed = -2.00
+		country_alloys_produces_mult = -1.00
+		country_admin_cap_add = 1000
+	}
+}
+
+phi_war_in_heaven_ongoing = {
+	length = -1
+	icon = "GFX_edict_type_policy"
+	edict_cap_usage = 1
+	
+	potential = {
+		always = yes
+	}
+
+	allow = {
+		has_global_flag = war_in_heaven_ongoing
+	}
+
+	resources = {
+		category = edicts
+		cost = {
+			influence = 100
+		}
+	}
+
+	modifier = {
+		country_admin_cap_add = 1000
+	}
+	
+	ai_weight = {
+		weight = 1000
+	}
+}
+
+
+#### EXPANDED DIPLOMACY ####
+
+breaking_truce_normal = {
+	length = 0
+	potential = {
+		is_homicidal = no
+		is_ai = no
+	}
+	effect = {
+		custom_tooltip = "edict_tooltip_breaking_truce_normal_effects"
+		hidden_effect = {
+			country_event = { id = enhanced_diplomacy.0 }
+		}
+	}
+}
+
+breaking_truce_homicidal = {
+	length = 0
+	potential = {
+		is_homicidal = yes
+		is_ai = no
+	}
+	allow = {
+		any_neighbor_country = {
+			has_truce = root
+			is_country_type = default
+		}
+	}
+	effect = {
+		custom_tooltip = "edict_tooltip_breaking_truce_homicidal_effects"
+		hidden_effect = {
+			country_event = { id = enhanced_diplomacy.1 }
+		}
+	}
+}
+
+phi_join_defensive_war = {
+	length = 0
+	potential = {
+		is_homicidal = no
+		is_ai = no
+		is_subject = no
+	}
+	allow = {
+		any_country = {
+			root = {
+				is_improving_relations_with = prev
+			}
+			any_war = {
+				using_war_goal = { type = wg_phi_survive owner = prev }
+				defender_war_exhaustion < 0.5
+			}
+		}	
+	}
+	effect = {
+		custom_tooltip = "edict_tooltip_phi_join_defensive_war_effects"
+		hidden_effect = {
+			country_event = { id = enhanced_diplomacy.2 }
+		}
+	}
+}
+
+phi_set_survive_wg = {
+	length = 0
+	potential = {
+		is_homicidal = no
+		is_ai = no
+	}
+	allow = {
+		is_at_war = yes
+		any_war = {
+			any_defender = {
+				is_same_value = root
+				is_war_leader = yes
+			}
+		}
+	}
+	effect = {
+		every_war = {
+			limit = {
+				any_defender = {
+					is_same_value = root
+				}
+			}
+			set_war_goal = { type = wg_phi_survive target = root }
+		}
+	}
+}
+
+phi_set_conquest_wg = {
+	length = 0
+	potential = {
+		is_homicidal = no
+		is_ai = no
+	}
+	allow = {
+		is_at_war = yes
+		any_war = {
+			any_defender = {
+				is_same_value = root
+				is_war_leader = yes
+			}
+			any_attacker = {
+				root = {
+					has_claim = prev
+				}
+			}
+			NOT = {
+				using_war_goal = { type = wg_phi_survive owner = root }
+			}
+		}
+	}
+	effect = {
+		every_war = {
+			limit = {
+				any_defender = {
+					is_same_value = root
+				}
+				NOT = {
+					using_war_goal = { type = wg_phi_survive owner = root }
+				}
+			}
+			set_war_goal = { type = wg_conquest target = root }
+		}
+	}
+}
+
+
+#### TRADE EMPIRE BESTOWINGS ####
+
+# local_autonomy = {
+	# length = 0
+	# potential = {
+		# has_country_flag = trade_emperor
+	# }
+	# allow = {
+		# NOT = { has_modifier = grace_bestowed }
+	# }
+	# effect = {
+		# custom_tooltip = "edict_tooltip_local_autonomy_effects"
+		# hidden_effect = {
+			# country_event = { id = victory.12 }
+		# }
+	# }
+# }
+
+# imperial_defence = {
+	# length = 0
+	# potential = {
+		# has_country_flag = trade_emperor
+	# }
+	# allow = {
+		# NOT = { has_modifier = grace_bestowed }
+	# }
+	# effect = {
+		# custom_tooltip = "edict_tooltip_imperial_defence_effects"
+		# hidden_effect = {
+			# country_event = { id = victory.13 }
+		# }
+	# }
+# }
+
+# industrial_focus = {
+	# length = 0
+	# potential = {
+		# has_country_flag = trade_emperor
+	# }
+	# allow = {
+		# NOT = { has_modifier = grace_bestowed }
+	# }
+	# effect = {
+		# custom_tooltip = "edict_tooltip_industrial_focus_effects"
+		# hidden_effect = {
+			# country_event = { id = victory.14 }
+		# }
+	# }
+# }
+
+#### POLITICS ####
+
+abdicate = {
+	length = 0
+	potential = {
+		has_authority = auth_imperial
+	}
+	allow = {
+		exists = heir
+	}
+	effect = {
+		kill_leader = {
+			type = ruler
+			show_notification = yes
+			fire = yes
+		}
+	}
+	resources = {
+		category = edicts
+		cost = {
+			influence = 100
+		}
+	}
+}
+
+new_heir = {
+	length = 0
+	potential = {
+		has_authority = auth_imperial
+	}
+	allow = {
+		exists = heir
+	}
+	effect = {
+		kill_leader = {
+			type = ruler
+			heir = yes
+			show_notification = yes
+			fire = yes
+		}
+	}
+	resources = {
+		category = edicts
+		cost = {
+			influence = 100
+		}
+	}
+}
+
+retire = {
+	length = 0
+	potential = {
+		has_authority = auth_dictatorial
+	}
+	allow = {
+		exists = ruler
+	}
+	effect = {
+		kill_leader = {
+			type = ruler
+			show_notification = yes
+			fire = yes
+		}
+	}
+	resources = {
+		category = edicts
+		cost = {
+			influence = 100
+		}
+	}
+}
+
+presidential_run = {
+	length = 0
+	potential = {
+		is_ai = no
+	}
+	allow = {
+		has_federation = yes
+		is_federation_leader = no
+	}
+	effect = {
+		hidden_effect = {
+			country_event = { id = phi_politics.400 }
+		}
+	}
+	resources = {
+		category = edicts
+		cost = {
+			influence = 100
+		}
+	}
+}
+
+federal_integration_act = {
+	length = 0
+	potential = {
+		is_ai = no
+	}
+	allow = {
+		is_overlord = yes
+		has_federation = yes
+		is_federation_leader = yes
+		any_subject = {
+			root = {
+				is_improving_relations_with = prev
+			}
+		}
+	}
+	effect = {
+		hidden_effect = {
+			every_subject = {
+				limit = {
+					root = {
+						is_improving_relations_with = prev
+					}
+				}
+				set_subject_of = { who = none }
+				join_alliance = { who = root override_requirements = yes }
+			}
+		}
+	}
+	resources = {
+		category = edicts
+		cost = {
+			influence = 100
+		}
+	}
+}
+
+supranational_authority_bill = {
+	length = 0
+	potential = {
+		is_ai = no
+	}
+	allow = {
+		is_overlord = yes
+		has_federation = no
+		is_authoritarian = yes
+		has_tradition = tr_diplomacy_the_federation
+		any_subject = {
+			root = {
+				is_improving_relations_with = prev
+			}
+		}
+	}
+	effect = {
+		every_subject = {
+			limit = {
+				root = {
+					is_improving_relations_with = prev
+				}
+			}
+			set_subject_of = {
+				who = none
+			}
+			join_alliance = { who = root override_requirements = yes }
+		}
+		federation = {
+			set_federation_type = authoritarian_federation
+			set_name = random
+			set_federation_law = succession_type_strongest
+			set_federation_law = succession_term_status_change
+			set_federation_law = succession_power_diplomatic_weight
+			set_federation_law = allow_subjects_to_join_no
+		}
+		set_federation_leader = root
+	}
+	resources = {
+		category = edicts
+		cost = {
+			influence = 100
+		}
+	}
+}
+
+blood_tribute = {
+	length = 0
+	potential = {
+		is_ai = no
+	}
+	allow = {
+		has_federation = yes
+		is_federation_leader = yes
+		federation = { has_federation_type = xenophobe_federation }
+		NOT = { has_modifier = blood_tribute_extolled }
+	}
+	effect = {
+		hidden_effect = {
+			add_modifier = {
+				modifier = "blood_tribute_extolled"
+				days = 1800
+			}
+			every_federation_ally = {
+				limit = {
+					NOT = { is_same_value = root }
+					num_pops >= 31
+				 }
+				country_event = { id = phi_politics.6 days = 5 }
+			}
+		}
+	}
+	resources = {
+		category = edicts
+		cost = {
+			influence = 100
+		}
+	}
+}
+
+
+#### FROM ASCENSION PERKS ####
+
+illuminate_vassal = {
+	length = 0
+	potential = {
+		has_ascension_perk = ap_shared_destiny
+	}
+	allow = {
+		vassals > 0
+	}
+	effect = {
+		every_subject = {
+			shift_ethic = ethic_xenophile
+		}
+	}
+	resources = {
+		category = edicts
+		cost = {
+			influence = 500
+		}
+	}
+}

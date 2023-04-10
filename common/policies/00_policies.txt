@@ -1,0 +1,2892 @@
+##########################################################################
+# Empire Policies
+#
+# #####
+#
+# AI:
+# Base AI-weight is 100, if unchanged
+# AI will grab whatever policy-option has the highest weight
+#
+# #####
+#
+##########################################################################
+
+#vassals_policy = {
+#		option = {
+#		name = "vassals_policy_test"
+#
+#		potential = {
+#			is_overlord = yes
+#		}
+#		
+#		valid = {
+#			always = yes
+#		}
+#		
+#		modifier = {
+#			set_variable = { which = numero value = 20 }
+#			country_naval_cap_add = numero
+#		}
+#
+#		ai_weight = {
+#			weight = 10
+#		}
+#	}
+#}
+
+
+diplomatic_stance = {
+	potential = {
+		OR = {
+			is_country_type = default
+			is_country_type = fallen_empire
+			is_country_type = awakened_fallen_empire
+			is_country_type = primitive
+			is_country_type = awakened_marauders
+		}
+	}
+
+	allow = {
+		always = yes
+	}
+
+	option = {
+		name = "diplo_stance_disarmament"
+		icon = "GFX_diplomatic_stance_isolationist"
+
+		potential = {
+			OR = {
+				is_country_type = default
+				is_country_type = awakened_fallen_empire
+			}
+			is_homicidal = no # They have their own variants of this
+		}
+		
+		valid = {
+			NAND = {
+				has_policy_flag = diplo_stance_minimal_army
+				has_modifier = tora_tora_tora
+			}
+			NOR = {
+				has_policy_flag = diplo_stance_neutral
+				has_policy_flag = diplo_stance_conscription
+				has_policy_flag = diplo_stance_full_scale_mobilization
+			}
+			OR = {
+				has_tradition = tr_harmony_finish
+				has_tradition = tr_synchronicity_finish
+			}
+		}
+		
+		policy_flags = {
+			diplo_stance_disarmament
+		}
+
+		modifier = {
+			country_war_exhaustion_mult = 0.1
+			ship_fire_rate_mult = -0.2
+			ships_upkeep_mult = -0.2
+			diplo_weight_economy_mult = 0.2
+			diplo_weight_naval_mult = -0.2
+		}
+
+		on_enabled = {
+			if = {
+				limit = { is_gestalt = no }
+				add_modifier = { modifier = phi_disarmament }
+			}
+			if = {
+				limit = { is_gestalt = yes }
+				add_modifier = { modifier = phi_disarmament_gestalt }
+			}
+		}
+		
+		on_disabled = {
+			remove_modifier = phi_disarmament
+			remove_modifier = phi_disarmament_gestalt
+		}
+
+		ai_weight = {
+			weight = 1000
+		}
+	}
+	
+	option = {
+		name = "diplo_stance_minimal_army"
+		icon = "GFX_diplomatic_stance_cooperative"
+
+		potential = {
+			OR = {
+				is_country_type = default
+				is_country_type = awakened_fallen_empire
+			}
+			is_homicidal = no # They have their own variants of this
+		}
+		
+		valid = {
+			NAND = {
+				OR = {
+					has_policy_flag = diplo_stance_disarmament
+					has_policy_flag = diplo_stance_neutral
+				}
+				has_modifier = tora_tora_tora
+			}
+			NOR = {
+				has_policy_flag = diplo_stance_conscription
+				has_policy_flag = diplo_stance_full_scale_mobilization
+			}
+		}
+		
+		policy_flags = {
+			diplo_stance_minimal_army
+		}
+		
+		modifier = {
+			country_war_exhaustion_mult = 0.05
+			ship_fire_rate_mult = -0.1
+			ships_upkeep_mult = -0.1
+			diplo_weight_economy_mult = 0.1
+			diplo_weight_naval_mult = -0.1
+		}
+		
+		on_enabled = {
+			if = {
+				limit = { is_gestalt = no }
+				add_modifier = { modifier = phi_minimal_army }
+			}
+			if = {
+				limit = { is_gestalt = yes }
+				add_modifier = { modifier = phi_minimal_army_gestalt }
+			}
+		}
+		
+		on_disabled = {
+			remove_modifier = phi_minimal_army
+			remove_modifier = phi_minimal_army_gestalt
+		}
+
+		ai_weight = {
+			weight = 200
+			modifier = {
+				factor = 0
+				OR = {
+					has_ethic = "ethic_militarist"
+					has_ethic = "ethic_fanatic_militarist"
+				}
+			}
+		}
+	}
+	
+	option = {
+		name = "diplo_stance_neutral"
+		icon = "GFX_diplomatic_stance_mercantile"
+
+		potential = {
+			OR = {
+				is_country_type = default
+				is_country_type = awakened_fallen_empire
+			}
+			is_homicidal = no # They have their own variants of this
+		}
+		
+		valid = {
+			NAND = {
+				OR = {
+					has_policy_flag = diplo_stance_minimal_army
+					has_policy_flag = diplo_stance_conscription
+				}
+				has_modifier = tora_tora_tora
+			}
+			NOR = {
+				has_policy_flag = diplo_stance_disarmament
+				has_policy_flag = diplo_stance_full_scale_mobilization
+			}
+		}
+		
+		policy_flags = {
+			diplo_stance_neutral
+		}
+
+		modifier = {
+		}
+
+		ai_weight = {
+			weight = 10
+		}
+	}
+	
+	option = {
+		name = "diplo_stance_conscription"
+		icon = "GFX_diplomatic_stance_belligerent"
+
+		potential = {
+			OR = {
+				is_country_type = default
+				is_country_type = awakened_fallen_empire
+			}
+			is_homicidal = no # They have their own variants of this
+		}
+		
+		valid = {
+			NAND = {
+				OR = {
+					has_policy_flag = diplo_stance_neutral
+					has_policy_flag = diplo_stance_full_scale_mobilization
+				}
+				has_modifier = tora_tora_tora
+			}
+			NOR = {
+				has_policy_flag = diplo_stance_disarmament
+				has_policy_flag = diplo_stance_minimal_army
+			}
+		}
+
+		policy_flags = {
+			diplo_stance_conscription
+		}
+
+		modifier = {
+			country_war_exhaustion_mult = -0.05
+			ship_fire_rate_mult = 0.1
+			ships_upkeep_mult = 0.1
+			diplo_weight_economy_mult = -0.1
+			diplo_weight_naval_mult = 0.1
+		}
+
+		on_enabled = {
+			if = {
+				limit = { is_gestalt = no }
+				add_modifier = { modifier = phi_conscription }
+			}
+			if = {
+				limit = { is_gestalt = yes }
+				add_modifier = { modifier = phi_conscription_gestalt }
+			}
+		}
+		
+		on_disabled = {
+			remove_modifier = phi_conscription
+			remove_modifier = phi_conscription_gestalt
+		}
+
+		ai_weight = {
+			weight = 200
+			modifier = {
+				factor = 2
+				OR = {
+					has_ethic = "ethic_militarist"
+					has_ethic = "ethic_fanatic_militarist"
+				}
+			}
+		}
+	}
+	
+	option = {
+		name = "diplo_stance_full_scale_mobilization"
+		icon = "GFX_diplomatic_stance_supremacy"
+
+		potential = {
+			OR = {
+				is_country_type = default
+				is_country_type = awakened_fallen_empire
+			}
+			is_homicidal = no # They have their own variants of this
+		}
+		
+		in_breach_of = {
+			{
+				key = resolution_rulesofwar_demobilization_initiative
+			}
+		}
+		
+		valid = {
+			NAND = {
+				has_policy_flag = diplo_stance_conscription
+				has_modifier = tora_tora_tora
+			}
+			NOR = {
+				has_policy_flag = diplo_stance_disarmament
+				has_policy_flag = diplo_stance_minimal_army
+				has_policy_flag = diplo_stance_neutral
+			}
+			has_tradition = tr_supremacy_finish
+		}
+
+		policy_flags = {
+			diplo_stance_full_scale_mobilization
+		}
+
+		modifier = {
+			country_war_exhaustion_mult = -0.1
+			ship_fire_rate_mult = 0.2
+			ships_upkeep_mult = 0.2
+			diplo_weight_economy_mult = -0.2
+			diplo_weight_naval_mult = 0.2
+		}
+
+		on_enabled = {
+			if = {
+				limit = { is_gestalt = no }
+				add_modifier = { modifier = phi_full_scale_mobilization }
+			}
+			if = {
+				limit = { is_gestalt = yes }
+				add_modifier = { modifier = phi_full_scale_mobilization_gestalt }
+			}
+		}
+		
+		on_disabled = {
+			remove_modifier = phi_full_scale_mobilization
+			remove_modifier = phi_full_scale_mobilization_gestalt
+		}
+
+		ai_weight = {
+			weight = 1000
+		}	
+	}
+
+	option = {
+		name = "diplo_stance_mating"
+		icon = "GFX_diplomatic_stance_rest"
+
+		potential = {
+			has_valid_civic = civic_hive_devouring_swarm
+		}
+		
+		valid = {
+			NOT = {
+				has_policy_flag = diplo_stance_frenzy
+			}
+		}
+
+		policy_flags = {
+			diplo_stance_mating
+		}
+
+		modifier = {
+			ship_speed_mult = -0.10
+			pop_growth_speed = 0.10
+		}
+
+		ai_weight = {
+			weight = 10
+		}
+	}
+	
+	option = {
+		name = "diplo_stance_hunger"
+		icon = "GFX_diplomatic_stance_rest"
+
+		potential = {
+			has_valid_civic = civic_hive_devouring_swarm
+		}
+
+		policy_flags = {
+			diplo_stance_hunger
+		}
+
+		modifier = {
+		}
+
+		ai_weight = {
+			weight = 100
+		}
+	}
+	
+	option = {
+		name = "diplo_stance_frenzy"
+		icon = "GFX_diplomatic_stance_rest"
+
+		potential = {
+			has_valid_civic = civic_hive_devouring_swarm
+		}
+		
+		valid = {
+			NOT = {
+				has_policy_flag = diplo_stance_mating
+			}
+		}
+
+		policy_flags = {
+			diplo_stance_frenzy
+		}
+
+		modifier = {
+			ship_speed_mult = 0.10
+			pop_growth_speed = -0.10
+		}
+
+		ai_weight = {
+			weight = 10
+		}
+	}
+	
+	option = {
+		name = "diplo_stance_assembling"
+		icon = "GFX_diplomatic_stance_recompiling"
+
+		potential = {
+			has_valid_civic = civic_machine_terminator
+		}
+		
+		valid = {
+			NOT = {
+				has_policy_flag = diplo_stance_kknd
+			}
+		}
+
+		policy_flags = {
+			diplo_stance_assembling
+		}
+
+		modifier = {
+			ship_speed_mult = -0.10
+			planet_pop_assembly_mult = 0.10
+		}
+
+		ai_weight = {
+			weight = 10
+		}
+	}
+	
+	option = {
+		name = "diplo_stance_extermination"
+		icon = "GFX_diplomatic_stance_recompiling"
+
+		potential = {
+			has_valid_civic = civic_machine_terminator
+		}
+
+		policy_flags = {
+			diplo_stance_extermination
+		}
+
+		modifier = {
+		}
+
+		ai_weight = {
+			weight = 100
+		}
+	}
+	
+	option = {
+		name = "diplo_stance_kknd"
+		icon = "GFX_diplomatic_stance_recompiling"
+
+		potential = {
+			has_valid_civic = civic_machine_terminator
+		}
+		
+		valid = {
+			NOT = {
+				has_policy_flag = diplo_stance_assembling
+			}
+		}
+
+		policy_flags = {
+			diplo_stance_kknd
+		}
+
+		modifier = {
+			ship_speed_mult = 0.10
+			planet_pop_assembly_mult = -0.10
+		}
+
+		ai_weight = {
+			weight = 10
+		}
+	}
+
+	option = {
+		name = "diplo_stance_blood_orgies"
+		icon = "GFX_diplomatic_stance_withdrawn"
+
+		potential = {
+			has_valid_civic = civic_fanatic_purifiers
+		}
+		
+		valid = {
+			NOT = {
+				has_policy_flag = diplo_stance_exhaltation
+			}
+		}
+
+		policy_flags = {
+			diplo_stance_blood_orgies
+		}
+
+		modifier = {
+			ship_speed_mult = -0.10
+			pop_growth_speed = 0.10
+		}
+
+		ai_weight = {
+			weight = 10
+		}
+	}
+	
+	option = {
+		name = "diplo_stance_purification"
+		icon = "GFX_diplomatic_stance_withdrawn"
+
+		potential = {
+			has_valid_civic = civic_fanatic_purifiers
+		}
+
+		policy_flags = {
+			diplo_stance_purification
+		}
+
+		modifier = {
+		}
+
+		ai_weight = {
+			weight = 100
+		}
+	}
+	
+	option = {
+		name = "diplo_stance_exhaltation"
+		icon = "GFX_diplomatic_stance_withdrawn"
+
+		potential = {
+			has_valid_civic = civic_fanatic_purifiers
+		}
+		
+		valid = {
+			NOT = {
+				has_policy_flag = diplo_stance_blood_orgies
+			}
+		}
+
+		policy_flags = {
+			diplo_stance_exhaltation
+		}
+
+		modifier = {
+			ship_speed_mult = 0.10
+			pop_growth_speed = -0.10
+		}
+
+		ai_weight = {
+			weight = 10
+		}
+	}
+
+	option = {
+		name = "diplo_stance_isolationist_fallen_empire"
+		icon = "GFX_diplomatic_stance_isolationist"
+
+		potential = {
+			is_country_type = fallen_empire
+		}
+
+		policy_flags = {
+			diplo_stance_isolationist_fallen_empire
+		}
+
+		modifier = {
+		}
+
+		ai_weight = {
+			weight = 100
+		}
+	}
+
+	option = {
+		name = "diplo_stance_primitive"
+		icon = "GFX_diplomatic_stance_isolationist"
+
+		potential = {
+			is_country_type = primitive
+		}
+
+		policy_flags = {
+			diplo_stance_primitive
+		}
+
+		modifier = {
+		}
+
+		ai_weight = {
+			weight = 1
+		}
+	}
+
+}
+
+war_philosophy = {
+
+	potential = {
+		OR = {
+			is_country_type = default
+			is_country_type = fallen_empire
+			is_country_type = awakened_fallen_empire
+		}
+	}
+
+	allow = {
+		is_at_war = no # Not allowed to change policies in this group while at war
+	}
+
+	option = {
+		name = "unrestricted_wars"
+
+		policy_flags = {
+			unrestricted_wars
+		}
+		
+		modifier = {
+			army_attack_health_mult = 1
+			army_attack_damage_mult = 1
+		}
+		
+		in_breach_of = {
+			{
+				key = resolution_rulesofwar_last_resort_doctrine
+			}
+		}
+
+		valid = {
+			always = yes
+		}
+
+		AI_weight = {
+			modifier = {
+				factor = 10
+				OR = {
+					has_valid_ai_personality = no
+					is_ai = no
+				}
+				NOT = {
+					has_ethic = "ethic_pacifist"
+					has_ethic = "ethic_fanatic_pacifist"
+				}
+			}
+			modifier = {
+				factor = 10
+				has_valid_ai_personality = yes
+				is_ai = yes
+				OR = {
+					has_ai_personality_behaviour = conqueror
+					has_ai_personality_behaviour = subjugator
+					has_ai_personality_behaviour = purger
+				}
+			}
+			modifier = {
+				factor = 0.1
+				has_valid_ai_personality = yes
+				is_ai = yes
+				is_galactic_community_member = yes
+				OR = {
+					is_active_resolution = "resolution_rulesofwar_last_resort_doctrine"
+					is_active_resolution = "resolution_rulesofwar_demobilization_initiative"
+				}
+			}
+			modifier = {
+				factor = 0
+				OR = {
+					has_ethic = "ethic_pacifist"
+					has_ethic = "ethic_fanatic_pacifist"
+				}
+			}
+		}
+	}
+
+	option = {
+		name = "liberation_wars"
+
+		policy_flags = {
+			liberation_wars
+		}
+		
+		modifier = {
+			planet_stability_add = 2
+			army_defense_morale_mult = 1
+			army_defense_damage_mult = 0.5
+			army_attack_morale_mult = 1
+			army_attack_damage_mult = 0.5
+			
+		}
+
+		potential = {
+			NOT = { has_ethic = ethic_gestalt_consciousness }
+		}
+
+		valid = {
+			NOR = {
+				has_valid_civic = "civic_fanatic_purifiers"
+			}
+		}
+
+		on_enabled = {
+			hidden_effect = {
+				check_casus_belli_valid = {
+					type = cb_ideology
+				}
+			}
+		}
+
+		on_disabled = {
+			hidden_effect = {
+				check_casus_belli_valid = {
+					type = cb_ideology
+				}
+			}
+		}
+
+		AI_weight = {
+			modifier = {
+				factor = 2
+				OR = {
+					has_valid_ai_personality = no
+					is_ai = no
+				}
+				has_ethic = "ethic_pacifist"
+			}
+			modifier = {
+				factor = 2
+				has_valid_ai_personality = yes
+				is_ai = yes
+				OR = {
+					has_ai_personality_behaviour = conqueror
+					has_ai_personality_behaviour = subjugator
+					has_ai_personality_behaviour = liberator
+				}
+			}
+		}
+	}
+
+	option = {
+		name = "no_wars"
+
+		policy_flags = {
+			no_wars
+		}
+
+		valid = {
+			NOR = {
+				has_valid_civic = "civic_fanatic_purifiers"
+				has_valid_civic = "civic_hive_devouring_swarm"
+				has_valid_civic = "civic_machine_terminator"
+			}
+		}
+		
+		modifier = {
+			planet_stability_add = 5
+			army_defense_health_mult = 1
+			army_defense_damage_mult = 1
+		}
+
+		AI_weight = {
+			modifier = {
+				factor = 5
+				has_ethic = "ethic_fanatic_pacifist"
+			}
+			modifier = {
+				factor = 0
+				NOT = { has_ethic = "ethic_fanatic_pacifist" }
+			}
+		}
+	}
+}
+
+war_doctrine = {
+	potential = {
+		is_country_type = default
+		has_tradition = tr_supremacy_finish
+	}
+
+	option = {
+		name = "defense_in_depth_doctrine"
+
+		policy_flags = {}
+		modifier = {
+			ship_home_territory_fire_rate_mult = 0.10
+		}
+
+		AI_weight = {
+			factor = 1
+		}
+	}
+
+	option = {
+		name = "hit_and_run_doctrine"
+
+		policy_flags = {}
+		modifier = {
+			ship_disengage_chance_mult = 0.33
+			ship_emergency_ftl_mult = -0.25
+		}
+
+		AI_weight = {
+			factor = 10
+			modifier = {
+				factor = 0
+				NOR = {
+					has_ethic = ethic_pacifist
+					has_ethic = ethic_fanatic_pacifist
+				}
+			}
+		}
+	}
+
+	option = {
+		name = "rapid_deployment_doctrine"
+
+		policy_flags = {}
+		modifier = {
+			ship_speed_mult = 0.25
+			ship_weapon_range_mult = 0.10
+		}
+
+		AI_weight = {
+			factor = 100
+		}
+	}
+
+	option = {
+		name = "no_retreat_doctrine"
+
+		valid = {
+			OR = {
+				has_ethic = ethic_militarist
+				has_ethic = ethic_fanatic_militarist
+				has_ethic = ethic_gestalt_consciousness
+				has_civic = civic_fanatic_purifiers
+				has_ascension_perk = ap_become_the_crisis
+			}
+		}
+
+		policy_flags = { phi_no_retreat }
+		modifier = {
+			ship_disengage_chance_reduction = 1
+			ship_emergency_ftl_min_days_mult = 0.5
+			ship_fire_rate_mult = 0.33
+		}
+
+		AI_weight = {
+			factor = 1000
+		}
+	}
+}
+
+orbital_bombardment = {
+
+	potential = {
+		OR = {
+			is_country_type = default
+			is_country_type = vol
+		}
+	}
+
+	option = {
+		name = "orbital_bombardment_selective"
+		policy_flags = {
+			orbital_bombardment_selective
+		}
+
+		AI_weight = {
+			modifier = {
+				factor = 0
+				NOR = {
+					has_ethic = "ethic_pacifist"
+					has_ethic = "ethic_fanatic_pacifist"
+				}
+				NOT = {
+					is_galactic_community_member = yes
+					OR = {
+						is_active_resolution = "resolution_rulesofwar_independent_tribunals"
+						is_active_resolution = "resolution_rulesofwar_last_resort_doctrine"
+						is_active_resolution = "resolution_rulesofwar_demobilization_initiative"
+					}
+				}
+			}
+		}
+	}
+	option = {
+		name = "orbital_bombardment_indiscriminate"
+
+		in_breach_of = {
+			{
+				key = resolution_rulesofwar_independent_tribunals
+			}
+		}
+
+		policy_flags = {
+			orbital_bombardment_indiscriminate
+		}
+		modifier = {}
+
+		valid = {
+			always = yes
+		}
+		AI_weight = {
+			modifier = {
+				factor = 0
+				OR = {
+					has_ethic = "ethic_fanatic_pacifist"
+					has_ethic = "ethic_pacifist"
+				}
+			}
+			modifier = {
+				factor = 0.1
+				is_galactic_community_member = yes
+				OR = {
+					is_active_resolution = "resolution_galacticstudies_ethical_guideline_refactoring"
+					is_active_resolution = "resolution_galacticstudies_extradimensional_experimentation"
+				}
+			}
+		}
+	}
+	option = {
+		name = "orbital_bombardment_armageddon"
+
+		in_breach_of = {
+			{
+				key = resolution_rulesofwar_independent_tribunals
+			}
+		}
+
+		potential = {
+			OR = {
+				has_valid_civic = civic_fanatic_purifiers
+				has_valid_civic = civic_machine_terminator
+			}
+		}
+
+		policy_flags = {
+			orbital_bombardment_armageddon
+		}
+		modifier = {}
+
+		AI_weight = {
+			modifier = {
+				factor = 10
+				OR = {
+					has_valid_civic = civic_fanatic_purifiers
+					has_valid_civic = civic_machine_terminator
+				}
+			}
+			modifier = {
+				factor = 10
+				has_ascension_perk = ap_become_the_crisis
+			}
+		}
+	}
+}
+
+interference = {
+
+	potential = {
+		has_met_primitives = yes
+	}
+
+	option = {
+		name = "interference_passive"
+
+		policy_flags = {
+			interference_passive
+		}
+
+		on_enabled = {
+			hidden_effect = { set_country_flag = encountered_first_primitive }
+		}
+
+		in_breach_of = {
+			{
+				key = resolution_galacticstudies_advanced_xenostudies
+			}
+		}
+
+		valid = {
+			OR = {
+				is_subject_type = signatory
+				NOR = {
+					has_ethic = "ethic_fanatic_xenophobe"
+					has_valid_civic = "civic_fanatic_purifiers"
+					has_valid_civic = "civic_hive_devouring_swarm"
+					has_valid_civic = "civic_machine_terminator"
+				}
+			}
+		}
+
+		AI_weight = {
+			modifier = {
+				factor = 0.1
+				is_galactic_community_member = yes
+				OR = {
+					is_active_resolution = "resolution_galacticstudies_advanced_xenostudies"
+					is_active_resolution = "resolution_galacticstudies_ethical_guideline_refactoring"
+					is_active_resolution = "resolution_galacticstudies_extradimensional_experimentation"
+				}
+			}
+		}
+	}
+
+	option = {
+		name = "interference_active"
+
+		policy_flags = {
+			interference_active
+		}
+		modifier = {}
+
+		on_enabled = {
+			hidden_effect = { set_country_flag = encountered_first_primitive }
+		}
+
+		valid = {
+			NOR = {
+				is_subject_type = signatory
+				has_valid_civic = "civic_fanatic_purifiers"
+				has_valid_civic = "civic_hive_devouring_swarm"
+			}
+		}
+
+		AI_weight = {
+			modifier = {
+				factor = 2
+				has_valid_ai_personality = yes
+				OR = {
+					has_ai_personality_behaviour = infiltrator
+					has_ai_personality_behaviour = dominator
+				}
+			}
+			modifier = {
+				factor = 0
+				has_valid_ai_personality = yes
+				NOR = {
+					has_ai_personality_behaviour = infiltrator
+					has_ai_personality_behaviour = dominator
+				}
+				NOT = {
+					is_galactic_community_member = yes
+					OR = {
+						is_active_resolution = "resolution_galacticstudies_advanced_xenostudies"
+						is_active_resolution = "resolution_galacticstudies_ethical_guideline_refactoring"
+						is_active_resolution = "resolution_galacticstudies_extradimensional_experimentation"
+					}
+				}
+			}
+		}
+	}
+	option = {
+		name = "interference_full"
+
+		potential = {
+		}
+		valid = {
+			NOT = { is_subject_type = signatory }
+			NOR = {
+				has_ethic = "ethic_pacifist"
+				has_ethic = "ethic_fanatic_pacifist"
+			}
+		}
+		on_enabled = {
+			hidden_effect = { set_country_flag = encountered_first_primitive }
+		}
+		policy_flags = {
+			interference_full
+		}
+		modifier = {}
+		AI_weight = {
+			modifier = {
+				factor = 3
+				has_valid_ai_personality = yes
+				OR = {
+					has_ai_personality_behaviour = infiltrator
+					has_ai_personality_behaviour = dominator
+				}
+			}
+			modifier = {
+				factor = 0
+				has_valid_ai_personality = yes
+				NOR = {
+					has_ai_personality_behaviour = infiltrator
+					has_ai_personality_behaviour = dominator
+				}
+			}
+			modifier = {
+				factor = 0
+				OR = {
+					has_ethic = "ethic_pacifist"
+					has_ethic = "ethic_fanatic_pacifist"
+				}
+			}
+		}
+	}
+}
+
+enlightenment = {
+
+	potential = {
+		has_met_primitives = yes
+	}
+
+	option = {
+		name = "enlightenment_not_allowed"
+
+		policy_flags = {
+			enlightenment_not_allowed
+		}
+
+		on_enabled = {
+			# custom_tooltip = "policy_allow_slavery_effect_disable"
+		}
+		AI_weight = {
+			weight = 1
+		}
+	}
+
+	option = {
+		name = "enlightenment_allowed"
+
+		policy_flags = {
+			enlightenment_allowed
+		}
+		modifier = {}
+
+		valid = {
+			NOR = {
+				has_ethic = "ethic_fanatic_xenophobe"
+				has_valid_civic = "civic_fanatic_purifiers"
+				has_valid_civic = "civic_hive_devouring_swarm"
+				has_valid_civic = "civic_machine_terminator"
+			}
+		}
+
+		AI_weight = {
+			modifier = {
+				factor = 2
+				has_valid_ai_personality = yes
+				has_ai_personality_behaviour = uplifter
+			}
+			modifier = {
+				factor = 0
+				has_valid_ai_personality = yes
+				NOT = { has_ai_personality_behaviour = uplifter }
+			}
+			modifier = {
+				factor = 0
+				OR = {
+					has_ethic = "ethic_xenophobe"
+					has_ethic = "ethic_fanatic_xenophobe"
+				}
+			}
+		}
+	}
+}
+
+resettlement = {
+	potential = {
+		NOT = { has_ethic = "ethic_gestalt_consciousness" }
+	}
+
+	option = {
+		name = "resettlement_not_allowed"
+
+		policy_flags = {
+			resettlement_not_allowed
+		}
+	}
+
+	option = {
+		name = "resettlement_allowed"
+
+		policy_flags = {
+			resettlement_allowed
+		}
+		modifier = {}
+
+		AI_weight = {
+			factor = 10
+			modifier = {
+				factor = 0
+				OR = {
+					has_ethic = ethic_egalitarian
+					has_ethic = ethic_fanatic_egalitarian
+				}
+			}
+		}
+	}
+}
+
+appropriation = {
+	potential = {
+		has_comms_with_alien_empire = yes
+		NOT = { has_ethic = ethic_gestalt_consciousness }
+	}
+
+	option = {
+		name = "appropriation_not_allowed"
+
+		policy_flags = {
+			appropriation_not_allowed
+		}
+
+		AI_weight = {
+			modifier = {
+				factor = 10
+				has_ai_personality_behaviour = multispecies
+			}
+		}
+	}
+
+	option = {
+		name = "appropriation_allowed"
+		
+		valid = {
+			has_tradition = tr_adaptability_appropriation
+		}
+
+		policy_flags = {
+			appropriation_allowed
+		}
+		modifier = {
+			planet_jobs_ruler_produces_mult = 1
+		}
+
+		AI_weight = {
+			modifier = {
+				factor = 10
+				NOT = { has_ai_personality_behaviour = multispecies }
+			}
+		}
+	}
+}
+
+leader_enhancement = {
+
+	potential = {
+		has_technology = tech_selected_lineages
+	}
+
+	option = {
+		name = "leader_enhancement_natural_selection"
+
+		policy_flags = {
+			leader_enhancement_natural_selection
+		}
+
+		in_breach_of = {
+			{
+				key = resolution_phi_aristocracy_gifted_individuals
+				trigger = {
+					OR = {
+						has_technology = tech_selected_lineages
+						has_technology = tech_capacity_boosters
+					}
+				}
+			}
+		}
+
+		on_enabled = {
+			# custom_tooltip = "policy_allow_slavery_effect_disable"
+		}
+
+		modifier = {}
+
+	}
+
+	option = {
+		name = "leader_enhancement_selected_lineages"
+
+		policy_flags = {
+			leader_enhancement_selected_lineages
+		}
+		modifier = {
+			leader_skill_levels = 1
+			leader_age = 10
+			leaders_cost_mult = 0.5
+		}
+
+		in_breach_of = {
+			{
+				key = resolution_phi_aristocracy_gifted_individuals
+				trigger = {
+					has_technology = tech_capacity_boosters
+				}
+			}
+		}
+
+		valid = {
+			always = yes
+		}
+
+		AI_weight = {
+			factor = 2
+			modifier = {
+				factor = 0
+				OR = {
+					has_ethic = "ethic_egalitarian"
+					has_ethic = "ethic_fanatic_egalitarian"
+				}
+				NOT = {
+					has_valid_ai_personality = yes
+					is_ai = yes
+					is_galactic_community_member = yes
+					OR = {
+						is_active_resolution = "resolution_galacticstudies_ethical_guideline_refactoring"
+						is_active_resolution = "resolution_galacticstudies_extradimensional_experimentation"
+					}
+				}
+			}
+		}
+
+		prerequisites = { tech_selected_lineages }
+	}
+
+	option = {
+		name = "leader_enhancement_capacity_boosters"
+
+		policy_flags = {
+			leader_enhancement_capacity_boosters
+		}
+		modifier = {
+			leader_skill_levels = 2
+			leader_age = 20
+			leaders_cost_mult = 1
+		}
+
+		valid = {
+			always = yes
+		}
+
+		prerequisites = { tech_capacity_boosters }
+
+		AI_weight = {
+			factor = 3
+			modifier = {
+				factor = 0
+				OR = {
+					has_ethic = "ethic_egalitarian"
+					has_ethic = "ethic_fanatic_egalitarian"
+				}
+			}
+		}
+	}
+}
+
+first_contact_protocol = {
+
+	potential = {
+		always = yes
+	}
+
+	option = {
+		name = "first_contact_proactive"
+
+		policy_flags = {
+			first_contact_proactive
+		}
+
+		modifier = {
+			first_contact_speed_mult = 0.1
+		}
+
+		on_enabled = {
+		}
+
+		valid = {
+			is_homicidal = no
+			is_xenophobe = no
+		}
+
+		AI_weight = {
+			modifier = {
+				factor = 2
+				is_pacifist = yes
+			}
+			modifier = {
+				factor = 2
+				is_xenophile = yes
+			}
+			modifier = {
+				factor = 2
+				has_valid_civic = civic_machine_servitor
+			}
+		}
+	}
+
+	option = {
+		name = "first_contact_cautious"
+
+		policy_flags = {
+			first_contact_cautious
+		}
+
+		modifier = {
+			first_contact_defense_add = 2
+		}
+
+		on_enabled = {
+		}
+
+		valid = {
+			is_homicidal = no
+		}
+
+		AI_weight = {
+			modifier = {
+				factor = 1.5
+				always = yes #Liu Cixin is right
+			}
+		}
+	}
+
+	option = {
+		name = "first_contact_attack_allowed"
+
+		policy_flags = {
+			first_contact_attack_allowed
+		}
+		modifier = {}
+
+		valid = {
+			is_pacifist = no
+			is_xenophile = no
+		}
+
+
+		AI_weight = {
+			modifier = {
+				factor = 2
+				is_militarist = yes
+			}
+			modifier = {
+				factor = 2
+				is_xenophobe = yes
+			}
+			modifier = {
+				factor = 2
+				is_gestalt = yes
+			}
+		}
+	}
+}
+
+border_policy = {
+
+	potential = {
+		always = yes
+	}
+
+	option = {
+		name = "border_policy_open"
+
+		policy_flags = {
+			border_policy_open
+		}
+
+		valid = {
+			is_country_type = default
+			NOR = {
+				has_valid_civic = civic_machine_terminator
+				has_valid_civic = civic_hive_devouring_swarm
+				has_valid_civic = civic_fanatic_purifiers
+			}
+		}
+	}
+
+	option = {
+		name = "border_policy_closed"
+
+		policy_flags = {
+			border_policy_closed
+		}
+		modifier = {}
+
+		valid = {
+			always = yes
+		}
+
+		AI_weight = {
+			factor = 10
+			modifier = {
+				factor = 0
+				has_authority = auth_corporate
+			}
+			modifier = {
+				factor = 0
+				has_valid_ai_personality = yes
+				NOR = {
+					has_ai_personality_behaviour = isolationist
+					has_ai_personality_behaviour = attack_neutrals
+				}
+			}
+			modifier = {
+				factor = 0
+				has_valid_ai_personality = no
+				NOR = {
+					has_ethic = ethic_xenophobe
+					has_ethic = ethic_fanatic_xenophobe
+				}
+			}
+			modifier = {
+				factor = 10
+				has_crisis_level = crisis_level_5
+			}
+		}
+	}
+}
+
+food_policy = {
+	potential = {
+		always = no
+	}
+
+	option = {
+		name = "food_policy_rationing"
+
+		modifier = {
+			planet_pops_organics_food_upkeep_mult = -0.25
+			planet_pops_organics_minerals_upkeep_mult = -0.25
+			pop_growth_speed = -0.1
+			biological_pop_happiness = -0.1
+			lithoid_pop_happiness = -0.1
+		}
+
+		AI_weight = {
+			factor = 0
+		}
+	}
+
+	option = {
+		name = "food_policy_normal"
+
+		modifier = {}
+
+		AI_weight = {
+			factor = 1
+		}
+	}
+
+	option = {
+		name = "food_policy_generous"
+
+		modifier = {
+			planet_pops_organics_food_upkeep_mult = 0.25
+			planet_pops_organics_minerals_upkeep_mult = 0.25
+			biological_pop_happiness = 0.05
+			lithoid_pop_happiness = 0.05
+			pop_growth_speed = 0.10
+		}
+
+		AI_weight = {
+			factor = 0
+		}
+	}
+}
+
+
+food_policy_gestalt = {
+	potential = {
+		always = no
+	}
+
+	option = {
+		name = "food_policy_gestalt_rationing"
+
+		modifier = {
+			planet_pops_organics_food_upkeep_mult = -0.25
+			pop_growth_speed = -0.15
+		}
+
+		AI_weight = {
+			factor = 0
+		}
+	}
+
+	option = {
+		name = "food_policy_gestalt_normal"
+
+		modifier = {}
+
+		AI_weight = {
+			factor = 1
+		}
+	}
+
+	option = {
+		name = "food_policy_gestalt_generous"
+
+		modifier = {
+			planet_pops_organics_food_upkeep_mult = 0.5
+			pop_growth_speed = 0.33
+		}
+
+		AI_weight = {
+			factor = 0
+		}
+	}
+}
+
+
+economic_policy = {
+	potential = {
+		NOT = { has_ethic = ethic_gestalt_consciousness }
+	}
+	
+	option = {
+		name = "economic_policy_balanced"
+
+		modifier = {}
+
+		AI_weight = {
+			factor = 1
+		}
+	}
+
+	option = {
+		name = "economic_policy_diplomacy"
+		
+		potential = {
+			is_homicidal = no
+		}
+		
+		valid = {
+			has_tradition = tr_diplomacy_adopt
+		}
+		
+		on_enabled = {
+			
+		}
+		
+		modifier = {
+
+		}
+		
+		policy_flags = {
+			economic_policy_diplomatic
+		}
+
+		AI_weight = {
+			factor = 30
+			modifier = {
+				factor = 0
+				has_federation = no
+			}
+		}
+	}
+
+	option = {
+		name = "economic_policy_expansion"
+		
+		valid = {
+			has_tradition = tr_expansion_adopt
+		}
+		
+		modifier = {
+			pop_environment_tolerance = 0.20
+			terraform_speed_mult = 1
+			planet_jobs_minerals_produces_mult = -0.2
+			planet_jobs_energy_produces_mult = -0.2
+			planet_jobs_food_produces_mult = -0.2
+		}
+
+		AI_weight = {
+			factor = 0
+		}
+	}
+	
+	option = {
+		name = "economic_policy_supremacy"
+		
+		valid = {
+			has_tradition = tr_supremacy_adopt
+		}
+		
+		modifier = {
+			country_alloys_produces_mult = -0.1
+			ships_upkeep_mult = -0.25
+		}
+
+		AI_weight = {
+			factor = 0
+		}
+	}
+	
+	option = {
+		name = "economic_policy_prosperity"
+		
+		valid = {
+			has_tradition = tr_prosperity_adopt
+		}
+		
+		modifier = {
+			trade_value_mult = 0.20
+			planet_pops_consumer_goods_upkeep_mult = 0.1
+		}
+
+		AI_weight = {
+			factor = 10
+		}
+	}
+	
+	option = {
+		name = "economic_policy_mercantile"
+		
+		valid = {
+			has_tradition = tr_mercantile_adopt
+		}
+		
+		on_enabled = {
+			custom_tooltip = "tooltip_economic_policy_mercantile_effects"
+		}
+		
+		modifier = {
+			trade_value_mult = 0.10
+			starbase_trade_collection_range_add = 1
+		}
+		
+		policy_flags = {
+			economic_policy_mercantile
+		}
+
+		AI_weight = {
+			factor = 20
+		}
+	}
+	
+	option = {
+		name = "economic_policy_unyelding"
+		
+		valid = {
+			has_tradition = tr_unyielding_adopt
+		}
+		
+		modifier = {
+			armies_upkeep_mult = -0.75
+			country_energy_produces_mult = -0.05
+		}
+
+		AI_weight = {
+			factor = 0
+		}
+	}
+	
+	option = {
+		name = "economic_policy_domination"
+		
+		valid = {
+			has_tradition = tr_domination_adopt
+		}
+		
+		modifier = {
+			species_leader_exp_gain = 1
+			planet_jobs_ruler_produces_mult = 1.00
+			pop_cat_specialist_happiness = -0.10
+			pop_cat_worker_happiness = -0.10
+		}
+
+		AI_weight = {
+			factor = 10
+		}
+	}
+	
+	option = {
+		name = "economic_policy_harmony"
+		
+		valid = {
+			has_tradition = tr_harmony_adopt
+		}
+		
+		modifier = {
+			planet_pops_consumer_goods_upkeep_mult = -0.2
+			planet_jobs_upkeep_mult = -0.1
+			trade_value_mult = -0.2
+		}
+
+		AI_weight = {
+			factor = 0
+		}
+	}
+	
+	option = {
+		name = "economic_policy_discovery"
+		
+		valid = {
+			has_tradition = tr_discovery_adopt
+		}
+		
+		modifier = {
+			country_physics_tech_research_speed = -0.10
+			country_society_tech_research_speed = -0.10
+			country_engineering_tech_research_speed = 0.20
+		}
+
+		AI_weight = {
+			factor = 0
+		}
+	}
+	
+	option = {
+		name = "economic_policy_subterfuge"
+		
+		valid = {
+			has_tradition = tr_subterfuge_adopt
+		}
+		
+		on_enabled = {
+			custom_tooltip = "tooltip_economic_policy_subterfuge_effects"
+		}
+		
+		modifier = {
+
+		}
+		
+		policy_flags = {
+			economic_policy_subterfuge
+		}
+
+		AI_weight = {
+			factor = 30
+			modifier = {
+				factor = 0
+				is_homicidal = no
+			}
+		}
+	}
+	
+	option = {
+		name = "economic_policy_adaptability"
+		
+		valid = {
+			has_tradition = tr_adaptability_adopt
+		}
+		
+		modifier = {
+			empire_size_colonies_mult = -0.10
+			empire_size_systems_mult = -0.10
+			leaders_upkeep_mult = 0.50
+		}
+
+		AI_weight = {
+			factor = 0
+		}
+	}
+}
+
+trade_policy = {
+	potential = {
+		NOT = { has_ethic = ethic_gestalt_consciousness }
+	}
+
+	option = {
+		name = "trade_policy_default"
+
+		AI_weight = {
+			factor = 1
+		}
+	}
+
+	option = {
+		name = "trade_policy_consumer_goods"
+		valid = {
+			has_tradition = tr_prosperity_finish
+		}
+
+		policy_flags = {
+			trade_conversion_consumer_goods
+		}
+
+		modifier = {}
+
+		AI_weight = {
+			factor = 0
+		}
+	}
+
+	option = {
+		name = "trade_policy_unity"
+		valid = {
+			has_tradition = tr_harmony_finish
+		}
+
+		policy_flags = {
+			trade_conversion_unity
+		}
+
+		modifier = {
+		}
+
+		AI_weight = {
+			factor = 0
+		}
+	}
+
+	option = {
+		name = "trade_policy_trade_league"
+		
+		valid = {
+			has_tradition = tr_mercantile_finish
+		}
+		
+		policy_flags = {
+			trade_conversion_trade_league
+		}
+
+		modifier = {
+		}
+
+		AI_weight = {
+			factor = 100
+		}
+	}
+	
+	option = {
+		name = "trade_policy_science"
+		
+		valid = {
+			has_tradition = tr_discovery_finish
+		}
+		
+		policy_flags = {
+			trade_conversion_science
+		}
+
+		modifier = {
+		}
+
+		AI_weight = {
+			factor = 10
+		}
+	}
+}
+
+
+drone_policy = {
+	potential = {
+		has_ethic = ethic_gestalt_consciousness
+	}
+
+	option = {
+		name = "drone_policy_balanced"
+
+		modifier = {}
+
+		AI_weight = {
+			factor = 1
+		}
+	}
+	
+	option = {
+		name = "drone_policy_versatility"
+		
+		valid = {
+			OR = {
+				has_tradition = tr_versatility_adopt
+				has_tradition = tr_adaptability_adopt
+			}
+		}
+		
+		modifier = {
+			empire_size_colonies_mult = -0.10
+			empire_size_systems_mult = -0.10
+			leaders_upkeep_mult = 0.50
+		}
+
+		AI_weight = {
+			factor = 0
+		}
+	}
+	
+	option = {
+		name = "drone_policy_diplomacy"
+		
+		potential = {
+			is_homicidal = no
+		}
+		
+		valid = {
+			has_tradition = tr_diplomacy_adopt
+		}
+		
+		on_enabled = {
+			
+		}
+		
+		modifier = {
+			
+		}
+		
+		policy_flags = {
+			economic_policy_diplomatic
+		}
+
+		AI_weight = {
+			factor = 30
+			modifier = {
+				factor = 0
+				has_federation = no
+			}
+		}
+	}
+
+	option = {
+		name = "drone_policy_expansion"
+		
+		potential = {
+			has_authority = auth_hive_mind
+		}
+		valid = {
+			has_tradition = tr_expansion_adopt
+		}
+		
+		modifier = {
+			pop_environment_tolerance = 0.20
+			terraform_speed_mult = 1
+			planet_jobs_minerals_produces_mult = -0.2
+			planet_jobs_energy_produces_mult = -0.2
+			planet_jobs_food_produces_mult = -0.2
+		}
+
+		AI_weight = {
+			factor = 0
+		}
+	}
+
+	option = {
+		name = "drone_policy_expansion"
+		
+		potential = {
+			has_authority = auth_machine_intelligence
+		}
+		valid = {
+			has_tradition = tr_expansion_adopt
+		}
+		
+		modifier = {
+			terraform_speed_mult = 2
+			planet_jobs_minerals_produces_mult = -0.2
+			planet_jobs_energy_produces_mult = -0.2
+			planet_jobs_food_produces_mult = -0.2
+		}
+
+		AI_weight = {
+			factor = 0
+		}
+	}
+	
+	option = {
+		name = "drone_policy_supremacy"
+		
+		valid = {
+			has_tradition = tr_supremacy_adopt
+		}
+		
+		modifier = {
+			country_alloys_produces_mult = -0.1
+			ships_upkeep_mult = -0.25
+		}
+
+		AI_weight = {
+			factor = 10
+		}
+	}
+	
+	option = {
+		name = "drone_policy_prosperity"
+		
+		valid = {
+			has_tradition = tr_prosperity_adopt
+		}
+		
+		modifier = {
+			planet_jobs_upkeep_mult = 0.05
+			country_energy_produces_mult = 0.1
+		}
+
+		AI_weight = {
+			factor = 0
+		}
+	}
+	
+	option = {
+		name = "drone_policy_domination"
+		
+		valid = {
+			has_tradition = tr_domination_adopt
+		}
+		
+		modifier = {
+			species_leader_exp_gain = 1
+			planet_jobs_simple_drone_produces_mult = -0.2
+			planet_jobs_complex_drone_produces_mult = 0.1
+		}
+
+		AI_weight = {
+			factor = 20
+		}
+	}
+	
+	option = {
+		name = "drone_policy_synchronicity"
+		
+		valid = {
+			has_tradition = tr_synchronicity_adopt
+		}
+		
+		modifier = {
+			planet_jobs_upkeep_mult = -0.1
+			country_energy_produces_mult = -0.05
+		}
+
+		AI_weight = {
+			factor = 10
+		}
+	}
+	
+	option = {
+		name = "drone_policy_discovery"
+		
+		valid = {
+			has_tradition = tr_discovery_adopt
+		}
+		
+		modifier = {
+			country_physics_tech_research_speed = -0.10
+			country_society_tech_research_speed = -0.10
+			country_engineering_tech_research_speed = 0.20
+		}
+
+		AI_weight = {
+			factor = 0
+		}
+	}
+
+	option = {
+		name = "drone_policy_unyelding"
+		
+		valid = {
+			has_tradition = tr_unyielding_adopt
+		}
+		
+		modifier = {
+			armies_upkeep_mult = -0.75
+			country_energy_produces_mult = -0.05
+		}
+
+		AI_weight = {
+			factor = 0
+		}
+	}
+	
+	option = {
+		name = "drone_policy_subterfuge"
+		
+		valid = {
+			has_tradition = tr_subterfuge_adopt
+		}
+		
+		on_enabled = {
+			custom_tooltip = "tooltip_economic_policy_subterfuge_effects"
+		}
+		
+		modifier = {
+
+		}
+		
+		policy_flags = {
+			economic_policy_subterfuge
+		}
+
+		AI_weight = {
+			factor = 30
+			modifier = {
+				factor = 0
+				is_homicidal = no
+			}
+		}
+	}
+}
+
+artificial_intelligence_policy = {
+
+	potential = {
+		NOT = { has_ethic = ethic_gestalt_consciousness }
+		OR = { 
+			can_set_ai_policy = yes
+			has_country_flag = synthetic_empire
+		}
+	}
+
+	option = {
+		name = "ai_outlawed"
+
+		valid = {
+			NOR = {
+				custom_tooltip = {
+					success_text = is_a_synthetic_empire
+					has_country_flag = synthetic_empire
+				}
+			}
+		}
+
+		policy_flags = {
+			ai_outlawed
+		}
+
+		in_breach_of = {
+			{
+				key = resolution_galacticstudies_advanced_xenostudies
+			}
+		}
+
+		AI_weight = {
+			modifier = {
+				factor = 0
+				OR = {
+					has_ethic = "ethic_materialist"
+					has_ethic = "ethic_fanatic_materialist"
+				}
+			}
+			modifier = {
+				factor = 5
+				OR = {
+					has_ethic = "ethic_spiritualist"
+					has_ethic = "ethic_fanatic_spiritualist"
+				}
+			}
+			modifier = {
+				factor = 0.1
+				has_valid_ai_personality = yes
+				is_ai = yes
+				is_galactic_community_member = yes
+				OR = {
+					is_active_resolution = "resolution_galacticstudies_advanced_xenostudies"
+					is_active_resolution = "resolution_galacticstudies_ethical_guideline_refactoring"
+					is_active_resolution = "resolution_galacticstudies_extradimensional_experimentation"
+				}
+			}
+		}
+	}
+
+	option = {
+		name = "ai_servitude"
+
+		valid = {
+			custom_tooltip = {
+				fail_text = is_a_synthetic_empire_fail
+				NOT = { has_country_flag = synthetic_empire }
+			}
+		}
+
+		policy_flags = {
+			ai_servitude
+		}
+
+		AI_weight = {
+			modifier = {
+				factor = 5
+				has_valid_ai_personality = yes
+				has_ai_personality_behaviour = robot_exploiter
+			}
+			modifier = {
+				factor = 2
+				has_valid_ai_personality = yes
+				has_ai_personality_behaviour = robot_liberator
+			}
+			modifier = {
+				factor = 0
+				OR = {
+					has_ethic = "ethic_spiritualist"
+					has_ethic = "ethic_fanatic_spiritualist"
+				}
+				NOT = {
+					has_valid_ai_personality = yes
+					is_ai = yes
+					is_galactic_community_member = yes
+					OR = {
+						is_active_resolution = "resolution_galacticstudies_advanced_xenostudies"
+						is_active_resolution = "resolution_galacticstudies_ethical_guideline_refactoring"
+						is_active_resolution = "resolution_galacticstudies_extradimensional_experimentation"
+					}
+				}
+			}
+		}
+	}
+
+	option = {
+		name = "ai_full_rights"
+
+		valid = {
+			NOT = { has_policy_flag = robots_outlawed }
+		}
+
+		policy_flags = {
+			ai_full_rights
+		}
+
+		modifier = {}
+
+		AI_weight = {
+			modifier = {
+				factor = 0.5
+				is_materialist = no
+				NOR = {
+					is_synthetic_empire = yes
+					has_technology = tech_synthetic_workers
+				}
+			}
+			modifier = {
+				factor = 5
+				has_valid_ai_personality = yes
+				has_ai_personality_behaviour = robot_liberator
+			}
+			modifier = {
+				factor = 0
+				OR = {
+					has_ethic = "ethic_spiritualist"
+					has_ethic = "ethic_fanatic_spiritualist"
+				}
+			}
+		}
+	}
+}
+
+robot_pop_policy = {
+
+	potential = {
+		NOT = { has_ethic = ethic_gestalt_consciousness }
+	}
+
+	option = {
+		name = "robot_pops_outlawed"
+
+		valid = {
+			NOT = { has_policy_flag = ai_full_rights }
+		}
+
+		policy_flags = {
+			robots_outlawed
+		}
+
+		on_enabled = {
+			hidden_effect = {
+				every_owned_species = {
+					limit = { is_robotic_species = yes }
+					set_citizenship_type = {
+						type = citizenship_purge
+						country = root
+					}
+				}
+			}
+		}
+
+		AI_weight = {
+			factor = 1
+			modifier = {
+				factor = 0
+				OR = {
+					has_ethic = "ethic_materialist"
+					has_ethic = "ethic_fanatic_materialist"
+				}
+			}
+			modifier = {
+				factor = 10
+				has_valid_ai_personality = yes
+				NOR = {
+					has_ai_personality_behaviour = robot_exploiter
+					has_ai_personality_behaviour = robot_liberator
+				}
+			}
+		}
+	}
+
+	option = {
+		name = "robot_pops_allowed"
+
+		policy_flags = {
+			robots_allowed
+		}
+
+		AI_weight = {
+			factor = 2
+		}
+	}
+}
+
+pre_sapients = {
+	potential = {
+		OR = {
+			has_country_flag = found_presapients
+			any_planet_within_border = {
+				any_owned_pop = {
+					is_sapient = no
+				}
+			}
+		}
+	}
+
+	option = {
+		name = "pre_sapients_protect"
+
+		potential = {
+			NOR = {
+				has_valid_civic = civic_machine_terminator
+				has_valid_civic = civic_hive_devouring_swarm
+				has_valid_civic = civic_fanatic_purifiers
+			}
+		}
+
+		on_enabled = {
+			hidden_effect = {
+				set_country_flag = found_presapients
+			}
+		}
+
+		policy_flags = {
+			pre_sapients_protect
+		}
+
+		AI_weight = {
+			factor = 2
+			modifier = {
+				factor = 0
+				NOT = { has_ai_personality_behaviour = multispecies }
+			}
+		}
+	}
+
+	option = {
+		name = "pre_sapients_allow"
+
+		potential = {
+			NOR = {
+				has_valid_civic = civic_machine_terminator
+				has_valid_civic = civic_hive_devouring_swarm
+				has_valid_civic = civic_fanatic_purifiers
+			}
+		}
+
+		on_enabled = {
+			hidden_effect = {
+				set_country_flag = found_presapients
+			}
+		}
+
+		policy_flags = {
+			pre_sapients_allow
+		}
+
+		AI_weight = {
+			factor = 1
+		}
+	}
+
+	option = {
+		name = "pre_sapients_eat"
+
+		potential = {
+			host_has_dlc = "Utopia"
+			is_synthetic_empire = no
+			NOT = {
+				has_valid_civic = civic_fanatic_purifiers
+			}
+		}
+
+		on_enabled = {
+			hidden_effect = {
+				set_country_flag = found_presapients
+			}
+		}
+
+		valid = {
+			NOR = {
+				has_ethic = "ethic_xenophile"
+				has_ethic = "ethic_fanatic_xenophile"
+			}
+		}
+
+		policy_flags = {
+			pre_sapients_eat
+		}
+
+		modifier = {}
+
+		AI_weight = {
+			factor = 10
+			modifier = {
+				factor = 0
+				NOT = { has_authority = auth_hive_mind }
+			}
+		}
+	}
+
+	option = {
+		name = "pre_sapients_purge"
+
+		valid = {
+			NOR = {
+				has_ethic = "ethic_xenophile"
+				has_ethic = "ethic_fanatic_xenophile"
+			}
+		}
+
+		on_enabled = {
+			hidden_effect = {
+				set_country_flag = found_presapients
+			}
+		}
+
+		policy_flags = {
+			pre_sapients_purge
+		}
+
+		modifier = {}
+
+		AI_weight = {
+			factor = 5
+			modifier = {
+				factor = 0
+				is_country_type = default
+				NOR = {
+					has_ethic = "ethic_xenophobe"
+					has_ethic = "ethic_fanatic_xenophobe"
+					AND = {
+						has_authority = auth_machine_intelligence
+						NOR = {
+							has_valid_civic = civic_machine_servitor
+							has_valid_civic = civic_machine_assimilator
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+refugees = {
+	potential = {
+		has_encountered_other_species = yes
+		is_country_type = default
+		OR = {
+			NOT = { has_ethic = "ethic_gestalt_consciousness" }
+			has_valid_civic = civic_machine_servitor
+		}
+	}
+
+	option = {
+		name = "refugees_not_allowed"
+
+		valid = {
+			always = yes
+		}
+
+		policy_flags = {
+			refugees_not_allowed
+		}
+	}
+
+	option = {
+		name = "refugees_only_citizens"
+
+		potential = {
+			NOT = { has_ethic = "ethic_gestalt_consciousness" }
+		}
+
+		policy_flags = {
+			refugees_only_citizens
+		}
+
+		valid = {
+			NOT = {
+				has_authority = auth_hive_mind
+			}
+		}
+
+		AI_weight = {
+			factor = 5
+		}
+	}
+
+	option = {
+		name = "refugees_allowed"
+
+		policy_flags = {
+			refugees_allowed
+		}
+
+		valid = {
+			NOT = { has_valid_civic = "civic_fanatic_purifiers" }
+		}
+
+		AI_weight = {
+			factor = 10
+			modifier = {
+				factor = 0
+				NOR = {
+					has_ethic = ethic_xenophile
+					has_ethic = ethic_fanatic_xenophile
+					has_valid_civic = civic_machine_servitor
+					AND = {
+						has_valid_ai_personality = yes
+						NOT = { has_ai_personality_behaviour = multispecies }
+					}
+				}
+			}
+		}
+	}
+}
+
+population_controls = {
+	potential = {
+		NOT = { has_ethic = "ethic_gestalt_consciousness" }
+	}
+
+	option = {
+		name = "population_controls_not_allowed"
+
+		on_enabled = {
+			hidden_effect = { every_owned_planet = { remove_modifier = planet_population_control } }
+		}
+
+		policy_flags = {
+			population_controls_not_allowed
+		}
+	}
+
+	option = {
+		name = "population_controls_allowed"
+
+		on_enabled = {
+			hidden_effect = { every_owned_planet = { remove_modifier = planet_growth_discouraged } }
+		}
+
+		policy_flags = {
+			population_controls_allowed
+		}
+		modifier = {}
+
+		AI_weight = {
+			factor = 10
+			modifier = {
+				factor = 0
+				OR = {
+					has_ethic = ethic_egalitarian
+					has_ethic = ethic_fanatic_egalitarian
+					has_ethic = ethic_xenophile
+					has_ethic = ethic_fanatic_xenophile
+				}
+			}
+		}
+	}
+}
+
+slavery = {
+	potential = {
+		NOT = { has_ethic = "ethic_gestalt_consciousness" }
+	}
+
+	option = {
+		name = "slavery_not_allowed"
+
+		valid = {
+			NOR = {
+				has_valid_civic = civic_slaver_guilds
+				has_valid_civic = civic_indentured_assets
+			}
+		}
+
+		policy_flags = {
+			slavery_not_allowed
+		}
+		
+		in_breach_of = {
+			{
+				key = resolution_phi_aristocracy_anti_slacker_act
+			}
+		}
+
+		on_enabled = {
+			hidden_effect = {
+				every_owned_planet = { remove_modifier = slave_colony }
+				every_owned_leader = {
+					limit = { has_trait = leader_trait_iron_fist }
+					remove_trait = leader_trait_iron_fist
+					add_random_leader_trait = yes
+				}
+			}
+		}
+
+		modifier = {
+			slave_market_cost_mult = 1
+		}
+	}
+
+	option = {
+		name = "slavery_allowed"
+
+		valid = {
+			NOT = { is_subject_type = signatory }
+			NOR = {
+				has_valid_civic = civic_free_haven
+				has_valid_civic = civic_beacon_of_liberty
+				has_valid_civic = civic_idealistic_foundation
+				has_valid_civic = civic_shared_burden
+				has_valid_civic = civic_shared_burden
+			}
+		}
+
+		policy_flags = {
+			slavery_allowed
+		}
+		modifier = {
+			planet_jobs_worker_produces_mult = 0.05
+		}
+
+		AI_weight = {
+			factor = 10
+			modifier = {
+				factor = 0
+				has_valid_ai_personality = yes
+				NOT = { has_ai_personality_behaviour = slaver }
+			}
+			modifier = {
+				factor = 0
+				has_valid_ai_personality = no
+				NOR = {
+					has_ethic = ethic_authoritarian
+					has_ethic = ethic_fanatic_authoritarian
+					has_ethic = ethic_xenophobe
+					has_ethic = ethic_fanatic_xenophobe
+				}
+			}
+			# special case for harmonious collectives
+			modifier = {
+				factor = 0
+				has_valid_ai_personality = no
+				is_ai = yes
+				NOR = {
+					has_ethic = "ethic_xenophobe"
+					has_ethic = "ethic_fanatic_xenophobe"
+					has_ethic = "ethic_militarist"
+					has_ethic = "ethic_fanatic_militarist"
+				}
+				OR = {
+					has_ethic = "ethic_pacifist"
+					has_ethic = "ethic_fanatic_pacifist"
+					has_ethic = "ethic_xenophile"
+					has_ethic = "ethic_fanatic_xenophile"
+				}
+				OR = {
+					has_ethic = "ethic_authoritarian"
+					has_ethic = "ethic_fanatic_authoritarian"
+				}
+				NOR = {
+					has_valid_civic = "civic_slaver_guilds"
+					has_trait = "trait_decadent"
+				}
+			}
+		}
+	}
+}
+
+purge = {
+	option = {
+		name = "purge_not_allowed"
+
+		valid = {
+			NOT = { has_ethic = ethic_gestalt_consciousness }
+			NOT = { has_valid_civic = "civic_fanatic_purifiers" }
+		}
+
+		policy_flags = {
+			purge_not_allowed
+		}
+	}
+
+	option = {
+		name = "purge_displacement_only"
+
+		policy_flags = {
+			purge_displacement_only
+		}
+
+		modifier = {}
+
+		valid = {
+			NOR = {
+				has_ethic = ethic_xenophile
+				has_ethic = ethic_fanatic_xenophile
+			}
+			is_homicidal = no
+		}
+
+		AI_weight = {
+			factor = 5
+			modifier = {
+				factor = 0
+				has_valid_ai_personality = yes
+				has_ai_personality_behaviour = multispecies
+			}
+		}
+	}
+
+	option = {
+		name = "purge_allowed"
+
+		in_breach_of = {
+			{
+				key = resolution_rulesofwar_reverence_for_life
+			}
+		}
+
+		policy_flags = {
+			purge_allowed
+		}
+		modifier = {}
+
+		valid = {
+			NOT = { is_subject_type = signatory }
+			OR = {
+				has_ethic = ethic_gestalt_consciousness
+				has_ethic = ethic_xenophobe
+				has_ethic = ethic_fanatic_xenophobe
+				has_menace_perk = menp_undertaker	# Unlocked with Crisis Level 1
+			}
+		}
+
+		AI_weight = {
+			factor = 10
+			modifier = {
+				factor = 40
+				has_ethic = ethic_gestalt_consciousness
+				NOT = { has_valid_civic = civic_hive_empath }
+			}
+			modifier = {
+				factor = 0
+				OR = {
+					has_ethic = ethic_pacifist
+					has_ethic = ethic_fanatic_pacifist
+				}
+			}
+			modifier = {
+				factor = 0
+				has_valid_ai_personality = yes
+				NOR = {
+					has_ai_personality_behaviour = purger
+					has_ethic = ethic_gestalt_consciousness
+				}
+			}
+			modifier = {
+				factor = 0.1
+				has_valid_ai_personality = yes
+				is_ai = yes
+				is_galactic_community_member = yes
+				OR = {
+					is_active_resolution = "resolution_rulesofwar_reverence_for_life"
+					is_active_resolution = "resolution_rulesofwar_independent_tribunals"
+					is_active_resolution = "resolution_rulesofwar_last_resort_doctrine"
+					is_active_resolution = "resolution_rulesofwar_demobilization_initiative"
+				}
+			}
+			modifier = {
+				factor = 10
+				has_ascension_perk = ap_become_the_crisis
+			}
+		}
+	}
+}

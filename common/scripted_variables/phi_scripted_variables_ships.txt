@@ -1,0 +1,12 @@
+@ship_1 = 1000
+@ship_2 = 3000
+@ship_3 = 6000
+@ship_4 = 9000
+@ship_5 = 30000
+@ship_6 = 50000
+@ship_7 = 120000
+@ship_8 = 240000
+@ship_9 = 360000
+@ship_10 = 500000
+
+@robotic_maintenance_alloys = 0.25

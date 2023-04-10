@@ -1,0 +1,53 @@
+namespace = phi_origin_events
+
+# EXPLAINER:
+#	phi_origin_events.0		monthly pulse gatekeeper
+#	phi_origin_events.1		lost colony fatherland found the lost colonists
+
+country_event = {
+	id = phi_origin_events.0
+	hide_window = yes
+	
+	
+	is_triggered_only = yes
+
+	trigger = {
+		has_origin = origin_lost_colony
+		any_relation = {
+			has_modifier = phi_lost_colony_ship
+			has_communications = root
+			is_country_type = default
+			has_country_flag = lost_colony_parent_of@root
+		}	
+	}
+
+	immediate = {
+		random_country = {
+			limit = {
+				has_country_flag = lost_colony_parent_of@root
+				has_modifier = phi_lost_colony_ship
+			}
+			country_event = { id = phi_origin_events.1 }
+		}
+	}
+}
+
+country_event = {
+	id = phi_origin_events.1
+	title = phi_origin_events.1.name
+	desc = phi_origin_events.1.desc
+	picture = GFX_evt_diplomatic_visit
+	show_sound = event_celebration
+	location = root
+	
+	
+	is_triggered_only = yes
+
+	
+	option = {
+		name = phi_origin_events.1.a
+		
+		remove_modifier = phi_lost_colony_ship
+		
+	}
+}

@@ -1,0 +1,23 @@
+namespace = phi_war_in_heaven
+
+#	phi_war_in_heaven.0		yearly checked - ensures that every vassal joins overlord's war in heaven stance
+
+country_event = {
+	id = phi_war_in_heaven.0
+	hide_window = yes
+
+	is_triggered_only = yes
+	
+	trigger = {
+		has_global_flag = war_in_heaven_ongoing
+		is_subject = yes
+	}
+	
+	immediate = {
+		overlord = {
+			root = {
+				join_war = prev
+			}
+		}
+	}
+}

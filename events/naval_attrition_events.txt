@@ -1,0 +1,134 @@
+namespace = naval_attrition
+
+#On fleet passing through a wormhole
+# root = Fleet
+# From = System
+fleet_event = {
+	id = naval_attrition.0
+	hide_window = yes
+
+	is_triggered_only = yes
+
+	immediate = {
+		hidden_effect = {
+			every_owned_ship = {
+				if = {
+					limit = { has_hp_percentage > 0.15 }
+					reduce_hp_percent = 12.5
+				}
+			}	
+		}
+	}
+}
+
+#On fleet entering a non-owned system
+# root = Fleet
+# From = System
+fleet_event = {
+	id = naval_attrition.1
+	hide_window = yes
+
+	is_triggered_only = yes
+	
+	trigger = {
+		from = {
+			exists = space_owner
+			space_owner = { is_at_war_with = root.owner }
+		}
+	}
+
+	immediate = {
+		hidden_effect = {
+			every_owned_ship = {
+				if = {
+					limit = {
+						has_hp_percentage > 0.71
+						root.owner = { has_policy_flag = phi_no_retreat}
+					}
+					reduce_hp_percent = 8
+				}
+				else_if = {
+					limit = {
+						has_hp_percentage > 0.61
+					}
+					reduce_hp_percent = 10
+				}
+			}	
+		}
+	}
+}
+
+# A war is beginning, executed for every country in the war.
+# Root = Country
+# From = War
+country_event = {
+	id = naval_attrition.2
+	hide_window = yes
+
+	is_triggered_only = yes
+	
+	immediate = {
+		root = {
+			add_modifier = {
+				modifier = tora_tora_tora
+				days = 360
+			}
+		}
+	}
+}
+
+
+#rule that damages planets as long as they are occupied, monthly based
+#also increases owner's war exhaustion
+country_event = {
+	id = naval_attrition.9
+	hide_window = yes
+
+	is_triggered_only = yes
+	
+	trigger = {
+		is_at_war = yes
+	}
+	
+	immediate = {
+		every_owned_planet = {
+			limit = { is_occupied_flag = yes }
+			add_planet_devastation = 5
+			owner = {
+				if = {
+					limit = { is_war_leader = yes }
+					add_static_war_exhaustion = {
+						attacker = prev.controller
+						location = prev
+						value_for_planet_destruction = 0.05
+					}
+				}
+				else = {
+					add_static_war_exhaustion = {
+						attacker = prev.controller
+						location = prev
+						value_for_planet_destruction = 0.01
+					}
+				}
+			}
+		}
+	}
+}
+
+country_event = {
+	id = naval_attrition.10
+	hide_window = yes
+
+	is_triggered_only = yes
+	
+	trigger = {
+		host_has_dlc = "Apocalypse"
+		has_technology = tech_juggernaut
+		NOT = { has_country_flag = phi_colossus_project_enabled }
+	}
+	
+	immediate = {
+		set_country_flag = phi_colossus_project_enabled
+		country_event = { id = apoc.100 }
+	}
+}

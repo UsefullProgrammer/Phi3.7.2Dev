@@ -1,0 +1,118 @@
+on_game_start_country = {
+	events = {
+		phi_game_start.0 #PHI start menu launcher
+	}
+}
+
+# A fleet has entered a system
+# Scope = Fleet
+# From = System
+on_entering_system_fleet = {
+	events = {
+		naval_attrition.1
+	}
+}
+
+# A war is beginning, executed for every country in the war.
+# Root = Country
+# From = War
+on_war_beginning = {
+	events = {
+		naval_attrition.2
+	}
+}
+
+# this = country
+on_yearly_pulse_country = {
+	events = {
+		#victory.4
+		phi_war_in_heaven.0		#ensures that every vassal joins overlord's war in heaven stance
+		phi_ai.4				#market simulator for non gestalts empires
+		phi_ai.0				#builds up the capital planet of non-gestalt non-voids empires
+		phi_ai.1				#builds up the other planets of non gestalt empires
+		phi_ai.2				#manages unemployed pops of non gestalts empires
+		phi_ai.3				#transfers pops between capital and colonies for non gestalts empires
+		phi_ai.5				#refines the capital planet of non-gestalt non-voids empires
+		phi_ai.6				#finds empires lagging behind and flags them
+		phi_ai.7				#better starbases
+		phi_ai.8				#building assault armies
+		phi_ai.10				#send alloys to fed prez
+		phi_ai.15				#attack bbeg
+	}
+}
+
+# this = country
+on_five_year_pulse_country = {
+	events = {
+		phi_ai.13				#shifts ethics towards fed type
+	}
+}
+
+on_entering_wormhole = {
+	events = {
+		naval_attrition.0
+	}
+}
+
+# this = country
+on_monthly_pulse_country = {
+	events = {
+		rules.2				#border gore check
+		naval_attrition.9
+		#victory.7
+		phi_politics.4
+		phi_politics.5
+		phi_empire.0		#assigns victory to the Emperor
+		phi_game_start.2	#message from developer when mod is updated
+		naval_attrition.10	#enables colossus project if player has tech juggernaut
+		phi_ai.9			#destroy "lost cause" starbases
+		phi_ai.11			#set survive cb in defensive wars when hope is lost
+		phi_ai.12			#joins defensive wars of laggers
+		phi_ai.14			#scorched earth tactics
+	}
+}
+
+# A planet has been colonized.
+# Scope = Planet
+on_colonized = {
+	events = {
+		phi_franchising.0
+	}
+}
+
+#Fired whenever a new owner is set for a planet,
+#be it after a war or through a trade
+#From = Country scope (new owner)
+#This = Planet scope
+on_planet_transfer = {
+	events = {
+		phi_franchising.0
+	}
+}
+
+# A war has been won
+# Root = Winner Warleader
+# From = Loser Warleader
+# FromFrom = War
+on_war_won = {
+	events = {
+		
+	}
+}
+
+#This = destroyed country
+#From = optional, destroyer (country)
+on_country_destroyed = {
+	events = {
+		phi_franchising.1
+	}
+}
+
+# Planet has taken damage from orbital bombardment - Damage is applied daily
+# This = Planet
+# From = Bombarder
+on_planet_bombarded = {
+	events = {
+		
+	}
+}

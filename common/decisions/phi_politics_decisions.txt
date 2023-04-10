@@ -1,0 +1,427 @@
+##########################################################################
+# PHI Politics Decisions
+##########################################################################
+
+### SMOTHER THE REBELLION ###
+
+decision_phi_smother_rebellion = {
+	owned_planets_only = yes
+	sound = event_air_raid_siren
+	icon = decision_martial_law
+
+	resources = {
+		category = decisions
+		cost = {
+			influence = 50
+		}
+	}
+
+	potential = {
+		always = no
+		has_orbital_bombardment = no
+		NOT = { has_planet_flag = phi_rebellion }
+	}
+	
+	allow = {
+		any_owned_pop = {
+			has_job = rebel
+		}
+		NOT = {
+			owner = {
+				any_owned_planet = {
+					has_ground_combat = yes
+				}
+			}
+		}
+	}
+
+	effect = {
+		custom_tooltip = decision_phi_smother_rebellion_effects
+		hidden_effect = {
+			planet_event = { id = phi_politics.0 }
+		}
+	}
+
+	ai_weight = {
+		weight = 0
+	}
+}
+
+decision_phi_amnesty = {
+	owned_planets_only = yes
+	sound = event_conversation
+	icon = decision_deal
+
+	resources = {
+		category = decisions
+		cost = {
+			influence = 500
+		}
+	}
+
+	potential = {
+		always = no
+		has_orbital_bombardment = no
+		NOT = { has_planet_flag = phi_rebellion }
+	}
+	
+	allow = {
+		any_owned_pop = {
+			has_job = rebel
+		}
+	}
+
+	effect = {
+		add_modifier = {
+			modifier = phi_government_victory
+			days = 720
+		}
+	}
+
+	ai_weight = {
+		weight = 0
+	}
+}
+
+### PLANETSIDE POLITICAL DECISION ###
+
+decision_phi_planet_resource_rationing = {
+	owned_planets_only = yes
+	sound = event_administrative_work
+	icon = decision_luxuries
+
+	resources = {
+		category = decisions
+		cost = {
+			influence = 100
+		}
+	}
+
+	potential = {
+		NOT = { has_modifier = phi_planet_resource_rationing }
+	}
+
+	allow = {
+		always = yes
+	}
+
+	effect = {
+		add_modifier = { modifier = "phi_planet_resource_rationing" }
+	}
+
+	ai_weight = {
+		weight = 50
+		modifier = {
+			factor = 0
+			planet_stability < 75
+		}
+	}
+}
+
+decision_end_phi_planet_resource_rationing = {
+	owned_planets_only = yes
+	sound = event_administrative_work
+	icon = decision_luxuries
+
+	resources = {
+		category = decisions
+		cost = {
+			influence = 10
+		}
+	}
+
+	potential = {
+		has_modifier = phi_planet_resource_rationing
+	}
+
+	allow = {
+		always = yes
+	}
+
+	effect = {
+		remove_modifier = "phi_planet_resource_rationing"
+	}
+
+	ai_weight = {
+		weight = 5
+		modifier = {
+			factor = 0
+			planet_stability > 50
+		}
+	}
+}
+
+decision_phi_planet_local_administration = {
+	owned_planets_only = yes
+	sound = event_administrative_work
+	icon = decision_luxuries
+
+	resources = {
+		category = decisions
+		cost = {
+			influence = 100
+		}
+	}
+
+	potential = {
+		owner = { is_regular_empire = yes }
+		NOT = { has_modifier = phi_planet_local_administration }
+	}
+
+	allow = {
+		always = yes
+	}
+
+	effect = {
+		add_modifier = { modifier = "phi_planet_local_administration" }
+	}
+
+	ai_weight = {
+		weight = 5
+		modifier = {
+			factor = 0
+			planet_stability < 75
+		}
+	}
+}
+
+decision_end_phi_planet_local_administration = {
+	owned_planets_only = yes
+	sound = event_administrative_work
+	icon = decision_luxuries
+
+	resources = {
+		category = decisions
+		cost = {
+			influence = 10
+		}
+	}
+
+	potential = {
+		has_modifier = phi_planet_local_administration
+	}
+
+	allow = {
+		always = yes
+	}
+
+	effect = {
+		remove_modifier = "phi_planet_local_administration"
+	}
+
+	ai_weight = {
+		weight = 5
+		modifier = {
+			factor = 0
+			planet_stability > 50
+		}
+	}
+}
+
+decision_phi_planet_trading_guilds = {
+	owned_planets_only = yes
+	sound = event_administrative_work
+	icon = decision_luxuries
+
+	resources = {
+		category = decisions
+		cost = {
+			influence = 100
+		}
+	}
+
+	potential = {
+		owner = { is_regular_empire = yes }
+		NOT = { has_modifier = phi_planet_trading_guilds }
+	}
+
+	allow = {
+		always = yes
+	}
+
+	effect = {
+		add_modifier = { modifier = "phi_planet_trading_guilds" }
+	}
+
+	ai_weight = {
+		weight = 5
+		modifier = {
+			factor = 0
+			planet_stability < 75
+		}
+	}
+}
+
+decision_end_phi_planet_trading_guilds = {
+	owned_planets_only = yes
+	sound = event_administrative_work
+	icon = decision_luxuries
+
+	resources = {
+		category = decisions
+		cost = {
+			influence = 10
+		}
+	}
+
+	potential = {
+		has_modifier = phi_planet_trading_guilds
+	}
+
+	allow = {
+		always = yes
+	}
+
+	effect = {
+		remove_modifier = "phi_planet_trading_guilds"
+	}
+
+	ai_weight = {
+		weight = 5
+		modifier = {
+			factor = 0
+			planet_stability > 50
+		}
+	}
+}
+
+decision_phi_planet_deviant_experiments = {
+	owned_planets_only = yes
+	sound = event_administrative_work
+	icon = decision_luxuries
+
+	resources = {
+		category = decisions
+		cost = {
+			influence = 100
+		}
+	}
+
+	potential = {
+		owner = { is_gestalt = yes }
+		NOT = { has_modifier = phi_planet_deviant_experiments }
+	}
+
+	allow = {
+		always = yes
+	}
+
+	effect = {
+		add_modifier = { modifier = "phi_planet_deviant_experiments" }
+	}
+
+	ai_weight = {
+		weight = 5
+		modifier = {
+			factor = 0
+			planet_crime > 15
+		}
+	}
+}
+
+decision_end_phi_planet_deviant_experiments = {
+	owned_planets_only = yes
+	sound = event_administrative_work
+	icon = decision_luxuries
+
+	resources = {
+		category = decisions
+		cost = {
+			influence = 10
+		}
+	}
+
+	potential = {
+		has_modifier = phi_planet_deviant_experiments
+	}
+
+	allow = {
+		always = yes
+	}
+
+	effect = {
+		remove_modifier = "phi_planet_deviant_experiments"
+	}
+
+	ai_weight = {
+		weight = 0
+		modifier = {
+			weight = 10
+			planet_crime > 50
+		}
+	}
+}
+
+decision_phi_planet_expropriation = {
+	owned_planets_only = yes
+	sound = event_administrative_work
+	icon = decision_luxuries
+
+	resources = {
+		category = decisions
+		cost = {
+			influence = 100
+		}
+	}
+
+	potential = {
+		has_branch_office = yes
+		branch_office_owner = {
+			NOT = { has_valid_civic = civic_criminal_heritage }
+		}
+		owner = { is_gestalt = no }
+	}
+
+	allow = {
+		owner = {
+			root = {
+				branch_office_owner = {
+					is_at_war_with = prevprev
+				}
+			}
+		}
+	}
+
+	effect = {
+		close_branch_office = yes
+		add_modifier = { modifier = "phi_planet_expropriation" days = 1800 }
+	}
+
+	ai_weight = {
+		weight = 100
+	}
+}
+
+decision_phi_release_client_state = {
+	owned_planets_only = yes
+	sound = event_administrative_work
+	icon = decision_luxuries
+
+	resources = {
+		category = decisions
+		cost = {
+			food = 100
+			energy = 100
+			minerals = 100
+			consumer_goods = 100
+			influence = 25
+		}
+	}
+
+	potential = {
+		owner = { is_regular_empire = yes }
+		is_capital = no
+	}
+
+	allow = {
+		owner = { is_at_war = no }
+	}
+
+	effect = {
+			planet_event = { id = phi_politics.7 }
+	}
+
+	ai_weight = {
+		weight = 0
+	}
+}

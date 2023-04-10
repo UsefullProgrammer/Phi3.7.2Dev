@@ -1,0 +1,304 @@
+
+black_hole_signal_transmitter = {
+	icon = "GFX_spaceport_module_observatory"
+	construction_days = 360
+
+	potential = {
+		exists = owner
+		owner = {
+			has_technology = tech_physics_4
+			NOT = {
+				any_owned_starbase = {
+					NOT = { is_same_value = root }
+					OR = {
+						has_starbase_building = allied_black_hole_signal_transmitter
+						has_starbase_building = black_hole_signal_transmitter
+					}
+				}
+			}
+		}
+	}
+
+	possible = {
+		custom_tooltip = {
+			fail_text = "requires_starport"
+			has_starbase_size >= starbase_starport
+		}
+		custom_tooltip = {
+			fail_text = "requires_black_hole"
+			star = { is_star_class = sc_black_hole }
+		}
+	}
+
+	resources = {
+		category = starbase_buildings
+		cost = {
+			alloys = 1000
+			influence = 100
+		}
+
+		produces = {
+			physics_research = 100
+		}
+		produces = {
+			trigger = {
+				exists = owner
+				owner = {
+					is_galactic_community_member = yes
+				}
+				OR = {
+					is_active_resolution = "resolution_galacticstudies_astral_studies_network"
+					is_active_resolution = "resolution_galacticstudies_advanced_xenostudies"
+					is_active_resolution = "resolution_galacticstudies_ethical_guideline_refactoring"
+					is_active_resolution = "resolution_galacticstudies_extradimensional_experimentation"
+				}
+			}
+			physics_research = 100
+		}
+
+		upkeep = {
+			energy = 2
+		}
+	}
+
+	show_in_tech = "tech_physics_4"
+
+	ai_build_at_chokepoint = yes
+	ai_build_outside_chokepoint = yes
+	ai_weight = {
+		weight = 1000
+	}
+}
+
+pulsar_signal_receiver = {
+	icon = "GFX_spaceport_module_observatory"
+	construction_days = 360
+
+	potential = {
+		exists = owner
+		owner = {
+			has_technology = tech_physics_4
+			NOT = {
+				any_owned_starbase = {
+					NOT = { is_same_value = root }
+					OR = {
+						has_starbase_building = allied_pulsar_signal_receiver
+						has_starbase_building = pulsar_signal_receiver
+					}
+				}
+			}
+		}
+	}
+
+	possible = {
+		custom_tooltip = {
+			fail_text = "requires_starport"
+			has_starbase_size >= starbase_starport
+		}
+		custom_tooltip = {
+			fail_text = "requires_pulsar"
+			star = { is_star_class = sc_pulsar }
+		}
+	}
+
+	resources = {
+		category = starbase_buildings
+		cost = {
+			alloys = 1000
+			influence = 100
+		}
+
+		produces = {
+			physics_research = 100
+		}
+		produces = {
+			trigger = {
+				exists = owner
+				owner = {
+					is_galactic_community_member = yes
+				}
+				OR = {
+					is_active_resolution = "resolution_galacticstudies_astral_studies_network"
+					is_active_resolution = "resolution_galacticstudies_advanced_xenostudies"
+					is_active_resolution = "resolution_galacticstudies_ethical_guideline_refactoring"
+					is_active_resolution = "resolution_galacticstudies_extradimensional_experimentation"
+				}
+			}
+			physics_research = 100
+		}
+
+		upkeep = {
+			energy = 2
+		}
+	}
+
+	show_in_tech = "tech_physics_4"
+
+	ai_build_at_chokepoint = yes
+	ai_build_outside_chokepoint = yes
+	ai_weight = {
+		weight = 1000
+	}
+}
+
+allied_black_hole_signal_transmitter = {
+	icon = "GFX_spaceport_module_observatory"
+	construction_days = 360
+
+	potential = {
+		exists = owner
+		owner = {
+			has_technology = tech_physics_4
+			OR = {
+				vassals > 0
+				is_federation_leader = yes
+			}
+			NOT = {
+				any_owned_starbase = {
+					NOT = { is_same_value = root }
+					OR = {
+						has_starbase_building = allied_black_hole_signal_transmitter
+						has_starbase_building = black_hole_signal_transmitter
+					}
+				}
+			}
+		}
+	}
+
+	possible = {
+		owner = {
+			OR = {
+				any_subject = {
+					any_system_within_border = {
+						star = { is_star_class = sc_black_hole }
+					}
+				}
+				any_federation_ally = {
+					any_system_within_border = {
+						star = { is_star_class = sc_black_hole }
+					}
+				}
+			}
+		}
+	}
+
+	resources = {
+		category = starbase_buildings
+		cost = {
+			alloys = 1000
+			influence = 100
+		}
+
+		produces = {
+			physics_research = 100
+		}
+		produces = {
+			trigger = {
+				exists = owner
+				owner = {
+					is_galactic_community_member = yes
+				}
+				OR = {
+					is_active_resolution = "resolution_galacticstudies_astral_studies_network"
+					is_active_resolution = "resolution_galacticstudies_advanced_xenostudies"
+					is_active_resolution = "resolution_galacticstudies_ethical_guideline_refactoring"
+					is_active_resolution = "resolution_galacticstudies_extradimensional_experimentation"
+				}
+			}
+			physics_research = 100
+		}
+
+		upkeep = {
+			influence = 2
+		}
+	}
+
+	show_in_tech = "tech_physics_4"
+
+	ai_build_at_chokepoint = no
+	ai_build_outside_chokepoint = yes
+	ai_weight = {
+		weight = 1000
+	}
+}
+
+allied_pulsar_signal_receiver = {
+	icon = "GFX_spaceport_module_observatory"
+	construction_days = 360
+
+	potential = {
+		exists = owner
+		owner = {
+			has_technology = tech_physics_4
+			OR = {
+				vassals > 0
+				is_federation_leader = yes
+			}
+			NOT = {
+				any_owned_starbase = {
+					NOT = { is_same_value = root }
+					OR = {
+						has_starbase_building = allied_pulsar_signal_receiver
+						has_starbase_building = pulsar_signal_receiver
+					}
+				}
+			}
+		}
+	}
+
+	possible = {
+		owner = {
+			OR = {
+				any_subject = {
+					any_system_within_border = {
+						any_system_planet = { is_star_class = sc_pulsar }
+					}
+				}
+				any_federation_ally = {
+					any_system_within_border = {
+						any_system_planet = { is_star_class = sc_pulsar }
+					}
+				}
+			}
+		}
+	}
+
+	resources = {
+		category = starbase_buildings
+		cost = {
+			alloys = 1000
+			influence = 100
+		}
+
+		produces = {
+			physics_research = 100
+		}
+		produces = {
+			trigger = {
+				exists = owner
+				owner = {
+					is_galactic_community_member = yes
+				}
+				OR = {
+					is_active_resolution = "resolution_galacticstudies_astral_studies_network"
+					is_active_resolution = "resolution_galacticstudies_advanced_xenostudies"
+					is_active_resolution = "resolution_galacticstudies_ethical_guideline_refactoring"
+					is_active_resolution = "resolution_galacticstudies_extradimensional_experimentation"
+				}
+			}
+			physics_research = 100
+		}
+
+		upkeep = {
+			influence = 2
+		}
+	}
+
+	show_in_tech = "tech_physics_4"
+
+	ai_build_at_chokepoint = no
+	ai_build_outside_chokepoint = yes
+	ai_weight = {
+		weight = 1000
+	}
+}

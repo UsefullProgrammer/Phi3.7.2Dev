@@ -1,0 +1,50 @@
+tech_physics_4 = {
+	cost = @tier5cost3
+	area = physics
+	tier = 5
+	category = { psionics }
+	prerequisites = { "tech_physics_3" }
+	weight = @tier5weight3
+	
+	is_rare = yes
+
+	modifier = {
+		
+	}
+
+	weight_modifier = {
+		modifier = {
+			factor = 2
+			years_passed > 50
+		}
+		modifier = {
+			factor = 2
+			years_passed > 55
+		}
+		modifier = {
+			factor = 2
+			years_passed > 60
+		}
+		modifier = {
+			factor = 2
+			years_passed > 65
+		}
+		modifier = {
+			factor = 10
+			research_leader = {
+				area = physics
+				has_trait = "leader_trait_expertise_psionics"
+			}
+		}
+		modifier = {
+			factor = 100
+			any_country = {
+				has_technology = tech_physics_4
+			}
+		}
+	}
+
+	ai_weight = {
+		weight = 1000
+	}
+}

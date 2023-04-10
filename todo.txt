@@ -1,0 +1,72 @@
+todo:
+
+
+arid
+desert
+savannah
+
+alpine
+artic
+tundra
+
+continental
+ocean
+tropical
+
+
+
+***modifiers***
+
+mutagen radiation
+
+electromagnetic tempests
+
+abandoned bio lab
+
+tidal locked
+
+irradiated areas
+
+thin crust
+
+frequent tornadoes
+
+underground toxic flows
+
+ferrofage lifeforms
+
+abandoned colony
+
+(alpine) huge blizzards
+(artic) polar supercells
+(tundra) perennial fog
+
+(continental) tectonic fractures
+(ocean) ocean vortexes
+(tropical) rampant swarms
+
+(arid) sudden rainfalls
+(desert) dust storms
+(savannah) bush wildfires
+
+
+
+
+*** blockers ***
+
+archaeological site: -4 districts, +1 archaeologist job (+0.1 artifact)
+
+
+*** colony speed tech ***
++50% colony speed, +1 colonist when ready
+
+
+
+terraforming tiers:
+
+tech_terrestrial_sculpting	2
+tech_ecological_adaptation	3
+tech_climate_restoration	4
+
+
+sector_types --> portare max_jumps = 1

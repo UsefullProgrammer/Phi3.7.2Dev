@@ -1,0 +1,9 @@
+version="0.91"
+name="phi-dev"
+tags={
+	"Balance"
+	"Gameplay"
+}
+picture="thumbnail.png"
+supported_version="3.2.*"
+remote_file_id="2274421915"

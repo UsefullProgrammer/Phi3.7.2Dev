@@ -1,0 +1,80 @@
+Wiki page --> [url=https://stellaris.paradoxwikis.com/Phi_mp_balancing] [b]HERE[/b] [/url]
+
+Strategy Guide --> [url=https://docs.google.com/document/d/e/2PACX-1vRgPf7gUedOMI1AcG9dYW7yw5e0vgwtr9EWGswMq33WkMNpJHrDpHkLcvGNeeqfZW5AOYRDSu4mJKjs/pub] [b]HERE[/b] [/url]
+Complete Changelog --> [url=https://docs.google.com/document/d/e/2PACX-1vTeZuzk3ilJyjXsgS0bjYeyOXJiELclUL0FSiJaw9NlfiLz1TTmCbjO_YH59GMezqPsO8vUiqNlq5TP/pub] [b]HERE[/b] [/url]
+
+[quote=Mario Minaccia]
+This mod is stable and playable but [b]currently under further development[/b]. I have begun working on it in October '20, and it is now at its [b]1.1 version[/b]. I'm actually using this mod to host long-term campaigns, so save-game uncompatible updates are kept at a minimum...
+
+If you plan to host a big multi-session mp game using this mod, feel free to send me a [b]direct message[/b] or leave a [b]comment[/b] in order to be sure that any game breaking updates are not planned as long as you finish your game!
+[/quote]
+
+[hr][/hr]
+
+[h1][b]Overview[/b][/h1]
+This mod is intended to offer a multiplayer audience a [b]fair[/b] and [b]interesting[/b] game-set. It takes many things already present in the vanilla game and it reworks them in order to make them more interesting or more balanced.
+PHI also adds a lot of stuff that is still bigly missing in vanilla: [i]breaking truces[/i], [i]taxing vassals[/i], [i]navy attrition[/i], [i]victory conditions[/i] and more !
+
+[h1][b]How to install[/b][/h1]
+PHI is a standalone mod.
+
+[h1][b]The Biggest Changes to Vanilla[/b][/h1]
+[h2]Admin capacity and planets management[/h2]
+While playing with PHI, you'll have much [b]less planets[/b] to manage and colonize, and you'll put much more emphasys on [b]systems' resources[/b] (especially for science). This is done by:
+[list]
+[*]increasing the [b]admin capacity cost[/b] of every planet you own (they now cost 100 admin points)
+[*]increasing the penalties you face going over your admin cap (you get [b]+1% research and tradition cost[/b] and [b]0.5 crime on every planet[/b] per point over the limit)
+[*]setting the starting [b]admin capacity to 400[/b]
+[*]changing the [b]bonus to research station[/b] production you get from tech, traditions and events (you now get +100% instead of +10%)
+[/list]
+These basic changes make the game [b]less focused on colonizing[/b] everything you see, letting you focus on the [b]strategic value[/b] of your systems and the [b]quality[/b] of your planets. A bonus side effect is also that the game will run much faster as less pops are created. The [b]increased research output of your station[/b] will more than compensate for anything you'll find yourself short.
+
+[h2]Federations and Senate[/h2]
+PHI reworks totally the federations available in-game:
+[list]
+[*]every federation type is linked to an [b]ethic[/b]
+[*]having different ethics between members will have [b]bigger penalties[/b] on the xp accumulation
+[*]federations [b]level up faster[/b] (1 level every 5 years, more or less)
+[*][b]no vassals[/b] can be members of federation anymore, in order to solve an issue in which a fed member/vassal could never revolt against its master
+[*]the [b]galactic senate[/b] will pass reforms faster, allowing for a more diplo-aggressive gameplay
+[/list]
+
+[h2]Vassals[/h2]
+Vassals and subsidiaries are no longer integrable. Instead:
+[list]
+[*][b]vassals[/b] give [b]10% of their alloys, consumer goods and research[/b] points monthly production to their overlord
+[*][b]tributaries[/b] give [b]10% of their energy and minerals[/b] monthly production to their overlord
+[*][b]subsidiaries[/b] give [b]5% of their energy, minerals, alloys, consumer goods and research[/b] points monthly production to their overlord
+[*][b]protectorates[/b] give a bonus [b]+200 society research[/b] per month to their overlord
+[/list]
+Moreover, each vassal relation will now cost 1 influence per month (with the exception of protectorates). Ultimatums to vassalize other empires no longer check against relative power.
+
+[h2]Ships and Stations[/h2]
+[list]
+[*][b]carriers[/b]: are now the only ship-class able to have hangars
+[*][b]stations[/b]: more powerful as they have more hangar bays and perdition beams (at citadel level)
+[*][b]ships limits[/b]: make for more varied fleets and strategy, as you can only build 1 cruiser per 25 naval capacity, 1 battleship / 50 naval capacity and 1 carrier and 1 titan per 100 naval cap!
+[*][b]jump drives[/b]: limited only to the big bad boys (battleships or bigger...)
+[/list]
+
+[h2]War and General Rules[/h2]
+[list]
+[*][b]no more border gore[/b]: any system owned by an empire must be continuously connected to a fully colonized planed owned by that empire or have their outpost disbanded
+[*][b]dangerous wormholes[/b]: passing through a wormhole now gives an uncapped [b]12.5% hull damage[/b] to ships, and they don't count towards adiacency for the above rule (with the notable exception of the [b]sealed system[/b])
+[*][b]no more going to the jugular[/b]: a regular empire will be able to claim systems from opponents only when those systems are [b]adiacent[/b] to its borders or to another claimed system. total wars empires can declare war only on [b]neighbors[/b]
+[*][b]naval attrition[/b]: fleets advancing in enemy territory take [b]12.5% hull damage[/b] upon entering enemy's systems (cumulative but capped at 50%)
+[*][b]breaking truces[/b]: now you can [b]break truces[/b] (from the edicts screen) but you'll become a galactic pariah
+[*][b]disarm your enemies[/b]: humiliations are stingy, causing a wopping [b]-33% influence, alloys, unity, diplo weight[/b] and [b]naval cap[/b] for 15 years
+[*][b]win with a different strategy[/b]: you can now win the game by using your overwhelming trade power to subjugate all the lesser empires into a new [b]Galactic Empire[/b]!
+[/list]
+
+[h2]Policies, Traditions, etc[/h2]
+[list]
+[*][b]diplomatic stance[/b] completely reworked: now you have a step-by-step change process as you ready up or dismantle your industrial-military complex
+[*][b]economic and drone policy[/b] completely reworked, with [b]policies linked to tradition[/b] starters your empire unlocked
+[*][b]diplomacy tradition[/b] is now stronger than ever!
+[/list]
+
+And many more things... check out every game changes [url=https://docs.google.com/document/d/e/2PACX-1vTeZuzk3ilJyjXsgS0bjYeyOXJiELclUL0FSiJaw9NlfiLz1TTmCbjO_YH59GMezqPsO8vUiqNlq5TP/pub] [b]HERE[/b] [/url]
+
+And learn the basics strategies to win the game [url=https://docs.google.com/document/d/e/2PACX-1vRgPf7gUedOMI1AcG9dYW7yw5e0vgwtr9EWGswMq33WkMNpJHrDpHkLcvGNeeqfZW5AOYRDSu4mJKjs/pub] [b]HERE[/b] [/url]

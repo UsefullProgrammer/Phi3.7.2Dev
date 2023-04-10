@@ -1,0 +1,211 @@
+POLITICS 0.8
+
+*** Galactic Senate ***
+PACIFISM
+-	international border recognition:
+		no more claims between members
+-	the end of colonialism:
+		no more tributary/vassalization war between members
+		removes all claims made between members
+-	peaceful resolution of conflicts:
+		no more wars between members
+
+XENOPHOBE
+-	repatriation protocols
+		no migration treaties (breach)
+-	protectionism
+		no commercial pacts (breach)
+-	border walls
+		no open borders (breach)
+
+XENOPHILE
+-	federal fervor
+		diplomatic focus eco policy gives also: +10 energy production for each member of a federation
+-	right of passage
+		no closed borders (breach)
+-	open arms
+		refugees welcome is mandatory (breach)
+
+
+-	mission to civilize
+
+ACTS
+-	self determination of people:
+		all tributary/vassals of members get an event to decide for freedom
+-	
+
+
+factions produce additional resource. e.g. spiritualists give unity, pacifist give energy, militarist give alloys...
+
+
+1. Lovecraft - come cosa alla fine / dimensional horror ti compare in casa
+2. Asimov - scatenare una ribellione di robot
+3. scatenare una ribellione
+4. +1 L-gate insight
+5. uno di energia a tutti
+6. droga spaziale (confisca)
+7. 0.5x crisi
+8. tutti che vanno in vacanza -5% job output
+9. xenomorfi sui pianeti
+
+11. fire rate +5%
+
+11. epidemia globale, per ridurre il numero di pops
+
+scurati
+mussolini figlio del secolo
+
+roth
+la marcia di radetsky
+
+-	removing ship/army upkeep from military category
+-	admin sanctions --> lose stability instead of admin cap
+-	introducing edict: "coup" for crating a galactic empire if a player is the only member of the galactic council
+-	coup and commerce victory will spawn a decision that allows empires to join or to fight (but losing lots of planets)
+-	neutron blaster project - a starbase building that enables a decision to fire a blast that eliminate pops on galaxy-wide levels
+-	nano-virus attack: project that let's introduce a pathogen into another empire's population, adding a negative trait
+-	antimatter system annihilator for station of last level --> they explode when they die and bring the whole system to hel with them (mega-structure ?)
+
+
+tiyana vek become natural preserve
+experimental subspace nav --> making it a necessary tech to build jump drives / gateways
+	gives a building that create a wormhole between systems ?
+	makes wormholes jumps less damaging (6.25% instead of 12.5%)
+	
+	
+basati su grandezza, tipo del pianeta
+
+TODO modificatori
+
+ZANZARE (Tropicale)
+ "negativo"	 --> +10% bio tech, -10% pop growth, -10% happiness
+ "neutrale"	 --> +10% bio tech, -10% happiness
+ "buono"	 --> +10% bio tech, +5% happiness
+
+
+
+ARID
+DESERT
+SAVANNA
+
++10% eng res
+
+
+TROPICAL
+OCEAN
+CONTINENTAL
+
+ARTIC
+TUNDRA
+ALPINE
+
+GAIA
+TOMB
+RELIC
+
+
+
+Politics
+le fazioni producono +4 influence / +20 unity quando sono al 100% happiness
+
+Militarist
+* nessuno piu' grosso di noi (+20/-10)	ok
+* il piu' grosso di tutti (+20/0)	ok
+* ha vassalli/tributari/presidente fed (+10/0)	ok
+* e' vassallo/tributario (-10/0)	ok
+* readiness policy (+10/-20)	ok
+* only defensive wars (-20/0)	ok
+
+total +60/-60	ok
+
+Pacifist
+* has non aggression/association(+5/0)	ok
+* 10 yrs peace (+20/0)	ok
+* 5 yrs peace (+10/0)	ok
+* at peace (+10/-10)	ok
+* not the aggressor (0/-20)	ok
+* readiness policy (+10/-20)	ok
+* no aggressive wars (+10/-10)	ok
+
+total +60/-60
+
+Materialist
+* nessuno piu' grosso di noi (+20/-10)	ok
+* il piu' grosso di tutti (+20/0)	ok
+* qualcuno ci annienta (-20/0)	ok
+* ai policy (+10/-20)	ok
+* gc member, gc spiritualist laws (-10/0)	ok
+* gc member, gc materialist laws (+10/0)	ok
+
+total +60/-60
+
+Spiritualist
+* the flesh is weak (-10/0)	ok
+* homogeneity (0/-10)	ok
+* psyonics ascension (+20/0)	ok
+* consecrated gaia (+20/0)	ok
+* spiritualist government (0/-10)	ok
+* ai policy (+10/-20)	ok
+* gc member, gc spiritualist laws (+10/0)	ok
+* gc member, gc materialist laws (-10/0)	ok
+
+total +60/-60
+
+Egalitarian
+* is democracy (+20/0)	ok
+* is autocracy (0/-20)	ok
+* no stratified economy (0/-10)	ok
+* no elitism (+5/-5)	ok
+* free movement (+5/-5)	ok
+* reproductive freedom (+10/-10)	ok
+* gc member, gc egalitarian laws (+10/0)	ok
+* no slavery (+10/-10)	ok
+
+total +60/-60
+
+Authoritarian
+* is democracy (0/-20)	ok
+* is autocracy (20/0)	ok
+* stratified economy (10/-10)	ok
+* elitism (+10/-10)	ok
+* ha vassalli/tributari/presidente fed (+10/0)	ok
+* e' vassallo/tributario (-10/0)	ok
+* nessuno piu' grosso di noi (+10/0)
+* gc member, gc egalitarian laws (0/-10)	ok
+
+
+total +60/-60
+
+Xenophile
+* in federation (+20/0)	ok
+* no xeno purge (0/-20)	ok
+* no xeno slaves (0/-20)	ok
+* in gc (+5/-5)	ok
+* refugees (+10/-5)	ok
+* enclave (+10/0)	ok
+* no primitive invasion (0/-10)	ok
+* commercial competitor (+15/0)
+
+totale +60/-60
+
+Xenophobe-supremacist
+* no migration (0/-10)	ok
+* readiness policy (+10/-10)	ok
+* no alien citizen (+10/-10)	ok
+* no fed/president (+10/-10)	ok
+* no xeno ruler (+10/-20)	ok
+* no gc member (+20/0)
+
+total +60/-60
+
+Xenophobe-isolationist
+* no migration (0/-10)	ok
+* readiness policy (+10/-10)	ok
+* 10 yrs peace (+15/0)	ok
+* 5 yrs peace (+10/0)	ok
+* no fed/president (+10/-10)	ok
+* no aggressive war (0/-20)	ok
+* no gc member (+15/-10)	ok
+
+total +60/-60
+

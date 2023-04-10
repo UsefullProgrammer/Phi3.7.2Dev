@@ -1,0 +1,11 @@
+
+phi_kill_rebel = {
+	random_list = {
+		20 = {
+			#nothing
+		}
+		10 = {
+			kill_pop = yes
+		}
+	}
+}

@@ -1,0 +1,39 @@
+namespace = phi_empire
+
+#	phi_empire.0	monthly checked - gives victory screen to Galactic Emperor if conditions are met
+
+country_event = {
+	id = phi_empire.0
+	hide_window = yes
+
+	is_triggered_only = yes
+	
+	trigger = {
+		is_galactic_emperor = yes
+		is_at_war = no
+		NOT = { has_global_flag = phi_emperor_win_disallowed }
+		NOT = {
+			any_country = {
+				is_country_type = default
+				is_galactic_community_member = no
+			}
+		}
+		NOR = {
+			has_global_flag = ongoing_prethoryn_invasion
+			AND = {
+				has_global_flag = extradimensional_invasion_happened
+				NOT = { has_global_flag = extradimensional_invasion_defeated }
+			}
+			has_global_flag = ai_invasion_ongoing
+			has_global_flag = gray_goo_crisis_active
+			AND = {
+				has_global_flag = great_khan_announcement
+				NOT = { has_global_flag = great_khan_dead }
+			}
+		}
+	}
+	
+	immediate = {
+		win = yes
+	}
+}

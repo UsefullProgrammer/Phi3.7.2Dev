@@ -1,0 +1,22 @@
+reboot = {
+	length = 0
+	potential = {
+		has_country_flag = quit_and_restart
+		NOT = { has_global_flag = big_time_cheaters }
+	}
+	allow = {
+		OR = {
+			any_owned_megastructure = { is_megastructure_type = think_tank_3 }
+			any_owned_megastructure = { is_megastructure_type = think_tank_4 }
+			any_owned_megastructure = { is_megastructure_type = think_tank_restored }
+		}
+		is_subject = no
+		is_at_war = no
+	}
+	effect = {
+		custom_tooltip = "edict_tooltip_reboot_effects"
+		hidden_effect = {
+			country_event = { id = sublimation.10000 }
+		}
+	}
+}

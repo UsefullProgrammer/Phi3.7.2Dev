@@ -1,0 +1,1016 @@
+namespace = sublimation
+
+# EXPLAINER:
+# 0.	monthly pulse checks for sublimation.0 triggers
+#
+# 1.	START: sublimation.0 --> enables the new dimension project
+# 2.	new dimension finished --> sublimation.1
+# 3.	sublimation.1 --> opens wormholes, launches sublimation.2 (informs players + gives tech option) and sublimation.3
+# 4.	sublimation.3 --> enables the "universal language" project, launches sublimation.4
+# 5.	sublimation.4 --> iterative consequences, lasts until universal language is finished
+# 6.	universal language finished --> sublimation.5
+# 7.	sublimation.5 --> enables the modding project, launches sublimation.6 (informs players), give cheat bonuses
+# 8.	modding project completed --> sublimation.7
+# 9.	sublimation.7 --> enables decision to reboot
+# 10.	reboot --> sublimation.1000
+# 11.	sublimation.10000 --> player wins and leaves galaxy, extra-dimensional invaders arrive, launches sublimation.1001 (informs players)
+
+#START - CHECKED ON MONTHLY PULSE - ENABLES THE NEW DIMENSION PROJECT
+country_event = {
+	id = sublimation.0
+	title = sublimation.0.name
+	desc = sublimation.0.desc
+	picture = GFX_evt_black_hole
+	show_sound = event_radio_chatter
+	location = from
+
+	is_triggered_only = yes
+	
+	trigger = {
+		NOT = { has_global_flag = phi_sublimation_disallowed }
+		is_subject = no
+		has_technology = tech_physics_4
+		OR = {
+			has_federation = no
+			is_federation_leader = yes
+		}
+		NOT = { has_country_flag = new_dimension_project_authorized }
+		OR = {
+			any_owned_starbase = {
+				OR = {
+					has_starbase_building = black_hole_signal_transmitter
+					has_starbase_building = allied_black_hole_signal_transmitter
+				}
+			}
+			AND = {
+				has_federation = yes
+				is_federation_leader = yes
+				any_federation_ally = {
+					any_owned_starbase = {
+						has_starbase_building = black_hole_signal_transmitter
+					}
+				}
+			}
+			AND = {
+				is_overlord = yes
+				any_subject = {
+					any_owned_starbase = {
+						has_starbase_building = black_hole_signal_transmitter
+					}
+				}
+			}
+		}
+		OR = {
+			any_owned_starbase = {
+				OR = {
+					has_starbase_building = pulsar_signal_receiver
+					has_starbase_building = allied_pulsar_signal_receiver
+				}
+			}
+			AND = {
+				has_federation = yes
+				is_federation_leader = yes
+				any_federation_ally = {
+					any_owned_starbase = {
+						has_starbase_building = pulsar_signal_receiver
+					}
+				}
+			}
+			AND = {
+				is_overlord = yes
+				any_subject = {
+					any_owned_starbase = {
+						has_starbase_building = pulsar_signal_receiver
+					}
+				}
+			}
+		}
+	}
+	
+	immediate = {
+		set_country_flag = new_dimension_project_authorized
+	}
+	
+	option = {
+		name = sublimation.0.a
+		capital_scope = {
+			enable_special_project = {
+				name = "NEW_DIMENSION_PROJECT"
+				location = this
+				owner = root
+			}
+		}
+	}
+}
+
+#NEW DIMENSION PROJECT COMPLETED - CONSEQUENCES
+country_event = {
+	id = sublimation.1
+	hide_window = yes
+
+	is_triggered_only = yes
+	
+	trigger = { }
+	
+	immediate = {
+		set_country_flag = new_dimension_project_completed
+		if = {
+			limit = { has_special_project = NEW_DIMENSION_PROJECT }
+			abort_special_project = {
+				type = NEW_DIMENSION_PROJECT
+			}
+		}
+		every_country = {
+			limit = {
+				is_country_type = default
+				NOT = { is_same_value = root }
+			}
+			country_event = { id = sublimation.2 }
+		}
+		country_event = { id = sublimation.3 }
+	}
+}
+
+#NEW DIMENSION PROJECT COMPLETED - EVERYBODY IS INFORMED
+country_event = {
+	id = sublimation.2
+	title = sublimation.2.name
+	desc = sublimation.2.desc
+	picture = GFX_evt_star_pulsar
+	show_sound = event_yellow_alert
+	location = root
+
+	is_triggered_only = yes
+
+	option = {
+		trigger = {
+			NOT = { has_country_flag = new_dimension_project_completed }
+		}
+		name = sublimation.2.a
+	}
+	
+	option = {
+		trigger = {
+			has_country_flag = new_dimension_project_completed
+		}
+		name = sublimation.2.b
+	}
+}
+
+#NEW DIMENSION PROJECT COMPLETED - FINISHER GETS NEW PROJECT
+country_event = {
+	id = sublimation.3
+	title = sublimation.3.name
+	desc = sublimation.3.desc
+	picture = GFX_evt_star_pulsar
+	show_sound = event_radio_chatter
+	location = root
+
+	is_triggered_only = yes
+	
+	trigger = {
+		NOT = { has_special_project = UNIVERSAL_LANGUAGE_PROJECT }
+	}
+
+	option = {
+		name = sublimation.3.a
+		hidden_effect = { save_event_target_as = universal_language_owner }
+		capital_scope = {
+			enable_special_project = {
+				name = "UNIVERSAL_LANGUAGE_PROJECT"
+				location = this
+				owner = root
+			}
+		}
+		hidden_effect = {
+			country_event = { id = sublimation.4 days = 30 random = 30 }
+		}
+	}
+}
+
+#UNIVERSAL LANGUAGE PROJECT: COLLATERAL DAMAGE
+country_event = {
+	id = sublimation.4
+	hide_window = yes
+
+	is_triggered_only = yes
+	
+	trigger = {
+		NOT = { has_country_flag = universal_language_project_completed }
+	}
+
+	immediate = {
+		random_list = {
+			10 = {
+				#positive: on random country +10% energy production
+				country_event = { id = sublimation.100 }
+			}
+			10 = {
+				#positive: on random country +100% pop growth
+				country_event = { id = sublimation.200 }
+			}
+			10 = {
+				#negative: on random country -50% alloys, +50% minerals production
+				country_event = { id = sublimation.300 }
+			}
+			10 = {
+				#negative: root country -50% research speed
+				country_event = { id = sublimation.400 }
+			}
+			10 = {
+				#negative: on random country planet becomes tomb world
+				modifier = {
+					factor = 1.25
+					has_ethic = ethic_militarist
+				}
+				modifier = {
+					factor = 1.5
+					has_ethic = ethic_fanatic_militarist
+				}
+				modifier = {
+					factor = 0.75
+					has_ethic = ethic_pacifist
+				}
+				modifier = {
+					factor = 0.5
+					has_ethic = ethic_fanatic_pacifist
+				}
+				country_event = { id = sublimation.500 }
+			}
+			5 = {
+				#negative: on random planet -10 pops
+				modifier = {
+					factor = 1.5
+					has_ethic = ethic_xenophobe
+				}
+				modifier = {
+					factor = 2
+					has_ethic = ethic_fanatic_xenophobe
+				}
+				country_event = { id = sublimation.600 }
+			}
+			5 = {
+				#negative: random fallen empire awakes
+				modifier = {
+					factor = 0
+					has_global_flag = sleepers_awake_happened
+				}
+				modifier = {
+					factor = 5
+					any_country = {
+						is_country_type = default
+						OR = {
+							fleet_power > 70000
+							AND = {
+								has_federation = yes
+								federation = {
+									fleet_power > 90000
+								}
+							}
+						}
+					}
+				}
+				country_event = { id = sublimation.700 }
+			}
+			10 = {
+				#positive: on random country planet becomes gaia world
+				modifier = {
+					factor = 0.75
+					has_ethic = ethic_militarist
+				}
+				modifier = {
+					factor = 0.5
+					has_ethic = ethic_fanatic_militarist
+				}
+				modifier = {
+					factor = 1.25
+					has_ethic = ethic_pacifist
+				}
+				modifier = {
+					factor = 1.5
+					has_ethic = ethic_fanatic_pacifist
+				}
+				country_event = { id = sublimation.800 }
+			}
+			10 = {
+				#positive: on random country gets 10 minor artifacts
+				country_event = { id = sublimation.900 }
+			}
+			10 = {
+				#positive: on every country wins the lottery
+				country_event = { id = sublimation.1000 }
+			}
+			10 = {
+				#negative: on random country planet shifts towards spiritualism
+				modifier = {
+					factor = 1.5
+					has_ethic = ethic_spiritualist
+				}
+				modifier = {
+					factor = 2
+					has_ethic = ethic_fanatic_spiritualist
+				}
+				country_event = { id = sublimation.1100 }
+			}
+			10 = {
+				#nothing
+			}
+		}
+		country_event = { id = sublimation.4 days = 90 random = 30 }
+	}
+}
+
+#positive: on random country +10% energy production (originator)
+country_event = {
+	id = sublimation.100
+	title = sublimation.100.name
+	desc = sublimation.100.desc
+	picture = GFX_evt_strategic_resources
+	show_sound = event_yellow_alert
+	location = root	
+
+	is_triggered_only = yes
+	
+	option = {
+		name = sublimation.100.a
+		random_country = {
+			limit = { is_country_type = default }
+			hidden_effect = { country_event = { id = sublimation.101 } }
+		}
+	}
+}
+
+#positive: on random country +10% energy production (target)
+country_event = {
+	id = sublimation.101
+	title = sublimation.101.name
+	desc = sublimation.101.desc
+	picture = GFX_evt_strategic_resources
+	show_sound = event_yellow_alert
+	location = root
+
+	is_triggered_only = yes
+	
+	option = {
+		name = sublimation.101.a
+		add_modifier = {
+			modifier = surge_energy
+			days = 720
+		}	
+	}
+}
+
+#positive: on random country +100% pop growth (originator)
+country_event = {
+	id = sublimation.200
+	title = sublimation.200.name
+	desc = sublimation.200.desc
+	picture = GFX_evt_genetic_modification
+	show_sound = event_yellow_alert
+	location = root	
+
+	is_triggered_only = yes
+	
+	option = {
+		name = sublimation.200.a
+		random_country = {
+			limit = { is_country_type = default }
+			hidden_effect = { country_event = { id = sublimation.201 } }
+		}
+	}
+}
+
+#positive: on random country +100% pop growth (target)
+country_event = {
+	id = sublimation.201
+	title = sublimation.201.name
+	desc = sublimation.201.desc
+	picture = GFX_evt_genetic_modification
+	show_sound = event_yellow_alert
+	location = root
+
+	is_triggered_only = yes
+	
+	option = {
+		name = sublimation.201.a
+		add_modifier = {
+			modifier = surge_fertility
+			days = 720
+		}	
+	}
+}
+
+#negative: on random country -50% alloys, +50% minerals production (originator)
+country_event = {
+	id = sublimation.300
+	title = sublimation.300.name
+	desc = sublimation.300.desc
+	picture = GFX_evt_strategic_resources
+	show_sound = event_yellow_alert
+	location = root	
+
+	is_triggered_only = yes
+	
+	option = {
+		name = sublimation.300.a
+		random_country = {
+			limit = { is_country_type = default }
+			hidden_effect = { country_event = { id = sublimation.301 } }
+		}
+	}
+}
+
+#negative: on random country -50% alloys, +50% minerals production (target)
+country_event = {
+	id = sublimation.301
+	title = sublimation.301.name
+	desc = sublimation.301.desc
+	picture = GFX_evt_strategic_resources
+	show_sound = event_yellow_alert
+	location = root
+
+	is_triggered_only = yes
+	
+	option = {
+		name = sublimation.301.a
+		add_modifier = {
+			modifier = surge_strong_minerals
+			days = 720
+		}	
+	}
+}
+
+#negative: root country -50% research speed (target)
+country_event = {
+	id = sublimation.400
+	title = sublimation.400.name
+	desc = sublimation.400.desc
+	picture = GFX_evt_surreal_visions
+	show_sound = event_yellow_alert
+	location = root
+
+	is_triggered_only = yes
+	
+	option = {
+		name = sublimation.400.a
+		add_modifier = {
+			modifier = surge_research
+			days = 720
+		}	
+	}
+}
+
+#negative: on random country planet becomes tomb world (originator)
+country_event = {
+	id = sublimation.500
+	title = sublimation.500.name
+	desc = sublimation.500.desc
+	picture = GFX_evt_nuclear_explosion
+	show_sound = event_yellow_alert
+	location = root
+
+	is_triggered_only = yes
+	
+	option = {
+		name = sublimation.500.a
+		random_country = {
+			limit = { is_country_type = default }
+			hidden_effect = { country_event = { id = sublimation.501 } }
+		}
+	}
+}
+
+#negative: on random country planet becomes tomb world (target)
+country_event = {
+	id = sublimation.501
+	title = sublimation.501.name
+	desc = sublimation.501.desc
+	picture = GFX_evt_nuclear_explosion
+	show_sound = event_yellow_alert
+	
+
+	is_triggered_only = yes
+	
+	immediate = {
+		random_owned_planet = {
+			limit = {
+				is_colony = yes
+				NOR = {
+					is_planet_class = pc_nuked
+					is_planet_class = pc_relic
+					is_planet_class = pc_habitat
+					is_planet_class = pc_city
+					is_planet_class = pc_hive
+					is_planet_class = pc_machine
+					is_planet_class = pc_gaia
+					is_planet_class = pc_ringworld_habitable
+					is_planet_class = pc_shattered_ring_habitable
+				}
+			}
+			save_event_target_as = target_world
+			change_pc = pc_nuked
+		}
+	}
+	
+	location = event_target:target_world
+	
+	option = {
+		name = sublimation.501.a
+	}
+}
+
+#negative: on random planet -10 pops (originator)
+country_event = {
+	id = sublimation.600
+	title = sublimation.600.name
+	desc = sublimation.600.desc
+	picture = GFX_evt_burning_settlement
+	show_sound = event_yellow_alert
+	location = root
+
+	is_triggered_only = yes
+	
+	option = {
+		name = sublimation.600.a
+		random_country = {
+			limit = { is_country_type = default }
+			hidden_effect = { country_event = { id = sublimation.601 } }
+		}
+	}
+}
+
+#negative: on random planet -10 pops (target)
+country_event = {
+	id = sublimation.601
+	title = sublimation.601.name
+	desc = sublimation.601.desc
+	picture = GFX_evt_burning_settlement
+	show_sound = event_yellow_alert
+	
+
+	is_triggered_only = yes
+	
+	immediate = {
+		random_owned_planet = {
+			limit = {
+				is_colony = yes
+				num_pops > 10
+			}
+			save_event_target_as = target_world
+			while = {
+				count = 10
+				random_owned_pop = { kill_pop = yes }
+			}
+		}
+	}
+	
+	location = event_target:target_world
+	
+	option = {
+		name = sublimation.601.a
+	}
+}
+
+#negative: random fallen empire awakes (originator)
+country_event = {
+	id = sublimation.700
+	title = sublimation.700.name
+	desc = sublimation.700.desc
+	picture = GFX_evt_fallen_empire_awakes
+	show_sound = event_yellow_alert
+	location = root
+
+	is_triggered_only = yes
+	
+	option = {
+		name = sublimation.700.a
+		random_country = {
+			limit = {
+				is_country_type = fallen_empire
+				NOT = { has_ethic = ethic_gestalt_consciousness }
+			}
+			hidden_effect = { country_event = { id = sublimation.701 days = 30 random = 30 } }
+		}
+	}
+}
+
+#negative: random fallen empire awakes (target + communications)
+country_event = {
+	id = sublimation.701
+	hide_window = yes
+	
+	is_triggered_only = yes
+	
+	immediate = {
+		set_global_flag = sleepers_awake_happened
+
+		country_event = { id = fallen_empires_awakening.3 }
+
+		# Notify players
+		every_country = {
+			limit = {
+				is_ai = no
+			}
+			country_event = { id = fallen_empires_awakening.2 }
+		}
+		observer_event = { id = observer.73 }
+
+		# War in Heaven
+		if = {
+			limit = { host_has_dlc = "Leviathans Story Pack" }
+			random_country = {
+				limit = {
+					NOT = { is_same_value = root }
+					is_country_type = fallen_empire
+					NOT = { has_ethic = ethic_gestalt_consciousness }
+				}
+				set_country_flag = sleepers_awake_ancient_rival
+				set_timed_country_flag = { flag = timed_ancient_rival days = 3650 }
+				set_timed_country_flag = { flag = ai_no_wars days = 3650 }
+				root = { set_timed_country_flag = { flag = ai_no_wars days = 3650 } }
+				every_country = {
+					limit = {
+						is_country_type = default
+					}
+					set_timed_country_flag = { flag = ai_no_wars days = 3650 }
+				}						
+			}
+		}
+	}
+}
+
+#positive: on random country planet becomes gaia world (originator)
+country_event = {
+	id = sublimation.800
+	title = sublimation.800.name
+	desc = sublimation.800.desc
+	picture = GFX_evt_gaia
+	show_sound = event_yellow_alert
+	location = root
+
+	is_triggered_only = yes
+	
+	option = {
+		name = sublimation.800.a
+		random_country = {
+			limit = { is_country_type = default }
+			hidden_effect = { country_event = { id = sublimation.801 } }
+		}
+	}
+}
+
+#positive: on random country planet becomes gaia world (target)
+country_event = {
+	id = sublimation.801
+	title = sublimation.801.name
+	desc = sublimation.801.desc
+	picture = GFX_evt_gaia
+	show_sound = event_yellow_alert
+	
+
+	is_triggered_only = yes
+	
+	immediate = {
+		random_owned_planet = {
+			limit = {
+				is_colony = yes
+				NOR = {
+					is_planet_class = pc_gaia
+					is_planet_class = pc_relic
+					is_planet_class = pc_city
+					is_planet_class = pc_habitat
+					is_planet_class = pc_hive
+					is_planet_class = pc_machine
+					is_planet_class = pc_ringworld_habitable
+					is_planet_class = pc_shattered_ring_habitable
+				}
+			}
+			save_event_target_as = target_world
+			change_pc = pc_gaia
+		}
+	}
+	
+	location = event_target:target_world
+	
+	option = {
+		name = sublimation.801.a
+	}
+}
+
+#positive: on random country gets 10 minor artifacts (originator)
+country_event = {
+	id = sublimation.900
+	title = sublimation.900.name
+	desc = sublimation.900.desc
+	picture = GFX_evt_ancient_artifact
+	show_sound = event_yellow_alert
+	location = root
+
+	is_triggered_only = yes
+	
+	option = {
+		name = sublimation.900.a
+		random_country = {
+			limit = { is_country_type = default }
+			hidden_effect = { country_event = { id = sublimation.901 } }
+		}
+	}
+}
+
+#positive: on random country gets 10 minor artifacts (target)
+country_event = {
+	id = sublimation.901
+	title = sublimation.901.name
+	desc = sublimation.901.desc
+	picture = GFX_evt_ancient_artifact
+	show_sound = event_yellow_alert
+	location = root
+
+	is_triggered_only = yes
+	
+	immediate = {
+		add_resource = { minor_artifacts = 10 }
+	}
+	
+	option = {
+		name = sublimation.901.a
+	}
+}
+
+#positive: on every country wins the lottery (originator)
+country_event = {
+	id = sublimation.1000
+	title = sublimation.1000.name
+	desc = sublimation.1000.desc
+	picture = GFX_evt_treasure_pile
+	show_sound = event_yellow_alert
+	location = root
+
+	is_triggered_only = yes
+	
+	option = {
+		name = sublimation.1000.a
+		every_country = {
+			limit = { is_country_type = default }
+			hidden_effect = { country_event = { id = sublimation.1001 } }
+		}
+	}
+}
+
+#positive: on every country wins the lottery (target)
+country_event = {
+	id = sublimation.1001
+	title = sublimation.1001.name
+	desc = sublimation.1001.desc
+	picture = GFX_evt_treasure_pile
+	show_sound = event_yellow_alert
+	location = root
+
+	is_triggered_only = yes
+	
+	immediate = {
+		add_resource = { energy = 1500 }
+	}
+	
+	option = {
+		name = sublimation.1001.a
+	}
+}
+
+#negative: on random country planet shifts towards spiritualism (originator)
+country_event = {
+	id = sublimation.1100
+	title = sublimation.1100.name
+	desc = sublimation.1100.desc
+	picture = GFX_evt_announcement
+	show_sound = event_yellow_alert
+	location = root
+
+	is_triggered_only = yes
+	
+	option = {
+		name = sublimation.1100.a
+		random_country = {
+			limit = { is_country_type = default }
+			if = {
+				limit = { has_ethic = ethic_gestalt_consciousness }
+				hidden_effect = { country_event = { id = sublimation.1101 } }
+			}
+			else = {
+				hidden_effect = { country_event = { id = sublimation.1102 } }
+			}
+		}
+	}
+}
+
+#negative: on random country planet shifts towards spiritualism (gestalt target)
+country_event = {
+	id = sublimation.1101
+	title = sublimation.1101.name
+	desc = sublimation.1101.desc
+	picture = GFX_evt_psionics
+	show_sound = event_yellow_alert
+	
+
+	is_triggered_only = yes
+	
+	immediate = {
+		random_owned_planet = {
+			limit = {
+				is_colony = yes
+				num_pops > 10
+			}
+			save_event_target_as = target_world
+			random_owned_pop = { kill_pop = yes }
+		}
+	}
+	
+	location = event_target:target_world
+	
+	option = {
+		name = sublimation.1101.a
+	}
+}
+
+#negative: on random country planet shifts towards spiritualism (non-gestalt target)
+country_event = {
+	id = sublimation.1102
+	title = sublimation.1102.name
+	desc = sublimation.1102.desc
+	picture = GFX_evt_psionics
+	show_sound = event_yellow_alert
+	
+
+	is_triggered_only = yes
+	
+	immediate = {
+		random_owned_planet = {
+			limit = {
+				is_colony = yes
+				num_pops > 10
+			}
+			save_event_target_as = target_world
+			every_owned_pop = { pop_change_ethic = "ethic_spiritualist" }
+		}
+	}
+	
+	location = event_target:target_world
+	
+	option = {
+		name = sublimation.1102.a
+	}
+}
+
+#UNIVERSAL LANGUAGE PROJECT COMPLETED - FINISHER GETS NEW PROJECT
+country_event = {
+	id = sublimation.5
+	title = sublimation.5.name
+	desc = sublimation.5.desc
+	picture = GFX_evt_physics_research
+	show_sound = event_radio_chatter
+	location = root
+
+	is_triggered_only = yes
+
+	option = {
+		name = sublimation.5.a
+		set_country_flag = universal_language_project_completed
+		hidden_effect = { save_event_target_as = modding_owner }
+		capital_scope = {
+			enable_special_project = {
+				name = "MODDING_PROJECT"
+				location = this
+				owner = root
+			}
+		}
+		if = {
+			limit = { NOT = { has_global_flag = cheat_mode_activated } }
+			add_modifier = {
+				modifier = cheat_code
+				days = -1
+			}
+			set_global_flag = cheat_mode_activated
+		}
+		else = {
+			add_modifier = {
+				modifier = minor_cheat_code
+				days = -1
+			}
+		}
+		hidden_effect = {
+			every_country = {
+				limit = {
+					NOT = { is_same_value = root }
+					is_country_type = default
+				}
+				country_event = { id = sublimation.6 days = 30 random = 30 }
+			}
+		}
+	}
+}
+
+#UNIVERSAL LANGUAGE PROJECT COMPLETED - EVERYBODY IS INFORMED
+country_event = {
+	id = sublimation.6
+	title = sublimation.6.name
+	desc = sublimation.6.desc
+	picture = GFX_evt_physics_research
+	show_sound = event_yellow_alert
+	location = root
+
+	is_triggered_only = yes
+	
+	option = {
+		name = sublimation.6.a
+	}
+}
+
+#MODDING PROJECT COMPLETED - ENABLES DECISION TO QUIT AND RESTART
+country_event = {
+	id = sublimation.7
+	title = sublimation.7.name
+	desc = sublimation.7.desc
+	picture = GFX_evt_wormhole
+	show_sound = event_radio_chatter
+	location = root
+
+	is_triggered_only = yes
+	
+	option = {
+		name = sublimation.7.a
+		hidden_effect = {
+			set_country_flag = quit_and_restart
+		}
+	}
+}
+
+#QUIT AND RESTART (originator)
+country_event = {
+	id = sublimation.10000
+	title = sublimation.10000.name
+	desc = sublimation.10000.desc
+	picture = GFX_evt_wormhole
+	show_sound = event_radio_chatter
+	location = root
+
+	is_triggered_only = yes
+	
+	immediate = {
+		win = yes
+		set_global_flag = big_time_cheaters
+		every_country = {
+			limit = {
+				NOT = { is_same_value = root }
+				is_country_type = default
+			}
+			country_event = { id = sublimation.10001 }
+		}
+		country_event = { id = crisis.1000 }
+		set_global_flag = galactic_crisis_happened
+	}
+	
+	option = {
+		name = sublimation.10000.a
+	}
+	
+	after = {
+		if = {
+			limit = {
+				has_federation = yes
+				is_federation_leader = yes
+			}
+			every_federation_ally = {
+				every_owned_pop = {
+					kill_pop = yes
+				}
+				every_owned_planet = {
+					limit = { is_under_colonization = yes }
+					destroy_colony = yes
+				}
+			}
+		}
+		every_owned_pop = {
+			kill_pop = yes
+		}
+		every_owned_planet = {
+			limit = { is_under_colonization = yes }
+			destroy_colony = yes
+		}
+	}
+}
+
+#QUIT AND RESTART - EVERYBODY IS INFORMED
+country_event = {
+	id = sublimation.10001
+	title = sublimation.10001.name
+	desc = sublimation.10001.desc
+	picture = GFX_evt_zro_4
+	show_sound = event_red_alert
+	location = root
+
+	is_triggered_only = yes
+	
+	option = {
+		name = sublimation.10001.a
+	}
+}

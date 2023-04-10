@@ -1,0 +1,62 @@
+spriteTypes = {
+	spriteType = {
+		name = "GFX_ap_great_wall"
+		textureFile = "gfx/interface/icons/ascension_perks/ap_great_wall.dds"
+	}
+	spriteType = {
+		name = "GFX_ap_operations_red_star"
+		textureFile = "gfx/interface/icons/ascension_perks/ap_operations_red_star.dds"
+	}
+	spriteType = {
+		name = "GFX_ap_operations_blue_star"
+		textureFile = "gfx/interface/icons/ascension_perks/ap_operations_blue_star.dds"
+	}
+	spriteType = {
+		name = "GFX_xenophile_federation"
+		textureFile = "gfx/interface/icons/federation/federation_types/xenophile_federation.dds"
+	}
+	spriteType = {
+		name = "GFX_xenophobe_federation"
+		textureFile = "gfx/interface/icons/federation/federation_types/xenophobe_federation.dds"
+	}
+	spriteType = {
+		name = "GFX_materialist_federation"
+		textureFile = "gfx/interface/icons/federation/federation_types/materialist_federation.dds"
+	}
+	spriteType = {
+		name = "GFX_spiritualist_federation"
+		textureFile = "gfx/interface/icons/federation/federation_types/spiritualist_federation.dds"
+	}
+	spriteType = {
+		name = "GFX_pacifist_federation"
+		textureFile = "gfx/interface/icons/federation/federation_types/pacifist_federation.dds"
+	}
+	spriteType = {
+		name = "GFX_militarist_federation"
+		textureFile = "gfx/interface/icons/federation/federation_types/militarist_federation.dds"
+	}
+	spriteType = {
+		name = "GFX_egalitarian_federation"
+		textureFile = "gfx/interface/icons/federation/federation_types/egalitarian_federation.dds"
+	}
+	spriteType = {
+		name = "GFX_authoritarian_federation"
+		textureFile = "gfx/interface/icons/federation/federation_types/authoritarian_federation.dds"
+	}
+	spriteType = {
+		name = "GFX_defense_post"
+		texturefile = "gfx/interface/icons/modules/sb_defense_post.dds"
+	}
+	spriteType = {
+		name = "GFX_ion_battery"
+		texturefile = "gfx/interface/icons/modules/sb_ion_battery.dds"
+	}
+	spriteType = {
+		name = "GFX_resolution_phi_aristocracy"
+		texturefile = "gfx/interface/icons/resolutions/resolution_phi_aristocracy.dds"
+	}	
+	spriteType = {
+		name = "GFX_wg_phi_survive"
+		texturefile = "gfx/interface/icons/diplomacy/diplomacy_restore_community.dds"
+	}
+}

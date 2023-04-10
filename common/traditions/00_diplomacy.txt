@@ -1,0 +1,103 @@
+tr_diplomacy_adopt = {
+	modifier = {
+		diplomacy_upkeep_mult = -1
+	}
+}
+
+tr_diplomacy_finish = {
+	modifier = {
+		envoys_add = 1
+		ascension_perks_add = 1
+	}
+}
+
+tr_diplomacy_the_federation = {
+
+	#unlocks federation mechanic
+	modifier = {
+		envoys_add = 1
+	}
+
+	ai_weight = {
+		factor = 10000
+	}
+}
+
+tr_diplomacy_entente_coordination = {
+	possible = {
+		has_tradition = tr_diplomacy_the_federation
+	}
+
+	modifier = {
+		country_naval_cap_mult = 0.10
+		federation_naval_cap_contribution_mult = 1.00
+	}
+
+	ai_weight = {
+		factor = 5500
+	}
+}
+
+tr_diplomacy_diplomatic_networking = {
+
+	#Effects in diplomacy_economy
+
+	tradition_swap = {
+		name = tr_diplomacy_diplomatic_networking_gestalt
+		inherit_effects = yes
+		inherit_icon = yes
+		trigger = {
+			is_gestalt = yes
+		}
+
+		weight = {
+			factor = 1
+		}
+	}
+
+	ai_weight = {
+		factor = 6000
+	}
+}
+
+tr_diplomacy_direct_diplomacy = {
+	possible = {
+		has_tradition = tr_diplomacy_diplomatic_networking
+	}
+
+	modifier = {
+		country_base_influence_produces_add = 1
+	}
+
+	ai_weight = {
+		factor = 5000
+	}
+}
+
+tr_diplomacy_eminent_diplomats = {
+	possible = {
+		has_tradition = tr_diplomacy_diplomatic_networking
+	}
+
+	modifier = {
+		diplo_weight_mult = 1
+		# 2nd half is in action.325
+	}
+
+	tradition_swap = {
+		name = tr_diplomacy_eminent_diplomats_gestalt
+		inherit_effects = yes
+		inherit_icon = yes
+		trigger = {
+			is_gestalt = yes
+		}
+
+		weight = {
+			factor = 1
+		}
+	}
+
+	ai_weight = {
+		factor = 6000
+	}
+}

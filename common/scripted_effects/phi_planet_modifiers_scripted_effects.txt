@@ -1,0 +1,752 @@
+
+change_planet_climate = {
+	switch = {
+		trigger = is_planet_class
+		pc_arctic = { change_pc = pc_alpine }
+		pc_alpine = { change_pc = pc_tundra }
+		pc_tundra = { change_pc = pc_arctic }
+		pc_continental = { change_pc = pc_ocean }
+		pc_ocean = { change_pc = pc_tropical }
+		pc_tropical = { change_pc = pc_continental }
+		pc_arid = { change_pc = pc_savannah }
+		pc_desert = { change_pc = pc_arid }
+		pc_savannah = { change_pc = pc_desert }
+	}
+}
+
+generate_phi_planet_modifiers_3 = {
+	random_list = {
+		10 = {
+			add_modifier = { modifier = phi_pm_mantle_frozen_gas_pockets_3 }
+			add_deposit = d_phi_exotic_gas_1
+			modifier = {
+				factor = 15
+				is_planet_class = pc_alpine
+			}
+			modifier = {
+				factor = 5
+				is_planet_class = pc_arctic
+			}
+			modifier = {
+				factor = 5
+				is_planet_class = pc_tundra
+			}
+		}
+		10 = {
+			add_modifier = { modifier = phi_pm_polar_supercells_3 }
+			modifier = {
+				factor = 5
+				is_planet_class = pc_alpine
+			}
+			modifier = {
+				factor = 15
+				is_planet_class = pc_arctic
+			}
+			modifier = {
+				factor = 5
+				is_planet_class = pc_tundra
+			}
+		}
+		10 = {
+			add_modifier = { modifier = phi_pm_perennial_fog_3 }
+			modifier = {
+				factor = 5
+				is_planet_class = pc_alpine
+			}
+			modifier = {
+				factor = 5
+				is_planet_class = pc_arctic
+			}
+			modifier = {
+				factor = 15
+				is_planet_class = pc_tundra
+			}
+		}
+		10 = {
+			add_modifier = { modifier = phi_pm_tectonic_fractures_3 }
+			add_deposit = d_phi_rare_crystals_1
+			modifier = {
+				factor = 15
+				is_planet_class = pc_continental
+			}
+			modifier = {
+				factor = 5
+				is_planet_class = pc_ocean
+		}
+			modifier = {
+				factor = 5
+				is_planet_class = pc_tropical
+			}
+		}
+		10 = {
+			add_modifier = { modifier = phi_pm_ocean_vortexes_3 }
+			modifier = {
+				factor = 5
+				is_planet_class = pc_continental
+			}
+			modifier = {
+				factor = 15
+				is_planet_class = pc_ocean
+			}
+			modifier = {
+				factor = 5
+				is_planet_class = pc_tropical
+			}
+		}
+		10 = {
+			add_modifier = { modifier = phi_pm_bacterial_pathogen_3 }
+			modifier = {
+				factor = 5
+				is_planet_class = pc_continental
+			}
+			modifier = {
+				factor = 5
+				is_planet_class = pc_ocean
+			}
+			modifier = {
+				factor = 15
+				is_planet_class = pc_tropical
+			}
+		}
+		10 = {
+			add_modifier = { modifier = phi_pm_sudden_rainfalls_3 }
+			modifier = {
+				factor = 15
+				is_planet_class = pc_arid
+			}
+			modifier = {
+				factor = 5
+				is_planet_class = pc_desert
+			}
+			modifier = {
+				factor = 5
+				is_planet_class = pc_savannah
+			}
+		}
+		10 = {
+			add_modifier = { modifier = phi_pm_dust_storms_3 }
+			add_deposit = d_phi_volatile_motes_1
+			modifier = {
+				factor = 5
+				is_planet_class = pc_arid
+			}
+			modifier = {
+				factor = 15
+				is_planet_class = pc_desert
+			}
+			modifier = {
+				factor = 5
+				is_planet_class = pc_savannah
+			}
+		}
+		10 = {
+			add_modifier = { modifier = phi_pm_bush_wildfires_3 }
+			modifier = {
+				factor = 5
+				is_planet_class = pc_arid
+			}
+			modifier = {
+				factor = 5
+				is_planet_class = pc_desert
+			}
+			modifier = {
+				factor = 15
+				is_planet_class = pc_savannah
+			}
+		}
+		10 = {
+			add_modifier = { modifier = phi_pm_tesla_biome_3 }
+			modifier = {
+				factor = 5
+				is_planet_class = pc_continental
+			}
+			modifier = {
+				factor = 5
+				is_planet_class = pc_ocean
+			}
+			modifier = {
+				factor = 5
+				is_planet_class = pc_tropical
+			}
+		}
+		10 = {
+			add_modifier = { modifier = phi_pm_electric_ice_shelf_3 }
+			modifier = {
+				factor = 5
+				is_planet_class = pc_arctic
+			}
+			modifier = {
+				factor = 5
+				is_planet_class = pc_alpine
+			}
+			modifier = {
+				factor = 5
+				is_planet_class = pc_tundra
+			}
+		}
+		10 = {
+			add_modifier = { modifier = phi_pm_magnetic_clouds_3 }
+			modifier = {
+				factor = 5
+				is_planet_class = pc_arid
+			}
+			modifier = {
+				factor = 5
+				is_planet_class = pc_desert
+			}
+			modifier = {
+				factor = 5
+				is_planet_class = pc_savannah
+			}
+		}
+	}
+}
+
+generate_phi_planet_modifiers_2 = {
+	random_list = {
+		10 = {
+		
+		}
+		10 = {
+			add_modifier = { modifier = phi_pm_mantle_frozen_gas_pockets_2 }
+			add_deposit = d_phi_exotic_gas_5
+			modifier = {
+				factor = 15
+				is_planet_class = pc_alpine
+			}
+			modifier = {
+				factor = 5
+				is_planet_class = pc_arctic
+			}
+			modifier = {
+				factor = 5
+				is_planet_class = pc_tundra
+			}
+		}
+		10 = {
+			add_modifier = { modifier = phi_pm_polar_supercells_2 }
+			modifier = {
+				factor = 5
+				is_planet_class = pc_alpine
+			}
+			modifier = {
+				factor = 15
+				is_planet_class = pc_arctic
+			}
+			modifier = {
+				factor = 5
+				is_planet_class = pc_tundra
+			}
+		}
+		10 = {
+			add_modifier = { modifier = phi_pm_perennial_fog_2 }
+			modifier = {
+				factor = 5
+				is_planet_class = pc_alpine
+			}
+			modifier = {
+				factor = 5
+				is_planet_class = pc_arctic
+			}
+			modifier = {
+				factor = 15
+				is_planet_class = pc_tundra
+			}
+		}
+		10 = {
+			add_modifier = { modifier = phi_pm_tectonic_fractures_2 }
+			add_deposit = d_phi_rare_crystals_5
+			modifier = {
+				factor = 15
+				is_planet_class = pc_continental
+			}
+			modifier = {
+				factor = 5
+				is_planet_class = pc_ocean
+		}
+			modifier = {
+				factor = 5
+				is_planet_class = pc_tropical
+			}
+		}
+		10 = {
+			add_modifier = { modifier = phi_pm_ocean_vortexes_2 }
+			modifier = {
+				factor = 5
+				is_planet_class = pc_continental
+			}
+			modifier = {
+				factor = 15
+				is_planet_class = pc_ocean
+			}
+			modifier = {
+				factor = 5
+				is_planet_class = pc_tropical
+			}
+		}
+		10 = {
+			add_modifier = { modifier = phi_pm_bacterial_pathogen_2 }
+			modifier = {
+				factor = 5
+				is_planet_class = pc_continental
+			}
+			modifier = {
+				factor = 5
+				is_planet_class = pc_ocean
+			}
+			modifier = {
+				factor = 15
+				is_planet_class = pc_tropical
+			}
+		}
+		10 = {
+			add_modifier = { modifier = phi_pm_sudden_rainfalls_2 }
+			modifier = {
+				factor = 15
+				is_planet_class = pc_arid
+			}
+			modifier = {
+				factor = 5
+				is_planet_class = pc_desert
+			}
+			modifier = {
+				factor = 5
+				is_planet_class = pc_savannah
+			}
+		}
+		10 = {
+			add_modifier = { modifier = phi_pm_dust_storms_2 }
+			add_deposit = d_phi_volatile_motes_5
+			modifier = {
+				factor = 5
+				is_planet_class = pc_arid
+			}
+			modifier = {
+				factor = 15
+				is_planet_class = pc_desert
+			}
+			modifier = {
+				factor = 5
+				is_planet_class = pc_savannah
+			}
+		}
+		10 = {
+			add_modifier = { modifier = phi_pm_bush_wildfires_2 }
+			modifier = {
+				factor = 5
+				is_planet_class = pc_arid
+			}
+			modifier = {
+				factor = 5
+				is_planet_class = pc_desert
+			}
+			modifier = {
+				factor = 15
+				is_planet_class = pc_savannah
+			}
+		}
+		10 = {
+			add_modifier = { modifier = phi_pm_tesla_biome_2 }
+			modifier = {
+				factor = 5
+				is_planet_class = pc_continental
+			}
+			modifier = {
+				factor = 5
+				is_planet_class = pc_ocean
+			}
+			modifier = {
+				factor = 5
+				is_planet_class = pc_tropical
+			}
+		}
+		10 = {
+			add_modifier = { modifier = phi_pm_electric_ice_shelf_2 }
+			modifier = {
+				factor = 5
+				is_planet_class = pc_arctic
+			}
+			modifier = {
+				factor = 5
+				is_planet_class = pc_alpine
+			}
+			modifier = {
+				factor = 5
+				is_planet_class = pc_tundra
+			}
+		}
+		10 = {
+			add_modifier = { modifier = phi_pm_magnetic_clouds_2 }
+			modifier = {
+				factor = 5
+				is_planet_class = pc_arid
+			}
+			modifier = {
+				factor = 5
+				is_planet_class = pc_desert
+			}
+			modifier = {
+				factor = 5
+				is_planet_class = pc_savannah
+			}
+		}
+	}
+}
+
+generate_phi_planet_modifiers_1 = {
+	random_list = {
+		10 = {
+		
+		}
+		10 = {
+			add_modifier = { modifier = phi_pm_mantle_frozen_gas_pockets_1 }
+			add_deposit = d_phi_exotic_gas_10
+			modifier = {
+				factor = 15
+				is_planet_class = pc_alpine
+			}
+			modifier = {
+				factor = 5
+				is_planet_class = pc_arctic
+			}
+			modifier = {
+				factor = 5
+				is_planet_class = pc_tundra
+			}
+		}
+		10 = {
+			add_modifier = { modifier = phi_pm_polar_supercells_1 }
+			modifier = {
+				factor = 5
+				is_planet_class = pc_alpine
+			}
+			modifier = {
+				factor = 15
+				is_planet_class = pc_arctic
+			}
+			modifier = {
+				factor = 5
+				is_planet_class = pc_tundra
+			}
+		}
+		10 = {
+			add_modifier = { modifier = phi_pm_perennial_fog_1 }
+			modifier = {
+				factor = 5
+				is_planet_class = pc_alpine
+			}
+			modifier = {
+				factor = 5
+				is_planet_class = pc_arctic
+			}
+			modifier = {
+				factor = 15
+				is_planet_class = pc_tundra
+			}
+		}
+		10 = {
+			add_modifier = { modifier = phi_pm_tectonic_fractures_1 }
+			add_deposit = d_phi_rare_crystals_10
+			modifier = {
+				factor = 15
+				is_planet_class = pc_continental
+			}
+			modifier = {
+				factor = 5
+				is_planet_class = pc_ocean
+		}
+			modifier = {
+				factor = 5
+				is_planet_class = pc_tropical
+			}
+		}
+		10 = {
+			add_modifier = { modifier = phi_pm_ocean_vortexes_1 }
+			modifier = {
+				factor = 5
+				is_planet_class = pc_continental
+			}
+			modifier = {
+				factor = 15
+				is_planet_class = pc_ocean
+			}
+			modifier = {
+				factor = 5
+				is_planet_class = pc_tropical
+			}
+		}
+		10 = {
+			add_modifier = { modifier = phi_pm_bacterial_pathogen_1 }
+			modifier = {
+				factor = 5
+				is_planet_class = pc_continental
+			}
+			modifier = {
+				factor = 5
+				is_planet_class = pc_ocean
+			}
+			modifier = {
+				factor = 15
+				is_planet_class = pc_tropical
+			}
+		}
+		10 = {
+			add_modifier = { modifier = phi_pm_sudden_rainfalls_1 }
+			modifier = {
+				factor = 15
+				is_planet_class = pc_arid
+			}
+			modifier = {
+				factor = 5
+				is_planet_class = pc_desert
+			}
+			modifier = {
+				factor = 5
+				is_planet_class = pc_savannah
+			}
+		}
+		10 = {
+			add_modifier = { modifier = phi_pm_dust_storms_1 }
+			add_deposit = d_phi_volatile_motes_10
+			modifier = {
+				factor = 5
+				is_planet_class = pc_arid
+			}
+			modifier = {
+				factor = 15
+				is_planet_class = pc_desert
+			}
+			modifier = {
+				factor = 5
+				is_planet_class = pc_savannah
+			}
+		}
+		10 = {
+			add_modifier = { modifier = phi_pm_bush_wildfires_1 }
+			modifier = {
+				factor = 5
+				is_planet_class = pc_arid
+			}
+			modifier = {
+				factor = 5
+				is_planet_class = pc_desert
+			}
+			modifier = {
+				factor = 15
+				is_planet_class = pc_savannah
+			}
+		}
+		10 = {
+			add_modifier = { modifier = phi_pm_tesla_biome_1 }
+			modifier = {
+				factor = 5
+				is_planet_class = pc_continental
+			}
+			modifier = {
+				factor = 5
+				is_planet_class = pc_ocean
+			}
+			modifier = {
+				factor = 5
+				is_planet_class = pc_tropical
+			}
+		}
+		10 = {
+			add_modifier = { modifier = phi_pm_electric_ice_shelf_1 }
+			modifier = {
+				factor = 5
+				is_planet_class = pc_arctic
+			}
+			modifier = {
+				factor = 5
+				is_planet_class = pc_alpine
+			}
+			modifier = {
+				factor = 5
+				is_planet_class = pc_tundra
+			}
+		}
+		10 = {
+			add_modifier = { modifier = phi_pm_magnetic_clouds_1 }
+			modifier = {
+				factor = 5
+				is_planet_class = pc_arid
+			}
+			modifier = {
+				factor = 5
+				is_planet_class = pc_desert
+			}
+			modifier = {
+				factor = 5
+				is_planet_class = pc_savannah
+			}
+		}
+	}
+}
+
+remove_phi_planet_modifiers_3 = {
+	if = {
+		limit = { has_modifier = phi_pm_mantle_frozen_gas_pockets_3 }
+		remove_modifier = phi_pm_mantle_frozen_gas_pockets_3
+	}
+	if = {
+		limit = { has_modifier = phi_pm_polar_supercells_3 }
+		remove_modifier = phi_pm_polar_supercells_3
+	}
+	if = {
+		limit = { has_modifier = phi_pm_perennial_fog_3 }
+		remove_modifier = phi_pm_perennial_fog_3
+	}
+	if = {
+		limit = { has_modifier = phi_pm_tectonic_fractures_3 }
+		remove_modifier = phi_pm_tectonic_fractures_3
+	}
+	if = {
+		limit = { has_modifier = phi_pm_ocean_vortexes_3 }
+		remove_modifier = phi_pm_ocean_vortexes_3
+	}
+	if = {
+		limit = { has_modifier = phi_pm_bacterial_pathogen_3 }
+		remove_modifier = phi_pm_bacterial_pathogen_3
+	}
+	if = {
+		limit = { has_modifier = phi_pm_sudden_rainfalls_3 }
+		remove_modifier = phi_pm_sudden_rainfalls_3
+	}
+	if = {
+		limit = { has_modifier = phi_pm_dust_storms_3 }
+		remove_modifier = phi_pm_dust_storms_3
+	}
+	if = {
+		limit = { has_modifier = phi_pm_bush_wildfires_3 }
+		remove_modifier = phi_pm_bush_wildfires_3
+	}
+	if = {
+		limit = { has_modifier = phi_pm_tesla_biome_3 }
+		remove_modifier = phi_pm_tesla_biome_3
+	}
+	if = {
+		limit = { has_modifier = phi_pm_electric_ice_shelf_3 }
+		remove_modifier = phi_pm_electric_ice_shelf_3
+	}
+	if = {
+		limit = { has_modifier = phi_pm_magnetic_clouds_3 }
+		remove_modifier = phi_pm_magnetic_clouds_3
+	}
+}
+
+remove_phi_planet_modifiers_2 = {
+	if = {
+		limit = { has_modifier = phi_pm_mantle_frozen_gas_pockets_2 }
+		remove_modifier = phi_pm_mantle_frozen_gas_pockets_2
+	}
+	if = {
+		limit = { has_modifier = phi_pm_polar_supercells_2 }
+		remove_modifier = phi_pm_polar_supercells_2
+	}
+	if = {
+		limit = { has_modifier = phi_pm_perennial_fog_2 }
+		remove_modifier = phi_pm_perennial_fog_2
+	}
+	if = {
+		limit = { has_modifier = phi_pm_tectonic_fractures_2 }
+		remove_modifier = phi_pm_tectonic_fractures_2
+	}
+	if = {
+		limit = { has_modifier = phi_pm_ocean_vortexes_2 }
+		remove_modifier = phi_pm_ocean_vortexes_2
+	}
+	if = {
+		limit = { has_modifier = phi_pm_bacterial_pathogen_2 }
+		remove_modifier = phi_pm_bacterial_pathogen_2
+	}
+	if = {
+		limit = { has_modifier = phi_pm_sudden_rainfalls_2 }
+		remove_modifier = phi_pm_sudden_rainfalls_2
+	}
+	if = {
+		limit = { has_modifier = phi_pm_dust_storms_2 }
+		remove_modifier = phi_pm_dust_storms_2
+	}
+	if = {
+		limit = { has_modifier = phi_pm_bush_wildfires_2 }
+		remove_modifier = phi_pm_bush_wildfires_2
+	}
+	if = {
+		limit = { has_modifier = phi_pm_tesla_biome_2 }
+		remove_modifier = phi_pm_tesla_biome_2
+	}
+	if = {
+		limit = { has_modifier = phi_pm_electric_ice_shelf_2 }
+		remove_modifier = phi_pm_electric_ice_shelf_2
+	}
+	if = {
+		limit = { has_modifier = phi_pm_magnetic_clouds_2 }
+		remove_modifier = phi_pm_magnetic_clouds_2
+	}
+}
+
+remove_phi_planet_modifiers_1 = {
+	if = {
+		limit = { has_modifier = phi_pm_mantle_frozen_gas_pockets_1 }
+		remove_modifier = phi_pm_mantle_frozen_gas_pockets_1
+	}
+	if = {
+		limit = { has_modifier = phi_pm_polar_supercells_1 }
+		remove_modifier = phi_pm_polar_supercells_1
+	}
+	if = {
+		limit = { has_modifier = phi_pm_perennial_fog_1 }
+		remove_modifier = phi_pm_perennial_fog_1
+	}
+	if = {
+		limit = { has_modifier = phi_pm_tectonic_fractures_1 }
+		remove_modifier = phi_pm_tectonic_fractures_1
+	}
+	if = {
+		limit = { has_modifier = phi_pm_ocean_vortexes_1 }
+		remove_modifier = phi_pm_ocean_vortexes_1
+	}
+	if = {
+		limit = { has_modifier = phi_pm_bacterial_pathogen_1 }
+		remove_modifier = phi_pm_bacterial_pathogen_1
+	}
+	if = {
+		limit = { has_modifier = phi_pm_sudden_rainfalls_1 }
+		remove_modifier = phi_pm_sudden_rainfalls_1
+	}
+	if = {
+		limit = { has_modifier = phi_pm_dust_storms_1 }
+		remove_modifier = phi_pm_dust_storms_1
+	}
+	if = {
+		limit = { has_modifier = phi_pm_bush_wildfires_1 }
+		remove_modifier = phi_pm_bush_wildfires_1
+	}
+	if = {
+		limit = { has_modifier = phi_pm_tesla_biome_1 }
+		remove_modifier = phi_pm_tesla_biome_1
+	}
+	if = {
+		limit = { has_modifier = phi_pm_electric_ice_shelf_1 }
+		remove_modifier = phi_pm_electric_ice_shelf_1
+	}
+	if = {
+		limit = { has_modifier = phi_pm_magnetic_clouds_1 }
+		remove_modifier = phi_pm_magnetic_clouds_1
+	}
+}
+
+generate_phi_planet_relic_modifiers_3 = {
+	random_list = {
+		10 = {
+			add_modifier = { modifier = phi_pm_planet_teleporters_3 }
+		}
+		10 = {
+			add_modifier = { modifier = phi_pm_planet_broadcasting_3 }
+		}
+		10 = {
+			add_modifier = { modifier = phi_pm_planet_accelerators_3 }
+		}
+	}
+}

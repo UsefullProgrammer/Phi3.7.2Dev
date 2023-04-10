@@ -1,0 +1,364 @@
+namespace = phi_statistics
+
+#	phi_statistics.0	print to Stellaris/logs/game all empire stats for players
+
+country_event = {
+	id = phi_statistics.0
+	hide_window = yes
+
+	is_triggered_only = yes
+	
+	trigger = {
+		
+	}
+	
+	immediate = {
+		export_trigger_value_to_variable = { trigger = years_passed variable = phi_years }
+		log = "DATA-YEARS: [this.phi_years]"
+		
+		every_playable_country = {
+			limit = { has_country_flag = phi_host }
+			
+			export_trigger_value_to_variable = { trigger = num_pops variable = phi_pops }
+			
+			export_trigger_value_to_variable = { trigger = num_owned_planets variable = phi_planets }
+			
+			export_trigger_value_to_variable = { trigger = controlled_systems variable = phi_systems }
+			
+			set_variable = { which = phi_battleships value = 0 }
+			every_owned_ship = {
+				limit = {
+					is_ship_size = battleship
+				}
+				prev = {
+					change_variable = { which = phi_battleships value = 1 }
+				}
+			}
+			
+			export_trigger_value_to_variable = { trigger = fleet_power variable = phi_fleet_power }
+			round_variable = phi_fleet_power
+			
+			export_trigger_value_to_variable = { trigger = max_naval_capacity variable = phi_max_naval_cap }
+			round_variable = phi_max_naval_cap
+			
+			export_trigger_value_to_variable = { trigger = used_naval_capacity_integer variable = phi_used_naval_cap }
+			round_variable = phi_used_naval_cap
+			
+			export_trigger_value_to_variable = { trigger = diplomacy_weight variable = phi_diplomacy_weight }
+			round_variable = phi_diplomacy_weight
+			
+			export_resource_income_to_variable = { resource = energy variable = phi_energy_income }
+			export_resource_stockpile_to_variable = { resource = energy variable = phi_energy_tot }
+			round_variable = phi_energy_income
+			round_variable = phi_energy_tot
+			
+			export_resource_income_to_variable = { resource = minerals variable = phi_minerals_income }
+			export_resource_stockpile_to_variable = { resource = minerals variable = phi_minerals_tot }
+			round_variable = phi_minerals_income
+			round_variable = phi_minerals_tot
+			
+			export_resource_income_to_variable = { resource = food variable = phi_food_income }
+			export_resource_stockpile_to_variable = { resource = food variable = phi_food_tot }
+			round_variable = phi_food_income
+			round_variable = phi_food_tot
+			
+			export_resource_income_to_variable = { resource = consumer_goods variable = phi_goods_income }
+			export_resource_stockpile_to_variable = { resource = consumer_goods variable = phi_goods_tot }
+			round_variable = phi_goods_income
+			round_variable = phi_goods_tot
+			
+			export_resource_income_to_variable = { resource = unity variable = phi_unity_income }
+			export_resource_stockpile_to_variable = { resource = unity variable = phi_unity_tot }
+			round_variable = phi_unity_income
+			round_variable = phi_unity_tot
+			
+			export_resource_income_to_variable = { resource = alloys variable = phi_alloys_income }
+			export_resource_stockpile_to_variable = { resource = alloys variable = phi_alloys_tot }
+			round_variable = phi_alloys_income
+			round_variable = phi_alloys_tot
+			
+			export_resource_income_to_variable = { resource = society_research variable = phi_society_income }
+			export_resource_income_to_variable = { resource = engineering_research variable = phi_engineering_income }
+			export_resource_income_to_variable = { resource = physics_research variable = phi_physics_income }
+			round_variable = phi_society_income
+			round_variable = phi_engineering_income
+			round_variable = phi_physics_income
+			
+			set_variable = { which = phi_ethics value = 0 }
+			if = {
+				limit = { has_ethic = ethic_spiritualist }
+				change_variable = { which = phi_ethics value = 3 }
+			}
+			if = {
+				limit = { has_ethic = ethic_fanatic_spiritualist }
+				change_variable = { which = phi_ethics value = 6 }
+			}
+			if = {
+				limit = { has_ethic = ethic_militarist }
+				change_variable = { which = phi_ethics value = 9 }
+			}
+			if = {
+				limit = { has_ethic = ethic_fanatic_militarist }
+				change_variable = { which = phi_ethics value = 18 }
+			}
+			if = {
+				limit = { has_ethic = ethic_xenophobe }
+				change_variable = { which = phi_ethics value = 27 }
+			}
+			if = {
+				limit = { has_ethic = ethic_fanatic_xenophobe }
+				change_variable = { which = phi_ethics value = 54 }
+			}
+			if = {
+				limit = { has_ethic = ethic_egalitarian }
+				change_variable = { which = phi_ethics value = 81 }
+			}
+			if = {
+				limit = { has_ethic = ethic_fanatic_egalitarian }
+				change_variable = { which = phi_ethics value = 162 }
+			}
+			if = {
+				limit = { has_ethic = ethic_materialist }
+				change_variable = { which = phi_ethics value = 243 }
+			}
+			if = {
+				limit = { has_ethic = ethic_fanatic_materialist }
+				change_variable = { which = phi_ethics value = 486 }
+			}
+			if = {
+				limit = { has_ethic = ethic_pacifist }
+				change_variable = { which = phi_ethics value = 729 }
+			}
+			if = {
+				limit = { has_ethic = ethic_fanatic_pacifist }
+				change_variable = { which = phi_ethics value = 1458 }
+			}
+			if = {
+				limit = { has_ethic = ethic_xenophile }
+				change_variable = { which = phi_ethics value = 2187 }
+			}
+			if = {
+				limit = { has_ethic = ethic_fanatic_xenophile }
+				change_variable = { which = phi_ethics value = 4374 }
+			}
+			if = {
+				limit = { has_ethic = ethic_authoritarian }
+				change_variable = { which = phi_ethics value = 6561 }
+			}
+			if = {
+				limit = { has_ethic = ethic_fanatic_authoritarian }
+				change_variable = { which = phi_ethics value = 13122 }
+			}
+			if = {
+				limit = { has_authority = auth_machine_intelligence }
+				change_variable = { which = phi_ethics value = 1 }
+			}
+			if = {
+				limit = { has_authority = auth_hive_mind }
+				change_variable = { which = phi_ethics value = 2 }
+			}
+
+			log = "[This.GetName]-[This.GetSpeciesName] DATA-TYPE: HOST"
+			log = "[This.GetName]-[This.GetSpeciesName] DATA-NAME: [this.GetName]"
+			log = "[This.GetName]-[This.GetSpeciesName] DATA-SPECIES: [this.GetSpeciesName]"
+			log = "[This.GetName]-[This.GetSpeciesName] DATA-POPS: [this.phi_pops]"
+			log = "[This.GetName]-[This.GetSpeciesName] DATA-FLEET: [this.phi_fleet_power]"
+			log = "[This.GetName]-[This.GetSpeciesName] DATA-DIPLO WEIGHT: [this.phi_diplomacy_weight]"
+			log = "[This.GetName]-[This.GetSpeciesName] DATA-ENERGY: [this.phi_energy_income]"
+			log = "[This.GetName]-[This.GetSpeciesName] DATA-ENERGY-TOT: [this.phi_energy_tot]"
+			log = "[This.GetName]-[This.GetSpeciesName] DATA-MINERALS: [this.phi_minerals_income]"
+			log = "[This.GetName]-[This.GetSpeciesName] DATA-MINERALS-TOT: [this.phi_minerals_tot]"
+			log = "[This.GetName]-[This.GetSpeciesName] DATA-FOOD: [this.phi_food_income]"
+			log = "[This.GetName]-[This.GetSpeciesName] DATA-FOOD-TOT: [this.phi_food_tot]"
+			log = "[This.GetName]-[This.GetSpeciesName] DATA-CONSUMER GOODS: [this.phi_goods_income]"
+			log = "[This.GetName]-[This.GetSpeciesName] DATA-CONSUMER GOODS-TOT: [this.phi_goods_tot]"
+			log = "[This.GetName]-[This.GetSpeciesName] DATA-ALLOYS: [this.phi_alloys_income]"
+			log = "[This.GetName]-[This.GetSpeciesName] DATA-ALLOYS-TOT: [this.phi_alloys_tot]"
+			log = "[This.GetName]-[This.GetSpeciesName] DATA-UNITY: [this.phi_unity_income]"
+			log = "[This.GetName]-[This.GetSpeciesName] DATA-SOC. RESEARCH: [this.phi_society_income]"
+			log = "[This.GetName]-[This.GetSpeciesName] DATA-ENG. RESEARCH: [this.phi_engineering_income]"
+			log = "[This.GetName]-[This.GetSpeciesName] DATA-PHY. RESEARCH: [this.phi_physics_income]"
+			log = "[This.GetName]-[This.GetSpeciesName] DATA-ETHICS: [this.phi_ethics]"
+			log = "[This.GetName]-[This.GetSpeciesName] DATA-PLANETS: [this.phi_planets]"
+			log = "[This.GetName]-[This.GetSpeciesName] DATA-SYSTEMS: [this.phi_systems]"
+			log = "[This.GetName]-[This.GetSpeciesName] DATA-BATTLESHIPS: [this.phi_battleships]"
+			log = "[This.GetName]-[This.GetSpeciesName] DATA-MAX-NAVAL-CAP: [this.phi_max_naval_cap]"
+			log = "[This.GetName]-[This.GetSpeciesName] DATA-USED-NAVAL-CAP: [this.phi_used_naval_cap]"
+		}
+		every_playable_country = {
+			limit = { NOT = {has_country_flag = phi_host } }
+			
+			export_trigger_value_to_variable = { trigger = num_pops variable = phi_pops }
+			
+			export_trigger_value_to_variable = { trigger = num_owned_planets variable = phi_planets }
+			
+			export_trigger_value_to_variable = { trigger = controlled_systems variable = phi_systems }
+			
+			set_variable = { which = phi_battleships value = 0 }
+			every_owned_ship = {
+				limit = {
+					is_ship_size = battleship
+				}
+				prev = {
+					change_variable = { which = phi_battleships value = 1 }
+				}
+			}
+			
+			export_trigger_value_to_variable = { trigger = fleet_power variable = phi_fleet_power }
+			round_variable = phi_fleet_power
+			
+			export_trigger_value_to_variable = { trigger = max_naval_capacity variable = phi_max_naval_cap }
+			round_variable = phi_max_naval_cap
+			
+			export_trigger_value_to_variable = { trigger = used_naval_capacity_integer variable = phi_used_naval_cap }
+			round_variable = phi_used_naval_cap
+			
+			export_trigger_value_to_variable = { trigger = diplomacy_weight variable = phi_diplomacy_weight }
+			round_variable = phi_diplomacy_weight
+			
+			export_resource_income_to_variable = { resource = energy variable = phi_energy_income }
+			export_resource_stockpile_to_variable = { resource = energy variable = phi_energy_tot }
+			round_variable = phi_energy_income
+			round_variable = phi_energy_tot
+			
+			export_resource_income_to_variable = { resource = minerals variable = phi_minerals_income }
+			export_resource_stockpile_to_variable = { resource = minerals variable = phi_minerals_tot }
+			round_variable = phi_minerals_income
+			round_variable = phi_minerals_tot
+			
+			export_resource_income_to_variable = { resource = food variable = phi_food_income }
+			export_resource_stockpile_to_variable = { resource = food variable = phi_food_tot }
+			round_variable = phi_food_income
+			round_variable = phi_food_tot
+			
+			export_resource_income_to_variable = { resource = consumer_goods variable = phi_goods_income }
+			export_resource_stockpile_to_variable = { resource = consumer_goods variable = phi_goods_tot }
+			round_variable = phi_goods_income
+			round_variable = phi_goods_tot
+			
+			export_resource_income_to_variable = { resource = unity variable = phi_unity_income }
+			export_resource_stockpile_to_variable = { resource = unity variable = phi_unity_tot }
+			round_variable = phi_unity_income
+			round_variable = phi_unity_tot
+			
+			export_resource_income_to_variable = { resource = alloys variable = phi_alloys_income }
+			export_resource_stockpile_to_variable = { resource = alloys variable = phi_alloys_tot }
+			round_variable = phi_alloys_income
+			round_variable = phi_alloys_tot
+			
+			export_resource_income_to_variable = { resource = society_research variable = phi_society_income }
+			export_resource_income_to_variable = { resource = engineering_research variable = phi_engineering_income }
+			export_resource_income_to_variable = { resource = physics_research variable = phi_physics_income }
+			round_variable = phi_society_income
+			round_variable = phi_engineering_income
+			round_variable = phi_physics_income
+			
+			set_variable = { which = phi_ethics value = 0 }
+			if = {
+				limit = { has_ethic = ethic_spiritualist }
+				change_variable = { which = phi_ethics value = 3 }
+			}
+			if = {
+				limit = { has_ethic = ethic_fanatic_spiritualist }
+				change_variable = { which = phi_ethics value = 6 }
+			}
+			if = {
+				limit = { has_ethic = ethic_militarist }
+				change_variable = { which = phi_ethics value = 9 }
+			}
+			if = {
+				limit = { has_ethic = ethic_fanatic_militarist }
+				change_variable = { which = phi_ethics value = 18 }
+			}
+			if = {
+				limit = { has_ethic = ethic_xenophobe }
+				change_variable = { which = phi_ethics value = 27 }
+			}
+			if = {
+				limit = { has_ethic = ethic_fanatic_xenophobe }
+				change_variable = { which = phi_ethics value = 54 }
+			}
+			if = {
+				limit = { has_ethic = ethic_egalitarian }
+				change_variable = { which = phi_ethics value = 81 }
+			}
+			if = {
+				limit = { has_ethic = ethic_fanatic_egalitarian }
+				change_variable = { which = phi_ethics value = 162 }
+			}
+			if = {
+				limit = { has_ethic = ethic_materialist }
+				change_variable = { which = phi_ethics value = 243 }
+			}
+			if = {
+				limit = { has_ethic = ethic_fanatic_materialist }
+				change_variable = { which = phi_ethics value = 486 }
+			}
+			if = {
+				limit = { has_ethic = ethic_pacifist }
+				change_variable = { which = phi_ethics value = 729 }
+			}
+			if = {
+				limit = { has_ethic = ethic_fanatic_pacifist }
+				change_variable = { which = phi_ethics value = 1458 }
+			}
+			if = {
+				limit = { has_ethic = ethic_xenophile }
+				change_variable = { which = phi_ethics value = 2187 }
+			}
+			if = {
+				limit = { has_ethic = ethic_fanatic_xenophile }
+				change_variable = { which = phi_ethics value = 4374 }
+			}
+			if = {
+				limit = { has_ethic = ethic_authoritarian }
+				change_variable = { which = phi_ethics value = 6561 }
+			}
+			if = {
+				limit = { has_ethic = ethic_fanatic_authoritarian }
+				change_variable = { which = phi_ethics value = 13122 }
+			}
+			if = {
+				limit = { has_authority = auth_machine_intelligence }
+				change_variable = { which = phi_ethics value = 1 }
+			}
+			if = {
+				limit = { has_authority = auth_hive_mind }
+				change_variable = { which = phi_ethics value = 2 }
+			}
+			
+			if = {
+				limit = { is_ai = no }
+				log = "[This.GetName]-[This.GetSpeciesName] DATA-TYPE: HUMAN"
+			}
+			else = {
+				log = "[This.GetName]-[This.GetSpeciesName] DATA-TYPE: AI"
+			}
+			log = "[This.GetName]-[This.GetSpeciesName] DATA-NAME: [this.GetName]"
+			log = "[This.GetName]-[This.GetSpeciesName] DATA-SPECIES: [this.GetSpeciesName]"
+			log = "[This.GetName]-[This.GetSpeciesName] DATA-POPS: [this.phi_pops]"
+			log = "[This.GetName]-[This.GetSpeciesName] DATA-FLEET: [this.phi_fleet_power]"
+			log = "[This.GetName]-[This.GetSpeciesName] DATA-DIPLO WEIGHT: [this.phi_diplomacy_weight]"
+			log = "[This.GetName]-[This.GetSpeciesName] DATA-ENERGY: [this.phi_energy_income]"
+			log = "[This.GetName]-[This.GetSpeciesName] DATA-ENERGY-TOT: [this.phi_energy_tot]"
+			log = "[This.GetName]-[This.GetSpeciesName] DATA-MINERALS: [this.phi_minerals_income]"
+			log = "[This.GetName]-[This.GetSpeciesName] DATA-MINERALS-TOT: [this.phi_minerals_tot]"
+			log = "[This.GetName]-[This.GetSpeciesName] DATA-FOOD: [this.phi_food_income]"
+			log = "[This.GetName]-[This.GetSpeciesName] DATA-FOOD-TOT: [this.phi_food_tot]"
+			log = "[This.GetName]-[This.GetSpeciesName] DATA-CONSUMER GOODS: [this.phi_goods_income]"
+			log = "[This.GetName]-[This.GetSpeciesName] DATA-CONSUMER GOODS-TOT: [this.phi_goods_tot]"
+			log = "[This.GetName]-[This.GetSpeciesName] DATA-ALLOYS: [this.phi_alloys_income]"
+			log = "[This.GetName]-[This.GetSpeciesName] DATA-ALLOYS-TOT: [this.phi_alloys_tot]"
+			log = "[This.GetName]-[This.GetSpeciesName] DATA-UNITY: [this.phi_unity_income]"
+			log = "[This.GetName]-[This.GetSpeciesName] DATA-SOC. RESEARCH: [this.phi_society_income]"
+			log = "[This.GetName]-[This.GetSpeciesName] DATA-ENG. RESEARCH: [this.phi_engineering_income]"
+			log = "[This.GetName]-[This.GetSpeciesName] DATA-PHY. RESEARCH: [this.phi_physics_income]"
+			log = "[This.GetName]-[This.GetSpeciesName] DATA-ETHICS: [this.phi_ethics]"
+			log = "[This.GetName]-[This.GetSpeciesName] DATA-PLANETS: [this.phi_planets]"
+			log = "[This.GetName]-[This.GetSpeciesName] DATA-SYSTEMS: [this.phi_systems]"
+			log = "[This.GetName]-[This.GetSpeciesName] DATA-BATTLESHIPS: [this.phi_battleships]"
+			log = "[This.GetName]-[This.GetSpeciesName] DATA-MAX-NAVAL-CAP: [this.phi_max_naval_cap]"
+			log = "[This.GetName]-[This.GetSpeciesName] DATA-USED-NAVAL-CAP: [this.phi_used_naval_cap]"
+		}
+	}
+}

@@ -1,0 +1,77 @@
+##########
+# OPINION MODIFIERS
+##########
+#	this/root = us
+#	from =  nation for which we calculate opinion
+
+opinion_hegemon = {
+	trigger = {
+		is_in_federation_with = from
+		federation = { has_federation_type = xenophobe_federation }
+		OR = {
+			is_federation_leader = yes
+			from = { is_federation_leader = yes }
+		}
+	}
+	
+	opinion = {
+		base = -50
+	}
+}
+
+# opinion_test = {
+	# trigger = {
+		# from = { is_ai = no }
+	# }
+
+	# opinion = {
+		# base = 1000
+	# }
+# }
+
+opinion_potential_ally = {
+	trigger = {
+		has_country_flag = phi_lagger
+		from = {
+			has_country_flag = phi_lagger
+		}
+	}
+
+	opinion = {
+		base = 1000
+	}
+	
+	unique = yes
+}
+
+opinion_our_bbeg = {
+	trigger = {
+		is_in_federation_with = from
+		federation = { NOT = { has_federation_type = xenophobe_federation } }
+		OR = {
+			has_country_flag = phi_bbeg
+			from = { has_country_flag = phi_bbeg }
+		}
+	}
+
+	opinion = {
+		base = 500
+	}
+	
+	unique = yes
+}
+
+opinion_bbeg = {
+	trigger = {
+		is_country_type = default
+		from = { has_country_flag = phi_bbeg }
+		NOT = { is_in_federation_with = from }
+		is_subject = no
+	}
+
+	opinion = {
+		base = -200
+	}
+	
+	unique = yes
+}

@@ -1,0 +1,202 @@
+#### overwrites ####
+
+# Per empire size over admin cap
+empire_size_over_cap = {
+	pop_government_ethic_attraction = -0.005
+	leader_upkeep_empire_size_mult = 0.01
+	planet_crime_add = 0.5
+}
+
+# Per empire size (ignores admin cap)
+empire_size = {
+	rare_edicts_cost_mult = 0.01
+	campaigns_cost_mult = 0.01
+	leader_upkeep_empire_size_mult = 0.001
+	leader_cost_empire_size_mult = 0.001
+}
+
+humiliated = {
+	country_influence_produces_mult = -0.33
+	diplo_weight_mult = -0.33
+	country_alloys_produces_mult = -0.33
+	country_unity_produces_mult = -0.33
+	country_naval_cap_mult = -0.33
+}
+
+raided = {
+	country_energy_produces_mult = -0.20
+	country_minerals_produces_mult = -0.20
+	country_alloys_produces_mult = -0.20
+}
+
+resort_colony = {
+	icon = "gfx/interface/icons/planet_modifiers/pm_resort_planet.dds"
+	icon_frame = 1
+	pop_growth_speed = -1
+	job_clerk_per_pop = 0.5
+	custom_tooltip = resort_colony_empire_effects
+	show_only_custom_tooltip = no
+	# This only works on timed planet modifiers!
+	apply_modifier_to_other_planets = resort_colony_other_planets
+}
+
+penal_colony = {
+	icon = "gfx/interface/icons/planet_modifiers/pm_penal_colony.dds"
+	icon_frame = 2
+	pop_growth_speed = -1
+	planet_crime_mult = 1
+	planet_immigration_pull_mult = 0.33
+	custom_tooltip = penal_colony_empire_effects
+	show_only_custom_tooltip = no
+	# This only works on timed planet modifiers!
+	apply_modifier_to_other_planets = penal_colony_other_planets
+}
+
+##########################################################################
+# PHI overwrites - Leader Skill Modifiers
+##########################################################################
+
+skill_admiral = {
+	ship_fire_rate_mult = 0.03
+	ship_tracking_add = 1
+	ship_disengage_chance_mult = 0.02
+}
+
+skill_general = {
+	army_damage_mult = 0.05
+	army_disengage_chance_mult = 0.05
+	army_experience_gain_mult = 0.1
+}
+
+skill_scientist = {
+	all_technology_research_speed = 0.05
+	science_ship_survey_speed = 0.10
+	ship_archeaological_site_clues_add = 1
+}
+
+skill_governor = {
+	planet_jobs_produces_mult = 0.05
+	planet_crime_add = -3
+}
+
+skill_ruler = {
+	planet_stability_add = 1
+	country_unity_produces_mult = 0.03
+	species_empire_size_mult = -0.02
+}
+
+
+#### new modifiers ####
+
+truce_breaker = {
+	planet_stability_add = -20
+	planet_crime_add = 20
+	country_war_exhaustion_mult = 1
+	diplo_weight_mult = -0.50
+}
+
+infamous_bastard = {
+	planet_stability_add = -20
+	planet_crime_add = 20
+	country_war_exhaustion_mult = 1
+	diplo_weight_mult = -0.5
+}
+
+tora_tora_tora = {
+	diplo_weight_mult = -0.1
+}
+
+foreign_influence_limited = {
+	trade_value_mult = -0.5
+}
+
+nationalized_foreign_assets = {
+	trade_value_mult = -1.0
+}
+
+foreign_investments_encouraged = {
+	trade_value_mult = 0.25
+}
+
+plutocratic_venues = {
+	trade_value_mult = 0.75
+}
+
+trade_influence_expanded = {
+	trade_value_mult = 0.10
+}
+
+trade_controller = {
+	trade_value_mult = 1
+}
+
+grace_bestowed = {
+	trade_value_mult = -1
+}
+
+grace_local_autonomy = {
+	trade_value_mult = 1
+}
+
+grace_imperial_defence = {
+	ship_federation_territory_speed_mult = 0.25
+	army_defense_health_mult = 1
+	army_defense_morale_mult = 1
+	army_defense_damage_mult = 1
+	ship_home_territory_fire_rate_mult = 0.25
+}
+
+grace_industrial_focus = {
+	country_alloys_produces_mult = 0.25
+}
+
+surge_energy = {
+	country_energy_produces_mult = 0.10
+}
+
+surge_fertility = {
+	pop_growth_speed = 1
+}
+
+surge_strong_minerals = {
+	country_minerals_produces_mult = 0.50
+	country_alloys_produces_mult = -0.50
+}
+
+surge_research = {
+	all_technology_research_speed = -0.5
+}
+
+cheat_code = {
+	ship_hull_regen_add_perc = 0.1
+	ship_armor_regen_add_perc = 0.1
+	ship_weapon_range_mult = 0.1
+	megastructure_build_speed_mult = 1
+}
+
+minor_cheat_code = {
+	ship_hull_regen_add_perc = 0.05
+	ship_armor_regen_add_perc = 0.05
+	ship_weapon_range_mult = 0.05
+	megastructure_build_speed_mult = 0.5
+}
+
+phi_survival_war = {
+	army_defense_health_mult = 1
+	army_defense_morale_mult = 1
+	army_defense_damage_mult = 1
+}
+
+phi_clone_reproduction = {
+	species_empire_size_mult = -0.7
+}
+
+phi_lost_colony_ship = {
+	pop_happiness = -0.10
+	ship_colonizer_cost_mult = 2
+	country_starbase_influence_cost_mult = 2
+}
+
+blood_tribute_extolled = {
+	pop_happiness = 0.05
+}

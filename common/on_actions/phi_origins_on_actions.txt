@@ -1,0 +1,6 @@
+# this = country
+on_monthly_pulse_country = {
+	events = {
+		 phi_origin_events.0
+	}
+}

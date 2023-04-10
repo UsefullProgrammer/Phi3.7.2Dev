@@ -1,0 +1,11 @@
+spriteTypes = {
+
+
+	spriteType = {
+		name = "GFX_evt_phi_mp_balancing"
+		texturefile = "gfx/event_pictures/phi_mp_balancing.dds"
+		masking_texture = "gfx/interface/situation_log/event_mask.dds"
+		alwaystransparent = yes
+	}
+	
+}
