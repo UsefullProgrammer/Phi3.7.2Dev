@@ -1,0 +1,7 @@
+country_edict_cap_add x diventa country_edict_fund_add x * 50
+country_election_influence_cost_mult diventa country_election_cost_mult
+country_admin_cap_mult x diventa planet_administrators_upkeep_mult x * -1
+In generale guardare administrators
+guardare #Note: number of potential or actual members is checked by POP_FACTION_MIN_POTENTIAL_MEMBERS define
+	is_potential = {
+		is_faction_allowed = yes

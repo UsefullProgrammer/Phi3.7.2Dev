@@ -11,8 +11,7 @@ prosperity = {
 
 	is_potential = {
 		years_passed > 1
-		NOT = { has_ethic = ethic_gestalt_consciousness }
-		NOT = { has_country_flag = suppress_vanilla_factions }
+		is_faction_allowed = yes
 	}
 
 	parameters = {
@@ -27,7 +26,6 @@ prosperity = {
 	resources = {
 		category = pop_factions
 		produces = {
-			influence = 2
 			unity = 10
 		}
 	}
@@ -39,7 +37,7 @@ prosperity = {
 
 	can_join_faction = {
 		is_shackled_robot = no
-		NOT = { has_trait = trait_nerve_stapled }
+		can_think = yes
 	}
 
 	attraction = {
@@ -274,7 +272,28 @@ prosperity = {
 			}
 		}
 	}
+	demand = {
+		title = PROSPERITY_FEDERATION
+		unfulfilled_title = PROSPERITY_FEDERATION_NOT_MILITARIST
+		desc = PROSPERITY_FEDERATION_DESC
 
+		unfulfilled_effect = -10
+		fulfilled_effect = 0.001
+
+		potential = {
+			exists = owner.federation
+			owner.federation = { has_federation_type = military_federation }
+		}
+
+		trigger = {
+			OR = {
+				NOT = { exists = owner.federation }
+				owner.federation = {
+					NOT = { has_federation_type = military_federation }
+				}
+			}
+		}
+	}
 	demand = {
 		title = "ISOLATIONIST_PEACE2"
 		unfulfilled_title = "ISOLATIONIST_NO_PEACE2"
@@ -355,7 +374,7 @@ prosperity = {
 			description = "EMBRACE_FACTION_DESC"
 
 			cost = {
-				influence = 500
+				unity = 5000
 			}
 
 			potential = {
@@ -363,7 +382,7 @@ prosperity = {
 				owner = {
 					OR = {
 						is_subject = no
-						NOT = { is_subject_type = dominion }
+						NOT = { any_agreement = { agreement_preset = preset_dominion } }
 					}
 				}
 			}

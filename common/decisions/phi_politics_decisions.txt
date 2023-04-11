@@ -12,7 +12,7 @@ decision_phi_smother_rebellion = {
 	resources = {
 		category = decisions
 		cost = {
-			influence = 50
+			unity = 500
 		}
 	}
 
@@ -55,7 +55,7 @@ decision_phi_amnesty = {
 	resources = {
 		category = decisions
 		cost = {
-			influence = 500
+			unity = 5000
 		}
 	}
 
@@ -93,7 +93,7 @@ decision_phi_planet_resource_rationing = {
 	resources = {
 		category = decisions
 		cost = {
-			influence = 100
+			unity = 1000
 		}
 	}
 
@@ -126,7 +126,7 @@ decision_end_phi_planet_resource_rationing = {
 	resources = {
 		category = decisions
 		cost = {
-			influence = 10
+			unity = 100
 		}
 	}
 
@@ -159,7 +159,7 @@ decision_phi_planet_local_administration = {
 	resources = {
 		category = decisions
 		cost = {
-			influence = 100
+			unity = 1000
 		}
 	}
 
@@ -193,7 +193,7 @@ decision_end_phi_planet_local_administration = {
 	resources = {
 		category = decisions
 		cost = {
-			influence = 10
+			unity = 100
 		}
 	}
 
@@ -226,7 +226,7 @@ decision_phi_planet_trading_guilds = {
 	resources = {
 		category = decisions
 		cost = {
-			influence = 100
+			unity = 1000
 		}
 	}
 
@@ -260,7 +260,7 @@ decision_end_phi_planet_trading_guilds = {
 	resources = {
 		category = decisions
 		cost = {
-			influence = 10
+			unity = 100
 		}
 	}
 
@@ -293,7 +293,7 @@ decision_phi_planet_deviant_experiments = {
 	resources = {
 		category = decisions
 		cost = {
-			influence = 100
+			unity = 1000
 		}
 	}
 
@@ -327,7 +327,7 @@ decision_end_phi_planet_deviant_experiments = {
 	resources = {
 		category = decisions
 		cost = {
-			influence = 10
+			unity = 100
 		}
 	}
 
@@ -360,7 +360,7 @@ decision_phi_planet_expropriation = {
 	resources = {
 		category = decisions
 		cost = {
-			influence = 100
+			unity = 1000
 		}
 	}
 
@@ -404,7 +404,7 @@ decision_phi_release_client_state = {
 			energy = 100
 			minerals = 100
 			consumer_goods = 100
-			influence = 25
+			unity = 250
 		}
 	}
 

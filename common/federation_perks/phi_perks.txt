@@ -586,7 +586,7 @@ galactic_empire_1 = {
 	leader_modifier = {
 		country_naval_cap_mult = 0.80
 		planet_stability_add = 20
-		country_base_influence_produces_add = 20
+		country_base_unity_produces_add = 200
 		diplo_weight_mult = 2.00
 	}
 }

@@ -25,3 +25,25 @@ Economic_plans\01_base.txt è stato cancellato, motivazione: i file erano uguali
 
 Total_noob , phi_war_in_heaven_ongoing , illuminate_vassal cambiato costo dimmezzandolo e mettendo moltiplicatore di size.
 Total_noob , gnam_gnam_gnam , gears_of_war Messo che durano al'infinito ma hanno una manuntenzione.
+
+
+Aggiunto a phi_federation_types tranne a galactic_exmpire
+ownership_limits = default
+federation_check_for_subject_trigger = yes
+
+civic_imperial_cult messo edicts_upkeep_mult = -0.50 controllare che funzioni
+civic_citizen_service aggiunto planet_soldiers_unity_produces_add = 1 aggiungere civic_tooltip_citizen_service_effects quesot dettaglio.
+
+00_origins, origini nuove da origin_progenitor_hive in poi
+forse in 01_special_civics empire_size_colonies_mult = -0.9 ora è troppo forte
+02_gestalt_civics controllare che empire_size_mult = -0.20 funzioni
+civic_brand_loyalty lasciato invariato
+Cancellato observation_station_missions\00_missions.txt perchè uguale alla vanilla
+Forse:
+civic_hive_divided_attention cambiarlo eventualmente con empire_size_mult = -0.10
+
+Galactic_empire_1 ora da country_base_unity_produces_add = 200 invece di country_base_influence_produces_add = 20
+
+civic_shared_burden ora aumenta unity dalla fazione progressista
+
+Arrivato a pop_faction_types\prosperity compreso

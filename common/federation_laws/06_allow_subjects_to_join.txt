@@ -46,6 +46,7 @@ allow_subjects_to_join_no = {
 		}
 		
 		modifier = {
+			desc = federation_acceptance_weaker
 			add = 25
 			relative_power = { who = from value >= superior }
 		}
@@ -102,7 +103,7 @@ allow_subjects_to_join_yes = {
 		modifier = {
 			desc = federation_acceptance_has_subjects
 			add = 75
-			vassals > 0
+			subjects > 0
 		}
 	}
 }

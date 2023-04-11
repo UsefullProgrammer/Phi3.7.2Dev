@@ -1,6 +1,3 @@
-#PHI
-#@robotic_maintenance_alloys = 0.25
-
 complex_drone = {
 	rank = 0
 	clothes_texture_index = 2
@@ -34,7 +31,7 @@ complex_drone = {
 				}
 			}
 		}
-		influence = 10
+		unity = 10
 	}
 
 	triggered_planet_modifier = {
@@ -44,6 +41,13 @@ complex_drone = {
 		planet_pop_assembly_organic_add = @plantoid_budding_rate
 	}
 
+	triggered_planet_modifier = {
+		potential = {
+			can_assemble_tiyanki_pop = yes
+		}
+		planet_pop_assembly_organic_add = @tiyanki_budding_rate
+	}
+
 	unemployment_resources = {
 		category = unemployment_resources
 	}
@@ -51,67 +55,39 @@ complex_drone = {
 	resources = {
 		category = pop_category_drones
 
-		upkeep = {
-			trigger = {
-				has_phototrophic_energy_upkeep = yes
-			}
-			energy = @living_standard_phototrophic_normal
-		}
+		# Regular food, mineral and energy upkeep.
+		inline_script = "pop_categories/regular_upkeep"
 
-		upkeep = {
-			trigger = {
-				is_organic_species = yes
-				is_phototrophic = no
-				is_lithoid = no
-			}
-			food = @living_standard_food_normal
-		}
+		# Additional energy upkeep for cyborgs.
+		inline_script = "pop_categories/cyborg_upkeep"
 
-		upkeep = {
-			trigger = {
-				is_phototrophic = yes
-			}
-			food = @living_standard_phototrophic_normal
-		}
-
+		# Exotic Metabolism Upkeep
 		upkeep = {
 			trigger = {
 				is_organic_species = yes
-				is_lithoid = yes
+				has_trait = trait_exotic_metabolism
 			}
-			minerals = @living_standard_food_normal
+			exotic_gases = @exotic_metabolism
 		}
 
-		upkeep = {
+		# Resource Production
+
+		# Lithoid Trait Output
+		inline_script = "pop_categories/trait_production"
+
+		produces = {
 			trigger = {
-				is_robotic_species = yes
+				is_organic_species = yes
+				has_trait = trait_inorganic_breath
 			}
-			energy = @living_standard_energy_normal
-			alloys = @robotic_maintenance_alloys
+			exotic_gases = @inorganic_breath
 		}
 
 		produces = {
 			trigger = {
-				is_lithoid = yes
-				has_trait = trait_lithoid_scintillating
+				has_trait = trait_drake_scaled
 			}
-			rare_crystals = @lithoid_trait_resource_production
-		}
-
-		produces = {
-			trigger = {
-				is_lithoid = yes
-				has_trait = trait_lithoid_gaseous_byproducts
-			}
-			exotic_gases = @lithoid_trait_resource_production
-		}
-
-		produces = {
-			trigger = {
-				is_lithoid = yes
-				has_trait = trait_lithoid_volatile_excretions
-			}
-			volatile_motes = @lithoid_trait_resource_production
+			alloys = @drake_scaled_trait_resource_production
 		}
 	}
 }
@@ -154,7 +130,7 @@ simple_drone = {
 				}
 			}
 		}
-		influence = 10
+		unity = 10
 	}
 
 	triggered_planet_modifier = {
@@ -162,6 +138,13 @@ simple_drone = {
 			can_assemble_budding_pop = yes
 		}
 		planet_pop_assembly_organic_add = @plantoid_budding_rate
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			can_assemble_tiyanki_pop = yes
+		}
+		planet_pop_assembly_organic_add = @tiyanki_budding_rate
 	}
 
 	unemployment_resources = {
@@ -192,76 +175,39 @@ simple_drone = {
 	resources = {
 		category = pop_category_drones
 
-		upkeep = {
-			trigger = {
-				has_phototrophic_energy_upkeep = yes
-			}
-			energy = @living_standard_phototrophic_normal
-		}
+		# Regular food, mineral and energy upkeep.
+		inline_script = "pop_categories/regular_upkeep"
 
-		upkeep = {
-			trigger = {
-				is_organic_species = yes
-				is_phototrophic = no
-				is_lithoid = no
-			}
-			food = @living_standard_food_normal
-		}
+		# Additional energy upkeep for cyborgs.
+		inline_script = "pop_categories/cyborg_upkeep"
 
-		upkeep = {
-			trigger = {
-				is_phototrophic = yes
-			}
-			food = @living_standard_phototrophic_normal
-		}
-
+		# Exotic Metabolism Upkeep
 		upkeep = {
 			trigger = {
 				is_organic_species = yes
-				is_lithoid = yes
+				has_trait = trait_exotic_metabolism
 			}
-			minerals = @living_standard_food_normal
+			exotic_gases = @exotic_metabolism
 		}
 
-		upkeep = {
+		# Resource Production
+		
+		# Lithoid Trait Output
+		inline_script = "pop_categories/trait_production"
+
+		produces = {
 			trigger = {
-				is_robotic_species = yes
-				is_unemployed = no
+				is_organic_species = yes
+				has_trait = trait_inorganic_breath
 			}
-			energy = @living_standard_energy_normal
-			alloys = @robotic_maintenance_alloys
-		}
-		upkeep = {
-			trigger = {
-				is_robotic_species = yes
-				is_unemployed = yes
-			}
-			energy = @living_standard_energy_unemployed
-			alloys = @robotic_maintenance_alloys
+			exotic_gases = @inorganic_breath
 		}
 
 		produces = {
 			trigger = {
-				is_lithoid = yes
-				has_trait = trait_lithoid_scintillating
+				has_trait = trait_drake_scaled
 			}
-			rare_crystals = @lithoid_trait_resource_production
-		}
-
-		produces = {
-			trigger = {
-				is_lithoid = yes
-				has_trait = trait_lithoid_gaseous_byproducts
-			}
-			exotic_gases = @lithoid_trait_resource_production
-		}
-
-		produces = {
-			trigger = {
-				is_lithoid = yes
-				has_trait = trait_lithoid_volatile_excretions
-			}
-			volatile_motes = @lithoid_trait_resource_production
+			alloys = @drake_scaled_trait_resource_production
 		}
 	}
 }

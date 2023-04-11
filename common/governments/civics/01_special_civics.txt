@@ -5,7 +5,8 @@
 #	pickable_at_start = yes / no				# default: yes
 #	modification = yes / no						# default: yes, set to no to prevent adding or removing this after creation of the empire
 #
-#	random_weight = { base = 5 }				# scriptable weight for randomizing a civic; required, else the civic will not get assigned randomly
+#	random_weight = { base = 5 }				# scriptable weight for randomizing a civic
+#												# Note: If omitted, a default weight of 1 is used
 #
 #	modifier = {}								# modifier added to the country if the civic is selected and valid
 #	can_build_ruler_ship = yes / no				# default: no
@@ -26,7 +27,7 @@ civic_machine_remnants = {
 		ethics = { value = ethic_gestalt_consciousness }
 		authority = { value = auth_machine_intelligence }
 	}
-	random_weight = { base = 5 }
+	random_weight = { base = @civic_default_random_weight }
 	description = FALLEN_EMPIRE_LETHARGY_1
 	modifier = {empire_size_colonies_mult = -0.9}
 }
@@ -39,7 +40,7 @@ civic_custodian_directives = {
 		ethics = { value = ethic_gestalt_consciousness }
 		authority = { value = auth_machine_intelligence }
 	}
-	random_weight = { base = 5 }
+	random_weight = { base = @civic_default_random_weight }
 	description = FALLEN_EMPIRE_LETHARGY_2
 	modifier = {}
 }
@@ -52,7 +53,7 @@ civic_awakened_machine = {
 		ethics = { value = ethic_gestalt_consciousness }
 		authority = { value = auth_machine_intelligence }
 	}
-	random_weight = { base = 5 }
+	random_weight = { base = @civic_default_random_weight }
 	description = FALLEN_EMPIRE_LETHARGY_2
 	modifier = {empire_size_colonies_mult = -0.9}
 }
@@ -65,8 +66,8 @@ civic_malfunctioning_custodian = {
 		ethics = { value = ethic_gestalt_consciousness }
 		authority = { value = auth_machine_intelligence }
 	}
-	random_weight = { base = 5 }
-	modifier = { 
+	random_weight = { base = @civic_default_random_weight }
+	modifier = {
 		ship_fire_rate_mult = 0.1
 		planet_jobs_energy_produces_mult = 0.5
 		empire_size_colonies_mult = -0.9
@@ -81,7 +82,7 @@ civic_final_defense_protocols = {
 		ethics = { value = ethic_gestalt_consciousness }
 		authority = { value = auth_machine_intelligence }
 	}
-	random_weight = { base = 5 }
+	random_weight = { base = @civic_default_random_weight }
 	modifier = {
 		ship_fire_rate_mult = 0.1
 		planet_jobs_energy_produces_mult = 0.5
@@ -96,7 +97,7 @@ civic_lethargic_leadership = {
 		country_type = { value = fallen_empire }
 		ethics = { NOT = { value = ethic_gestalt_consciousness } }
 	}
-	random_weight = { base = 5 }
+	random_weight = { base = @civic_default_random_weight }
 	description = FALLEN_EMPIRE_LETHARGY_1
 	modifier = {
 		country_civics_influence_upkeep_add = 1
@@ -111,7 +112,7 @@ civic_empire_in_decline = {
 		country_type = { value = fallen_empire }
 		ethics = { NOT = { value = ethic_gestalt_consciousness } }
 	}
-	random_weight = { base = 5 }
+	random_weight = { base = @civic_default_random_weight }
 	description = FALLEN_EMPIRE_LETHARGY_2
 	modifier = {
 	}
@@ -125,7 +126,7 @@ civic_revanchist_fervor = {
 		country_type = { value = awakened_fallen_empire }
 		ethics = { NOT = { value = ethic_gestalt_consciousness } }
 	}
-	random_weight = { base = 5 }
+	random_weight = { base = @civic_default_random_weight }
 	modifier = {
 		country_civics_influence_produces_add = 1
 		empire_size_colonies_mult = -0.9
@@ -139,9 +140,9 @@ civic_ancient_caches_of_technology = {
 		country_type = { value = awakened_fallen_empire }
 		ethics = { NOT = { value = ethic_gestalt_consciousness } }
 	}
-	random_weight = { base = 5 }
-	modifier = { 
-		planet_jobs_produces_mult = 0.5	
+	random_weight = { base = @civic_default_random_weight }
+	modifier = {
+		planet_jobs_produces_mult = 0.5
 	}
 }
 
@@ -153,7 +154,7 @@ civic_secret_of_fire = {
 		country_type = { value = primitive }
 		ethics = { NOT = { value = ethic_gestalt_consciousness } }
 	}
-	random_weight = { base = 5 }
+	random_weight = { base = @civic_default_random_weight }
 	modifier = { }
 }
 
@@ -164,7 +165,7 @@ civic_the_wheel = {
 		country_type = { value = primitive }
 		ethics = { NOT = { value = ethic_gestalt_consciousness } }
 	}
-	random_weight = { base = 5 }
+	random_weight = { base = @civic_default_random_weight }
 	modifier = { }
 }
 
@@ -175,7 +176,7 @@ civic_landed_nobility = {
 		country_type = { value = primitive }
 		ethics = { NOT = { value = ethic_gestalt_consciousness } }
 	}
-	random_weight = { base = 5 }
+	random_weight = { base = @civic_default_random_weight }
 	modifier = { }
 }
 
@@ -186,7 +187,7 @@ civic_flat_world_theory = {
 		country_type = { value = primitive }
 		ethics = { NOT = { value = ethic_gestalt_consciousness } }
 	}
-	random_weight = { base = 5 }
+	random_weight = { base = @civic_default_random_weight }
 	modifier = { }
 }
 
@@ -197,16 +198,92 @@ civic_increasing_urbanization = {
 		country_type = { value = primitive }
 		ethics = { NOT = { value = ethic_gestalt_consciousness } }
 	}
-	random_weight = { base = 5 }
+	random_weight = { base = @civic_default_random_weight }
 	modifier = { }
 }
 
 civic_atmospheric_pollution = {
 	modification = no
-	icon = "gfx/interface/icons/governments/civics/civic_agrarian_idyll.dds"
+	icon = "gfx/interface/icons/governments/civics/civic_relentless_industrialists.dds"
 	potential = {
 		country_type = { value = primitive }
 		ethics = { NOT = { value = ethic_gestalt_consciousness } }
+	}
+	random_weight = { base = @civic_default_random_weight }
+	modifier = { }
+}
+
+civic_life_seeded = {
+	modification = no
+	description = "civic_tooltip_idyllic_bloom_effects"
+	potential = {
+		country_type = { value = primitive }
+	}
+	random_weight = { base = 5 }
+	modifier = { }
+}
+
+civic_hive_secret_of_fire = {
+	modification = no
+	icon = "gfx/interface/icons/governments/civics/civic_hive_revanchist_fervor.dds"
+	potential = {
+		country_type = { value = primitive }
+		authority = { value = auth_hive_mind }
+	}
+	random_weight = { base = 5 }
+	modifier = { }
+}
+
+civic_hive_the_wheel = {
+	modification = no
+	icon = "gfx/interface/icons/governments/civics/civic_hive_life_seeded.dds"
+	potential = {
+		country_type = { value = primitive }
+		authority = { value = auth_hive_mind }
+	}
+	random_weight = { base = 5 }
+	modifier = { }
+}
+
+civic_hive_burgeoning_nodes = {
+	modification = no
+	icon = "gfx/interface/icons/governments/civics/civic_hive_one_mind.dds"
+	potential = {
+		country_type = { value = primitive }
+		authority = { value = auth_hive_mind }
+	}
+	random_weight = { base = 5 }
+	modifier = { }
+}
+
+civic_hive_flat_world_theory = {
+	modification = no
+	icon = "gfx/interface/icons/governments/civics/civic_hive_subspace_ephapse.dds"
+	potential = {
+		country_type = { value = primitive }
+		authority = { value = auth_hive_mind }
+	}
+	random_weight = { base = 5 }
+	modifier = { }
+}
+
+civic_hive_centralized_consciousness = {
+	modification = no
+	icon = "gfx/interface/icons/governments/civics/civic_hive_empath.dds"
+	potential = {
+		country_type = { value = primitive }
+		authority = { value = auth_hive_mind }
+	}
+	random_weight = { base = 5 }
+	modifier = { }
+}
+
+civic_hive_atmospheric_pollution = {
+	modification = no
+	icon = "gfx/interface/icons/governments/civics/civic_hive_relentless_industrialists.dds"
+	potential = {
+		country_type = { value = primitive }
+		authority = { value = auth_hive_mind }
 	}
 	random_weight = { base = 5 }
 	modifier = { }
@@ -221,7 +298,7 @@ civic_ancient_preservers = {
 		country_type = { value = enclave }
 		ethics = { NOT = { value = ethic_gestalt_consciousness } }
 	}
-	random_weight = { base = 5 }
+	random_weight = { base = @civic_default_random_weight }
 	modifier = { }
 }
 
@@ -232,7 +309,7 @@ civic_trading_conglomerate = {
 		country_type = { value = enclave }
 		ethics = { NOT = { value = ethic_gestalt_consciousness } }
 	}
-	random_weight = { base = 5 }
+	random_weight = { base = @civic_default_random_weight }
 	modifier = { }
 }
 
@@ -243,7 +320,46 @@ civic_artist_collective = {
 		country_type = { value = enclave }
 		ethics = { NOT = { value = ethic_gestalt_consciousness } }
 	}
-	random_weight = { base = 5 }
+	random_weight = { base = @civic_default_random_weight }
+	modifier = { }
+}
+
+civic_mercenary_enclave = {
+	modification = no
+	icon = "gfx/interface/icons/governments/civics/civic_mercenaries.dds"
+	potential = {
+		country_type = { value = enclave_mercenary }
+		ethics = { NOT = { value = ethic_gestalt_consciousness } }
+	}
+	random_weight = { base = @civic_default_random_weight }
+	modifier = {
+		ship_hull_regen_add_perc = 0.05
+		ship_armor_regen_add_perc = 0.05
+		ship_speed_mult = 0.25
+		starbase_shipyard_build_cost_mult = -0.25
+		starbase_shipyard_build_speed_mult = 0.25
+	}
+}
+
+civic_salvager_enclave = {
+	modification = no
+	icon = "gfx/interface/icons/governments/civics/civic_salvagers.dds"
+	potential = {
+		country_type = { value = enclave }
+		ethics = { NOT = { value = ethic_gestalt_consciousness } }
+	}
+	random_weight = { base = @civic_default_random_weight }
+	modifier = { }
+}
+
+civic_shroudwalker_enclave = {
+	modification = no
+	icon = "gfx/interface/icons/governments/civics/civic_shroudwalkers.dds"
+	potential = {
+		country_type = { value = enclave }
+		ethics = { NOT = { value = ethic_gestalt_consciousness } }
+	}
+	random_weight = { base = @civic_default_random_weight }
 	modifier = { }
 }
 
@@ -256,7 +372,7 @@ civic_military_order = {
 		country_type = { value = sentinels }
 		ethics = { NOT = { value = ethic_gestalt_consciousness } }
 	}
-	random_weight = { base = 5 }
+	random_weight = { base = @civic_default_random_weight }
 	modifier = { }
 }
 
@@ -267,7 +383,7 @@ civic_ancient_machine_intelligence = {
 		country_type = { value = ai_empire }
 		#ethics = { NOT = { value = ethic_gestalt_consciousness } }
 	}
-	random_weight = { base = 5 }
+	random_weight = { base = @civic_default_random_weight }
 	modifier = {}
 }
 
@@ -277,7 +393,7 @@ civic_anarcho_tribalism = {
 	potential = {
 		country_type = { value = dormant_marauders }
 	}
-	random_weight = { base = 5 }
+	random_weight = { base = @civic_default_random_weight }
 	modifier = { }
 }
 
@@ -288,7 +404,7 @@ civic_great_khans_vision = {
 	potential = {
 		country_type = { value = awakened_marauders }
 	}
-	random_weight = { base = 5 }
+	random_weight = { base = @civic_default_random_weight }
 	modifier = { }
 }
 
@@ -355,6 +471,22 @@ civic_galactic_sovereign_megacorp = {
 	}
 }
 
+civic_psionic_sovereign = {
+	modification = no
+	icon = "gfx/interface/icons/governments/civics/civic_psionic_sovereign.dds"
+	potential = {
+		civics = {
+			value = civic_psionic_sovereign # Added via event - this trigger prevents the civic from being picked by others
+		}
+	}
+	random_weight = { base = 0 }
+	modifier = {
+		country_government_civic_points_add = 1
+		country_unity_produces_mult = 0.10
+		pop_government_ethic_attraction = 0.25
+	}
+}
+
 # Caravaneers
 
 civic_caravaneer_caravansary = {
@@ -364,7 +496,7 @@ civic_caravaneer_caravansary = {
 		country_type = { value = caravaneer_home }
 		ethics = { NOT = { value = ethic_gestalt_consciousness } }
 	}
-	random_weight = { base = 5 }
+	random_weight = { base = @civic_default_random_weight }
 	modifier = { }
 }
 
@@ -375,7 +507,7 @@ civic_caravaneer_fleet1 = {
 		country_type = { value = caravaneer_fleet }
 		ethics = { NOT = { value = ethic_gestalt_consciousness } }
 	}
-	random_weight = { base = 5 }
+	random_weight = { base = @civic_default_random_weight }
 	modifier = { }
 }
 
@@ -386,7 +518,7 @@ civic_caravaneer_fleet2 = {
 		country_type = { value = caravaneer_fleet }
 		ethics = { NOT = { value = ethic_gestalt_consciousness } }
 	}
-	random_weight = { base = 5 }
+	random_weight = { base = @civic_default_random_weight }
 	modifier = { }
 }
 
@@ -397,6 +529,6 @@ civic_caravaneer_fleet3 = {
 		country_type = { value = caravaneer_fleet }
 		ethics = { NOT = { value = ethic_gestalt_consciousness } }
 	}
-	random_weight = { base = 5 }
+	random_weight = { base = @civic_default_random_weight }
 	modifier = { }
 }

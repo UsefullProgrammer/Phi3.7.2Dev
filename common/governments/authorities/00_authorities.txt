@@ -43,7 +43,11 @@ auth_democratic = {
 		country_leader_pool_size = 1
 		species_leader_exp_gain = 0.5
 	}
-
+	random_weight = {
+		modifier = {
+			factor = 2
+		}
+	}
 	tags = {
 		AUTHORITY_ELECTION_DEMOCRATIC
 	}
@@ -71,7 +75,11 @@ auth_oligarchic = {
 	country_modifier = {
 		pop_factions_produces_mult = 0.25
 	}
-
+	random_weight = {
+		modifier = {
+			factor = 2
+		}
+	}
 	tags = {
 		AUTHORITY_ELECTION_OLIGARCHIC
 	}
@@ -96,7 +104,11 @@ auth_dictatorial = {
 	country_modifier = {
 		edicts_cost_mult = -0.50
 	}
-
+	random_weight = {
+		modifier = {
+			factor = 2
+		}
+	}
 	tags = {
 		AUTHORITY_ELECTION_ON_RULER_DEATH
 	}
@@ -118,7 +130,13 @@ auth_imperial = {
 	}
 
 	country_modifier = {
-		country_edict_cap_add = 1
+		country_power_projection_influence_produces_add = 1
+	}
+
+	random_weight = {
+		modifier = {
+			factor = 2
+		}
 	}
 
 	tags = {
@@ -133,7 +151,7 @@ auth_hive_mind = {
 	can_reform = no
 	localization_postfix = hive_mind
 
-	valid_for_released_vassal = no
+	valid_for_released_vassal = yes
 
 	playable = { host_has_dlc = "Utopia" }
 	possible = {
@@ -146,6 +164,10 @@ auth_hive_mind = {
 		modifier = {
 			factor = 0
 			NOT = { host_has_dlc = "Utopia" }
+		}
+		modifier = {
+			factor = 2
+			host_has_dlc = "Utopia"
 		}
 	}
 
@@ -188,6 +210,10 @@ auth_machine_intelligence = {
 		modifier = {
 			factor = 0
 			NOT = { host_has_dlc = "Synthetic Dawn Story Pack" }
+		}
+		modifier = {
+			factor = 2
+			host_has_dlc = "Synthetic Dawn Story Pack"
 		}
 	}
 
@@ -234,22 +260,14 @@ auth_corporate = {
 	localization_postfix = corporate
 
 	has_agendas = yes
-
+	potential = {
+		country_type = { NOT = { value = primitive } }
+	}
 	playable = {
 		host_has_dlc = "Megacorp"
 	}
-	random_weight = {
-		factor = 0.25
-		modifier = {
-			factor = 0
-			NOT = { host_has_dlc = "Megacorp" }
-		}
-	}
 
-	country_modifier = {
-		trade_value_mult = 0.10
-	}
-
+	playable = { host_has_dlc = "Megacorp" }
 	possible = {
 		ethics = {
 			NOR = {
@@ -258,6 +276,20 @@ auth_corporate = {
 				value = ethic_fanatic_authoritarian
 			}
 		}
+	}
+	random_weight = {
+		modifier = {
+			factor = 0
+			NOT = { host_has_dlc = "Megacorp" }
+		}
+		modifier = {
+			factor = 0.5 # gli altri imperi sono a 2 nella phi era 0.25 quindi 1/4 di 2 è 0.5
+			host_has_dlc = "Megacorp"
+		}
+	}
+
+	country_modifier = {
+		trade_value_mult = 0.10
 	}
 
 	tags = {

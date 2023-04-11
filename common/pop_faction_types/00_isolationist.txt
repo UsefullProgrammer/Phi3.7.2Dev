@@ -12,15 +12,13 @@ isolationist = {
 	resources = {
 		category = pop_factions
 		produces = {
-			influence = 2
 			unity = 10
 		}
 	}
 
 	is_potential = {
 		years_passed > 1
-		NOT = { has_ethic = ethic_gestalt_consciousness }
-		NOT = { has_country_flag = suppress_vanilla_factions }
+		is_faction_allowed = yes
 	}
 
 	parameters = {
@@ -39,7 +37,7 @@ isolationist = {
 
 	can_join_faction = {
 		is_shackled_robot = no
-		NOT = { has_trait = trait_nerve_stapled }
+		can_think = yes
 		OR = {
 			NOT = { is_same_species = owner_species }
 			owner = {
@@ -117,10 +115,7 @@ isolationist = {
 
 		trigger = {
 			owner = {
-				NOR = {
-					any_war = { is_war_participant = { who = prev side = attackers } }
-					has_country_flag = entered_war_as_defender
-				}
+				NOT = { any_war = { is_war_participant = { who = prev side = attackers } } }
 			}
 		}
 	}
@@ -169,6 +164,7 @@ isolationist = {
 			owner = {
 				NOR = {
 					num_migration_pacts > 0 #doesn't check all the stuff below, but early exclude if it is true
+					has_policy_flag = refugees_allowed
 					any_relation = {
 						has_communications = root.owner
 						OR = {
@@ -366,7 +362,7 @@ isolationist = {
 			description = "EMBRACE_FACTION_DESC"
 
 			cost = {
-				influence = 500
+				unity = 5000
 			}
 
 			potential = {
@@ -374,7 +370,7 @@ isolationist = {
 				owner = {
 					OR = {
 						is_subject = no
-						NOT = { is_subject_type = dominion }
+						NOT = { any_agreement = { agreement_preset = preset_dominion } }
 					}
 				}
 			}

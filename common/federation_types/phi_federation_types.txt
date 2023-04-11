@@ -5,7 +5,9 @@
 
 xenophile_federation = {
 	icon = "GFX_xenophile_federation"
+	ownership_limits = default
 	allow = {
+		federation_check_for_subject_trigger = yes
 		OR = {
 			is_megacorp = yes
 			has_valid_civic = civic_merchant_guilds
@@ -71,7 +73,9 @@ xenophile_federation = {
 
 xenophobe_federation = {
 	icon = "GFX_xenophobe_federation"
+	ownership_limits = default
 	allow = {
+		federation_check_for_subject_trigger = yes
 		is_xenophobe = yes
 	}
 	levels = {
@@ -136,7 +140,9 @@ xenophobe_federation = {
 
 militarist_federation = {
 	icon = "GFX_militarist_federation"
+	ownership_limits = default
 	allow = {
+		federation_check_for_subject_trigger = yes
 		is_militarist = yes
 	}
 	levels = {
@@ -198,7 +204,9 @@ militarist_federation = {
 
 pacifist_federation = {
 	icon = "GFX_pacifist_federation"
+	ownership_limits = default
 	allow = {
+		federation_check_for_subject_trigger = yes
 		OR = {
 			is_pacifist = yes
 			is_hive_empire = yes
@@ -263,7 +271,9 @@ pacifist_federation = {
 
 spiritualist_federation = {
 	icon = "GFX_spiritualist_federation"
+	ownership_limits = default
 	allow = {
+		federation_check_for_subject_trigger = yes
 		is_spiritualist = yes
 	}
 	levels = {
@@ -325,7 +335,9 @@ spiritualist_federation = {
 
 materialist_federation = {
 	icon = "GFX_materialist_federation"
+	ownership_limits = default
 	allow = {
+		federation_check_for_subject_trigger = yes
 		OR = {
 			is_materialist = yes
 			is_machine_empire = yes
@@ -390,7 +402,9 @@ materialist_federation = {
 
 authoritarian_federation = {
 	icon = "GFX_authoritarian_federation"
+	ownership_limits = default
 	allow = {
+		federation_check_for_subject_trigger = yes
 		is_authoritarian = yes
 	}
 	levels = {
@@ -454,7 +468,9 @@ authoritarian_federation = {
 
 egalitarian_federation = {
 	icon = "GFX_egalitarian_federation"
+	ownership_limits = default
 	allow = {
+		federation_check_for_subject_trigger = yes
 		is_egalitarian = yes
 	}
 	levels = {
