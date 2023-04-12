@@ -12,16 +12,12 @@ traditionalist = {
 	resources = {
 		category = pop_factions
 		produces = {
-			influence = 2
 			unity = 10
 		}
 	}
 
 	is_potential = {
-		years_passed > 10
-		has_encountered_other_species = yes
-		NOT = { has_ethic = ethic_gestalt_consciousness }
-		NOT = { has_country_flag = suppress_vanilla_factions }
+		is_faction_allowed = yes
 	}
 
 	parameters = {
@@ -40,7 +36,7 @@ traditionalist = {
 	}
 
 	can_join_faction = {
-		NOT = { has_trait = trait_nerve_stapled }
+		can_think = yes
 	}
 
 	attraction = {
@@ -173,6 +169,7 @@ traditionalist = {
 			host_has_dlc = "Utopia"
 			exists = owner
 			owner = {
+				NOT = { has_origin = origin_shroudwalker_apprentice }
 				OR = {
 					num_ascension_perks > 0
 					num_ascension_perk_slots > 0
@@ -187,12 +184,34 @@ traditionalist = {
 		}
 	}
 	
+	demand = { # "TRADITIONALIST_PSIONIC_TEACHINGS"
+		title = "TRADITIONALIST_PSIONIC_TEACHINGS"
+		unfulfilled_title = "TRADITIONALIST_NO_PSIONIC_TEACHINGS"
+		desc = "TRADITIONALIST_PSIONIC_TEACHINGS_DESC"
+
+		fulfilled_effect = 10
+		unfulfilled_effect = -0.001
+
+		potential = {
+			exists = owner
+			owner = {
+				has_origin = origin_shroudwalker_apprentice
+			}
+		}
+
+		trigger = {
+			owner = {
+				has_technology = tech_psionic_theory
+			}
+		}
+	}
+	
 	demand = {
 		title = "TRADITIONALIST_FLESH_IS_STRONG"
 		unfulfilled_title = "TRADITIONALIST_FLESH_IS_WEAK"
 		desc = "TRADITIONALIST_FLESH_IS_STRONG_DESC"
 
-		unfulfilled_effect = -10
+		unfulfilled_effect = -15
 		fulfilled_effect = 0.001
 
 		potential = {
@@ -204,8 +223,9 @@ traditionalist = {
 
 		trigger = {
 			owner = {
-				NOT = {
-					has_country_flag = flesh_weakened
+				NOR = {
+					has_country_flag = cyborg_empire # i.e. has completed "FLESH_IS_WEAK_PROJECT"
+					is_cyborg_empire = yes # checks for the Cybernetic trait
 				}
 			}
 		}
@@ -295,25 +315,20 @@ traditionalist = {
 	}
 
 	demand = {
-		title = "NOT_SATELLITE"
-		unfulfilled_title = "SATELLITE"
-		desc = "SATELLITE_DESC"
+		title = TRADITIONALIST_FEDERATION
+		unfulfilled_title = TRADITIONALIST_FEDERATION_NOT_SPIRITUALIST
+		desc = TRADITIONALIST_FEDERATION_DESC
 
-		unfulfilled_effect = -40
-		fulfilled_effect = 0.001
+		fulfilled_effect = 5
+		unfulfilled_effect = -0.001
 
 		potential = {
-			exists = owner
-			owner = {
-				is_subject = yes
-				is_subject_type = satellite
-			}
+			exists = owner.federation
+			has_federations_dlc = yes
 		}
 
 		trigger = {
-			owner = {
-				NOT = { is_subject_type = satellite }
-			}
+			owner.federation = { has_federation_type = spiritualist_federation }
 		}
 	}
 
@@ -342,7 +357,7 @@ traditionalist = {
 			description = "EMBRACE_FACTION_DESC"
 
 			cost = {
-				influence = 500
+				unity = 5000
 			}
 
 			potential = {
@@ -350,7 +365,7 @@ traditionalist = {
 				owner = {
 					OR = {
 						is_subject = no
-						NOT = { is_subject_type = dominion }
+						NOT = { any_agreement = { agreement_preset = preset_dominion } }
 					}
 				}
 			}

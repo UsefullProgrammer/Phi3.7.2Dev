@@ -12,15 +12,13 @@ xenoist = {
 	resources = {
 		category = pop_factions
 		produces = {
-			influence = 2
 			unity = 10
 		}
 	}
 
 	is_potential = {
 		years_passed > 1
-		NOT = { has_ethic = ethic_gestalt_consciousness }
-		NOT = { has_country_flag = suppress_vanilla_factions }
+		is_faction_allowed = yes
 	}
 
 	parameters = {
@@ -39,7 +37,7 @@ xenoist = {
 
 	can_join_faction = {
 		is_shackled_robot = no
-		NOT = { has_trait = trait_nerve_stapled }
+		can_think = yes
 	}
 
 	attraction = {
@@ -292,7 +290,10 @@ xenoist = {
 
 		potential = {
 			exists = owner
-			owner = { has_country_flag = encountered_first_primitive }
+			owner = {
+				has_country_flag = encountered_first_primitive
+				NOT = { has_origin = origin_necrophage }
+			}
 		}
 
 		trigger = {
@@ -393,6 +394,80 @@ xenoist = {
 		}
 	}
 	
+	demand = {
+		title = "XENOIST_OPPRESSIVE_SUBJUGATION_POLICY"
+		unfulfilled_title = "XENOIST_NO_OPPRESSIVE_SUBJUGATION_POLICY"
+		desc = "XENOIST_OPPRESSIVE_SUBJUGATION_POLICY_DESC"
+
+		unfulfilled_effect = -10
+		fulfilled_effect = 0.001
+
+		potential = {
+			exists = owner
+			owner = {
+				is_subject = no
+				has_policy_flag = oppressive_terms
+			}
+		}
+
+		trigger = {
+			owner = {
+				is_subject = no
+				NOT = { has_policy_flag = oppressive_terms }
+			}
+		}
+	}
+
+	demand = {
+		title = "XENOIST_BENEVOLENT_SUBJUGATION_POLICY"
+		unfulfilled_title = "XENOIST_ADOPT_BENEVOLENT_SUBJUGATION_POLICY"
+		desc = "XENOIST_BENEVOLENT_SUBJUGATION_POLICY_DESC"
+
+		fulfilled_effect = 10
+		unfulfilled_effect = -0.001
+
+		potential = {
+			exists = owner
+			owner = {
+				is_subject = no
+				NOT = { has_policy_flag = oppressive_terms }
+			}
+		}
+
+		trigger = {
+			owner = {
+				has_policy_flag = benevolent_terms
+			}
+		}
+	}
+
+	demand = { # Alien Zoo (for conservation)
+		title = "XENOIST_XENOLOGICAL_CONSERVATION"
+		unfulfilled_title = "XENOIST_NO_XENOLOGICAL_CONSERVATION"
+		desc = "XENOIST_XENOLOGICAL_CONSERVATION_DESC"
+
+		fulfilled_effect = 5
+		unfulfilled_effect = -0.001
+
+		potential = {
+			exists = owner
+			owner = {
+				has_technology = tech_alien_life_studies
+				NOT = { has_valid_civic = civic_warrior_culture }
+			}
+		}
+
+		trigger = {
+			owner = {
+				count_owned_planet = {
+					limit = {
+						has_building = building_xeno_zoo
+					}
+					count > 0
+				}
+			}
+		}
+	}
 	on_create = {
 		
 	}
@@ -418,7 +493,7 @@ xenoist = {
 			description = "EMBRACE_FACTION_DESC"
 
 			cost = {
-				influence = 500
+				unity = 5000
 			}
 
 			potential = {
@@ -426,7 +501,7 @@ xenoist = {
 				owner = {
 					OR = {
 						is_subject = no
-						NOT = { is_subject_type = dominion }
+						NOT = { any_agreement = { agreement_preset = preset_dominion } }
 					}
 				}
 			}

@@ -5,3 +5,12 @@ In generale guardare administrators
 guardare #Note: number of potential or actual members is checked by POP_FACTION_MIN_POTENTIAL_MEMBERS define
 	is_potential = {
 		is_faction_allowed = yes
+Da togliere rebel e phi_archaeologist in giro
+Mettere la roba overlord_resources anche a phi_jobs
+#POLITICS TRADITIONS RESOLUTION
+
+resolution_community_champions = { cos'è?
+
+Cotrollare che diplomatic_stance sia stata convertita da tutte le parti
+
+civic_hive_divided_attention cambiarlo eventualmente con empire_size_mult = -0.10

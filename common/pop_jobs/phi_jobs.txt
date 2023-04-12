@@ -194,8 +194,27 @@ engineering_researcher = {
 			}
 			consumer_goods = 1
 		}
+		upkeep = {
+			trigger = {
+				planet = {
+					has_planet_flag = has_science_ministry
+				}
+			}
+			energy = 4
+		}
 	}
-
+	overlord_resources = {
+		category = planet_requisitioned_research
+		produces = {
+			trigger = {
+				planet = {
+					has_planet_flag = has_science_ministry
+				}
+			}
+			physics_research = 1
+			engineering_research = 4
+		}
+	}
 	weight = {
 		weight = @specialist_job_weight
 		modifier = {
@@ -322,6 +341,26 @@ engineering_brain_drone = {
 		upkeep = {
 			food = 8
 		}
+		upkeep = {
+			trigger = {
+				planet = {
+					has_planet_flag = has_science_ministry
+				}
+			}
+			food = 4
+		}
+	}
+	overlord_resources = {
+		category = planet_requisitioned_research
+		produces = {
+			trigger = {
+				planet = {
+					has_planet_flag = has_science_ministry
+				}
+			}
+			physics_research = 1
+			engineering_research = 4
+		}
 	}
 
 	weight = {
@@ -400,8 +439,27 @@ engineering_calculator = {
 		upkeep = {
 			energy = 8
 		}
+		upkeep = {
+			trigger = {
+				planet = {
+					has_planet_flag = has_science_ministry
+				}
+			}
+			energy = 4
+		}
 	}
-
+		overlord_resources = {
+		category = planet_requisitioned_research
+		produces = {
+			trigger = {
+				planet = {
+					has_planet_flag = has_science_ministry
+				}
+			}
+			physics_research = 1
+			engineering_research = 4
+		}
+	}
 	weight = {
 		weight = @complex_drone_job_weight
 		modifier = {
@@ -487,6 +545,25 @@ physics_researcher = {
 			}
 			consumer_goods = 1
 		}
+		upkeep = {
+			trigger = {
+				planet = {
+					has_planet_flag = has_science_ministry
+				}
+			}
+			energy = 4
+		}
+	}
+	overlord_resources = {
+		category = planet_requisitioned_research
+		produces = {
+			trigger = {
+				planet = {
+					has_planet_flag = has_science_ministry
+				}
+		}
+		physics_research = 4
+		engineering_research = 1
 	}
 
 	weight = {
@@ -615,6 +692,25 @@ physics_brain_drone = {
 		upkeep = {
 			food = 8
 		}
+		upkeep = {
+			trigger = {
+				planet = {
+					has_planet_flag = has_science_ministry
+				}
+			}
+			food = 4
+		}
+	}
+	overlord_resources = {
+		category = planet_requisitioned_research
+		produces = {
+			trigger = {
+				planet = {
+					has_planet_flag = has_science_ministry
+				}
+		}
+		physics_research = 4
+		engineering_research = 1
 	}
 
 	weight = {
@@ -693,6 +789,25 @@ physics_calculator = {
 		upkeep = {
 			energy = 8
 		}
+		upkeep = {
+			trigger = {
+				planet = {
+					has_planet_flag = has_science_ministry
+				}
+			}
+			energy = 4
+		}
+	}
+	overlord_resources = {
+		category = planet_requisitioned_research
+		produces = {
+			trigger = {
+				planet = {
+					has_planet_flag = has_science_ministry
+				}
+		}
+		physics_research = 4
+		engineering_research = 1
 	}
 
 	weight = {

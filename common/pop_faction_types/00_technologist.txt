@@ -13,15 +13,13 @@ technologist = {
 	resources = {
 		category = pop_factions
 		produces = {
-			influence = 2
 			unity = 10
 		}
 	}
 
 	is_potential = {
 		years_passed > 1
-		NOT = { has_ethic = ethic_gestalt_consciousness }
-		NOT = { has_country_flag = suppress_vanilla_factions }
+		is_faction_allowed = yes
 	}
 
 	parameters = {
@@ -43,8 +41,8 @@ technologist = {
 			is_robot_pop = yes
 		}
 		is_shackled_robot = no
-		NOR = {
-			has_trait = trait_nerve_stapled
+		can_think = yes
+		NOT = {
 			has_ethic = ethic_spiritualist
 		}
 	}
@@ -117,6 +115,7 @@ technologist = {
 		potential = {
 			exists = owner
 			owner = {
+				is_subject = no
 				any_relation = {
 					has_communications = root.owner
 					is_country_type = default
@@ -252,11 +251,28 @@ technologist = {
 	}
 	
 	demand = {
+		title = TECHNOLOGIST_FEDERATION
+		unfulfilled_title = TECHNOLOGIST_FEDERATION_NOT_RESEARCH
+		desc = TECHNOLOGIST_FEDERATION_DESC
+
+		fulfilled_effect = 5
+		unfulfilled_effect = -0.001
+
+		potential = {
+			exists = owner.federation
+			has_federations_dlc = yes
+		}
+
+		trigger = {
+			owner.federation = { has_federation_type = research_federation }
+		}
+	}
+	demand = {
 		title = "GC_MATERIALIST_LAWS"
 		unfulfilled_title = "GC_NO_MATERIALIST_LAWS"
 		desc = "GC_MATERIALIST_LAWS_DESC"
 
-		fulfilled_effect = 10
+		fulfilled_effect = 5
 		unfulfilled_effect = 0.001
 
 		potential = {
@@ -325,7 +341,7 @@ technologist = {
 			description = "EMBRACE_FACTION_DESC"
 
 			cost = {
-				influence = 500
+				unity = 5000
 			}
 
 			potential = {
@@ -333,7 +349,7 @@ technologist = {
 				owner = {
 					OR = {
 						is_subject = no
-						NOT = { is_subject_type = dominion }
+						NOT = { any_agreement = { agreement_preset = preset_dominion } }
 					}
 				}
 			}

@@ -39,11 +39,35 @@ forse in 01_special_civics empire_size_colonies_mult = -0.9 ora è troppo forte
 02_gestalt_civics controllare che empire_size_mult = -0.20 funzioni
 civic_brand_loyalty lasciato invariato
 Cancellato observation_station_missions\00_missions.txt perchè uguale alla vanilla
-Forse:
-civic_hive_divided_attention cambiarlo eventualmente con empire_size_mult = -0.10
 
 Galactic_empire_1 ora da country_base_unity_produces_add = 200 invece di country_base_influence_produces_add = 20
 
 civic_shared_burden ora aumenta unity dalla fazione progressista
 
 Arrivato a pop_faction_types\prosperity compreso
+
+aggiunto in pop_faction_types: 
+Aggiunto TECHNOLOGIST_FEDERATION
+Diminuito GC_MATERIALIST_LAWS in fullfilled_effect a 5 da 10
+TOTALITARIAN_ELITISM portato a 5 invece di 10
+Aggiunto TOTALITARIAN_BENEVOLENT_SUBJUGATION_POLICY e TOTALITARIAN_OPPRESSIVE_SUBJUGATION_POLICY 
+Aggiunto TOTALITARIAN_FEDERATION
+Aggiunto TRADITIONALIST_PSIONIC_TEACHINGS
+Modificato TRADITIONALIST_FLESH_IS_STRONG a unfulfilled_effect = -15 da -10
+Rimosso NOT_SATELLITE in 00_traditionalist.txt in cambio messo TRADITIONALIST_FEDERATION
+
+Aggiunto XENOIST_OPPRESSIVE_SUBJUGATION_POLICY e XENOIST_BENEVOLENT_SUBJUGATION_POLICY e XENOIST_XENOLOGICAL_CONSERVATION
+
+guardare le altre se hanno roba di fereazione
+pop_jobs : duelist messo mult = value:scripted_modifier_mult|MODIFIER|pop_job_amenities_mult|
+Modificato phi_jobs overlord_resources su phi_jobs e messo effetto modificatore has_science_ministry a phijobs
+Aggiunto in resolutions\00_resolutions tutte le #POLITICS TRADITIONS RESOLUTION
+Cambiato in scripted_effects\01_start_ofgame_effects:
+{
+ #phi was add_building = building_engineering_lab_1 3.2.2 add_building = building_bureaucratic_1
+ in quello che c'è nella 3.7.2 poichè unity è importante ora
+}
+Se civica civic_permanent_employment messo building_posthumous_employment_center invece di building_engineering_lab_1 guardare # phi was g.g add_building = building_engineering_lab_1
+Messo ai_shipdata a carrier
+Messo limite titan 
+Arrivato a ship_sizes\00_syip_sizes
