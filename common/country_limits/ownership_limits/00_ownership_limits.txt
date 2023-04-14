@@ -24,5 +24,6 @@ default = {
 		carrier_ships_limit
 		offspring_cruiser_ships_limit
 		offspring_battleship_ships_limit
+		offspring_carrier_ships_limit
 	}
 }

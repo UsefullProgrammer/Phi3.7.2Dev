@@ -257,7 +257,7 @@ utility_component_template = {
 	}
 
 	class_restriction = { shipclass_military shipclass_constructor shipclass_colonizer shipclass_science_ship shipclass_transport shipclass_military_special shipclass_starbase }
-	size_restriction = { battleship carrier titan juggernaut colossus star_eater }
+	size_restriction = { battleship carrier titan juggernaut colossus star_eater offspring_carrier }
 	prerequisites = { "tech_jump_drive_1" }
 	component_set = "ftl_components"
 	upgrades_to = "PSI_JUMP_DRIVE_1"
@@ -289,7 +289,7 @@ utility_component_template = {
 	}
 
 	class_restriction = { shipclass_military shipclass_constructor shipclass_colonizer shipclass_science_ship shipclass_transport shipclass_military_special shipclass_starbase }
-	size_restriction = { battleship carrier titan juggernaut colossus star_eater }
+	size_restriction = { battleship carrier titan juggernaut colossus star_eater offspring_carrier }
 	prerequisites = { "tech_psi_jump_drive_1" }
 	component_set = "ftl_components"
 }

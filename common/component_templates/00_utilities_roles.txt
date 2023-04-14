@@ -1050,7 +1050,7 @@ utility_component_template = {
 		}
 	}
 	class_restriction = { shipclass_military shipclass_starbase shipclass_military_special }
-	size_restriction = { cruiser battleship juggernaut titan star_eater carrier offspring_cruiser offspring_battleship }
+	size_restriction = { cruiser battleship juggernaut titan star_eater carrier offspring_cruiser offspring_battleship offspring_carrier }
 	component_set = "combat_computers"
 	ship_behavior = "carrier"
 	prerequisites = { "tech_combat_computers_1" }
@@ -1080,7 +1080,7 @@ utility_component_template = {
 		}
 	}
 	class_restriction = { shipclass_military shipclass_starbase shipclass_military_special }
-	size_restriction = { cruiser battleship juggernaut titan star_eater carrier offspring_cruiser offspring_battleship }
+	size_restriction = { cruiser battleship juggernaut titan star_eater carrier offspring_cruiser offspring_battleship offspring_carrier }
 	component_set = "combat_computers"
 	ship_behavior = "carrier"
 	prerequisites = { "tech_combat_computers_2" }
@@ -1110,7 +1110,7 @@ utility_component_template = {
 		}
 	}
 	class_restriction = { shipclass_military shipclass_starbase shipclass_military_special }
-	size_restriction = { cruiser battleship juggernaut titan star_eater carrier offspring_cruiser offspring_battleship }
+	size_restriction = { cruiser battleship juggernaut titan star_eater carrier offspring_cruiser offspring_battleship offspring_carrier }
 	component_set = "combat_computers"
 	ship_behavior = "carrier"
 	prerequisites = { "tech_combat_computers_3" }
@@ -1150,7 +1150,7 @@ utility_component_template = {
 		}
 	}
 	class_restriction = { shipclass_military shipclass_starbase shipclass_military_special }
-	size_restriction = { cruiser battleship juggernaut titan star_eater carrier offspring_cruiser offspring_battleship }
+	size_restriction = { cruiser battleship juggernaut titan star_eater carrier offspring_cruiser offspring_battleship offspring_carrier }
 	component_set = "combat_computers"
 	ship_behavior = "carrier"
 	prerequisites = { "tech_combat_computers_autonomous" }
@@ -1179,7 +1179,7 @@ utility_component_template = {
 		}
 	}
 	class_restriction = { shipclass_military shipclass_starbase shipclass_military_special }
-	size_restriction = { cruiser battleship juggernaut titan star_eater carrier offspring_cruiser offspring_battleship }
+	size_restriction = { cruiser battleship juggernaut titan star_eater carrier offspring_cruiser offspring_battleship offspring_carrier }
 	component_set = "combat_computers"
 	ship_behavior = "carrier"
 	prerequisites = { "tech_precognition_interface" }

@@ -231,6 +231,7 @@ utility_component_template = {
 	size_restriction = {
 		battleship
 		carrier
+		offspring_carrier
 		offspring_battleship
 	}
 	upgrades_to = "BATTLESHIP_FUSION_REACTOR"
@@ -460,6 +461,7 @@ utility_component_template = {
 	size_restriction = {
 		battleship
 		carrier
+		offspring_carrier
 		offspring_battleship
 	}
 	upgrades_to = "BATTLESHIP_COLD_FUSION_REACTOR"
@@ -689,6 +691,7 @@ utility_component_template = {
 	size_restriction = {
 		battleship
 		carrier
+		offspring_carrier
 		offspring_battleship
 	}
 	upgrades_to = "BATTLESHIP_ANTIMATTER_REACTOR"
@@ -918,6 +921,7 @@ utility_component_template = {
 	size_restriction = {
 		battleship
 		carrier
+		offspring_carrier
 		offspring_battleship
 	}
 	upgrades_to = "BATTLESHIP_ZERO_POINT_REACTOR"
@@ -1147,6 +1151,7 @@ utility_component_template = {
 	size_restriction = {
 		battleship
 		carrier
+		offspring_carrier
 		offspring_battleship
 	}
 	upgrades_to = "BATTLESHIP_DARK_MATTER_REACTOR"
@@ -1439,6 +1444,7 @@ utility_component_template = {
 	size_restriction = {
 		battleship
 		carrier
+		offspring_carrier
 		offspring_battleship
 	}
 
