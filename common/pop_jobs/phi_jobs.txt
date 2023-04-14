@@ -448,7 +448,7 @@ engineering_calculator = {
 			energy = 4
 		}
 	}
-		overlord_resources = {
+	overlord_resources = {
 		category = planet_requisitioned_research
 		produces = {
 			trigger = {
@@ -564,6 +564,7 @@ physics_researcher = {
 		}
 		physics_research = 4
 		engineering_research = 1
+		}
 	}
 
 	weight = {
@@ -709,8 +710,9 @@ physics_brain_drone = {
 					has_planet_flag = has_science_ministry
 				}
 		}
-		physics_research = 4
-		engineering_research = 1
+			physics_research = 4
+			engineering_research = 1
+		}
 	}
 
 	weight = {
@@ -808,6 +810,7 @@ physics_calculator = {
 		}
 		physics_research = 4
 		engineering_research = 1
+		}
 	}
 
 	weight = {

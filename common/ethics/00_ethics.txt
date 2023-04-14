@@ -1995,7 +1995,8 @@ ethic_fanatic_pacifist = {
 	}
 
 	country_modifier = {
-		country_admin_cap_mult = 0.20
+		empire_size_mult = -0.20
+		#country_admin_cap_mult = 0.20
 	}
 
 	random_weight = {
@@ -2013,7 +2014,8 @@ ethic_pacifist = {
 	fanatic_variant = ethic_fanatic_pacifist
 
 	country_modifier = {
-		country_admin_cap_mult = 0.10
+		empire_size_mult = -0.10
+		#country_admin_cap_mult = 0.10
 	}
 
 	tags = {

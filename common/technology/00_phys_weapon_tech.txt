@@ -35,7 +35,7 @@ tech_lasers_2 = {
 			has_ethic = ethic_fanatic_militarist
 		}
 		modifier = {
-			factor = 1.25
+			factor = value:tech_weight_likelihood
 			research_leader = {
 				area = physics
 				has_trait = "leader_trait_expertise_particles"
@@ -44,7 +44,6 @@ tech_lasers_2 = {
 	}
 
 	ai_weight = {
-		factor = 2		#weapons are good
 		modifier = {
 			factor = 1.25
 			has_ethic = ethic_militarist
@@ -59,6 +58,14 @@ tech_lasers_2 = {
 				area = physics
 				has_trait = "leader_trait_expertise_particles"
 			}
+		}
+		modifier = {
+			factor = @favored_weapon_ai_tech_factor
+			is_preferred_weapons = weapon_type_energy
+		}
+		modifier = {
+			factor = @disfavored_weapon_ai_tech_factor
+			NOT = { is_preferred_weapons = weapon_type_energy }
 		}
 	}
 }
@@ -85,7 +92,7 @@ tech_lasers_3 = {
 			has_ethic = ethic_fanatic_militarist
 		}
 		modifier = {
-			factor = 1.25
+			factor = value:tech_weight_likelihood
 			research_leader = {
 				area = physics
 				has_trait = "leader_trait_expertise_particles"
@@ -94,7 +101,6 @@ tech_lasers_3 = {
 	}
 
 	ai_weight = {
-		factor = 2		#weapons are good
 		modifier = {
 			factor = 1.25
 			has_ethic = ethic_militarist
@@ -109,6 +115,14 @@ tech_lasers_3 = {
 				area = physics
 				has_trait = "leader_trait_expertise_particles"
 			}
+		}
+		modifier = {
+			factor = @favored_weapon_ai_tech_factor
+			is_preferred_weapons = weapon_type_energy
+		}
+		modifier = {
+			factor = @disfavored_weapon_ai_tech_factor
+			NOT = { is_preferred_weapons = weapon_type_energy }
 		}
 	}
 }
@@ -135,7 +149,7 @@ tech_lasers_4 = {
 			has_ethic = ethic_fanatic_militarist
 		}
 		modifier = {
-			factor = 1.25
+			factor = value:tech_weight_likelihood
 			research_leader = {
 				area = physics
 				has_trait = "leader_trait_expertise_particles"
@@ -144,7 +158,6 @@ tech_lasers_4 = {
 	}
 
 	ai_weight = {
-		factor = 2		#weapons are good
 		modifier = {
 			factor = 1.25
 			has_ethic = ethic_militarist
@@ -159,6 +172,14 @@ tech_lasers_4 = {
 				area = physics
 				has_trait = "leader_trait_expertise_particles"
 			}
+		}
+		modifier = {
+			factor = @favored_weapon_ai_tech_factor
+			is_preferred_weapons = weapon_type_energy
+		}
+		modifier = {
+			factor = @disfavored_weapon_ai_tech_factor
+			NOT = { is_preferred_weapons = weapon_type_energy }
 		}
 	}
 }
@@ -185,7 +206,7 @@ tech_lasers_5 = {
 			has_ethic = ethic_fanatic_militarist
 		}
 		modifier = {
-			factor = 1.25
+			factor = value:tech_weight_likelihood
 			research_leader = {
 				area = physics
 				has_trait = "leader_trait_expertise_particles"
@@ -194,7 +215,6 @@ tech_lasers_5 = {
 	}
 
 	ai_weight = {
-		factor = 2		#weapons are good
 		modifier = {
 			factor = 1.25
 			has_ethic = ethic_militarist
@@ -209,6 +229,14 @@ tech_lasers_5 = {
 				area = physics
 				has_trait = "leader_trait_expertise_particles"
 			}
+		}
+		modifier = {
+			factor = @favored_weapon_ai_tech_factor
+			is_preferred_weapons = weapon_type_energy
+		}
+		modifier = {
+			factor = @disfavored_weapon_ai_tech_factor
+			NOT = { is_preferred_weapons = weapon_type_energy }
 		}
 	}
 }
@@ -232,7 +260,7 @@ tech_energy_lance_1 = {
 			has_ethic = ethic_fanatic_militarist
 		}
 		modifier = {
-			factor = 1.25
+			factor = value:tech_weight_likelihood
 			research_leader = {
 				area = physics
 				has_trait = "leader_trait_expertise_particles"
@@ -241,7 +269,6 @@ tech_energy_lance_1 = {
 	}
 
 	ai_weight = {
-		factor = 2		#weapons are good
 		modifier = {
 			factor = 1.25
 			has_ethic = ethic_militarist
@@ -256,6 +283,14 @@ tech_energy_lance_1 = {
 				area = physics
 				has_trait = "leader_trait_expertise_particles"
 			}
+		}
+		modifier = {
+			factor = @favored_weapon_ai_tech_factor
+			is_preferred_weapons = weapon_type_energy
+		}
+		modifier = {
+			factor = @disfavored_weapon_ai_tech_factor
+			NOT = { is_preferred_weapons = weapon_type_energy }
 		}
 	}
 }
@@ -279,7 +314,7 @@ tech_energy_lance_2 = {
 			has_ethic = ethic_fanatic_militarist
 		}
 		modifier = {
-			factor = 1.25
+			factor = value:tech_weight_likelihood
 			research_leader = {
 				area = physics
 				has_trait = "leader_trait_expertise_particles"
@@ -288,7 +323,6 @@ tech_energy_lance_2 = {
 	}
 
 	ai_weight = {
-		factor = 2		#weapons are good
 		modifier = {
 			factor = 1.25
 			has_ethic = ethic_militarist
@@ -303,6 +337,14 @@ tech_energy_lance_2 = {
 				area = physics
 				has_trait = "leader_trait_expertise_particles"
 			}
+		}
+		modifier = {
+			factor = @favored_weapon_ai_tech_factor
+			is_preferred_weapons = weapon_type_energy
+		}
+		modifier = {
+			factor = @disfavored_weapon_ai_tech_factor
+			NOT = { is_preferred_weapons = weapon_type_energy }
 		}
 	}
 }
@@ -331,7 +373,7 @@ tech_plasma_1 = {
 			has_ethic = ethic_fanatic_militarist
 		}
 		modifier = {
-			factor = 1.25
+			factor = value:tech_weight_likelihood
 			research_leader = {
 				area = physics
 				has_trait = "leader_trait_expertise_particles"
@@ -369,7 +411,7 @@ tech_plasma_2 = {
 			has_ethic = ethic_fanatic_militarist
 		}
 		modifier = {
-			factor = 1.25
+			factor = value:tech_weight_likelihood
 			research_leader = {
 				area = physics
 				has_trait = "leader_trait_expertise_particles"
@@ -401,7 +443,7 @@ tech_plasma_3 = {
 			has_ethic = ethic_fanatic_militarist
 		}
 		modifier = {
-			factor = 1.25
+			factor = value:tech_weight_likelihood
 			research_leader = {
 				area = physics
 				has_trait = "leader_trait_expertise_particles"
@@ -433,7 +475,7 @@ tech_arc_emitter_1 = {
 			has_ethic = ethic_fanatic_militarist
 		}
 		modifier = {
-			factor = 1.25
+			factor = value:tech_weight_likelihood
 			research_leader = {
 				area = physics
 				has_trait = "leader_trait_expertise_particles"
@@ -442,7 +484,6 @@ tech_arc_emitter_1 = {
 	}
 
 	ai_weight = {
-		factor = 2		#weapons are good
 		modifier = {
 			factor = 1.25
 			has_ethic = ethic_militarist
@@ -457,6 +498,14 @@ tech_arc_emitter_1 = {
 				area = physics
 				has_trait = "leader_trait_expertise_particles"
 			}
+		}
+		modifier = {
+			factor = @favored_weapon_ai_tech_factor
+			is_preferred_weapons = weapon_type_energy
+		}
+		modifier = {
+			factor = @disfavored_weapon_ai_tech_factor
+			NOT = { is_preferred_weapons = weapon_type_energy }
 		}
 	}
 }
@@ -480,7 +529,7 @@ tech_arc_emitter_2 = {
 			has_ethic = ethic_fanatic_militarist
 		}
 		modifier = {
-			factor = 1.25
+			factor = value:tech_weight_likelihood
 			research_leader = {
 				area = physics
 				has_trait = "leader_trait_expertise_particles"
@@ -489,7 +538,6 @@ tech_arc_emitter_2 = {
 	}
 
 	ai_weight = {
-		factor = 2		#weapons are good
 		modifier = {
 			factor = 1.25
 			has_ethic = ethic_militarist
@@ -504,6 +552,14 @@ tech_arc_emitter_2 = {
 				area = physics
 				has_trait = "leader_trait_expertise_particles"
 			}
+		}
+		modifier = {
+			factor = @favored_weapon_ai_tech_factor
+			is_preferred_weapons = weapon_type_energy
+		}
+		modifier = {
+			factor = @disfavored_weapon_ai_tech_factor
+			NOT = { is_preferred_weapons = weapon_type_energy }
 		}
 	}
 }
@@ -532,7 +588,7 @@ tech_disruptors_1 = {
 			has_ethic = ethic_fanatic_militarist
 		}
 		modifier = {
-			factor = 1.25
+			factor = value:tech_weight_likelihood
 			research_leader = {
 				area = physics
 				has_trait = "leader_trait_expertise_particles"
@@ -570,7 +626,7 @@ tech_disruptors_2 = {
 			has_ethic = ethic_fanatic_militarist
 		}
 		modifier = {
-			factor = 1.25
+			factor = value:tech_weight_likelihood
 			research_leader = {
 				area = physics
 				has_trait = "leader_trait_expertise_particles"
@@ -602,7 +658,7 @@ tech_disruptors_3 = {
 			has_ethic = ethic_fanatic_militarist
 		}
 		modifier = {
-			factor = 1.25
+			factor = value:tech_weight_likelihood
 			research_leader = {
 				area = physics
 				has_trait = "leader_trait_expertise_particles"
@@ -625,7 +681,7 @@ tech_energy_torpedoes_1 = {
 	tier = 3
 	category = { particles }
 	ai_update_type = military
-	prerequisites = { "tech_lasers_4" }
+	prerequisites = { "tech_torpedoes_1" "tech_lasers_4" }
 	weight = @tier3weight3
 
 	weight_modifier = {
@@ -644,7 +700,7 @@ tech_energy_torpedoes_1 = {
 			}
 		}
 		modifier = {
-			factor = 1.25
+			factor = value:tech_weight_likelihood
 			research_leader = {
 				area = physics
 				has_trait = "leader_trait_expertise_particles"
@@ -676,7 +732,7 @@ tech_energy_torpedoes_2 = {
 			has_ethic = ethic_fanatic_militarist
 		}
 		modifier = {
-			factor = 1.25
+			factor = value:tech_weight_likelihood
 			research_leader = {
 				area = physics
 				has_trait = "leader_trait_expertise_particles"
@@ -716,7 +772,7 @@ tech_pd_tracking_2 = {
 
 	weight_modifier = {
 		modifier = {
-			factor = 1.25
+			factor = value:tech_weight_likelihood
 			research_leader = {
 				area = physics
 				has_trait = "leader_trait_expertise_computing"
@@ -743,7 +799,7 @@ tech_pd_tracking_3 = {
 
 	weight_modifier = {
 		modifier = {
-			factor = 1.25
+			factor = value:tech_weight_likelihood
 			research_leader = {
 				area = physics
 				has_trait = "leader_trait_expertise_computing"
@@ -817,7 +873,6 @@ tech_space_cloud_weapon_1 = {
 	weight = 0
 
 	ai_weight = {
-		factor = 2		#weapons are good
 		modifier = {
 			factor = 1.25
 			has_ethic = ethic_militarist

@@ -195,7 +195,7 @@ agenda_national_purity = { # Reduced immigration attraction, influence bonus
 	modifier = {
 		pop_ethic_xenophobe_attraction_mult = 0.20
 		country_influence_produces_mult = 0.25
-		pop_factions_influence_produces_add = 1
+		pop_factions_unity_produces_mult = 0.1
 	}
 }
 
@@ -221,7 +221,7 @@ agenda_public_debates = {
 
 	modifier = {
 		pop_ethics_shift_speed_mult = 0.5
-		pop_factions_unity_produces_add = 20
+		pop_factions_unity_produces_add = 1
 	}
 }
 
@@ -328,7 +328,7 @@ agenda_selective_nostalgia = { # Unity production modifier
 
 	modifier = {
 		planet_jobs_unity_produces_mult = 0.25
-		pop_factions_unity_produces_add = 20
+		pop_factions_unity_produces_add = 1
 	}
 }
 

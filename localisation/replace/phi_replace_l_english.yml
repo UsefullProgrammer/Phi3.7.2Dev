@@ -123,17 +123,26 @@
  trade_policy_trade_league_desc:1 "By banding together in a trade league, we are able to prosper and secure profits on a whole new level.\n\n§EEach collected £trade_value£ §YTrade Value§! earns us £energy£ §Y0.25§!, £unity£ §Y0.25§!, £consumer_goods£ §Y0.25§! and £society_research£ §Y0.25§!"
  trade_policy_unity_desc:1 "Trade can be used not only to move goods around, but also to facilitate the spread of ideas. We should focus our trade efforts towards ensuring that the message of our government is heard on all planets where we do business.\n\n§EEach collected £trade_value£ §YTrade Value§! earns us £energy£ §Y0.25§! and £unity£ §Y0.5§!"
  trade_policy_consumer_goods_desc:0 "Profits and taxes must take second place to improving the lives of our citizens. We should focus our trade efforts towards the manufacture and distribution of everyday necessities.\n\n§EEach collected £trade_value£ §YTrade Value§! earns us £energy£ §Y0.25§! and £consumer_goods£ §Y0.5§!"
+trade_policy_holy_covenant:0 "Holy Covenant"
+ trade_conversion_holy_covenant_name:0 "$trade_policy_holy_covenant$"
+ trade_policy_holy_covenant_desc:0 "By banding together in a holy covenant, we may bask in the collective glory of our divine purpose.\n\n§EEach collected £trade_value£ §YTrade Value§! earns us £energy£ §Y0.25§! and £unity£ §Y0.5§!§! and £society_research£ §Y0.25§!§!"
  no_retreat_doctrine_desc:0 "Our ships are expected to fight to the bitter end. We will tolerate no withdrawals, no retreats, no routs. For our fleet there is only victory or death. Not one step back!\n\nAttrition: §G-20%§!\n"
  
  #Technologies
  TECH_UNLOCK_JUGGERNAUT_CONSTRUCTION_TITLE:0 "§HUnlocks Ship Type:§! Juggernaut and Colossus"
  TECH_UNLOCK_JUGGERNAUT_CONSTRUCTION_DESC: "You don't need any description. Don't you?"
- tech_capital_productivity_1_effect:0 "Capital Buildings:\n  $mod_planet_jobs_produces_mult$: §G+10%§!"
- tech_capital_productivity_2_effect:0 "Upgraded Capital Buildings:\n  $mod_planet_jobs_produces_mult$: §G+20%§!"
- tech_capital_productivity_3_effect:0 "Major Capital Buildings:\n  $mod_planet_jobs_produces_mult$: §G+30%§!"
+
  
+ EMPIRE_SIZE_NO_EFFECTS:4 "While §Y$EMPIRE_SIZE$§! is at or below §Y300§!, no other costs are being modified."
+
  #Decisions
  decision_prospect_effects_short:0 "Adds a random §GPlanetary Feature§! and §RModifier§! to the planet."
  
  # Main gui
  CREATE_SECTOR:1 "§HCreate New Sector§!\nThis will create a new sector with this planet as its sector capital. All systems within §Y1§! jumps, not previously a part of any sector, will become a part of this new sector."
+
+
+#error questo tag ha qualcosa di sbagliato @mario
+ tech_capital_productivity_1_effect:0 "Capital Buildings:\n  $mod_planet_jobs_produces_mult$: §G+10%§!"
+ tech_capital_productivity_2_effect:0 "Upgraded Capital Buildings:\n  $mod_planet_jobs_produces_mult$: §G+20%§!"
+ tech_capital_productivity_3_effect:0 "Major Capital Buildings:\n  $mod_planet_jobs_produces_mult$: §G+30%§!"

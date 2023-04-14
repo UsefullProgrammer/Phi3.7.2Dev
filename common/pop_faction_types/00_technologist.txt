@@ -13,13 +13,12 @@ technologist = {
 	resources = {
 		category = pop_factions
 		produces = {
-			unity = 10
+			unity = 0.5
 		}
 	}
 
 	is_potential = {
-		years_passed > 1
-		is_faction_allowed = yes
+		is_faction_allowed_phi = yes
 	}
 
 	parameters = {
@@ -305,13 +304,25 @@ technologist = {
 			exists = owner
 			owner = {
 				is_subject = yes
-				is_subject_type = dominion
+				any_agreement = {
+					has_term_value = {
+						term = resource_subsidies_basic
+						value > 0
+					}
+				}
 			}
 		}
 
 		trigger = {
 			owner = {
-				NOT = { is_subject_type = dominion }
+				NOT = {
+					any_agreement = {
+						has_term_value = {
+							term = resource_subsidies_basic
+							value > 0
+						}
+					}
+				 }
 			}
 		}
 	}

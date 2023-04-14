@@ -31,6 +31,18 @@ starbase_outpost = {
 		}
 	}
 
+	potential_construction = {
+		is_scope_type = planet
+		is_primary_star = yes
+		NOT = {
+			exists = orbital_defence
+		}
+	}
+
+	possible_construction = {
+		always = yes
+	}
+
 	combat_size_multiplier = 5
 	size_multiplier = 4
 	fleet_slot_size = 2
@@ -95,7 +107,7 @@ starbase_starport = {
 	}
 
 	combat_size_multiplier = 20
-	size_multiplier = 4
+	size_multiplier = 6
 	fleet_slot_size = 2
 	section_slots = {
 		"core" = { locator = "part1" }
@@ -124,6 +136,14 @@ starbase_starport = {
 	formation_priority = @starbase_formation_priority
 	icon_frame = 2
 	icon = ship_size_military_station
+
+	potential_construction = {
+		always = no
+	}
+
+	possible_construction = {
+		always = no
+	}
 }
 
 starbase_starhold = {
@@ -160,7 +180,7 @@ starbase_starhold = {
 	}
 
 	combat_size_multiplier = 30
-	size_multiplier = 4
+	size_multiplier = 8
 	fleet_slot_size = 2
 	section_slots = {
 		"core" = { locator = "part1" }
@@ -191,6 +211,13 @@ starbase_starhold = {
 	formation_priority = @starbase_formation_priority
 	icon_frame = 3
 	icon = ship_size_military_station
+	potential_construction = {
+		always = no
+	}
+
+	possible_construction = {
+		always = no
+	}
 }
 
 starbase_starfortress = {
@@ -227,7 +254,7 @@ starbase_starfortress = {
 	}
 
 	combat_size_multiplier = 40
-	size_multiplier = 4
+	size_multiplier = 12
 	fleet_slot_size = 2
 	section_slots = {
 		"core" = { locator = "part1" }
@@ -260,6 +287,13 @@ starbase_starfortress = {
 	formation_priority = @starbase_formation_priority
 	icon_frame = 4
 	icon = ship_size_military_station
+	potential_construction = {
+		always = no
+	}
+
+	possible_construction = {
+		always = no
+	}
 }
 
 starbase_citadel = {
@@ -296,7 +330,7 @@ starbase_citadel = {
 	}
 
 	combat_size_multiplier = 50
-	size_multiplier = 4
+	size_multiplier = 16
 	fleet_slot_size = 2
 	section_slots = {
 		"core" = { locator = "part1" }
@@ -330,6 +364,13 @@ starbase_citadel = {
 	formation_priority = @starbase_formation_priority
 	icon_frame = 5
 	icon = ship_size_military_station
+	potential_construction = {
+		always = no
+	}
+
+	possible_construction = {
+		always = no
+	}
 }
 
 ####################
@@ -350,9 +391,16 @@ starbase_swarm = {
 		ship_weapon_range_mult = 0.20
 	}
 	max_hitpoints = @ship_7
+	potential_construction = {
+		is_scope_type = planet
+		is_primary_star = yes
+		NOT = {
+			exists = orbital_defence
+		}
+	}
 	base_buildtime = 730
 	combat_size_multiplier = 50
-	size_multiplier = 4
+	size_multiplier = 16
 	fleet_slot_size = 2
 	section_slots = { "core" = { locator = "root" } }
 	is_designable = no
@@ -390,9 +438,16 @@ starbase_ai = {
 		ship_weapon_range_mult = 0.20
 	}
 	max_hitpoints = @ship_6
+	potential_construction = {
+		is_scope_type = planet
+		is_primary_star = yes
+		NOT = {
+			exists = orbital_defence
+		}
+	}
 	base_buildtime = 730
 	combat_size_multiplier = 50
-	size_multiplier = 4
+	size_multiplier = 16
 	fleet_slot_size = 2
 	section_slots = { "core" = { locator = "root" } }
 	is_designable = no
@@ -431,9 +486,16 @@ starbase_exd_0 = {
 		ship_weapon_range_mult = 0.20
 	}
 	max_hitpoints = @ship_6
+	potential_construction = {
+		is_scope_type = planet
+		is_primary_star = yes
+		NOT = {
+			exists = orbital_defence
+		}
+	}
 	base_buildtime = 730
 	combat_size_multiplier = 50
-	size_multiplier = 4
+	size_multiplier = 16
 	fleet_slot_size = 2
 	section_slots = { "core" = { locator = "root" } }
 	is_designable = no
@@ -474,9 +536,16 @@ starbase_exd = {
 		ship_fire_rate_mult = 0.50
 	}
 	max_hitpoints = @ship_9
+	potential_construction = {
+		is_scope_type = planet
+		is_primary_star = yes
+		NOT = {
+			exists = orbital_defence
+		}
+	}
 	base_buildtime = 730
 	combat_size_multiplier = 50
-	size_multiplier = 4
+	size_multiplier = 32
 	fleet_slot_size = 2
 	section_slots = { "core" = { locator = "root" } }
 	is_designable = no
@@ -515,9 +584,16 @@ starbase_marauder = {
 		ship_weapon_range_mult = 0.20
 	}
 	max_hitpoints = @ship_6
+	potential_construction = {
+		is_scope_type = planet
+		is_primary_star = yes
+		NOT = {
+			exists = orbital_defence
+		}
+	}
 	base_buildtime = 730
 	combat_size_multiplier = 50
-	size_multiplier = 4
+	size_multiplier = 12
 	fleet_slot_size = 2
 	section_slots = { "mid" = { locator = "part1" } }
 	is_designable = no
@@ -555,10 +631,19 @@ starbase_gatebuilders = {
 	ship_modifier = {
 		ship_weapon_range_mult = 0.20
 	}
+	
+	potential_construction = {
+		is_scope_type = planet
+		is_primary_star = yes
+		NOT = {
+			exists = orbital_defence
+		}
+	}
+	
 	max_hitpoints = @ship_6
 	base_buildtime = 730
 	combat_size_multiplier = 50
-	size_multiplier = 4
+	size_multiplier = 12
 	fleet_slot_size = 2
 	section_slots = { "mid" = { locator = "part1" } }
 	is_designable = no
@@ -618,6 +703,14 @@ starbase_fe_outpost = {
 		}
 	}
 
+	potential_construction = {
+		is_scope_type = planet
+		is_primary_star = yes
+		NOT = {
+			exists = orbital_defence
+		}
+	}
+
 	combat_size_multiplier = 5
 	size_multiplier = 4
 	fleet_slot_size = 2
@@ -667,12 +760,12 @@ ion_cannon = {
 	combat_size_multiplier = 8
 	section_slots = { "ship" = { locator = "part1" } }
 	is_designable = yes
-	components_add_to_cost = no
+	components_add_to_cost = yes
 	uses_name_prefix = no
 	takes_name_from_ship_design = yes
 	num_target_locators = 0
 	is_space_station = yes
-	base_buildtime = 1080
+	base_buildtime = @battleship_build_time
 	auto_upgrade = no
 
 	enable_default_design = yes	#if yes, countries will have an auto-generated design at start
@@ -690,13 +783,19 @@ ion_cannon = {
 	}
 
 	possible_construction = {
-		has_starbase_size >= starbase_citadel
+		OR = {
+			has_starbase_size >= starbase_citadel
+			has_starbase_size >= orbital_ring_tier_3
+		}
 	}
 
 	resources = {
 		category = starbase_stations
 		cost = {
 			alloys = 2000
+		}
+		upkeep = {
+			energy = 1
 		}
 	}
 }

@@ -5,6 +5,7 @@ tr_versatility_adopt = {
 }
 
 tr_versatility_finish = {
+	custom_tooltip = tr_versatility_finish_desc
 	modifier = {
 		country_engineering_tech_research_speed = 0.10
 		ascension_perks_add = 1

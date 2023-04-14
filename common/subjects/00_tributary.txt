@@ -84,7 +84,7 @@ tributary = {
 			}
 			set_subject_of = {
 				who = from
-				subject_type = dominion
+				preset = preset_dominion
 			}
 			break = yes
 		}

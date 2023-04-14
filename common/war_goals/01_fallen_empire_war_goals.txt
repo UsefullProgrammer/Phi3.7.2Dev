@@ -220,7 +220,7 @@ wg_ae_domination = {
 			from = {
 				set_subject_of = {
 					who = root
-					subject_type = signatory
+					preset = preset_signatory
 				}
 			}
 		}
@@ -231,7 +231,7 @@ wg_ae_domination = {
 			from = {
 				set_subject_of = {
 					who = root
-					subject_type = thrall
+					preset = preset_thrall
 				}
 			}
 		}
@@ -242,7 +242,13 @@ wg_ae_domination = {
 			from = {
 				set_subject_of = {
 					who = root
-					subject_type = dominion
+					preset = preset_dominion
+				}
+				if = {
+					limit = {
+						is_gestalt = no
+					}
+					shift_ethic = ethic_fanatic_spiritualist
 				}
 			}
 		}
@@ -253,7 +259,7 @@ wg_ae_domination = {
 			from = {
 				set_subject_of = {
 					who = root
-					subject_type = satellite
+					preset = preset_satellite
 				}
 			}
 		}

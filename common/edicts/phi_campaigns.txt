@@ -5,15 +5,14 @@
 @n50 = 2
 @n500 = 20
 gears_of_war = {
-	length = @EdictDuration
+	length = 720
 	icon = "GFX_edict_type_time"
 	resources = {
 		category = edicts
-		upkeep = {
-			influence = @n50
-			energy = @n500
-			minerals = @n500
-			multiplier = value:edict_size_effect
+		cost = {
+			influence = 50
+			energy = 500
+			minerals = 500
 		}
 	}
 
@@ -36,14 +35,14 @@ gears_of_war = {
 }
 
 gnam_gnam_gnam = {
-	length = @EdictDuration
+	length = 720
 	icon = "GFX_edict_type_time"
 	resources = {
 		category = edicts
-		upkeep = {
-			influence = @n50
-			energy = @n500
-			minerals = @n500
+		cost = {
+			influence = 50
+			energy = 500
+			minerals = 500
 		}
 	}
 
@@ -78,7 +77,6 @@ total_noob = {
 		category = edicts
 		cost = {
 			influence = 5
-			multiplier = value:edict_size_effect
 		}
 	}
 

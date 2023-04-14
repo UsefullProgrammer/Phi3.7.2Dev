@@ -2,17 +2,19 @@
 
 # Per empire size over admin cap
 empire_size_over_cap = {
-	pop_government_ethic_attraction = -0.005
-	leader_upkeep_empire_size_mult = 0.01
-	planet_crime_add = 0.5
+	# in 3.7.4 useless
+	#pop_government_ethic_attraction = -0.005
+	#leader_upkeep_empire_size_mult = 0.01
+	#planet_crime_add = 0.5
 }
 
 # Per empire size (ignores admin cap)
 empire_size = {
-	rare_edicts_cost_mult = 0.01
-	campaigns_cost_mult = 0.01
-	leader_upkeep_empire_size_mult = 0.001
-	leader_cost_empire_size_mult = 0.001
+	# in 3.7.4 useless
+	#rare_edicts_cost_mult = 0.01
+	#campaigns_cost_mult = 0.01
+	#leader_upkeep_empire_size_mult = 0.001
+	#leader_cost_empire_size_mult = 0.001
 }
 
 humiliated = {

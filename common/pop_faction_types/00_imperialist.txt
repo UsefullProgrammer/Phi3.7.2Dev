@@ -12,14 +12,13 @@ imperialist = {
 	resources = {
 		category = pop_factions
 		produces = {
-			unity = 10
+			unity = 0.5
 		}
 	}
 
 	#Note: number of potential or actual members is checked by POP_FACTION_MIN_POTENTIAL_MEMBERS define
 	is_potential = {
-		years_passed > 1
-		is_faction_allowed = yes
+		is_faction_allowed_phi = yes
 	}
 
 	parameters = {

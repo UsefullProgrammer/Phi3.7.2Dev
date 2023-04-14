@@ -755,7 +755,7 @@ planet_event = {
 				}
 				set_subject_of = {
 					who = event_target:releasing_empire
-					subject_type = vassal
+					preset = preset_vassal
 				}
 			}
 		}

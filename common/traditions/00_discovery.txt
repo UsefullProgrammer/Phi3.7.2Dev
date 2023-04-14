@@ -1,5 +1,6 @@
 
 tr_discovery_adopt = {
+	custom_tooltip = tr_discovery_adopt_desc
 	modifier = {
 		ship_anomaly_research_speed_mult = 0.20
 	}
@@ -9,6 +10,23 @@ tr_discovery_finish = {
 	modifier = {
 		all_technology_research_speed = 0.10
 		ascension_perks_add = 1
+	}
+
+	tradition_swap = {
+		name = tr_discovery_federations_finish
+		inherit_icon = yes
+		inherit_name = yes
+		custom_tooltip = tr_discovery_federations_finish_desc
+		trigger = {
+			has_federations_dlc = yes
+		}
+		modifier = {
+			all_technology_research_speed = 0.10
+			ascension_perks_add = 1
+		}
+		weight = {
+			factor = 1
+		}
 	}
 }
 
@@ -53,6 +71,8 @@ tr_discovery_databank_uplinks = {
 	possible = {
 		has_tradition = tr_discovery_to_boldly_go
 	}
+
+	custom_tooltip = tr_discovery_databank_uplinks_desc
 
 	modifier = {
 		station_researchers_produces_mult = 0.5

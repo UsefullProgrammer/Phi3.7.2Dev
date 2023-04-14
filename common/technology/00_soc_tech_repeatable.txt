@@ -31,38 +31,6 @@ tech_repeatable_improved_tile_food_output = {
 	}
 }
 
-#tech_repeatable_improved_sector_cap = {
-#	area = society
-#	cost = @repeatableTechBaseCost
-#	cost_per_level = @repeatableTechLevelCost
-#	tier = @repeatableTechTier
-#	category = { new_worlds }
-#	levels = -1
-#	prerequisites = { "tech_adaptive_bureaucracy" }
-#	weight = @repeatableTechWeight
-#
-#	weight_modifier = {
-#		factor = @repatableTechFactor
-#	}
-#
-#	ai_weight = {
-#		factor = 1.0
-#	}
-#
-#	weight_groups = {
-#		repeatable
-#	}
-#	mod_weight_if_group_picked = {
-#		repeatable = 0.01
-#	}
-#
-#	modifier = {
-#		# TODO: Fix
-#		#country_sector_cap_add = 1
-#	}
-#}
-#
-
 tech_repeatable_improved_core_system_cap = {
 	area = society
 	cost = @repeatableTechBaseCost
@@ -89,7 +57,7 @@ tech_repeatable_improved_core_system_cap = {
 	}
 
 	modifier = {
-		country_admin_cap_add = 25
+		country_unity_produces_mult = 0.1
 	}
 }
 
@@ -123,35 +91,35 @@ tech_repeatable_improved_core_system_cap = {
 #	}
 #}
 
-# tech_repeatable_improved_edict_length = {
-	# area = society
-	# cost = @repeatableTechBaseCost
-	# cost_per_level = @repeatableTechLevelCost
-	# tier = @repeatableTechTier
-	# category = { statecraft }
-	# levels = -1
-	# prerequisites = { "tech_artificial_moral_codes" }
-	# weight = @repeatableTechWeight
-	
-	# weight_modifier = {
-		# factor = @repatableTechFactor
-	# }
-	
-	# ai_weight = {
-		# factor = 1.0
-	# }
-	
-	# weight_groups = {
-		# repeatable
-	# }
-	# mod_weight_if_group_picked = {
-		# repeatable = 0.01
-	# }
-	
-	# modifier = {
-		# edict_length_mult = 0.1
-	# }
-# }
+#tech_repeatable_improved_edict_length = {
+#	area = society
+#	cost = @repeatableTechBaseCost
+#	cost_per_level = @repeatableTechLevelCost
+#	tier = @repeatableTechTier
+#	category = { statecraft }
+#	levels = -1
+#	prerequisites = { "tech_artificial_moral_codes" }
+#	weight = @repeatableTechWeight
+#
+#	weight_modifier = {
+#		factor = @repatableTechFactor
+#	}
+#
+#	ai_weight = {
+#		factor = 1.0
+#	}
+#
+#	weight_groups = {
+#		repeatable
+#	}
+#	mod_weight_if_group_picked = {
+#		repeatable = 0.01
+#	}
+#
+#	modifier = {
+#		edict_length_mult = 0.1
+#	}
+#}
 
 tech_repeatable_improved_army_damage = {
 	area = society
@@ -269,7 +237,6 @@ tech_repeatable_naval_cap = {
 	}
 
 	modifier = {
-		#country_naval_cap_add = 20
 		country_naval_cap_mult = 0.03
 	}
 }
@@ -332,5 +299,83 @@ tech_repeatable_improved_starbase_capacity = {
 
 	modifier = {
 		country_starbase_capacity_add = 1
+	}
+}
+
+tech_repeatable_weapon_type_strike_craft_fire_damage = {
+	area = society
+	cost = @repeatableTechBaseCost
+	cost_per_level = @repeatableTechLevelCost
+	tier = @repeatableTechTier
+	category = { military_theory }
+	ai_update_type = military
+	levels = -1
+	prerequisites = { "tech_strike_craft_3" }
+	weight = @repeatableTechWeight
+
+	weight_modifier = {
+		factor = @repatableTechFactor
+	}
+
+	ai_weight = {
+		factor = 1.0
+		modifier = {
+			factor = @favored_weapon_ai_tech_factor
+			is_preferred_weapons = weapon_type_strike_craft
+		}
+		modifier = {
+			factor = @disfavored_weapon_ai_tech_factor
+			NOT = { is_preferred_weapons = weapon_type_strike_craft }
+		}
+	}
+
+	weight_groups = {
+		repeatable
+	}
+	mod_weight_if_group_picked = {
+		repeatable = 0.01
+	}
+
+	modifier = {
+		weapon_type_strike_craft_weapon_damage_mult = 0.10
+	}
+}
+
+tech_repeatable_weapon_type_strike_craft_fire_rate = {
+	area = society
+	cost = @repeatableTechBaseCost
+	cost_per_level = @repeatableTechLevelCost
+	tier = @repeatableTechTier
+	category = { military_theory }
+	ai_update_type = military
+	levels = -1
+	prerequisites = { "tech_strike_craft_3" }
+	weight = @repeatableTechWeight
+
+	weight_modifier = {
+		factor = @repatableTechFactor
+	}
+
+	ai_weight = {
+		factor = 1.0
+		modifier = {
+			factor = @favored_weapon_ai_tech_factor
+			is_preferred_weapons = weapon_type_strike_craft
+		}
+		modifier = {
+			factor = @disfavored_weapon_ai_tech_factor
+			NOT = { is_preferred_weapons = weapon_type_strike_craft }
+		}
+	}
+
+	weight_groups = {
+		repeatable
+	}
+	mod_weight_if_group_picked = {
+		repeatable = 0.01
+	}
+
+	modifier = {
+		weapon_type_strike_craft_weapon_fire_rate_mult = 0.10
 	}
 }

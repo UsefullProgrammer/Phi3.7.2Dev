@@ -107,7 +107,7 @@ planet_event = {
 				}
 				set_subject_of = {
 					who = event_target:franchise_hq
-					subject_type = subsidiary
+					preset = preset_subsidiary
 				}
 			}
 		}

@@ -12,13 +12,12 @@ xenoist = {
 	resources = {
 		category = pop_factions
 		produces = {
-			unity = 10
+			unity = 0.5
 		}
 	}
 
 	is_potential = {
-		years_passed > 1
-		is_faction_allowed = yes
+		is_faction_allowed_phi = yes
 	}
 
 	parameters = {
@@ -383,13 +382,13 @@ xenoist = {
 			exists = owner
 			owner = {
 				is_subject = yes
-				is_subject_type = thrall
+				any_agreement = { agreement_preset = preset_thrall } 
 			}
 		}
 
 		trigger = {
 			owner = {
-				NOT = { is_subject_type = thrall }
+				NOT = { any_agreement = { agreement_preset = preset_thrall } }
 			}
 		}
 	}

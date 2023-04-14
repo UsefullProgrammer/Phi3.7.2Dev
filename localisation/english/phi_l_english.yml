@@ -4,7 +4,7 @@
 ### START MENU ###
 ##################
 phi_game_start.1.name: "PHI START MENU"
-phi_game_start.1.desc: "You are playing §HPHI v1.6a (marIA)§!.\n\nChangelog is available at:\n§Bhttps://stellaris.paradoxwikis.com/Phi_mp_balancing/Phi_updates_and_changelog§!\n\nConsider putting a §Gthumbs up§! on the steam page of the mod!\n\nSelect your options for the game, then press OK to start."
+phi_game_start.1.desc: "You are playing §HPHI v2.0G (gobbiconversion3.7.4)§!.\n\nChangelog is available at:\n§Bhttps://stellaris.paradoxwikis.com/Phi_mp_balancing/Phi_updates_and_changelog§!\n\nConsider putting a §Gthumbs up§! on the steam page of the mod!\n\nSelect your options for the game, then press OK to start."
 
 phi_game_start.1.border_gore_allowed: "Border Gore is §GALLOWED§!"
 phi_game_start.1.border_gore_allowedTT: "§YBorder Gore = Allowed§! means that you §Gcan§! build outposts and have parts of your empire not directly connected to a fully colonized planet.\n\nClick here to §RDISALLOW§! Border Gore"
@@ -453,6 +453,8 @@ drone_policy_versatility_desc: "We allocate the necessary resources for our lead
 trade_policy_science:0 "Knowledge Exchange"
 trade_conversion_science_name:0 "$trade_policy_science$"
 trade_policy_science_desc:1 "We also exchange knowledge when we trade goods and services with foreigners.\n\n§EEach collected £trade_value£ §YTrade Value§! earns us £energy£ §Y0.25§! and £society_research£ §Y0.5§!§!"
+
+
 
 #Edicts
 edict_gears_of_war: "Gears of War"

@@ -95,7 +95,7 @@ civic_hive_divided_attention = {
 		base = @ai_civic_default_base_weight 
 	}
 	modifier = {
-		empire_size_colonies_mult = -0.25
+		empire_size_mult = -0.10
 	}
 }
 
@@ -737,7 +737,6 @@ civic_machine_catalytic_processing = {
 	}
 	modifier = {
 		country_alloys_produces_mult = 0.15
-			NOR = {
 	}
 	random_weight = { base = @civic_default_random_weight }
 	ai_weight = { 

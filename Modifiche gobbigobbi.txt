@@ -31,20 +31,16 @@ Aggiunto a phi_federation_types tranne a galactic_exmpire
 ownership_limits = default
 federation_check_for_subject_trigger = yes
 
-civic_imperial_cult messo edicts_upkeep_mult = -0.50 controllare che funzioni
-civic_citizen_service aggiunto planet_soldiers_unity_produces_add = 1 aggiungere civic_tooltip_citizen_service_effects quesot dettaglio.
 
 00_origins, origini nuove da origin_progenitor_hive in poi
 forse in 01_special_civics empire_size_colonies_mult = -0.9 ora è troppo forte
-02_gestalt_civics controllare che empire_size_mult = -0.20 funzioni
+02_gestalt_civics empire_size_mult = -0.20
 civic_brand_loyalty lasciato invariato
 Cancellato observation_station_missions\00_missions.txt perchè uguale alla vanilla
 
 Galactic_empire_1 ora da country_base_unity_produces_add = 200 invece di country_base_influence_produces_add = 20
 
 civic_shared_burden ora aumenta unity dalla fazione progressista
-
-Arrivato a pop_faction_types\prosperity compreso
 
 aggiunto in pop_faction_types: 
 Aggiunto TECHNOLOGIST_FEDERATION
@@ -58,7 +54,6 @@ Rimosso NOT_SATELLITE in 00_traditionalist.txt in cambio messo TRADITIONALIST_FE
 
 Aggiunto XENOIST_OPPRESSIVE_SUBJUGATION_POLICY e XENOIST_BENEVOLENT_SUBJUGATION_POLICY e XENOIST_XENOLOGICAL_CONSERVATION
 
-guardare le altre se hanno roba di fereazione
 pop_jobs : duelist messo mult = value:scripted_modifier_mult|MODIFIER|pop_job_amenities_mult|
 Modificato phi_jobs overlord_resources su phi_jobs e messo effetto modificatore has_science_ministry a phijobs
 Aggiunto in resolutions\00_resolutions tutte le #POLITICS TRADITIONS RESOLUTION
@@ -70,4 +65,40 @@ Cambiato in scripted_effects\01_start_ofgame_effects:
 Se civica civic_permanent_employment messo building_posthumous_employment_center invece di building_engineering_lab_1 guardare # phi was g.g add_building = building_engineering_lab_1
 Messo ai_shipdata a carrier
 Messo limite titan 
-Arrivato a ship_sizes\00_syip_sizes
+
+Messo invece di upkeep a 0 lo ioncannon a 1.
+Aggiunto delle variabili di utility come @ship_0 per navi primitive
+payback_warship settata come @ship5 (pari alle altre titan)
+orbital ring hanno hp 9k-18k-30k
+salvager_workshop ora come da proporzione phi invece di dimnuire upkeep ship di 20% dmimnuisce di 40% raddoppiato costo e manuntenzione
+cybrex_mining_hub station_gatherers_produces_mult = da 1.5 a 2
+Tolto da phi_sublimation_starbase_buildings 	ai_build_at_chokepoint = yes e ai_build_outside_chokepoint = yes poichè obsoleti
+Cambiato ratio di starbase_types\00_starbase_types strading_hub in quello della 3.7.2
+In 000_phi_static_modifiers override commentati i modificatori su empire_size poichè nella 3.7.4 sono gestiti 
+tech_colonial_bureaucracy da country_edict_fund_add = 25 invece della 3.74 che dava country_edict_fund_add = 20
+tech_living_state pop_factions_unity_produces_mult = 0.15 invece di op_factions_unity_produces_mult = 0.1
+tech_repeatable_improved_core_system_cap da country_admin_cap_add = 15 a  country_unity_produces_mult = 0.1 invece di country_unity_produces_mult = 0.05
+tech_mine_exotic_gases weight_modifier messo come 3.7.4 perchè credo sia buggato codice vecchio
+
+Dmininuito costo e tempo per terraformare da gaia a nuked, proporzione simile alle riduzioni fatte per gaia to hive
+holy_covenant_conversion cambiato in energy = 0.25	unity = 0.5	society_research = 0.25
+tr_subterfuge_cloaking_finish da cloaking strenght 2 invece di 1
+tr_subterfuge_double_agents da envoys_add = 1.5 invece di envoys_add = 1 (doulbe gent vale come un 1,5 ;)
+In tratti cambiato species_empire_size_mult = -0.5 in species_empire_size_mult = -0.33
+Tolto da latent_psionic planet_jobs_engineering_research_produces_mult poichè su psionic non c'è bonus su planet_jobs_engineering_research_produces_mult
+trait_robot_propaganda_machines trait_robot_propaganda_machines diminuito di 0.1 a 0.4 poichè è stato aggiunto planet_jobs_unity_upkeep_mult = -0.1
+Fix bug paradox s species_trait su comando slave_cost ripetuto.
+Force idiology forza l'ideologia anche dei vassali come nella 3.7.4
+Aggiunto first_contact_dlc_effects.txt : messo laboratorio ricerche phi
+Aggiunto overlord_initializers.txt : messo laboratorio ricerche phi
+Ethica pacifica cambiato country_admin_cap_mult in empire_size_mult x*-1
+phi archeologist sostituiti da archeoengineers
+Cambiato diplostance con quella della phi in overlord_initializer
+Tutti gli empire limit delle navi spostati in ownership_liits
+Tolto cartella subjects ora è gestita in un altro modo
+Cambiate condizioni di Subjectype = in any_agreement = { agreement_preset = preset_thrall } 
+convertite tutte le pop_factions_influence_produces_add = x convertirlo in pop_factions_unity_produces_mult = x/10 
+pop_factions_unity_produces_add x in pop_factions_unity_produces_add x/20
+"buildings_no_exotic_gases = yes" tolto perchè rimosso dalla 3.7.4
+Tolto da federation ownership_limits = default perchè rimosso dalla 3.7.4
+Tolto da wargoal show_agreement_terms = no non so se è voluto ma non è usato più da nesusna su 3.7.4 in 00_war_goals.txt

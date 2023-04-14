@@ -99,6 +99,14 @@ tech_experimental_subspace_navigation = {
 			has_ascension_perk = ap_technological_ascendancy
 		}
 		modifier = {
+			factor = @ap_grasp_the_void_travel_tech
+			has_ascension_perk = ap_grasp_the_void
+		}
+		modifier = {
+			factor = @eager_explorer_effect
+			is_eager_explorer_empire = yes
+		}
+		modifier = {
 			factor = @federation_perk_factor
 			has_federation = yes
 			federation = {
@@ -107,7 +115,7 @@ tech_experimental_subspace_navigation = {
 			}
 		}
 		modifier = {
-			factor = 1.25
+			factor = value:tech_weight_likelihood
 			research_leader = {
 				area = physics
 				has_trait = "leader_trait_expertise_field_manipulation"
@@ -116,7 +124,6 @@ tech_experimental_subspace_navigation = {
 	}
 
 	ai_weight = {
-		factor = 4 #FTL techs are good
 		modifier = {
 			factor = 1.25
 			research_leader = {
@@ -162,6 +169,36 @@ tech_nanite_repair_system = {
 	tier = 5
 	is_rare = yes
 	category = { voidcraft }
+	ai_update_type = military
+	weight = @tier5weight3
+
+	weight_modifier = {
+		factor = 0		# Can only be reverse engineered from killing the Scavenger Bot
+	}
+}
+
+# Nanite Autocannon
+tech_nanite_autocannon = {
+	area = engineering
+	cost = @tier5cost3
+	tier = 5
+	is_rare = yes
+	category = { propulsion }
+	ai_update_type = military
+	weight = @tier5weight3
+
+	weight_modifier = {
+		factor = 0		# Can only be reverse engineered from killing the Scavenger Bot
+	}
+}
+
+# Nanite Flak
+tech_nanite_flak_batteries = {
+	area = engineering
+	cost = @tier5cost3
+	tier = 5
+	is_rare = yes
+	category = { propulsion }
 	ai_update_type = military
 	weight = @tier5weight3
 

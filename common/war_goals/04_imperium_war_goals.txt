@@ -46,7 +46,18 @@ wg_imperial_crusade = {
 			}
 
 			last_created_country = {
+				set_origin_effect = yes
 				add_to_galactic_community = yes
+			}
+
+			if = {
+				limit = {
+					root = { has_authority = auth_corporate }
+					last_created_country = { has_authority = auth_corporate }
+				}
+				last_created_country = {
+					set_merchant_government_effect = yes
+				}
 			}
 		}
 	}

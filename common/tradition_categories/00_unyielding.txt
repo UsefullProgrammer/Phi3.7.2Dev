@@ -11,26 +11,30 @@ tradition_unyielding = {
 	}
 
 	potential = {
-		host_has_dlc = "Apocalypse"
+		OR = {
+			host_has_dlc = "Apocalypse"
+			has_overlord_dlc = yes
+		}
 	}
 
 	ai_weight = {
-		factor = 10
+		factor = 5
 		modifier = {
-			factor = 2
+			factor = 5
 			has_ethic = ethic_pacifist
 		}
 		modifier = {
-			factor = 3
+			factor = 10
 			has_ethic = ethic_fanatic_pacifist
 		}
 		modifier = {
-			factor = 2
+			factor = 4
 			has_valid_civic = civic_inwards_perfection
 		}
 		modifier = {
 			factor = 3
 			any_neighbor_country = {
+				is_country_type = default
 				opinion_level = { who = prev level <= poor }
 				relative_power = { who = prev value >= superior }
 			}

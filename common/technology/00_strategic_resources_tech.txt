@@ -20,8 +20,23 @@ tech_mine_living_metal = {
 		modifier = {
 			factor = 0
 			NOT = {
-				has_country_flag = living_metal_found
+				any_planet_within_border = {
+					has_deposit = d_living_metal_deposit
+				}
 			}
+		}
+	}
+	ai_weight = {
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = engineering
+				has_trait = "leader_trait_expertise_materials"
+			}
+		}
+		modifier = {
+			factor = 20
+			has_country_flag = dragon_breeders #so they can recruit Fledgeling Dragons
 		}
 	}
 	
@@ -56,7 +71,6 @@ tech_mine_betharian = {
 	}
 
 	ai_weight = {
-		factor = 4 #strategic resource
 		modifier = {
 			factor = 1.25
 			research_leader = {
@@ -84,7 +98,7 @@ tech_mine_volatile_motes = {
 	weight_modifier = {
 		factor = 2
 		modifier = {
-			factor = 1.25
+			factor = value:tech_weight_likelihood
 			research_leader = {
 				area = physics
 				has_trait = "leader_trait_expertise_particles"
@@ -99,7 +113,7 @@ tech_mine_volatile_motes = {
 	}
 
 	ai_weight = {
-		factor = 5 #important resource
+		factor = @strategic_resource_ai_tech_factor #important resource
 		modifier = {
 			factor = 1.25
 			research_leader = {
@@ -143,7 +157,7 @@ tech_volatile_motes = {
 			}
 		}
 		modifier = {
-			factor = 1.25
+			factor = value:tech_weight_likelihood
 			research_leader = {
 				area = physics
 				has_trait = "leader_trait_expertise_particles"
@@ -152,7 +166,7 @@ tech_volatile_motes = {
 	}
 
 	ai_weight = {
-		factor = 5 #important resource
+		factor = @strategic_resource_ai_tech_factor #important resource
 		modifier = {
 			factor = 1.25
 			research_leader = {
@@ -176,7 +190,7 @@ tech_mine_exotic_gases = {
 	weight_modifier = {
 		factor = 2
 		modifier = {
-			factor = 1.25
+			factor = value:tech_weight_likelihood
 			research_leader = {
 				area = engineering
 				has_trait = "leader_trait_expertise_materials"
@@ -191,7 +205,7 @@ tech_mine_exotic_gases = {
 	}
 
 	ai_weight = {
-		factor = 5 #important resource
+		factor = @strategic_resource_ai_tech_factor #important resource
 		modifier = {
 			factor = 1.25
 			research_leader = {
@@ -221,6 +235,7 @@ tech_exotic_gases = {
 						has_deposit = d_bubbling_swamp
 						has_deposit = d_fuming_bog
 						has_deposit = d_industrial_sector
+						has_deposit = d_exotic_mountain
 					}
 				}
 				any_planet_within_border = {
@@ -235,7 +250,7 @@ tech_exotic_gases = {
 			}
 		}
 		modifier = {
-			factor = 1.25
+			factor = value:tech_weight_likelihood
 			research_leader = {
 				area = engineering
 				has_trait = "leader_trait_expertise_materials"
@@ -244,7 +259,7 @@ tech_exotic_gases = {
 	}
 
 	ai_weight = {
-		factor = 5 #important resource
+		factor = @strategic_resource_ai_tech_factor #important resource
 		modifier = {
 			factor = 1.25
 			research_leader = {
@@ -282,7 +297,7 @@ tech_mine_rare_crystals = {
 	}
 
 	ai_weight = {
-		factor = 4 #strategic resource
+		factor = @strategic_resource_ai_tech_factor #strategic resource
 		modifier = {
 			factor = 1.25
 			research_leader = {
@@ -327,7 +342,7 @@ tech_rare_crystals = {
 			}
 		}
 		modifier = {
-			factor = 1.25
+			factor = value:tech_weight_likelihood
 			research_leader = {
 				area = engineering
 				has_trait = "leader_trait_expertise_materials"
@@ -336,7 +351,7 @@ tech_rare_crystals = {
 	}
 
 	ai_weight = {
-		factor = 5 #important resource
+		factor = @strategic_resource_ai_tech_factor
 		modifier = {
 			factor = 1.25
 			research_leader = {
@@ -354,7 +369,7 @@ tech_mine_zro = {
 	tier = 3
 	category = { psionics }
 	is_rare = yes
-	prerequisites = { "tech_sensors_3" "tech_psionic_theory" }
+	prerequisites = { "tech_sensors_3" }
 	is_reverse_engineerable = no
 	weight = @tier3weight2
 
@@ -375,6 +390,12 @@ tech_mine_zro = {
 			}
 		}
 		modifier = {
+			factor = 0.10
+			NOT = {
+				has_technology = "tech_psionic_theory"
+			}
+		}
+		modifier = {
 			factor = @ap_technological_ascendancy_rare_tech
 			has_ascension_perk = ap_technological_ascendancy
 		}
@@ -387,6 +408,29 @@ tech_mine_zro = {
 			}
 		}
 		modifier = {
+			factor = 2
+			any_owned_pop = {
+				pop_has_trait = trait_psionic
+			}
+		}
+		modifier = {
+			factor = 1.25
+			any_owned_pop = {
+				pop_has_trait = trait_latent_psionic
+			}
+			NOT = {
+				any_owned_pop = {
+					pop_has_trait = trait_psionic
+				}
+			}
+		}
+		modifier = {
+			factor = 2
+			any_owned_planet = {
+				has_modifier = pm_shroudwalker_teacher
+			}
+		}
+		modifier = {
 			factor = 10
 			research_leader = {
 				area = society
@@ -396,13 +440,17 @@ tech_mine_zro = {
 	}
 
 	ai_weight = {
-		factor = 3 #very rare tech
+		factor = 2.5 # extremely rare tech (especially if you don't have psionic theory)
 		modifier = {
 			factor = 1.25
 			research_leader = {
 				area = society
 				has_trait = "leader_trait_expertise_psionics"
 			}
+		}
+		modifier = {
+			factor = 5
+			has_tradition = tr_psionics_finish
 		}
 	}
 }
@@ -444,7 +492,7 @@ tech_mine_dark_matter = {
 	}
 
 	ai_weight = {
-		factor = 5 #strategic resource
+		factor = 2 #strategic resource
 		modifier = {
 			factor = 1.25
 			research_leader = {
@@ -487,7 +535,7 @@ tech_nanite_transmutation = {
 			}
 		}
 		modifier = {
-			factor = 1.25
+			factor = value:tech_weight_likelihood
 			research_leader = {
 				area = engineering
 				has_trait = "leader_trait_expertise_materials"
@@ -496,7 +544,7 @@ tech_nanite_transmutation = {
 	}
 
 	ai_weight = {
-		factor = 5 #important resource
+		factor = @strategic_resource_ai_tech_factor #important resource
 		modifier = {
 			factor = 1.25
 			research_leader = {

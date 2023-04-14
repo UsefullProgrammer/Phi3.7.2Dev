@@ -1,16 +1,28 @@
-country_edict_cap_add x diventa country_edict_fund_add x * 50
-country_election_influence_cost_mult diventa country_election_cost_mult
-country_admin_cap_mult x diventa planet_administrators_upkeep_mult x * -1
-In generale guardare administrators
-guardare #Note: number of potential or actual members is checked by POP_FACTION_MIN_POTENTIAL_MEMBERS define
-	is_potential = {
-		is_faction_allowed = yes
-Da togliere rebel e phi_archaeologist in giro
-Mettere la roba overlord_resources anche a phi_jobs
-#POLITICS TRADITIONS RESOLUTION
-
+building_research_lab_1 diventano building_engineering_lab_1 OK
+country_edict_cap_add x diventa country_edict_fund_add x * 50 OK
+country_election_influence_cost_mult diventa country_election_cost_mult OK 
+country_admin_cap_mult x diventa planet_administrators_upkeep_mult x * -1 OK
+In generale guardare administrators OK
+guardare is_potential = { is_faction_allowed = yes OK
+Da togliere rebel e phi_archaeologist in giro : Rebel è già disable. phi archeologist sostituiti da archeoengineers OK
+Mettere la roba overlord_resources anche a phi_jobs OK
 resolution_community_champions = { cos'è?
 
-Cotrollare che diplomatic_stance sia stata convertita da tutte le parti
+Cotrollare che diplomatic_stance sia stata convertita da tutte le parti OK
 
-civic_hive_divided_attention cambiarlo eventualmente con empire_size_mult = -0.10
+civic_hive_divided_attention cambiarlo eventualmente con empire_size_mult = -0.10 OK
+
+Guardare le altre se hanno roba di federeazione poichè Aggiunto XENOIST_OPPRESSIVE_SUBJUGATION_POLICY e XENOIST_BENEVOLENT_SUBJUGATION_POLICY e XENOIST_XENOLOGICAL_CONSERVATION?
+
+Cotrollare che diplomatic_stance sia stata convertita da tutte le parti OK
+
+
+pop_factions_influence_produces_add = x convertirlo in pop_factions_unity_produces_mult = x/10  e pop_factions_unity_produces_add x in pop_factions_unity_produces_add x/20 OK
+
+civic_imperial_cult messo edicts_upkeep_mult = -0.50 controllare che funzioni
+civic_citizen_service aggiunto planet_soldiers_unity_produces_add = 1 aggiungere civic_tooltip_citizen_service_effects quesot dettaglio.
+Controllare che  1 titan per 100 naval cap!
+da fare poi
+Indagare su origin.57
+in 00_starbase_types for ia da migliorare per le orbital.
+Off_spring_carrier da fare

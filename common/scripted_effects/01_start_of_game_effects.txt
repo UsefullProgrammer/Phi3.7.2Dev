@@ -1412,7 +1412,7 @@ generate_start_buildings_and_districts = {
 						is_low_tech_start = no
 					}
 				}
-				add_building = building_research_lab_1
+				add_building = building_engineering_lab_1
 			}
 
 			if = {
@@ -2172,7 +2172,7 @@ generate_start_buildings_and_districts = {
 		# 3 jobs
 		add_building = building_capital
 		add_building = building_clinic
-		add_building = building_research_lab_1
+		add_building = building_engineering_lab_1
 		add_building = building_mineral_purification_plant
 		add_building = building_energy_grid
 	}
@@ -2200,7 +2200,7 @@ generate_start_buildings_and_districts = {
 				message = no
 			}
 		}
-		remove_building = building_research_lab_1
+		remove_building = building_engineering_lab_1
 		add_building = building_archaeostudies_faculty
 	}
 

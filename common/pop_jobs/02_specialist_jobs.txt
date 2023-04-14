@@ -240,6 +240,7 @@ priest = {
 		category = planet_priests
 		produces = {
 			unity = 4
+			society_research = 2
 		}
 		upkeep = {
 			consumer_goods = 2
@@ -323,8 +324,8 @@ death_priest = {
 	resources = {
 		category = planet_priests
 		produces = {
-			unity = 3
-			society_research = 1
+			unity = 6
+			society_research = 2
 		}
 		produces = {
 			trigger = {
@@ -889,6 +890,7 @@ culture_worker = {
 		category = planet_culture_workers
 		produces = {
 			unity = 4
+			society_research = 3
 		}
 		upkeep = {
 			consumer_goods = 3
@@ -1388,6 +1390,7 @@ manager = {
 		category = planet_managers
 		produces = {
 			unity = 4
+			society_research = 2
 		}
 		upkeep = {
 			consumer_goods = 2
@@ -1654,6 +1657,7 @@ death_chronicler = {
 		category = planet_culture_workers
 		produces = {
 			unity = 4
+			society_research = 2
 		}
 		upkeep = {
 			consumer_goods = 3

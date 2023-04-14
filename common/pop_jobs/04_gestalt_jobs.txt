@@ -1845,6 +1845,7 @@ chronicle_drone = {
 		category = planet_evaluators
 		produces = {
 			unity = 4
+			society_research = 2
 		}
 		upkeep = {
 			trigger = {

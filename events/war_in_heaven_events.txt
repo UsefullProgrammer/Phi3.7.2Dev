@@ -12,6 +12,7 @@ country_event = {
 	id = war_in_heaven.1000
 	title = OK
 	desc = OK
+	is_test_event = yes
 
 	trigger = {
 		always = no
@@ -369,13 +370,14 @@ country_event = {
 					has_ethic = ethic_fanatic_xenophobe
 				}
 			}
+			custom_tooltip = war_in_heaven.4.a.thrall.tt
 			if = {
 				limit = { has_federation = yes }
 				federation = {
 					every_member = {
 						set_subject_of = {
 							who = event_target:FirstSleeper
-							subject_type = thrall
+							preset = preset_thrall
 						}
 						hidden_effect = { set_country_flag = war_in_heaven_picked_side }
 						hidden_effect = {
@@ -391,7 +393,7 @@ country_event = {
 			else = {
 				set_subject_of = {
 					who = event_target:FirstSleeper
-					subject_type = thrall
+					preset = preset_thrall
 				}
 				hidden_effect = { set_country_flag = war_in_heaven_picked_side }
 				hidden_effect = {
@@ -409,13 +411,14 @@ country_event = {
 					has_ethic = ethic_fanatic_xenophile
 				}
 			}
+			custom_tooltip = war_in_heaven.4.a.signatory.tt
 			if = {
 				limit = { has_federation = yes }
 				federation = {
 					every_member = {
 						set_subject_of = {
 							who = event_target:FirstSleeper
-							subject_type = signatory
+							preset = preset_signatory
 						}
 						hidden_effect = { set_country_flag = war_in_heaven_picked_side }
 						hidden_effect = {
@@ -431,7 +434,7 @@ country_event = {
 			else = {
 				set_subject_of = {
 					who = event_target:FirstSleeper
-					subject_type = signatory
+					preset = preset_signatory
 				}
 				hidden_effect = { set_country_flag = war_in_heaven_picked_side }
 				hidden_effect = {
@@ -449,13 +452,14 @@ country_event = {
 					has_ethic = ethic_fanatic_spiritualist
 				}
 			}
+			custom_tooltip = war_in_heaven.4.a.dominion.tt
 			if = {
 				limit = { has_federation = yes }
 				federation = {
 					every_member = {
 						set_subject_of = {
 							who = event_target:FirstSleeper
-							subject_type = dominion
+							preset = preset_dominion
 						}
 						hidden_effect = { set_country_flag = war_in_heaven_picked_side }
 						hidden_effect = {
@@ -471,7 +475,7 @@ country_event = {
 			else = {
 				set_subject_of = {
 					who = event_target:FirstSleeper
-					subject_type = dominion
+					preset = preset_dominion
 				}
 				hidden_effect = { set_country_flag = war_in_heaven_picked_side }
 				hidden_effect = {
@@ -489,13 +493,14 @@ country_event = {
 					has_ethic = ethic_fanatic_materialist
 				}
 			}
+			custom_tooltip = war_in_heaven.4.a.satellite.tt
 			if = {
 				limit = { has_federation = yes }
 				federation = {
 					every_member = {
 						set_subject_of = {
 							who = event_target:FirstSleeper
-							subject_type = satellite
+							preset = preset_satellite
 						}
 						hidden_effect = { set_country_flag = war_in_heaven_picked_side }
 						hidden_effect = {
@@ -511,7 +516,7 @@ country_event = {
 			else = {
 				set_subject_of = {
 					who = event_target:FirstSleeper
-					subject_type = satellite
+					preset = preset_satellite
 				}
 				hidden_effect = { set_country_flag = war_in_heaven_picked_side }
 				hidden_effect = {
@@ -653,13 +658,15 @@ country_event = {
 					has_ethic = ethic_fanatic_xenophobe
 				}
 			}
+			custom_tooltip = war_in_heaven.4.b.thrall.tt
 			if = {
 				limit = { has_federation = yes }
 				federation = {
 					every_member = {
 						set_subject_of = {
 							who = from
-							subject_type = thrall
+							
+							preset = preset_thrall
 						}
 						hidden_effect = { set_country_flag = war_in_heaven_picked_side }
 						hidden_effect = {
@@ -675,7 +682,7 @@ country_event = {
 			else = {
 				set_subject_of = {
 					who = from
-					subject_type = thrall
+					preset = preset_thrall
 				}
 				hidden_effect = { set_country_flag = war_in_heaven_picked_side }
 				hidden_effect = {
@@ -693,13 +700,14 @@ country_event = {
 					has_ethic = ethic_fanatic_xenophile
 				}
 			}
+			custom_tooltip = war_in_heaven.4.b.signatory.tt
 			if = {
 				limit = { has_federation = yes }
 				federation = {
 					every_member = {
 						set_subject_of = {
 							who = from
-							subject_type = signatory
+							preset = preset_signatory
 						}
 						hidden_effect = { set_country_flag = war_in_heaven_picked_side }
 						hidden_effect = {
@@ -715,7 +723,7 @@ country_event = {
 			else = {
 				set_subject_of = {
 					who = from
-					subject_type = signatory
+					preset = preset_signatory
 				}
 				hidden_effect = { set_country_flag = war_in_heaven_picked_side }
 				hidden_effect = {
@@ -733,13 +741,14 @@ country_event = {
 					has_ethic = ethic_fanatic_spiritualist
 				}
 			}
+			custom_tooltip = war_in_heaven.4.b.dominion.tt
 			if = {
 				limit = { has_federation = yes }
 				federation = {
 					every_member = {
 						set_subject_of = {
 							who = from
-							subject_type = dominion
+							preset = preset_dominion
 						}
 						hidden_effect = { set_country_flag = war_in_heaven_picked_side }
 						hidden_effect = {
@@ -755,7 +764,7 @@ country_event = {
 			else = {
 				set_subject_of = {
 					who = from
-					subject_type = dominion
+					preset = preset_dominion
 				}
 				hidden_effect = { set_country_flag = war_in_heaven_picked_side }
 				hidden_effect = {
@@ -773,13 +782,14 @@ country_event = {
 					has_ethic = ethic_fanatic_materialist
 				}
 			}
+			custom_tooltip = war_in_heaven.4.b.satellite.tt
 			if = {
 				limit = { has_federation = yes }
 				federation = {
 					every_member = {
 						set_subject_of = {
 							who = from
-							subject_type = satellite
+							preset = preset_satellite
 						}
 						hidden_effect = { set_country_flag = war_in_heaven_picked_side }
 						hidden_effect = {
@@ -795,7 +805,7 @@ country_event = {
 			else = {
 				set_subject_of = {
 					who = from
-					subject_type = satellite
+					preset = preset_satellite
 				}
 				hidden_effect = { set_country_flag = war_in_heaven_picked_side }
 				hidden_effect = {

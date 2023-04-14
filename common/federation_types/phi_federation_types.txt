@@ -5,7 +5,6 @@
 
 xenophile_federation = {
 	icon = "GFX_xenophile_federation"
-	ownership_limits = default
 	allow = {
 		federation_check_for_subject_trigger = yes
 		OR = {
@@ -73,7 +72,6 @@ xenophile_federation = {
 
 xenophobe_federation = {
 	icon = "GFX_xenophobe_federation"
-	ownership_limits = default
 	allow = {
 		federation_check_for_subject_trigger = yes
 		is_xenophobe = yes
@@ -140,7 +138,6 @@ xenophobe_federation = {
 
 militarist_federation = {
 	icon = "GFX_militarist_federation"
-	ownership_limits = default
 	allow = {
 		federation_check_for_subject_trigger = yes
 		is_militarist = yes
@@ -204,7 +201,6 @@ militarist_federation = {
 
 pacifist_federation = {
 	icon = "GFX_pacifist_federation"
-	ownership_limits = default
 	allow = {
 		federation_check_for_subject_trigger = yes
 		OR = {
@@ -271,7 +267,6 @@ pacifist_federation = {
 
 spiritualist_federation = {
 	icon = "GFX_spiritualist_federation"
-	ownership_limits = default
 	allow = {
 		federation_check_for_subject_trigger = yes
 		is_spiritualist = yes
@@ -335,7 +330,6 @@ spiritualist_federation = {
 
 materialist_federation = {
 	icon = "GFX_materialist_federation"
-	ownership_limits = default
 	allow = {
 		federation_check_for_subject_trigger = yes
 		OR = {
@@ -402,7 +396,6 @@ materialist_federation = {
 
 authoritarian_federation = {
 	icon = "GFX_authoritarian_federation"
-	ownership_limits = default
 	allow = {
 		federation_check_for_subject_trigger = yes
 		is_authoritarian = yes
@@ -468,7 +461,6 @@ authoritarian_federation = {
 
 egalitarian_federation = {
 	icon = "GFX_egalitarian_federation"
-	ownership_limits = default
 	allow = {
 		federation_check_for_subject_trigger = yes
 		is_egalitarian = yes

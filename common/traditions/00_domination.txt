@@ -8,8 +8,25 @@ tr_domination_adopt = {
 
 tr_domination_finish = {
 	modifier = {
-		country_admin_cap_mult = 0.20
+		empire_size_pops_mult = -0.10
 		ascension_perks_add = 1
+	}
+
+	tradition_swap = {
+		name = tr_domination_federations_finish
+		inherit_icon = yes
+		inherit_name = yes
+		custom_tooltip = tr_domination_federations_finish_desc
+		trigger = {
+			has_federations_dlc = yes
+		}
+		modifier = {
+			empire_size_pops_mult = -0.10
+			ascension_perks_add = 1
+		}
+		weight = {
+			factor = 1
+		}
 	}
 }
 
@@ -53,9 +70,11 @@ tr_domination_colonial_viceroys = {
 tr_domination_imperious_architecture = {
 
 	# additional housing implemented in building files
+	custom_tooltip = tr_domination_imperious_architecture_desc
 
 	tradition_swap = {
 		name = tr_domination_synaptic_extensions
+		custom_tooltip = tr_domination_synaptic_extensions_desc
 		inherit_icon = yes
 		trigger = {
 			is_hive_empire = yes
@@ -92,7 +111,7 @@ tr_domination_grand_council = {
 
 	modifier = {
 		ruler_skill_levels = 2
-		country_edict_cap_add = 1
+		country_edict_fund_add = 50
 	}
 
 	tradition_swap = {
@@ -127,11 +146,13 @@ tr_domination_grand_council = {
 tr_domination_judgment_corps = {
 
 	# effect implemented in jobs file
+	custom_tooltip = tr_domination_judgment_corps_desc
 
 	tradition_swap = {
 		name = tr_domination_trust_officers
 		inherit_effects = yes
 		inherit_icon = yes
+		custom_tooltip = tr_domination_trust_officers_desc
 		trigger = {
 			is_regular_empire = yes
 			OR = {
@@ -185,6 +206,7 @@ tr_domination_workplace_motivators = {
 		has_tradition = tr_domination_judgment_corps
 	}
 
+	custom_tooltip_with_modifiers = tr_domination_workplace_motivators_desc
 	modifier = {
 		planet_jobs_slave_produces_mult = 0.20
 	}
@@ -194,6 +216,7 @@ tr_domination_workplace_motivators = {
 		trigger = {
 			is_gestalt = yes
 		}
+		custom_tooltip_with_modifiers = tr_domination_drone_network_desc
 		modifier = {
 			planet_jobs_simple_drone_produces_mult = 0.05
 		}

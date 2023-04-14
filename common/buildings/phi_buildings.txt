@@ -130,7 +130,7 @@ building_engineering_lab_1 = {
 	potential = {
 		NOT = { has_modifier = resort_colony }
 		NOT = { has_modifier = slave_colony }
-		building_relaxed_basic_income_check = yes
+		NOT = { has_modifier = crucible_colony }
 	}
 
 	destroy_trigger = {
@@ -231,7 +231,6 @@ building_engineering_lab_2 = {
 		OR = {
 			has_modifier = slave_colony
 			has_modifier = resort_colony
-			buildings_no_exotic_gases = yes
 		}
 	}
 
@@ -324,7 +323,6 @@ building_engineering_lab_3 = {
 		OR = {
 			has_modifier = slave_colony
 			has_modifier = resort_colony
-			buildings_no_exotic_gases = yes
 		}
 	}
 
@@ -449,7 +447,7 @@ building_physics_lab_1 = {
 	potential = {
 		NOT = { has_modifier = resort_colony }
 		NOT = { has_modifier = slave_colony }
-		building_relaxed_basic_income_check = yes
+		NOT = { has_modifier = crucible_colony }
 	}
 
 	destroy_trigger = {
@@ -550,7 +548,6 @@ building_physics_lab_2 = {
 		OR = {
 			has_modifier = slave_colony
 			has_modifier = resort_colony
-			buildings_no_exotic_gases = yes
 		}
 	}
 
@@ -643,7 +640,6 @@ building_physics_lab_3 = {
 		OR = {
 			has_modifier = slave_colony
 			has_modifier = resort_colony
-			buildings_no_exotic_gases = yes
 		}
 	}
 
