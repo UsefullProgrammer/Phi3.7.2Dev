@@ -32,7 +32,6 @@ default_federation = {
 	potential = {
 		always = no
 	}
-	ownership_limits = default
 	allow = {
 		federation_check_for_subject_trigger = yes
 		custom_tooltip = {
@@ -298,7 +297,6 @@ default_federation = {
 trade_federation = {
 	base_intel = 50
 	icon = "GFX_trade_federation"
-	ownership_limits = default
 	potential = {
 		always = no
 	}
@@ -586,7 +584,6 @@ trade_federation = {
 research_federation = {
 	base_intel = 50
 	icon = "GFX_research_federation"
-	ownership_limits = default
 	potential = {
 		always = no
 	}
@@ -865,7 +862,6 @@ research_federation = {
 military_federation = {
 	base_intel = 50
 	icon = "GFX_military_federation"
-	ownership_limits = default
 	potential = {
 		always = no
 	}
@@ -1139,7 +1135,6 @@ military_federation = {
 hegemony_federation = {
 	base_intel = 40
 	icon = "GFX_hegemony_federation"
-	ownership_limits = default
 	potential = {
 		always = no
 	}
