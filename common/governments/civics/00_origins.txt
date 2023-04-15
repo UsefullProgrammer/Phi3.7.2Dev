@@ -487,7 +487,7 @@ origin_galactic_doorstep = {
 	
 	modifier = {
 		megastructure_build_speed_mult = 1
-		megastructure_cost_mult = -0.50
+		megastructures_cost_mult = -0.50
 	}
 
 	traits = {

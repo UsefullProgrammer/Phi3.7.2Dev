@@ -48,7 +48,7 @@ titan_ships_limit = {
 	
 	base = 16 # 1 * titan's size_multiplier
 	max = 320 # 20 * 16
-	naval_cap_fraction = 0.08
+	naval_cap_fraction = 0.16
 	
 	show = {
 		is_scope_valid = yes
@@ -95,24 +95,12 @@ cruiser_ships_limit = {
 	ship_types = { 
 		cruiser
 	}
-	show = {
-		not = {
-			is_scope_valid = yes
-			has_origin = origin_progenitor_hive
-		}
-	}
 	base = 4
 	naval_cap_fraction = 0.16
 }
 battleship_ships_limit = {
 	ship_types = { 
 		battleship
-	}
-	show = {
-		not = {
-			is_scope_valid = yes
-			has_origin = origin_progenitor_hive
-		}
 	}
 	base = 8
 	naval_cap_div = 0.16
@@ -129,7 +117,11 @@ offspring_carrier_ships_limit = {
 		offspring_carrier
 	}
 	base = 8
-	naval_cap_div = 0.08
+	naval_cap_div = 0.15
+	show = {
+		is_scope_valid = yes
+		has_origin = origin_progenitor_hive
+	}
 }
 
 offspring_cruiser_ships_limit = {
@@ -137,7 +129,7 @@ offspring_cruiser_ships_limit = {
 		offspring_cruiser
 	}
 	base = 4
-	naval_cap_fraction = 0.16
+	naval_cap_fraction = 0.32
 	show = {
 		is_scope_valid = yes
 		has_origin = origin_progenitor_hive
@@ -148,7 +140,7 @@ offspring_battleship_ships_limit = {
 		offspring_battleship
 	}
 	base = 8
-	naval_cap_div = 0.16
+	naval_cap_div = 0.32
 	show = {
 		is_scope_valid = yes
 		has_origin = origin_progenitor_hive
