@@ -49,7 +49,9 @@
 		SPECIES_RIGHTS_INITIAL_CONFIG_PRIMARY = { citizenship_full colonization_control_no living_standard_normal migration_control_no military_service_full population_control_no purge_normal slavery_normal }	#Initial config the game generates for your species rights module. It should at some point check weights and potentials, so this probably doesn't do much. Except break the game if left blank.
 		SPECIES_RIGHTS_INITIAL_CONFIG_DEFAULT = { citizenship_limited colonization_control_no living_standard_stratified migration_control_no military_service_limited population_control_no purge_normal slavery_normal }	#Ditto
 		SPECIES_RIGHTS_INITIAL_CONFIG_BUILT = { citizenship_robot_servitude colonization_control_yes living_standard_servitude migration_control_yes military_service_limited population_control_no purge_normal slavery_normal }	#Ditto
+
 		GROWTH_SCALE_DEFAULT = 0.00
+		#GROWTH_SCALE_DEFAULT = 0.25
 		GROWTH_SCALE_MIN = 0.00
 		GROWTH_SCALE_MAX = 1.00
 		GROWTH_SCALE_SLIDER_INTERVAL = 0.05
@@ -489,12 +491,12 @@
 		GOVERNMENT_COOLDOWN_YEARS				= 5	# Cooldown years after changing government before you can change it again
 		GOVERNMENT_CHANGE_EMPIRE_SIZE_MULT		= 10.0	# It will cost (Empire Size) * X Unity to change Government Type
 
-		EMPIRE_SIZE_BASE						= 400	# No penalties at this empire size or below
-		EMPIRE_SIZE_FROM_DISTRICTS				= 1		# Per district
-		EMPIRE_SIZE_FROM_SYSTEMS				= 4		# Per system
-		EMPIRE_SIZE_FROM_COLONIES				= 100		# Per planet
-		EMPIRE_SIZE_FROM_BRANCH_OFFICES			= 5		# Per branch office
-		EMPIRE_SIZE_FROM_POPS					= 0.75		# Per pop
+		EMPIRE_SIZE_BASE						= 100	# No penalties at this empire size or below
+		EMPIRE_SIZE_FROM_DISTRICTS				= 0.25		# Per district
+		EMPIRE_SIZE_FROM_SYSTEMS				= 1		# Per system
+		EMPIRE_SIZE_FROM_COLONIES				= 25		# Per planet
+		EMPIRE_SIZE_FROM_BRANCH_OFFICES			= 1.25		# Per branch office
+		EMPIRE_SIZE_FROM_POPS					= 0.18		# Per pop
 
 		DIPLOMACY_WEIGHT_BASE					= 0.0		# Base diplomacy weight for all empires
 		DIPLOMACY_WEIGHT_STANCE_FACTOR			= 0			# Factors weight from Diplo Stance before it is added to diplo weight
@@ -506,8 +508,8 @@
 		DIPLOMACY_WEIGHT_ECONOMY_FACTOR			= 0.15		# Factors Economic Power before it is added to diplo weight
 		DIPLOMACY_WEIGHT_TECHNOLOGY_FACTOR		= 0.1		# Factors Technology Level before it is added to diplo weight
 
-		EMPIRE_SIZE_TECH_COST_PENALTY			= 0.001	# Per empire size above base
-		EMPIRE_SIZE_TRADITION_COST_PENALTY		= 0.002	# Per empire size above base
+		EMPIRE_SIZE_TECH_COST_PENALTY			= 0.004	# Per empire size above base
+		EMPIRE_SIZE_TRADITION_COST_PENALTY		= 0.008	# Per empire size above base
 
 		NUM_TECH_ALTERNATIVES					= 3
 		TECH_WEIGHT_BASE						= 10
@@ -579,7 +581,7 @@
 		SUBJECT_TYPE_CONVERSION_NO_PREFERRED_ETHIC_SPEED_FACTOR = 1							# How much faster/slower the conversion will go if the subject does not have the type's preferred ethic
 		SUBJECT_TYPE_CONVERSION_OPPOSITE_ETHIC_SPEED_FACTOR = 0.67							# How much faster/slower the conversion will go if the subject has the opposite ethic to the type's preferred ethic
 		SUBJECT_TYPE_CONVERSION_FANATIC_OPPOSITE_ETHIC_SPEED_FACTOR = 0.5					# How much faster/slower the conversion will go if the subject has the fanatic variant of the opposite ethic to the type's preferred ethic
-		SUBJECT_TYPE_CONVERSION_SPRAWL_FACTOR = 5					# Conversion speed is affected by this÷EmpireSprawl
+		SUBJECT_TYPE_CONVERSION_SPRAWL_FACTOR = 5					# Conversion speed is affected by thisÃ·EmpireSprawl
 
 		AGREEMENT_RESOURCE_SUBSIDIES_MIN = -0.75				# Minimum percentage value for Resource Subsidies term
 		AGREEMENT_RESOURCE_SUBSIDIES_MAX = -0.75				# Maximum percentage value for Resource Subsidies term
@@ -897,7 +899,7 @@
 		ASSIST_CLOAKING_DETECTION_ORBIT_DISTANCE = 10.0	# The orbiting distance of the ship in a process of assisting cloaking detection
 
 
-		FLEET_BASE_FORMATION_SCALE			= 2.0
+		FLEET_BASE_FORMATION_SCALE			= 3.0
 		FLEET_BASE_FORMATION_DIV			= 10
 
 		FLEET_FORMATION_CIRCLE_SHIPS_PER_LAYER_MULT = 4
@@ -1300,7 +1302,7 @@
 
 		WAS_HUMAN_MONTHS = 12							# Amount of months that the AI will refrain from making large changes to the empire if it's taking over from a player
 
-		MIN_FLEET_FOR_OPERATIONS = 500
+		MIN_FLEET_FOR_OPERATIONS = 500 				# Minimum fleet power to get assigned to missions like attacking targets etc
 		MIN_FLEET_TO_RESTRICT_SYSTEM = 3000
 		MIN_FLEET_THREAT_TO_CRISIS = 8000
 

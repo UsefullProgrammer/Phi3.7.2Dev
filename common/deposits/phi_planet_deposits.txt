@@ -178,7 +178,7 @@ d_phi_archaeology_site = {
 			exists = owner
 			owner = { is_gestalt = no }
 		}
-		archaeoengineers = 1
+		job_archaeoengineers_add = 1
 	}
 
 	triggered_planet_modifier = {
@@ -186,6 +186,6 @@ d_phi_archaeology_site = {
 			exists = owner
 			owner = { is_gestalt = yes }
 		}
-		archaeo_unit = 1
+		job_archaeo_unit_add = 1
 	}
 }

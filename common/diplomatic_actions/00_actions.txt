@@ -2981,10 +2981,6 @@ action_embassy = {
 			}
 		}
 	}
-	proposable = {
-		hidden_trigger = { always = yes }
-		custom_tooltip = grants_subjugation_cb
-	}
 
 	should_ai_propose = {
 		weight = 0

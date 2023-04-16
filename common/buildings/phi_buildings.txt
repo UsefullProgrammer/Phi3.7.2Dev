@@ -140,9 +140,6 @@ building_engineering_lab_1 = {
 		}
 	}
 
-	allow = {
-		has_upgraded_capital = yes
-	}
 
 	triggered_planet_modifier = {
 		potential = {
@@ -457,9 +454,6 @@ building_physics_lab_1 = {
 		}
 	}
 
-	allow = {
-		has_upgraded_capital = yes
-	}
 
 	triggered_planet_modifier = {
 		potential = {

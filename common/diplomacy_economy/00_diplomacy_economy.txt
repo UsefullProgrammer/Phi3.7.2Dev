@@ -223,6 +223,10 @@ per_relation = {
 				category = technology
 				value = inferior
 			}
+			#any_spynetwork = {
+			#	owner = { is_same_value = root }
+			#	is_spynetwork_level > 0
+			#}
 			# any_system_within_border = {
 				# from = {
 					# any_system_within_border = {
@@ -280,6 +284,10 @@ per_relation = {
 				category = technology
 				value = pathetic
 			}
+			#any_spynetwork = {
+			#	owner = { is_same_value = root }
+			#	is_spynetwork_level > 0
+			#}
 		}
 		
 		resources = {
