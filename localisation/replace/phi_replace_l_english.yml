@@ -133,7 +133,7 @@ trade_policy_holy_covenant:0 "Holy Covenant"
  TECH_UNLOCK_JUGGERNAUT_CONSTRUCTION_DESC: "You don't need any description. Don't you?"
 
  
- EMPIRE_SIZE_NO_EFFECTS:4 "While §Y$EMPIRE_SIZE$§! is at or below §Y300§!, no other costs are being modified."
+ EMPIRE_SIZE_NO_EFFECTS:4 "While §Y$EMPIRE_SIZE$§! is at or below §Y400§!, no other costs are being modified."
 
  #Decisions
  decision_prospect_effects_short:0 "Adds a random §GPlanetary Feature§! and §RModifier§! to the planet."

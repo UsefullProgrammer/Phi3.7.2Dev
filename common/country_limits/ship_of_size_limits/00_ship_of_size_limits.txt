@@ -103,21 +103,21 @@ battleship_ships_limit = {
 		battleship
 	}
 	base = 8
-	naval_cap_div = 0.16
+	naval_cap_fraction = 0.16
 }
 carrier_ships_limit = {
 	ship_types = { 
 		carrier
 	}
 	base = 8
-	naval_cap_div = 0.08
+	naval_cap_fraction = 0.08
 }
 offspring_carrier_ships_limit = {
 	ship_types = { 
 		offspring_carrier
 	}
 	base = 8
-	naval_cap_div = 0.15
+	naval_cap_fraction = 0.04
 	show = {
 		is_scope_valid = yes
 		has_origin = origin_progenitor_hive
@@ -129,7 +129,7 @@ offspring_cruiser_ships_limit = {
 		offspring_cruiser
 	}
 	base = 4
-	naval_cap_fraction = 0.32
+	naval_cap_fraction = 0.08
 	show = {
 		is_scope_valid = yes
 		has_origin = origin_progenitor_hive
@@ -140,7 +140,7 @@ offspring_battleship_ships_limit = {
 		offspring_battleship
 	}
 	base = 8
-	naval_cap_div = 0.32
+	naval_cap_fraction = 0.08
 	show = {
 		is_scope_valid = yes
 		has_origin = origin_progenitor_hive

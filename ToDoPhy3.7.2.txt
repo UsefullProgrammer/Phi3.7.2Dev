@@ -19,9 +19,11 @@ Cotrollare che diplomatic_stance sia stata convertita da tutte le parti OK
 
 pop_factions_influence_produces_add = x convertirlo in pop_factions_unity_produces_mult = x/10  e pop_factions_unity_produces_add x in pop_factions_unity_produces_add x/20 OK
 
-civic_imperial_cult messo edicts_upkeep_mult = -0.50 controllare che funzioni
-civic_citizen_service aggiunto planet_soldiers_unity_produces_add = 1 aggiungere civic_tooltip_citizen_service_effects quesot dettaglio.
-Controllare che  1 titan per 100 naval cap!
+civic_imperial_cult messo edicts_upkeep_mult = -0.50 controllare che funzioni OK
+civic_citizen_service aggiunto planet_soldiers_unity_produces_add = 1 aggiungere civic_tooltip_citizen_service_effects quesot dettaglio. OK
+Controllare che  1 titan per 100 naval cap! OK
+fixare action_pledge_secret_fealty
+fixare action_ask_to_become_subjugated che puoi farlo solo se has_tradition = tr_domination_adopt
 da fare poi
 Indagare su origin.57
 in 00_starbase_types for ia da migliorare per le orbital.

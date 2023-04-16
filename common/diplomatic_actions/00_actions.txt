@@ -2909,7 +2909,6 @@ action_embassy = {
 	action_type = positive
 
 	possible = {
-		has_tradition = tr_domination_adopt
 		custom_tooltip = {
 			fail_text = "DIPLOMACY_STATUS_WAR"
 			NOT = { is_at_war_with = from }

@@ -31,7 +31,6 @@ Aggiunto a phi_federation_types tranne a galactic_exmpire
 ownership_limits = default
 federation_check_for_subject_trigger = yes
 
-
 00_origins, origini nuove da origin_progenitor_hive in poi
 forse in 01_special_civics empire_size_colonies_mult = -0.9 ora è troppo forte
 02_gestalt_civics empire_size_mult = -0.20
@@ -102,3 +101,5 @@ pop_factions_unity_produces_add x in pop_factions_unity_produces_add x/20
 "buildings_no_exotic_gases = yes" tolto perchè rimosso dalla 3.7.4
 Tolto da federation ownership_limits = default perchè rimosso dalla 3.7.4
 Tolto da wargoal show_agreement_terms = no non so se è voluto ma non è usato più da nesusna su 3.7.4 in 00_war_goals.txt
+Fixato problema rule.2 che a integrazione di auto esplodeva i sistemi.
+tolto cartella subjects poichè nella 3.7.4 sono gestiti in maniera diversa.

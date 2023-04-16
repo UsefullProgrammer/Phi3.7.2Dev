@@ -1,7 +1,6 @@
 namespace = rules
 
 #	only rules.2 is actually used by PHI at this point
-
 country_event = {
 	id = rules.2
 	hide_window = yes
@@ -12,6 +11,20 @@ country_event = {
 		is_at_war = no
 		NOT = { has_global_flag = phi_border_gore_allowed }
 	}
+	immediate = { 
+		owner = { 
+			country_event = { 
+				id = rules.0
+				days = 7 #gobbi fix anex vassal inoltre alleggerisce il carico nelle multiplayer
+			} 
+		} 
+	}
+}
+country_event = {
+	id = rules.0
+	hide_window = yes
+
+	is_triggered_only = yes
 	
 	immediate = {
 		every_owned_planet = {
