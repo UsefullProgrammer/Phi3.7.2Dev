@@ -2496,11 +2496,13 @@ action_demand_subjugation = {
 				}
 			}
 		}
-		relative_power = { who = from category = fleet value <= inferior }
+		
 	}
 
 	possible = {
+		
 		has_tradition = tr_domination_adopt
+		relative_power = { who = from category = fleet value >= superior }
 		custom_tooltip = {
 			fail_text = "requires_actor_not_fanatic_purifiers"
 			OR = {
@@ -2620,6 +2622,11 @@ action_demand_subjugation = {
 			who = from
 			days = @cb_subjugation_length
 		}
+		add_casus_belli = {
+			type = cb_subject
+			who = from
+			days = @cb_subjugation_length
+		}
 	}
 }
 
@@ -2639,12 +2646,35 @@ action_ask_to_become_subjugated = {
 		hidden_trigger = {
 			is_subject = no
 		}
-		relative_power = { who = from category = fleet value <= inferior }
+		#relative_power = { who = from category = fleet value >= superior }
 		years_passed > 20
 	}
 
 	possible = {
-		has_tradition = tr_domination_adopt
+		if = {
+			
+			limit = {
+				from = { has_tradition = tr_domination_adopt }
+			}
+			if = {
+				limit = {
+					has_intel = {
+						who = from
+						intel = civics
+					}
+				}
+				custom_tooltip = {
+					fail_text = requires_actor_domination_tradition
+					always = no
+				}
+			}
+			else = {
+				custom_tooltip = {
+					fail_text = diplo_action_no_low_intel
+					always = no
+				}
+			}
+		}
 		custom_tooltip = {
 			fail_text = "requires_actor_not_fanatic_purifiers"
 			NOT = { has_valid_civic = civic_fanatic_purifiers	}
@@ -3174,6 +3204,35 @@ action_pledge_secret_fealty = {
 			}
 		}
 
+		if = {
+			limit = {
+				from = { NOT = { has_tradition = tr_domination_adopt } }
+			}
+			if = {
+				limit = {
+					has_intel = {
+						who = from
+						intel = civics
+					}
+				}
+				custom_tooltip = {
+					fail_text = requires_actor_domination_tradition
+					always = no
+				}
+			}
+			else = {
+				custom_tooltip = {
+					fail_text = diplo_action_no_low_intel
+					always = no
+				}
+			}
+		}
+		custom_tooltip = {
+			fail_text = "requires_actor_domination_tradition"
+			OR = {
+				NOT = { has_tradition = tr_domination_adopt }
+			}
+		}
 		custom_tooltip = {
 			fail_text = "requires_actor_not_fanatic_purifiers"
 			OR = {
@@ -3217,6 +3276,7 @@ action_propose_secret_fealty = {
 	should_notify_all_communications = no
 	action_type = neutral
 	possible = {
+		has_tradition = tr_domination_adopt
 		custom_tooltip = {
 			fail_text = recent_failed_betrayal_overlord
 			NOT = {
@@ -3228,6 +3288,7 @@ action_propose_secret_fealty = {
 				}
 			}
 		}
+		
 
 		if = {
 			limit = {

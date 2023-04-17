@@ -138,7 +138,9 @@ trade_policy_holy_covenant:0 "Holy Covenant"
  # Main gui
  CREATE_SECTOR:1 "§HCreate New Sector§!\nThis will create a new sector with this planet as its sector capital. All systems within §Y1§! jumps, not previously a part of any sector, will become a part of this new sector."
 
-
+tradition_domination_desc:0 "If we do not impose our will on others, they will inevitably impose theirs on us.\n\nIf §Gadopt§! we can propose that another Empire becomes our subject."
+ tradition_domination_machine_desc:0 "We seek harmonious functionality throughout the entire galaxy. Other stellar beings resist this due to inefficient personal whims. We will remove their disorder like a malfunctioning part.\n\nIf §Gadopt§! we can propose that another Empire becomes our subject."
+ tradition_domination_hive_desc:0 "Everything that is not Us must serve Us, either as servants, or as food.\n\nIf §Gadopt§! we can propose that another Empire becomes our subject."
 #error questo tag ha qualcosa di sbagliato @mario
  tech_capital_productivity_1_effect:0 "Capital Buildings:\n  $mod_planet_jobs_produces_mult$: §G+10%§!"
  tech_capital_productivity_2_effect:0 "Upgraded Capital Buildings:\n  $mod_planet_jobs_produces_mult$: §G+20%§!"
