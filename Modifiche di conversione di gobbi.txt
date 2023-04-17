@@ -103,3 +103,4 @@ Tolto da federation ownership_limits = default perchè rimosso dalla 3.7.4
 Tolto da wargoal show_agreement_terms = no non so se è voluto ma non è usato più da nesusna su 3.7.4 in 00_war_goals.txt
 Fixato problema rule.2 che a integrazione di auto esplodeva i sistemi.
 tolto cartella subjects poichè nella 3.7.4 sono gestiti in maniera diversa.
+Messo empire size a 100 con proporzione phi 400:100 e malus maggiorati.

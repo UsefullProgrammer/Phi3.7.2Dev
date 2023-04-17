@@ -24,7 +24,11 @@ civic_citizen_service aggiunto planet_soldiers_unity_produces_add = 1 aggiungere
 Controllare che  1 titan per 100 naval cap! OK
 fixare action_pledge_secret_fealty
 fixare action_ask_to_become_subjugated che puoi farlo solo se has_tradition = tr_domination_adopt
+Ricerca eng e phy labs mettere che puoi farli anche su pianeti appena colonizzabili OK
+Cambiare decisioni phy in influenza NO
+Cambiare size massimo a come prima ma riproporzionare peso delle cose, proporzinare anche malus OK
+Off_spring_carrier OK
 da fare poi
+Fixare border tech
 Indagare su origin.57
 in 00_starbase_types for ia da migliorare per le orbital.
-Off_spring_carrier da fare

@@ -2161,12 +2161,17 @@ archaeo_unit = {
 	resources = {
 		category = planet_researchers
 		produces = {
-			physics_research = 2
-			engineering_research = 2
-			society_research = 5
+			society_research = 10
 		}
 		produces = {
-			trigger = { planet = { is_planet_class = pc_relic } }
+			trigger = { 
+				planet = { 
+					OR = {
+						is_planet_class = pc_relic 
+						has_deposit = d_phi_archaeology_site
+					} 
+				}
+			}
 			minor_artifacts = 0.3
 		}
 		upkeep = {
