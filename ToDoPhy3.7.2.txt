@@ -22,8 +22,8 @@ pop_factions_influence_produces_add = x convertirlo in pop_factions_unity_produc
 civic_imperial_cult messo edicts_upkeep_mult = -0.50 controllare che funzioni OK
 civic_citizen_service aggiunto planet_soldiers_unity_produces_add = 1 aggiungere civic_tooltip_citizen_service_effects quesot dettaglio. OK
 Controllare che  1 titan per 100 naval cap! OK
-fixare action_pledge_secret_fealty
-fixare action_ask_to_become_subjugated che puoi farlo solo se has_tradition = tr_domination_adopt
+fixare action_pledge_secret_fealty Ok
+fixare action_ask_to_become_subjugated che puoi farlo solo se has_tradition = tr_domination_adopt OK
 Ricerca eng e phy labs mettere che puoi farli anche su pianeti appena colonizzabili OK
 Cambiare decisioni phy in influenza NO
 Cambiare size massimo a come prima ma riproporzionare peso delle cose, proporzinare anche malus OK
