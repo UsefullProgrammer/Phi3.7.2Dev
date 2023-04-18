@@ -119,7 +119,13 @@ building_clone_vats = {
 		upkeep = {
 			energy = 2
 			food = 30
+			
 		}
+		#tip gobbi balance
+		#upkeep = { 
+		#	trigger = { owner = { has_active_tradition = tr_genetics_efficient_cloning } }
+		#	food = 7.5
+		#}
 	}
 
 	triggered_desc = {

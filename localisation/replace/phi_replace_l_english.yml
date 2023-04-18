@@ -145,3 +145,12 @@ tradition_domination_desc:0 "If we do not impose our will on others, they will i
  tech_capital_productivity_1_effect:0 "Capital Buildings:\n  $mod_planet_jobs_produces_mult$: §G+10%§!"
  tech_capital_productivity_2_effect:0 "Upgraded Capital Buildings:\n  $mod_planet_jobs_produces_mult$: §G+20%§!"
  tech_capital_productivity_3_effect:0 "Major Capital Buildings:\n  $mod_planet_jobs_produces_mult$: §G+30%§!"
+
+ EMPIRE_SIZE_TOTAL_2:0 "$VALUE|0Y$"
+ ADMIN_CAP_TOTAL_2:0 "$VALUE|Y$"
+ ADMIN_CAP_VALUE_2:0 "$VALUE|Y$"
+ EMPIRE_SIZE_NO_EFFECTS:4 "While §Y$EMPIRE_SIZE$§! is at or below §Y$EMPIRE_SIZE_TOTAL_2$§!, no other costs are being modified."
+ BuildingS_total:0 "$MOD_PLANET_MAX_BUILDINGS_ADD$: $VALUE|Y$"
+ #tip balancing by gobbi
+
+ #tr_genetics_efficient_cloning_desc:0 "§Y$building_clone_vats$§! produce an additional §G+1.5§! §Y$MOD_PLANET_POP_ASSEMBLY_ORGANIC_ADD$§! and increment upkeep of §Y$building_clone_vats$§! §R25%§."
