@@ -466,14 +466,8 @@ artifact_sell_collector = {
 
 	effect = {
 		add_resource = { energy = 500 }
-		hidden_effect = {
-			add_modifier = {
-				modifier = "artifact_sell_cooldown"
-				days = 180
-			}
-		}
 	}
-	allow = { NOT = { has_modifier = artifact_sell_cooldown } }
+	#remove cooldown for ask by edo
 }
 
 

@@ -20,7 +20,7 @@ progressive = {
 					has_valid_civic = civic_shared_burden 
 				}
 			}
-			unity = 5
+			unity = 0.5
 		}
 	}
 
