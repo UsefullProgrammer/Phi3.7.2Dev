@@ -265,9 +265,9 @@ per_relation = {
 		resources = {
 			category = relative_technology
 			produces = {
-				society_research = 50
-				engineering_research = 50
-				physics_research = 50
+				society_research = 40
+				engineering_research = 40
+				physics_research = 40
 			}
 		}		
 	}
@@ -294,9 +294,9 @@ per_relation = {
 		resources = {
 			category = relative_technology
 			produces = {
-				society_research = 75
-				engineering_research = 75
-				physics_research = 75
+				society_research = 60
+				engineering_research = 60
+				physics_research = 60
 			}
 		}		
 	}
@@ -349,9 +349,9 @@ per_relation = {
 		resources = {
 			category = relative_technology
 			produces = {
-				society_research = 150
-				engineering_research = 150
-				physics_research = 150
+				society_research = 130
+				engineering_research = 130
+				physics_research = 130
 			}
 		}		
 	}
@@ -379,9 +379,9 @@ per_relation = {
 		resources = {
 			category = relative_technology
 			produces = {
-				society_research = 225
-				engineering_research = 225
-				physics_research = 225
+				society_research = 200
+				engineering_research = 200
+				physics_research = 200
 			}
 		}		
 	}
@@ -434,9 +434,9 @@ per_relation = {
 		resources = {
 			category = relative_technology
 			produces = {
-				society_research = 25
-				engineering_research = 25
-				physics_research = 25
+				society_research = 20
+				engineering_research = 20
+				physics_research = 20
 			}
 		}		
 	}
@@ -463,9 +463,9 @@ per_relation = {
 		resources = {
 			category = relative_technology
 			produces = {
-				society_research = 37.5
-				engineering_research = 37.5
-				physics_research = 37.5
+				society_research = 30
+				engineering_research = 30
+				physics_research = 30
 			}
 		}		
 	}
@@ -518,9 +518,9 @@ per_relation = {
 		resources = {
 			category = relative_technology
 			produces = {
-				society_research = 75
-				engineering_research = 75
-				physics_research = 75
+				society_research = 60
+				engineering_research = 60
+				physics_research = 60
 			}
 		}		
 	}
@@ -548,9 +548,9 @@ per_relation = {
 		resources = {
 			category = relative_technology
 			produces = {
-				society_research = 112.5
-				engineering_research = 112.5
-				physics_research = 112.5
+				society_research = 90
+				engineering_research = 90
+				physics_research = 90
 			}
 		}		
 	}

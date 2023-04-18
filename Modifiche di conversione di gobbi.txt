@@ -108,3 +108,6 @@ Ora devi prima chiedere il vassallaggio per avere il casus bellis vassalaggio
 Per chiedere il vassalaggio devi avere la flotta almeno in superiore.
 Ora non puoi fare un accordo segreto per diventare vassalo di un altro se l'altro non ha domination
 Ora ti indica nella tradizione dominazione che se la adotti puoi vassalaggiare altri imperi
+Neighbors Superior Tech rielaborato ora se i confini sono chiusi e hai intel >= 40 invece di prendere 50% bonus ne prendi il 75% di bonus.
+Puoi vendere artefatti quante volte vuoi.
+Tradizione Politica  leggermente migliorata bonus aumentati per l'ultimo perk e se sblocchi tutti i perk +100% diplo weight invece del misero 10%.

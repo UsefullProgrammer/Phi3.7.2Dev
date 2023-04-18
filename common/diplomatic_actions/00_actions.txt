@@ -2622,11 +2622,12 @@ action_demand_subjugation = {
 			who = from
 			days = @cb_subjugation_length
 		}
-		add_casus_belli = {
-			type = cb_subjugation_phi
-			who = from
-			days = @cb_subjugation_length
-		}
+		#todo
+		#add_casus_belli = {
+		#	type = cb_subjugation_phi
+		#	who = from
+		#	days = @cb_subjugation_length
+		#}
 		
 	}
 }
