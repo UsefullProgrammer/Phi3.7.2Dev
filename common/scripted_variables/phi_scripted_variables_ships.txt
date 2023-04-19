@@ -6,7 +6,7 @@
 @ship_6 = 50000
 @ship_7 = 120000
 @ship_8 = 240000
-@ship_9 = 360000
-@ship_10 = 500000
+@ship_9 = 360000 
+@ship_10 = 500000 #conversione dei 150k livello Dio
 
 @robotic_maintenance_alloys = 0.25

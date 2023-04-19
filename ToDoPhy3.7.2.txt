@@ -33,7 +33,13 @@ Da fare
 Origini con origin_imperial_vassal non devono dare danno bonus tech neighborg
 Guardare le altre se hanno roba di federeazione poichè Aggiunto XENOIST_OPPRESSIVE_SUBJUGATION_POLICY e XENOIST_BENEVOLENT_SUBJUGATION_POLICY e XENOIST_XENOLOGICAL_CONSERVATION?
 tr_politics_extraordinary_powers: raddoppia costo rifiuto negozazione
+Fixare border tech OK
+da testare naval_cap_div = 25
+testare crisi/finali
+-phi_war_in_heaven.0
+-sublimation.7
+-phi_empire.0
 da fare poi
-Fixare border tech
+
 Indagare su origin.57
 in 00_starbase_types for ia da migliorare per le orbital.

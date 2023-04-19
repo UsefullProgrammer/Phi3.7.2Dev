@@ -151,6 +151,9 @@ tradition_domination_desc:0 "If we do not impose our will on others, they will i
  ADMIN_CAP_VALUE_2:0 "$VALUE|Y$"
  EMPIRE_SIZE_NO_EFFECTS:4 "While §Y$EMPIRE_SIZE$§! is at or below §Y$EMPIRE_SIZE_TOTAL_2$§!, no other costs are being modified."
  BuildingS_total:0 "$MOD_PLANET_MAX_BUILDINGS_ADD$: $VALUE|Y$"
+
+ #ascension perk
+ no_rev_engineering:1 "§Y$operation_steal_technology$§! operations will automatically fail when used against us and §YDebris§! from our destroyed ships cannot be studied by other empires.\n\nFurthermore, other empires cannot have bonus §Y$relative_technology$§! by your empire."
  #tip balancing by gobbi
 tr_politics_finish_desc:0 "§G+100%§! £diplo_weight£ Diplomatic Weight\nUnlocks 4 special §YResolutions§! in the Galactic Community.\n$TRADITIONS_FINISH_AP$"
  #tr_genetics_efficient_cloning_desc:0 "§Y$building_clone_vats$§! produce an additional §G+1.5§! §Y$MOD_PLANET_POP_ASSEMBLY_ORGANIC_ADD$§! and increment upkeep of §Y$building_clone_vats$§! §R25%§."

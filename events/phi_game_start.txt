@@ -25,7 +25,12 @@ event = {
 				remove_deposit = d_phi_exotic_gas_1
 				remove_deposit = d_phi_volatile_motes_1
 				remove_deposit = d_phi_rare_crystals_1
-				add_modifier = { modifier = phi_pm_atmospheric_pollution }
+				if = {
+					limit = {
+						NOT = { has_origin = origin_void_dwellers } #gobbi non ha senso che i voiddwellers abbiano phi_pm_atmospheric_pollution
+					}
+					add_modifier = { modifier = phi_pm_atmospheric_pollution }
+				}
 				if = {
 					limit = { 
 						planet_size < 20

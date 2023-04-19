@@ -4,7 +4,7 @@
 ### START MENU ###
 ##################
 phi_game_start.1.name: "PHI START MENU"
-phi_game_start.1.desc: "You are playing §HPHI v2.0G (gobbiconversion3.7.4)§!.\n\nChangelog is available at:\n§Bhttps://stellaris.paradoxwikis.com/Phi_mp_balancing/Phi_updates_and_changelog§!\n\nConsider putting a §Gthumbs up§! on the steam page of the mod!\n\nSelect your options for the game, then press OK to start."
+phi_game_start.1.desc: "You are playing §HPHI v2.0G (gobbi porting for 3.7.4)§!.\n\nChangelog is available at:\n§Bhttps://stellaris.paradoxwikis.com/Phi_mp_balancing/Phi_updates_and_changelog§!\n\nConsider putting a §Gthumbs up§! on the steam page of the mod!\n\nSelect your options for the game, then press OK to start."
 
 phi_game_start.1.border_gore_allowed: "Border Gore is §GALLOWED§!"
 phi_game_start.1.border_gore_allowedTT: "§YBorder Gore = Allowed§! means that you §Gcan§! build outposts and have parts of your empire not directly connected to a fully colonized planet.\n\nClick here to §RDISALLOW§! Border Gore"
@@ -21,7 +21,7 @@ phi_game_start.1.emperor_win_allowedTT: "§YEmperor Victory = Allowed§! means t
 phi_game_start.1.emperor_win_disallowed: "Emperor Victory is §RDISALLOWED§!"
 phi_game_start.1.emperor_win_disallowedTT: "§YEmperor Victory = Disallowed§! means that the game will continue even if the Galactic Empire is proclaimed and is exerting authority on all the Galaxy."
 
-phi_game_start.2.desc: "The mod has been upgraded to §HPHI v1.5c (noblesse oblige)§!.\n\nChangelog is available at:\n§Bhttps://stellaris.paradoxwikis.com/Phi_mp_balancing/Phi_updates_and_changelog§!\n\nConsider putting a §Gthumbs up§! on the steam page of the mod!"
+phi_game_start.2.desc: "The mod has been upgraded to §HPHI v2.0G (porting of gobbibomb to 3.7.4)§!.\n\nChangelog is available at:\n§Bhttps://stellaris.paradoxwikis.com/Phi_mp_balancing/Phi_updates_and_changelog§!\n\nConsider putting a §Gthumbs up§! on the steam page of the mod!"
 
 ###############
 ### GENERAL ###
@@ -45,6 +45,8 @@ opinion_bbeg: "Big Bad Evil Guy"
 war_goal_wg_phi_survive: "Survive"
 war_goal_wg_phi_survive_desc: "We have been attacked: our focus must be to survive and to ask the Galactic Community to send help."
 casus_belli_cb_phi_survive: "Survive"
+casus_belli_cb_phi_subjugation: "Subjugation"
+
 
 wg_phi_plunder_accept_them: "§Y[From.GetName]§! is raided, reducing their §YMineral§!, §YEnergy§! and §YAlloys§! production for §Y10§! years"
 wg_phi_plunder_accept_us_1:0 "§Y[Root.GetName]§! gains:\n§G+500§! £energy£, £minerals£\n§G+250§! £alloys£, £unity£, £physics_research£, £society_research£, £engineering_research£"

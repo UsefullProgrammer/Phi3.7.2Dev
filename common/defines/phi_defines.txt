@@ -496,7 +496,7 @@
 		EMPIRE_SIZE_FROM_SYSTEMS				= 1		# Per system
 		EMPIRE_SIZE_FROM_COLONIES				= 25		# Per planet
 		EMPIRE_SIZE_FROM_BRANCH_OFFICES			= 1.25		# Per branch office
-		EMPIRE_SIZE_FROM_POPS					= 0.19		# Per pop
+		EMPIRE_SIZE_FROM_POPS					= 0.20		# Per pop
 
 		DIPLOMACY_WEIGHT_BASE					= 0.0		# Base diplomacy weight for all empires
 		DIPLOMACY_WEIGHT_STANCE_FACTOR			= 0			# Factors weight from Diplo Stance before it is added to diplo weight
@@ -508,8 +508,8 @@
 		DIPLOMACY_WEIGHT_ECONOMY_FACTOR			= 0.15		# Factors Economic Power before it is added to diplo weight
 		DIPLOMACY_WEIGHT_TECHNOLOGY_FACTOR		= 0.1		# Factors Technology Level before it is added to diplo weight
 
-		EMPIRE_SIZE_TECH_COST_PENALTY			= 0.004	# Per empire size above base
-		EMPIRE_SIZE_TRADITION_COST_PENALTY		= 0.008	# Per empire size above base
+		EMPIRE_SIZE_TECH_COST_PENALTY			= 0.01	# Per empire size above base
+		EMPIRE_SIZE_TRADITION_COST_PENALTY		= 0.01	# Per empire size above base
 
 		NUM_TECH_ALTERNATIVES					= 3
 		TECH_WEIGHT_BASE						= 10

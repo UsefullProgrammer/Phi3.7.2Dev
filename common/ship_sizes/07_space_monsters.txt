@@ -267,7 +267,7 @@ space_whale_5 = {
 		ship_fire_rate_mult = 2
 		ship_weapon_range_mult = 2
 	}
-	max_hitpoints = 5000
+	max_hitpoints = @ship_4
 	fleet_slot_size = 3
 	size_multiplier = 4
 	section_slots = { "mid" = { locator = "root" } }
@@ -300,7 +300,7 @@ lost_swarm_adult = {
 		ship_armor_add = 4000
 		ships_upkeep_mult = -1
 	}
-	max_hitpoints = 8000
+	max_hitpoints = @ship_4
 	size_multiplier = 8
 	fleet_slot_size = 8
 	section_slots = { "mid" = { locator = "part1" } }

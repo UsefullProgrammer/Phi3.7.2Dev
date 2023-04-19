@@ -111,3 +111,21 @@ Ora ti indica nella tradizione dominazione che se la adotti puoi vassalaggiare a
 Neighbors Superior Tech rielaborato ora se i confini sono chiusi e hai intel >= 40 invece di prendere 50% bonus ne prendi il 75% di bonus.
 Puoi vendere artefatti quante volte vuoi.
 Tradizione Politica  leggermente migliorata bonus aumentati per l'ultimo perk e se sblocchi tutti i perk +100% diplo weight invece del misero 10%.
+Modificata neigbors superio tech:
+Ora se l'impero superiore ha origini  origin_imperial_vassal_overlord, origin_broken_shackles o è un impero is_advanced_start_AI finchè non si arriva al mid game -5 non condividono neighbor tech
+Ora se l'impero superiore ha l'ascension perk enigmatic engineering non condivide neighbor tech
+Messo a origine void dwellers empire size da colonie -10% invece di administrative capacity + 50 (9% di 400)
+Limite navi drago bimbo 1 ogni 100 MAX = 10.
+buff void dweller:
+da administrativa capacity + 50  a:
+-Planet_structures_cost_mult = -0.10
+-Planet_structures_upkeep_mult = -0.10
+-Planet_building_build_speed_mult = +0.10
+-Planet_orbital_bombardment_damage = 0.25 (malus è più facile infliggere gravi danni agli habitat)
+-Empire_size_colonies_mult = -0.10
+In più tolto phi_pm_atmospheric_pollution poichè non ha senso questo deposito su un orbitale ed è anche inutile nella 3.7.4
+Corretto vita di alcuni mostri che era bassissima in confronto a vita della phi degli altri compresa anche la vita di space_dragon_origin_baby e space_dragon_origin
+Rimesso malus per oversize come nella phi con questi parametri:
+-pop_government_ethic_attraction = -0.005
+-planet_crime_add = 0.5
+EMPIRE_SIZE_TECH_COST_PENALTY e	EMPIRE_SIZE_TRADITION_COST_PENALTY	enormemente aumentati, seguendo la logica del non puoi avere più di 3-5 pianeti

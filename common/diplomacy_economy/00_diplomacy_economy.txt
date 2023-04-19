@@ -217,6 +217,18 @@ per_relation = {
 			from = {
 				is_country_type = default
 				NOT = { has_closed_borders = this }
+				NOT = { has_ascension_perk = ap_enigmatic_engineering} #gobbi : se hai enigmatic engineering non si pu� imparare nulla
+				OR = {#if advance AI origin can't
+					mid_game_years_passed > 0
+					AND = {
+						NOT = { has_country_flag = is_advanced_start_AI }
+						NOT = { has_origin = origin_imperial_vassal_overlord }
+						NOT = { has_origin = origin_broken_shackles }
+					}
+					
+					
+				}
+				
 			}
 			relative_power = {
 				who = from
@@ -249,6 +261,17 @@ per_relation = {
 			from = {
 				is_country_type = default
 				has_closed_borders = this
+				NOT = { has_ascension_perk = ap_enigmatic_engineering} #gobbi : se hai enigmatic engineering non si pu� imparare nulla
+				OR = {#if advance AI origin can't
+					mid_game_years_passed > 0
+					AND = {
+						NOT = { has_country_flag = is_advanced_start_AI }
+						NOT = { has_origin = origin_imperial_vassal_overlord }
+						NOT = { has_origin = origin_broken_shackles }
+					}
+					
+				}
+				
 			}
 			relative_power = {
 				who = from
@@ -278,6 +301,18 @@ per_relation = {
 			from = {
 				is_country_type = default
 				has_closed_borders = this
+				NOT = { has_ascension_perk = ap_enigmatic_engineering} #gobbi : se hai enigmatic engineering non si pu� imparare nulla
+				OR = {#if advance AI origin can't
+					mid_game_years_passed > 0
+					AND = {
+						NOT = { has_country_flag = is_advanced_start_AI }
+						NOT = { has_origin = origin_imperial_vassal_overlord }
+						NOT = { has_origin = origin_broken_shackles }
+					}
+					
+					
+				}
+				
 			}
 			relative_power = {
 				who = from
@@ -308,6 +343,17 @@ per_relation = {
 			from = {
 				is_country_type = default
 				NOT = { has_closed_borders = this }
+				NOT = { has_ascension_perk = ap_enigmatic_engineering} #gobbi : se hai enigmatic engineering non si pu� imparare nulla
+				OR = {#if advance AI origin can't
+					mid_game_years_passed > 0
+					AND = {
+						NOT = { has_country_flag = is_advanced_start_AI }
+						NOT = { has_origin = origin_imperial_vassal_overlord }
+						NOT = { has_origin = origin_broken_shackles }
+					}
+					
+				}
+				
 			}
 			relative_power = {
 				who = from
@@ -333,6 +379,16 @@ per_relation = {
 			from = {
 				is_country_type = default
 				has_closed_borders = this
+				NOT = { has_ascension_perk = ap_enigmatic_engineering} #gobbi : se hai enigmatic engineering non si pu� imparare nulla
+				OR = {#if advance AI origin can't
+					mid_game_years_passed > 0
+					AND = {
+						NOT = { has_country_flag = is_advanced_start_AI }#no
+						NOT = { has_origin = origin_imperial_vassal_overlord }#si=no
+						NOT = { has_origin = origin_broken_shackles }
+					}
+				}
+				
 			}
 			relative_power = {
 				who = from
@@ -363,6 +419,18 @@ per_relation = {
 			from = {
 				is_country_type = default
 				has_closed_borders = this
+				NOT = { has_ascension_perk = ap_enigmatic_engineering} #gobbi : se hai enigmatic engineering non si pu� imparare nulla
+				OR = {#if advance AI origin can't
+					mid_game_years_passed > 0
+					AND = {
+						NOT = { has_country_flag = is_advanced_start_AI }
+						NOT = { has_origin = origin_imperial_vassal_overlord }
+						NOT = { has_origin = origin_broken_shackles }
+					}
+					
+					
+				}
+				
 			}
 			relative_power = {
 				who = from
@@ -393,6 +461,16 @@ per_relation = {
 			from = {
 				is_country_type = default
 				NOT = { has_closed_borders = this }
+				NOT = { has_ascension_perk = ap_enigmatic_engineering} #gobbi : se hai enigmatic engineering non si pu� imparare nulla
+				OR = {#if advance AI origin can't
+					mid_game_years_passed > 0
+					AND = {
+						NOT = { has_country_flag = is_advanced_start_AI }
+						NOT = { has_origin = origin_imperial_vassal_overlord }
+						NOT = { has_origin = origin_broken_shackles }
+					}
+				}
+				
 			}
 			relative_power = {
 				who = from
@@ -418,6 +496,17 @@ per_relation = {
 			from = {
 				is_country_type = default
 				has_closed_borders = this
+				NOT = { has_ascension_perk = ap_enigmatic_engineering} #gobbi : se hai enigmatic engineering non si pu� imparare nulla
+				OR = {#if advance AI origin can't
+					mid_game_years_passed > 0
+					AND = {
+						NOT = { has_country_flag = is_advanced_start_AI }
+						NOT = { has_origin = origin_imperial_vassal_overlord }
+						NOT = { has_origin = origin_broken_shackles }
+					}
+					
+				}
+				
 			}
 			relative_power = {
 				who = from
@@ -447,6 +536,17 @@ per_relation = {
 			from = {
 				is_country_type = default
 				has_closed_borders = this
+				NOT = { has_ascension_perk = ap_enigmatic_engineering} #gobbi : se hai enigmatic engineering non si pu� imparare nulla
+				OR = {#if advance AI origin can't
+					mid_game_years_passed > 0
+					AND = {
+						NOT = { has_country_flag = is_advanced_start_AI }
+						NOT = { has_origin = origin_imperial_vassal_overlord }
+						NOT = { has_origin = origin_broken_shackles }
+					}
+					
+				}
+				
 			}
 			relative_power = {
 				who = from
@@ -477,6 +577,16 @@ per_relation = {
 			from = {
 				is_country_type = default
 				NOT = { has_closed_borders = this }
+				NOT = { has_ascension_perk = ap_enigmatic_engineering} #gobbi : se hai enigmatic engineering non si pu� imparare nulla
+				OR = {#if advance AI origin can't
+					mid_game_years_passed > 0
+					AND = {
+						NOT = { has_country_flag = is_advanced_start_AI }
+						NOT = { has_origin = origin_imperial_vassal_overlord }
+						NOT = { has_origin = origin_broken_shackles }
+					}
+				}
+				
 			}
 			relative_power = {
 				who = from
@@ -502,6 +612,16 @@ per_relation = {
 			from = {
 				is_country_type = default
 				has_closed_borders = this
+				NOT = { has_ascension_perk = ap_enigmatic_engineering} #gobbi : se hai enigmatic engineering non si pu� imparare nulla
+				OR = {#if advance AI origin can't
+					mid_game_years_passed > 0
+					AND = {
+						NOT = { has_country_flag = is_advanced_start_AI }
+						NOT = { has_origin = origin_imperial_vassal_overlord }
+						NOT = { has_origin = origin_broken_shackles }
+					}
+				}
+				
 			}
 			relative_power = {
 				who = from
@@ -532,6 +652,18 @@ per_relation = {
 			from = {
 				is_country_type = default
 				has_closed_borders = this
+				NOT = { has_ascension_perk = ap_enigmatic_engineering} #gobbi : se hai enigmatic engineering non si pu� imparare nulla
+				OR = {#if advance AI origin can't
+					mid_game_years_passed > 0
+					AND = {
+						NOT = { has_country_flag = is_advanced_start_AI }
+						NOT = { has_origin = origin_imperial_vassal_overlord }
+						NOT = { has_origin = origin_broken_shackles }
+					}
+					
+					
+				}
+				
 			}
 			relative_power = {
 				who = from
