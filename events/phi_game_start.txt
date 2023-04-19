@@ -27,7 +27,7 @@ event = {
 				remove_deposit = d_phi_rare_crystals_1
 				if = {
 					limit = {
-						NOT = { has_origin = origin_void_dwellers } #gobbi non ha senso che i voiddwellers abbiano phi_pm_atmospheric_pollution
+						NOT = { owner = { has_origin = origin_void_dwellers } } #gobbi non ha senso che i voiddwellers abbiano phi_pm_atmospheric_pollution
 					}
 					add_modifier = { modifier = phi_pm_atmospheric_pollution }
 				}
