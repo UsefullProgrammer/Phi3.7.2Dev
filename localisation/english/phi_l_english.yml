@@ -23,6 +23,11 @@ phi_game_start.1.emperor_win_disallowedTT: "§YEmperor Victory = Disallowed§! m
 
 phi_game_start.2.desc: "The mod has been upgraded to §HPHI v2.0G (porting of gobbibomb to 3.7.4)§!.\n\nChangelog is available at:\n§Bhttps://stellaris.paradoxwikis.com/Phi_mp_balancing/Phi_updates_and_changelog§!\n\nConsider putting a §Gthumbs up§! on the steam page of the mod!"
 
+phi_game_start.1.phi_artifact_is_only_mining_station_allowed: "Science artifact station is §GALLOWED§! §Y(default option)§!"
+phi_game_start.1.phi_artifact_is_only_mining_station_allowedTT: "Science artifact station Gore = Allowed§! means that artifact research stations will be allowed and will undergo the massive Phi bonuses for research stations.\n\nClick here to §RDISALLOW§! Science artifact station"
+phi_game_start.1.phi_artifact_is_only_mining_station_disallowed: "Science artifact station §RDISALLOWED§! "
+phi_game_start.1.phi_artifact_is_only_mining_station_disallowedTT: "§YScience artifact station = Disallowed§! means that artifact research stations will be replaced by artifact mining stations for balance game.\n\nClick here to §GALLOW§!"
+
 ###############
 ### GENERAL ###
 ###############

@@ -103,7 +103,7 @@ phi_war_in_heaven_ongoing = {
 	resources = {
 		category = edicts
 		cost = {
-			influence = 50
+			influence = 10
 			multiplier = value:edict_size_effect
 		}
 	}
@@ -526,7 +526,7 @@ illuminate_vassal = {
 		category = edicts
 		cost = {
 			influence = 250
-			multiplier = value:edict_size_effect
+			#multiplier = value:edict_size_effect
 		}
 	}
 }

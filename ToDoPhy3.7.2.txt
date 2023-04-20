@@ -38,7 +38,8 @@ da testare naval_cap_div = 25
 testare crisi/finali
 -phi_war_in_heaven.0
 -sublimation.7
--phi_empire.0
+-phi_empire.0 OK
+[*][b]protectorates[/b] give a bonus [b]+200 society research[/b] per month to their overlord
 da fare poi
 
 Indagare su origin.57
