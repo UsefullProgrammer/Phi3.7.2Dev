@@ -129,3 +129,13 @@ Rimesso malus per oversize come nella phi con questi parametri:
 -pop_government_ethic_attraction = -0.005
 -planet_crime_add = 0.5
 EMPIRE_SIZE_TECH_COST_PENALTY e	EMPIRE_SIZE_TRADITION_COST_PENALTY	enormemente aumentati, seguendo la logica del non puoi avere più di 3-5 pianeti
+
+Tolta la federazione spiritualista.
+1.0.6 Can't integrate
+Vassali non puoi più settare can integrate in nessun modo
+Tributari hanno mantenimento 1 influenza
+Richiesta vassallaggio interfacia Ora ogni step è 0.05 non 0.15
+Ripristinato Galactic_empire_1 ora country_base_influence_produces_add = 20
+Stazioni di ricerca artefatti max artefatti settati a cambiati da 3,2,1 a 0.3-0.6-0.9.
+Aggiunti country_admin_cap_add = 5 in tech_colonial_bureaucracy,tech_galactic_bureaucracy e country_admin_cap_add = 7 in tech_repeatable_improved_core_system_cap , il vlaore funziona ma non è visibile.
+fixato ap_imperial_prerogative ora da solo empire_size_mult = -0.20 invece di empire_size_colony_mult = -0.50

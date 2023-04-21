@@ -853,7 +853,7 @@ ap_mastery_of_nature = {
 
 ap_imperial_prerogative = {
 	modifier = {
-		empire_size_colonies_mult = -0.50
+		empire_size_mult = -0.20
 	}
 
 	potential = {

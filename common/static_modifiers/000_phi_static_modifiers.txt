@@ -83,7 +83,7 @@ skill_governor = {
 
 skill_ruler = {
 	planet_stability_add = 1
-	country_unity_produces_mult = 0.03
+	country_edict_fund_add = 5
 	species_empire_size_mult = -0.02
 }
 

@@ -149,10 +149,8 @@ tradition_domination_desc:0 "If we do not impose our will on others, they will i
  EMPIRE_SIZE_TOTAL_2:0 "$VALUE|0Y$"
  ADMIN_CAP_TOTAL_2:0 "$VALUE|Y$"
  ADMIN_CAP_VALUE_2:0 "$VALUE|Y$"
- MOD_COUNTRY_ADMIN_CAP_ADD:0 "$VALUE|Y$"
-MOD_ADMIN_CAP_ADD:0 "$VALUE|Y$"
-
- EMPIRE_SIZE_NO_EFFECTS:4 "While §Y$EMPIRE_SIZE$§! is at or below §Y$EMPIRE_SIZE_TOTAL_2$§! + §YAdministration Capacity§! ($COUNTRY_ADMIN_CAP$ , $COUNTRY_ADMIN_CAP_VALUE$), no other costs are being modified."
+#ADMIN_CAP_VALUE:0 "$MOD_COUNTRY_ADMIN_CAP_ADD$: $VALUE|Y$"($ADMIN_CAP_VALUE_2$)
+ EMPIRE_SIZE_NO_EFFECTS:4 "While §Y$EMPIRE_SIZE$§! is at or below §Y$EMPIRE_SIZE_TOTAL_2$§! + §YAdministration Capacity§! , no other costs are being modified."
  BuildingS_total:0 "$MOD_PLANET_MAX_BUILDINGS_ADD$: $VALUE|Y$"
 
  #ascension perk

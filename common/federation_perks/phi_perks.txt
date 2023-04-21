@@ -52,11 +52,13 @@ xeno_understanding_4 = {
 
 xeno_understanding_5 = {
 	members_modifier = {
+		#country_edict_fund_mult = 0.1 # tip gobbi
 		trade_value_mult = 0.05
 		pop_ethic_xenophile_attraction_mult = 0.20
 		diplo_weight_mult = -0.10
 	}
 	leader_modifier = {
+		#country_edict_fund_mult = 0.2 # tip gobbi
 		empire_size_pops_mult = -0.02
 		diplo_weight_mult = 0.10
 	}
@@ -192,6 +194,7 @@ military_readiness_4 = {
 
 military_readiness_5 = {
 	members_modifier = {
+		#ship_armor_hardening_add = 0.02 #tip gobbi
 		ship_fire_rate_mult = 0.02
 		ships_upkeep_mult = 0.02
 		pop_ethic_militarist_attraction_mult = 0.10
@@ -199,6 +202,7 @@ military_readiness_5 = {
 		diplo_weight_mult = -0.10
 	}
 	leader_modifier = {
+		#ship_armor_hardening_add = 0.04 #tip gobbi
 		ships_upkeep_mult = -0.04
 		diplo_weight_mult = 0.10
 		country_command_limit_add = 10
@@ -267,6 +271,7 @@ mutual_defence_4 = {
 
 mutual_defence_5 = {
 	members_modifier = {
+		#pop_factions_unity_produces_mult = 0.1 #tip gobbi
 		ship_federation_territory_speed_mult = 0.05
 		starbase_defense_platform_capacity_add = 3
 		pop_ethic_pacifist_attraction_mult = 0.10
@@ -274,6 +279,7 @@ mutual_defence_5 = {
 		diplo_weight_mult = -0.10
 	}
 	leader_modifier = {
+		#pop_factions_unity_produces_mult = 0.2 #tip gobbi
 		shipclass_starbase_build_cost_mult = -0.05
 		diplo_weight_mult = 0.10
 	}
@@ -341,6 +347,7 @@ pray_together_4 = {
 
 pray_together_5 = {
 	members_modifier = {
+		#ship_shield_hardening_add = 0.02 #tip gobbi
 		country_unity_produces_mult = 0.05
 		planet_pop_assembly_mult = -0.05
 		pop_ethic_spiritualist_attraction_mult = 0.10
@@ -348,6 +355,7 @@ pray_together_5 = {
 		diplo_weight_mult = -0.10
 	}
 	leader_modifier = {
+		#ship_shield_hardening_add = 0.04 #tip gobbi
 		job_high_priest_per_pop = 0.01
 		diplo_weight_mult = 0.10
 	}
@@ -488,12 +496,14 @@ iron_curtain_4 = {
 
 iron_curtain_5 = {
 	members_modifier = {
+		#edicts_upkeep_mult = -0.15 #tip gobbi
 		planet_jobs_worker_produces_mult = 0.02
 		planet_stability_add = 1
 		pop_government_ethic_attraction = -0.05
 		diplo_weight_mult = -0.10
 	}
 	leader_modifier = {
+		#edicts_upkeep_mult = -0.30 #tip gobbi
 		pop_government_ethic_attraction = 0.05
 		planet_stability_add = 1
 		pop_ethic_authoritarian_attraction_mult = 0.20
@@ -563,6 +573,7 @@ enduring_freedom_4 = {
 
 enduring_freedom_5 = {
 	members_modifier = {
+		#country_admin_cap_add = 10 #tip gobbi
 		pop_citizen_happiness = 0.02
 		pop_ethics_shift_speed_mult = 0.05
 		pop_ethic_egalitarian_attraction_mult = 0.10
@@ -570,6 +581,7 @@ enduring_freedom_5 = {
 		diplo_weight_mult = -0.10
 	}
 	leader_modifier = {
+		#country_admin_cap_add = 20#tip gobbi
 		planet_jobs_specialist_produces_mult = 0.02
 		diplo_weight_mult = 0.10
 	}
@@ -584,9 +596,10 @@ galactic_empire_1 = {
 		diplo_weight_mult = -0.90
 	}
 	leader_modifier = {
+		#country_edict_fund_add = 50 # tip gobbi
 		country_naval_cap_mult = 0.80
 		planet_stability_add = 20
-		country_base_unity_produces_add = 200
+		country_base_influence_produces_add = 20
 		diplo_weight_mult = 2.00
 	}
 }

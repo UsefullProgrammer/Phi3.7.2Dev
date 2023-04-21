@@ -1405,7 +1405,7 @@ spiritualist_federation = {
 	base_intel = 50
 	icon = "GFX_spiritualist_federation"
 	potential = {
-		host_has_dlc = Federations
+		always = no
 	}
 	valid_leader = { #ignored if there are no other valid candidates and in challenge elections
 		species = { is_robotic = no }

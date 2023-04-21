@@ -5397,7 +5397,8 @@ tech_colonial_bureaucracy = {
 	gateway = espionage
 
 	modifier = {
-		country_edict_fund_add = 25
+		country_admin_cap_add = 5
+		country_edict_fund_add = 5
 		add_base_country_intel = 10
 	}
 
@@ -5442,7 +5443,8 @@ tech_galactic_bureaucracy = {
 
 	modifier = {
 		#PHI 3.7.4
-		country_edict_fund_add = 25
+		country_admin_cap_add = 5
+		country_edict_fund_add = 5
 		add_base_country_intel = 10
 	}
 

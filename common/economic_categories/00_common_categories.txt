@@ -21,7 +21,10 @@ country_base = {
 	}
 	modifier_category = country
 }
-
+vassal_phi = {
+	parent = country
+	modifier_category = country
+}
 trade = {
 	use_for_ai_budget = yes
 }
