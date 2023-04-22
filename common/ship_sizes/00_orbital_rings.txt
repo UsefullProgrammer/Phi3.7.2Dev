@@ -90,7 +90,7 @@ orbital_ring_tier_2 = {
 		ship_fire_rate_mult = 1.0
 		ship_weapon_range_mult = 1.50
 	}
-	max_hitpoints = @ship_ring2
+	max_hitpoints = @ship_4_X2
 	base_buildtime = 900
 	resources = {
 		category = starbase_stations
