@@ -73,7 +73,7 @@ medium_ship_ed = {
 	modifier = {
 		ship_evasion_add = 25
 	}
-	max_hitpoints = @ship_4500
+	max_hitpoints = @ship_3
 	size_multiplier = 4
 	fleet_slot_size = 4
 	section_slots = { "mid" = { locator = "part1" } }

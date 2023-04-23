@@ -2650,7 +2650,7 @@ overlord_system_5_init = { # Second vassal
 					}
 					set_policy = {
 						policy = economic_policy
-						option = economic_policy_military
+						option = economic_policy_balanced
 						cooldown = yes
 					}
 					set_policy = {
@@ -2890,7 +2890,7 @@ overlord_system_6_init = { # Third vassal
 					}
 					set_policy = {
 						policy = economic_policy
-						option = economic_policy_civilian
+						option = economic_policy_balanced
 						cooldown = yes
 					}
 					set_policy = {

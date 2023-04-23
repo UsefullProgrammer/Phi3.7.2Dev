@@ -102,7 +102,7 @@ auth_dictatorial = {
 	}
 
 	country_modifier = {
-		edicts_cost_mult = -0.50
+		edicts_upkeep_mult = -0.50
 	}
 	random_weight = {
 		modifier = {
@@ -266,8 +266,6 @@ auth_corporate = {
 	playable = {
 		host_has_dlc = "Megacorp"
 	}
-
-	playable = { host_has_dlc = "Megacorp" }
 	possible = {
 		ethics = {
 			NOR = {

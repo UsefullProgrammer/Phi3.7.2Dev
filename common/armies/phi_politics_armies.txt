@@ -11,8 +11,7 @@ phi_rebel_defense_army = {
 	health = 1.5
 	damage = 1.5
 	morale = 2
-	icon_frame = 3
-
+	icon = GFX_army_type_defensive
 	potential = {
 		always = no
 	}

@@ -17,7 +17,7 @@ wg_fe_humiliation = {
 	}
 
 	potential = {
-		always = yes
+		end_game_years_passed >= 0
 	}
 	possible = {
 		always = yes

@@ -79,7 +79,7 @@ alloys_expenditure_ship_upgrades = {
 		}
 	}
 
-	fraction = {
+	weight = {
 		weight = 0.1
 
 		# spend more on ship upgrades if at capacity

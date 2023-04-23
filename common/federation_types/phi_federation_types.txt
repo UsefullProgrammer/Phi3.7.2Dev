@@ -4,6 +4,7 @@
 @xp_to_level_5 = 600
 
 xenophile_federation = {
+	base_intel = 50
 	icon = "GFX_xenophile_federation"
 	allow = {
 		federation_check_for_subject_trigger = yes
@@ -71,6 +72,7 @@ xenophile_federation = {
 }
 
 xenophobe_federation = {
+	base_intel = 50
 	icon = "GFX_xenophobe_federation"
 	allow = {
 		federation_check_for_subject_trigger = yes
@@ -137,6 +139,7 @@ xenophobe_federation = {
 }
 
 militarist_federation = {
+	base_intel = 50
 	icon = "GFX_militarist_federation"
 	allow = {
 		federation_check_for_subject_trigger = yes
@@ -200,6 +203,7 @@ militarist_federation = {
 }
 
 pacifist_federation = {
+	base_intel = 50
 	icon = "GFX_pacifist_federation"
 	allow = {
 		federation_check_for_subject_trigger = yes
@@ -266,6 +270,7 @@ pacifist_federation = {
 }
 
 spiritualist_federation = {
+	base_intel = 50
 	icon = "GFX_spiritualist_federation"
 	allow = {
 		federation_check_for_subject_trigger = yes
@@ -329,6 +334,7 @@ spiritualist_federation = {
 }
 
 materialist_federation = {
+	base_intel = 50
 	icon = "GFX_materialist_federation"
 	allow = {
 		federation_check_for_subject_trigger = yes
@@ -395,6 +401,7 @@ materialist_federation = {
 }
 
 authoritarian_federation = {
+	base_intel = 50
 	icon = "GFX_authoritarian_federation"
 	allow = {
 		federation_check_for_subject_trigger = yes
@@ -460,6 +467,7 @@ authoritarian_federation = {
 }
 
 egalitarian_federation = {
+	base_intel = 50
 	icon = "GFX_egalitarian_federation"
 	allow = {
 		federation_check_for_subject_trigger = yes
