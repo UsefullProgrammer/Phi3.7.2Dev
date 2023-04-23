@@ -181,7 +181,7 @@ totalitarian = {
 		unfulfilled_title = "TOTALITARIAN_NO_ELITISM"
 		desc = "TOTALITARIAN_ELITISM_DESC"
 
-		fulfilled_effect = 5
+		fulfilled_effect = 10
 		unfulfilled_effect = -10
 
 		potential = {
@@ -251,52 +251,6 @@ totalitarian = {
 			}
 		}
 	}
-
-	demand = {
-		title = "TOTALITARIAN_BENEVOLENT_SUBJUGATION_POLICY"
-		unfulfilled_title = "TOTALITARIAN_NO_BENEVOLENT_SUBJUGATION_POLICY"
-		desc = "TOTALITARIAN_BENEVOLENT_SUBJUGATION_POLICY_DESC"
-
-		unfulfilled_effect = -10
-		fulfilled_effect = 0.001
-
-		potential = {
-			exists = owner
-			owner = {
-				is_subject = no
-				has_policy_flag = benevolent_terms
-			}
-		}
-
-		trigger = {
-			owner = {
-				NOT = { has_policy_flag = benevolent_terms }
-			}
-		}
-	}
-
-	demand = {
-		title = "TOTALITARIAN_OPPRESSIVE_SUBJUGATION_POLICY"
-		unfulfilled_title = "TOTALITARIAN_ADOPT_OPPRESSIVE_SUBJUGATION_POLICY"
-		desc = "TOTALITARIAN_OPPRESSIVE_SUBJUGATION_POLICY_DESC"
-
-		fulfilled_effect = 10
-		unfulfilled_effect = -0.001
-
-		potential = {
-			exists = owner
-			owner = {
-				is_subject = no
-				NOT = { has_policy_flag = benevolent_terms }
-			}
-		}
-
-		trigger = {
-			owner = {
-				has_policy_flag = oppressive_terms
-			}
-		}
-	}
 	
 	demand = {
 		title = "GC_NO_EGALITARIAN_LAWS"
@@ -321,24 +275,6 @@ totalitarian = {
 				is_active_resolution = "resolution_greatergood_balance_in_the_middle"
 				is_active_resolution = "resolution_greatergood_universal_prosperity_mandate"
 			}
-		}
-	}
-	
-	demand = {
-		title = TOTALITARIAN_FEDERATION
-		unfulfilled_title = TOTALITARIAN_FEDERATION_NOT_HEGEMONY
-		desc = TOTALITARIAN_FEDERATION_DESC
-
-		fulfilled_effect = 5
-		unfulfilled_effect = -0.001
-
-		potential = {
-			exists = owner.federation
-			has_federations_dlc = yes
-		}
-
-		trigger = {
-			owner.federation = { has_federation_type = hegemony_federation }
 		}
 	}
 	

@@ -360,7 +360,7 @@ supremacist = {
 			}
 		}
 	}
-		demand = {
+	demand = {
 		title = "SUPREMACIST_OPPRESSIVE_SUBJUGATION_POLICY"
 		unfulfilled_title = "SUPREMACIST_NO_OPPRESSIVE_SUBJUGATION_POLICY"
 		desc = "SUPREMACIST_NO_OPPRESSIVE_SUBJUGATION_POLICY_DESC"

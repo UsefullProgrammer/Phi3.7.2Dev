@@ -28,19 +28,23 @@ Ricerca eng e phy labs mettere che puoi farli anche su pianeti appena colonizzab
 Cambiare decisioni phy in influenza NO
 Cambiare size massimo a come prima ma riproporzionare peso delle cose, proporzinare anche malus OK
 Off_spring_carrier OK
+Origini con origin_imperial_vassal non devono dare danno bonus tech neighborg OK
+Guardare le altre se hanno roba di federeazione poichè Aggiunto XENOIST_OPPRESSIVE_SUBJUGATION_POLICY e XENOIST_BENEVOLENT_SUBJUGATION_POLICY e XENOIST_XENOLOGICAL_CONSERVATION? OK
+Fixare border tech OK
+da testare naval_cap_div = 25 OK failed
 Da fare
 
-Origini con origin_imperial_vassal non devono dare danno bonus tech neighborg
-Guardare le altre se hanno roba di federeazione poichè Aggiunto XENOIST_OPPRESSIVE_SUBJUGATION_POLICY e XENOIST_BENEVOLENT_SUBJUGATION_POLICY e XENOIST_XENOLOGICAL_CONSERVATION?
+
 tr_politics_extraordinary_powers: raddoppia costo rifiuto negozazione
-Fixare border tech OK
-da testare naval_cap_div = 25
+
+Rifare dittatura perchè adesso è inutile.
 testare crisi/finali
 -phi_war_in_heaven.0
 -sublimation.7
 -phi_empire.0 OK
 [*][b]protectorates[/b] give a bonus [b]+200 society research[/b] per month to their overlord
 da fare poi
-
+Dominion bonus influenza da 0.5 a 1
+risolvere civic_tooltip_exalted_priesthood_effects
 Indagare su origin.57
 in 00_starbase_types for ia da migliorare per le orbital.

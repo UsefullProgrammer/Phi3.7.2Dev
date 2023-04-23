@@ -21,10 +21,7 @@ country_base = {
 	}
 	modifier_category = country
 }
-vassal_phi = {
-	parent = country
-	modifier_category = country
-}
+
 trade = {
 	use_for_ai_budget = yes
 }
@@ -885,7 +882,6 @@ planet_researchers = {
 	}
 	modifier_category = pop
 }
-
 planet_metallurgists = {
 	icon = "job_foundry"
 	parent = planet_jobs_productive
@@ -1489,10 +1485,6 @@ diplo_closed_borders = {
 	parent = diplomacy
 }
 
-relative_technology = {
-	parent = diplomacy
-}
-
 diplo_economic_policy = {
 	parent = diplomacy
 }
@@ -1513,13 +1505,6 @@ pre_ftl_trade_pacts = {
 	parent = diplomacy
 }
 
-diplomatic_networking = {
-	parent = diplomacy
-}
-
-infiltration = {
-	parent = diplomacy
-}
 
 contact = {
 	parent = diplomacy

@@ -446,7 +446,7 @@ tech_physics_1 = {
 	gateway = espionage
 
 	modifier = {
-		planet_researchers_physics_research_produces_mult = 0.2
+		planet_jobs_physics_research_produces_mult = 0.2
 	}
 
 	weight_modifier = {
@@ -506,7 +506,7 @@ tech_physics_2 = {
 	gateway = espionage
 
 	modifier = {
-		planet_researchers_physics_research_produces_mult = 0.2
+		planet_jobs_physics_research_produces_mult = 0.2
 	}
 
 	weight_modifier = {
@@ -562,7 +562,7 @@ tech_physics_3 = {
 	gateway = espionage
 
 	modifier = {
-		planet_researchers_physics_research_produces_mult = 0.2
+		planet_jobs_physics_research_produces_mult = 0.2
 	}
 
 	weight_modifier = {

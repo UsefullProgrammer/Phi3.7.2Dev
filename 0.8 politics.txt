@@ -106,14 +106,15 @@ RELIC
 
 
 Politics
-le fazioni producono +4 influence / +20 unity quando sono al 100% happiness
+#deprecato le fazioni producono +4 influence / +20 unity quando sono al 100% happiness
 
 Militarist
-* nessuno piu' grosso di noi (+20/-10)	ok
-* il piu' grosso di tutti (+20/0)	ok
+* nessuno piu' grosso di noi (+15/-10)	ok
+* il piu' grosso di tutti (+15/0)	ok
+* Flotta copre high naval capacity (+5/0)
 * ha vassalli/tributari/presidente fed (+10/0)	ok
 * e' vassallo/tributario (-10/0)	ok
-* readiness policy (+10/-20)	ok
+* readiness policy (+10/-15)	ok
 * only defensive wars (-20/0)	ok
 
 total +60/-60	ok
@@ -160,6 +161,9 @@ Egalitarian
 * reproductive freedom (+10/-10)	ok
 * gc member, gc egalitarian laws (+10/0)	ok
 * no slavery (+10/-10)	ok
+
+SUBJUGATION_POLICY +5/0
+PROGRESSIVE_FEDERATION 0/-10
 
 total +60/-60
 

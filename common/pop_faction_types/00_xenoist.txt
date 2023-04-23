@@ -393,52 +393,6 @@ xenoist = {
 		}
 	}
 	
-	demand = {
-		title = "XENOIST_OPPRESSIVE_SUBJUGATION_POLICY"
-		unfulfilled_title = "XENOIST_NO_OPPRESSIVE_SUBJUGATION_POLICY"
-		desc = "XENOIST_OPPRESSIVE_SUBJUGATION_POLICY_DESC"
-
-		unfulfilled_effect = -10
-		fulfilled_effect = 0.001
-
-		potential = {
-			exists = owner
-			owner = {
-				is_subject = no
-				has_policy_flag = oppressive_terms
-			}
-		}
-
-		trigger = {
-			owner = {
-				is_subject = no
-				NOT = { has_policy_flag = oppressive_terms }
-			}
-		}
-	}
-
-	demand = {
-		title = "XENOIST_BENEVOLENT_SUBJUGATION_POLICY"
-		unfulfilled_title = "XENOIST_ADOPT_BENEVOLENT_SUBJUGATION_POLICY"
-		desc = "XENOIST_BENEVOLENT_SUBJUGATION_POLICY_DESC"
-
-		fulfilled_effect = 10
-		unfulfilled_effect = -0.001
-
-		potential = {
-			exists = owner
-			owner = {
-				is_subject = no
-				NOT = { has_policy_flag = oppressive_terms }
-			}
-		}
-
-		trigger = {
-			owner = {
-				has_policy_flag = benevolent_terms
-			}
-		}
-	}
 
 	demand = { # Alien Zoo (for conservation)
 		title = "XENOIST_XENOLOGICAL_CONSERVATION"

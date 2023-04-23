@@ -74,7 +74,7 @@ phi_archaeologist = {
 	}
 
 	resources = {
-		category = planet_researchers
+		category = planet_researchers_phi
 		produces = {
 			society_research = 10
 			unity = 10
@@ -119,7 +119,7 @@ phi_archaeologist_drone = {
 	possible = { NOT = { has_trait = trait_nerve_stapled } }
 
 	resources = {
-		category = planet_researchers
+		category = planet_researchers_phi
 		produces = {
 			society_research = 10
 			unity = 10
@@ -172,7 +172,7 @@ engineering_researcher = {
 	}
 
 	resources = {
-		category = planet_researchers
+		category = planet_researchers_phi
 		produces = {
 			physics_research = 2
 			engineering_research = 8
@@ -333,7 +333,7 @@ engineering_brain_drone = {
 	possible = { NOT = { has_trait = trait_nerve_stapled } }
 
 	resources = {
-		category = planet_researchers
+		category = planet_researchers_phi
 		produces = {
 			physics_research = 2
 			engineering_research = 8
@@ -431,7 +431,7 @@ engineering_calculator = {
 	possible_precalc = can_fill_drone_job
 
 	resources = {
-		category = planet_researchers
+		category = planet_researchers_phi
 		produces = {
 			physics_research = 2
 			engineering_research = 8
@@ -523,7 +523,7 @@ physics_researcher = {
 	}
 
 	resources = {
-		category = planet_researchers
+		category = planet_researchers_phi
 		produces = {
 			physics_research = 8
 			engineering_research = 2
@@ -685,7 +685,7 @@ physics_brain_drone = {
 	possible = { NOT = { has_trait = trait_nerve_stapled } }
 
 	resources = {
-		category = planet_researchers
+		category = planet_researchers_phi
 		produces = {
 			physics_research = 8
 			engineering_research = 2
@@ -783,7 +783,7 @@ physics_calculator = {
 	possible_precalc = can_fill_drone_job
 
 	resources = {
-		category = planet_researchers
+		category = planet_researchers_phi
 		produces = {
 			physics_research = 8
 			engineering_research = 2

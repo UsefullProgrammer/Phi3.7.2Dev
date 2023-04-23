@@ -250,23 +250,6 @@ technologist = {
 	}
 	
 	demand = {
-		title = TECHNOLOGIST_FEDERATION
-		unfulfilled_title = TECHNOLOGIST_FEDERATION_NOT_RESEARCH
-		desc = TECHNOLOGIST_FEDERATION_DESC
-
-		fulfilled_effect = 5
-		unfulfilled_effect = -0.001
-
-		potential = {
-			exists = owner.federation
-			has_federations_dlc = yes
-		}
-
-		trigger = {
-			owner.federation = { has_federation_type = research_federation }
-		}
-	}
-	demand = {
 		title = "GC_MATERIALIST_LAWS"
 		unfulfilled_title = "GC_NO_MATERIALIST_LAWS"
 		desc = "GC_MATERIALIST_LAWS_DESC"

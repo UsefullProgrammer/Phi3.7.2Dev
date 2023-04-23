@@ -272,28 +272,6 @@ prosperity = {
 		}
 	}
 	demand = {
-		title = PROSPERITY_FEDERATION
-		unfulfilled_title = PROSPERITY_FEDERATION_NOT_MILITARIST
-		desc = PROSPERITY_FEDERATION_DESC
-
-		unfulfilled_effect = -10
-		fulfilled_effect = 0.001
-
-		potential = {
-			exists = owner.federation
-			owner.federation = { has_federation_type = military_federation }
-		}
-
-		trigger = {
-			OR = {
-				NOT = { exists = owner.federation }
-				owner.federation = {
-					NOT = { has_federation_type = military_federation }
-				}
-			}
-		}
-	}
-	demand = {
 		title = "ISOLATIONIST_PEACE2"
 		unfulfilled_title = "ISOLATIONIST_NO_PEACE2"
 		desc = "ISOLATIONIST_PEACE_DESC2"

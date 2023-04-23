@@ -1,0 +1,23 @@
+planet_researchers_phi = {
+	icon = "job_researcher"
+	parent = planet_researchers
+	generate_mult_modifiers = {
+		produces
+		upkeep
+	}
+	generate_add_modifiers = {
+		produces
+		upkeep
+	}
+	modifier_category = pop
+}
+relative_technology = {
+	parent = diplomacy
+}
+diplomatic_networking = {
+	parent = diplomacy
+}
+
+infiltration = {
+	parent = diplomacy
+}

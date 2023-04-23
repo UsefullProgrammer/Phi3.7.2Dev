@@ -907,7 +907,7 @@ resolution_phi_aristocracy_repeal_4_effect_success: "Repeals the §Y$resolution_
 resolution_phi_aristocracy_repeal_5: "§RRepeal $resolution_phi_aristocracy_government_of_the_fittest$§!"
 resolution_phi_aristocracy_repeal_5_desc: "The [global_event_country.GetGalCommunityOrGalImperium] oversteps its bounds by attempting to tell its members how to live. Frankly, it's insulting."
 resolution_phi_aristocracy_repeal_5_effect_success: "Repeals the §Y$resolution_phi_aristocracy_government_of_the_fittest$§! resolution, leaving §Y$resolution_phi_aristocracy_anti_slacker_act$§! as galactic law."
-
+planet_researchers_phi: "$planet_researchers$"
 vassal_phi: "Subject"
 vassal_phi_plural: "Subject"
 

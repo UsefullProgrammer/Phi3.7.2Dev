@@ -8,5 +8,5 @@
 @ship_8 = 240000
 @ship_9 = 360000 
 @ship_10 = 500000 #conversione dei 150k livello Dio
-
+@ship_4_X2 = 18000
 @robotic_maintenance_alloys = 0.25

@@ -119,7 +119,7 @@ imperialist = {
 		unfulfilled_title = "MILITARIST_MEDIUM_FISH"
 		desc = "MILITARIST_BIGGEST_FISH_DESC"
 
-		fulfilled_effect = 20
+		fulfilled_effect = 15
 		unfulfilled_effect = 0.001
 
 		potential = {
@@ -205,24 +205,6 @@ imperialist = {
 	}
 
 	demand = {
-		title = IMPERIALIST_FEDERATION
-		unfulfilled_title = IMPERIALIST_FEDERATION_NOT_MILITARIST
-		desc = "IMPERIALIST_FEDERATION_DESC"
-
-		fulfilled_effect = 5
-		unfulfilled_effect = -0.001
-
-		potential = {
-			exists = owner.federation
-			has_federations_dlc = yes
-		}
-
-		trigger = {
-			owner.federation = { has_federation_type = military_federation }
-		}
-	}
-
-	demand = {
 		title = IMPERIALIST_FLEET_USAGE_HIGH
 		unfulfilled_title = IMPERIALIST_FLEET_USAGE_NOT_HIGH
 		desc = IMPERIALIST_FLEET_USAGE_HIGH_DESC
@@ -251,7 +233,7 @@ imperialist = {
 		desc = IMPERIALIST_FLEET_USAGE_LOW_DESC
 
 		fulfilled_effect = 0.001
-		unfulfilled_effect = -10
+		unfulfilled_effect = 0.001
 
 		potential = {
 			exists = owner
@@ -288,30 +270,7 @@ imperialist = {
 			}
 		}
 	}
-		demand = {
-		title = "IMPERIALIST_SLAYER"
-		unfulfilled_title = "IMPRERIALIST_NOT_SLAYER"
-		desc = "IMPERIALIST_SLAYER_DESC"
-
-		fulfilled_effect = 5
-		unfulfilled_effect = -0.001
-
-		potential = {
-			exists = owner
-			owner = {
-				OR = {
-					has_country_flag = killed_guardian
-					any_relation = { is_guardian_country = yes }
-				}
-			}
-		}
-
-		trigger = {
-			owner = {
-				has_country_flag = killed_guardian
-			}
-		}
-	}
+	
 	demand = {
 		title = "MOBILIZED_MILITARY"
 		unfulfilled_title = "MOBILIZED_MILITARY"
@@ -369,52 +328,6 @@ imperialist = {
 					has_policy_flag = diplo_stance_disarmament
 					has_policy_flag = diplo_stance_minimal_army
 				}
-			}
-		}
-	}
-
-	demand = {
-		title = "IMPERIALIST_BENEVOLENT_SUBJUGATION_POLICY"
-		unfulfilled_title = "IMPERIALIST_NO_BENEVOLENT_SUBJUGATION_POLICY"
-		desc = "IMPERIALIST_BENEVOLENT_SUBJUGATION_POLICY_DESC"
-
-		unfulfilled_effect = -5
-		fulfilled_effect = 0.001
-
-		potential = {
-			exists = owner
-			owner = {
-				is_subject = no
-				has_policy_flag = benevolent_terms
-			}
-		}
-
-		trigger = {
-			owner = {
-				NOT = { has_policy_flag = benevolent_terms }
-			}
-		}
-	}
-
-	demand = {
-		title = "IMPERIALIST_OPPRESSIVE_SUBJUGATION_POLICY"
-		unfulfilled_title = "IMPERIALIST_ADOPT_OPPRESSIVE_SUBJUGATION_POLICY"
-		desc = "IMPERIALIST_OPPRESSIVE_SUBJUGATION_POLICY_DESC"
-
-		fulfilled_effect = 5
-		unfulfilled_effect = -0.001
-
-		potential = {
-			exists = owner
-			owner = {
-				is_subject = no
-				NOT = { has_policy_flag = benevolent_terms }
-			}
-		}
-
-		trigger = {
-			owner = {
-				has_policy_flag = oppressive_terms
 			}
 		}
 	}

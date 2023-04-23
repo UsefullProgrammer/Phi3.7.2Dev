@@ -303,49 +303,6 @@ progressive = {
 	}
 	
 	demand = {
-		title = PROGRESSIVE_FEDERATION
-		unfulfilled_title = PROGRESSIVE_FEDERATION_NOT_HEGEMONY
-		desc = PROGRESSIVE_FEDERATION_DESC
-
-		unfulfilled_effect = -10
-		fulfilled_effect = 0.001
-
-		potential = {
-			exists = owner.federation
-			owner.federation = { has_federation_type = hegemony_federation }
-		}
-
-		trigger = {
-			OR = {
-				NOT = { exists = owner.federation }
-				owner.federation = {
-					NOT = { has_federation_type = hegemony_federation }
-				}
-			}
-		}
-	}
-
-	demand = {
-		title = "PROGRESSIVE_BENEVOLENT_SUBJUGATION_POLICY"
-		unfulfilled_title = "PROGRESSIVE_BENEVOLENT_NO_OPPRESSIVE_SUBJUGATION_POLICY"
-		desc = "PROGRESSIVE_BENEVOLENT_NO_OPPRESSIVE_SUBJUGATION_POLICY_DESC"
-
-		unfulfilled_effect = -0.001
-		fulfilled_effect = 5
-
-		potential = {
-			exists = owner
-			owner = { is_subject = no }
-		}
-
-		trigger = {
-			owner = {
-				has_policy_flag = benevolent_terms
-			}
-		}
-	}
-	
-	demand = {
 		title = "GC_EGALITARIAN_LAWS"
 		unfulfilled_title = "GC_NO_EGALITARIAN_LAWS"
 		desc = "GC_EGALITARIAN_LAWS_DESC"
