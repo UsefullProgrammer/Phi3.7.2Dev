@@ -427,7 +427,6 @@ artifact_find_peaceful_applications = {
 		}
 	}
 }
-
 # PHI
 artifact_sell_collector = {
 	resources = {
@@ -469,7 +468,50 @@ artifact_sell_collector = {
 	}
 	#remove cooldown for ask by edo
 }
+artifact_buy_collector = {
+	#ask primate for player that not have artifact for unlucky
+	resources = {
+		category = artifact_actions
+		cost = {
+			energy = 400
+		}
+	}
 
+	ai_weight = {
+		weight = 25
+		modifier = {
+			factor = 0
+			has_resource = { type = minor_artifacts amount > 50 }
+		}
+		modifier = {
+			factor = 0
+			has_resource = { type = energy amount < 500 }
+		}
+	}
+	potential = {
+		always = yes
+	}
+	allow = {
+		OR = {
+			is_gestalt = no
+			any_relation = {
+				is_country_type = default
+				has_communications = from
+				is_gestalt = no
+			}
+		}
+		NOT = { has_modifier = artifact_sell_cooldown }
+	}
+	effect = {
+		add_resource = { minor_artifacts = 10 }
+		hidden_effect = {
+			add_modifier = {
+				modifier = "artifact_sell_cooldown"
+				days = 180
+			}
+		}
+	}
+}
 
 artifact_arcane_deciphering_locked = {
 	potential = {
