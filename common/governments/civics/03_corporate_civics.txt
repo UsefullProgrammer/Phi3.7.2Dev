@@ -549,7 +549,7 @@ civic_brand_loyalty = {
 	}
 	modifier = {
 		country_unity_produces_mult = 0.15
-		pop_factions_unity_produces_add = 1
+		pop_factions_unity_produces_mult = 0.1
 		intel_encryption_add = 1
 	}
 }

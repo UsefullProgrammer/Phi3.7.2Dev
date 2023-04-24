@@ -474,7 +474,7 @@ edict_phi_war_in_heaven_ongoing: "War in Heaven Ongoing"
 edict_phi_war_in_heaven_ongoing_desc: "Whilst the Titans are fighting, we must strive to survive. No more time to petty squabbles between us - the time to put aside differences has come!"
 edict_breaking_truce_normal: "Surprise Attack"
 edict_breaking_truce_normal_desc: "War is fought by all means. Abiding by rules that are just social constructs is a limit we shall not impose on our efforts."
-edict_tooltip_breaking_truce_normal_effects: "Declare war to a §Yrandom§! empire which has a §Ytruce§! with your empire and you are §Yharming relations§! with. You need to have a valid §Yclaim§!.\nYou will get a §RTruce Breaker§! modifier for §Y10 years§!."
+edict_tooltip_breaking_truce_normal_effects: "Declare war to a §Yrandom§! empire which has a §Ytruce§! with your empire and you are §Yharming relations§! with. You need to have a valid §Yclaim§!.\nYou will get a §RTruce Breaker§! modifier for §Y10 years§!.\n\n Effect:\n\n§R-20§! §YStability§!\n\n§R+20§! §YCrime§!\n\n§R100%§! §YWar exhaustion§!\n\n§R-50%§! §YDiplomatic weight§!"
 edict_breaking_truce_homicidal: "War Frenzy"
 edict_breaking_truce_homicidal_desc: "We will not stop until we are the only ones."
 edict_tooltip_breaking_truce_homicidal_effects: "Declare war to a §Yevery§! regular empire which has a §Ytruce§! with your empire and you are §Ybordering§!.\nYou will get a §RTruce Breaker§! modifier for §Y10 years§!."
@@ -526,7 +526,7 @@ edict_tooltip_reboot_effects: "Quit and reboot the game - we will §Gsublimate§
 
 edict_illuminate_vassal: "Illuminate the Vassals"
 edict_illuminate_vassal_desc: "As a complex political organism, we share the same destiny. There is no place for fear of the different if we want to succeed on the galactic stage."
-
+empire_size_pops: "Empire size from pops"
 #Civics
 civic_foreign_markets_arbitrage: "Foreign Markets Arbitrage"
 civic_foreign_markets_arbitrage_desc: "New opportunities arise when you keep your mind open to foreign ideas."
@@ -861,7 +861,8 @@ job_physics_calculator_effect_desc:2 "£job_physics_calculator£ $job_physics_ca
 mod_job_physics_calculator_add:0 "$job_physics_calculator$ Jobs"
 mod_job_physics_calculator_per_pop:0 "§G+1§! $job_physics_calculator$ Job per $VALUE$ Pops"
 mod_job_physics_calculator_per_pop_short:0 "\n§G+1§! £mod_job_physics_calculator_add£ per $VALUE$ £pop£"
-
+phi_no_retreat_name:0 "No retreat policy"
+phi_no_retreat_desc:0 "$no_retreat_doctrine_desc$"
 #Armies
 phi_rebel_defense_army: "Rebel Army"
 phi_rebel_defense_army_desc: "Rebels in organized ranks, fighting for their ideology till the bitter end."

@@ -1,0 +1,18 @@
+edict_size_effect = {
+	base = 0.02
+	#mult = trigger:num_pops
+	mult = trigger:empire_size
+	add = 1
+}
+edict_pop_size_effect = {
+	base = 0.02
+	mult = trigger:num_pops
+	add = 1
+}
+edict_fleet_size_effect = {
+	base = 0.025
+	#mult = trigger:num_pops
+	#mult = owner.trigger:num_ships
+	mult = trigger:empire_size
+	add = 1
+}

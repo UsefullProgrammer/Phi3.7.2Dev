@@ -1200,10 +1200,10 @@ fleet_contribution_low_research = {
 		}
 	}
 	potential = {
-		OR = {
+		#OR = {
 			has_federation_type = research_federation
-			has_federation_type = spiritualist_federation
-		}
+			#has_federation_type = spiritualist_federation #wtf
+		#}
 	}
 	required_centralization = {
 		base = 3
@@ -1342,10 +1342,10 @@ fleet_contribution_medium_research = {
 		}
 	}
 	potential = {
-		OR = {
+		#OR = {
 			has_federation_type = research_federation
-			has_federation_type = spiritualist_federation
-		}
+			#has_federation_type = spiritualist_federation
+		#}
 	}
 	required_centralization = {
 		base = 5
@@ -1828,23 +1828,13 @@ fleet_contribution_high_martial = {
 # Fleet Contribution - Hegemony
 
 fleet_contribution_low_hegemony = {
-	allow = { 
-		custom_tooltip = {
-			NOT = {
-				AND = {
-					NOT = { has_federation_law = fleet_contribution_low_hegemony }
-					has_modifier = federation_law_category_fleet_contribution_cooldown
-					has_any_federation_law_in_category = law_category_fleet_contribution
-				}
-			}
-		}
+	allow = {
+		always = yes
 	}
 	potential = {
 		has_federation_type = hegemony_federation
 	}
-	allow = {
-		always = yes
-	}
+	
 	modifier = 	{
 		description = "fleet_contribution_low_effect"
 		federation_fleet_contribution_factor = @contribution_low

@@ -301,9 +301,9 @@ d_mutation_vats = {
 # Artifacts Deposits
 d_artifacts_1 = {
 	resources = {
-		category = orbital_research_deposits
+		category = orbital_mining_deposits
 		produces = {
-			minor_artifacts = 0.3
+			minor_artifacts = 1
 		}
 	}
 	station = shipclass_research_station
@@ -316,9 +316,9 @@ d_artifacts_1 = {
 }
 d_artifacts_2 = {
 	resources = {
-		category = orbital_research_deposits
+		category = orbital_mining_deposits
 		produces = {
-			minor_artifacts = 0.6
+			minor_artifacts = 2
 		}
 	}
 	station = shipclass_research_station
@@ -331,9 +331,9 @@ d_artifacts_2 = {
 }
 d_artifacts_3 = {
 	resources = {
-		category = orbital_research_deposits
+		category = orbital_mining_deposits
 		produces = {
-			minor_artifacts = 0.9
+			minor_artifacts = 3
 		}
 	}
 	station = shipclass_research_station

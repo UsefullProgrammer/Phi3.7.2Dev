@@ -5,11 +5,15 @@ empire_size_over_cap = {
 	#Phi punishment
 	pop_government_ethic_attraction = -0.005
 	#leader_upkeep_empire_size_mult = 0.01
-	planet_crime_add = 0.5
+	planet_crime_add = 0.75
+	edicts_cost_mult = 0.01
+	edicts_upkeep_mult = 0.01
 }
 
 # Per empire size (ignores admin cap)
 empire_size = {
+	#edicts_cost_mult = 0.005
+	#edicts_upkeep_mult = 0.005
 	# in 3.7.4 useless
 	#rare_edicts_cost_mult = 0.01
 	#campaigns_cost_mult = 0.01

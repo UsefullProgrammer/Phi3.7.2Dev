@@ -146,3 +146,17 @@ Fix orbital ring level 2.
 Fix bonus planet researcher that non funzionava.
 Ora le ricerche bonus tech danno bonus a tutti i tipi di lavoro che fanno technology
 Fazioni bisogni fixati ora sono tutti a +60/-60 come la phi era prima.
+
+Fix ditattura
+
+1.0.8
+Bilanciamento over empire size
+Le tech non ripetibile che prima davano administrive capacity ora danno -2,5% empire size
+Buffato culto imperiale 100 edict bonus invece di 50
+Buffato beacon liberty, ora da 15% unity mult faction e -0,15 pop empire size
+Gl editti costano un pò di più in base all'empire size
+Tolto codice obsoleto
+Fix legge contribuzione bassa in hegemony federation ora è smepre disponibile
+Fix legge ricerca funziona solo per le federazioni di ricerca
+Tolto Edicts cost +1% every empire size + 1% every over size
+Raddoppiato costo editti e campagne.

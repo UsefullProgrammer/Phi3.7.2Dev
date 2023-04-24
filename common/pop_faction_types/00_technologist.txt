@@ -288,22 +288,16 @@ technologist = {
 			owner = {
 				is_subject = yes
 				any_agreement = {
-					has_term_value = {
-						term = resource_subsidies_basic
-						value > 0
+					agreement_preset = preset_dominion
 					}
 				}
-			}
 		}
 
 		trigger = {
 			owner = {
 				NOT = {
 					any_agreement = {
-						has_term_value = {
-							term = resource_subsidies_basic
-							value > 0
-						}
+						agreement_preset = preset_dominion
 					}
 				 }
 			}

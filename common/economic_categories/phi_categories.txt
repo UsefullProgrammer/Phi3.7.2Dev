@@ -1,3 +1,7 @@
+vassal_phi = {
+    parent = country
+    modifier_category = country
+}
 planet_researchers_phi = {
 	icon = "job_researcher"
 	parent = planet_researchers

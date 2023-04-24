@@ -33,14 +33,16 @@ Guardare le altre se hanno roba di federeazione poichè Aggiunto XENOIST_OPPRESS
 Fixare border tech OK
 da testare naval_cap_div = 25 OK failed
 Da fare
-
-
+Provare ascension planet
+ANTIMATTER RESEARCH STATION METTERE 0.3 ANTIMATTER
+controllare efficency burocracy
 tr_politics_extraordinary_powers: raddoppia costo rifiuto negozazione
 
-Rifare dittatura perchè adesso è inutile.
+Rifare dittatura perchè adesso è inutile. OK
+
 testare crisi/finali
 -phi_war_in_heaven.0
--sublimation.7
+-sublimation.7 OK
 -phi_empire.0 OK
 [*][b]protectorates[/b] give a bonus [b]+200 society research[/b] per month to their overlord
 da fare poi

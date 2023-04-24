@@ -124,7 +124,7 @@ civic_imperial_cult = {
 		}	
 	}
 	modifier = {
-		country_edict_fund_add = 50
+		country_edict_fund_add = 100
 		edicts_cost_mult = -0.50
 		edicts_upkeep_mult = -0.50
 	}
@@ -183,7 +183,7 @@ civic_beacon_of_liberty = {
 	}
 	modifier = {
 		pop_factions_unity_produces_mult = 0.1
-		pop_factions_unity_produces_add = 1
+		empire_size_pops_mult = -0.15
 	}
 }
 
@@ -599,7 +599,7 @@ civic_idealistic_foundation = {
 	}
 	modifier = {
 		pop_citizen_happiness = 0.10
-		pop_factions_unity_produces_add = 1
+		pop_factions_unity_produces_mult = 0.1
 	}
 }
 
