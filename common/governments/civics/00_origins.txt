@@ -962,6 +962,9 @@ origin_progenitor_hive = {
 
 	description = "origin_tooltip_progenitor_hive_effects"
 	modifier = {
+		leaders_cost_mult = 0.1
+		leaders_upkeep_mult = 0.1
+		country_naval_cap_mult = -0.25
 		owned_ship_speed_mult = -0.5
 		owned_ship_evasion_mult = -0.5
 		owned_ship_fire_rate_mult = -0.5
@@ -1110,6 +1113,11 @@ origin_imperial_vassal_overlord = { # AI Only
 	possible = {}
 
 	description = "origin_tooltip_imperial_vassal_overlord_effects"
+
+	modifier = {
+		country_naval_cap_mult = -0.1
+		all_technology_research_speed = -0.10
+	}
 
 	traits = {}
 

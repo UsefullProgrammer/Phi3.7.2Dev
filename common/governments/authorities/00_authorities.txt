@@ -103,6 +103,7 @@ auth_dictatorial = {
 
 	country_modifier = {
 		edicts_upkeep_mult = -0.50
+		campaigns_upkeep_mult = -0.50
 	}
 	random_weight = {
 		modifier = {
@@ -281,7 +282,7 @@ auth_corporate = {
 			NOT = { host_has_dlc = "Megacorp" }
 		}
 		modifier = {
-			factor = 0.5 # gli altri imperi sono a 2 nella phi era 0.25 quindi 1/4 di 2 è 0.5
+			factor = 0.5 # gli altri imperi sono a 2 nella phi era 0.25 quindi 1/4 di 2  0.5
 			host_has_dlc = "Megacorp"
 		}
 	}

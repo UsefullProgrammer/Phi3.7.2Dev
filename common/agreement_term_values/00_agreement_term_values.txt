@@ -235,8 +235,14 @@ resource_subsidies_basic = {
 		base = @subsidy_maximum
 
 		modifier = {
+			set = @set_factor_0_neg
+			agreement_preset = preset_scholarium
+		}
+
+		modifier = {
 			set = @set_factor_1_neg
 			agreement_preset = preset_bulwark
+			
 		}
 
 		modifier = {
@@ -257,7 +263,6 @@ resource_subsidies_basic = {
 			set = @set_factor_2
 			OR = {
 				agreement_preset = preset_vassal
-				agreement_preset = preset_scholarium
 				agreement_preset = preset_protectorate
 			}
 		}
@@ -1339,6 +1344,7 @@ subject_gets_sensors = {
 subject_is_not_Vassal = {
 	term = vassal_phi
 	potential = {
+		target = { has_origin = origin_imperial_vassal } 
 		NOT = {
 			AND = {
 				agreement_preset = preset_tributary
@@ -1352,10 +1358,11 @@ subject_is_Vassal = {
 	overlord_resources = {
 		category = vassal_phi #subjects messo questo che non è parente per diplomacy per non costare 0 per la tradition diplomacy.
 		upkeep = {
-			influence = 1 #to do prova produces negativo con category subjects 
+			influence = 1
 		}
 	}
 	potential = { 
+		target = { NOT = { has_origin = origin_imperial_vassal } }
 		OR = {
 			agreement_preset = preset_tributary 
 			agreement_preset = preset_vassal

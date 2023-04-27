@@ -125,8 +125,8 @@ civic_imperial_cult = {
 	}
 	modifier = {
 		country_edict_fund_add = 100
-		edicts_cost_mult = -0.50
-		edicts_upkeep_mult = -0.50
+		campaigns_cost_mult = -0.4
+		campaigns_upkeep_mult = -0.4
 	}
 }
 

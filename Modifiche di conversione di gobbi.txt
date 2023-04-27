@@ -160,3 +160,17 @@ Fix legge contribuzione bassa in hegemony federation ora è smepre disponibile
 Fix legge ricerca funziona solo per le federazioni di ricerca
 Tolto Edicts cost +1% every empire size + 1% every over size
 Raddoppiato costo editti e campagne.
+1.1 Bilanciamento e design
+Bilanciato Origine hive progenitore
+Potenziato payback (forse troppo)
+Bilanciato origine Imperial fiefdom : 
+-vassalo scholarium ora è d'obbligo mandare sussidi base al vassalo al 15%
+-indebolito leggermente l'overlord
+-Ora l'origine Imperial fiefdom ha costo azzerato di mantenimento influenza se diventa vassalo o tributario, questo la rende più appetitosa di altri imperi .
+
+Scholarium bilanciato, ora l'overlord è obbligato a un sussidio almeno del 15% (prima era op)
+Messe icone personalizzate ai ricercatori
+Per bilanciare l'origine over tuned modificato tratto venerable da 40 a 45.
+Cambiato costo e manuntenzione truppe truppe non robotiche ora hanno bisogno di cibo al 50% e energy al 50% così il cibo ha senso, inoltre cambiato perarmate  machine liv 3 ora costano e hanno manuntenzion di alloy (sempre proporzionata)
+Messo categoria campaign diversa da edicts.
+Imperial cult diminuisce del 40% campaigns invece del 50% edicts

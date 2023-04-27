@@ -269,6 +269,16 @@ event = {
 		every_playable_country = {
 			limit = { has_origin = origin_payback }
 			country_event = { id = origin.4000 }
+			set_policy = {
+				policy = diplomatic_stance
+				option = diplo_stance_full_scale_mobilization
+				cooldown = no
+			}
+			set_policy = {
+				policy = diplomatic_stance
+				option = diplo_stance_full_scale_mobilization
+				cooldown = no
+			}
 		}
 
 		## Payback/Escaped Slaves Slaver empire

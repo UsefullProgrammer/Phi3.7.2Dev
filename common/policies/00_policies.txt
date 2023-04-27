@@ -309,7 +309,10 @@ diplomatic_stance = {
 				has_policy_flag = diplo_stance_minimal_army
 				has_policy_flag = diplo_stance_neutral
 			}
-			has_tradition = tr_supremacy_finish
+			OR = {
+				has_tradition = tr_supremacy_finish
+				has_origin = origin_payback
+			}
 		}
 
 		policy_flags = {

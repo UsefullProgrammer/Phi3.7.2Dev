@@ -187,7 +187,32 @@ country_event = {
 		}
 	}
 }
+country_event = {
+	id = sublimation.41
+	hide_window = yes
 
+	is_triggered_only = yes
+
+	immediate = {
+				#positive: on random country +10% energy production
+				country_event = { id = sublimation.100 days = 1}
+				#positive: on random country +100% pop growth
+				country_event = { id = sublimation.200 days = 2}
+				country_event = { id = sublimation.300 days = 3}
+				#negative: root country -50% research speed
+				country_event = { id = sublimation.500 days = 4}
+			
+				country_event = { id = sublimation.600 days = 5}
+			
+				country_event = { id = sublimation.700 days = 6}
+			
+				country_event = { id = sublimation.800 days = 7}
+			
+				country_event = { id = sublimation.900 days = 8}
+				country_event = { id = sublimation.1000 days = 9}
+				country_event = { id = sublimation.1100 days = 10}
+	}
+}
 #UNIVERSAL LANGUAGE PROJECT: COLLATERAL DAMAGE
 country_event = {
 	id = sublimation.4
@@ -1012,5 +1037,143 @@ country_event = {
 	
 	option = {
 		name = sublimation.10001.a
+	}
+}
+#Other new Events 
+country_event = {
+	id = sublimation.110
+	is_triggered_only = yes
+	title = sublimation.110.name
+	desc = sublimation.110.desc
+	picture = GFX_evt_space_dragon
+	option = {
+		name = leviathans.999.a
+		hidden_effect = {
+			event_target:stellarite_system = {
+				random_system_planet = {
+					limit = {
+						is_star = yes
+						num_pops <= 9
+					}
+					change_planet_size = -5
+					spawn_sun_temperature_effect = yes
+					create_country = {
+						name = "NAME_Stellarite"
+						type = guardian_stellarite
+						flag = {
+							icon = {
+								category = "zoological"
+								file = "flag_zoological_1.dds"
+							}
+							background= {
+								category = "backgrounds"
+								file = "00_solid.dds"
+							}
+							colors={
+								"black"
+								"black"
+								"null"
+								"null"
+							}
+						}
+					}
+					last_created_country = {
+						save_global_event_target_as = stellarite_country
+						set_country_flag = guardian_stellarite_country
+						create_fleet = {
+							name = "NAME_Stellarite_Devourer"
+							settings = {
+								spawn_debris = no
+								is_boss = yes
+							}
+							effect = {
+								set_owner = event_target:stellarite_country
+								create_ship = {
+									name = "NAME_Stellar_Devourer"
+									design = "NAME_Stellarite"
+									effect = {
+										set_ship_flag = stellarite_ship
+										save_global_event_target_as = stellarite
+									}
+								}
+								set_location = PREVPREV
+								set_fleet_stance = aggressive
+								set_aggro_range_measure_from = self
+								set_aggro_range = 100
+							}
+						}
+					}
+				}
+			}
+			establish_communications = event_target:stellarite_country
+		}
+	}
+}
+#clues
+country_event = {
+	id = sublimation.120
+	
+	title = sublimation.120.name #"distar.40.name"
+	desc = sublimation.120.desc #"distar.40.desc"
+	picture = GFX_evt_strategic_resources
+	is_triggered_only = yes
+	hide_window = yes
+	immediate = {
+		random_country = {
+			limit = { 
+				is_country_type = default 
+				check_variable = {
+					which = num_lcluster_clues
+					value > 1
+				}
+			}
+			generate_lcluster_clue = yes
+		}
+	}
+	# option = {
+	# 	name = EXCELLENT
+		
+	# }
+}
+#create_archaeological_site
+country_event = {
+	id = sublimation.130
+	title = sublimation.130.name
+	desc = sublimation.130.desc
+	picture = GFX_evt_archaeology_camp
+	show_sound = event_yellow_alert
+	
+
+	is_triggered_only = yes
+	
+	immediate = {
+		random_owned_planet = {
+			limit = {
+				NOR = {
+					is_planet_class = pc_gaia
+					is_planet_class = pc_relic
+					is_planet_class = pc_city
+					is_planet_class = pc_habitat
+					is_planet_class = pc_hive
+					is_planet_class = pc_machine
+					is_planet_class = pc_ringworld_habitable
+					is_planet_class = pc_shattered_ring_habitable
+				}
+			}
+			save_event_target_as = target_world
+			create_archaeological_site = random
+		}
+	}
+	
+	location = event_target:target_world
+	
+	option = {
+		name = sublimation.130.a
+		hidden_effect = {
+			random_list = {
+				70 = {}
+				30 = { country_event = { id = sublimation.130 days = 30 random = 3 } }
+			}
+		}
 	}
 }

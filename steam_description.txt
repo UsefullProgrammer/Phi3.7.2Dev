@@ -1,6 +1,6 @@
 This is the conversion of gobbibomb by [url=https://steamcommunity.com/sharedfiles/filedetails/?id=2274421915]phi dev[/url]
 Is currently in beta, if found bug write in comments.
-[b]PHI 2.0G[/b]
+[b]PHI 2.1G[/b]
 
 Wiki page --> [url=https://stellaris.paradoxwikis.com/Phi_mp_balancing] [b]HERE[/b] [/url]
 

@@ -814,6 +814,9 @@ job_phi_archaeologist_drone_plural: "Archaeology drones"
 job_phi_archaeologist_drone_desc: "Drones specialized into digging up old stuff and uncovering ancient secrets."
 mod_job_phi_archaeologist_drone_add: "Archaeology drone job"
 
+planet_researchers_phi: "Researcher"
+planet_researchers_phi_plural: "Researchers"
+
 job_engineering_researcher:0 "Engineering Researcher"
 job_engineering_researcher_plural:0 "Engineering Researchers"
 job_engineering_researcher_desc:0 "The eternal mystery of the world is its comprehensibility."
@@ -919,3 +922,5 @@ requires_domination_tradition:0 "$TRIGGER_FAIL$§We haven't §YDomination tradit
 
 artifact_buy_collector:0 "Buy by Private speculative seller"
 artifact_buy_collector_desc:0 "Get minor artifacts by private speculative seller."
+
+mod_campaigns_upkeep_mult: "Campaigns Upkeep"

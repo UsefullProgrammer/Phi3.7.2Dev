@@ -360,6 +360,12 @@ preset_bulwark = {
 preset_scholarium = {
 	specialist_type = specialist_scholarium
 	term_data = {
+		resource_terms = {
+			{
+				key = resource_subsidies_basic
+				value = -0.15
+			}
+		}
 		discrete_terms = {
 			{
 				key = specialist_type

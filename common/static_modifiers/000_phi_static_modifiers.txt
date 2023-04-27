@@ -8,6 +8,8 @@ empire_size_over_cap = {
 	planet_crime_add = 0.75
 	edicts_cost_mult = 0.01
 	edicts_upkeep_mult = 0.01
+	campaigns_cost_mult = 0.01
+	campaigns_upkeep_mult = 0.01
 }
 
 # Per empire size (ignores admin cap)
@@ -205,4 +207,15 @@ phi_lost_colony_ship = {
 
 blood_tribute_extolled = {
 	pop_happiness = 0.05
+}
+payback_unified_purpose = {
+	icon = "gfx/interface/icons/planet_modifiers/pm_victorious_army.dds"
+	icon_frame = 1
+	pop_happiness = 0.1
+	planet_amenities_mult = 0.25
+	planet_jobs_produces_mult = 0.1
+	job_unifier_add = 2
+	planet_jobs_engineering_research_produces_mult = 1
+	planet_jobs_society_research_produces_mult = 0.5
+	planet_jobs_physics_research_produces_mult = -0.5
 }
