@@ -160,17 +160,41 @@ Fix legge contribuzione bassa in hegemony federation ora è smepre disponibile
 Fix legge ricerca funziona solo per le federazioni di ricerca
 Tolto Edicts cost +1% every empire size + 1% every over size
 Raddoppiato costo editti e campagne.
-1.1 Bilanciamento e design
-Bilanciato Origine hive progenitore
-Potenziato payback (forse troppo)
-Bilanciato origine Imperial fiefdom : 
--vassalo scholarium ora è d'obbligo mandare sussidi base al vassalo al 15%
--indebolito leggermente l'overlord
--Ora l'origine Imperial fiefdom ha costo azzerato di mantenimento influenza se diventa vassalo o tributario, questo la rende più appetitosa di altri imperi .
 
-Scholarium bilanciato, ora l'overlord è obbligato a un sussidio almeno del 15% (prima era op)
-Messe icone personalizzate ai ricercatori
-Per bilanciare l'origine over tuned modificato tratto venerable da 40 a 45.
-Cambiato costo e manuntenzione truppe truppe non robotiche ora hanno bisogno di cibo al 50% e energy al 50% così il cibo ha senso, inoltre cambiato perarmate  machine liv 3 ora costano e hanno manuntenzion di alloy (sempre proporzionata)
-Messo categoria campaign diversa da edicts.
-Imperial cult diminuisce del 40% campaigns invece del 50% edicts
+NDS = nota di sviluppatore
+[h2][br]1.1 Bilanciamento e design[h2][br]
+[h1][br]Origini[/h1][/br]
+-Bilanciato Origine hive progenitore (leader più costosi -25% naval capacity) 
+-Potenziato payback ora per 20 anni ha bonus ricercatori in engineering e society ma malus in physics 
+Bilanciato origine Imperial fiefdom :
+	-vassalo scholarium ora è di default mandare sussidi base al vassalo al 15%
+	-indebolito leggermente l'overlord
+	-Ora l'origine Imperial fiefdom ha costo azzerato di mantenimento influenza se diventa vassalo o tributario, questo la rende più appetitosa di altri imperi .
+-Slinghshot non ha più bonus costo minore di influenza per stazioni remote ma ha bonus per megastructure e velocità navi aumentata e velocità costruzione starbase aumentata
+-Over tunned: Editto di  damn the consequences malus è stato diminuito da 100% al 50%
+[h1][br]Traditions:[/h1][/br]
+-Cambiata diplomacy visto che ora c'è politics ora non da più 100% diplomatic weight, rimane comunque potentissima, ma ora almeno da un pò di bonus per contro l'ia e migliora i diplomatic weight degli envoy.
+-Migliorato domination se finito diminuisce il costo delle campaigns del 10%
+[h1][br]Ascensions perks:[/h1][/br]
+-Grasp of the void potenziato ora diminuisce empire size dai sistemi del 10% 
+[h1][br]Civiche bilanciate:[/h1][/br]
+-Gilde di schiavi potenziata con un -10% empire size from pop 
+-Byzantine bureaucracy potenziata ora il bonus ai burocrati e 2 unity invece di 1 
+-Imperial cult diminuisce diminuito fondo editto da 100 a 50
+[h1][br]Design:[/h1][/br]
+-Messe icone personalizzate ai ricercatori (se qualcuno è bravo a fare le icone mi contatti)
+[h1][br]Altro:[/h1][/br]
+-Cambiato costo e manuntenzione truppe truppe non robotiche ora hanno bisogno di cibo al 50% e energy al 50% così il cibo ha senso, inoltre cambiato per armate  machine liv 3 ora costano e hanno manuntenzion di alloy (sempre proporzionata)
+-Messo categoria campaign diversa da edicts (Tutto ciò che non costa unity è considerato una campagna).
+-Empire size aumenta il costo dei leaders come nella vecchia phi.
+-Il costo delle campagne militari (esempio gas as fuel or crystal focusing) si basa sulla naval capacity usata e non più sul empire size.
+
+[h1][br]Bug:[/h1][/br]
+-Fix bug per cui non usciva più casus bellis indipendenza per chi era vassalo
+
+Sublimantion:
+Aggiunto deamonic incursion come evento possibilità 5
+Diminuito war in heaven da 5 a 3
+
+
+

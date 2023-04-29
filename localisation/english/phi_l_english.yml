@@ -242,6 +242,10 @@ sublimation.1102.name: "Sermon"
 sublimation.1102.desc: "We believe that the meta-dimensional experiments of §B[From.GetName]§! have made many of our people re-think their religious prospective..."
 sublimation.1102.a: "Don't you feel spiritual?"
 
+sublimation.140.name: "Awake DAEMON "
+sublimation.140.desc: "Daemon are there.\nPortals briefly opened throughout the system, but the strain on reality was too great a burden. All the singularities soon collapsed, severing the demonic host from their home dimension."
+sublimation.140.a: "Holy Gobbi..."
+
 phi_politics.401.name: "A Presidential Candidate"
 phi_politics.401.desc: "§B[From.GetName]§! has put forward its candidature for the presidency of our Federation. This motion may only pass with unanimous consent - what shall we say?"
 phi_politics.401.a: "Vote YES"
@@ -924,3 +928,11 @@ artifact_buy_collector:0 "Buy by Private speculative seller"
 artifact_buy_collector_desc:0 "Get minor artifacts by private speculative seller."
 
 mod_campaigns_upkeep_mult: "Campaigns Upkeep"
+
+
+mod_shipclass_starbase_build_speed_mult:0 "Starbase Build Speed"
+
+fl_building_capacity_color: "§Y[This.fl_building_capacity]§!"
+fl_building_capacity: "[This.fl_building_capacity]"
+fl_button_text: "§Y[This.fl_bslot_free_dyn]§!"
+BUILDINGS_TITLE:0 "Buildings, Slot free: §Y[This.fl_bslot_free_dyn]§!"

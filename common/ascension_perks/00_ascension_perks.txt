@@ -642,6 +642,7 @@ ap_grasp_the_void = {
 	modifier = {
 		country_starbase_capacity_add = 10
 		starbases_upkeep_mult = -0.20
+		empire_size_systems_mult = -0.1
 	}
 
 	potential = {

@@ -371,7 +371,7 @@ fuel_gases = {
 		category = ship_edicts
 		upkeep = {
 			exotic_gases = 1
-			multiplier = value:edict_size_effect
+			multiplier = value:edict_fleet_size_effect
 		}
 	}
 
@@ -405,7 +405,7 @@ shield_gases = {
 		category = ship_edicts
 		upkeep = {
 			exotic_gases = 1
-			multiplier = value:edict_size_effect
+			multiplier = value:edict_fleet_size_effect
 		}
 	}
 
@@ -467,7 +467,7 @@ motes_kinetic = {
 		category = ship_edicts
 		upkeep = {
 			volatile_motes = 1
-			multiplier = value:edict_size_effect
+			multiplier = value:edict_fleet_size_effect
 		}
 	}
 
@@ -499,7 +499,7 @@ motes_explosives = {
 		category = ship_edicts
 		upkeep = {
 			volatile_motes = 1
-			multiplier = value:edict_size_effect
+			multiplier = value:edict_fleet_size_effect
 		}
 	}
 
@@ -528,7 +528,7 @@ motes_armor = {
 		category = ship_edicts
 		upkeep = {
 			volatile_motes = 1
-			multiplier = value:edict_size_effect
+			multiplier = value:edict_fleet_size_effect
 		}
 	}
 
@@ -589,7 +589,7 @@ crystal_focus = {
 		category = ship_edicts
 		upkeep = {
 			rare_crystals = 1
-			multiplier = value:edict_size_effect
+			multiplier = value:edict_fleet_size_effect
 		}
 	}
 

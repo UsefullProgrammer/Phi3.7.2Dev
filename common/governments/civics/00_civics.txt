@@ -124,9 +124,8 @@ civic_imperial_cult = {
 		}	
 	}
 	modifier = {
-		country_edict_fund_add = 100
-		campaigns_cost_mult = -0.4
-		campaigns_upkeep_mult = -0.4
+		country_edict_fund_add = 50
+		edicts_upkeep_mult = -0.5
 	}
 }
 
@@ -695,6 +694,7 @@ civic_slaver_guilds = {
 	modifier = {
 		planet_jobs_slave_produces_mult = 0.20
 		country_pop_enslaved_mult = 0.40
+		empire_size_pops_mult = -0.2
 	}
 }
 
@@ -1678,7 +1678,7 @@ civic_byzantine_bureaucracy = {
 		}
 	}
 	modifier = {
-		planet_administrators_unity_produces_add = 1
+		planet_administrators_unity_produces_add = 2
 	}
 	description = "civic_tooltip_byzantine_bureaucracy_effects"
 }

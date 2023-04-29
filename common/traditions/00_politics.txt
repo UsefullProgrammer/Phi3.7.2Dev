@@ -15,8 +15,8 @@ tr_politics_adopt = {
 }
 
 tr_politics_finish = {
+	custom_tooltip = tr_politics_finish_desc
 	modifier = {
-		custom_tooltip = tr_politics_finish_desc
 		diplo_weight_mult = 1
 		ascension_perks_add = 1
 		#Also unlocks 4 special resolutions

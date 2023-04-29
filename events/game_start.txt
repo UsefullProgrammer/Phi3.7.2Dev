@@ -271,7 +271,12 @@ event = {
 			country_event = { id = origin.4000 }
 			set_policy = {
 				policy = diplomatic_stance
-				option = diplo_stance_full_scale_mobilization
+				option = diplo_stance_neutral
+				cooldown = no
+			}
+			set_policy = {
+				policy = diplomatic_stance
+				option = diplo_stance_conscription
 				cooldown = no
 			}
 			set_policy = {

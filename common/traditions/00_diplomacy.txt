@@ -84,7 +84,10 @@ tr_diplomacy_eminent_diplomats = {
 	custom_tooltip = tr_diplomacy_eminent_diplomats_desc
 
 	modifier = {
-		diplo_weight_mult = 1
+		country_trust_growth = 0.33
+		diplo_action_acceptance_add = 5
+		diplo_weight_envoys_mult = 0.025
+		diplo_weight_mult = 0.25
 		# 2nd half is in action.325
 	}
 

@@ -18,10 +18,10 @@ empire_size = {
 	#edicts_upkeep_mult = 0.005
 	# in 3.7.4 useless
 	#rare_edicts_cost_mult = 0.01
-	#campaigns_cost_mult = 0.01
-	#leader_upkeep_empire_size_mult = 0.001
-	#leader_cost_empire_size_mult = 0.001
+	leader_upkeep_empire_size_mult = 0.004
+	leader_cost_empire_size_mult = 0.004
 }
+
 
 humiliated = {
 	country_influence_produces_mult = -0.33
@@ -218,4 +218,9 @@ payback_unified_purpose = {
 	planet_jobs_engineering_research_produces_mult = 1
 	planet_jobs_society_research_produces_mult = 0.5
 	planet_jobs_physics_research_produces_mult = -0.5
+}
+#16_
+into_the_unknown = {
+	icon = "gfx/interface/icons/modifiers/mod_ship_accuracy_add.dds"
+	catapult_spread_mult = 0.5
 }

@@ -275,6 +275,27 @@ country_event = {
 				country_event = { id = sublimation.600 }
 			}
 			5 = {
+				#negative: deamonic incursion
+				modifier = {
+					factor = 1.5
+					has_ethic = ethic_spiritualist
+				}
+				modifier = {
+					factor = 2
+					has_ethic = ethic_fanatic_spiritualist
+				}
+				modifier = {
+					factor = 0.75
+					has_ethic = ethic_pacifist
+				}
+				modifier = {
+					factor = 0.5
+					has_ethic = ethic_fanatic_pacifist
+				}
+				country_event = { id = sublimation.140 }
+				
+			}
+			3 = {
 				#negative: random fallen empire awakes
 				modifier = {
 					factor = 0
@@ -1135,11 +1156,13 @@ country_event = {
 		
 	# }
 }
+
+
 #create_archaeological_site
 country_event = {
-	id = sublimation.130
-	title = sublimation.130.name
-	desc = sublimation.130.desc
+	id = sublimation.131
+	title = sublimation.131.name
+	desc = sublimation.131.desc
 	picture = GFX_evt_archaeology_camp
 	show_sound = event_yellow_alert
 	
@@ -1174,6 +1197,133 @@ country_event = {
 				70 = {}
 				30 = { country_event = { id = sublimation.130 days = 30 random = 3 } }
 			}
+		}
+	}
+}
+country_event = {
+	id = sublimation.140
+	title = sublimation.140.name
+	desc = sublimation.140.desc
+	picture = GFX_evt_open_revolt
+	show_sound = event_yellow_alert
+	location = root	
+
+	is_triggered_only = yes
+	
+	option = {
+		name = sublimation.140.a
+		random_country = {
+			limit = { is_country_type = default }
+			hidden_effect = { country_event = { id = sublimation.141 } }
+		}
+	}
+}
+#daemonicIncursion
+country_event = {
+	id = sublimation.141
+	hide_windows = yes
+
+	is_triggered_only = yes
+	
+	# events = {
+	# 	enclave.5555
+	# }
+	# random_events = {
+	# 	10 = 0
+	# 	1 = enclave.4150 # "Joint Operation: Dismembered Cloud"
+	# 	1 = enclave.4151 # "A Most Irritating Envoy"
+	# 	1 = enclave.5070 # "Rogue Shaman"
+	# 	1 = enclave.5085 # "The Great Schism"
+	# 	1 = enclave.5165 # Brain Slug - distar.170
+	# 	1 = enclave.5170 # The Doorway - colony.3005
+	# 	1 = enclave.5175 # Atmospheric Ecosystem - colony.300
+	# 	1 = enclave.5190 # Hero Redivivus
+	# 	1 = enclave.5560 # Wayward Pilgrims
+	# }
+	immediate = {
+		owner = {
+			create_leader = {
+				class = general
+				species = owner_main_species
+				name = random
+				traits = {
+					trait = leader_trait_general_chosen
+					trait = leader_trait_butcher
+				}
+			}
+			last_created_leader = {
+				exile_leader_as = doomslayer_knight
+				save_event_target_as = doomslayer_knight
+				set_immortal = yes
+				save_global_event_target_as = doomslayer_knight@prev
+			}
+		}
+		reroll_random = yes
+		random_owned_planet = {
+			limit = {
+				NOR = {
+					is_planet_class = pc_city
+					is_planet_class = pc_habitat
+					is_planet_class = pc_hive
+					is_planet_class = pc_machine
+					is_planet_class = pc_ringworld_habitable
+					is_planet_class = pc_shattered_ring_habitable
+				}                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              
+			}
+			save_event_target_as = target_world
+			planet_event = { id = colony.3050 } 
+		}
+		# random_country = {
+		# 	limit = { 
+		# 		is_country_type = default 
+		# 	}
+		# 	save_event_target_as = target_world
+		# 	country_event = { id = colony.3051 days = 15 random = 3 } 
+		# }
+	}
+}
+country_event = {
+	id = sublimation.666
+	title = enclave.405.name
+	desc = enclave.405.generic.a.desc
+	picture = GFX_evt_strategic_resources
+	show_sound = event_yellow_alert
+	location = root	
+	
+	is_triggered_only = yes
+	immediate = {
+		
+		# random_country = {
+		# 	limit = { 
+		# 		is_country_type = default 
+		# 	}
+		# 	save_event_target_as = target_world
+		# 	country_event = { id = colony.3051 days = 15 random = 3 } 
+		# }
+	}
+	option = {
+		name = sublimation.1101.a # what
+		random_country = {
+			limit = { is_country_type = default }
+			hidden_effect = { country_event = { id = sublimation.667 } }
+		}
+	}
+}
+
+country_event = {
+	id = sublimation.666
+	hide_windows = yes
+	immediate = {
+		random_events = {
+			1 = enclave.4150 # "Joint Operation: Dismembered Cloud"
+			1 = enclave.4151 # "A Most Irritating Envoy"
+			1 = enclave.5070 # "Rogue Shaman"
+			1 = enclave.5085 # "The Great Schism"
+			1 = enclave.5165 # Brain Slug - distar.170
+			1 = enclave.5170 # The Doorway - colony.3005
+			1 = enclave.5175 # Atmospheric Ecosystem - colony.300
+			1 = enclave.5190 # Hero Redivivus
+			1 = enclave.5560 # Wayward Pilgrims
 		}
 	}
 }

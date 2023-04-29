@@ -56,16 +56,6 @@ edicts = {
 	modifier_category = country
 }
 
-rare_edicts = {
-	use_for_ai_budget = no
-	parent = edicts
-}
-
-ship_edicts = {
-	parent = rare_edicts
-	use_for_ai_budget = no
-}
-
 campaigns = {
 	parent = country
 	ai_use_parent_for_resources_upkeep = {
@@ -78,6 +68,17 @@ campaigns = {
 	}
 	modifier_category = country
 }
+
+rare_edicts = {
+	use_for_ai_budget = no
+	parent = campaigns
+}
+
+ship_edicts = {
+	parent = rare_edicts
+	use_for_ai_budget = no
+}
+
 
 decisions = {
 	use_for_ai_budget = yes

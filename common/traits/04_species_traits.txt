@@ -762,7 +762,7 @@ trait_venerable = {
 	}
 	potential_crossbreeding_chance = 1.0
 	modifier = {
-		leader_age = 45
+		leader_age = 40
 		planet_jobs_ruler_produces_mult = 1
 	}
 	opposites = { "trait_enduring" "trait_fleeting" "trait_fleeting_lithoid" }

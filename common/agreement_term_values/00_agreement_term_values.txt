@@ -234,10 +234,10 @@ resource_subsidies_basic = {
 	resource_max = {
 		base = @subsidy_maximum
 
-		modifier = {
-			set = @set_factor_0_neg
-			agreement_preset = preset_scholarium
-		}
+		# modifier = {
+		# 	set = @set_factor_0_neg
+		# 	agreement_preset = preset_scholarium
+		# }
 
 		modifier = {
 			set = @set_factor_1_neg
@@ -263,7 +263,9 @@ resource_subsidies_basic = {
 			set = @set_factor_2
 			OR = {
 				agreement_preset = preset_vassal
+				agreement_preset = preset_scholarium
 				agreement_preset = preset_protectorate
+				
 			}
 		}
 
@@ -1356,7 +1358,7 @@ subject_is_not_Vassal = {
 subject_is_Vassal = {
 	term = vassal_phi
 	overlord_resources = {
-		category = vassal_phi #subjects messo questo che non è parente per diplomacy per non costare 0 per la tradition diplomacy.
+		category = vassal_phi #vassal_phi messo questo che non è parente per diplomacy per non costare 0 per la tradition diplomacy.
 		upkeep = {
 			influence = 1
 		}

@@ -10,9 +10,10 @@ edict_pop_size_effect = {
 	add = 1
 }
 edict_fleet_size_effect = {
-	base = 0.025
+	base = 0.015
 	#mult = trigger:num_pops
 	#mult = owner.trigger:num_ships
-	mult = trigger:empire_size
+	#mult = trigger:fleet_size #non funziona
+	mult = trigger:used_naval_capacity_integer
 	add = 1
 }
