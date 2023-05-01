@@ -405,6 +405,17 @@ coordinator = {
 			planet_jobs_simple_drone_produces_mult = 0.01
 		}
 	}
+	triggered_country_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				has_active_tradition = tr_synchronicity_integrated_preservation
+			}
+		}
+		modifier = {
+			country_admin_cap_add = 0.25
+		}
+	}
 
 	weight = {
 		weight = @synapse_drone_job_weight
