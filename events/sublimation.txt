@@ -1130,76 +1130,6 @@ country_event = {
 		}
 	}
 }
-#clues
-country_event = {
-	id = sublimation.120
-	
-	title = sublimation.120.name #"distar.40.name"
-	desc = sublimation.120.desc #"distar.40.desc"
-	picture = GFX_evt_strategic_resources
-	is_triggered_only = yes
-	hide_window = yes
-	immediate = {
-		random_country = {
-			limit = { 
-				is_country_type = default 
-				check_variable = {
-					which = num_lcluster_clues
-					value > 1
-				}
-			}
-			generate_lcluster_clue = yes
-		}
-	}
-	# option = {
-	# 	name = EXCELLENT
-		
-	# }
-}
-
-
-#create_archaeological_site
-country_event = {
-	id = sublimation.131
-	title = sublimation.131.name
-	desc = sublimation.131.desc
-	picture = GFX_evt_archaeology_camp
-	show_sound = event_yellow_alert
-	
-
-	is_triggered_only = yes
-	
-	immediate = {
-		random_owned_planet = {
-			limit = {
-				NOR = {
-					is_planet_class = pc_gaia
-					is_planet_class = pc_relic
-					is_planet_class = pc_city
-					is_planet_class = pc_habitat
-					is_planet_class = pc_hive
-					is_planet_class = pc_machine
-					is_planet_class = pc_ringworld_habitable
-					is_planet_class = pc_shattered_ring_habitable
-				}
-			}
-			save_event_target_as = target_world
-			create_archaeological_site = random
-		}
-	}
-	
-	location = event_target:target_world
-	
-	option = {
-		name = sublimation.130.a
-		hidden_effect = {
-			random_list = {
-				70 = {}
-				30 = { country_event = { id = sublimation.130 days = 30 random = 3 } }
-			}
-		}
-	}
-}
 country_event = {
 	id = sublimation.140
 	title = sublimation.140.name
@@ -1225,21 +1155,6 @@ country_event = {
 
 	is_triggered_only = yes
 	
-	# events = {
-	# 	enclave.5555
-	# }
-	# random_events = {
-	# 	10 = 0
-	# 	1 = enclave.4150 # "Joint Operation: Dismembered Cloud"
-	# 	1 = enclave.4151 # "A Most Irritating Envoy"
-	# 	1 = enclave.5070 # "Rogue Shaman"
-	# 	1 = enclave.5085 # "The Great Schism"
-	# 	1 = enclave.5165 # Brain Slug - distar.170
-	# 	1 = enclave.5170 # The Doorway - colony.3005
-	# 	1 = enclave.5175 # Atmospheric Ecosystem - colony.300
-	# 	1 = enclave.5190 # Hero Redivivus
-	# 	1 = enclave.5560 # Wayward Pilgrims
-	# }
 	immediate = {
 		owner = {
 			create_leader = {
@@ -1272,58 +1187,6 @@ country_event = {
 			}
 			save_event_target_as = target_world
 			planet_event = { id = colony.3050 } 
-		}
-		# random_country = {
-		# 	limit = { 
-		# 		is_country_type = default 
-		# 	}
-		# 	save_event_target_as = target_world
-		# 	country_event = { id = colony.3051 days = 15 random = 3 } 
-		# }
-	}
-}
-country_event = {
-	id = sublimation.666
-	title = enclave.405.name
-	desc = enclave.405.generic.a.desc
-	picture = GFX_evt_strategic_resources
-	show_sound = event_yellow_alert
-	location = root	
-	
-	is_triggered_only = yes
-	immediate = {
-		
-		# random_country = {
-		# 	limit = { 
-		# 		is_country_type = default 
-		# 	}
-		# 	save_event_target_as = target_world
-		# 	country_event = { id = colony.3051 days = 15 random = 3 } 
-		# }
-	}
-	option = {
-		name = sublimation.1101.a # what
-		random_country = {
-			limit = { is_country_type = default }
-			hidden_effect = { country_event = { id = sublimation.667 } }
-		}
-	}
-}
-
-country_event = {
-	id = sublimation.666
-	hide_windows = yes
-	immediate = {
-		random_events = {
-			1 = enclave.4150 # "Joint Operation: Dismembered Cloud"
-			1 = enclave.4151 # "A Most Irritating Envoy"
-			1 = enclave.5070 # "Rogue Shaman"
-			1 = enclave.5085 # "The Great Schism"
-			1 = enclave.5165 # Brain Slug - distar.170
-			1 = enclave.5170 # The Doorway - colony.3005
-			1 = enclave.5175 # Atmospheric Ecosystem - colony.300
-			1 = enclave.5190 # Hero Redivivus
-			1 = enclave.5560 # Wayward Pilgrims
 		}
 	}
 }

@@ -1020,7 +1020,6 @@ origin_star_slingshot = {
 	}
 	modifier = {
 		megastructure_build_speed_mult = 1
-		starbases_build_speed_mult = 1
 		ship_base_speed_mult = 0.10
 		shipclass_starbase_build_speed_mult = 1
 	}

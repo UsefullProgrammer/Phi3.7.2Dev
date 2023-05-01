@@ -708,6 +708,7 @@ building_vultaum_reality_computer = {
 
 	planet_modifier = {
 		planet_researchers_physics_research_produces_add = 1
+		planet_researchers_phi_physics_research_produces_add = 1
 	}
 
 	triggered_planet_modifier = {
@@ -716,6 +717,7 @@ building_vultaum_reality_computer = {
 			owner = { has_ascension_perk = ap_archaeoengineers }
 		}
 		planet_researchers_physics_research_produces_add = 1
+		planet_researchers_phi_physics_research_produces_add = 1
 	}
 
 	triggered_planet_modifier = {
