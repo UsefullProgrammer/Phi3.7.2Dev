@@ -931,5 +931,9 @@ artifact_buy_collector_desc:0 "Get minor artifacts by private speculative seller
 
 mod_campaigns_upkeep_mult: "Campaigns Upkeep"
 
-
+edict_Edicts_funds: "Edicts funds"
+edict_Edicts_funds_2: "Reinforce edicts"
+edict_Edicts_funds_desc: "We can use our influence to slightly increase the edict funds."
+edict_Edicts_funds_2_desc: "We can use much influence to good increase the edict funds."
 mod_shipclass_starbase_build_speed_mult:0 "Starbase Build Speed"
+

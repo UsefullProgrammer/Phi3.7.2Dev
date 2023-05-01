@@ -1,7 +1,8 @@
-version="0.1.8"
+version="1.1.2"
 tags={
 	"Balance"
 	"Gameplay"
 }
-name="Phi3.7.2Dev"
+name="Phi Gobbi Dev"
 supported_version="3.7.4"
+remote_file_id="2969883685"

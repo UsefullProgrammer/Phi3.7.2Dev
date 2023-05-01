@@ -54,7 +54,7 @@ tr_synchronicity_kinship_gestalt = {
 	modifier = {
 		species_leader_exp_gain = 0.50
 		leaders_upkeep_mult = -0.20
-		empire_size_pops_mult = -0.10
+		empire_size_pops_mult = -0.20
 	}
 
 	ai_weight = {

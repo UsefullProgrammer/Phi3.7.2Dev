@@ -67,7 +67,6 @@ gnam_gnam_gnam = {
 total_noob = {
 	length = @EdictDuration
 	icon = "GFX_edict_type_policy"
-	edict_cap_usage = 1
 	
 	potential = {
 		is_ai = no
@@ -90,7 +89,6 @@ total_noob = {
 phi_war_in_heaven_ongoing = {
 	length = @EdictDuration
 	icon = "GFX_edict_type_policy"
-	edict_cap_usage = 1
 	
 	potential = {
 		always = yes
@@ -505,7 +503,46 @@ blood_tribute = {
 		}
 	}
 }
-
+Edicts_funds = {
+	length = -1
+	potential = {
+		is_gestalt = yes
+	}
+	modifier = {
+		country_edict_fund_add = 25
+	}
+	resources = {
+		category = campaigns
+		cost = {
+			influence = 100
+		}
+		upkeep = {
+			influence = 1
+		}
+	}
+}
+Edicts_funds_2 = {
+	length = -1
+	potential = {
+		is_gestalt = yes
+	}
+	allow = {
+		has_edict = Edicts_funds
+	}
+	modifier = {
+		country_edict_fund_add = 10
+		country_edict_fund_mult = 0.25
+	}
+	resources = {
+		category = campaigns
+		cost = {
+			influence = 200
+		}
+		upkeep = {
+			influence = 2
+		}
+	}
+}
 
 #### FROM ASCENSION PERKS ####
 

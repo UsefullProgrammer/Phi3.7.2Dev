@@ -192,9 +192,21 @@ Bilanciato origine Imperial fiefdom :
 [h1][br]Bug:[/h1][/br]
 -Fix bug per cui non usciva più casus bellis indipendenza per chi era vassalo
 
-Sublimantion:
-Aggiunto deamonic incursion come evento possibilità 5
-Diminuito war in heaven da 5 a 3
+[h1][br]Sublimantion:[/h1][/br]
+-Aggiunto deamonic incursion come evento possibilità 5
+-Diminuito probabilità di war in heaven da 5 a 3
 
+1.1.1
+Bio throphy ora danno 1 society research
+Tradition synchronicity kinship gestalt da empire size from pop -0.20 invece di -0.10
+Fix vultaum reality computer
 
+Fix bug che dava 2 laboratori di ingegneria ai machine empire nello start
+Cambiata leggermente synchronicity diminuito bonus e ora quando la finisci da un planet_resettlement_unemployed_mult = 0.3 perchè tolto da synchronicity integrated preservation , inoltre per rogue servitor da solo +30% in più per i bio-throphies
+Fix minore in cui veniva usato edicts funds in editti della phi
+Fix bug in border gore in cui non validava il pianeta abitato se aveva un pop.
 
+Ora le capital dei robot hanno un coordinator al posto di un maintance drone.
+2 editti nuovi per gli hive mind che usano molta l'influenza per aumentare edict funds
+Fix problema con minatori, poichè minano solo 4 minerals ora le tech tech mining danno +0.3 invece di 0.2 in maniera tale che in late game i minerali sono scavati come le altre risorse basi.
+Deviant experiments ora da +75% unity invece di 50%

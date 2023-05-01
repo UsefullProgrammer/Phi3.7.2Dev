@@ -93,7 +93,16 @@ decision_phi_planet_resource_rationing = {
 	resources = {
 		category = decisions
 		cost = {
+			trigger = {
+				owner = { is_hive_empire = no }
+			}
 			unity = 1000
+		}
+		cost = {
+			trigger = {
+				owner = { is_hive_empire = yes }
+			}
+			influence = 100
 		}
 	}
 
@@ -126,7 +135,16 @@ decision_end_phi_planet_resource_rationing = {
 	resources = {
 		category = decisions
 		cost = {
+			trigger = {
+				owner = { is_hive_empire = no }
+			}
 			unity = 100
+		}
+		cost = {
+			trigger = {
+				owner = { is_hive_empire = yes }
+			}
+			influence = 10
 		}
 	}
 
@@ -159,7 +177,16 @@ decision_phi_planet_local_administration = {
 	resources = {
 		category = decisions
 		cost = {
+			trigger = {
+				owner = { is_hive_empire = no }
+			}
 			unity = 1000
+		}
+		cost = {
+			trigger = {
+				owner = { is_hive_empire = yes }
+			}
+			influence = 100
 		}
 	}
 
@@ -193,7 +220,16 @@ decision_end_phi_planet_local_administration = {
 	resources = {
 		category = decisions
 		cost = {
+			trigger = {
+				owner = { is_hive_empire = no }
+			}
 			unity = 100
+		}
+		cost = {
+			trigger = {
+				owner = { is_hive_empire = yes }
+			}
+			influence = 10
 		}
 	}
 
@@ -226,7 +262,16 @@ decision_phi_planet_trading_guilds = {
 	resources = {
 		category = decisions
 		cost = {
-			unity = 1000
+			trigger = {
+				owner = { is_hive_empire = no }
+			}
+			unity = 100
+		}
+		cost = {
+			trigger = {
+				owner = { is_hive_empire = yes }
+			}
+			influence = 10
 		}
 	}
 
@@ -260,7 +305,16 @@ decision_end_phi_planet_trading_guilds = {
 	resources = {
 		category = decisions
 		cost = {
+			trigger = {
+				owner = { is_hive_empire = no }
+			}
 			unity = 100
+		}
+		cost = {
+			trigger = {
+				owner = { is_hive_empire = yes }
+			}
+			influence = 10
 		}
 	}
 
@@ -289,11 +343,19 @@ decision_phi_planet_deviant_experiments = {
 	owned_planets_only = yes
 	sound = event_administrative_work
 	icon = decision_luxuries
-
 	resources = {
 		category = decisions
 		cost = {
+			trigger = {
+				owner = { is_hive_empire = no }
+			}
 			unity = 1000
+		}
+		cost = {
+			trigger = {
+				owner = { is_hive_empire = yes }
+			}
+			influence = 100
 		}
 	}
 
@@ -327,7 +389,16 @@ decision_end_phi_planet_deviant_experiments = {
 	resources = {
 		category = decisions
 		cost = {
+			trigger = {
+				owner = { is_hive_empire = no }
+			}
 			unity = 100
+		}
+		cost = {
+			trigger = {
+				owner = { is_hive_empire = yes }
+			}
+			influence = 10
 		}
 	}
 
@@ -360,7 +431,16 @@ decision_phi_planet_expropriation = {
 	resources = {
 		category = decisions
 		cost = {
+			trigger = {
+				owner = { is_hive_empire = no }
+			}
 			unity = 1000
+		}
+		cost = {
+			trigger = {
+				owner = { is_hive_empire = yes }
+			}
+			influence = 100
 		}
 	}
 

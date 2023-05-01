@@ -45,6 +45,8 @@ testare crisi/finali
 -sublimation.7 OK
 -phi_empire.0 OK
 [*][b]protectorates[/b] give a bonus [b]+200 society research[/b] per month to their overlord
+
+Rifare costo decisioni, metà influenza metà unity
 da fare poi
 Dominion bonus influenza da 0.5 a 1
 risolvere civic_tooltip_exalted_priesthood_effects

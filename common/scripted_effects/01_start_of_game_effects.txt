@@ -1403,8 +1403,10 @@ generate_start_buildings_and_districts = {
 			add_building = building_machine_assembly_plant
 
 			# 2 job
-			add_building = building_engineering_lab_1
-
+			if = {
+				limit = { owner = { NOT = { has_valid_civic = civic_machine_servitor } } }
+				add_building = building_uplink_node
+			}
 			# 2 jobs
 			if = {
 				limit = {
