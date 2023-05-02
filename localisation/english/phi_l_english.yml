@@ -366,6 +366,8 @@ building_engineering_lab_3_desc:0 "These advanced research facilities have the v
 #Traditions
 tr_discovery_databank_uplinks_machine: "Databank Uplinks"
 tr_discovery_databank_uplinks_hive: "Databank Uplinks"
+tr_synchronicity_integrated_preservation_bio_trophies: "Preservation bio trophies memory"
+tr_synchronicity_integrated_preservation_bio_trophies_desc: "By storing memory bio trophies, we increase efficiency."
 
 #Ascension Perks
 ap_great_wall: "The Great Wall"
@@ -375,7 +377,7 @@ ap_operations_blue_star_desc: "Top-of-the-class military equipment for an elite 
 ap_operations_red_star: "Operations: Red Star"
 ap_operations_red_star_desc: "We will overcome our enemies by the sheer numbers of our brave soldiers!"
 mod_shipsize_titan_build_speed_mult: "Titan Build Speed"
-phi_ap_shared_destiny_tooltip: "Enables an edict that shifts vassals' ethos towards us.\nAdd §G+6§! envoys."
+phi_ap_shared_destiny_tooltip: "Your §YSubjects§! do not suffer $r_loyalty$ penalties from you having multiple Subjects.\nEnables an edict that shifts vassals' ethos towards us.\nAdd §G+4§! envoys."
 
 #Policies
 diplo_stance_disarmament: "Disarmament"
@@ -539,7 +541,11 @@ civic_franchise_state: "Franchise State"
 civic_franchise_state_desc: "This country foundation was project-financed by a megacorp looking for new markets."
 origin_franchise_state: "Franchise State"
 origin_franchise_state_desc: "This country foundation was project-financed by a megacorp looking for new markets."
-
+  #1.2
+civic_scavengers_machine:0 "Xenon protocol" #dedicato a pietor
+civic_scavengers_machine_desc:0 "In this protocol, nothing goes to waste, even in the grimmest times of war: no enemy technology will go undiscovered, as teams of scrappers accompanying the war fleets scrape wreckages of anything and everything worth salvaging."
+civic_machine_cult:0 "Machine Cult" # dedicato a primate
+civic_machine_cult_desc:0 "This gestait has a similar religion where the have cult of machine god."
 #Federations
 galactic_trade_consortium: "Galactic Trade Consortium"
 galactic_empire: "Galactic Empire"

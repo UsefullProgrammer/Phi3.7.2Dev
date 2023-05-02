@@ -126,7 +126,7 @@ preset_subsidiary = {
 			}
 			{
 				key = subject_expand
-				value = subject_can_expand_with_tithe
+				value = subject_can_expand
 			}
 			{
 				key = joins_overlord_wars

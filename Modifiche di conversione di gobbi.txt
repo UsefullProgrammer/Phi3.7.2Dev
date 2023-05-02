@@ -181,18 +181,18 @@ Bilanciato origine Imperial fiefdom :
 -Gilde di schiavi potenziata con un -10% empire size from pop 
 -Byzantine bureaucracy potenziata ora il bonus ai burocrati e 2 unity invece di 1 
 -Imperial cult diminuisce diminuito fondo editto da 100 a 50
-[h1][br]Design:[/h1][/br]
+[h1][br]Design:[/h1][/b]
 -Messe icone personalizzate ai ricercatori (se qualcuno è bravo a fare le icone mi contatti)
-[h1][br]Altro:[/h1][/br]
+[h1][br]Altro:[/h1][/b]
 -Cambiato costo e manuntenzione truppe truppe non robotiche ora hanno bisogno di cibo al 50% e energy al 50% così il cibo ha senso, inoltre cambiato per armate  machine liv 3 ora costano e hanno manuntenzion di alloy (sempre proporzionata)
 -Messo categoria campaign diversa da edicts (Tutto ciò che non costa unity è considerato una campagna).
 -Empire size aumenta il costo dei leaders come nella vecchia phi.
 -Il costo delle campagne militari (esempio gas as fuel or crystal focusing) si basa sulla naval capacity usata e non più sul empire size.
 
-[h1][br]Bug:[/h1][/br]
+[h1][b]Bug:[/h1][/b]
 -Fix bug per cui non usciva più casus bellis indipendenza per chi era vassalo
 
-[h1][br]Sublimantion:[/h1][/br]
+[h1][b]Sublimantion:[/h1][/b]
 -Aggiunto deamonic incursion come evento possibilità 5
 -Diminuito probabilità di war in heaven da 5 a 3
 
@@ -205,8 +205,35 @@ Fix bug che dava 2 laboratori di ingegneria ai machine empire nello start
 Cambiata leggermente synchronicity diminuito bonus e ora quando la finisci da un planet_resettlement_unemployed_mult = 0.3 perchè tolto da synchronicity integrated preservation , inoltre per rogue servitor da solo +30% in più per i bio-throphies
 Fix minore in cui veniva usato edicts funds in editti della phi
 Fix bug in border gore in cui non validava il pianeta abitato se aveva un pop.
+#-----------
+Bugs:
+Fix bug grave opinion modifier con i vassali.
+Fix localization per 3 civiche.
+Nuovi vassali tramite decisioni o franchising hanno newly_subjugated_loyalty per 5 anni
+I vassali rilasciati da franchising non hanno più purifiers come civica.
+Fix vassali rilasciati da franchising ora hanno bonus 4 pop
+Bilanciamento:
+Sussidiarie non possono più avere come agrement espansione regolata (dava troppa influenza al padrone)
 
+[h2][b]1.2 Robot & optimization[/h2][/b]
 Ora le capital dei robot hanno un coordinator al posto di un maintance drone.
-2 editti nuovi per gli hive mind che usano molta l'influenza per aumentare edict funds
+2 editti nuovi per gli gestait che usano molta l'influenza per aumentare edict funds
 Fix problema con minatori, poichè minano solo 4 minerals ora le tech tech mining danno +0.3 invece di 0.2 in maniera tale che in late game i minerali sono scavati come le altre risorse basi.
 Deviant experiments ora da +75% unity invece di 50%
+[b]Release client:[/b]
+-Release client state costa un pò di influenza e meno di unity
+-I vassali rilasciati da release client hanno modificatore per 5 anni di newly subjugated loyalty
+[b]Origini:[/b]
+Overlord vassal non ha più le AI
+2 nuove civiche per i robot!
+[b]Civiche[/b]
+
+
+[b]Border Gore[/b]
+Ora border gore comprende whormhole (comunque passarci le navi fa male).
+Ottimizzato codice border gore.
+[b]Claim[/b]
+Ora puoi claimare i sistemi adiacenti collegati tramite whormhole (comunque passarci le navi fa male)
+Ottimizzato codice can claim
+[b]Traits[/b]
+Il tratto industriouso è stato aumentato da 20% a 25%

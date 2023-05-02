@@ -1132,6 +1132,12 @@ subject_can_expand_with_tithe = {
 			}
 		}
 		custom_tooltip = {
+			fail_text = not_allowed_for_subsidiary
+			NOT = {
+				agreement_preset = preset_subsidiary
+			}
+		}
+		custom_tooltip = {
 			fail_text = not_allowed_for_galcom_resolution
 			not_allowed_for_galcom_resolution_trigger = { RESOLUTION = resolution_intergalacticdirective_a_voice_for_all }
 		}
