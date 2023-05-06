@@ -4,7 +4,7 @@ trait_robot_power_drills = {
 	allowed_archetypes = { ROBOT MACHINE }
 
 	modifier = {
-		planet_jobs_minerals_produces_mult = 0.15
+		planet_jobs_minerals_produces_mult = 0.25
 	}
 	slave_cost = {
 		energy = 750

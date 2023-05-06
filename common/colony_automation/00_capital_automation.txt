@@ -1,0 +1,60 @@
+automate_capital_planet = {
+	category = "planet_automation_designation_construction"
+
+	available = {
+		has_designation = col_capital
+	}
+
+	prio_districts = {
+		district_industrial
+		district_generator
+		district_mining
+	}
+
+	buildings = {
+		1 = {
+			building = building_capital
+		}
+
+		2 = {	
+			building = building_temple
+			available = {
+				
+				exists = owner
+				owner = { 
+					is_spiritualist = yes	
+				}
+				num_buildings = { type = building_temple value < 3 }
+			}
+		}
+		3 = {
+			building = building_physics_lab_1
+			available = {
+				num_buildings = { type = building_physics_lab_1 value < 4 }
+			}
+		}		
+		5 = {
+			building = building_engineering_lab_1
+			available = {
+				num_buildings = { type = building_engineering_lab_1 value < 3 }
+			}
+		}
+		6 = {
+			building = building_foundry_1
+		}
+
+		6 = {
+			building = building_institute
+		}
+
+		6 = {
+			building = building_ministry_production
+		}
+
+		7 = {
+			building = building_galactic_stock_exchange
+		}
+
+		
+	}
+}

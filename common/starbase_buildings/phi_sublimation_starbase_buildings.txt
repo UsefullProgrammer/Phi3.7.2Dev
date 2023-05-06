@@ -1,7 +1,7 @@
 
 black_hole_signal_transmitter = {
 	icon = "GFX_spaceport_module_observatory"
-	construction_days = 360
+	construction_days = 540
 
 	potential = {
 		exists = owner
@@ -72,7 +72,7 @@ black_hole_signal_transmitter = {
 
 pulsar_signal_receiver = {
 	icon = "GFX_spaceport_module_observatory"
-	construction_days = 360
+	construction_days = 540
 
 	potential = {
 		exists = owner
@@ -143,7 +143,7 @@ pulsar_signal_receiver = {
 
 allied_black_hole_signal_transmitter = {
 	icon = "GFX_spaceport_module_observatory"
-	construction_days = 360
+	construction_days = 720
 
 	potential = {
 		exists = owner
@@ -224,7 +224,7 @@ allied_black_hole_signal_transmitter = {
 
 allied_pulsar_signal_receiver = {
 	icon = "GFX_spaceport_module_observatory"
-	construction_days = 360
+	construction_days = 720
 
 	potential = {
 		exists = owner

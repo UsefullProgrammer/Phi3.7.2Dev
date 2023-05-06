@@ -332,7 +332,7 @@ ap_nihilistic_acquisition = {
 			has_ascension_perk = ap_nihilistic_acquisition
 		}
 		NOR = {
-			has_valid_civic = civic_barbaric_despoilers
+			is_civic_despoilers = yes
 			has_origin = origin_slavers
 		}
 	}
@@ -916,7 +916,7 @@ ap_shared_destiny = {
 
 	modifier = {
 		custom_tooltip = "phi_ap_shared_destiny_tooltip"
-		envoys_add = 6
+		envoys_add = 4
 	}
 
 	potential = {

@@ -167,6 +167,7 @@ tr_discovery_polytechnic_education = {
 tr_discovery_faith_in_science = {
 	possible = {
 		has_tradition = tr_discovery_polytechnic_education
+		has_tradition = tr_discovery_databank_uplinks
 	}
 
 	modifier = {

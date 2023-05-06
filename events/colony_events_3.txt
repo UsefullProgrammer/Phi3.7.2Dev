@@ -6274,6 +6274,8 @@ planet_event = { # third opportunity - green care - can lower the upkeep or incr
 			owner = {
 				OR = {
 					has_civic = civic_barbaric_despoilers
+					has_civic = civic_machine_despoilers
+					has_civic = civic_hive_despoilers
 					has_civic = civic_fanatic_purifiers
 					has_civic = civic_machine_terminator
 					has_civic = civic_hive_devouring_swarm
@@ -7612,7 +7614,7 @@ situation_event = {
 			owner = {
 				OR = {
 					NOR = {
-						has_valid_civic = civic_barbaric_despoilers
+						is_civic_despoilers = yes
 						has_ascension_perk = ap_nihilistic_acquisition
 					}
 					root.target = {

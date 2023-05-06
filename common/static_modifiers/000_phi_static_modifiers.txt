@@ -36,6 +36,23 @@ raided = {
 	country_minerals_produces_mult = -0.20
 	country_alloys_produces_mult = -0.20
 }
+raided_HM = { #radided from hive mind
+	country_energy_produces_mult = -0.10
+	country_minerals_produces_mult = -0.10
+	country_food_produces_mult = -0.20
+	country_alloys_produces_mult = -0.20
+}
+raided_GM = { # raided_GM from machine
+	country_energy_produces_mult = -0.20
+	country_minerals_produces_mult = -0.20
+	country_alloys_produces_mult = -0.40
+}
+raidedAS = { # raidedAS from assimilator
+	country_energy_produces_mult = -0.20
+	country_minerals_produces_mult = -0.20
+	country_alloys_produces_mult = -0.40
+	pop_happiness = -0.1
+}
 
 resort_colony = {
 	icon = "gfx/interface/icons/planet_modifiers/pm_resort_planet.dds"
@@ -176,15 +193,15 @@ surge_research = {
 }
 
 cheat_code = {
-	ship_hull_regen_add_perc = 0.1
-	ship_armor_regen_add_perc = 0.1
+	ship_hull_regen_add_perc = 0.01
+	ship_armor_regen_add_perc = 0.01
 	ship_weapon_range_mult = 0.1
 	megastructure_build_speed_mult = 1
 }
 
 minor_cheat_code = {
-	ship_hull_regen_add_perc = 0.05
-	ship_armor_regen_add_perc = 0.05
+	ship_hull_regen_add_perc = 0.005
+	ship_armor_regen_add_perc = 0.005
 	ship_weapon_range_mult = 0.05
 	megastructure_build_speed_mult = 0.5
 }

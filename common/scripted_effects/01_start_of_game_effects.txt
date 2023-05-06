@@ -3383,35 +3383,6 @@ imperial_origin_start_effect = {
 				imperial_origin_start_spawn_effect = { INITIALIZER = overlord_system_2_init }
 				imperial_origin_start_spawn_effect = { INITIALIZER = overlord_system_3_init }
 			}
-			# Vassals
-			event_target:imperial_homeland_2.solar_system = { imperial_origin_start_spawn_effect = { INITIALIZER = overlord_system_4_init } }
-			if = {
-				limit = {
-					NOT = {
-						galaxy_size = tiny
-					}
-				}
-				event_target:imperial_homeland_2.solar_system = { imperial_origin_start_spawn_effect = { INITIALIZER = overlord_system_5_init } }
-			}
-			if = {
-				limit = {
-					NOR = {
-						galaxy_size = tiny
-						galaxy_size = small
-					}
-				}
-				event_target:imperial_homeland_3.solar_system = { imperial_origin_start_spawn_effect = { INITIALIZER = overlord_system_6_init } }
-			}
-			if = {
-				limit = {
-					NOR = {
-						galaxy_size = tiny
-						galaxy_size = small
-						galaxy_size = medium
-					}
-				}
-				event_target:imperial_homeland_3.solar_system = { imperial_origin_start_spawn_effect = { INITIALIZER = overlord_system_7_init } }
-			}
 			set_spawn_system_batch = end
 
 			# Set up hyperlanes if they are missing
@@ -3474,64 +3445,6 @@ imperial_origin_start_effect = {
 				ORIGINAL_STAR_SYSTEM = event_target:imperial_homeland_3.solar_system
 				SECOND_STAR_SYSTEM = event_target:origin_imperial_homeland.solar_system
 			}
-		}
-	}
-
-	# Vassal Backup
-	if = { # Backup for vassal 1
-		limit = {
-			any_system = { has_star_flag = overlord_system_2_flag }
-			NOT = { any_system = { has_star_flag = overlord_system_4_flag } }
-		}
-		imperial_origin_vassal_backup_effect = {
-			SYSTEM_FLAG = overlord_system_2_flag
-			INITIALIZER = overlord_system_4_init
-			ORIGINAL_STAR_SYSTEM = event_target:imperial_homeland_4.solar_system
-		}
-	}
-	if = { # Backup for vassal 2
-		limit = {
-			any_system = { has_star_flag = overlord_system_2_flag }
-			NOR = {
-				galaxy_size = tiny
-				any_system = { has_star_flag = overlord_system_5_flag }
-			}
-		}
-		imperial_origin_vassal_backup_effect = {
-			SYSTEM_FLAG = overlord_system_2_flag
-			INITIALIZER = overlord_system_5_init
-			ORIGINAL_STAR_SYSTEM = event_target:imperial_homeland_5.solar_system
-		}
-	}
-	if = { # Backup for vassal 3
-		limit = {
-			any_system = { has_star_flag = overlord_system_3_flag }
-			NOR = {
-				galaxy_size = tiny
-				galaxy_size = small
-				any_system = { has_star_flag = overlord_system_6_flag }
-			}
-		}
-		imperial_origin_vassal_backup_effect = {
-			SYSTEM_FLAG = overlord_system_3_flag
-			INITIALIZER = overlord_system_6_init
-			ORIGINAL_STAR_SYSTEM = event_target:imperial_homeland_6.solar_system
-		}
-	}
-	if = { # Backup for vassal 4
-		limit = {
-			any_system = { has_star_flag = overlord_system_3_flag }
-			NOR = {
-				galaxy_size = tiny
-				galaxy_size = small
-				galaxy_size = medium
-				any_system = { has_star_flag = overlord_system_7_flag }
-			}
-		}
-		imperial_origin_vassal_backup_effect = {
-			SYSTEM_FLAG = overlord_system_3_flag
-			INITIALIZER = overlord_system_7_init
-			ORIGINAL_STAR_SYSTEM = event_target:imperial_homeland_7.solar_system
 		}
 	}
 

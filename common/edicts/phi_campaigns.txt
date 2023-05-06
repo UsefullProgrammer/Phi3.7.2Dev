@@ -2,6 +2,7 @@
 @Edict2Cost = 25
 @Edict3Cost = 30
 @EdictDuration = -1
+@campaignCost = 15
 @n50 = 2
 @n500 = 20
 gears_of_war = {
@@ -506,6 +507,7 @@ blood_tribute = {
 Edicts_funds = {
 	length = -1
 	potential = {
+		always = no # is very strong
 		is_gestalt = yes
 	}
 	modifier = {
@@ -517,13 +519,15 @@ Edicts_funds = {
 			influence = 100
 		}
 		upkeep = {
-			influence = 1
+			influence = 2
 		}
 	}
+	
 }
 Edicts_funds_2 = {
 	length = -1
 	potential = {
+		always = no # is very strong
 		is_gestalt = yes
 	}
 	allow = {
@@ -536,10 +540,10 @@ Edicts_funds_2 = {
 	resources = {
 		category = campaigns
 		cost = {
-			influence = 200
+			influence = 100
 		}
 		upkeep = {
-			influence = 2
+			influence = 3
 		}
 	}
 }
@@ -564,6 +568,47 @@ illuminate_vassal = {
 		cost = {
 			influence = 250
 			#multiplier = value:edict_size_effect
+		}
+	}
+}
+
+archeologist_spedition = {
+	length = @EdictDuration
+	icon = "GFX_resource_minor_artifacts"
+	potential = {
+		has_ancrel = yes
+	}
+	resources = {
+		category = campaigns
+		upkeep = {
+			energy = @campaignCost
+			multiplier = value:edict_size_effect
+		}
+	}
+	modifier = {
+		country_base_minor_artifacts_produces_add = 1
+	}
+	# trigger = {
+	# 	potential = {
+	# 		has_country_flag = have_archaeostudies_faculty
+	# 	}
+	# 	modifier = {
+	# 		country_base_minor_artifacts_produces_add = 0.1
+	# 		multiplier = value:edict_size_effect
+	# 	}
+	# }
+	prerequisites = {
+		"tech_archaeostudies"
+	}
+
+	ai_weight = {
+		weight = 0
+		modifier = {
+			weight = @EdictMedPrio
+			has_monthly_income = {
+				resource = minor_artifacts
+				value < 100
+			}
 		}
 	}
 }

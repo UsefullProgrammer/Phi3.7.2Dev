@@ -1,0 +1,125 @@
+@stickiness = 10
+@stickiness_low = 5
+
+col_researchphy = {
+	icon = GFX_colony_type_researchphy
+
+	potential = {
+		exists = owner
+		NOR = {
+			uses_district_set = city_world
+			uses_district_set = ring_world
+			uses_district_set = habitat
+		}
+		is_special_colony_type = no
+	}
+
+	planet_modifier = {
+		planet_building_physics_lab_1_build_speed_mult = 0.25
+		planet_researchers_upkeep_mult = -0.2
+
+	}
+
+	weight_modifier = {
+		modifier = {
+			add = @stickiness
+			has_designation = col_research
+		}
+		complex_trigger_modifier = {
+			trigger = count_owned_pop
+			parameters = {
+				limit = {
+					has_research_job = yes
+				}
+			}
+			mode = add
+			mult = 3
+		}
+		modifier = {
+			add = 5
+			OR = {
+				has_modifier = wild_storms
+				has_modifier = titanic_life
+				has_modifier = atmospheric_hallucinogen
+				has_modifier = liquid_sands
+				has_modifier = dangerous_wildlife
+				has_modifier = unstable_tectonics
+				has_modifier = society_animal_life
+				has_modifier = tamed_nanite_swarm_modifier
+				has_deposit = d_central_spire
+			}
+		}
+		modifier = {
+			factor = 0
+			exists = sector
+			sector = {
+				has_any_sector_focus = yes
+				NOR = {
+					has_sector_focus = "research"
+					has_sector_focus = "balanced"
+				}
+			}
+		}
+	}
+}
+col_researcheng = {
+	icon = GFX_colony_type_researcheng
+
+	potential = {
+		exists = owner
+		NOR = {
+			uses_district_set = city_world
+			uses_district_set = ring_world
+			uses_district_set = habitat
+		}
+		is_special_colony_type = no
+	}
+
+	planet_modifier = {
+		planet_building_engineering_lab_1_build_speed_mult = 0.25
+		planet_researchers_upkeep_mult = -0.2
+
+	}
+
+	weight_modifier = {
+		modifier = {
+			add = @stickiness
+			has_designation = col_research
+		}
+		complex_trigger_modifier = {
+			trigger = count_owned_pop
+			parameters = {
+				limit = {
+					has_research_job = yes
+				}
+			}
+			mode = add
+			mult = 3
+		}
+		modifier = {
+			add = 5
+			OR = {
+				has_modifier = wild_storms
+				has_modifier = titanic_life
+				has_modifier = atmospheric_hallucinogen
+				has_modifier = liquid_sands
+				has_modifier = dangerous_wildlife
+				has_modifier = unstable_tectonics
+				has_modifier = society_animal_life
+				has_modifier = tamed_nanite_swarm_modifier
+				has_deposit = d_central_spire
+			}
+		}
+		modifier = {
+			factor = 0
+			exists = sector
+			sector = {
+				has_any_sector_focus = yes
+				NOR = {
+					has_sector_focus = "research"
+					has_sector_focus = "balanced"
+				}
+			}
+		}
+	}
+}

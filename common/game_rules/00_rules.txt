@@ -32,25 +32,6 @@ can_add_claim = {
 			always = yes
 		}
 	}
-	# PHI
-	custom_tooltip = {
-		fail_text = CANNOT_ADD_CLAIM_NOT_IN_LINE
-		any_neighbor_system = {
-			OR = {
-				AND = {
-					exists = owner
-					OR = {
-						owner = { is_same_value = root }
-						owner = {
-							is_subject = yes
-							overlord = { is_same_value = root }
-						}
-					}
-				}
-				root = { has_claim = prev }
-			}
-		}
-	}
 	custom_tooltip = {
 		fail_text = CANNOT_ADD_CLAIM_POLICY
 		OR = {
@@ -143,6 +124,39 @@ can_add_claim = {
 					has_valid_civic = civic_machine_assimilator
 				}
 			}
+		}
+	}
+	# PHI
+	custom_tooltip = {
+		fail_text = CANNOT_ADD_CLAIM_NOT_IN_LINE
+		closest_system = {
+			limit = {
+				AND = {
+					OR = {
+						AND = {
+							
+							exists = owner
+							OR = {
+								owner = { is_same_value = root }
+								owner = {
+									is_subject = yes
+									overlord = { is_same_value = root }
+								}
+							}
+						}
+						root = { 
+								has_claim = prev 
+								OR = {
+									has_natural_wormhole = no
+									has_technology = tech_wormhole_stabilization
+								}
+						}
+					}
+				}
+			}
+			use_bypasses = yes
+			min_steps = 1
+			max_steps = 1
 		}
 	}
 }

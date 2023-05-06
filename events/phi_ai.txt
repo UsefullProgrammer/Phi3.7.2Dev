@@ -241,7 +241,7 @@ country_event = {
 					add_district = district_generator
 					owner = { add_resource = { minerals = -300 } }
 				}
-				20 = {
+				15 = {
 					modifier = {
 						factor = 0
 						num_free_districts = { type = district_mining value = 0 }
@@ -316,7 +316,7 @@ country_event = {
 					}
 					modifier = {
 						factor = 0
-						owner = { has_monthly_income = { resource = consumer_goods value > 10 } }
+						owner = { has_monthly_income = { resource = consumer_goods value > 5 } }
 					}
 					add_building = building_factory_1
 					owner = { add_resource = { minerals = -400 } }

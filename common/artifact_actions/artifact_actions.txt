@@ -865,7 +865,7 @@ artifact_precursor_clue = {
 			}
 			add_modifier = {
 				modifier = "artifact_precursor_insight_cooldown"
-				days = 1800
+				days = 3600
 			}
 		}
 	}

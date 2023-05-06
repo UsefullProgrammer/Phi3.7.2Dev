@@ -36,7 +36,7 @@ default_federation = {
 		federation_check_for_subject_trigger = yes
 		custom_tooltip = {
 			fail_text = requires_actor_not_barbaric_despoilers
-			NOT = { has_valid_civic = civic_barbaric_despoilers }
+			NOT = { is_civic_despoilers = yes }
 		}
 	}
 	levels = {
@@ -315,7 +315,7 @@ trade_federation = {
 		}
 		custom_tooltip = {
 			fail_text = requires_actor_not_barbaric_despoilers
-			NOT = { has_valid_civic = civic_barbaric_despoilers }
+			NOT = { is_civic_despoilers = yes }
 		}
 	}
 	levels = {
@@ -602,7 +602,7 @@ research_federation = {
 		}
 		custom_tooltip = {
 			fail_text = requires_actor_not_barbaric_despoilers
-			NOT = { has_valid_civic = civic_barbaric_despoilers }
+			NOT = { is_civic_despoilers = yes }
 		}
 	}
 	levels = {
@@ -1424,7 +1424,7 @@ spiritualist_federation = {
 		}
 		custom_tooltip = {
 			fail_text = requires_actor_not_barbaric_despoilers
-			NOT = { has_valid_civic = civic_barbaric_despoilers }
+			NOT = { is_civic_despoilers = yes }
 		}
 	}
 	levels = {

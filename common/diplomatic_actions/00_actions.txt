@@ -1559,7 +1559,7 @@ action_form_migration_pact = {
 			NOT = { has_valid_civic = civic_inwards_perfection }
 		}
 		if = {
-			limit = { from = { has_valid_civic = civic_barbaric_despoilers } }
+			limit = { from = { is_civic_despoilers = yes } }
 			if = {
 				limit = {
 					has_intel = {
@@ -1581,7 +1581,7 @@ action_form_migration_pact = {
 		}
 		custom_tooltip = {
 			fail_text = "requires_actor_not_barbaric_despoilers"
-			NOT = { has_valid_civic = civic_barbaric_despoilers }
+			NOT = { is_civic_despoilers = yes }
 		}
 		custom_tooltip = {
 			fail_text = "federation_internal_migration"

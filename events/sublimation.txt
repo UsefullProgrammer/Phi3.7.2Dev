@@ -265,16 +265,16 @@ country_event = {
 			5 = {
 				#negative: on random planet -10 pops
 				modifier = {
-					factor = 1.5
+					factor = 2
 					has_ethic = ethic_xenophobe
 				}
 				modifier = {
-					factor = 2
+					factor = 3
 					has_ethic = ethic_fanatic_xenophobe
 				}
 				country_event = { id = sublimation.600 }
 			}
-			5 = {
+			0 = { #disabled because not balance for MARIO
 				#negative: deamonic incursion
 				modifier = {
 					factor = 1.5
@@ -293,7 +293,6 @@ country_event = {
 					has_ethic = ethic_fanatic_pacifist
 				}
 				country_event = { id = sublimation.140 }
-				
 			}
 			3 = {
 				#negative: random fallen empire awakes
@@ -302,7 +301,7 @@ country_event = {
 					has_global_flag = sleepers_awake_happened
 				}
 				modifier = {
-					factor = 5
+					factor = 3
 					any_country = {
 						is_country_type = default
 						OR = {
@@ -311,6 +310,36 @@ country_event = {
 								has_federation = yes
 								federation = {
 									fleet_power > 90000
+								}
+							}
+						}
+					}
+				}
+				modifier = {
+					factor = 1.5
+					any_country = {
+						is_country_type = default
+						OR = {
+							fleet_power >= 100000
+							AND = {
+								has_federation = yes
+								federation = {
+									fleet_power >= 130000
+								}
+							}
+						}
+					}
+				}
+				modifier = {
+					factor = 1.5
+					any_country = {
+						is_country_type = default
+						OR = {
+							fleet_power >= 150000
+							AND = {
+								has_federation = yes
+								federation = {
+									fleet_power >= 175000
 								}
 							}
 						}
@@ -1151,7 +1180,7 @@ country_event = {
 #daemonicIncursion
 country_event = {
 	id = sublimation.141
-	hide_windows = yes
+	#hide_windows = yes
 
 	is_triggered_only = yes
 	

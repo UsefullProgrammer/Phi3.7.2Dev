@@ -57,7 +57,7 @@ auth_oligarchic = {
 	election_term_years = 20
 	election_type = oligarchic
 	can_have_emergency_elections = yes
-	emergency_election_cost = 100
+	emergency_election_cost = 1000
 	max_election_candidates = 4
 
 	has_agendas = yes
@@ -256,7 +256,7 @@ auth_corporate = {
 	election_type = oligarchic
 	can_reform = no
 	can_have_emergency_elections = yes
-	emergency_election_cost = 100
+	emergency_election_cost = 1000
 	max_election_candidates = 4
 	localization_postfix = corporate
 

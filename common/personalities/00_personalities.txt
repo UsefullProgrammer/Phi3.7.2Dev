@@ -496,7 +496,7 @@ ruthless_capitalists = {
 }
 
 peaceful_traders = {
-	aggressiveness = 2.0
+	aggressiveness = 1
 	trade_willingness = 1.0
 	bravery = 0.5
 	combat_bravery = 1.0
@@ -638,7 +638,11 @@ hegemonic_imperialists = {
 		weight = 5 # very common, so lower weight
 		modifier = {
 			weight = 1000
-			has_civic = civic_barbaric_despoilers
+			OR = {
+				has_civic = civic_barbaric_despoilers
+				has_civic = civic_machine_despoilers
+				has_civic = civic_hive_despoilers
+			}
 		}
 	}
 }

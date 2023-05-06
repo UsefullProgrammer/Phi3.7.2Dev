@@ -215,20 +215,25 @@ Fix vassali rilasciati da franchising ora hanno bonus 4 pop
 Bilanciamento:
 Sussidiarie non possono più avere come agrement espansione regolata (dava troppa influenza al padrone)
 
-[h2][b]1.2 Robot & optimization[/h2][/b]
+[h2][b]1.2 Robot , optimization & Minerals[/h2][/b]
+[b]Gestait[/b]
 Ora le capital dei robot hanno un coordinator al posto di un maintance drone.
-2 editti nuovi per gli gestait che usano molta l'influenza per aumentare edict funds
-Fix problema con minatori, poichè minano solo 4 minerals ora le tech tech mining danno +0.3 invece di 0.2 in maniera tale che in late game i minerali sono scavati come le altre risorse basi.
+Uplink di livello 2 e 3 non costano più cristal mentre simulation center ne puoi fare solo uno e costa crystal
+Fix bug in sumulation center livello 3 che dava meno bonus del livello 2 (0.15 contro 0.25 e ho messo 0.4)
 Deviant experiments ora da +75% unity invece di 50%
 [b]Release client:[/b]
 -Release client state costa un pò di influenza e meno di unity
--I vassali rilasciati da release client hanno modificatore per 5 anni di newly subjugated loyalty
 [b]Origini:[/b]
 Overlord vassal non ha più le AI
-2 nuove civiche per i robot!
+[b]Tradition:[/b]
+Ora per faith in science devi avere database uplink e polytechnic education
 [b]Civiche[/b]
-
-
+2 nuove civiche epiche per i robot!
+Sussidiarie non possono più avere come agrement espansione regolata.
+I vassali rilasciati da franchising hanno modificatore per 5 anni di newly subjugated loyalty
+I vassali rilasciati da franchising non hanno più civic_fanatic_purifiers come civica.
+Explotation: ora la ricompensa non è tramite if ma è tramite script dinamici, ogni pop da al vincitore energia e minarli * 50 mentre il resto * 20 (nella statica era *25)
+Explotation ora c'è l'hanno anche le gestait, e in base al tipo gstait da diverse risorse e modificatori.
 [b]Border Gore[/b]
 Ora border gore comprende whormhole (comunque passarci le navi fa male).
 Ottimizzato codice border gore.
@@ -237,3 +242,23 @@ Ora puoi claimare i sistemi adiacenti collegati tramite whormhole (comunque pass
 Ottimizzato codice can claim
 [b]Traits[/b]
 Il tratto industriouso è stato aumentato da 20% a 25%
+Il tratto Power drills bonus produzione minatori da 15% a 25%
+Toxoide bonus prod minatori aumentato
+Cyborg power drills bonus prod minatori aumentato
+[b]Edicts[/b]
+Aggiunto editto spedizioni archeologiche un editto che ti permette di fare minor artifact
+[b]Sublimation[/b]
+Più grande è la flotta più è probabile scoppi la war in heaven in factor = 4 flotta > 70000 < 9000 factor = 5 >= 90000 < 150000 factor = 6 >= 150000
+
+[b]Anomalies[/b]
+World in loop difficoltà settata a 10
+Fixato chance messa a 0 di data corrupt se pianeta ha luna e/o sotto colonizzazione
+[b]Bilanciametno[/b]
+Fix problema con minatori, poichè minano solo 4 minerals ora le tech tech mining danno +0.3 invece di 0.2 in maniera tale che in late game i minerali sono scavati similmente come le altre risorse basi.
+Frequenza con cui un accordo vassalizzazione può essere modificato cambiato da 60 mesi a 30 mesi
+[b]Altro[/b]
+Messo localization in tutte le lingue, integrato lingua italiana.
+
+[b]Automations[/b]
+Rifatto buona parte degli automatismi
+Aggiunto per gestire automatismi nuovi 2 tipologie di pianeti Pianeta ricerca fisica e pianeta ricerca ingegneria

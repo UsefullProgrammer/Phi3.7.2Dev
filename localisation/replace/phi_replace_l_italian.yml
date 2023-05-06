@@ -1,0 +1,181 @@
+﻿l_italian:
+ # Traditions --> file traditions.yml
+ tr_diplomacy_adopt_desc:4 "§E$TRADITIONS_ADOPT$:§!\n§HSblocca l'Editto:§! $edict_diplomatic_grants$\n§Y$MOD_COUNTRY_DIPLOMACY_INFLUENCE_COST$§! ridotto del §G100%§!."
+ tr_diplomacy_finish_effect:1 "§E$TRADITIONS_FINISH$:§!\nAdottare tutte le tradizioni $tr_diplomacy_adopt$ aumenta i nostri §Y$MOD_COUNTRY_ENVOYS_ADD$§! di §G1§!."
+ tr_diplomacy_eminent_diplomats_desc:0 "Peso Diplomatico: §G+100%§!\nGli emissari che §Ymigliorano le relazioni§! hanno §G1%§! al mese di probabilità di guadagnare un §YFavore§!."
+ tr_diplomacy_entente_coordination_desc:0 "La quantità di flotta che contribuiamo verso la §YCapacità Navale Federale§! conta il doppio.\nCapacità Navale §G+10%§!"
+ tr_diplomacy_diplomatic_networking_desc:0 "Ambasciate: §G+10§! £unity£ §YUnità§!"
+ 
+ tr_expansion_galactic_ambition_desc:7 "§Y$mod_starbases_upkeep_mult$§! ridotto del §G20%§!.\n§YMantenimento delle Strutture Planetarie§! ridotto del §G20%§!."
+ 
+ tr_discovery_databank_uplinks_desc: "§HSblocca Editto:§! $edict_research_subsidies$\n§Y$mod_station_researchers_produces_mult$§! aumentato del §G50%§!."
+ tr_discovery_polytechnic_education_desc: "§Y$MOD_LEADER_SPECIES_EXP_GAIN$§! aumentato del §G+50%§! e §Y$MOD_LEADER_SKILL_LEVELS$§! aumentato del §Y1§!.\n§YScienziati§! vengono reclutati già al livello §Y3§!."
+ tr_synchronicity_integrated_preservation_desc:4 "§Y$job_coordinator_plural$§! produce §Y1§! £mod_country_admin_cap_add£ §Y$MOD_COUNTRY_ADMIN_CAP_ADD$§! aggiuntivo e riduce §Y$MOD_PLANET_CRIME_NO_HAPPINESS_ADD$§! di 2."
+ tr_harmony_finish_effect:7 "§E$TRADITIONS_FINISH$:§!\nAdottare tutte le tradizioni $tr_harmony_adopt$ riduce §Y$MOD_EMPIRE_SIZE_POPS_MULT$§! del §G10%§! e permette di andare in §YDisarmo§!."
+ tr_supremacy_finish_effect:1 "§E$TRADITIONS_FINISH$:§!\nAdottare tutte le tradizioni $tr_supremacy_adopt$ sblocca la politica §YDottrine di Guerra§! e permette di andare in §YMobilizzazione Totale§!."
+ tr_domination_colonial_viceroys_desc:0 "§Y$MOD_LEADER_GOVERNOR_SKILL_LEVELS$§! aumentato del §Y2§!.\n§YRulers§! e §YGovernatori§! cominciano di livello §Y3§!.\n\nInfluenza: §G+0.5§! al mese"
+ tr_supremacy_war_games_desc:3 "§Y$MOD_COUNTRY_COMMAND_LIMIT_ADD$§! aumentato del §G+20§! and §Y$MOD_LEADER_ADMIRAL_SKILL_LEVELS$§! is aumentato del §Y2§!.\n§YAmmiragli§! e §YGenerali§! cominciano di livello §Y3§!."
+ tr_domination_adopt_desc:0 "Attrazione all'etica autoritaria aumentata del §Y100%§!.\nOutput di lavoratori e droni §G+5%§!.\nPermette di §Yrichiedere la vassallizzazione§! ed il casus belli §Yvassallizzazione§!."
+ tr_domination_workplace_motivators_desc:1 "§HSblocca Editto:§! $edict_extended_shifts$\nResource output degli §Y$pop_cat_slave_plural$§! aumentato del §G20%§!."
+ tr_unyielding_resistance_is_frugal_desc:0 "£building£ §Y$building_stronghold$§! produce §Y3§! £unity£ Unità. Inoltre, §Y$MOD_ARMY_DEFENSE_HEALTH_MULT$§! aumentato del §G+100%§!."
+ tr_unyielding_bulwark_of_harmony_desc:2 "§Y$MOD_STARBASE_SHIPYARD_BUILD_SPEED_MULT$§! aumentato del §G+100%§! quando siamo in una guerra difensiva. Inoltre, §Y$MOD_SHIP_FIRE_RATE_MULT$§! aumentato del §G+100%§! per tutte le nostre navi all'interno dei nostri confini."
+ tr_versatility_adaptive_programming_desc:1 "§Y$MOD_COUNTRY_TRADE_FEE$§! ridotto del §G10%§!.\nEsperienza dei Leader §G+50%§!"
+ tr_versatility_operational_proxies_desc:3 "§Y$MOD_POP_RESETTLEMENT_COST_MULT$§! ridotto del §G33%§!\nRicerca Ingegneristica §G+5%§!"
+ tr_versatility_finish_desc:0 "Ricerca Ingegneristica §G+10%§!\nUSblocca la decisione planetaria §Y$decision_prospect$§!.\nAscension Perks: §G+1§!"
+ tr_versatility_spatial_optimization_desc:0 "£pops£ §Y$MOD_POP_HOUSING_USAGE_MULT$§! ridotto del §G20%§!."
+ tr_subterfuge_double_agents_desc:0 "Quando un'§Yoperazione ostile§! che ci bersaglia fallisce, guadagniamo §Y10§! Intel sull'impero che ci spiava.\nEmissari: §G+1§!\nPeso Diplomatico: §G+25%§!"
+ tr_subterfuge_finish_desc:0 "§YOperazioni§! andate a buon fine restituiscono il §G50%§! del loro costo di infiltrazione.\nRaggio dei Sensori Planetari: §G+3§!\nRaggio dei Sensori Navali: §G+1§!\nAscension Perks: §G+1§!"
+ 
+origin_tooltip_star_slingshot_effects:3 "- Inizia con una §H$quantum_catapult_ruined_slingshot$§! vicino al tuo sistema di casa e con la tecnologia necessaria per ripararlo e usarlo.\n- I tuoi §HCatapulte Quantistiche§! sono §G50%§! più precise.\n- Il bonus di §YAgguato Quantico§! dal catapultare le flotte è aumentato al §G+50%§! di Tasso di Fuoco."
+ tr_adaptability_dietary_enrichment:0 "Dietary Enrichment"
+
+tr_adaptability_dietary_enrichment_desc:1 "Il prodotto alimentare £food£ è aumentato del §G+10%§! grazie a §Y$mod_country_food_produces_mult$§!. Il costo di mantenimento dei lavori è diminuito del §G-10%§!."
+ tr_adaptability_dietary_enrichment_delayed:1 "Il valore nutrizionale dei prodotti alimentari che raccoltiamo per le nostre popolazioni può essere aumentato attraverso varie tecniche di arricchimento, consentendoci di sfamare più persone con meno cibo."
+
+tr_adaptability_recycling:0 "Riciclaggio Migliorato"
+
+tr_adaptability_recycling_desc:0 "§G15%§! di rimborso ogni volta che demoliamo un edificio o un distretto. Il costo di mantenimento dei lavori è diminuito del §G-10%§!."
+
+tr_adaptability_recycling_delayed:0 "Riutilizzare ciò che è diventato obsoleto ci dà più materiale per costruire in futuro."
+
+tr_adaptability_survival_fittest:0 "Sopravvivenza del Più Adatto"
+
+tr_adaptability_survival_fittest_desc:3 "Il §Y$MOD_PLANET_ORBITAL_BOMBARDMENT_DAMAGE$§! è ridotto del §G25%§! e il §Y$MOD_ARMY_DEFENSE_DAMAGE_MULT$§! è aumentato del §G+100%§!."
+
+tr_adaptability_survival_fittest_delayed:1 "Venendo a contatto con altre specie, abbiamo imparato la vera importanza di superare le nostre debolezze nella grande lotta per la sopravvivenza."
+
+tr_adaptability_environmental_diversification:0 "Diversificazione Ambientale"
+
+tr_adaptability_environmental_diversification_desc:1 "La §Y$MOD_POP_ENVIRONMENT_TOLERANCE$§! è aumentata del §G+10%§!."
+
+tr_adaptability_environmental_diversification_delayed:0 "Adattandoci a diversi ambienti, abbiamo imparato ad evolverci e ad adattarci più velocemente."
+
+ #Civics
+ #civic_tooltip_technocracy_effects:2 "£building£ §YCapital Buildings§! replace some £job_administrator£ §Y$job_administrator$§! Jobs with £job_head_researcher£ §Y$job_head_researcher_plural$§!\n§Y$job_researcher_plural$§! also produce §Y0.5§! £unity£ Unity"
+ civic_tooltip_exalted_priesthood_effects:1 "£building£ §YEdifici Capitale§! rimpiazzano alcuni lavori £job_administrator£ §Y$job_administrator$§! con £job_high_priest£ §Y$job_high_priest_plural$§!\n£job_priest£ §Y$job_priest_plural$§! produce §Y1§! £unity£ Unità addizionale."
+ civic_tooltip_byzantine_bureaucracy_effects: "£job_bureaucrat£ §Y$job_bureaucrat_plural$§! producono §Y1§! £unity£ Unità e §Y1§! £stability£ $PLANET_STABILITY_TITLE$."
+ civic_tooltip_franchising_effects: "Ogni nuova colonia viene rilasciata come §YSussidiaria§!, con gli edifici da Filiale Commerciale §Gsbloccati§!.\n§RQuesta civica non può essere rimossa dopo l'inizio della partita.§!"
+ civic_tooltip_syncretic_evolution_effects:4 "Comincia il gioco con §Y12§! £pop£ Pops di un'altra specie asservita e con §YGene Tailoring§! già ricercato."
+ civic_tooltip_agrarian_idyll_effects:5 "I §YDistretti Rurali§! forniscono §G+1§! £housing£ §YAbitazioni§!\nI §YDistretti Cittadini§! forniscono §R-1§! £housing£ §YAbitazioni§!\n£job_farmer£ §Y$job_farmer_plural$§! producono §G2§! £amenities£ §YAmenità§!\nOgni §HDistretto Agricolo§! sblocca §G1§! £building£ §YEdificio§! sul pianeta, tranne che se sun un Habitat."
+ civic_tooltip_barbaric_despoilers_effects:7 "Non può siglare §YTrattati migratori§!\nOttiene il casus belli '§Y$casus_belli_cb_despoliation$§!' contro tutti gli altri imperi\n$allow_raiding$"
+ 
+tr_adaptability_adaptive_ecology:0 "Ecologia Adattiva"
+
+tr_adaptability_adaptive_ecology_desc:4 "Tutti i nostri pianeti guadagnano §Y2 Slot Edificio Libero§!."
+
+tr_adaptability_adaptive_ecology_delayed:1 "La funzione più alta dell'ecologia è la comprensione delle conseguenze."
+
+tr_adaptability_appropriation:0 "Appropriazione"
+
+tr_adaptability_appropriation_desc:1 "Il §Y$MOD_POP_RESETTLEMENT_COST_MULT$§! è ridotto del §G50%§!. Abilita la politica §YAppropriazione Terriera Consentita§!."
+
+tr_adaptability_appropriation_delayed:0 "La terra che non viene lavorata non contribuisce in nulla al nostro impero. I lavoratori devono essere ricollocati in modo efficiente sui pianeti dove sono maggiormente necessari."
+
+tr_mercantile_adaptive_economic_policies_desc:0 "Espansione dell'Impero dai distretti: §G-50%§!. Espansione dell'Impero dai sistemi: §G-10%§!"
+tr_mercantile_trade_fleets_desc:0 "L'importo che contribuiamo alla §YCapacità Navale della Federazione§! conta per il §G50%§! in più.\n\nEspansione dell'Impero dai distretti: §G-50%§!. Espansione dell'Impero dai sistemi: §G-10%§!"
+
+tr_politics_finish_desc:0 "Peso Diplomatico £diplo_weight£ aumentato del §G+100%§!.\nSblocca 4 §YRisoluzioni§! speciali nella Comunità Galattica.\n$TRADITIONS_FINISH_AP$"
+
+#Tipo di Colonia
+col_bureau:0 "Centro Burocratico"
+col_bureau_desc:1 "Quando la burocrazia raggiunge una scala così vasta da sembrare divertente!"
+col_bureaucracy_custom:1 "I funzionari producono §G2§! Servizi. Il costo di mantenimento dei lavori dei funzionari è diminuito del §G10%§!. La probabilità di cambiamento delle Etiche della §Y$pop£ Popolazione§! è ridotta del §G20%§!."
+
+
+
+#Origini
+origin_common_ground:0 "Terreno Comune"
+origin_common_ground_desc:0 "Questa civiltà ha stabilito un contatto precoce con i vicini alieni immediati. Trovando forza nelle loro differenze, presto decisero di affrontare il futuro, e qualsiasi cosa potesse portare, insieme."
+origin_tooltip_common_ground_effects:0 "- Inizia come il leader di una §HXenophile Federation§!\n- Gli altri membri occuperanno uno slot di Mondo Abitabile Garantito vicino al tuo sistema di origine\n- Inizia con la tradizione §HLa Federazione§! sbloccata"
+START_SCREEN_COMMON_GROUND:0 "Decenni fa, quando le nostre prime sonde subluminiche rozze visitarono i sistemi stellari vicini al nostro, scoprimmo la presenza di un'altra civiltà aliena. Nonostante le differenze radicali nella nostra fisiologia, divenne rapidamente evidente che avevamo più cose in comune che non. Come noi, erano anche sull'orlo di sbloccare i viaggi interstellari pratici.\n\nSi formò un legame tra le nostre civiltà, che alla fine portò alla nascita di una federazione: avremmo combinato i nostri sforzi, e quando saremmo stati pronti a diffonderci nel cosmo, qualsiasi cosa ci fosse là fuori sarebbe stata affrontata da noi insieme."
+origin_tooltip_common_ground_npc_effects:0 "- Inizia come membro di una §HXenophile Federation§! con un membro aggiuntivo"
+opinion_common_ground:0 "Terreno Comune"
+origin_common_ground_npc:0 "$origin_common_ground$"
+origin_common_ground_npc_desc:0 "$origin_common_ground_desc$"
+civic_tooltip_life_seeded_effects:3 "- Il Pianeta Natale è un §H$pc_gaia$§! (Dimensioni: £planetsize£ §Y25§!) con diversi §HRari Elementi Planetari§!.\n- La preferenza di abitabilità è impostata su §H$trait_pc_gaia_preference$§!, rendendo gli altri tipi di pianeti indesiderabili."
+
+civic_tooltip_post_apocalyptic_effects: "La Capitale inizia come un §YMondo Tomba§!.\nAllo start del gioco, ottenere l'opzione di ricerca §GModellamento Terrestre§!.\nOttenere il tratto §Y$trait_survivor$§!, che concede:\n Abitabilità su Mondo Tomba: §G+70%§!\n Durata della vita del Leader: §G+10§! Anni"
+civic_tooltip_inward_perfection_effects:9 "Non può avere §YRivali§!.\nNon può formare §YPatti Difensivi§!.\nNon può formare §YTrattati di Migrazione§!.\nNon può formare §YAccordi di Ricerca§!.\nNon può formare §YPatti Commerciali§!.\nNon può §YGarantire l'Indipendenza§!.\nNon può unirsi a §YFederazioni§!.\nNon può §YInfiltrare§! i primordiali.\nNon può avere §YSoggetti§! forzati.\n"
+origin_hegemon:0 "Egemonia"
+origin_hegemon_desc:0 "Questa civiltà ha stabilito un contatto precoce con i vicini alieni immediati. La guerra è scoppiata quasi subito, ma dopo molti anni e sforzi titanici li ha lasciati come vincitori completi. I perdenti stanno ora pagando pesanti riparazioni."
+origin_tooltip_hegemon_effects:0 "- Inizia come il leader di una §HXenophobe Federation§!\n- Gli altri membri occuperanno uno slot di Mondo Abitabile Garantito vicino al tuo sistema di origine\n- Inizia con la tradizione §HLa Federazione§! sbloccata"
+origin_tooltip_hegemon_npc_effects:0 "- Inizia come membro di una §HXenophobe Federation§! con un membro aggiuntivo"
+START_SCREEN_HEGEMON:0 "Decenni fa, quando le nostre prime sonde subluminiche rozze visitarono i sistemi stellari vicini al nostro, scoprimmo la presenza di un'altra civiltà aliena che, come noi, era sull'orlo di sviluppare i viaggi interstellari pratici. Il panico scoppiò dopo che aprirono il fuoco sui nostri avamposti interstellari, uccidendo migliaia di coraggiosi coloni e dando inizio a una guerra sanguinosa che durò decenni. Abbiamo vinto, ricostruito e, come vincitori, è ora il nostro imperativo fare in modo che una cosa del genere non accada mai più.\n\nLo scoriale xenos conoscerà il suo posto!"
+origin_hegemon_npc:0 "Subordinato dell'Egemonia"
+origin_hegemon_npc_desc:0 "Questa civiltà ha stabilito un contatto precoce con i vicini alieni immediati. Dopo che i tentativi di comunicazione fallirono e l'altra civiltà iniziò a insediarsi su mondi sacri all'interno dei loro confini, la guerra divenne inevitabile e venne tentata una strategia di primo colpo. Questo fallì completamente, mandando l'altra civiltà in una frenesia di panico che si concluse con la resa incondizionata di questa civiltà."
+
+#Fazioni politiche --> federations_l_english.yml
+SUPREMACIST_ISOLATIONIST_NO_FEDERATION_DESC:1 "Permettere che la [Root.Owner.GetName] sia sfruttata dagli interessi alieni §Yunendosi a una Federazione§! e non essendo il suo Presidente scontenterà la [Root.GetName]."
+
+#Guerre e CB
+wg_humiliation_accept:1 "§Y[From.GetName]§! è umiliato, riducendo la loro produzione di §YInfluenza§!, §YUnità§! e §YLeghe§! del §R-33%§!. Anche la loro §YCapacità Navale§! e il §YPeso Diplomatico§! sono ridotti del §R-33%§!. Questo effetto dura per §Y15§! anni\n§Y[Root.GetName]§! guadagna §G+100§! £influence£\n"
+#Armi
+MISSILE_1:0 "Missili Nucleari"
+MISSILE_1_DESC:0 "Missili spaziali equipaggiati con testate nucleari ad alto rendimento. Anche se basati sulla vecchia tecnologia pre-spazio, queste armi grezze 'sparare e dimenticare' possono essere sorprendentemente efficaci a distanza.\nVelocità della nave: §G+2.5%§!"
+MISSILE_2:0 "Missili a Fusione"
+MISSILE_2_DESC:0 "Questi missili spaziali aggiornati hanno testate a fusione più potenti e prestazioni di volo migliorate.\nVelocità della nave: §G+5%§!"
+MISSILE_3:0 "Missili ad Antimateria"
+MISSILE_3_DESC:0 "Missili avanzati equipaggiati con testate ad antimateria molto potenti. Un nuovo e migliorato sistema di guida gli dà una maggiore possibilità di trovare i loro obiettivi.\nVelocità della nave: §G+7.5%§!"
+MISSILE_4:0 "Missili Quantistici"
+MISSILE_4_DESC:0 "L'ultima versione di missile spaziale, questa variante migliorata ha una testata immensamente potente che attinge la sua energia da un vuoto di punto zero.\nVelocità della nave: §G+10%§!"
+MISSILE_5:0 "Missili Predoni"
+MISSILE_5_DESC:0 "Questi missili altamente avanzati sono equipaggiati con limitati piloti IA a bordo che migliorano sostanzialmente le loro prestazioni e la capacità di tracciamento dei bersagli.\nVelocità della nave: §G+10%§!"
+
+SWARMER_MISSILE_1:0 "Missili Enjambement"
+SWARMER_MISSILE_1_DESC:0 "Questi missili più piccoli vengono lanciati in volée e sono stati progettati specificamente per sopraffare i sistemi di difesa a punto nemico.\nVelocità della nave: §G+5%§!"
+SWARMER_MISSILE_2:0 "Missili Tromba d'Aria"
+SWARMER_MISSILE_2_DESC:0 "Le nuove tecniche di miniaturizzazione ci permetteranno di equipaggiare i missili enjambement con testate più potenti e prestazioni di volo migliorate.\nVelocità della nave: §G+10%§!"
+
+TORPEDO_1:0 "Siluri spaziali"
+TORPEDO_1_DESC:0 "Questi siluri sono essenzialmente missili molto grandi e lenti. Sono equipaggiati con testate più potenti e modulatori di scudo che li fanno scivolare indisturbati attraverso le schermature energetiche.\nVelocità della nave: §G+5%§!"
+TORPEDO_2:0 "Siluri Corazzati"
+TORPEDO_2_DESC:0 "Siluri spaziali aggiornati incapsulati in armatura, per resistere meglio al fuoco delle difese a punto nemico. L'armatura si frammenta in schegge che causano danni aggiuntivi quando il siluro esplode.\nVelocità della nave: §G+10%§!"
+TORPEDO_3:0 "Siluri Devastatori"
+TORPEDO_3_DESC:0 "Siluri avanzati con testate molto potenti. Hanno un design più elegante, motori più veloci e modulatori di scudo aggiornati per scivolare attraverso le schermature energetiche.\nVelocità della nave: §G+15%§!"
+ #Policies
+trade_policy_trade_league_desc:1 "Unendoci in una lega commerciale, siamo in grado di prosperare e garantire profitti su un nuovo livello.\n\n§EPer ogni £trade_value£ §YValore Commerciale§! raccolto, guadagniamo £energy£ §Y0.25§!, £unity£ §Y0.25§!, £consumer_goods£ §Y0.25§! e £society_research£ §Y0.25§!"
+trade_policy_unity_desc:1 "Il commercio può essere utilizzato non solo per spostare beni, ma anche per facilitare la diffusione di idee. Dovremmo concentrare i nostri sforzi commerciali per assicurare che il messaggio del nostro governo sia ascoltato su tutti i pianeti dove facciamo affari.\n\n§EPer ogni £trade_value£ §YValore Commerciale§! raccolto, guadagniamo £energy£ §Y0.25§! e £unity£ §Y0.5§!"
+trade_policy_consumer_goods_desc:0 "I profitti e le tasse devono cedere il posto al miglioramento della vita dei nostri cittadini. Dovremmo concentrare i nostri sforzi commerciali sulla produzione e la distribuzione delle necessità quotidiane.\n\n§EPer ogni £trade_value£ §YValore Commerciale§! raccolto, guadagniamo £energy£ §Y0.25§! e £consumer_goods£ §Y0.5§!"
+trade_policy_holy_covenant:0 "Patto Sacro"
+trade_conversion_holy_covenant_name:0 "$trade_policy_holy_covenant$"
+trade_policy_holy_covenant_desc:0 "Unendoci in un patto sacro, possiamo godere della gloria collettiva del nostro scopo divino.\n\n§EPer ogni £trade_value£ §YValore Commerciale§! raccolto, guadagniamo £energy£ §Y0.25§!, £unity£ §Y0.5§! e £society_research£ §Y0.25§!§!"
+no_retreat_doctrine_desc:0 "Le nostre navi sono tenute a combattere fino alla fine amara. Non tollereremo ritirate, nessuna resa, nessuna fuga. Per la nostra flotta c'è solo vittoria o morte. Nessun passo indietro!\n\nAttrito: §G-20%§!\n"
+
+#Tecnologie
+TECH_UNLOCK_JUGGERNAUT_CONSTRUCTION_TITLE:0 "§Hsblocca il tipo di nave:§! Juggernaut e Colossus"
+TECH_UNLOCK_JUGGERNAUT_CONSTRUCTION_DESC: "Non hai bisogno di descrizione. Non è vero?"
+
+#Decisioni
+decision_prospect_effects_short:0 "Aggiunge una §GCaratteristica Planetaria§! e un §RModificatore§! casuale al pianeta."
+
+#Interfaccia Principale
+CREATE_SECTOR:1 "§HCrea un Nuovo Settore§!\nQuesto creerà un nuovo settore con questo pianeta come sua capitale. Tutti i sistemi entro §Y1§! salto, non precedentemente parte di alcun settore, diventeranno parte di questo nuovo settore."
+
+tradition_domination_desc:0 "Se non imponiamo la nostra volontà sugli altri, inevitabilmente imporranno la loro su di noi.\n\nSe §Gadopterai§!, possiamo proporre che un altro Impero diventi nostro soggetto."
+tradition_domination_machine_desc:0 "Cerchiamo un'armoniosa funzionalità in tutta la galassia. Altri esseri stellari resistono a ciò a causa di inefficienze personali. Rimuoveremo il loro disordine come una parte guasta.\n\nSe §Gadopterai§!, possiamo proporre che un altro Impero diventi nostro soggetto."
+tradition_domination_hive_desc:0 "Tutto ciò che non è Noi deve servirci, sia come servitori, sia come cibo.\n\nSe §Gadopterai§!, possiamo proporre che un altro Impero diventi nostro soggetto."
+tech_capital_productivity_1_effect:0 "Edifici Capitali:\n $mod_planet_jobs_produces_mult$: §G+10%§!"
+tech_capital_productivity_2_effect:0 "Edifici Capitali Potenziati:\n $mod_planet_jobs_produces_mult$: §G+20%§!"
+tech_capital_productivity_3_effect:0 "Edifici Capitali Maggiori:\n $mod_planet_jobs_produces_mult$: §G+30%§!"
+
+EMPIRE_SIZE_TOTAL_2:0 "$VALUE|0Y$"
+ADMIN_CAP_TOTAL_2:0 "$VALUE|Y$"
+ADMIN_CAP_VALUE_2:0 "$VALUE|Y$"
+#ADMIN_CAP_VALUE:0 "$MOD_COUNTRY_ADMIN_CAP_ADD$: $VALUE|Y$"($ADMIN_CAP_VALUE_2$)
+EMPIRE_SIZE_NO_EFFECTS:4 "Fino a quando §Y$EMPIRE_SIZE$§! è uguale o inferiore a §Y$EMPIRE_SIZE_TOTAL_2$§! + §YCapacità Amministrativa§! , nessun altro costo viene modificato."
+BuildingS_total:0 "$MOD_PLANET_MAX_BUILDINGS_ADD$: $VALUE|Y$"
+
+#ascension perk
+no_rev_engineering:1 "Le operazioni di §Y$operation_steal_technology$§! falliranno automaticamente quando usate contro di noi e i §YDebris§! delle nostre navi distrutte non potranno essere studiati da altri imperi.\n\nInoltre, gli altri imperi non possono avere bonus di §Y$relative_technology$§! rispetto al tuo impero."
+#tip balancing by gobbi
+tr_politics_finish_desc:0 "§G+100%§! £diplo_weight£ Peso Diplomatico\nSblocca 4 §YRisoluzioni§! speciali nella Comunità Galattica.\n$TRADITIONS_FINISH_AP$"
+#tr_genetics_efficient_cloning_desc:0 "§Y$building_clone_vats$§! producono un ulteriore §G+1,5§! §Y$MOD_PLANET_POP_ASSEMBLY_ORGANIC_ADD$§! e aumentano il costo di mantenimento degli §Y$building_clone_vats$§! del §R25%§."
+
+origin_tooltip_payback_effects:0 "§R- ATTENZIONE: Origine sfidante§!\n- Iniziate con 10 £pop£ Popolazioni in meno rispetto al normale.\n- Iniziate con diverse tecnologie importanti ancora da ricercare e con uno svantaggio infrastrutturale.\n- Una speciale §HSito Archeologico§! nel vostro sistema: la corazzata distrutta dei vostri ex invasori.\n- Questa origine garantirà un certo numero di civiltà pre-FTL in tutta la galassia, indipendentemente dall'impostazione del cursore §H$FE_PRIMITIVE_WORLDS$§!.\n- Una civiltà pre-FTL casuale verrà sollevata per avere l'origine §H$origin_broken_shackles$§!.\n- Un §HImpero Avanzato§! con l'origine §H$origin_slavers$§! verrà generato da qualche parte nella galassia.\n\nIniziate con la politica impostata e sbloccata alla Mobilizzazione a Tutta Scala."
+origin_imperial_vassal_desc:1 "Il nostro primo sforzo al di là del nostro pianeta natale è stato doloroso, improvvisamente e brutalmente soggetto ai capricci di una potenza galattica straniera. Ora guardiamo al futuro in cui non viviamo più all'ombra di un altro impero.\n\nSe siete un vassallo o un tributario, non costate alcun influsso al vostro sovrano."
+
+EDICT_DESC:8 "\nGli §HEditto dell'Impero§! sono divisi in editto e campagne, e il loro costo si basa sui modificatori a livello imperiale o, nel caso della campagna per la flotta militare, sulla dimensione della flotta.\nPossono essere attivati o disattivati spendendo risorse come §H$unity$§! (£unity£).§!"
+
+civic_tooltip_machine_servitor_effects:12 "Iniziate il gioco con §Y5§! £pop£ Popolazioni organiche con cittadinanza §Y$citizenship_organic_trophy$§! e standard di vita §Y$living_standard_organic_trophy$§!\nPotete costruire edifici §Y$building_organic_sanctuary$§! che consentono ai Bio-Trofei di produrre §YUnity§! e ricerca §YSocietà§! invece degli edifici del vostro Impero di Macchine come l'edificio §Y$building_uplink_node$§!.\n\nGarantisce l'accesso all'edificio §Y$holding_organic_sanctuary$§!."
+
+tr_synchronicity_machine_finish_desc:3 "§HSblocca Editto:§! $edict_industrial_maintenance$.\n$MOD_PLANETARY_ASCENSION_EFFECT_MULT$: §G+25%§!\nPerks di Ascensione Sbloccati: §G+1§!\nChance di Trasferimento Automatico: §G+30%§!"

@@ -94,13 +94,13 @@ decision_phi_planet_resource_rationing = {
 		category = decisions
 		cost = {
 			trigger = {
-				owner = { is_hive_empire = no }
+				owner = { is_gestalt = no }
 			}
 			unity = 1000
 		}
 		cost = {
 			trigger = {
-				owner = { is_hive_empire = yes }
+				owner = { is_gestalt = yes }
 			}
 			influence = 100
 		}
@@ -136,13 +136,13 @@ decision_end_phi_planet_resource_rationing = {
 		category = decisions
 		cost = {
 			trigger = {
-				owner = { is_hive_empire = no }
+				owner = { is_gestalt = no }
 			}
 			unity = 100
 		}
 		cost = {
 			trigger = {
-				owner = { is_hive_empire = yes }
+				owner = { is_gestalt = yes }
 			}
 			influence = 10
 		}
@@ -178,13 +178,13 @@ decision_phi_planet_local_administration = {
 		category = decisions
 		cost = {
 			trigger = {
-				owner = { is_hive_empire = no }
+				owner = { is_gestalt = no }
 			}
 			unity = 1000
 		}
 		cost = {
 			trigger = {
-				owner = { is_hive_empire = yes }
+				owner = { is_gestalt = yes }
 			}
 			influence = 100
 		}
@@ -221,13 +221,13 @@ decision_end_phi_planet_local_administration = {
 		category = decisions
 		cost = {
 			trigger = {
-				owner = { is_hive_empire = no }
+				owner = { is_gestalt = no }
 			}
 			unity = 100
 		}
 		cost = {
 			trigger = {
-				owner = { is_hive_empire = yes }
+				owner = { is_gestalt = yes }
 			}
 			influence = 10
 		}
@@ -263,13 +263,13 @@ decision_phi_planet_trading_guilds = {
 		category = decisions
 		cost = {
 			trigger = {
-				owner = { is_hive_empire = no }
+				owner = { is_gestalt = no }
 			}
 			unity = 100
 		}
 		cost = {
 			trigger = {
-				owner = { is_hive_empire = yes }
+				owner = { is_gestalt = yes }
 			}
 			influence = 10
 		}
@@ -306,13 +306,13 @@ decision_end_phi_planet_trading_guilds = {
 		category = decisions
 		cost = {
 			trigger = {
-				owner = { is_hive_empire = no }
+				owner = { is_gestalt = no }
 			}
 			unity = 100
 		}
 		cost = {
 			trigger = {
-				owner = { is_hive_empire = yes }
+				owner = { is_gestalt = yes }
 			}
 			influence = 10
 		}
@@ -347,13 +347,13 @@ decision_phi_planet_deviant_experiments = {
 		category = decisions
 		cost = {
 			trigger = {
-				owner = { is_hive_empire = no }
+				owner = { is_gestalt = no }
 			}
 			unity = 1000
 		}
 		cost = {
 			trigger = {
-				owner = { is_hive_empire = yes }
+				owner = { is_gestalt = yes }
 			}
 			influence = 100
 		}
@@ -390,13 +390,13 @@ decision_end_phi_planet_deviant_experiments = {
 		category = decisions
 		cost = {
 			trigger = {
-				owner = { is_hive_empire = no }
+				owner = { is_gestalt = no }
 			}
 			unity = 100
 		}
 		cost = {
 			trigger = {
-				owner = { is_hive_empire = yes }
+				owner = { is_gestalt = yes }
 			}
 			influence = 10
 		}
@@ -432,13 +432,13 @@ decision_phi_planet_expropriation = {
 		category = decisions
 		cost = {
 			trigger = {
-				owner = { is_hive_empire = no }
+				owner = { is_gestalt = no }
 			}
 			unity = 1000
 		}
 		cost = {
 			trigger = {
-				owner = { is_hive_empire = yes }
+				owner = { is_gestalt = yes }
 			}
 			influence = 100
 		}
@@ -482,9 +482,10 @@ decision_phi_release_client_state = {
 		cost = {
 			food = 100
 			energy = 100
-			minerals = 100
+			minerals = 150
 			consumer_goods = 100
-			unity = 250
+			unity = 100
+			influence = 15
 		}
 	}
 

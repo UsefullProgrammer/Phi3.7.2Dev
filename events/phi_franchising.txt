@@ -35,17 +35,10 @@ planet_event = {
 			name = random
 			ethos = random
 			authority = auth_oligarchic
+			type = default
 			civics = {
 				civic = civic_franchise_state
 				civic = random
-			}
-			if = {
-				limit = { has_valid_civic = civic_fanatic_purifiers }
-				force_remove_civic = civic_fanatic_purifiers #vietato per vassali franchise
-				change_government = {
-					cooldown = no
-					civics = { civic = random }
-				}
 			}
 			origin = "origin_franchise_state"
 			# species = event_target:leader_pop.species
@@ -57,6 +50,27 @@ planet_event = {
 				establish_communications_no_message = event_target:franchise_hq
 				event_target:franchise_hq = {
 					establish_communications_no_message = prev
+					while = {
+						count = value:pop_size_ventesimal
+						root = { 
+							create_pop = {
+								species = event_target:franchise_species
+								ethos = random
+							}
+						}
+						
+						random_owned_pop = {
+							kill_pop = yes
+						}
+					}
+				}
+				if = {
+					limit = { has_valid_civic = civic_fanatic_purifiers }
+					force_remove_civic = civic_fanatic_purifiers #vietato per vassali franchise
+					change_government = {
+						cooldown = no
+						civics = { civic = random }
+					}
 				}
 				root = {
 					set_owner = event_target:franchise_state
@@ -65,22 +79,24 @@ planet_event = {
 							set_owner = event_target:franchise_state
 						}
 					}
-					if = {
-						limit = {
-							num_pops < 6
-						}
-						while = {
-							count = 4
-							create_pop = {
-								species = event_target:franchise_species
-								ethos = random
-							}
-						}
-						add_district = district_city
-						add_district = district_generator
-						add_district = district_mining
-						add_district = district_farming
-					}
+					# if = {
+					# 	limit = {
+					# 		num_pops < 6
+					# 	}
+					# 	while = {
+					# 		limit = { num_pops < 6 }
+					# 		create_pop = {
+					# 			species = event_target:franchise_species
+					# 			ethos = random
+					# 		}
+					# 	}
+						
+					# }
+					add_district = district_city
+					add_district = district_generator
+					add_district = district_mining
+					add_district = district_farming
+					add_modifier = { modifier = new_colony_of_franchising days = 1800 }
 				}
 				copy_techs_from = {
 					target = event_target:franchise_hq
@@ -121,7 +137,6 @@ planet_event = {
 		}
 	}
 }
-
 country_event = {
 	id = phi_franchising.1
 	hide_window = yes

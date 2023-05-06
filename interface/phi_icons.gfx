@@ -59,4 +59,12 @@ spriteTypes = {
 		name = "GFX_wg_phi_survive"
 		texturefile = "gfx/interface/icons/diplomacy/diplomacy_restore_community.dds"
 	}
+	spriteType = {
+		name = "GFX_colony_type_researchphy"
+		texturefile = "gfx/interface/planetview/colony_type_phi.dds"
+	}
+	spriteType = {
+		name = "GFX_colony_type_researcheng"
+		texturefile = "gfx/interface/planetview/colony_type_phi_eng.dds"
+	}
 }

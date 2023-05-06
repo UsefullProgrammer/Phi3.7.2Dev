@@ -736,9 +736,10 @@ planet_event = {
 				add_resource = {
 					food = 100
 					energy = 100
-					minerals = 100
+					minerals = 150
 					consumer_goods = 100
-					influence = 25
+					unity = 100
+					influence = 15
 				}
 				
 				create_leader = {

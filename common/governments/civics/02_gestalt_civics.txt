@@ -388,6 +388,49 @@ civic_hive_stargazers = {
 	}
 }
 
+#phi
+
+civic_hive_despoilers = {
+	playable = {
+		host_has_dlc = "Apocalypse"
+	}
+	ai_playable = {
+		host_has_dlc = "Apocalypse"
+	}
+	potential = { authority = { value = auth_hive_mind } }
+	possible = {
+		civics = {
+			NOT = { value = civic_hive_devouring_swarm }
+		}
+	}
+	modification = no
+	modifier = {
+		starbase_shipyard_build_cost_mult = -0.10
+	}
+	random_weight = {
+		base = @civic_uncommon_random_weight
+		modifier = {
+			factor = 0
+			NOT = { host_has_dlc = "Apocalypse" }
+		}
+		modifier = {
+			# civic has no effect after galaxy generation, disable for random generation
+			factor = 0
+			has_global_flag = game_started
+		}
+	}
+	description = "civic_tooltip_barbaric_despoilers_effects"
+	swap_type = {
+		description = "civic_tooltip_barbaric_despoilers_effects"
+		trigger = {
+			host_has_dlc = "Overlord"
+		}
+		modifier = {
+			country_enclave_capacity_add = 1
+		}
+	}
+}
+
 ##################
 # Machine Empire
 ##################
@@ -443,6 +486,7 @@ civic_machine_terminator = {
 				value = civic_machine_assimilator
 				value = civic_machine_memorialist
 				value = civic_machine_exploration_protocol
+				value = civic_machine_despoilers
 			}
 		}
 		origin = {
@@ -563,7 +607,7 @@ civic_machine_zero_waste_protocols = {
 	}
 	modifier = {
 		planet_pops_robotics_upkeep_mult = -0.75
-	}
+	} 
 }
 
 civic_machine_built_to_last = {
@@ -823,5 +867,93 @@ civic_machine_exploration_protocol = {
 
 	random_weight = {
 		base = 0
+	}
+}
+#phi
+civic_scavengers_machine = {
+	playable = { has_toxoids = yes }
+	ai_playable = { has_toxoids = yes }
+	description = "civic_scavengers_effects"
+	potential = {
+		authority = { value = auth_machine_intelligence }
+	}
+	possible = {
+		civics = {
+			NOT = {
+				value = civic_machine_catalytic_processing
+			}
+		}
+	}
+	random_weight = {
+		base = @civic_uncommon_random_weight
+	}
+	ai_weight = { 
+		base = 1
+		modifier = {
+			factor = @ai_civic_personality_match_factor
+			OR = {
+				has_ai_personality = exterminators
+			}
+		}
+	}
+}
+civic_machine_cult = {
+	potential = {
+		authority = { value = auth_machine_intelligence }
+	}
+	random_weight = { base =  @civic_default_random_weight }
+	ai_weight = { 
+		base = @ai_civic_default_base_weight 
+		modifier = {
+			factor = @ai_civic_personality_match_factor
+				has_civic = civic_machine_servitor
+		}
+		modifier = {
+			
+		}
+	}
+	modifier = {
+		country_edict_fund_add = 50
+		country_edict_fund_mult = 0.1
+	}
+}
+civic_machine_despoilers = {
+	playable = {
+		host_has_dlc = "Apocalypse"
+	}
+	ai_playable = {
+		host_has_dlc = "Apocalypse"
+	}
+	potential = { authority = { value = auth_machine_intelligence } }
+	possible = {
+		civics = {
+			NOT = { value = civic_machine_terminator }
+		}
+	}
+	modification = no
+	modifier = {
+		starbase_shipyard_build_cost_mult = -0.10
+	}
+	random_weight = {
+		base = @civic_uncommon_random_weight
+		modifier = {
+			factor = 0
+			NOT = { host_has_dlc = "Apocalypse" }
+		}
+		modifier = {
+			# civic has no effect after galaxy generation, disable for random generation
+			factor = 0
+			has_global_flag = game_started
+		}
+	}
+	description = "civic_tooltip_barbaric_despoilers_effects"
+	swap_type = {
+		description = "civic_tooltip_barbaric_despoilers_effects"
+		trigger = {
+			host_has_dlc = "Overlord"
+		}
+		modifier = {
+			country_enclave_capacity_add = 1
+		}
 	}
 }
