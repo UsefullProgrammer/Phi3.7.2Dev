@@ -640,7 +640,7 @@ wg_plunder = {
 			#value:pop_size_fifty pop * 50
 			#value:pop_size_twenty pop * 20
 			#value:pop_size_decimal pop / 10 round down
-			
+			custom_tooltip = wg_phi_plunder_accept_them
 			custom_tooltip = wg_phi_plunder_accept_us
 			hidden_effect = {
 				add_resource = { energy = 1 mult = from.value:pop_size_fifty } 

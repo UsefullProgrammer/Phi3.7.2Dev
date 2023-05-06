@@ -215,11 +215,11 @@ Fix vassali rilasciati da franchising ora hanno bonus 4 pop
 Bilanciamento:
 Sussidiarie non possono più avere come agrement espansione regolata (dava troppa influenza al padrone)
 
-[h2][b]1.2 Robot , optimization & Minerals[/h2][/b]
+[h2][b]1.2 Robot , optimization & Minerals[/b][/h2]
 [b]Gestait[/b]
 Ora le capital dei robot hanno un coordinator al posto di un maintance drone.
-Uplink di livello 2 e 3 non costano più cristal mentre simulation center ne puoi fare solo uno e costa crystal
-Fix bug in sumulation center livello 3 che dava meno bonus del livello 2 (0.15 contro 0.25 e ho messo 0.4)
+Uplink di livello 2 e 3 non costano più cristal nell'upgrade mentre simulation center ne puoi fare solo uno e costa crystal nell'upgrade
+Fix bug in sumulation center livello 3 che dava meno bonus del livello 2 (0.15 (contro 0.25 del livello prima ) e ho messo 0.4)
 Deviant experiments ora da +75% unity invece di 50%
 [b]Release client:[/b]
 -Release client state costa un pò di influenza e meno di unity
@@ -235,10 +235,10 @@ I vassali rilasciati da franchising non hanno più civic_fanatic_purifiers come 
 Explotation: ora la ricompensa non è tramite if ma è tramite script dinamici, ogni pop da al vincitore energia e minarli * 50 mentre il resto * 20 (nella statica era *25)
 Explotation ora c'è l'hanno anche le gestait, e in base al tipo gstait da diverse risorse e modificatori.
 [b]Border Gore[/b]
-Ora border gore comprende whormhole (comunque passarci le navi fa male).
+Ora border gore comprende wormhole (comunque passarci le navi fa male).
 Ottimizzato codice border gore.
 [b]Claim[/b]
-Ora puoi claimare i sistemi adiacenti collegati tramite whormhole (comunque passarci le navi fa male)
+Ora puoi claimare i sistemi adiacenti collegati tramite wormhole (comunque passarci le navi fa male)
 Ottimizzato codice can claim
 [b]Traits[/b]
 Il tratto industriouso è stato aumentato da 20% a 25%
@@ -254,7 +254,7 @@ Più grande è la flotta più è probabile scoppi la war in heaven in factor = 4
 World in loop difficoltà settata a 10
 Fixato chance messa a 0 di data corrupt se pianeta ha luna e/o sotto colonizzazione
 [b]Bilanciametno[/b]
-Fix problema con minatori, poichè minano solo 4 minerals ora le tech tech mining danno +0.3 invece di 0.2 in maniera tale che in late game i minerali sono scavati similmente come le altre risorse basi.
+Fix problema con minatori, poichè minano solo 4 minerals ora le tech tech mining danno +30% invece di 20% in maniera tale che in late game i minerali sono scavati similmente come le altre risorse basi.
 Frequenza con cui un accordo vassalizzazione può essere modificato cambiato da 60 mesi a 30 mesi
 [b]Altro[/b]
 Messo localization in tutte le lingue, integrato lingua italiana.

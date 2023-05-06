@@ -514,7 +514,7 @@ building_supercomputer = {
 	}
 }
 
-building_archaeostudies_faculty = {
+building_earchaostudies_faculty = {
 	base_buildtime = @b2_time
 
 	category = research

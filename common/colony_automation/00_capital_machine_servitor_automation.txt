@@ -26,16 +26,16 @@ automate_capital_machine_servitor_planet = {
 				num_buildings = { type = building_organic_sanctuary value = 0 }
 			}
 		}
-		5 = {
+		7 = {
 			building = building_physics_lab_1
 			available = {
-				num_buildings = { type = building_physics_lab_1 value < 4 }
+				num_buildings = { type = building_physics_lab_1 value < 3 }
 			}
 		}		
-		4 = {
+		6 = {
 			building = building_engineering_lab_1
 			available = {
-				num_buildings = { type = building_engineering_lab_1 value < 4 }
+				num_buildings = { type = building_engineering_lab_1 value < 34 }
 			}
 		}
 
@@ -43,7 +43,7 @@ automate_capital_machine_servitor_planet = {
 			building = building_foundry_1
 		}
 
-		4 = {
+		3 = {
 			building = building_simulation_1
 		}
 		7 = {

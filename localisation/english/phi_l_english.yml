@@ -53,15 +53,15 @@ casus_belli_cb_phi_survive: "Survive"
 casus_belli_cb_phi_subjugation: "Subjugation"
 
 
-wg_phi_plunder_accept_them: "§Y[From.GetName]§! is raided, reducing their §YMineral§!, §YEnergy§! and §YAlloys§! production for §Y10§! years"
-wg_phi_plunder_accept_them_hm: "§Y[From.GetName]§! is raided, reducing their §YMineral§!, §YEnergy§!, §YFood§! and §YAlloys§! production for §Y10§! years"
-wg_phi_plunder_accept_them_as: "§Y[From.GetName]§! is raided, reducing their §YMineral§!, §YEnergy§! adnd §YAlloys§! production and pop have reduction happines for §Y10§! years"
-wg_phi_plunder_accept_us:0 "§Y[Root.GetName]§! gains for every pop of §Y[From.GetName]§! : \n§G+50§! £energy£\n§G+20§! £alloys£, £minerals£ £unity£, £physics_research£, £society_research£, £engineering_research£ \n\n§Y10%§! random pop will be §Rabducted§!"
-wg_phi_plunder_accept_us_hiveMind:0 "§Y[Root.GetName]§! gains for every pop of §Y[From.GetName]§! :\n§G+50§! £food£, £minerals£\n§G+20§! £energy£, £alloys£, £unity£, £physics_research£, £society_research£, £engineering_research£ \n\n§Y5%§! random pop will be §Rkilled§!"
+wg_phi_plunder_accept_them: "Involves a raid on §Y[From.GetName]§! , reducing their §YMineral§!, §YEnergy§! and §YAlloys§! production for §Y10§! years"
+wg_phi_plunder_accept_them_hm: "Involves a raid on  §Y[From.GetName]§! , reducing their §YMineral§!, §YEnergy§!, §YFood§! and §YAlloys§! production for §Y10§! years"
+wg_phi_plunder_accept_them_as: "Involves a raid on §Y[From.GetName]§! , reducing their §YMineral§!, §YEnergy§! adnd §YAlloys§! production and pop have reduction happines for §Y10§! years"
+wg_phi_plunder_accept_us:0 "§Y[Root.GetName]§! gains for every pop of §Y[From.GetName]§! : \n§G+50§! £energy£\n§G+20§! £alloys£, £minerals£ £unity£, £physics_research£, £society_research£, £engineering_research£ \n§Y10%§! random pop will be §Rabducted§!"
+wg_phi_plunder_accept_us_hiveMind:0 "§Y[Root.GetName]§! gains for every pop of §Y[From.GetName]§! :\n§G+50§! £food£, £minerals£\n§G+20§! £energy£, £alloys£, £unity£, £physics_research£, £society_research£, £engineering_research£ \n§Y5%§! random pop will be §Rkilled§!"
 
-wg_phi_plunder_accept_us_machine:0 "§Y[Root.GetName]§! gains for every pop of §Y[From.GetName]§! :\n§G+50§! £energy£, £minerals£, £alloys£\n§G+20§! £unity£, £society_research£ \n\n§Y5%§! random pop will be §Rkilled§!"
+wg_phi_plunder_accept_us_machine:0 "§Y[Root.GetName]§! gains for every pop of §Y[From.GetName]§! :\n§G+50§! £energy£, £minerals£, £alloys£\n§G+20§! £unity£, £society_research£ \n§Y5%§! random pop will be §Rkilled§!"
 
-wg_phi_plunder_accept_us_assimilator:0 "§Y[Root.GetName]§! gains for every pop of §Y[From.GetName]§! :\n§G+50§! £energy£, £minerals, £alloys£\n§G+20§! £unity£, £physics_research£, £society_research£, £engineering_research£ \n\n§Y10%§! random pop will be §Yabducted§! and will §RASSIMILATE"
+wg_phi_plunder_accept_us_assimilator:0 "§Y[Root.GetName]§! gains for every pop of §Y[From.GetName]§! :\n§G+50§! £energy£, £minerals, £alloys£\n§G+20§! £unity£, £physics_research£, £society_research£, £engineering_research£ \n§Y10%§! random pop will be §Yabducted§! and will §RASSIMILATE"
 
 wg_phi_plunder_accept_us_1:0 "§Y[Root.GetName]§! gains:\n§G+500§! £energy£, £minerals£\n§G+250§! £alloys£, £unity£, £physics_research£, £society_research£, £engineering_research£"
 wg_phi_plunder_accept_us_2:0 "§Y[Root.GetName]§! gains:\n§G+1000§! £energy£, £minerals£\n§G+500§! £alloys£, £unity£, £physics_research£, £society_research£, £engineering_research£\n§G1§! random pop will be abducted"
@@ -971,3 +971,7 @@ mod_planet_building_engineering_lab_1_build_speed_mult:0 "Engineering Lab Build 
 
 civic_hive_despoilers_desc:0 "$civic_barbaric_despoilers_desc$"
 civic_machine_despoilers_desc:0 "$civic_barbaric_despoilers_desc$"
+
+edict_archeologist_spedition: "Archeologist spedition"
+edict_archeologist_spedition_desc: "By starting an archaeological spedition, we could find some artifacts within our empire."
+phi_pm_atmospheric_pollution: "Atmospheric pollution"

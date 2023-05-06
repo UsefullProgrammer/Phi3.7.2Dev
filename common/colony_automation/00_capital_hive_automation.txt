@@ -25,16 +25,16 @@ automate_capital_hive_planet = {
 			building = building_supercomputer
 		}
 
-		3 = {
+		6 = {
 			building = building_physics_lab_1
 			available = {
-				num_buildings = { type = building_physics_lab_1 value < 4 }
+				num_buildings = { type = building_physics_lab_1 value < 3 }
 			}
 		}		
 		5 = {
 			building = building_engineering_lab_1
 			available = {
-				num_buildings = { type = building_engineering_lab_1 value < 4 }
+				num_buildings = { type = building_engineering_lab_1 value < 3 }
 			}
 		}
 	}

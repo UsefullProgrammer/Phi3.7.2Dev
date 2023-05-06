@@ -973,3 +973,7 @@ mod_planet_building_engineering_lab_1_build_speed_mult:0 "Prędkość budowy lab
 
 civic_hive_despoilers_desc:0 "$civic_barbaric_despoilers_desc$"
 civic_machine_despoilers_desc:0 "$civic_barbaric_despoilers_desc$"
+
+edict_archeologist_spedition: "Wyprawa archeologiczna"
+edict_archeologist_spedition_desc: "Rozpoczynając wyprawę archeologiczną, moglibyśmy znaleźć artefakty w obrębie naszego imperium."
+phi_pm_atmospheric_pollution: "zanieczyszczenie atmosferyczne"

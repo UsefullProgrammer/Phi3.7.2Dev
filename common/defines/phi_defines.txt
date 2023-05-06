@@ -808,7 +808,7 @@
 		FLEET_LEASE_DAYS_MAXIMUM = 36000	# A fleet can be leased for this number of days maximum
 		FLEET_LEASE_DAYS_DEFAULT = 3600		# A fleet can be leased for this number of days by default
 
-		AGREEMENT_CHANGE_COOLDOWN_MONTHS 			= 60	# How often an agreement can be changed in months
+		AGREEMENT_CHANGE_COOLDOWN_MONTHS 			= 30	# How often an agreement can be changed in months
 		AGREEMENT_LOYALTY_DELTA_MULT				= 5		# Used in Influence Cost calculations
 		AGREEMENT_PROPOSE_INFLUENCE_COST 			= 50	# Base cost of agreement proposal. + |Loyalty Delta| * AGREEMENT_LOYALTY_DELTA_MULT between old and new agreements
 		AGREEMENT_DENY_AS_SUBJECT_INFLUENCE_COST	= 50	# + |Loyalty Delta| * AGREEMENT_LOYALTY_DELTA_MULT between old and new agreements
