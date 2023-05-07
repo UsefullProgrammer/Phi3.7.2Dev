@@ -866,9 +866,8 @@ colonizer = {
 			}
 			OR = {
 				is_ai = no
-				num_owned_planets < 2
 				AND = {
-					empire_sprawl_over_cap < -150
+					empire_sprawl_over_cap < -35
 					NOT = {
 						any_owned_planet = {
 							num_pops < 25
@@ -935,9 +934,8 @@ sponsored_colonizer = {
 		}
 		OR = {
 			is_ai = no
-			num_owned_planets < 2
 			AND = {
-				empire_sprawl_over_cap < -150
+				empire_sprawl_over_cap < -35
 				NOT = {
 					any_owned_planet = {
 						num_pops < 25
@@ -1008,9 +1006,8 @@ lithoid_colonizer = {
 		has_origin = origin_lithoid
 		OR = {
 			is_ai = no
-			num_owned_planets < 2
 			AND = {
-				empire_sprawl_over_cap < -150
+				empire_sprawl_over_cap < -35
 				NOT = {
 					any_owned_planet = {
 						num_pops < 25

@@ -149,7 +149,8 @@ tradition_domination_desc:0 "If we do not impose our will on others, they will i
  ADMIN_CAP_TOTAL_2:0 "$VALUE|Y$"
  ADMIN_CAP_VALUE_2:0 "$VALUE|Y$"
 #ADMIN_CAP_VALUE:0 "$MOD_COUNTRY_ADMIN_CAP_ADD$: $VALUE|Y$"($ADMIN_CAP_VALUE_2$)
- EMPIRE_SIZE_NO_EFFECTS:4 "While §Y$EMPIRE_SIZE$§! is at or below §Y$EMPIRE_SIZE_TOTAL_2$§! + §YAdministration Capacity§! , no other costs are being modified."
+#empire_sprawl_over_cap_g:0 "From $NUM|Y$ $empire_sprawl_over_cap$: $VALUE$
+ EMPIRE_SIZE_NO_EFFECTS:4 "While §Y$EMPIRE_SIZE$§! is at or below §Y$EMPIRE_SIZE_TOTAL_2$§! + §YAdministration Capacity§! , no other costs are being modified. $EMPIRE_SPRAWL_OVER_CAP$"
  BuildingS_total:0 "$MOD_PLANET_MAX_BUILDINGS_ADD$: $VALUE|Y$"
 
  #ascension perk
@@ -166,3 +167,4 @@ EDICT_DESC:8 "\n§E§HEmpire Edicts§! are divided into edicts and campaigns, an
  civic_tooltip_machine_servitor_effects:12 "Start the game with §Y5§! organic £pop£ Pops with £job_bio_trophy£ §Y$citizenship_organic_trophy$§! citizenship and §Y$living_standard_organic_trophy$§! living standard\nCan construct £building£ §Y$building_organic_sanctuary$§! Buildings that allow Bio-Trophies to produce £unity£ §YUnity§! and £society_research£ §YSociety research§! instead of regular Machine Empire buildings such as the £building£ §Y$building_uplink_node$§!\n\nGrants access to the £building£ §Y$holding_organic_sanctuary$§! Holding"
 
 tr_synchronicity_machine_finish_desc:3 "§HUnlocks Edict:§! $edict_industrial_maintenance$.\n$MOD_PLANETARY_ASCENSION_EFFECT_MULT$: §G+25%§!\nAscension Perks Unlocked: §G+1§!\nAutomatic Resettlement Chance: §G+30%§!"
+

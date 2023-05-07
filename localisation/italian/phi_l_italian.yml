@@ -44,6 +44,8 @@ opinion_hegemon: "Federazione xenofoba"
 opinion_potential_ally: "Alleato potenziale (ritardatario)"
 opinion_our_bbeg: "Il nostro BBEG"
 opinion_bbeg: "Grande cattivo malvagio"
+opinion_bbeg_vassals: "Vassallo del BBEG"
+opinion_our_bbeg_overlord: "Il nostro signore BBEG"
 
 #Casus Belli & War Goals
 war_goal_wg_phi_survive: "Sopravvivi"
@@ -985,3 +987,4 @@ civic_machine_despoilers_desc:0 "$civic_barbaric_despoilers_desc$"
 edict_archeologist_spedition: "Spedizione archeologica"
 edict_archeologist_spedition_desc: "Avviando una spedizione archeologica, potremmo scoprire artefatti all'interno del nostro impero."
 phi_pm_atmospheric_pollution: "Inquinamento atmosferico"
+mod_habitat_pop_job_trade_mult: "Commercio $mod_habitat_jobs_produces_mult$"

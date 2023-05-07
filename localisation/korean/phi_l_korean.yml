@@ -45,6 +45,8 @@ opinion_hegemon: "Xenophobe Federation"
 opinion_potential_ally: "Potential Ally (lagger)"
 opinion_our_bbeg: "Our BBEG"
 opinion_bbeg: "Big Bad Evil Guy"
+opinion_bbeg_vassals: "BBEG의 신하"
+opinion_our_bbeg_overlord: "우리의 오버로드 BBEG"
 
 #Casus Belli & War Goals
 war_goal_wg_phi_survive: "Survive"
@@ -977,3 +979,4 @@ civic_machine_despoilers_desc:0 "$civic_barbaric_despoilers_desc$"
 edict_archeologist_spedition: "고고학 조사"
 edict_archeologist_spedition_desc: "고고학 조사를 시작하면 우리 제국 내에서 어떤 유물을 발견할 수 있습니다."
 phi_pm_atmospheric_pollution: "대기 오염"
+mod_habitat_pop_job_trade_mult: "$mod_habitat_jobs_produces_mult$의 거래"

@@ -35,6 +35,7 @@ opinion_potential_ally = {
 		from = {
 			has_country_flag = phi_lagger
 		}
+		from = { is_subject = no }
 		is_subject = no
 	}
 
@@ -52,6 +53,24 @@ opinion_our_bbeg = {
 				is_in_federation_with = from
 				federation = { NOT = { has_federation_type = xenophobe_federation } }
 				OR = {
+                    has_country_flag = phi_bbeg
+                    from = { has_country_flag = phi_bbeg }
+                }
+			}
+		}
+	}
+
+	opinion = {
+		base = 500
+	}
+	
+	unique = yes
+}
+opinion_our_bbeg_overlord = {
+	trigger = {
+		OR = {
+			AND = {
+				OR = {
 					has_country_flag = phi_bbeg
 					from = { has_country_flag = phi_bbeg }
 				}
@@ -64,11 +83,33 @@ opinion_our_bbeg = {
 	}
 
 	opinion = {
-		base = 500
+		base = 50
 	}
 	
 	unique = yes
 }
+# opinion_bbeg_vassals = {
+# 	trigger = {
+# 		OR = {
+# 			AND = { 
+# 				from = {
+# 					is_subject = yes
+# 					any_country = {
+# 							limit = { has_country_flag = phi_bbeg } 
+						
+# 						is_overlord_to = FROM
+# 					}
+# 				}
+# 			}
+# 		}
+# 	}
+
+# 	opinion = {
+# 		base = -200
+# 	}
+	
+# 	unique = yes
+# }
 
 opinion_bbeg = {
 	trigger = {

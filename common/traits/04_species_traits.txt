@@ -1384,6 +1384,7 @@ trait_void_dweller_1 = {
 	modifier = {
 		habitat_jobs_produces_mult = 0.25
 		non_artificial_planet_jobs_produces_mult = -0.15
+		pop_job_trade_mult = 0.1
 	}
 	ai_weight = {
 		weight = 0

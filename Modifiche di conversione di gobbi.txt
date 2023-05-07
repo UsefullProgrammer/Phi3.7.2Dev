@@ -225,15 +225,18 @@ Deviant experiments ora da +75% unity invece di 50%
 -Release client state costa un pò di influenza e meno di unity
 [b]Origini:[/b]
 Overlord vassal non ha più le AI
+Void Dweller più forti che mai ora hanno anche il bonus del trade (10%)
 [b]Tradition:[/b]
 Ora per faith in science devi avere database uplink e polytechnic education
 [b]Civiche[/b]
 2 nuove civiche epiche per i robot!
 Sussidiarie non possono più avere come agrement espansione regolata.
-I vassali rilasciati da franchising hanno modificatore per 5 anni di newly subjugated loyalty
+I vassali rilasciati da franchising hanno modificatore per 5 anni di newly subjugated loyalty.
 I vassali rilasciati da franchising non hanno più civic_fanatic_purifiers come civica.
 Explotation: ora la ricompensa non è tramite if ma è tramite script dinamici, ogni pop da al vincitore energia e minarli * 50 mentre il resto * 20 (nella statica era *25)
 Explotation ora c'è l'hanno anche le gestait, e in base al tipo gstait da diverse risorse e modificatori.
+Explotation per i necrofagi gestait ti ruba la pop invece di uccidertela.
+Se sei un bbeg overlord ora dai un bonus di +50 al vassalo invece di +500.
 [b]Border Gore[/b]
 Ora border gore comprende wormhole (comunque passarci le navi fa male).
 Ottimizzato codice border gore.
@@ -262,3 +265,5 @@ Messo localization in tutte le lingue, integrato lingua italiana.
 [b]Automations[/b]
 Rifatto buona parte degli automatismi
 Aggiunto per gestire automatismi nuovi 2 tipologie di pianeti Pianeta ricerca fisica e pianeta ricerca ingegneria
+[b]bugs[/b]
+La decisione che aumenta il trade costava 100 unity, corretta a 1000

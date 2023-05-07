@@ -45,6 +45,8 @@ opinion_hegemon: "Xenophobe Federation"
 opinion_potential_ally: "Potential Ally (lagger)"
 opinion_our_bbeg: "Our BBEG"
 opinion_bbeg: "Big Bad Evil Guy"
+opinion_bbeg_vassals: "Vassal of BBEG"
+opinion_our_bbeg_overlord: "Our overlord BBEG"
 
 #Casus Belli & War Goals
 war_goal_wg_phi_survive: "Survive"
@@ -975,3 +977,4 @@ civic_machine_despoilers_desc:0 "$civic_barbaric_despoilers_desc$"
 edict_archeologist_spedition: "Archeologist spedition"
 edict_archeologist_spedition_desc: "By starting an archaeological spedition, we could find some artifacts within our empire."
 phi_pm_atmospheric_pollution: "Atmospheric pollution"
+mod_habitat_pop_job_trade_mult: "Trade $mod_habitat_jobs_produces_mult$"

@@ -45,6 +45,8 @@ opinion_hegemon: "Xenophobe Federation"
 opinion_potential_ally: "Potential Ally (lagger)"
 opinion_our_bbeg: "Our BBEG"
 opinion_bbeg: "Big Bad Evil Guy"
+opinion_bbeg_vassals: "BBEG的 servo "
+opinion_our_bbeg_overlord: "我们的 BBEG 上主"
 
 #Casus Belli & War Goals
 war_goal_wg_phi_survive: "Survive"
@@ -976,3 +978,4 @@ civic_machine_despoilers_desc:0 "$civic_barbaric_despoilers_desc$"
 edict_archeologist_spedition: "考古学考察"
 edict_archeologist_spedition_desc: "开展考古学考察,我们可能在帝国内发现一些文物。"
 phi_pm_atmospheric_pollution: "大气污染"
+mod_habitat_pop_job_trade_mult: "$mod_habitat_jobs_produces_mult$的贸易"

@@ -635,7 +635,10 @@ wg_plunder = {
 	on_accept = {
 		if = {
 			limit = {
-				is_gestalt = no
+				OR = {
+					 is_gestalt = no
+					 has_origin = origin_necrophage
+				}
 			}
 			#value:pop_size_fifty pop * 50
 			#value:pop_size_twenty pop * 20

@@ -39,12 +39,13 @@ testare crisi/finali
 Provare ascension planet OK
 controllare efficency burocracy OK
 Rifare dittatura perchè adesso è inutile. OK
+Provare in despoiler ha non fare hidden effet. Failed
 Da fare
 
 
 tr_politics_extraordinary_powers: raddoppia costo rifiuto negozazione
 
-Provare in despoiler ha non fare hidden effet.
+
 
 [*][b]protectorates[/b] give a bonus [b]+200 society research[/b] per month to their overlord
 

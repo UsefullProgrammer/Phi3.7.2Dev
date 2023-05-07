@@ -346,7 +346,7 @@ country_event = {
 		OR = {
 			AND = {
 				has_resource = { type = energy amount > 500 }
-				has_resource = { type = influence amount > 100 }
+				has_resource = { type = unity amount > 10 }
 			}
 			has_civic = civic_corvee_system
 		}
@@ -358,7 +358,7 @@ country_event = {
 				OR = {
 					AND = {
 						has_resource = { type = energy amount > 500 }
-						has_resource = { type = influence amount > 100 }
+						has_resource = { type = unity amount > 10 }
 					}
 					has_civic = civic_corvee_system
 				}
@@ -384,7 +384,7 @@ country_event = {
 			if = {
 				limit = { NOT = { has_civic = civic_corvee_system } }
 				add_resource = { energy = -100 }
-				add_resource = { influence = -10 }
+				add_resource = { unity = -10 }
 			}
 		}
 	}
@@ -414,7 +414,7 @@ country_event = {
 		OR = {
 			AND = {
 				has_resource = { type = energy amount > 500 }
-				has_resource = { type = influence amount > 300 }
+				has_resource = { type = unity amount > 300 }
 			}
 			has_civic = civic_corvee_system
 		}
@@ -426,7 +426,7 @@ country_event = {
 				OR = {
 					AND = {
 						has_resource = { type = energy amount > 500 }
-						has_resource = { type = influence amount > 300 }
+						has_resource = { type = unity amount > 300 }
 					}
 					has_civic = civic_corvee_system
 				}
@@ -460,7 +460,7 @@ country_event = {
 			if = {
 				limit = { NOT = { has_civic = civic_corvee_system } }
 				add_resource = { energy = -100 }
-				add_resource = { influence = -10 }
+				add_resource = { unity = -10 }
 			}
 		}
 	}

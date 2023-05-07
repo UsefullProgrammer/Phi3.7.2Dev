@@ -138,13 +138,13 @@ decision_end_phi_planet_resource_rationing = {
 			trigger = {
 				owner = { is_gestalt = no }
 			}
-			unity = 100
+			unity = 1000
 		}
 		cost = {
 			trigger = {
 				owner = { is_gestalt = yes }
 			}
-			influence = 10
+			influence = 100
 		}
 	}
 
