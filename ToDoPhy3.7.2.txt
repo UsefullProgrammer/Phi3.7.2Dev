@@ -40,22 +40,27 @@ Provare ascension planet OK
 controllare efficency burocracy OK
 Rifare dittatura perchè adesso è inutile. OK
 Provare in despoiler ha non fare hidden effet. Failed
+[*][b]protectorates[/b] give a bonus [b]+200 society research[/b] per month to their overlord NO
 Da fare
 
 
-tr_politics_extraordinary_powers: raddoppia costo rifiuto negozazione
 
 
 
-[*][b]protectorates[/b] give a bonus [b]+200 society research[/b] per month to their overlord
+Cambiare gateway, fare che basta costruirlo la prima volta o comunque diminuire costo e tempi
 
+controllare colonie
+Galaxy size diverse
 errores:
-galaxy size diverse
+[21:21:54][trigger.cpp:465]: invalid scope for trigger. got [country], expected {galactic_object}.  file: common/game_rules/00_rules.txt line: 150
+Fare dopo:
+
+pop_assembly Implant livello 3 con tech rara.
 Dominion bonus influenza da 0.5 a 1
 risolvere civic_tooltip_exalted_priesthood_effects
 Indagare su origin.57
 in 00_starbase_types for ia da migliorare per le orbital.
-
+tr_politics_extraordinary_powers: raddoppia costo rifiuto negozazione
 
 events/phi_ai.txt
 Intendi così?

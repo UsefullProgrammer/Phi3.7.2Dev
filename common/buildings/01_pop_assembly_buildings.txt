@@ -407,11 +407,11 @@ building_machine_assembly_complex = {
 		category = planet_buildings
 		cost = {
 			minerals = @b3_minerals
-			rare_crystals = @b3_rare_cost
+			rare_crystals = @b2_rare_cost
 		}
 		upkeep = {
 			energy = @b3_upkeep
-			rare_crystals = @b3_rare_upkeep
+			rare_crystals = @b2_rare_upkeep
 		}
 	}
 

@@ -864,17 +864,6 @@ colonizer = {
 				has_technology = tech_jump_drive_1
 				has_technology = tech_psi_jump_drive_1
 			}
-			OR = {
-				is_ai = no
-				AND = {
-					empire_sprawl_over_cap < -35
-					NOT = {
-						any_owned_planet = {
-							num_pops < 25
-						}
-					}
-				}
-			}
 		}
 	}
 		ai_ship_data = {
@@ -931,17 +920,6 @@ sponsored_colonizer = {
 		OR = {
 			has_civic = civic_corporate_dominion
 			has_civic = civic_private_prospectors
-		}
-		OR = {
-			is_ai = no
-			AND = {
-				empire_sprawl_over_cap < -35
-				NOT = {
-					any_owned_planet = {
-						num_pops < 25
-					}
-				}
-			}
 		}
 		OR = {
 			has_technology = tech_hyper_drive_1
@@ -1004,17 +982,6 @@ lithoid_colonizer = {
 
 	potential_country = {
 		has_origin = origin_lithoid
-		OR = {
-			is_ai = no
-			AND = {
-				empire_sprawl_over_cap < -35
-				NOT = {
-					any_owned_planet = {
-						num_pops < 25
-					}
-				}
-			}
-		}
 		OR = {
 			has_technology = tech_hyper_drive_1
 			has_technology = tech_hyper_drive_2
