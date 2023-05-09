@@ -981,3 +981,12 @@ edict_archeologist_spedition_desc: "En lançant une expédition archéologique, 
 
 phi_pm_atmospheric_pollution: "Pollution atmosphérique"
 mod_habitat_pop_job_trade_mult: "Commerce $mod_habitat_jobs_produces_mult$"
+d_small_research: "petite recherche"
+d_medium_research: "recherche moyenne"
+
+building_machine_assembly_complex_3:0 "Complexe d'assemblage de machines Giga"
+building_machine_assembly_complex_3_desc:0 "Une usine de montage avancée de taille gigantesque où de nouvelles unités sont construites."
+tech_mega_assembly_Mk2:0 "Systèmes d'assemblage Giga"
+tech_mega_assembly_Mk2_desc:0 "Des modèles avancés d'assemblage gigantesque nous permettent d'augmenter considérablement la production de nouvelles unités."
+edict_greater_than_ourselves_light:0 "Réinstallation libre"
+edict_greater_than_ourselves_light_desc:1 "Encourage la réinstallation volontaire des populations sans emploi sur des planètes appropriées avec des emplois et un logement au sein de notre empire."

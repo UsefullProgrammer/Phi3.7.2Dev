@@ -250,6 +250,7 @@ Toxoide bonus prod minatori aumentato
 Cyborg power drills bonus prod minatori aumentato
 [b]Edicts[/b]
 Aggiunto editto spedizioni archeologiche un editto che ti permette di fare minor artifact
+Nuovo editto sbloccabile tramite space trading permette di aumentare la probabilità di resettle dei disoccupati # da testare
 [b]Sublimation[/b]
 Più grande è la flotta più è probabile scoppi la war in heaven in factor = 4 flotta > 70000 < 9000 factor = 5 >= 90000 < 150000 factor = 6 >= 150000
 
@@ -267,3 +268,11 @@ Rifatto buona parte degli automatismi
 Aggiunto per gestire automatismi nuovi 2 tipologie di pianeti Pianeta ricerca fisica e pianeta ricerca ingegneria
 [b]bugs[/b]
 La decisione che aumenta il trade costava 100 unity, corretta a 1000
+[b]size galaxy[/b]
+Aggiunto 2 size alla galassia per 12 giocatori e per 16-20 giocatori
+[b]Megastructure[/b]
+Gateway ci mettono molto meno a costruirsi e costano molto meno ma hanno upkeep a energy = 10
+
+Da testare
+
+Robot hanno un potenziamento ulteriore al pop assembly sbloccabile tramite una tecnologia rara "Giga-Assembly Systems" il building gli da 5 roboticisti.

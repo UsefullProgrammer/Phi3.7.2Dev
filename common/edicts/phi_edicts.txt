@@ -1,0 +1,36 @@
+@Edict0Cost = 7
+@Edict1Cost = 10
+@Edict2Cost = 20
+@Edict3Cost = 30
+@EdictSpecialCost = 1
+
+@EdictPerpetual = -1
+
+greater_than_ourselves_light = {
+	length = @EdictPerpetual
+	icon = "GFX_edict_type_policy"
+
+	resources = {
+		category = edicts
+		upkeep = {
+			unity = @Edict0Cost
+			multiplier = value:edict_size_effect
+		}
+	}
+
+	modifier = {
+		planet_resettlement_unemployed_mult = 0.5
+	}
+
+	potential = {
+		NOR = {
+            has_ethic = ethic_authoritarian
+            has_ethic = ethic_fanatic_authoritarian
+            is_gestalt = yes
+        }
+	}
+    prerequisites = { "tech_space_trading"}
+	ai_weight = {
+		weight = @EdictLowPrio
+	}
+}

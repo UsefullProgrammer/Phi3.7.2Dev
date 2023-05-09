@@ -697,6 +697,14 @@ wg_plunder = {
 					count = from.value:pop_size_ventesimal_floor
 					from = {
 						random_owned_pop = {
+							root = {
+								random_owned_planet = {
+									limit = { is_capital = yes }
+									create_pop = {
+										species = prevprev
+									}
+								}
+							}
 							kill_pop = yes
 						}
 					}
@@ -722,9 +730,17 @@ wg_plunder = {
 				add_resource = { society_research = 1 mult = from.value:pop_size_twenty } 
 				from = { add_modifier = { modifier = raided_GM days = 3600 } }
 				while = {
-					count = value:pop_size_ventesimal_floor
+					count = from.value:pop_size_ventesimal_floor
 					from = {
 						random_owned_pop = {
+							root = {
+								random_owned_planet = {
+									limit = { is_capital = yes }
+									create_pop = {
+										species = prevprev
+									}
+								}
+							}
 							kill_pop = yes
 						}
 					}
