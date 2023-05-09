@@ -8,9 +8,9 @@
 #	random_weight = { base = 5 }				# scriptable weight for randomizing a civic
 #												# Note: If omitted, a default weight of 1 is used
 #												# Also note: after game start, AI selection of new civics uses the below weight instead
-#	
+#
 #	ai_weight = { base = 5 }					# scriptable weight for AI picking civics in-game (when unlocking a new slot).
-#												# Note: If omitted, a default weight of 1 is used. Not needed when "modification = no" 
+#												# Note: If omitted, a default weight of 1 is used. Not needed when "modification = no"
 #
 #	modifier = {}								# modifier added to the country if the civic is selected and valid
 #	can_build_ruler_ship = yes / no				# default: no
@@ -54,8 +54,8 @@ civic_corvee_system = {
 		}
 	}
 	random_weight = { base = @civic_default_random_weight }
-	ai_weight = { 
-		base = @ai_civic_default_base_weight 
+	ai_weight = {
+		base = @ai_civic_default_base_weight
 		modifier = {
 			factor = @ai_civic_personality_match_factor
 			OR = {
@@ -71,7 +71,7 @@ civic_corvee_system = {
 				has_ai_personality = democratic_crusaders
 				has_ai_personality = slaving_despots
 			}
-		}	
+		}
 	}
 	modifier = {
 		pop_resettlement_cost_mult = -1
@@ -102,8 +102,8 @@ civic_imperial_cult = {
 		}
 	}
 	random_weight = { base = @civic_default_random_weight }
-	ai_weight = { 
-		base = @ai_civic_default_base_weight 
+	ai_weight = {
+		base = @ai_civic_default_base_weight
 		modifier = {
 			factor = @ai_civic_personality_match_factor
 			OR = {
@@ -121,7 +121,7 @@ civic_imperial_cult = {
 				has_ai_personality = erudite_explorers
 				has_ai_personality = harmonious_hierarchy
 			}
-		}	
+		}
 	}
 	modifier = {
 		country_edict_fund_add = 50
@@ -152,8 +152,8 @@ civic_beacon_of_liberty = {
 		}
 	}
 	random_weight = { base = @civic_default_random_weight }
-	ai_weight = { 
-		base = @ai_civic_default_base_weight 
+	ai_weight = {
+		base = @ai_civic_default_base_weight
 		modifier = {
 			factor = @ai_civic_personality_match_factor
 			OR = {
@@ -218,8 +218,8 @@ civic_exalted_priesthood = {
 		planet_priests_produces_mult = 0.5
 	}
 	random_weight = { base = @civic_default_random_weight }
-	ai_weight = { 
-		base = @ai_civic_default_base_weight 
+	ai_weight = {
+		base = @ai_civic_default_base_weight
 		modifier = {
 			factor = @ai_civic_personality_match_factor
 			OR = {
@@ -249,7 +249,6 @@ civic_exalted_priesthood = {
 }
 
 civic_philosopher_king = {
-	description = "civic_tooltip_philosopher_king_effects"
 	potential = {
 		ethics = { NOT = { value = ethic_gestalt_consciousness } }
 		authority = { NOT = { value = auth_corporate } }
@@ -264,8 +263,8 @@ civic_philosopher_king = {
 		}
 	}
 	random_weight = { base = @civic_default_random_weight }
-	ai_weight = { 
-		base = @ai_civic_default_base_weight 
+	ai_weight = {
+		base = @ai_civic_default_base_weight
 		modifier = {
 			factor = @ai_civic_personality_match_factor
 			OR = {
@@ -291,8 +290,8 @@ civic_philosopher_king = {
 		}
 	}
 	modifier = {
-		ruler_skill_levels = 2
-		species_leader_exp_gain = 1
+		councilor_exp_gain = 0.4
+		negative_traits_country = -1
 	}
 }
 
@@ -311,8 +310,8 @@ civic_meritocracy = {
 		}
 	}
 	random_weight = { base = @civic_default_random_weight }
-	ai_weight = { 
-		base = @ai_civic_default_base_weight 
+	ai_weight = {
+		base = @ai_civic_default_base_weight
 		modifier = {
 			factor = @ai_civic_personality_match_factor
 			OR = {
@@ -338,8 +337,17 @@ civic_meritocracy = {
 		}
 	}
 	modifier = {
-		leader_skill_levels = 1
+		country_leader_cap_add = 1
 		planet_jobs_specialist_produces_mult = 0.075
+	}
+	swap_type = {
+		trigger = {
+			has_paragon_dlc = yes
+		}
+
+		modifier = {
+			leader_trait_selection_options_add = 1
+		}
 	}
 }
 
@@ -371,8 +379,8 @@ civic_citizen_service = {
 		}
 	}
 	random_weight = { base = @civic_default_random_weight }
-	ai_weight = { 
-		base = @ai_civic_default_base_weight 
+	ai_weight = {
+		base = @ai_civic_default_base_weight
 		modifier = {
 			factor = @ai_civic_personality_match_factor
 			OR = {
@@ -434,8 +442,8 @@ civic_technocracy = {
 		num_tech_alternatives_add = 1
 	}
 	random_weight = { base = @civic_default_random_weight }
-	ai_weight = { 
-		base = @ai_civic_default_base_weight 
+	ai_weight = {
+		base = @ai_civic_default_base_weight
 		modifier = {
 			factor = @ai_civic_personality_match_factor
 			OR = {
@@ -466,8 +474,8 @@ civic_feudal_realm = {
 		}
 	}
 	random_weight = { base = @civic_default_random_weight }
-	ai_weight = { 
-		base = @ai_civic_default_base_weight 
+	ai_weight = {
+		base = @ai_civic_default_base_weight
 		modifier = {
 			factor = @ai_civic_personality_match_factor
 			OR = {
@@ -519,8 +527,8 @@ civic_police_state = {
 		planet_telepaths_unity_produces_add = 1
 	}
 	random_weight = { base = @civic_default_random_weight }
-	ai_weight = { 
-		base = @ai_civic_default_base_weight 
+	ai_weight = {
+		base = @ai_civic_default_base_weight
 		modifier = {
 			factor = @ai_civic_personality_match_factor
 			OR = {
@@ -565,8 +573,8 @@ civic_idealistic_foundation = {
 		}
 	}
 	random_weight = { base = @civic_default_random_weight }
-	ai_weight = { 
-		base = @ai_civic_default_base_weight 
+	ai_weight = {
+		base = @ai_civic_default_base_weight
 		modifier = {
 			factor = @ai_civic_personality_match_factor
 			OR = {
@@ -613,8 +621,8 @@ civic_environmentalist = {
 		}
 	}
 	random_weight = { base = @civic_default_random_weight }
-	ai_weight = { 
-		base = @ai_civic_default_base_weight 
+	ai_weight = {
+		base = @ai_civic_default_base_weight
 		modifier = {
 			factor = @ai_civic_personality_match_factor
 			OR = {
@@ -665,8 +673,8 @@ civic_slaver_guilds = {
 		civics = { NOT = { value = civic_pleasure_seekers } }
 	}
 	random_weight = { base = @civic_default_random_weight }
-	ai_weight = { 
-		base = @ai_civic_default_base_weight 
+	ai_weight = {
+		base = @ai_civic_default_base_weight
 		modifier = {
 			factor = @ai_civic_personality_match_factor
 			OR = {
@@ -733,8 +741,8 @@ civic_inwards_perfection = {
 		}
 	}
 	random_weight = { base = 1000 }
-	ai_weight = { 
-		base = @ai_civic_default_base_weight 
+	ai_weight = {
+		base = @ai_civic_default_base_weight
 		modifier = {
 			factor = @ai_civic_personality_match_factor
 			OR = {
@@ -796,8 +804,8 @@ civic_warrior_culture = {
 		}
 	}
 	random_weight = { base = @civic_default_random_weight }
-	ai_weight = { 
-		base = @ai_civic_default_base_weight 
+	ai_weight = {
+		base = @ai_civic_default_base_weight
 		modifier = {
 			factor = @ai_civic_personality_match_factor
 			OR = {
@@ -861,8 +869,8 @@ civic_distinguished_admiralty = {
 		}
 	}
 	random_weight = { base = @civic_default_random_weight }
-	ai_weight = { 
-		base = @ai_civic_default_base_weight 
+	ai_weight = {
+		base = @ai_civic_default_base_weight
 		modifier = {
 			factor = @ai_civic_personality_match_factor
 			OR = {
@@ -892,7 +900,7 @@ civic_distinguished_admiralty = {
 	modifier = {
 		ship_fire_rate_mult = 0.20
 		admiral_skill_levels = 1
-		country_command_limit_add = 50
+		command_limit_add = 50
 	}
 }
 
@@ -916,8 +924,8 @@ civic_free_haven = {
 		}
 	}
 	random_weight = { base = @civic_default_random_weight }
-	ai_weight = { 
-		base = @ai_civic_default_base_weight 
+	ai_weight = {
+		base = @ai_civic_default_base_weight
 		modifier = {
 			factor = @ai_civic_personality_match_factor
 			OR = {
@@ -959,8 +967,8 @@ civic_cutthroat_politics = {
 		authority = { NOT = { value = auth_corporate } }
 	}
 	random_weight = { base = @civic_default_random_weight }
-	ai_weight = { 
-		base = @ai_civic_default_base_weight 
+	ai_weight = {
+		base = @ai_civic_default_base_weight
 		modifier = {
 			factor = @ai_civic_personality_match_factor
 			OR = {
@@ -1023,8 +1031,8 @@ civic_corporate_dominion = {
 			host_has_dlc = "Megacorp"
 		}
 	}
-	ai_weight = { 
-		base = @ai_civic_default_base_weight 
+	ai_weight = {
+		base = @ai_civic_default_base_weight
 		modifier = {
 			factor = @ai_civic_personality_match_factor
 			OR = {
@@ -1087,9 +1095,14 @@ civic_agrarian_idyll = {
 			}
 		}
 	}
+
+	leader_background_job_weight = {
+		"farmer" = 50
+	}
+
 	random_weight = { base = @civic_default_random_weight }
-	ai_weight = { 
-		base = @ai_civic_default_base_weight 
+	ai_weight = {
+		base = @ai_civic_default_base_weight
 		modifier = {
 			factor = @ai_civic_personality_match_factor
 			OR = {
@@ -1139,8 +1152,8 @@ civic_shadow_council = {
 			}
 		}
 	}
-	ai_weight = { 
-		base = @ai_civic_default_base_weight 
+	ai_weight = {
+		base = @ai_civic_default_base_weight
 		modifier = {
 			factor = @ai_civic_personality_match_factor
 			OR = {
@@ -1178,8 +1191,8 @@ civic_mining_guilds = {
 		authority = { NOT = { value = auth_corporate } }
 	}
 	random_weight = { base = @civic_default_random_weight }
-	ai_weight = { 
-		base = @ai_civic_default_base_weight 
+	ai_weight = {
+		base = @ai_civic_default_base_weight
 		modifier = {
 			factor = @ai_civic_personality_match_factor
 			OR = {
@@ -1214,8 +1227,8 @@ civic_parliamentary_system = {
 		}
 	}
 	random_weight = { base = @civic_default_random_weight }
-	ai_weight = { 
-		base = @ai_civic_default_base_weight 
+	ai_weight = {
+		base = @ai_civic_default_base_weight
 		modifier = {
 			factor = @ai_civic_personality_match_factor
 			OR = {
@@ -1255,8 +1268,8 @@ civic_efficient_bureaucracy = {
 		authority = { NOT = { value = auth_corporate } }
 	}
 	random_weight = { base = @civic_default_random_weight }
-	ai_weight = { 
-		base = @ai_civic_default_base_weight 
+	ai_weight = {
+		base = @ai_civic_default_base_weight
 		modifier = {
 			factor = @ai_civic_personality_match_factor
 			OR = {
@@ -1303,8 +1316,8 @@ civic_nationalistic_zeal = {
 		}
 	}
 	random_weight = { base = @civic_default_random_weight }
-	ai_weight = { 
-		base = @ai_civic_default_base_weight 
+	ai_weight = {
+		base = @ai_civic_default_base_weight
 		modifier = {
 			factor = @ai_civic_personality_match_factor
 			OR = {
@@ -1347,8 +1360,8 @@ civic_functional_architecture = {
 		authority = { NOT = { value = auth_corporate } }
 	}
 	random_weight = { base = @civic_default_random_weight }
-	ai_weight = { 
-		base = @ai_civic_default_base_weight 
+	ai_weight = {
+		base = @ai_civic_default_base_weight
 		modifier = {
 			factor = @ai_civic_personality_match_factor
 			OR = {
@@ -1382,7 +1395,7 @@ civic_aristocratic_elite = {
 		authority = { NOT = { value = auth_corporate } }
 	}
 	modifier = {
-		governor_skill_levels = 1
+		governor_exp_gain = 0.2
 		planet_jobs_ruler_produces_mult = 0.50
 		pop_cat_ruler_political_power = 1
 	}
@@ -1410,8 +1423,8 @@ civic_aristocratic_elite = {
 		}
 	}
 	random_weight = { base = @civic_default_random_weight }
-	ai_weight = { 
-		base = @ai_civic_default_base_weight 
+	ai_weight = {
+		base = @ai_civic_default_base_weight
 		modifier = {
 			factor = @ai_civic_personality_match_factor
 			OR = {
@@ -1471,8 +1484,8 @@ civic_shared_burden = {
 	random_weight = {
 		base = @civic_rare_random_weight # Should be fairly rare
 	}
-	ai_weight = { 
-		base = @ai_civic_rare_base_weight 
+	ai_weight = {
+		base = @ai_civic_rare_base_weight
 		modifier = {
 			factor = @ai_civic_personality_match_factor
 			OR = {
@@ -1652,8 +1665,8 @@ civic_byzantine_bureaucracy = {
 	random_weight = {
 		base = @civic_uncommon_random_weight
 	}
-	ai_weight = { 
-		base = @ai_civic_uncommon_base_weight 
+	ai_weight = {
+		base = @ai_civic_uncommon_base_weight
 		modifier = {
 			factor = @ai_civic_personality_match_factor
 			OR = {
@@ -1706,8 +1719,8 @@ civic_merchant_guilds = {
 	random_weight = {
 		base = @civic_uncommon_random_weight
 	}
-	ai_weight = { 
-		base = @ai_civic_uncommon_base_weight 
+	ai_weight = {
+		base = @ai_civic_uncommon_base_weight
 		modifier = {
 			factor = @ai_civic_personality_match_factor
 			OR = {
@@ -1766,8 +1779,8 @@ civic_reanimated_armies = {
 	random_weight = {
 		base = @civic_uncommon_random_weight
 	}
-	ai_weight = { 
-		base = @ai_civic_uncommon_base_weight 
+	ai_weight = {
+		base = @ai_civic_uncommon_base_weight
 		modifier = {
 			factor = @ai_civic_personality_match_factor
 			OR = {
@@ -1822,8 +1835,8 @@ civic_diplomatic_corps = {
 	random_weight = {
 		base = @civic_uncommon_random_weight
 	}
-	ai_weight = { 
-		base = @ai_civic_uncommon_base_weight 
+	ai_weight = {
+		base = @ai_civic_uncommon_base_weight
 		modifier = {
 			factor = @ai_civic_personality_match_factor
 			OR = {
@@ -1890,8 +1903,8 @@ civic_death_cult = {
 	random_weight = {
 		base = @civic_rare_random_weight
 	}
-	ai_weight = { 
-		base = @ai_civic_rare_base_weight 
+	ai_weight = {
+		base = @ai_civic_rare_base_weight
 		modifier = {
 			factor = @ai_civic_personality_match_factor
 			OR = {
@@ -1940,8 +1953,8 @@ civic_memorialist = {
 	random_weight = {
 		base = @civic_default_random_weight
 	}
-	ai_weight = { 
-		base = @ai_civic_default_base_weight 
+	ai_weight = {
+		base = @ai_civic_default_base_weight
 		modifier = {
 			factor = @ai_civic_personality_match_factor
 			OR = {
@@ -1996,7 +2009,7 @@ civic_catalytic_processing = {
 		country_alloys_produces_mult = 0.15
 	}
 	random_weight = { base = @civic_default_random_weight }
-	ai_weight = { 
+	ai_weight = {
 		base = 0	# Too dangerous to switch this mid-game
 	}
 }
@@ -2018,8 +2031,8 @@ civic_crafters = {
 	random_weight = {
 		base = @civic_uncommon_random_weight
 	}
-	ai_weight = { 
-		base = @ai_civic_uncommon_base_weight 
+	ai_weight = {
+		base = @ai_civic_uncommon_base_weight
 		modifier = {
 			factor = @ai_civic_personality_match_factor
 			OR = {
@@ -2062,8 +2075,8 @@ civic_pleasure_seekers = {
 	random_weight = {
 		base = @civic_uncommon_random_weight
 	}
-	ai_weight = { 
-		base = @ai_civic_uncommon_base_weight 
+	ai_weight = {
+		base = @ai_civic_uncommon_base_weight
 		modifier = {
 			factor = @ai_civic_personality_match_factor
 			OR = {
@@ -2172,8 +2185,8 @@ civic_pompous_purists = {
 	random_weight = {
 		base = @civic_rare_random_weight
 	}
-	ai_weight = { 
-		base = @ai_civic_uncommon_base_weight 
+	ai_weight = {
+		base = @ai_civic_uncommon_base_weight
 		modifier = {
 			factor = @ai_civic_personality_match_factor
 			OR = {
@@ -2226,8 +2239,8 @@ civic_toxic_baths = {
 	random_weight = {
 		base = @civic_uncommon_random_weight
 	}
-	ai_weight = { 
-		base = @ai_civic_uncommon_base_weight 
+	ai_weight = {
+		base = @ai_civic_uncommon_base_weight
 		modifier = {
 			factor = @ai_civic_personality_match_factor
 			OR = {
@@ -2275,8 +2288,8 @@ civic_relentless_industrialists = {
 	random_weight = {
 		base = @civic_uncommon_random_weight
 	}
-	ai_weight = { 
-		base = @ai_civic_uncommon_base_weight 
+	ai_weight = {
+		base = @ai_civic_uncommon_base_weight
 		modifier = {
 			factor = @ai_civic_personality_match_factor
 			OR = {
@@ -2327,8 +2340,8 @@ civic_scavengers = {
 	random_weight = {
 		base = @civic_default_random_weight
 	}
-	ai_weight = { 
-		base = @ai_civic_default_base_weight 
+	ai_weight = {
+		base = @ai_civic_default_base_weight
 		modifier = {
 			factor = @ai_civic_personality_match_factor
 			OR = {
@@ -2381,8 +2394,8 @@ civic_ascensionists = {
 	random_weight = {
 		base = @civic_uncommon_random_weight
 	}
-	ai_weight = { 
-		base = @ai_civic_uncommon_base_weight 
+	ai_weight = {
+		base = @ai_civic_uncommon_base_weight
 		modifier = {
 			factor = @ai_civic_personality_match_factor
 			OR = {
@@ -2406,6 +2419,69 @@ civic_ascensionists = {
 		planetary_ascension_effect_mult = 0.25
 		planetary_ascension_cost_mult = -0.1
 		tradition_cost_empire_size_mult = -0.25
+	}
+}
+
+civic_memory_vault = {
+	playable = { host_has_dlc = "Galactic Paragons" }
+	ai_playable = { host_has_dlc = "Galactic Paragons" }
+	random_weight = {
+		base = 3
+	}
+	description = "civic_tooltip_memory_vault_effects"
+	potential = {
+		ethics = { NOT = { value = ethic_gestalt_consciousness } }
+		authority = { NOT = { value = auth_corporate } }
+	}
+	possible = {
+		civics = {
+			NOT = {
+				value = civic_memory_vault_corporate
+			}
+		}
+	}
+	modifier = {
+		councilor_skill_add = 1
+	}
+}
+
+civic_crusader_spirit = {
+	playable = { host_has_dlc = "Galactic Paragons" }
+	ai_playable = { host_has_dlc = "Galactic Paragons" }
+	random_weight = {
+		base = 4
+	}
+	description = "civic_tooltip_crusader_spirit_effects"
+	potential = {
+		ethics = { NOT = { value = ethic_gestalt_consciousness } }
+		authority = { NOT = { value = auth_corporate } }
+	}
+	possible = {
+		ethics = {
+			OR = {
+				text = civic_tooltip_authoritarian_or_militarist_or_spiritualist
+				value = ethic_militarist
+				value = ethic_fanatic_militarist
+				value = ethic_authoritarian
+				value = ethic_fanatic_authoritarian
+				value = ethic_spiritualist
+				value = ethic_fanatic_spiritualist
+			}
+			NOR = {
+				text = civic_tooltip_not_pacifist
+				value = ethic_pacifist
+				value = ethic_fanatic_pacifist
+			}
+		}
+		civics = {
+			NOR = {
+				value = civic_fanatic_purifiers
+				value = civic_beacon_of_liberty
+			}
+		}
+	}
+	modifier = {
+		ship_weapon_damage = 0.1
 	}
 }
 
@@ -2450,9 +2526,65 @@ civic_eager_explorers = {
 		ship_speed_mult = 0.15
 		science_ship_survey_speed = 0.2
 		ship_anomaly_generation_chance_mult = 0.05
+		category_voidcraft_draw_chance_mult = 0.5
 	}
 
 	random_weight = {
 		base = 0
 	}
+}
+
+civic_heroic_tales = {
+	playable = { host_has_dlc = "Galactic Paragons" }
+	ai_playable = { host_has_dlc = "Galactic Paragons" }
+	random_weight = {
+		base = 4
+	}
+	description = "civic_heroic_tales_effects"
+	potential = {
+		ethics = { NOT = { value = ethic_gestalt_consciousness } }
+		authority = { NOT = { value = auth_corporate } }
+	}
+	possible = {
+	}
+	modifier = {
+		negative_traits_country = -1
+	}
+}
+
+civic_dystopian_society = {
+	modification = no
+	playable = { host_has_dlc = "Galactic Paragons" }
+	ai_playable = { host_has_dlc = "Galactic Paragons" }
+	random_weight = {
+		base = @civic_rare_random_weight # Should be fairly rare
+	}
+	potential = {
+		ethics = {
+			NOT = { value = ethic_gestalt_consciousness }
+		}
+		authority = {
+			NOT = { value = auth_corporate }
+		}
+	}
+	possible = {
+		ethics = {
+			value = ethic_fanatic_authoritarian
+		}
+		civics = {
+			NOR = {
+				value = civic_pleasure_seekers
+				value = civic_free_haven
+				value = civic_warrior_culture
+				value = civic_agrarian_idyll
+				value = civic_environmentalist
+			}
+		}
+	}
+	modifier = {
+		country_leader_cap_add = 1
+		leaders_upkeep_mult = -0.5
+	}
+
+	description = civic_tooltip_dystopian_society_effects
 }

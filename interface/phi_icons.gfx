@@ -67,9 +67,9 @@ spriteTypes = {
 		name = "GFX_colony_type_researcheng"
 		texturefile = "gfx/interface/planetview/colony_type_phi_eng.dds"
 	}
-	spriteType = {
-		name = "GFX_resolution_galactic_studies_malus"
-		texturefile = "gfx/interface/icons/main_menu/resolution_galactic_studies_malus.dds"
-	}
+	# spriteType = {
+	# 	name = "GFX_resolution_galactic_studies_malus"
+	# 	texturefile = "gfx/interface/icons/main_menu/resolution_galactic_studies_malus.dds"
+	# }
 	
 }

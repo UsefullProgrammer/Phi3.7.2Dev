@@ -1,7 +1,6 @@
 setup_scenario = {
 	name = "mediumover16"
-	priority = 4					#priority decides in which order the scenarios are listed
-	default = yes
+	priority = 4
 	num_stars = 700
 	radius = 450					#should be less than 500, preferably less than ~460
 	num_empires = { min = 0 max = 20 }	#limits player customization

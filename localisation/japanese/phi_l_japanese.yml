@@ -981,6 +981,7 @@ phi_pm_atmospheric_pollution: "大気汚染"
 mod_habitat_pop_job_trade_mult: "Commercio $mod_habitat_jobs_produces_mult$"
 d_small_research: "小規模な研究"
 d_medium_research: "中規模な研究"
+tr_domination_colonial_viceroys_desc:0 "§Y統治者§!と§Y総督§!は§Y3§!レベルからスタートします。"
 
 building_machine_assembly_complex_3:0 "ギガマシンアセンブリコンプレックス"
 building_machine_assembly_complex_3_desc:0 "新しいユニットが構築されるギガの高度なアセンブリプラント。"

@@ -143,7 +143,7 @@ military_readiness_1 = {
 	leader_modifier = {
 		ships_upkeep_mult = -0.04
 		diplo_weight_mult = 0.10
-		country_command_limit_add = 10
+		command_limit_add = 10
 	}
 }
 
@@ -158,7 +158,7 @@ military_readiness_2 = {
 	leader_modifier = {
 		ships_upkeep_mult = -0.04
 		diplo_weight_mult = 0.10
-		country_command_limit_add = 10
+		command_limit_add = 10
 	}
 }
 
@@ -173,7 +173,7 @@ military_readiness_3 = {
 	leader_modifier = {
 		ships_upkeep_mult = -0.04
 		diplo_weight_mult = 0.10
-		country_command_limit_add = 10
+		command_limit_add = 10
 	}
 }
 
@@ -188,7 +188,7 @@ military_readiness_4 = {
 	leader_modifier = {
 		ships_upkeep_mult = -0.04
 		diplo_weight_mult = 0.10
-		country_command_limit_add = 10
+		command_limit_add = 10
 	}
 }
 
@@ -205,7 +205,7 @@ military_readiness_5 = {
 		#ship_armor_hardening_add = 0.04 #tip gobbi
 		ships_upkeep_mult = -0.04
 		diplo_weight_mult = 0.10
-		country_command_limit_add = 10
+		command_limit_add = 10
 	}
 }
 

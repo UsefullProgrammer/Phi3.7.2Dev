@@ -30,13 +30,6 @@ tech_physics_4 = {
 			years_passed > 65
 		}
 		modifier = {
-			factor = 10
-			research_leader = {
-				area = physics
-				has_trait = "leader_trait_expertise_psionics"
-			}
-		}
-		modifier = {
 			factor = 100
 			any_country = {
 				has_technology = tech_physics_4

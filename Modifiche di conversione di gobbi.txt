@@ -272,7 +272,9 @@ La decisione che aumenta il trade costava 100 unity, corretta a 1000
 Aggiunto 2 size alla galassia per 12 giocatori e per 16-20 giocatori
 [b]Megastructure[/b]
 Gateway ci mettono molto meno a costruirsi e costano molto meno ma hanno upkeep a energy = 10
-
+3.7.8
+Diminuito hull regen mult da 0.1 a 0.05 
 Da testare
 
 Robot hanno un potenziamento ulteriore al pop assembly sbloccabile tramite una tecnologia rara "Giga-Assembly Systems" il building gli da 5 roboticisti.
+

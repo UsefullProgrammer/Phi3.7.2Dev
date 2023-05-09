@@ -1,0 +1,94 @@
+3.8change 
+country_command_limit_add diventa command_limit_add OK
+leader_skill_levels diventa country_leader_cap_add oppure leader_trait_selection_options_add OK
+emergency_election_cost è stata spostata da qualche parte OK
+ruler_skill_levels diventa uno dei due:
+-councilor_exp_gain /10 + negative_traits_country = -1
+-country_leader_cap_add + external_leader_pool_add 
+governor_skill_levels diventa governor_exp_gain / 5 
+controllare pop_faction_types\00_imperialist.txt ln 334 OK
+per qualche motivo leader_trait_admiral_erudite diventa leader_trait_erudite ?! OK?
+leader_skill_levels forse non esiste più OK
+dove c'è value:tech_weight_likelihood oppure research_leader togliere modificatore non più usato OK
+MOD_LEADER_SKILL_LEVELS OK
+Aggiungere tech o roba nuova per i tag #old phi
+controllare diplomatic_stance OK e economic_policy OK
+controllre in 3.8 set_skill
+Da fare poi 
+ship_hull_regen_add_perc
+ship_hull_regen_add_static = 1
+		ship_armor_regen_add_static = 2
+
+
+
+
+Controllare che non puoi rieleggiere o cambiare dittatore o re.
+Cambiare gateway, fare che basta costruirlo la prima volta o comunque diminuire costo e tempi da tstare
+
+
+controllare colonie
+Galaxy size diverse
+errores:
+[21:21:54][trigger.cpp:465]: invalid scope for trigger. got [country], expected {galactic_object}.  file: common/game_rules/00_rules.txt line: 150
+Fare dopo:
+
+pop_assembly Implant livello 3 con tech rara.
+Dominion bonus influenza da 0.5 a 1
+risolvere civic_tooltip_exalted_priesthood_effects
+Indagare su origin.57
+in 00_starbase_types for ia da migliorare per le orbital.
+tr_politics_extraordinary_powers: raddoppia costo rifiuto negozazione
+
+events/phi_ai.txt
+Intendi così?
+961:     immediate = {
+962:           random_country = {
+963:               limit = {
+964:                   has_communications = root
+965:                   has_country_flag = phi_lagger
+966:                   any_war = {
+967:                       using_war_goal = { type = wg_phi_survive owner = prev }
+968:                       NOT = { is_war_participant = { who = root } }
+969:                   }
+970:               }
+971:               random_war = {
+972:                   limit = {
+973:                       NOT = { is_war_participant = { who = root } }
+974:                       using_war_goal = { type = wg_phi_survive owner = defender }
+975:                       any_defender = {
+976:                           is_same_value = prevprev
+977:                       }
+978:                   }
+979:                   save_event_target_as = survive_cb_war
+980:               }
+981:           }
+982:           root = {
+983:               join_war_on_side = {
+984:                   war = event_target:survive_cb_war
+985:                   side = defenders
+986:               }
+987:               if = {
+988:                   limit = { is_federation_leader = yes }
+989:                   every_federation_ally = {
+990:                       join_war_on_side = {
+991:                           war = event_target:survive_cb_war
+992:                           side = defenders
+993:                       }
+994:                   }
+995:               }
+996:           }
+997:       }
+MarioMinaccia — 29/04/2023 10:03
+devi vedere se join_war_on_side e' ancora valido e se non gli hanno cambiato i parametri
+gobbibomb — 29/04/2023 10:04
+ok
+MarioMinaccia — 29/04/2023 10:07
+a me sembra che stia funzionando, per cui giarda bene che non fosse qualche particolarita' del player
+gobbibomb — 29/04/2023 10:50
+So quando succede
+è quando c'è una war in heaven
+normalmente funziona
+gobbibomb — 29/04/2023 10:52
+probabilmente le guerre che si autochiudono buggano qualcosa
+MarioMinaccia — 29/04/2023 12:13
+mettigli un check che non ci sia war in heaven

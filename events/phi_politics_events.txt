@@ -506,14 +506,15 @@ country_event = {
 				set_skill = 3
 				break = yes
 			}
-			if = {
-				limit = {
-					leader_class = ruler
-					root = { has_tradition = tr_domination_colonial_viceroys }
-				}
-				set_skill = 3
-				break = yes
-			}
+			#incompatible with 3.8
+			# if = {
+			# 	limit = {
+			# 		leader_class = ruler
+			# 		root = { has_tradition = tr_domination_colonial_viceroys }
+			# 	}
+			# 	set_skill = 3
+			# 	break = yes
+			# }
 		}
 	}
 }
@@ -741,19 +742,15 @@ planet_event = {
 					unity = 100
 					influence = 15
 				}
-				
 				create_leader = {
-					class = ruler
+					class = random_ruler
 					species = owner_main_species
 					name = random
 					skill = 2
 					traits = {}
 				}
 				
-				assign_leader = last_created_leader
-				ruler = {
-					add_random_leader_trait = yes
-				}
+				set_leader = last_created_leader
 				set_subject_of = {
 					who = event_target:releasing_empire
 					preset = preset_vassal

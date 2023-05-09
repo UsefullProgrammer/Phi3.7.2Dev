@@ -9,11 +9,10 @@
  tr_expansion_galactic_ambition_desc:7 "§Y$mod_starbases_upkeep_mult$§! ridotto del §G20%§!.\n§YMantenimento delle Strutture Planetarie§! ridotto del §G20%§!."
  
  tr_discovery_databank_uplinks_desc: "§HSblocca Editto:§! $edict_research_subsidies$\n§Y$mod_station_researchers_produces_mult$§! aumentato del §G50%§!."
- tr_discovery_polytechnic_education_desc: "§Y$MOD_LEADER_SPECIES_EXP_GAIN$§! aumentato del §G+50%§! e §Y$MOD_LEADER_SKILL_LEVELS$§! aumentato del §Y1§!.\n§YScienziati§! vengono reclutati già al livello §Y3§!."
+ tr_discovery_polytechnic_education_desc: "§Y$MOD_LEADER_SPECIES_EXP_GAIN$§! increased by §G+25%§! and §Y$MOD_LEADER_SKILL_LEVELS$§! increased by §Y1§!.\n§YScienziati§! vengono reclutati già al livello §Y3§!."
  tr_synchronicity_integrated_preservation_desc:4 "§Y$job_coordinator_plural$§! produce §Y1§! £mod_country_admin_cap_add£ §Y$MOD_COUNTRY_ADMIN_CAP_ADD$§! aggiuntivo e riduce §Y$MOD_PLANET_CRIME_NO_HAPPINESS_ADD$§! di 2."
  tr_harmony_finish_effect:7 "§E$TRADITIONS_FINISH$:§!\nAdottare tutte le tradizioni $tr_harmony_adopt$ riduce §Y$MOD_EMPIRE_SIZE_POPS_MULT$§! del §G10%§! e permette di andare in §YDisarmo§!."
  tr_supremacy_finish_effect:1 "§E$TRADITIONS_FINISH$:§!\nAdottare tutte le tradizioni $tr_supremacy_adopt$ sblocca la politica §YDottrine di Guerra§! e permette di andare in §YMobilizzazione Totale§!."
- tr_domination_colonial_viceroys_desc:0 "§Y$MOD_LEADER_GOVERNOR_SKILL_LEVELS$§! aumentato del §Y2§!.\n§YRulers§! e §YGovernatori§! cominciano di livello §Y3§!.\n\nInfluenza: §G+0.5§! al mese"
  tr_supremacy_war_games_desc:3 "§Y$MOD_COUNTRY_COMMAND_LIMIT_ADD$§! aumentato del §G+20§! and §Y$MOD_LEADER_ADMIRAL_SKILL_LEVELS$§! is aumentato del §Y2§!.\n§YAmmiragli§! e §YGenerali§! cominciano di livello §Y3§!."
  tr_domination_adopt_desc:0 "Attrazione all'etica autoritaria aumentata del §Y100%§!.\nOutput di lavoratori e droni §G+5%§!.\nPermette di §Yrichiedere la vassallizzazione§! ed il casus belli §Yvassallizzazione§!."
  tr_domination_workplace_motivators_desc:1 "§HSblocca Editto:§! $edict_extended_shifts$\nResource output degli §Y$pop_cat_slave_plural$§! aumentato del §G20%§!."

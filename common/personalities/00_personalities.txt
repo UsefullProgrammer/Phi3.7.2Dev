@@ -487,6 +487,7 @@ ruthless_capitalists = {
 		OR = {
 			has_authority = auth_corporate
 			has_valid_civic = civic_corporate_dominion
+			has_trait = "trait_thrifty"
 		}
 	}
 
@@ -562,6 +563,7 @@ peaceful_traders = {
 		OR = {
 			has_authority = auth_corporate
 			has_valid_civic = civic_corporate_dominion
+			has_trait = "trait_thrifty"
 		}
 	}
 

@@ -299,8 +299,8 @@ terraform_link = {
 #These are always a good idea if the AI has taken the perk. So the AI will always want it, to a degree.
 
 terraform_link = {
-	to = "pc_gaia"
 	from = "pc_desert"
+	to = "pc_gaia"
 
 	resources = {
 		category = terraforming
@@ -313,7 +313,13 @@ terraform_link = {
 	duration = @gaiaTime
 
 	potential = {
-		has_ascension_perk = "ap_world_shaper"
+		OR = {
+			from = { has_azaryn_in_orbit = yes }
+			AND = {
+				exists = owner
+				has_ascension_perk = "ap_world_shaper"
+			}
+		}
 	}
 
 	ai_weight = {
@@ -336,7 +342,13 @@ terraform_link = {
 	duration = @gaiaTime
 
 	potential = {
-		has_ascension_perk = "ap_world_shaper"
+		OR = {
+			from = { has_azaryn_in_orbit = yes }
+			AND = {
+				exists = owner
+				has_ascension_perk = "ap_world_shaper"
+			}
+		}
 	}
 
 	ai_weight = {
@@ -345,8 +357,8 @@ terraform_link = {
 }
 
 terraform_link = {
-	to = "pc_gaia"
 	from = "pc_savannah"
+	to = "pc_gaia"
 
 	resources = {
 		category = terraforming
@@ -359,7 +371,13 @@ terraform_link = {
 	duration = @gaiaTime
 
 	potential = {
-		has_ascension_perk = "ap_world_shaper"
+		OR = {
+			from = { has_azaryn_in_orbit = yes }
+			AND = {
+				exists = owner
+				has_ascension_perk = "ap_world_shaper"
+			}
+		}
 	}
 
 	ai_weight = {
@@ -368,8 +386,8 @@ terraform_link = {
 }
 
 terraform_link = {
-	to = "pc_gaia"
 	from = "pc_arctic"
+	to = "pc_gaia"
 
 	resources = {
 		category = terraforming
@@ -382,7 +400,13 @@ terraform_link = {
 	duration = @gaiaTime
 
 	potential = {
-		has_ascension_perk = "ap_world_shaper"
+		OR = {
+			from = { has_azaryn_in_orbit = yes }
+			AND = {
+				exists = owner
+				has_ascension_perk = "ap_world_shaper"
+			}
+		}
 	}
 
 	ai_weight = {
@@ -391,8 +415,8 @@ terraform_link = {
 }
 
 terraform_link = {
-	to = "pc_gaia"
 	from = "pc_tundra"
+	to = "pc_gaia"
 
 	resources = {
 		category = terraforming
@@ -405,7 +429,13 @@ terraform_link = {
 	duration = @gaiaTime
 
 	potential = {
-		has_ascension_perk = "ap_world_shaper"
+		OR = {
+			from = { has_azaryn_in_orbit = yes }
+			AND = {
+				exists = owner
+				has_ascension_perk = "ap_world_shaper"
+			}
+		}
 	}
 
 	ai_weight = {
@@ -414,8 +444,8 @@ terraform_link = {
 }
 
 terraform_link = {
-	to = "pc_gaia"
 	from = "pc_alpine"
+	to = "pc_gaia"
 
 	resources = {
 		category = terraforming
@@ -428,7 +458,13 @@ terraform_link = {
 	duration = @gaiaTime
 
 	potential = {
-		has_ascension_perk = "ap_world_shaper"
+		OR = {
+			from = { has_azaryn_in_orbit = yes }
+			AND = {
+				exists = owner
+				has_ascension_perk = "ap_world_shaper"
+			}
+		}
 	}
 
 	ai_weight = {
@@ -437,8 +473,8 @@ terraform_link = {
 }
 
 terraform_link = {
-	to = "pc_gaia"
 	from = "pc_continental"
+	to = "pc_gaia"
 
 	resources = {
 		category = terraforming
@@ -451,7 +487,13 @@ terraform_link = {
 	duration = @gaiaTime
 
 	potential = {
-		has_ascension_perk = "ap_world_shaper"
+		OR = {
+			from = { has_azaryn_in_orbit = yes }
+			AND = {
+				exists = owner
+				has_ascension_perk = "ap_world_shaper"
+			}
+		}
 	}
 
 	ai_weight = {
@@ -460,8 +502,8 @@ terraform_link = {
 }
 
 terraform_link = {
-	to = "pc_gaia"
 	from = "pc_tropical"
+	to = "pc_gaia"
 
 	resources = {
 		category = terraforming
@@ -474,7 +516,13 @@ terraform_link = {
 	duration = @gaiaTime
 
 	potential = {
-		has_ascension_perk = "ap_world_shaper"
+		OR = {
+			from = { has_azaryn_in_orbit = yes }
+			AND = {
+				exists = owner
+				has_ascension_perk = "ap_world_shaper"
+			}
+		}
 	}
 
 	ai_weight = {
@@ -483,8 +531,8 @@ terraform_link = {
 }
 
 terraform_link = {
-	to = "pc_gaia"
 	from = "pc_ocean"
+	to = "pc_gaia"
 
 	resources = {
 		category = terraforming
@@ -497,7 +545,13 @@ terraform_link = {
 	duration = @gaiaTime
 
 	potential = {
-		has_ascension_perk = "ap_world_shaper"
+		OR = {
+			from = { has_azaryn_in_orbit = yes }
+			AND = {
+				exists = owner
+				has_ascension_perk = "ap_world_shaper"
+			}
+		}
 	}
 
 	ai_weight = {
@@ -530,8 +584,14 @@ terraform_link = {
 	duration = @highestTime
 
 	potential = {
-		has_ascension_perk = "ap_world_shaper"
-		from = { has_modifier = terraforming_candidate }
+		OR = {
+			from = { has_azaryn_in_orbit = yes }
+			AND = {
+				exists = owner
+				has_ascension_perk = "ap_world_shaper"
+				from = { has_modifier = terraforming_candidate }
+			}
+		}
 	}
 
 	condition = {
@@ -562,8 +622,14 @@ terraform_link = {
 	duration = @highestTime
 
 	potential = {
-		has_ascension_perk = "ap_world_shaper"
-		from = { has_modifier = terraforming_candidate }
+		OR = {
+			from = { has_azaryn_in_orbit = yes }
+			AND = {
+				exists = owner
+				has_ascension_perk = "ap_world_shaper"
+				from = { has_modifier = terraforming_candidate }
+			}
+		}
 	}
 
 	condition = {
@@ -594,7 +660,13 @@ terraform_link = {
 	duration = @highestTime
 
 	potential = {
-		has_ascension_perk = "ap_world_shaper"
+		OR = {
+			from = { has_azaryn_in_orbit = yes }
+			AND = {
+				exists = owner
+				has_ascension_perk = "ap_world_shaper"
+			}
+		}
 	}
 
 	condition = {
@@ -631,6 +703,7 @@ terraform_link = {
 	duration = 3600
 
 	potential = {
+		exists = owner
 		from = { has_modifier = terraforming_candidate }
 	}
 	condition = {
@@ -661,6 +734,7 @@ terraform_link = {
 	duration = 3600
 
 	potential = {
+		exists = owner
 		from = { has_modifier = terraforming_candidate }
 	}
 	condition = {
@@ -691,6 +765,7 @@ terraform_link = {
 	duration = 3600
 
 	potential = {
+		exists = owner
 		from = { has_modifier = terraforming_candidate }
 	}
 	condition = {
@@ -721,6 +796,7 @@ terraform_link = {
 	duration = 5400
 
 	potential = {
+		exists = owner
 		from = { has_modifier = terraforming_candidate }
 	}
 	condition = {
@@ -751,6 +827,7 @@ terraform_link = {
 	duration = 5400
 
 	potential = {
+		exists = owner
 		from = { has_modifier = terraforming_candidate }
 	}
 	condition = {
@@ -781,6 +858,7 @@ terraform_link = {
 	duration = 5400
 
 	potential = {
+		exists = owner
 		from = { has_modifier = terraforming_candidate }
 	}
 	condition = {
@@ -816,6 +894,7 @@ terraform_link = {
 	duration = 7200
 
 	potential = {
+		exists = owner
 		from = { has_modifier = terraforming_candidate }
 	}
 	condition = {
@@ -846,6 +925,7 @@ terraform_link = {
 	duration = 7200
 
 	potential = {
+		exists = owner
 		from = { has_modifier = terraforming_candidate }
 	}
 	condition = {
@@ -876,6 +956,7 @@ terraform_link = {
 	duration = 7200
 
 	potential = {
+		exists = owner
 		from = { has_modifier = terraforming_candidate }
 	}
 	condition = {
@@ -906,6 +987,7 @@ terraform_link = {
 	duration = 3600
 
 	potential = {
+		exists = owner
 		from = { has_modifier = terraforming_candidate }
 	}
 	condition = {
@@ -936,6 +1018,7 @@ terraform_link = {
 	duration = 3600
 
 	potential = {
+		exists = owner
 		from = { has_modifier = terraforming_candidate }
 	}
 	condition = {
@@ -966,6 +1049,7 @@ terraform_link = {
 	duration = 3600
 
 	potential = {
+		exists = owner
 		from = { has_modifier = terraforming_candidate }
 	}
 	condition = {
@@ -996,6 +1080,7 @@ terraform_link = {
 	duration = 5400
 
 	potential = {
+		exists = owner
 		from = { has_modifier = terraforming_candidate }
 	}
 	condition = {
@@ -1026,6 +1111,7 @@ terraform_link = {
 	duration = 5400
 
 	potential = {
+		exists = owner
 		from = { has_modifier = terraforming_candidate }
 	}
 	condition = {
@@ -1056,6 +1142,7 @@ terraform_link = {
 	duration = 5400
 
 	potential = {
+		exists = owner
 		from = { has_modifier = terraforming_candidate }
 	}
 	condition = {
@@ -1090,6 +1177,7 @@ terraform_link = {
 	duration = @highestTime
 
 	potential = {
+		exists = owner
 		has_trait = trait_aquatic
 		from = { has_modifier = frozen_terraforming_candidate }
 	}
@@ -1126,6 +1214,7 @@ terraform_link = {
 	duration = 7200
 
 	potential = {
+		exists = owner
 		from = { has_modifier = terraforming_candidate }
 	}
 	condition = {
@@ -1156,6 +1245,7 @@ terraform_link = {
 	duration = 7200
 
 	potential = {
+		exists = owner
 		from = { has_modifier = terraforming_candidate }
 	}
 	condition = {
@@ -1186,6 +1276,7 @@ terraform_link = {
 	duration = 7200
 
 	potential = {
+		exists = owner
 		from = { has_modifier = terraforming_candidate }
 	}
 	condition = {
@@ -1220,6 +1311,7 @@ terraform_link = {
 	duration = @machineTime
 
 	potential = {
+		exists = owner
 		has_ascension_perk = ap_machine_worlds
 		from = { has_modifier = terraforming_candidate }
 	}
@@ -1245,6 +1337,7 @@ terraform_link = {
 	duration = @machineTime
 
 	potential = {
+		exists = owner
 		has_ascension_perk = ap_machine_worlds
 		from = { has_modifier = terraforming_candidate }
 	}
@@ -1270,6 +1363,7 @@ terraform_link = {
 	duration = @machineTime
 
 	potential = {
+		exists = owner
 		has_ascension_perk = ap_machine_worlds
 	}
 
@@ -1305,6 +1399,7 @@ terraform_link = {
 	duration = @machineTime
 
 	potential = {
+		exists = owner
 		has_ascension_perk = ap_machine_worlds
 	}
 
@@ -1349,6 +1444,7 @@ terraform_link = {
 	duration = @machineTime
 
 	potential = {
+		exists = owner
 		has_ascension_perk = ap_machine_worlds
 	}
 
@@ -1384,6 +1480,7 @@ terraform_link = {
 	duration = @machineTime
 
 	potential = {
+		exists = owner
 		has_ascension_perk = ap_machine_worlds
 	}
 
@@ -1419,6 +1516,7 @@ terraform_link = {
 	duration = @machineTime
 
 	potential = {
+		exists = owner
 		has_ascension_perk = ap_machine_worlds
 	}
 
@@ -1454,6 +1552,7 @@ terraform_link = {
 	duration = @machineTime
 
 	potential = {
+		exists = owner
 		has_ascension_perk = ap_machine_worlds
 	}
 
@@ -1489,6 +1588,7 @@ terraform_link = {
 	duration = @machineTime
 
 	potential = {
+		exists = owner
 		has_ascension_perk = ap_machine_worlds
 	}
 
@@ -1524,6 +1624,7 @@ terraform_link = {
 	duration = @machineTime
 
 	potential = {
+		exists = owner
 		has_ascension_perk = ap_machine_worlds
 	}
 
@@ -1559,6 +1660,7 @@ terraform_link = {
 	duration = @machineTime
 
 	potential = {
+		exists = owner
 		has_ascension_perk = ap_machine_worlds
 	}
 
@@ -1594,6 +1696,7 @@ terraform_link = {
 	duration = @machineTime
 
 	potential = {
+		exists = owner
 		has_ascension_perk = ap_machine_worlds
 	}
 
@@ -1629,6 +1732,7 @@ terraform_link = {
 	duration = @machineTime
 
 	potential = {
+		exists = owner
 		has_ascension_perk = ap_machine_worlds
 	}
 
@@ -1664,6 +1768,7 @@ terraform_link = {
 	duration = @machineTime
 
 	potential = {
+		exists = owner
 		has_ascension_perk = ap_machine_worlds
 	}
 
@@ -1699,6 +1804,7 @@ terraform_link = {
 	duration = @machineTime
 
 	potential = {
+		exists = owner
 		has_technology = tech_climate_restoration
 	}
 
@@ -1733,6 +1839,7 @@ terraform_link = {
 	duration = @machineTime
 
 	potential = {
+		exists = owner
 		has_technology = tech_climate_restoration
 	}
 
@@ -1767,6 +1874,7 @@ terraform_link = {
 	duration = @machineTime
 
 	potential = {
+		exists = owner
 		has_technology = tech_climate_restoration
 	}
 
@@ -1801,6 +1909,7 @@ terraform_link = {
 	duration = @machineTime
 
 	potential = {
+		exists = owner
 		has_technology = tech_climate_restoration
 	}
 
@@ -1835,6 +1944,7 @@ terraform_link = {
 	duration = @machineTime
 
 	potential = {
+		exists = owner
 		has_technology = tech_climate_restoration
 	}
 
@@ -1869,6 +1979,7 @@ terraform_link = {
 	duration = @machineTime
 
 	potential = {
+		exists = owner
 		has_technology = tech_climate_restoration
 	}
 
@@ -1903,6 +2014,7 @@ terraform_link = {
 	duration = @machineTime
 
 	potential = {
+		exists = owner
 		has_technology = tech_climate_restoration
 	}
 
@@ -1937,6 +2049,7 @@ terraform_link = {
 	duration = @machineTime
 
 	potential = {
+		exists = owner
 		has_technology = tech_climate_restoration
 	}
 
@@ -1971,6 +2084,7 @@ terraform_link = {
 	duration = @machineTime
 
 	potential = {
+		exists = owner
 		has_technology = tech_climate_restoration
 	}
 
@@ -2013,6 +2127,7 @@ terraform_link = {
 	duration = @hiveTime
 
 	potential = {
+		exists = owner
 		has_ascension_perk = ap_hive_worlds
 		from = { has_modifier = terraforming_candidate }
 	}
@@ -2037,6 +2152,7 @@ terraform_link = {
 	duration = @hiveTime
 
 	potential = {
+		exists = owner
 		has_ascension_perk = ap_hive_worlds
 		from = { has_modifier = terraforming_candidate }
 	}
@@ -2061,6 +2177,7 @@ terraform_link = {
 	duration = @hiveTime
 
 	potential = {
+		exists = owner
 		has_ascension_perk = ap_hive_worlds
 	}
 
@@ -2094,6 +2211,7 @@ terraform_link = {
 	duration = @hiveTime
 
 	potential = {
+		exists = owner
 		has_ascension_perk = ap_hive_worlds
 	}
 
@@ -2136,6 +2254,7 @@ terraform_link = {
 	duration = @hiveTime
 
 	potential = {
+		exists = owner
 		has_ascension_perk = ap_hive_worlds
 	}
 
@@ -2169,6 +2288,7 @@ terraform_link = {
 	duration = @hiveTime
 
 	potential = {
+		exists = owner
 		has_ascension_perk = ap_hive_worlds
 	}
 
@@ -2206,6 +2326,7 @@ terraform_link = {
 	duration = @hiveTime
 
 	potential = {
+		exists = owner
 		has_ascension_perk = ap_hive_worlds
 	}
 
@@ -2239,6 +2360,7 @@ terraform_link = {
 	duration = @hiveTime
 
 	potential = {
+		exists = owner
 		has_ascension_perk = ap_hive_worlds
 	}
 
@@ -2272,6 +2394,7 @@ terraform_link = {
 	duration = @hiveTime
 
 	potential = {
+		exists = owner
 		has_ascension_perk = ap_hive_worlds
 	}
 
@@ -2305,6 +2428,7 @@ terraform_link = {
 	duration = @hiveTime
 
 	potential = {
+		exists = owner
 		has_ascension_perk = ap_hive_worlds
 	}
 
@@ -2338,6 +2462,7 @@ terraform_link = {
 	duration = @hiveTime
 
 	potential = {
+		exists = owner
 		has_ascension_perk = ap_hive_worlds
 	}
 
@@ -2371,6 +2496,7 @@ terraform_link = {
 	duration = @hiveTime
 
 	potential = {
+		exists = owner
 		has_ascension_perk = ap_hive_worlds
 	}
 
@@ -2404,6 +2530,7 @@ terraform_link = {
 	duration = @hiveTime
 
 	potential = {
+		exists = owner
 		has_ascension_perk = ap_hive_worlds
 	}
 
@@ -2437,6 +2564,7 @@ terraform_link = {
 	duration = @hiveTime
 
 	potential = {
+		exists = owner
 		has_ascension_perk = ap_hive_worlds
 	}
 
@@ -2470,6 +2598,7 @@ terraform_link = {
 	duration = @hiveTime
 
 	potential = {
+		exists = owner
 		has_technology = tech_climate_restoration
 	}
 
@@ -2504,6 +2633,7 @@ terraform_link = {
 	duration = @hiveTime
 
 	potential = {
+		exists = owner
 		has_technology = tech_climate_restoration
 	}
 
@@ -2538,6 +2668,7 @@ terraform_link = {
 	duration = @hiveTime
 
 	potential = {
+		exists = owner
 		has_technology = tech_climate_restoration
 	}
 
@@ -2572,6 +2703,7 @@ terraform_link = {
 	duration = @hiveTime
 
 	potential = {
+		exists = owner
 		has_technology = tech_climate_restoration
 	}
 
@@ -2606,6 +2738,7 @@ terraform_link = {
 	duration = @hiveTime
 
 	potential = {
+		exists = owner
 		has_technology = tech_climate_restoration
 	}
 
@@ -2640,6 +2773,7 @@ terraform_link = {
 	duration = @hiveTime
 
 	potential = {
+		exists = owner
 		has_technology = tech_climate_restoration
 	}
 
@@ -2674,6 +2808,7 @@ terraform_link = {
 	duration = @hiveTime
 
 	potential = {
+		exists = owner
 		has_technology = tech_climate_restoration
 	}
 
@@ -2708,6 +2843,7 @@ terraform_link = {
 	duration = @hiveTime
 
 	potential = {
+		exists = owner
 		has_technology = tech_climate_restoration
 	}
 
@@ -2742,6 +2878,7 @@ terraform_link = {
 	duration = @hiveTime
 
 	potential = {
+		exists = owner
 		has_technology = tech_climate_restoration
 	}
 
@@ -2779,7 +2916,8 @@ terraform_link = {
 		}
 	}
 	duration = 360
-	potential = { from = { has_modifier = terraforming_candidate } }
+	potential = {
+		exists = owner from = { has_modifier = terraforming_candidate } }
 	effect = { from = { remove_modifier = terraforming_candidate } }
 
 	ai_weight = {
@@ -2802,7 +2940,8 @@ terraform_link = {
 	}
 
 	duration = 360
-	potential = { from = { has_modifier = terraforming_candidate } }
+	potential = {
+		exists = owner from = { has_modifier = terraforming_candidate } }
 	effect = { from = { remove_modifier = terraforming_candidate } }
 
 	ai_weight = {
@@ -2825,7 +2964,8 @@ terraform_link = {
 	}
 
 	duration = 360
-	potential = { from = { has_modifier = terraforming_candidate } }
+	potential = {
+		exists = owner from = { has_modifier = terraforming_candidate } }
 	effect = { from = { remove_modifier = terraforming_candidate } }
 
 	ai_weight = {
@@ -2848,7 +2988,8 @@ terraform_link = {
 	}
 
 	duration = 360
-	potential = { from = { has_modifier = terraforming_candidate } }
+	potential = {
+		exists = owner from = { has_modifier = terraforming_candidate } }
 	effect = { from = { remove_modifier = terraforming_candidate } }
 
 	ai_weight = {
@@ -2875,7 +3016,8 @@ terraform_link = {
 	}
 
 	duration = 360
-	potential = { from = { has_modifier = terraforming_candidate } }
+	potential = {
+		exists = owner from = { has_modifier = terraforming_candidate } }
 	effect = { from = { remove_modifier = terraforming_candidate } }
 
 	ai_weight = {
@@ -2898,7 +3040,8 @@ terraform_link = {
 	}
 
 	duration = 360
-	potential = { from = { has_modifier = terraforming_candidate } }
+	potential = {
+		exists = owner from = { has_modifier = terraforming_candidate } }
 	effect = { from = { remove_modifier = terraforming_candidate } }
 
 	ai_weight = {
@@ -2921,7 +3064,8 @@ terraform_link = {
 	}
 
 	duration = 360
-	potential = { from = { has_modifier = terraforming_candidate } }
+	potential = {
+		exists = owner from = { has_modifier = terraforming_candidate } }
 	effect = { from = { remove_modifier = terraforming_candidate } }
 
 	ai_weight = {
@@ -2944,7 +3088,8 @@ terraform_link = {
 	}
 
 	duration = 360
-	potential = { from = { has_modifier = terraforming_candidate } }
+	potential = {
+		exists = owner from = { has_modifier = terraforming_candidate } }
 	effect = { from = { remove_modifier = terraforming_candidate } }
 
 	ai_weight = {
@@ -2967,7 +3112,8 @@ terraform_link = {
 	}
 
 	duration = 360
-	potential = { from = { has_modifier = terraforming_candidate } }
+	potential = {
+		exists = owner from = { has_modifier = terraforming_candidate } }
 	effect = { from = { remove_modifier = terraforming_candidate } }
 
 	ai_weight = {
@@ -2996,6 +3142,7 @@ terraform_link = {
 	duration = 3600
 
 	potential = {
+		exists = owner
 		has_policy_flag = relentless_industrialists_study
 		has_country_flag = relentless_industrialists_study_completed
 	}
@@ -3022,6 +3169,7 @@ terraform_link = {
 	duration = 3600
 
 	potential = {
+		exists = owner
 		has_policy_flag = relentless_industrialists_study
 		has_country_flag = relentless_industrialists_study_completed
 	}
@@ -3048,6 +3196,7 @@ terraform_link = {
 	duration = 3600
 
 	potential = {
+		exists = owner
 		has_policy_flag = relentless_industrialists_study
 		has_country_flag = relentless_industrialists_study_completed
 	}
@@ -3074,6 +3223,7 @@ terraform_link = {
 	duration = 3600
 
 	potential = {
+		exists = owner
 		has_policy_flag = relentless_industrialists_study
 		has_country_flag = relentless_industrialists_study_completed
 	}
@@ -3100,6 +3250,7 @@ terraform_link = {
 	duration = 3600
 
 	potential = {
+		exists = owner
 		has_policy_flag = relentless_industrialists_study
 		has_country_flag = relentless_industrialists_study_completed
 	}
@@ -3126,6 +3277,7 @@ terraform_link = {
 	duration = 3600
 
 	potential = {
+		exists = owner
 		has_policy_flag = relentless_industrialists_study
 		has_country_flag = relentless_industrialists_study_completed
 	}
@@ -3152,6 +3304,7 @@ terraform_link = {
 	duration = 3600
 
 	potential = {
+		exists = owner
 		has_policy_flag = relentless_industrialists_study
 		has_country_flag = relentless_industrialists_study_completed
 	}
@@ -3178,6 +3331,7 @@ terraform_link = {
 	duration = 3600
 
 	potential = {
+		exists = owner
 		has_policy_flag = relentless_industrialists_study
 		has_country_flag = relentless_industrialists_study_completed
 	}
@@ -3204,6 +3358,7 @@ terraform_link = {
 	duration = 3600
 
 	potential = {
+		exists = owner
 		has_policy_flag = relentless_industrialists_study
 		has_country_flag = relentless_industrialists_study_completed
 	}
@@ -3230,6 +3385,7 @@ terraform_link = {
 	duration = @gaiaTime
 
 	potential = {
+		exists = owner
 		has_policy_flag = relentless_industrialists_study
 		has_country_flag = relentless_industrialists_study_completed
 	}
@@ -3258,6 +3414,7 @@ terraform_link = {
 	duration = @highestTime
 
 	potential = {
+		exists = owner
 		has_policy_flag = relentless_industrialists_study
 		has_country_flag = relentless_industrialists_study_completed
 		from = { has_modifier = terraforming_candidate }
@@ -3295,6 +3452,7 @@ terraform_link = {
 	duration = 3600
 
 	potential = {
+		exists = owner
 		from = { has_modifier = toxic_terraforming_candidate }
 	}
 	condition = {
@@ -3326,6 +3484,7 @@ terraform_link = {
 	duration = 3600
 
 	potential = {
+		exists = owner
 		from = { has_modifier = toxic_terraforming_candidate }
 	}
 	condition = {
@@ -3357,6 +3516,7 @@ terraform_link = {
 	duration = 3600
 
 	potential = {
+		exists = owner
 		from = { has_modifier = toxic_terraforming_candidate }
 	}
 	condition = {
@@ -3388,6 +3548,7 @@ terraform_link = {
 	duration = 5400
 
 	potential = {
+		exists = owner
 		from = { has_modifier = toxic_terraforming_candidate }
 	}
 	condition = {
@@ -3419,6 +3580,7 @@ terraform_link = {
 	duration = 3600
 
 	potential = {
+		exists = owner
 		from = { has_modifier = toxic_terraforming_candidate }
 	}
 	condition = {
@@ -3450,6 +3612,7 @@ terraform_link = {
 	duration = 3600
 
 	potential = {
+		exists = owner
 		from = { has_modifier = toxic_terraforming_candidate }
 	}
 	condition = {
@@ -3486,6 +3649,7 @@ terraform_link = {
 	duration = 3600
 
 	potential = {
+		exists = owner
 		from = { has_modifier = toxic_terraforming_candidate }
 	}
 	condition = {
@@ -3517,6 +3681,7 @@ terraform_link = {
 	duration = 3600
 
 	potential = {
+		exists = owner
 		from = { has_modifier = toxic_terraforming_candidate }
 	}
 	condition = {
@@ -3548,6 +3713,7 @@ terraform_link = {
 	duration = 3600
 
 	potential = {
+		exists = owner
 		from = { has_modifier = toxic_terraforming_candidate }
 	}
 	condition = {

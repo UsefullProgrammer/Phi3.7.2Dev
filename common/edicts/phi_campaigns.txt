@@ -296,76 +296,76 @@ phi_set_conquest_wg = {
 # }
 
 #### POLITICS ####
+#3.8 obsolete
+# abdicate = {
+# 	length = 0
+# 	potential = {
+# 		has_authority = auth_imperial
+# 	}
+# 	allow = {
+# 		exists = heir
+# 	}
+# 	effect = {
+# 		kill_leader = {
+# 			type = ruler
+# 			show_notification = yes
+# 			fire = yes
+# 		}
+# 	}
+# 	resources = {
+# 		category = edicts
+# 		cost = {
+# 			influence = 100
+# 		}
+# 	}
+# }
 
-abdicate = {
-	length = 0
-	potential = {
-		has_authority = auth_imperial
-	}
-	allow = {
-		exists = heir
-	}
-	effect = {
-		kill_leader = {
-			type = ruler
-			show_notification = yes
-			fire = yes
-		}
-	}
-	resources = {
-		category = edicts
-		cost = {
-			influence = 100
-		}
-	}
-}
+# new_heir = {
+# 	length = 0
+# 	potential = {
+# 		has_authority = auth_imperial
+# 	}
+# 	allow = {
+# 		exists = heir
+# 	}
+# 	effect = {
+# 		kill_leader = {
+# 			type = ruler
+# 			heir = yes
+# 			show_notification = yes
+# 			fire = yes
+# 		}
+# 	}
+# 	resources = {
+# 		category = edicts
+# 		cost = {
+# 			influence = 100
+# 		}
+# 	}
+# }
 
-new_heir = {
-	length = 0
-	potential = {
-		has_authority = auth_imperial
-	}
-	allow = {
-		exists = heir
-	}
-	effect = {
-		kill_leader = {
-			type = ruler
-			heir = yes
-			show_notification = yes
-			fire = yes
-		}
-	}
-	resources = {
-		category = edicts
-		cost = {
-			influence = 100
-		}
-	}
-}
-
-retire = {
-	length = 0
-	potential = {
-		has_authority = auth_dictatorial
-	}
-	allow = {
-		exists = ruler
-	}
-	effect = {
-		kill_leader = {
-			type = ruler
-			show_notification = yes
-			fire = yes
-		}
-	}
-	resources = {
-		category = edicts
-		cost = {
-			influence = 100
-		}
-	}
-}
+# retire = {
+# 	length = 0
+# 	potential = {
+# 		has_authority = auth_dictatorial
+# 	}
+# 	allow = {
+# 		exists = ruler
+# 	}
+# 	effect = {
+# 		kill_leader = {
+# 			type = ruler
+# 			show_notification = yes
+# 			fire = yes
+# 		}
+# 	}
+# 	resources = {
+# 		category = edicts
+# 		cost = {
+# 			influence = 100
+# 		}
+# 	}
+# }
 
 presidential_run = {
 	length = 0

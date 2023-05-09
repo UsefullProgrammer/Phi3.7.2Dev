@@ -21,12 +21,8 @@ tradition_mercantile = {
 			has_authority = auth_corporate
 		}
 		modifier = {
-			factor = 2
-			has_ethic = ethic_xenophile
-		}
-		modifier = {
-			factor = 3
-			has_ethic = ethic_fanatic_xenophile
+			factor = 10
+			should_ai_focus_on_trade = yes
 		}
 		modifier = {
 			factor = 0

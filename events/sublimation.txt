@@ -1191,7 +1191,7 @@ country_event = {
 				species = owner_main_species
 				name = random
 				traits = {
-					trait = leader_trait_general_chosen
+					trait = leader_trait_glory_seeker
 					trait = leader_trait_butcher
 				}
 			}

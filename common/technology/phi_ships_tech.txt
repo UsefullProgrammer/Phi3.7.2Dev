@@ -17,7 +17,7 @@ tech_carriers = {
 	}
 
 	modifier = {
-		country_command_limit_add = 10
+		command_limit_add = 10
 	}
 
 	weight_modifier = {
@@ -47,24 +47,10 @@ tech_carriers = {
 			factor = 1.25
 			has_tradition = tr_supremacy_adopt
 		}
-		modifier = {
-			factor = 1.25
-			research_leader = {
-				area = engineering
-				has_trait = "leader_trait_expertise_voidcraft"
-			}
-		}
 	}
 
 	ai_weight = {
 		factor = 100 #higher factor due to battleship hull
-		modifier = {
-			factor = 1.25
-			research_leader = {
-				area = engineering
-				has_trait = "leader_trait_expertise_voidcraft"
-			}
-		}
 	}
 }
 
@@ -87,23 +73,9 @@ tech_carrier_build_speed = {
 	}
 
 	weight_modifier = {
-		modifier = {
-			factor = 1.25
-			research_leader = {
-				area = engineering
-				has_trait = "leader_trait_expertise_voidcraft"
-			}
-		}
 	}
 
 	ai_weight = {
-		modifier = {
-			factor = 1.25
-			research_leader = {
-				area = engineering
-				has_trait = "leader_trait_expertise_voidcraft"
-			}
-		}
 	}
 }
 
@@ -124,24 +96,10 @@ tech_carrier_hull_1 = {
 			factor = 1.25
 			has_tradition = tr_supremacy_adopt
 		}
-		modifier = {
-			factor = 1.25
-			research_leader = {
-				area = engineering
-				has_trait = "leader_trait_expertise_voidcraft"
-			}
-		}
 	}
 
 	ai_weight = {
 		factor = 3 # ship upgrades are supposed to be good!
-		modifier = {
-			factor = 1.25
-			research_leader = {
-				area = engineering
-				has_trait = "leader_trait_expertise_voidcraft"
-			}
-		}
 	}
 }
 
@@ -160,23 +118,6 @@ tech_carrier_hull_2 = {
 
 	weight_modifier = {
 		modifier = {
-			factor = 0.25
-			NOR = {
-				research_leader = {
-					area = engineering
-					has_trait = "leader_trait_curator"
-				}
-				research_leader = {
-					area = engineering
-					has_trait = "leader_trait_spark_of_genius"
-				}
-				research_leader = {
-					area = engineering
-					has_trait = "leader_trait_expertise_voidcraft"
-				}
-			}
-		}
-		modifier = {
 			factor = @ap_technological_ascendancy_rare_tech
 			has_ascension_perk = ap_technological_ascendancy
 		}
@@ -192,24 +133,10 @@ tech_carrier_hull_2 = {
 			factor = 1.25
 			has_tradition = tr_supremacy_adopt
 		}
-		modifier = {
-			factor = 1.25
-			research_leader = {
-				area = engineering
-				has_trait = "leader_trait_expertise_voidcraft"
-			}
-		}
 	}
 
 	ai_weight = {
-		factor = 3 # ship upgrades are supposed to be good!
-		modifier = {
-			factor = 1.25
-			research_leader = {
-				area = engineering
-				has_trait = "leader_trait_expertise_voidcraft"
-			}
-		}
+		factor = 1000 # ship upgrades are supposed to be good!
 	}
 }
 tech_mega_assembly_Mk2 = {
@@ -232,27 +159,6 @@ tech_mega_assembly_Mk2 = {
 			NOT = { years_passed > 25 }
 		}
 		modifier = {
-			factor = 0.20
-			NOR = {
-				research_leader = {
-					area = engineering
-					has_trait = "leader_trait_maniacal"
-				}
-				research_leader = {
-					area = engineering
-					has_trait = "leader_trait_spark_of_genius"
-				}
-				research_leader = {
-					area = engineering
-					has_trait = "leader_trait_curator"
-				}
-				research_leader = {
-					area = engineering
-					has_trait = "leader_trait_expertise_industry"
-				}
-			}
-		}
-		modifier = {
 			factor = @ap_technological_ascendancy_rare_tech
 			has_ascension_perk = ap_technological_ascendancy
 		}
@@ -264,23 +170,9 @@ tech_mega_assembly_Mk2 = {
 				any_member = { has_technology = tech_mega_assembly_Mk2 }
 			}
 		}
-		modifier = {
-			factor = value:tech_weight_likelihood
-			research_leader = {
-				area = engineering
-				has_trait = "leader_trait_expertise_industry"
-			}
-		}
 	}
 
 	ai_weight = {
 		factor = @pop_growth_tech_ai_factor
-		modifier = {
-			factor = 1.25
-			research_leader = {
-				area = engineering
-				has_trait = "leader_trait_expertise_industry"
-			}
-		}
 	}
 }

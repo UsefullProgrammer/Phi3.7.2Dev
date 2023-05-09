@@ -45,13 +45,7 @@ tech_basic_science_lab_2 = {
 				has_country_flag = has_market_access
 			}
 		}
-		modifier = {
-			factor = value:tech_weight_likelihood
-			research_leader = {
-				area = physics
-				has_trait = "leader_trait_expertise_computing"
-			}
-		}
+
 		modifier = {
 			factor = 1.5
 			is_specialist_subject_type = { TYPE = scholarium }
@@ -60,13 +54,7 @@ tech_basic_science_lab_2 = {
 
 	ai_weight = {
 		factor = @ai_research_lab_factor
-		modifier = {
-			factor = 1.25
-			research_leader = {
-				area = physics
-				has_trait = "leader_trait_expertise_computing"
-			}
-		}
+
 	}
 }
 
@@ -82,13 +70,7 @@ tech_basic_science_lab_3 = {
 
 	weight_modifier = {
 		factor = 2
-		modifier = {
-			factor = value:tech_weight_likelihood
-			research_leader = {
-				area = physics
-				has_trait = "leader_trait_expertise_computing"
-			}
-		}
+
 		modifier = {
 			factor = 1.5
 			is_specialist_subject_type = { TYPE = scholarium }
@@ -97,13 +79,7 @@ tech_basic_science_lab_3 = {
 
 	ai_weight = {
 		factor = @ai_research_lab_factor
-		modifier = {
-			factor = 1.25
-			research_leader = {
-				area = physics
-				has_trait = "leader_trait_expertise_computing"
-			}
-		}
+
 	}
 }
 
@@ -120,21 +96,8 @@ tech_global_research_initiative = {
 		modifier = {
 			factor = 0.25
 			NOR = {
-				research_leader = {
-					area = physics
-					has_trait = "leader_trait_expertise_computing"
-				}
-				research_leader = {
-					area = physics
-					has_trait = "leader_trait_curator"
-				}
-			}
-		}
-		modifier = {
-			factor = value:tech_weight_likelihood
-			research_leader = {
-				area = physics
-				has_trait = "leader_trait_expertise_computing"
+				has_trait_in_council = { TRAIT = leader_trait_expertise_computing }
+				has_trait_in_council = { TRAIT = leader_trait_curator }
 			}
 		}
 		modifier = {
@@ -144,13 +107,7 @@ tech_global_research_initiative = {
 	}
 
 	ai_weight = {
-		modifier = {
-			factor = 1.25
-			research_leader = {
-				area = physics
-				has_trait = "leader_trait_expertise_computing"
-			}
-		}
+
 	}
 }
 
@@ -174,10 +131,7 @@ tech_curator_lab = {
 		}
 		modifier = {
 			factor = 3
-			research_leader = {
-				area = physics
-				has_trait = "leader_trait_curator"
-			}
+			has_trait_in_council = { TRAIT = leader_trait_curator }
 		}
 		modifier = {
 			factor = @ap_technological_ascendancy_rare_tech
@@ -194,10 +148,7 @@ tech_curator_lab = {
 		modifier = {
 			factor = 0
 			NOR = {
-				research_leader = {
-					area = physics
-					has_trait = "leader_trait_curator"
-				}
+				has_trait_in_council = { TRAIT = leader_trait_curator }
 				has_modifier = "curator_insight"
 			}
 		}
@@ -232,18 +183,12 @@ tech_archeology_lab = {
 		}
 		modifier = {
 			factor = 3
-			research_leader = {
-				area = physics
-				has_trait = "leader_trait_curator"
-			}
+			has_trait_in_council = { TRAIT = leader_trait_curator }
 		}
 		modifier = {
 			factor = 0
 			NOR = {
-				research_leader = {
-					area = physics
-					has_trait = "leader_trait_curator"
-				}
+				has_trait_in_council = { TRAIT = leader_trait_curator }
 				has_modifier = "curator_insight"
 			}
 		}
@@ -275,24 +220,11 @@ tech_space_science_1 = {
 	}
 
 	weight_modifier = {
-		modifier = {
-			factor = value:tech_weight_likelihood
-			research_leader = {
-				area = physics
-				has_trait = "leader_trait_expertise_computing"
-			}
-		}
+
 	}
 
 	ai_weight = {
 		factor = 1000
-		modifier = {
-			factor = 1.25
-			research_leader = {
-				area = physics
-				has_trait = "leader_trait_expertise_computing"
-			}
-		}
 	}
 }
 
@@ -309,24 +241,11 @@ tech_space_science_2 = {
 	}
 
 	weight_modifier = {
-		modifier = {
-			factor = value:tech_weight_likelihood
-			research_leader = {
-				area = physics
-				has_trait = "leader_trait_expertise_computing"
-			}
-		}
+
 	}
 
 	ai_weight = {
 		factor = 1000
-		modifier = {
-			factor = 1.25
-			research_leader = {
-				area = physics
-				has_trait = "leader_trait_expertise_computing"
-			}
-		}
 	}
 }
 
@@ -343,24 +262,11 @@ tech_space_science_3 = {
 	}
 
 	weight_modifier = {
-		modifier = {
-			factor = value:tech_weight_likelihood
-			research_leader = {
-				area = physics
-				has_trait = "leader_trait_expertise_computing"
-			}
-		}
+
 	}
 
 	ai_weight = {
 		factor = 1000
-		modifier = {
-			factor = 1.25
-			research_leader = {
-				area = physics
-				has_trait = "leader_trait_expertise_computing"
-			}
-		}
 	}
 }
 
@@ -377,24 +283,11 @@ tech_space_science_4 = {
 	}
 
 	weight_modifier = {
-		modifier = {
-			factor = value:tech_weight_likelihood
-			research_leader = {
-				area = physics
-				has_trait = "leader_trait_expertise_computing"
-			}
-		}
+
 	}
 
 	ai_weight = {
 		factor = 1000
-		modifier = {
-			factor = 1.25
-			research_leader = {
-				area = physics
-				has_trait = "leader_trait_expertise_computing"
-			}
-		}
 	}
 }
 
@@ -411,24 +304,11 @@ tech_space_science_5 = {
 	}
 
 	weight_modifier = {
-		modifier = {
-			factor = value:tech_weight_likelihood
-			research_leader = {
-				area = physics
-				has_trait = "leader_trait_expertise_computing"
-			}
-		}
+
 	}
 
 	ai_weight = {
 		factor = 1000
-		modifier = {
-			factor = 1.25
-			research_leader = {
-				area = physics
-				has_trait = "leader_trait_expertise_computing"
-			}
-		}
 	}
 }
 
@@ -470,13 +350,7 @@ tech_physics_1 = {
 			factor = 2
 			years_passed > 20
 		}
-		modifier = {
-			factor = value:tech_weight_likelihood
-			research_leader = {
-				area = physics
-				has_trait = "leader_trait_expertise_computing"
-			}
-		}
+
 		modifier = {
 			factor = 1.5
 			is_specialist_subject_type = { TYPE = scholarium }
@@ -485,13 +359,7 @@ tech_physics_1 = {
 
 	ai_weight = {
 		factor = @physics_research_ai_factor
-		modifier = {
-			factor = 1.25
-			research_leader = {
-				area = physics
-				has_trait = "leader_trait_expertise_computing"
-			}
-		}
+
 	}
 }
 
@@ -526,13 +394,7 @@ tech_physics_2 = {
 			factor = 2
 			years_passed > 40
 		}
-		modifier = {
-			factor = value:tech_weight_likelihood
-			research_leader = {
-				area = physics
-				has_trait = "leader_trait_expertise_computing"
-			}
-		}
+
 		modifier = {
 			factor = 1.5
 			is_specialist_subject_type = { TYPE = scholarium }
@@ -541,13 +403,7 @@ tech_physics_2 = {
 
 	ai_weight = {
 		factor = @physics_research_ai_factor
-		modifier = {
-			factor = 1.25
-			research_leader = {
-				area = physics
-				has_trait = "leader_trait_expertise_computing"
-			}
-		}
+
 	}
 }
 
@@ -582,13 +438,7 @@ tech_physics_3 = {
 			factor = 2
 			years_passed > 40
 		}
-		modifier = {
-			factor = value:tech_weight_likelihood
-			research_leader = {
-				area = physics
-				has_trait = "leader_trait_expertise_computing"
-			}
-		}
+
 		modifier = {
 			factor = 1.5
 			is_specialist_subject_type = { TYPE = scholarium }
@@ -597,13 +447,7 @@ tech_physics_3 = {
 
 	ai_weight = {
 		factor = @physics_research_ai_factor
-		modifier = {
-			factor = 1.25
-			research_leader = {
-				area = physics
-				has_trait = "leader_trait_expertise_computing"
-			}
-		}
+
 	}
 }
 
@@ -620,13 +464,7 @@ tech_administrative_ai = {
 	}
 
 	weight_modifier = {
-		modifier = {
-			factor = value:tech_weight_likelihood
-			research_leader = {
-				area = physics
-				has_trait = "leader_trait_expertise_computing"
-			}
-		}
+
 		modifier = {
 			factor = 1.5
 			is_specialist_subject_type = { TYPE = scholarium }
@@ -634,13 +472,7 @@ tech_administrative_ai = {
 	}
 
 	ai_weight = {
-		modifier = {
-			factor = 1.25
-			research_leader = {
-				area = physics
-				has_trait = "leader_trait_expertise_computing"
-			}
-		}
+
 	}
 }
 
@@ -659,23 +491,11 @@ tech_cryostasis_1 = {
 	}
 
 	weight_modifier = {
-		modifier = {
-			factor = value:tech_weight_likelihood
-			research_leader = {
-				area = physics
-				has_trait = "leader_trait_expertise_computing"
-			}
-		}
+
 	}
 
 	ai_weight = {
-		modifier = {
-			factor = 1.25
-			research_leader = {
-				area = physics
-				has_trait = "leader_trait_expertise_computing"
-			}
-		}
+
 	}
 }
 
@@ -694,23 +514,11 @@ tech_cryostasis_2 = {
 	}
 
 	weight_modifier = {
-		modifier = {
-			factor = value:tech_weight_likelihood
-			research_leader = {
-				area = physics
-				has_trait = "leader_trait_expertise_computing"
-			}
-		}
+
 	}
 
 	ai_weight = {
-		modifier = {
-			factor = 1.25
-			research_leader = {
-				area = physics
-				has_trait = "leader_trait_expertise_computing"
-			}
-		}
+
 	}
 }
 
@@ -727,23 +535,11 @@ tech_self_aware_logic = {
 	}
 
 	weight_modifier = {
-		modifier = {
-			factor = value:tech_weight_likelihood
-			research_leader = {
-				area = physics
-				has_trait = "leader_trait_expertise_computing"
-			}
-		}
+
 	}
 
 	ai_weight = {
-		modifier = {
-			factor = 1.25
-			research_leader = {
-				area = physics
-				has_trait = "leader_trait_expertise_computing"
-			}
-		}
+
 	}
 }
 
@@ -760,13 +556,7 @@ tech_automated_exploration = {
 	}
 
 	weight_modifier = {
-		modifier = {
-			factor = value:tech_weight_likelihood
-			research_leader = {
-				area = physics
-				has_trait = "leader_trait_expertise_computing"
-			}
-		}
+
 		modifier = {
 			factor = 1.25
 			has_tradition = tr_discovery_adopt
@@ -817,13 +607,7 @@ tech_automated_exploration = {
 	}
 
 	ai_weight = {
-		modifier = {
-			factor = 1.25
-			research_leader = {
-				area = physics
-				has_trait = "leader_trait_expertise_computing"
-			}
-		}
+
 	}
 }
 
@@ -844,13 +628,7 @@ tech_sapient_ai = {
 	}
 
 	weight_modifier = {
-		modifier = {
-			factor = value:tech_weight_likelihood
-			research_leader = {
-				area = physics
-				has_trait = "leader_trait_expertise_computing"
-			}
-		}
+
 		modifier = {
 			factor = 1.5
 			is_specialist_subject_type = { TYPE = scholarium }
@@ -858,13 +636,7 @@ tech_sapient_ai = {
 	}
 
 	ai_weight = {
-		modifier = {
-			factor = 1.25
-			research_leader = {
-				area = physics
-				has_trait = "leader_trait_expertise_computing"
-			}
-		}
+
 	}
 }
 
@@ -885,13 +657,7 @@ tech_positronic_implants = {
 	}
 
 	weight_modifier = {
-		modifier = {
-			factor = value:tech_weight_likelihood
-			research_leader = {
-				area = physics
-				has_trait = "leader_trait_expertise_computing"
-			}
-		}
+
 		modifier = {
 			factor = 1.5
 			is_specialist_subject_type = { TYPE = scholarium }
@@ -899,13 +665,7 @@ tech_positronic_implants = {
 	}
 
 	ai_weight = {
-		modifier = {
-			factor = 1.25
-			research_leader = {
-				area = physics
-				has_trait = "leader_trait_expertise_computing"
-			}
-		}
+
 	}
 }
 
@@ -933,13 +693,7 @@ tech_combat_computers_1 = {
 			factor = 2
 			has_technology = tech_battleships
 		}
-		modifier = {
-			factor = value:tech_weight_likelihood
-			research_leader = {
-				area = physics
-				has_trait = "leader_trait_expertise_computing"
-			}
-		}
+
 	}
 
 	prereqfor_desc = {
@@ -951,13 +705,7 @@ tech_combat_computers_1 = {
 	}
 
 	ai_weight = {
-		modifier = {
-			factor = 1.25
-			research_leader = {
-				area = physics
-				has_trait = "leader_trait_expertise_computing"
-			}
-		}
+
 	}
 }
 
@@ -973,13 +721,7 @@ tech_combat_computers_2 = {
 	# unlocks additional combat computers
 
 	weight_modifier = {
-		modifier = {
-			factor = value:tech_weight_likelihood
-			research_leader = {
-				area = physics
-				has_trait = "leader_trait_expertise_computing"
-			}
-		}
+
 	}
 
 	prereqfor_desc = {
@@ -991,13 +733,7 @@ tech_combat_computers_2 = {
 	}
 
 	ai_weight = {
-		modifier = {
-			factor = 1.25
-			research_leader = {
-				area = physics
-				has_trait = "leader_trait_expertise_computing"
-			}
-		}
+
 	}
 }
 
@@ -1024,18 +760,11 @@ tech_combat_computers_3 = {
 		modifier = {
 			factor = 0.20
 			NOR = {
-				research_leader = {
-					area = physics
-					has_trait = "leader_trait_expertise_computing"
-				}
-				research_leader = {
-					area = physics
-					has_trait = "leader_trait_curator"
-				}
-				research_leader = {
-					area = physics
-					has_trait = "leader_trait_maniacal"
-				}
+				has_trait_in_council = { TRAIT = leader_trait_expertise_computing }
+				has_trait_in_council = { TRAIT = leader_trait_curator }
+				has_trait_in_council = { TRAIT = leader_trait_maniacal }
+				has_trait_in_council = { TRAIT = leader_trait_maniacal_2 }
+				has_trait_in_council = { TRAIT = leader_trait_maniacal_3 }
 			}
 		}
 		modifier = {
@@ -1054,14 +783,7 @@ tech_combat_computers_3 = {
 				any_member = { has_technology = tech_combat_computers_3 }
 			}
 		}
-		modifier = {
-			factor = value:tech_weight_likelihood
-			research_leader = {
-				area = physics
-				has_trait = "leader_trait_expertise_computing"
-				has_level > 2
-			}
-		}
+
 		#BREAKTHROUGH - check for scientist
 	}
 
@@ -1074,13 +796,7 @@ tech_combat_computers_3 = {
 	}
 
 	ai_weight = {
-		modifier = {
-			factor = 1.25
-			research_leader = {
-				area = physics
-				has_trait = "leader_trait_expertise_computing"
-			}
-		}
+
 	}
 }
 
@@ -1105,18 +821,11 @@ tech_combat_computers_autonomous = {
 		modifier = {
 			factor = 0.20
 			NOR = {
-				research_leader = {
-					area = physics
-					has_trait = "leader_trait_expertise_computing"
-				}
-				research_leader = {
-					area = physics
-					has_trait = "leader_trait_curator"
-				}
-				research_leader = {
-					area = physics
-					has_trait = "leader_trait_maniacal"
-				}
+				has_trait_in_council = { TRAIT = leader_trait_expertise_computing }
+				has_trait_in_council = { TRAIT = leader_trait_curator }
+				has_trait_in_council = { TRAIT = leader_trait_maniacal }
+				has_trait_in_council = { TRAIT = leader_trait_maniacal_2 }
+				has_trait_in_council = { TRAIT = leader_trait_maniacal_3 }
 			}
 		}
 		modifier = {
@@ -1131,14 +840,7 @@ tech_combat_computers_autonomous = {
 				any_member = { has_technology = tech_combat_computers_autonomous }
 			}
 		}
-		modifier = {
-			factor = value:tech_weight_likelihood
-			research_leader = {
-				area = physics
-				has_trait = "leader_trait_expertise_computing"
-				has_level > 2
-			}
-		}
+
 	}
 
 	prereqfor_desc = {
@@ -1150,13 +852,7 @@ tech_combat_computers_autonomous = {
 	}
 
 	ai_weight = {
-		modifier = {
-			factor = 1.25
-			research_leader = {
-				area = physics
-				has_trait = "leader_trait_expertise_computing"
-			}
-		}
+
 	}
 }
 
@@ -1172,13 +868,7 @@ tech_auxiliary_fire_control = {
 	# unlocks aggressive / defensive combat computers
 
 	weight_modifier = {
-		modifier = {
-			factor = value:tech_weight_likelihood
-			research_leader = {
-				area = physics
-				has_trait = "leader_trait_expertise_computing"
-			}
-		}
+
 	}
 
 	prereqfor_desc = {
@@ -1189,13 +879,7 @@ tech_auxiliary_fire_control = {
 	}
 
 	ai_weight = {
-		modifier = {
-			factor = 1.25
-			research_leader = {
-				area = physics
-				has_trait = "leader_trait_expertise_computing"
-			}
-		}
+
 	}
 }
 
@@ -1216,14 +900,8 @@ tech_synchronized_defences = {
 		modifier = {
 			factor = 0.50
 			NOR = {
-				research_leader = {
-					area = physics
-					has_trait = "leader_trait_expertise_computing"
-				}
-				research_leader = {
-					area = physics
-					has_trait = "leader_trait_curator"
-				}
+				has_trait_in_council = { TRAIT = leader_trait_expertise_computing }
+				has_trait_in_council = { TRAIT = leader_trait_curator }
 			}
 		}
 		modifier = {
@@ -1257,13 +935,7 @@ tech_synchronized_defences = {
 	}
 
 	ai_weight = {
-		modifier = {
-			factor = 1.25
-			research_leader = {
-				area = physics
-				has_trait = "leader_trait_expertise_computing"
-			}
-		}
+
 	}
 }
 
@@ -1288,23 +960,11 @@ tech_consumer_good_refinement_1 = {
 
 	weight_modifier = {
 		factor = 2
-		modifier = {
-			factor = value:tech_weight_likelihood
-			research_leader = {
-				area = physics
-				has_trait = "leader_trait_expertise_computing"
-			}
-		}
+
 	}
 
 	ai_weight = {
-		modifier = {
-			factor = 1.25
-			research_leader = {
-				area = physics
-				has_trait = "leader_trait_expertise_computing"
-			}
-		}
+
 	}
 }
 
@@ -1329,23 +989,11 @@ tech_consumer_good_refinement_2 = {
 
 	weight_modifier = {
 		factor = 2
-		modifier = {
-			factor = value:tech_weight_likelihood
-			research_leader = {
-				area = physics
-				has_trait = "leader_trait_expertise_computing"
-			}
-		}
+
 	}
 
 	ai_weight = {
-		modifier = {
-			factor = 1.25
-			research_leader = {
-				area = physics
-				has_trait = "leader_trait_expertise_computing"
-			}
-		}
+
 	}
 }
 
@@ -1374,33 +1022,14 @@ tech_neuro_quantum_links = {
 		modifier = {
 			factor = 0.25
 			NOR = {
-				research_leader = {
-					area = physics
-					has_trait = "leader_trait_expertise_computing"
-				}
-				research_leader = {
-					area = physics
-					has_trait = "leader_trait_curator"
-				}
-			}
-		}
-		modifier = {
-			factor = value:tech_weight_likelihood
-			research_leader = {
-				area = physics
-				has_trait = "leader_trait_expertise_computing"
+				has_trait_in_council = { TRAIT = leader_trait_expertise_computing }
+				has_trait_in_council = { TRAIT = leader_trait_curator }
 			}
 		}
 	}
 
 	ai_weight = {
-		modifier = {
-			factor = 1.25
-			research_leader = {
-				area = physics
-				has_trait = "leader_trait_expertise_computing"
-			}
-		}
+
 	}
 }
 
@@ -1421,13 +1050,7 @@ tech_encryption_1 = {
 	}
 
 	weight_modifier = {
-		modifier = {
-			factor = value:tech_weight_likelihood
-			research_leader = {
-				area = physics
-				has_trait = "leader_trait_expertise_computing"
-			}
-		}
+
 		modifier = {
 			factor = 0.1
 			NOR = {
@@ -1442,13 +1065,7 @@ tech_encryption_1 = {
 	}
 
 	ai_weight = {
-		modifier = {
-			factor = 1.25
-			research_leader = {
-				area = physics
-				has_trait = "leader_trait_expertise_computing"
-			}
-		}
+
 	}
 }
 
@@ -1467,13 +1084,7 @@ tech_encryption_2 = {
 	}
 
 	weight_modifier = {
-		modifier = {
-			factor = value:tech_weight_likelihood
-			research_leader = {
-				area = physics
-				has_trait = "leader_trait_expertise_computing"
-			}
-		}
+
 		modifier = {
 			factor = 0.1
 			NOR = {
@@ -1488,13 +1099,7 @@ tech_encryption_2 = {
 	}
 
 	ai_weight = {
-		modifier = {
-			factor = 1.25
-			research_leader = {
-				area = physics
-				has_trait = "leader_trait_expertise_computing"
-			}
-		}
+
 	}
 }
 
@@ -1511,13 +1116,7 @@ tech_encryption_3 = {
 	}
 
 	weight_modifier = {
-		modifier = {
-			factor = value:tech_weight_likelihood
-			research_leader = {
-				area = physics
-				has_trait = "leader_trait_expertise_computing"
-			}
-		}
+
 		modifier = {
 			factor = 0.1
 			NOR = {
@@ -1532,13 +1131,7 @@ tech_encryption_3 = {
 	}
 
 	ai_weight = {
-		modifier = {
-			factor = 1.25
-			research_leader = {
-				area = physics
-				has_trait = "leader_trait_expertise_computing"
-			}
-		}
+
 	}
 }
 
@@ -1557,13 +1150,7 @@ tech_decryption_1 = {
 	}
 
 	weight_modifier = {
-		modifier = {
-			factor = value:tech_weight_likelihood
-			research_leader = {
-				area = physics
-				has_trait = "leader_trait_expertise_computing"
-			}
-		}
+
 		modifier = {
 			factor = 0.1
 			NOR = {
@@ -1578,13 +1165,7 @@ tech_decryption_1 = {
 	}
 
 	ai_weight = {
-		modifier = {
-			factor = 1.25
-			research_leader = {
-				area = physics
-				has_trait = "leader_trait_expertise_computing"
-			}
-		}
+
 	}
 }
 
@@ -1603,13 +1184,7 @@ tech_decryption_2 = {
 	}
 
 	weight_modifier = {
-		modifier = {
-			factor = value:tech_weight_likelihood
-			research_leader = {
-				area = physics
-				has_trait = "leader_trait_expertise_computing"
-			}
-		}
+
 		modifier = {
 			factor = 0.1
 			NOR = {
@@ -1624,13 +1199,7 @@ tech_decryption_2 = {
 	}
 
 	ai_weight = {
-		modifier = {
-			factor = 1.25
-			research_leader = {
-				area = physics
-				has_trait = "leader_trait_expertise_computing"
-			}
-		}
+
 	}
 }
 
@@ -1647,13 +1216,7 @@ tech_decryption_3 = {
 	}
 
 	weight_modifier = {
-		modifier = {
-			factor = value:tech_weight_likelihood
-			research_leader = {
-				area = physics
-				has_trait = "leader_trait_expertise_computing"
-			}
-		}
+
 		modifier = {
 			factor = 0.1
 			NOR = {
@@ -1668,13 +1231,7 @@ tech_decryption_3 = {
 	}
 
 	ai_weight = {
-		modifier = {
-			factor = 1.25
-			research_leader = {
-				area = physics
-				has_trait = "leader_trait_expertise_computing"
-			}
-		}
+
 	}
 }
 
@@ -1724,23 +1281,11 @@ tech_fusion_power = {
 			factor = 2
 			has_technology = tech_destroyers
 		}
-		modifier = {
-			factor = value:tech_weight_likelihood
-			research_leader = {
-				area = physics
-				has_trait = "leader_trait_expertise_particles"
-			}
-		}
+		
 	}
 
 	ai_weight = {
-		modifier = {
-			factor = 1.25
-			research_leader = {
-				area = physics
-				has_trait = "leader_trait_expertise_particles"
-			}
-		}
+
 	}
 }
 
@@ -1769,23 +1314,11 @@ tech_cold_fusion_power = {
 			factor = 2
 			has_technology = tech_cruisers
 		}
-		modifier = {
-			factor = value:tech_weight_likelihood
-			research_leader = {
-				area = physics
-				has_trait = "leader_trait_expertise_particles"
-			}
-		}
+		
 	}
 
 	ai_weight = {
-		modifier = {
-			factor = 1.25
-			research_leader = {
-				area = physics
-				has_trait = "leader_trait_expertise_particles"
-			}
-		}
+
 	}
 }
 
@@ -1814,23 +1347,11 @@ tech_antimatter_power = {
 			factor = 2
 			has_technology = tech_battleships
 		}
-		modifier = {
-			factor = value:tech_weight_likelihood
-			research_leader = {
-				area = physics
-				has_trait = "leader_trait_expertise_particles"
-			}
-		}
+		
 	}
 
 	ai_weight = {
-		modifier = {
-			factor = 1.25
-			research_leader = {
-				area = physics
-				has_trait = "leader_trait_expertise_particles"
-			}
-		}
+
 	}
 }
 
@@ -1859,23 +1380,11 @@ tech_zero_point_power = {
 			factor = 2
 			has_technology = tech_battleships
 		}
-		modifier = {
-			factor = value:tech_weight_likelihood
-			research_leader = {
-				area = physics
-				has_trait = "leader_trait_expertise_particles"
-			}
-		}
+		
 	}
 
 	ai_weight = {
-		modifier = {
-			factor = 1.25
-			research_leader = {
-				area = physics
-				has_trait = "leader_trait_expertise_particles"
-			}
-		}
+
 	}
 }
 
@@ -1900,23 +1409,11 @@ tech_reactor_boosters_2 = {
 
 	weight_modifier = {
 		factor = 1.5
-		modifier = {
-			factor = value:tech_weight_likelihood
-			research_leader = {
-				area = physics
-				has_trait = "leader_trait_expertise_particles"
-			}
-		}
+		
 	}
 
 	ai_weight = {
-		modifier = {
-			factor = 1.25
-			research_leader = {
-				area = physics
-				has_trait = "leader_trait_expertise_particles"
-			}
-		}
+
 	}
 }
 
@@ -1931,23 +1428,11 @@ tech_reactor_boosters_3 = {
 
 	weight_modifier = {
 		factor = 1.5
-		modifier = {
-			factor = value:tech_weight_likelihood
-			research_leader = {
-				area = physics
-				has_trait = "leader_trait_expertise_particles"
-			}
-		}
+		
 	}
 
 	ai_weight = {
-		modifier = {
-			factor = 1.25
-			research_leader = {
-				area = physics
-				has_trait = "leader_trait_expertise_particles"
-			}
-		}
+
 	}
 }
 
@@ -1976,13 +1461,7 @@ tech_shields_2 = {
 
 	weight_modifier = {
 		factor = 1.25
-		modifier = {
-			factor = value:tech_weight_likelihood
-			research_leader = {
-				area = physics
-				has_trait = "leader_trait_expertise_field_manipulation"
-			}
-		}
+
 		modifier = {
 			factor = 1.5
 			is_specialist_subject_type = { TYPE = bulwark }
@@ -1990,13 +1469,7 @@ tech_shields_2 = {
 	}
 
 	ai_weight = {
-		modifier = {
-			factor = 1.25
-			research_leader = {
-				area = physics
-				has_trait = "leader_trait_expertise_field_manipulation"
-			}
-		}
+
 	}
 }
 
@@ -2011,13 +1484,7 @@ tech_shields_3 = {
 
 	weight_modifier = {
 		factor = 1.25
-		modifier = {
-			factor = value:tech_weight_likelihood
-			research_leader = {
-				area = physics
-				has_trait = "leader_trait_expertise_field_manipulation"
-			}
-		}
+
 		modifier = {
 			factor = 1.5
 			is_specialist_subject_type = { TYPE = bulwark }
@@ -2025,13 +1492,7 @@ tech_shields_3 = {
 	}
 
 	ai_weight = {
-		modifier = {
-			factor = 1.25
-			research_leader = {
-				area = physics
-				has_trait = "leader_trait_expertise_field_manipulation"
-			}
-		}
+
 	}
 }
 
@@ -2046,13 +1507,7 @@ tech_shields_4 = {
 
 	weight_modifier = {
 		factor = 1.25
-		modifier = {
-			factor = value:tech_weight_likelihood
-			research_leader = {
-				area = physics
-				has_trait = "leader_trait_expertise_field_manipulation"
-			}
-		}
+
 		modifier = {
 			factor = 1.5
 			is_specialist_subject_type = { TYPE = bulwark }
@@ -2060,13 +1515,7 @@ tech_shields_4 = {
 	}
 
 	ai_weight = {
-		modifier = {
-			factor = 1.25
-			research_leader = {
-				area = physics
-				has_trait = "leader_trait_expertise_field_manipulation"
-			}
-		}
+
 	}
 }
 
@@ -2081,13 +1530,7 @@ tech_shields_5 = {
 
 	weight_modifier = {
 		factor = 1.25
-		modifier = {
-			factor = value:tech_weight_likelihood
-			research_leader = {
-				area = physics
-				has_trait = "leader_trait_expertise_field_manipulation"
-			}
-		}
+
 		modifier = {
 			factor = 1.5
 			is_specialist_subject_type = { TYPE = bulwark }
@@ -2095,13 +1538,7 @@ tech_shields_5 = {
 	}
 
 	ai_weight = {
-		modifier = {
-			factor = 1.25
-			research_leader = {
-				area = physics
-				has_trait = "leader_trait_expertise_field_manipulation"
-			}
-		}
+
 	}
 }
 
@@ -2115,23 +1552,11 @@ tech_shield_rechargers_1 = {
 	weight = @tier2weight3
 
 	weight_modifier = {
-		modifier = {
-			factor = value:tech_weight_likelihood
-			research_leader = {
-				area = physics
-				has_trait = "leader_trait_expertise_field_manipulation"
-			}
-		}
+
 	}
 
 	ai_weight = {
-		modifier = {
-			factor = 1.25
-			research_leader = {
-				area = physics
-				has_trait = "leader_trait_expertise_field_manipulation"
-			}
-		}
+
 	}
 }
 
@@ -2145,23 +1570,11 @@ tech_shield_hardeners_1 = {
 	weight = @tier2weight3
 
 	weight_modifier = {
-		modifier = {
-			factor = value:tech_weight_likelihood
-			research_leader = {
-				area = physics
-				has_trait = "leader_trait_expertise_field_manipulation"
-			}
-		}
+
 	}
 
 	ai_weight = {
-		modifier = {
-			factor = 1.25
-			research_leader = {
-				area = physics
-				has_trait = "leader_trait_expertise_field_manipulation"
-			}
-		}
+
 	}
 }
 
@@ -2175,23 +1588,11 @@ tech_shield_hardeners_2 = {
 	weight = @tier5weight3
 
 	weight_modifier = {
-		modifier = {
-			factor = value:tech_weight_likelihood
-			research_leader = {
-				area = physics
-				has_trait = "leader_trait_expertise_field_manipulation"
-			}
-		}
+
 	}
 
 	ai_weight = {
-		modifier = {
-			factor = 1.25
-			research_leader = {
-				area = physics
-				has_trait = "leader_trait_expertise_field_manipulation"
-			}
-		}
+
 	}
 }
 
@@ -2210,18 +1611,10 @@ tech_planetary_shield_generator = {
 		modifier = {
 			factor = 0.5
 			NOR = {
-				research_leader = {
-					area = physics
-					has_trait = "leader_trait_expertise_field_manipulation"
-				}
-				research_leader = {
-					area = physics
-					has_trait = "leader_trait_curator"
-				}
-				research_leader = {
-					area = physics
-					has_trait = "leader_trait_spark_of_genius"
-				}
+				has_trait_in_council = { TRAIT = leader_trait_expertise_field_manipulation }
+				has_trait_in_council = { TRAIT = leader_trait_curator }
+				has_trait_in_council = { TRAIT = leader_trait_spark_of_genius }
+				has_trait_in_council = { TRAIT = leader_trait_spark_of_genius_2 }
 			}
 		}
 		modifier = {
@@ -2236,13 +1629,7 @@ tech_planetary_shield_generator = {
 				any_member = { has_technology = tech_planetary_shield_generator }
 			}
 		}
-		modifier = {
-			factor = value:tech_weight_likelihood
-			research_leader = {
-				area = physics
-				has_trait = "leader_trait_expertise_field_manipulation"
-			}
-		}
+
 	}
 
 	# unlocks building: planetary shield generator
@@ -2265,23 +1652,11 @@ tech_sensors_2 = {
 			factor = 1.25
 			has_tradition = tr_discovery_adopt
 		}
-		modifier = {
-			factor = value:tech_weight_likelihood
-			research_leader = {
-				area = physics
-				has_trait = "leader_trait_expertise_computing"
-			}
-		}
+
 	}
 
 	ai_weight = {
-		modifier = {
-			factor = 1.25
-			research_leader = {
-				area = physics
-				has_trait = "leader_trait_expertise_computing"
-			}
-		}
+
 	}
 
 	prereqfor_desc = {
@@ -2306,23 +1681,11 @@ tech_sensors_3 = {
 			factor = 1.25
 			has_tradition = tr_discovery_adopt
 		}
-		modifier = {
-			factor = value:tech_weight_likelihood
-			research_leader = {
-				area = physics
-				has_trait = "leader_trait_expertise_computing"
-			}
-		}
+
 	}
 
 	ai_weight = {
-		modifier = {
-			factor = 1.25
-			research_leader = {
-				area = physics
-				has_trait = "leader_trait_expertise_computing"
-			}
-		}
+
 	}
 
 	prereqfor_desc = {
@@ -2347,23 +1710,11 @@ tech_sensors_4 = {
 			factor = 1.25
 			has_tradition = tr_discovery_adopt
 		}
-		modifier = {
-			factor = value:tech_weight_likelihood
-			research_leader = {
-				area = physics
-				has_trait = "leader_trait_expertise_computing"
-			}
-		}
+
 	}
 
 	ai_weight = {
-		modifier = {
-			factor = 1.25
-			research_leader = {
-				area = physics
-				has_trait = "leader_trait_expertise_computing"
-			}
-		}
+
 	}
 
 	prereqfor_desc = {
@@ -2407,24 +1758,12 @@ tech_power_plant_2 = {
 			factor = 1.25
 			has_tradition = tr_prosperity_adopt
 		}
-		modifier = {
-			factor = value:tech_weight_likelihood
-			research_leader = {
-				area = physics
-				has_trait = "leader_trait_expertise_field_manipulation"
-			}
-		}
+
 	}
 
 	ai_weight = {
 		factor = @technician_ai_factor
-		modifier = {
-			factor = 1.25
-			research_leader = {
-				area = physics
-				has_trait = "leader_trait_expertise_field_manipulation"
-			}
-		}
+
 	}
 }
 
@@ -2447,24 +1786,12 @@ tech_power_plant_3 = {
 			factor = 1.25
 			has_tradition = tr_prosperity_adopt
 		}
-		modifier = {
-			factor = value:tech_weight_likelihood
-			research_leader = {
-				area = physics
-				has_trait = "leader_trait_expertise_field_manipulation"
-			}
-		}
+
 	}
 
 	ai_weight = {
 		factor = @technician_ai_factor
-		modifier = {
-			factor = 1.25
-			research_leader = {
-				area = physics
-				has_trait = "leader_trait_expertise_field_manipulation"
-			}
-		}
+
 	}
 }
 
@@ -2487,24 +1814,12 @@ tech_power_plant_4 = {
 			factor = 1.25
 			has_tradition = tr_prosperity_adopt
 		}
-		modifier = {
-			factor = value:tech_weight_likelihood
-			research_leader = {
-				area = physics
-				has_trait = "leader_trait_expertise_field_manipulation"
-			}
-		}
+
 	}
 
 	ai_weight = {
 		factor = @technician_ai_factor
-		modifier = {
-			factor = 1.25
-			research_leader = {
-				area = physics
-				has_trait = "leader_trait_expertise_field_manipulation"
-			}
-		}
+
 	}
 }
 
@@ -2523,13 +1838,7 @@ tech_power_hub_1 = {
 			factor = 1.25
 			has_tradition = tr_prosperity_adopt
 		}
-		modifier = {
-			factor = value:tech_weight_likelihood
-			research_leader = {
-				area = physics
-				has_trait = "leader_trait_expertise_field_manipulation"
-			}
-		}
+
 		modifier = {
 			factor = 1.5
 			is_specialist_subject_type = { TYPE = prospectorium }
@@ -2538,13 +1847,7 @@ tech_power_hub_1 = {
 
 	ai_weight = {
 		factor = @energy_grid_ai_factor # Energy grid
-		modifier = {
-			factor = 1.25
-			research_leader = {
-				area = physics
-				has_trait = "leader_trait_expertise_field_manipulation"
-			}
-		}
+
 	}
 }
 
@@ -2570,13 +1873,7 @@ tech_power_hub_2 = {
 			factor = 2
 			has_tradition = tr_prosperity_adopt
 		}
-		modifier = {
-			factor = value:tech_weight_likelihood
-			research_leader = {
-				area = physics
-				has_trait = "leader_trait_expertise_field_manipulation"
-			}
-		}
+
 		modifier = {
 			factor = 1.5
 			is_specialist_subject_type = { TYPE = prospectorium }
@@ -2585,13 +1882,7 @@ tech_power_hub_2 = {
 
 	ai_weight = {
 		factor = @energy_grid_ai_factor # Energy grid level 2
-		modifier = {
-			factor = 1.25
-			research_leader = {
-				area = physics
-				has_trait = "leader_trait_expertise_field_manipulation"
-			}
-		}
+
 	}
 }
 
@@ -2652,13 +1943,6 @@ tech_hyper_drive_2 = {
 			factor = @eager_explorer_effect
 			is_eager_explorer_empire = yes
 		}
-		modifier = {
-			factor = value:tech_weight_likelihood
-			research_leader = {
-				area = physics
-				has_trait = "leader_trait_expertise_particles"
-			}
-		}
 	}
 
 	prereqfor_desc = {
@@ -2669,13 +1953,7 @@ tech_hyper_drive_2 = {
 	}
 
 	ai_weight = {
-		modifier = {
-			factor = 1.25
-			research_leader = {
-				area = physics
-				has_trait = "leader_trait_expertise_particles"
-			}
-		}
+
 	}
 }
 
@@ -2702,13 +1980,6 @@ tech_hyper_drive_3 = {
 			factor = @eager_explorer_effect
 			is_eager_explorer_empire = yes
 		}
-		modifier = {
-			factor = value:tech_weight_likelihood
-			research_leader = {
-				area = physics
-				has_trait = "leader_trait_expertise_particles"
-			}
-		}
 	}
 
 	prereqfor_desc = {
@@ -2719,13 +1990,7 @@ tech_hyper_drive_3 = {
 	}
 
 	ai_weight = {
-		modifier = {
-			factor = 1.25
-			research_leader = {
-				area = physics
-				has_trait = "leader_trait_expertise_particles"
-			}
-		}
+
 	}
 }
 
@@ -2746,22 +2011,13 @@ tech_wormhole_stabilization = {
 		modifier = {
 			factor = 0.5
 			NOR = {
-				research_leader = {
-					area = physics
-					has_trait = "leader_trait_expertise_particles"
-				}
-				research_leader = {
-					area = physics
-					has_trait = "leader_trait_curator"
-				}
-				research_leader = {
-					area = physics
-					has_trait = "leader_trait_spark_of_genius"
-				}
-				research_leader = {
-					area = physics
-					has_trait = "leader_trait_maniacal"
-				}
+				has_trait_in_council = { TRAIT = leader_trait_expertise_particles }
+				has_trait_in_council = { TRAIT = leader_trait_curator }
+				has_trait_in_council = { TRAIT = leader_trait_spark_of_genius }
+				has_trait_in_council = { TRAIT = leader_trait_spark_of_genius_2 }
+				has_trait_in_council = { TRAIT = leader_trait_maniacal }
+				has_trait_in_council = { TRAIT = leader_trait_maniacal_2 }
+				has_trait_in_council = { TRAIT = leader_trait_maniacal_3 }
 			}
 		}
 		modifier = {
@@ -2788,13 +2044,7 @@ tech_wormhole_stabilization = {
 				any_member = { has_technology = tech_wormhole_stabilization }
 			}
 		}
-		modifier = {
-			factor = value:tech_weight_likelihood
-			research_leader = {
-				area = physics
-				has_trait = "leader_trait_expertise_particles"
-			}
-		}
+		
 		modifier = {
 			factor = 0
 			NOR = {
@@ -2810,15 +2060,19 @@ tech_wormhole_stabilization = {
 			factor = 4
 			owns_any_bypass = wormhole
 		}
+		modifier = {
+			factor = 10
+			mid_game_years_passed > 0
+			exists = event_target:chosen_empire
+			is_same_value = event_target:chosen_empire
+		}
 	}
 
 	ai_weight = {
 		modifier = {
-			factor = 1.25
-			research_leader = {
-				area = physics
-				has_trait = "leader_trait_expertise_particles"
-			}
+			factor = 100
+			mid_game_years_passed > 0
+			has_country_flag = chosen_empire
 		}
 	}
 }
@@ -2844,22 +2098,13 @@ tech_jump_drive_1 = {
 		modifier = {
 			factor = 0.1
 			NOR = {
-				research_leader = {
-					area = physics
-					has_trait = "leader_trait_expertise_particles"
-				}
-				research_leader = {
-					area = physics
-					has_trait = "leader_trait_curator"
-				}
-				research_leader = {
-					area = physics
-					has_trait = "leader_trait_spark_of_genius"
-				}
-				research_leader = {
-					area = physics
-					has_trait = "leader_trait_maniacal"
-				}
+				has_trait_in_council = { TRAIT = leader_trait_expertise_particles }
+				has_trait_in_council = { TRAIT = leader_trait_curator }
+				has_trait_in_council = { TRAIT = leader_trait_spark_of_genius }
+				has_trait_in_council = { TRAIT = leader_trait_spark_of_genius_2 }
+				has_trait_in_council = { TRAIT = leader_trait_maniacal }
+				has_trait_in_council = { TRAIT = leader_trait_maniacal_2 }
+				has_trait_in_council = { TRAIT = leader_trait_maniacal_3 }
 			}
 		}
 		modifier = {
@@ -2921,23 +2166,11 @@ tech_ftl_inhibitor = {
 			factor = 1.25
 			has_tradition = tr_unyielding_adopt
 		}
-		modifier = {
-			factor = value:tech_weight_likelihood
-			research_leader = {
-				area = physics
-				has_trait = "leader_trait_expertise_particles"
-			}
-		}
+		
 	}
 
 	ai_weight = {
-		modifier = {
-			factor = 1.25
-			research_leader = {
-				area = physics
-				has_trait = "leader_trait_expertise_particles"
-			}
-		}
+
 	}
 }
 
