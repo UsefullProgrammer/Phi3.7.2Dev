@@ -893,7 +893,7 @@ ap_executive_vigor = {
 ap_transcendent_learning = {
 	modifier = {
 		country_leader_cap_add = 2
-		species_leader_exp_gain = 3
+		species_leader_exp_gain = 2
 	}
 
 	potential = {

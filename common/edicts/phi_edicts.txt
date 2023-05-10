@@ -19,7 +19,7 @@ greater_than_ourselves_light = {
 	}
 
 	modifier = {
-		planet_resettlement_unemployed_mult = 0.5
+		planet_resettlement_unemployed_mult = 1.5
 	}
 
 	potential = {

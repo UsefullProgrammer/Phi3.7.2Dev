@@ -62,10 +62,6 @@ education_campaign = {
 	
 	effect = {
 		custom_tooltip = "phi_education_campaign_tooltip"
-		set_timed_country_flag = {
-			flag = phi_education_campaign
-			days = @campaignDuration
-		}
 	}
 
 	potential = {
@@ -180,13 +176,8 @@ machine_learning_campaign = {
 	modifier = {
 		species_leader_exp_gain = 0.50
 	}
-
 	effect = {
 		custom_tooltip = "phi_education_campaign_tooltip"
-		set_timed_country_flag = {
-			flag = phi_education_campaign
-			days = @campaignDuration
-		}
 	}
 
 	potential = {
@@ -265,13 +256,8 @@ learning_campaign = {
 	modifier = {
 		species_leader_exp_gain = 0.5
 	}
-
 	effect = {
 		custom_tooltip = "phi_education_campaign_tooltip"
-		set_timed_country_flag = {
-			flag = phi_education_campaign
-			days = @campaignDuration
-		}
 	}
 
 	potential = {

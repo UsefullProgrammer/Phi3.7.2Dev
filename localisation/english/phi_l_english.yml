@@ -501,7 +501,7 @@ edict_phi_set_survive_wg_desc: "Set the §YSurvive§! War Goal to every defensiv
 edict_phi_set_conquest_wg: "Punish the offender!"
 edict_phi_set_conquest_wg_desc: "Set the §YConquest§! War Goal to every defensive wars in which we are the main defender."
 
-phi_education_campaign_tooltip: "Every owned §Yleader§! gets §Y+5§! experience per month."
+phi_education_campaign_tooltip: "Every owned §Yleader§! gets §Y+3§! experience per month."
 
 edict_abdicate: "Abdicate"
 edict_abdicate_desc: "The time has come."
@@ -983,3 +983,4 @@ tech_mega_assembly_Mk2_desc:0 "Giga-Advanced templates allow us to drastically i
 edict_greater_than_ourselves_light:0 "Free resettlement"
 edict_greater_than_ourselves_light_desc:1 "Encourages free unemployed pops to voluntarily resettle themselves to suitable planets with jobs and housing within our empire."
 tr_domination_colonial_viceroys_desc:0 "§YRulers§! and §YGovernors§! start at level §Y3§!."
+origin_tooltip_doomsday_effects:2 "§G- WARNING: Easy Origin§!"

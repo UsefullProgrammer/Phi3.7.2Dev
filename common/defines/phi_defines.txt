@@ -251,8 +251,8 @@
 		LEADER_SKILL_MIN		= 1
 		LEADER_AGE_HEIR_MIN		= 18				# Min age of generated heirs in dynastic governments
 		LEADER_AGE_HEIR_MAX		= 26				# Max age of generated heirs in dynastic governments
-		LEADER_AGE_MIN			= 25				# Min age of generated leaders
-		LEADER_AGE_MAX			= 35				# Max age of generated leaders
+		LEADER_AGE_MIN			= 21				# Min age of generated leaders
+		LEADER_AGE_MAX			= 45				# Max age of generated leaders
 		LEADER_SKILL_LEVEL_START	= 1			# Skill Level Leaders start with. XP needed { 200 475 825 1250 }
 		LEADER_EXPERIENCE_REQUIREMENT_BASE_VALUE					= 100 # Base value when calculating required experience for next skill level
 		LEADER_EXPERIENCE_REQUIREMENT_SCALE_VALUE					= 300 # Scale factor when calculating required experience for next skill level

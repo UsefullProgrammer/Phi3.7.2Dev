@@ -523,16 +523,15 @@ country_event = {
 country_event = {
 	id = phi_politics.4
 	hide_window = yes
-
 	is_triggered_only = yes
 	
 	trigger = {
-		has_country_flag = phi_education_campaign
+		is_in_learning_campaign = yes
 	}
 	
 	immediate = {
 		every_owned_leader = {
-			add_experience = 5
+			add_experience = 3
 		}
 	}
 }

@@ -217,63 +217,71 @@ Sussidiarie non possono più avere come agrement espansione regolata (dava tropp
 
 [h2][b]1.2 Robot , optimization & Minerals[/b][/h2]
 [b]Gestait[/b]
-Ora le capital dei robot hanno un coordinator al posto di un maintance drone.
-Uplink di livello 2 e 3 non costano più cristal nell'upgrade mentre simulation center ne puoi fare solo uno e costa crystal nell'upgrade
-Fix bug in sumulation center livello 3 che dava meno bonus del livello 2 (0.15 (contro 0.25 del livello prima ) e ho messo 0.4)
-Deviant experiments ora da +75% unity invece di 50%
+-Ora le capital dei robot hanno un coordinator al posto di un maintance drone.
+-Uplink di livello 2 e 3 non costano più cristal nell'upgrade mentre simulation center ne puoi fare solo uno e costa crystal nell'upgrade
+-Fix bug in sumulation center livello 3 che dava meno bonus del livello 2 (0.15 (contro 0.25 del livello prima ) e ho messo 0.4)
+-Deviant experiments ora da +75% unity invece di 50%
 [b]Release client:[/b]
 -Release client state costa un pò di influenza e meno di unity
 [b]Origini:[/b]
 Overlord vassal non ha più le AI
-Void Dweller più forti che mai ora hanno anche il bonus del trade (10%)
+-Inoltre bilanciati bonus iniziali overlord vassal
+-Void Dweller più forti che mai ora hanno anche il bonus del trade (10%)
 [b]Tradition:[/b]
-Ora per faith in science devi avere database uplink e polytechnic education
+-Ora per faith in science devi avere database uplink e polytechnic education
 [b]Civiche[/b]
-2 nuove civiche epiche per i robot!
-Sussidiarie non possono più avere come agrement espansione regolata.
-I vassali rilasciati da franchising hanno modificatore per 5 anni di newly subjugated loyalty.
-I vassali rilasciati da franchising non hanno più civic_fanatic_purifiers come civica.
+-2 nuove civiche epiche per i robot!
+-Sussidiarie non possono più avere come agrement espansione regolata.
+-I vassali rilasciati da franchising hanno modificatore per 5 anni di newly subjugated loyalty.
+-I vassali rilasciati da franchising non hanno più civic_fanatic_purifiers come civica.
 Explotation: ora la ricompensa non è tramite if ma è tramite script dinamici, ogni pop da al vincitore energia e minarli * 50 mentre il resto * 20 (nella statica era *25)
 Explotation ora c'è l'hanno anche le gestait, e in base al tipo gstait da diverse risorse e modificatori.
-Explotation per i necrofagi gestait ti ruba la pop invece di uccidertela.
 Se sei un bbeg overlord ora dai un bonus di +50 al vassalo invece di +500.
 [b]Border Gore[/b]
-Ora border gore comprende wormhole (comunque passarci le navi fa male).
-Ottimizzato codice border gore.
+-Ora border gore comprende wormhole (comunque passarci le navi fa male).
+-Ottimizzato codice border gore.
 [b]Claim[/b]
-Ora puoi claimare i sistemi adiacenti collegati tramite wormhole (comunque passarci le navi fa male)
-Ottimizzato codice can claim
+-Ora puoi claimare i sistemi adiacenti collegati tramite wormhole (comunque passarci le navi fa male)
+-Ottimizzato codice can claim
 [b]Traits[/b]
-Il tratto industriouso è stato aumentato da 20% a 25%
-Il tratto Power drills bonus produzione minatori da 15% a 25%
-Toxoide bonus prod minatori aumentato
-Cyborg power drills bonus prod minatori aumentato
+-Il tratto industriouso è stato aumentato da 20% a 25%
+-Il tratto Power drills bonus produzione minatori da 15% a 25%
+-Toxoide bonus prod minatori aumentato
+-Cyborg power drills bonus prod minatori aumentato
 [b]Edicts[/b]
-Aggiunto editto spedizioni archeologiche un editto che ti permette di fare minor artifact
+-Aggiunto editto spedizioni archeologiche un editto che ti permette di fare minor artifact
 Nuovo editto sbloccabile tramite space trading permette di aumentare la probabilità di resettle dei disoccupati # da testare
 [b]Sublimation[/b]
-Più grande è la flotta più è probabile scoppi la war in heaven in factor = 4 flotta > 70000 < 9000 factor = 5 >= 90000 < 150000 factor = 6 >= 150000
+-Più grande è la flotta più è probabile scoppi la war in heaven in factor = 4 flotta > 70000 < 9000 factor = 5 >= 90000 < 150000 factor = 6 >= 150000
 
 [b]Anomalies[/b]
-World in loop difficoltà settata a 10
-Fixato chance messa a 0 di data corrupt se pianeta ha luna e/o sotto colonizzazione
+-World in loop difficoltà settata a 10
+-Fixato chance messa a 0 di data corrupt se pianeta ha luna e/o sotto colonizzazione
 [b]Bilanciametno[/b]
-Fix problema con minatori, poichè minano solo 4 minerals ora le tech tech mining danno +30% invece di 20% in maniera tale che in late game i minerali sono scavati similmente come le altre risorse basi.
-Frequenza con cui un accordo vassalizzazione può essere modificato cambiato da 60 mesi a 30 mesi
+-Fix problema con minatori, poichè minano solo 4 minerals ora le tech tech mining danno +30% invece di 20% in maniera tale che in late game i minerali sono scavati similmente come le altre risorse basi.
+-Frequenza con cui un accordo vassalizzazione può essere modificato cambiato da 60 mesi a 30 mesi
 [b]Altro[/b]
-Messo localization in tutte le lingue, integrato lingua italiana.
+-Messo localization in tutte le lingue, integrato lingua italiana.
+
 
 [b]Automations[/b]
-Rifatto buona parte degli automatismi
-Aggiunto per gestire automatismi nuovi 2 tipologie di pianeti Pianeta ricerca fisica e pianeta ricerca ingegneria
+-Rifatto buona parte degli automatismi
+-Aggiunto per gestire automatismi nuovi 2 tipologie di pianeti Pianeta ricerca fisica e pianeta ricerca ingegneria
 [b]bugs[/b]
-La decisione che aumenta il trade costava 100 unity, corretta a 1000
+-La decisione che aumenta il trade costava 100 unity, corretta a 1000
 [b]size galaxy[/b]
-Aggiunto 2 size alla galassia per 12 giocatori e per 16-20 giocatori
+-Aggiunto 2 size alla galassia per 12 giocatori e per 16-20 giocatori
 [b]Megastructure[/b]
 Gateway ci mettono molto meno a costruirsi e costano molto meno ma hanno upkeep a energy = 10
-3.7.8
+Modifiche per la 3.7.8
+I leader possono uscire leggermente più giovani o molto più vecchi (se hanno una storia probabilmente non sono giovani, giusto?)
 Diminuito hull regen mult da 0.1 a 0.05 
+-Agenda old delete.
+-Tolto editti per cambiare dittatore imperatore o figlio
+-Tolto rules trait s perchè obsoleto.
+-Tolto Mandati perchè obsoleti
+-Education campaign diminuito bonus xp al mese da 5 a 3 inoltre fixato un bug che se l attivavi e disattivavi sta attivo a vita senza dover pagare il costo.
+-Trascendence learning da 200% invece di 300% leader exp gain
 Da testare
 
 Robot hanno un potenziamento ulteriore al pop assembly sbloccabile tramite una tecnologia rara "Giga-Assembly Systems" il building gli da 5 roboticisti.

@@ -506,7 +506,7 @@ edict_phi_set_survive_wg_desc: "Set the §YSurvive§! War Goal to every defensiv
 edict_phi_set_conquest_wg: "Punish the offender!"
 edict_phi_set_conquest_wg_desc: "Set the §YConquest§! War Goal to every defensive wars in which we are the main defender."
 
-phi_education_campaign_tooltip: "Every owned §Yleader§! gets §Y+5§! experience per month."
+phi_education_campaign_tooltip: "Every owned §Yleader§! gets §Y+3§! experience per month."
 
 edict_abdicate: "Abdicate"
 edict_abdicate_desc: "The time has come."
@@ -989,3 +989,4 @@ tech_mega_assembly_Mk2:0 "ギガアセンブリシステム"
 tech_mega_assembly_Mk2_desc:0 "ギガの高度なテンプレートにより、新しいユニットのアセンブリを劇的に増やすことができます。"
 edict_greater_than_ourselves_light:0 "自由移住"
 edict_greater_than_ourselves_light_desc:1 "無職の人口が、雇用と住居がある適切な惑星に自発的に移住するよう促します。"
+origin_tooltip_doomsday_effects:2 "§G- 注意：簡単な起源§！"

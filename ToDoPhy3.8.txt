@@ -21,10 +21,11 @@ ship_hull_regen_add_static = 1
 
 
 
-
+Robot hanno un potenziamento ulteriore al pop assembly sbloccabile tramite una tecnologia rara "Giga-Assembly Systems" il building gli da 5 roboticisti.
 Controllare che non puoi rieleggiere o cambiare dittatore o re.
 Cambiare gateway, fare che basta costruirlo la prima volta o comunque diminuire costo e tempi da tstare
 
+accelerare         COUNCIL_AGENDA_BASE_COUNCILOR_DAILY_PROGRESS = 10.0  # Daily progress gained towards advancing an agenda per councilor
 
 controllare colonie
 Galaxy size diverse

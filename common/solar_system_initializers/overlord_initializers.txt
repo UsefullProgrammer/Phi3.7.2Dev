@@ -1762,60 +1762,6 @@ overlord_system_init = { # Aix - Empire Capital
 		hyperlane_jumps = { min = 1 max = 3 }
 		initializer = "overlord_system_3_init"
 	}
-
-	neighbor_system = {
-		trigger = {
-			always = no
-			NOT = {
-				any_neighbor_system = {
-					has_star_flag = empire_home_system
-				}
-			}
-		}
-		initializer = "overlord_system_4_init"
-	}
-
-	neighbor_system = {
-		trigger = {
-			always = no
-			NOR = {
-				galaxy_size = tiny
-				any_neighbor_system = {
-					has_star_flag = empire_home_system
-				}
-			}
-		}
-		initializer = "overlord_system_5_init"
-	}
-
-	neighbor_system = {
-		trigger = {
-			always = no
-			NOR = {
-				galaxy_size = tiny
-				galaxy_size = small
-				any_neighbor_system = {
-					has_star_flag = empire_home_system
-				}
-			}
-		}
-		initializer = "overlord_system_6_init"
-	}
-
-	neighbor_system = {
-		trigger = {
-			always = no
-			NOR = {
-				galaxy_size = tiny
-				galaxy_size = small
-				galaxy_size = medium
-				any_neighbor_system = {
-					has_star_flag = empire_home_system
-				}
-			}
-		}
-		initializer = "overlord_system_7_init"
-	}
 }
 
 overlord_system_2_init = { # Empire second system
@@ -2203,14 +2149,6 @@ overlord_system_3_init = { # Empire third system
 		}
 	}
 }
-
-overlord_system_4_init = {}
-
-overlord_system_5_init = {}
-
-overlord_system_6_init = {}
-
-overlord_system_7_init = {}
 
 overlord_system_8_init = { # Overlord Colonies
 	class = "rl_standard_stars"

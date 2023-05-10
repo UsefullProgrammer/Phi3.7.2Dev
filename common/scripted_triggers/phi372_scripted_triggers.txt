@@ -26,3 +26,10 @@ is_civic_despoilers = {
 		has_valid_civic = civic_hive_despoilers
 	}
 }
+is_in_learning_campaign = {
+	OR = {
+		has_edict = machine_learning_campaign
+		has_edict = education_campaign
+		has_edict = learning_campaign
+	}
+}

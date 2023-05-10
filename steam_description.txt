@@ -54,7 +54,7 @@ PHI reworks totally the federations available in-game:
 
 [h2]War and General Rules[/h2]
 [list]
-[*][b]no more border gore[/b]: any system owned by an empire must be continuously connected to a fully colonized planed owned by that empire or have their outpost disbanded
+[*][b]no more border gore[/b]: any system owned by an empire must be continuously connected (whormole or gateway is valid) to a fully colonized planed owned by that empire or have their outpost disbanded
 [*][b]dangerous wormholes[/b]: passing through a wormhole now gives an uncapped [b]12.5% hull damage[/b] to ships, and they don't count towards adiacency for the above rule (with the notable exception of the [b]sealed system[/b])
 [*][b]no more going to the jugular[/b]: a regular empire will be able to claim systems from opponents only when those systems are [b]adiacent[/b] to its borders or to another claimed system. total wars empires can declare war only on [b]neighbors[/b]
 [*][b]naval attrition[/b]: fleets advancing in enemy territory take [b]12.5% hull damage[/b] upon entering enemy's systems (cumulative but capped at 50%)

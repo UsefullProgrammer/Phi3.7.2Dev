@@ -414,6 +414,9 @@ building_machine_assembly_complex = {
 			rare_crystals = @b2_rare_upkeep
 		}
 	}
+	upgrades = {
+		building_machine_assembly_complex_3
+	}
 
 	prerequisites = {
 		tech_mega_assembly
