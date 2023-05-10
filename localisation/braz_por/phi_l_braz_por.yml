@@ -991,3 +991,6 @@ edict_greater_than_ourselves_light:0 "Realocação Livre"
 edict_greater_than_ourselves_light_desc:1 "Estimula a realocação voluntária de populações desempregadas para planetas adequados com empregos e habitação dentro do nosso império."
 tr_domination_colonial_viceroys_desc:0 "§YGovernantes§! e §YGovernadores§! começam no nível §Y3§!."
 origin_tooltip_doomsday_effects:2 "§G- ATENÇÃO: Origem Fácil§!"
+
+small10players:0 "Pequeno Grande"
+mediumover16:0 "Médio Grande"

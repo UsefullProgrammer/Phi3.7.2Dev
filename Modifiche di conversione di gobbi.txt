@@ -221,6 +221,7 @@ Sussidiarie non possono più avere come agrement espansione regolata (dava tropp
 -Uplink di livello 2 e 3 non costano più cristal nell'upgrade mentre simulation center ne puoi fare solo uno e costa crystal nell'upgrade
 -Fix bug in sumulation center livello 3 che dava meno bonus del livello 2 (0.15 (contro 0.25 del livello prima ) e ho messo 0.4)
 -Deviant experiments ora da +75% unity invece di 50%
+-Robot hanno un potenziamento ulteriore al pop assembly sbloccabile tramite una tecnologia rara "Giga-Assembly Systems" il building gli da 5 roboticisti.
 [b]Release client:[/b]
 -Release client state costa un pò di influenza e meno di unity
 [b]Origini:[/b]
@@ -274,7 +275,7 @@ Nuovo editto sbloccabile tramite space trading permette di aumentare la probabil
 [b]Megastructure[/b]
 Gateway ci mettono molto meno a costruirsi e costano molto meno ma hanno upkeep a energy = 10
 Modifiche per la 3.7.8
-I leader possono uscire leggermente più giovani o molto più vecchi (se hanno una storia probabilmente non sono giovani, giusto?)
+-I leader possono uscire leggermente più giovani o molto più vecchi (se hanno una storia probabilmente non sono giovani, giusto?)
 Diminuito hull regen mult da 0.1 a 0.05 
 -Agenda old delete.
 -Tolto editti per cambiare dittatore imperatore o figlio
@@ -282,7 +283,6 @@ Diminuito hull regen mult da 0.1 a 0.05
 -Tolto Mandati perchè obsoleti
 -Education campaign diminuito bonus xp al mese da 5 a 3 inoltre fixato un bug che se l attivavi e disattivavi sta attivo a vita senza dover pagare il costo.
 -Trascendence learning da 200% invece di 300% leader exp gain
-Da testare
-
-Robot hanno un potenziamento ulteriore al pop assembly sbloccabile tramite una tecnologia rara "Giga-Assembly Systems" il building gli da 5 roboticisti.
+-Settori ripristinati come in vanilla
+-Equilibrati bonus alloy e malus upkeep consumer goods dei tratti dei leader
 

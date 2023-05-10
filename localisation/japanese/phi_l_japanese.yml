@@ -990,3 +990,5 @@ tech_mega_assembly_Mk2_desc:0 "ギガの高度なテンプレートにより、�
 edict_greater_than_ourselves_light:0 "自由移住"
 edict_greater_than_ourselves_light_desc:1 "無職の人口が、雇用と住居がある適切な惑星に自発的に移住するよう促します。"
 origin_tooltip_doomsday_effects:2 "§G- 注意：簡単な起源§！"
+small10players:0 "小大"
+mediumover16:0 "中大"

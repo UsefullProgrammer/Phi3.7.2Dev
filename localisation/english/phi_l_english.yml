@@ -984,3 +984,6 @@ edict_greater_than_ourselves_light:0 "Free resettlement"
 edict_greater_than_ourselves_light_desc:1 "Encourages free unemployed pops to voluntarily resettle themselves to suitable planets with jobs and housing within our empire."
 tr_domination_colonial_viceroys_desc:0 "§YRulers§! and §YGovernors§! start at level §Y3§!."
 origin_tooltip_doomsday_effects:2 "§G- WARNING: Easy Origin§!"
+
+ small10players:0 "Big Small"
+ mediumover16:0 "Big Medium"
