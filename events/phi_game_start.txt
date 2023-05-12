@@ -56,6 +56,7 @@ event = {
 		set_global_flag = phi_border_gore_disallowed
 		set_global_flag = phi_sublimation_allowed
 		set_global_flag = phi_emperor_win_allowed
+		set_global_flag = phi_realistic_upkeep_researcher_disallowed
 		country_event = { id = phi_game_start.1 }
 	}
 }
@@ -148,6 +149,33 @@ country_event = {
 		custom_tooltip = phi_game_start.1.emperor_win_disallowedTT
 		set_global_flag = phi_emperor_win_allowed
 		remove_global_flag = phi_emperor_win_disallowed
+		hidden_effect = {
+			country_event = { id = phi_game_start.1 }
+		}
+	}
+	# Realistic upkeep researcher
+	
+	option = {
+		trigger = {
+			has_global_flag = phi_realistic_upkeep_researcher
+		}
+		name = phi_game_start.1.phi_realistic_upkeep_researcher_allowed
+		custom_tooltip = phi_game_start.1.phi_realistic_upkeep_researcher_allowedTT
+		set_global_flag = phi_realistic_upkeep_researcher_disallowed
+		remove_global_flag = phi_realistic_upkeep_researcher
+		hidden_effect = {
+			country_event = { id = phi_game_start.1 }
+		}
+	}
+
+	option = {
+		trigger = {
+			has_global_flag = phi_realistic_upkeep_researcher_disallowed
+		}
+		name = phi_game_start.1.phi_realistic_upkeep_researcher_disallowed
+		custom_tooltip = phi_game_start.1.phi_realistic_upkeep_researcher_disallowedTT
+		set_global_flag = phi_realistic_upkeep_researcher
+		remove_global_flag = phi_realistic_upkeep_researcher_disallowed
 		hidden_effect = {
 			country_event = { id = phi_game_start.1 }
 		}

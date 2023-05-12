@@ -3,25 +3,30 @@
 ##################
 ### START MENU ###
 ##################
-phi_game_start.1.name: "PHI START MENU"
-phi_game_start.1.desc: "You are playing §HPHI v2.0G (gobbi porting for 3.7.4)§!.\n\nChangelog is available at:\n§Bhttps://stellaris.paradoxwikis.com/Phi_mp_balancing/Phi_updates_and_changelog§!\n\nConsider putting a §Gthumbs up§! on the steam page of the mod!\n\nSelect your options for the game, then press OK to start."
+phi_game_start.1.name: "PHIGO开始菜单"
+phi_game_start.1.desc: "您正在玩 §HPHIGO v1.2。\n"
 
-phi_game_start.1.border_gore_allowed: "Border Gore is §GALLOWED§!"
-phi_game_start.1.border_gore_allowedTT: "§YBorder Gore = Allowed§! means that you §Gcan§! build outposts and have parts of your empire not directly connected to a fully colonized planet.\n\nClick here to §RDISALLOW§! Border Gore"
-phi_game_start.1.border_gore_disallowed: "Border Gore is §RDISALLOWED§! §Y(default option)§!"
-phi_game_start.1.border_gore_disallowedTT: "§YBorder Gore = Disallowed§! means that you §Rcannot§! build outposts and have parts of your empire not directly connected to a fully colonized planet.\n\n§HAny non-connected outpost will be destroyed at the end of the month (unless you are at war).§!\n\nClick here to §GALLOW§!"
+phi_game_start.1.border_gore_allowed: "边境血腥特效 §G允许§！"
+phi_game_start.1.border_gore_allowedTT: "§Y边境血腥特效 = 允许§！意味着您§G可以§！建立前哨站，并拥有您帝国的一部分不直接连接（有效的虫洞和星门）到完全殖民的行星。\n\n点击此处§R禁止§！边境血腥特效"
+phi_game_start.1.border_gore_disallowed: "边境血腥特效 §R禁止§！§Y（默认选项）§！"
+phi_game_start.1.border_gore_disallowedTT: "§Y边境血腥特效 = 禁止§！意味着您§R不能§！建立前哨站，并拥有您帝国的一部分不直接连接到完全殖民的行星。\n\n§H任何不连接的前哨站将在月底被摧毁（除非您处于战争状态）。§！\n\n点击此处§G允许§！边境血腥特效"
 
-phi_game_start.1.sublimation_allowed: "Sublimation is §GALLOWED§! §Y(default option)§!"
-phi_game_start.1.sublimation_allowedTT: "§YSublimation = Allowed§! means that you §Gcan§! build special structures on starbases orbiting pulsars and black holes (§Bemitters§! and §Breceivers§!).\nIf you:\n- have researched Meta-dimensional Theory\n- have built an emitter around a blackhole\n- have built a receiver around a pulsar\n- are indipendent\nyou'll get an event at the end of the next month that will enable your empire to complete a §Bspecial project§!, and then try to §Gwin the game§! by sublimating into a new reality...\n\n§HMeta-dimensional Theory is a tier 5 Physics tech, unlocked by the +20% physics from researchers chain.§!\n\nClick here to §RDISALLOW§! Sublimation"
-phi_game_start.1.sublimation_disallowed: "Sublimation is §RDISALLOWED§!"
-phi_game_start.1.sublimation_disallowedTT: "§YSublimation = Disallowed§! means that you §Ystill can§! build special structures on starbases orbiting pulsars and black holes (§Bemitters§! and §Breceivers§!) but you §Rwon't§! get any event at the end of the month to enable the special project.\n\nClick here to §GALLOW§! Sublimation"
+phi_game_start.1.sublimation_allowed: "升华 §G允许§！§Y（默认选项）§！"
+phi_game_start.1.sublimation_allowedTT: "§Y升华 = 允许§！意味着您§G可以§！在围绕脉冲星和黑洞的星际堡垒上建造特殊结构（§B发射器§！和§B接收器§！）。\n如果您：\n- 已研究了元维度理论\n- 在黑洞周围建造了一个发射器\n- 在脉冲星周围建造了一个接收器\n- 是独立的\n您将在下个月底收到一个事件，使您的帝国完成一个§B特殊项目§！，然后尝试通过升华进入新的现实§G赢得游戏§！...\n\n§H元维度理论是一种物理技术，解锁了研究者链的+20%物理。§！\n\n点击此处§R禁止§！升华"
+phi_game_start.1.sublimation_disallowed: "升华 §R禁止§！"
+phi_game_start.1.sublimation_disallowedTT: "§Y升华 = 禁止§！意味着您§Y仍然可以§！在围绕脉冲星和黑洞的星际堡垒上建造特殊结构（§B发射器§！和§B接收器§！），但您§R不会§！在月底收到任何事件，以启用特殊项目。\n\n点击此处§G允许§！升华"
 
-phi_game_start.1.emperor_win_allowed: "Emperor Victory is §GALLOWED§! §Y(default option)§!"
-phi_game_start.1.emperor_win_allowedTT: "§YEmperor Victory = Allowed§! means that the game will end if the §BGalactic Empire§! is established and:\n- the Emperor is not at war\n- every default country is a member of the Empire\n- there is no crisis ongoing\n\n§HThe Emperor player will be proclaimed winner of the game by an end of month event.§!"
-phi_game_start.1.emperor_win_disallowed: "Emperor Victory is §RDISALLOWED§!"
-phi_game_start.1.emperor_win_disallowedTT: "§YEmperor Victory = Disallowed§! means that the game will continue even if the Galactic Empire is proclaimed and is exerting authority on all the Galaxy."
+phi_game_start.1.emperor_win_allowed: "帝王胜利 §G允许§！§Y（默认选项）§！"
+phi_game_start.1.emperor_win_allowedTT: "§Y帝王胜利 = 允许§！意味着如果建立了§B银河帝国§！并且：\n- 皇帝没有处于战争状态\n- 所有默认国家都是帝国的成员\n- 没有正在进行的危机\n\n§H将在月底事件中宣布皇帝玩家是游戏的获胜者。§！"
+phi_game_start.1.emperor_win_disallowed: "帝王胜利 §R禁止§！"
+phi_game_start.1.emperor_win_disallowedTT: "§Y帝王胜利 = 禁止§！意味着即使宣布并在整个银河系施加权威，游戏也将继续进行。"
 
-phi_game_start.2.desc: "The mod has been upgraded to §HPHI v2.0G (porting of gobbibomb to 3.7.4)§!.\n\nChangelog is available at:\n§Bhttps://stellaris.paradoxwikis.com/Phi_mp_balancing/Phi_updates_and_changelog§!\n\nConsider putting a §Gthumbs up§! on the steam page of the mod!"
+phi_realistic_upkeep_researcher_allowed: "研究员真实维护 §G允许§！§G（美丽的选项）§！"
+phi_realistic_upkeep_researcher_allowedTT: "§Y研究员真实维护 = 允许§！\n对于工程师研究员，他们需要一点合金和矿物质的维护。\n对于物理学研究员，他们需要少量的消耗品或合金（对于蜂巢来说），两者都需要维护基础物质（其他帝国的能源和蜂巢的食物）。"
+phi_realistic_upkeep_researcher_disallowed: "街机维护研究员 §G允许§！§Y（默认选项）§！"
+phi_realistic_upkeep_researcher_disallowedTT: "§Y街机维护研究员 = 允许§！\n所有物理学和工程学研究员只需要§Y能源§！进行维护"
+
+phi_game_start.2.desc: "该模组已升级为§HPHIGO v1.2§！与3.8.1兼容。\n\n"
 
 phi_game_start.1.phi_artifact_is_only_mining_station_allowed: "Science artifact station is §GALLOWED§! §Y(default option)§!"
 phi_game_start.1.phi_artifact_is_only_mining_station_allowedTT: "Science artifact station Gore = Allowed§! means that artifact research stations will be allowed and will undergo the massive Phi bonuses for research stations.\n\nClick here to §RDISALLOW§! Science artifact station"
@@ -992,3 +997,8 @@ tr_domination_colonial_viceroys_desc:0 "§Y统治者§!和§Y总督§!从§Y3§!
 origin_tooltip_doomsday_effects:2 "§G- 警告：易起源§！"
 small10players:0 "小大"
 mediumover16:0 "中大"
+
+leader_trait_xenophile: "热爱异星人多样性"
+leader_trait_xenophile_2: "热爱异星人多样性2"
+
+phi_open_arms: "$contact$增加10社会研究。"

@@ -1185,6 +1185,7 @@ civic_crusader_spirit_corporate = {
 		trigger = {
 			host_has_dlc = "Overlord"
 		}
+		description = "civic_tooltip_crusader_spirit_corporate_effects"
 		modifier = {
 			country_enclave_capacity_add = 1
 		}

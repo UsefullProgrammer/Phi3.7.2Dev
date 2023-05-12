@@ -3,8 +3,8 @@
 ##################
 ### START MENU ###
 ##################
-phi_game_start.1.name: "MENU DI AVVIO PHI"
-phi_game_start.1.desc: "Stai giocando a §HPHI v2.0G (porting di gobbi per 3.7.4)§!.\n\nIl changelog è disponibile su:\n§Bhttps://stellaris.paradoxwikis.com/Phi_mp_balancing/Phi_updates_and_changelog§!\n\nConsidera di mettere un §Gmi piace§! nella pagina Steam della mod!\n\nSeleziona le tue opzioni per il gioco, poi premi OK per iniziare."
+phi_game_start.1.name: "MENU DI AVVIO PHIGO"
+phi_game_start.1.desc: "Stai giocando a §HPHIGO v2.0G (porting di gobbi per 3.7.4)§!.\n\nIl changelog è disponibile su:\n§Bhttps://stellaris.paradoxwikis.com/Phi_mp_balancing/Phi_updates_and_changelog§!\n\nConsidera di mettere un §Gmi piace§! nella pagina Steam della mod!\n\nSeleziona le tue opzioni per il gioco, poi premi OK per iniziare."
 
 phi_game_start.1.border_gore_allowed: "Border Gore è §GCONSENTITO§!"
 phi_game_start.1.border_gore_allowedTT: "§YBorder Gore = Consentito§! significa che §Gpuoi§! costruire avamposti e avere parti del tuo impero non direttamente collegate a un pianeta completamente colonizzato.\n\nFai clic qui per §RVETARE§! il Border Gore"
@@ -21,7 +21,12 @@ phi_game_start.1.emperor_win_allowedTT: "§YVittoria dell'Imperatore = Consentit
 phi_game_start.1.emperor_win_disallowed: "La Vittoria dell'Imperatore è §RVETATA§!"
 phi_game_start.1.emperor_win_disallowedTT: "§YVittoria dell'Imperatore = Vetata§! significa che il gioco continuerà anche se l'Impero Galattico viene proclamato e sta esercitando la sua autorità su tutta la Galassia."
 
-phi_game_start.2.desc: "La mod è stata aggiornata a §HPHI v2.0G (porting di gobbi bomb su 3.7.4)§!.\n\nIl changelog è disponibile su:\n§Bhttps://stellaris.paradoxwikis.com/Phi_mp_balancing/Phi_updates_and_changelog§!\n\nConsidera di mettere un §Gmi piace§! nella pagina Steam della mod!"
+phi_realistic_upkeep_researcher_allowed: "Il ricercatore con costo realistico è §GCONSENTITO§! §G(opzione bellissima)§!"
+phi_realistic_upkeep_researcher_allowedTT: "§YRicercatore con costo realistico = Consentito§!\nPer i ricercatori ingegneri è richiesto un piccolo costo di lega e minerali.\nPer i ricercatori fisici è richiesto un piccolo costo di beni di consumo o lega (per gli alveari), entrambi richiedono anche la manutenzione della sostanza di base (energia per gli altri imperi e cibo per gli alveari)."
+phi_realistic_upkeep_researcher_disallowed: "Il ricercatore con costo arcade è §GCONSENTITO§! §Y(opzione predefinita)§!"
+phi_realistic_upkeep_researcher_disallowedTT: "§YRicercatore con costo arcade = Consentito§! \nTutti i ricercatori fisici e ingegneri usano solo §Yenergia§! per il costo"
+
+phi_game_start.2.desc: "La mod è stata aggiornata a §HPHIGO v2.0G (porting di gobbi bomb su 3.7.4)§!.\n\nIl changelog è disponibile su:\n§Bhttps://stellaris.paradoxwikis.com/Phi_mp_balancing/Phi_updates_and_changelog§!\n\nConsidera di mettere un §Gmi piace§! nella pagina Steam della mod!"
 
 phi_game_start.1.phi_artifact_is_only_mining_station_allowed: "La stazione di ricerca dell'Artefatto scientifico è §GCONSENTITA§! §Y(opzione predefinita)§!"
 phi_game_start.1.phi_artifact_is_only_mining_station_allowedTT: "La stazione di ricerca dell'Artefatto scientifico è §GCONSENTITA§! significa che le stazioni di ricerca dell'artefatto saranno consentite e subiranno i massicci bonus Phi per le stazioni di ricerca.\n\nFai clic qui per §RVETARE§! la stazione di ricerca dell'Artefatto scientifico"
@@ -1001,3 +1006,8 @@ tr_domination_colonial_viceroys_desc:0 "I §YRuler§! e i §YGovernatori§! iniz
 origin_tooltip_doomsday_effects:2 "§G- ATTENZIONE: Origine facile§!"
 small10players:0 "Piccolo Grande"
 mediumover16: "Medio Grande"
+
+leader_trait_xenophile: "Amore per la diversità xeno"
+leader_trait_xenophile_2: "Amore per la diversità xeno 2"
+
+phi_open_arms: "Il $contact$ aggiunge 10 £social_research£ per 10 anni "

@@ -1,0 +1,52 @@
+
+
+###################
+leader_trait_xenophile = {
+	inline_script = {
+		script = trait/icon
+		CLASS = leader
+		ICON = "GFX_leader_trait_venerated"
+		RARITY = common
+		COUNCIL = no
+		TIER = 1
+	}
+	inline_script = {
+		script = paragon/leader_resource_produces
+		RESOURCE = society_research
+		AMOUNT = 5
+	}
+	leader_potential_add = {
+		NOT = { has_ethic = ethic_materialist }
+	}
+	leader_class = { admiral scientist general governor }
+	selectable_weight = {
+		weight = @shared_trait_weight
+		inline_script = {
+			script = "paragon/ethic_weight_mult"
+			IS = xenophile
+			NOT = materialist
+		}
+		inline_script = {
+			script = "paragon/existing_trait_weight_mult"
+			TRAIT = leader_trait_xenophile
+		}
+	}
+}
+
+leader_trait_xenophile_2 = {
+	replace_traits = { "leader_trait_xenophile" }
+	inline_script = {
+		script = trait/icon
+		CLASS = leader
+		ICON = "GFX_leader_trait_venerated"
+		RARITY = common
+		COUNCIL = no
+		TIER = 2
+	}
+	inline_script = {
+		script = paragon/leader_resource_produces
+		RESOURCE = society_research
+		AMOUNT = 15
+	}
+	leader_class = { admiral scientist general governor }
+}

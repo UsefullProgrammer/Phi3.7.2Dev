@@ -90,7 +90,7 @@ tech_mine_volatile_motes = {
 	}
 
 	ai_weight = {
-		factor = @strategic_resource_ai_tech_factor #important resource
+		factor = 1000 #@strategic_resource_ai_tech_factor #important resource
 
 	}
 }
@@ -200,7 +200,7 @@ tech_exotic_gases = {
 	}
 
 	ai_weight = {
-		factor = @strategic_resource_ai_tech_factor #important resource
+		factor = 1000 # @strategic_resource_ai_tech_factor #important resource
 
 	}
 }

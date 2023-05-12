@@ -115,6 +115,11 @@ agenda_open_arms = {
 	}
 	finish_modifier = agenda_open_arms_finish
 	effect = {
+		custom_tooltip = "phi_open_arms"
+		set_timed_country_flag = {
+			flag = phi_open_arms
+			days = 3600
+		}
 		if = {
 			limit = {
 				any_situation = { is_situation_type = paragon_origin_promise }

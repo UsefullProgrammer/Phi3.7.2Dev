@@ -775,6 +775,15 @@ per_relation = {
 			}
 		}
 	}
+	contact = {
+		trigger = { has_country_flag = phi_open_arms }
+		resources = {
+			category = contact
+			produces = {
+				society_research = 10
+			}
+		}
+	}
 	
 	societal_enlightenment = {
 		trigger = {

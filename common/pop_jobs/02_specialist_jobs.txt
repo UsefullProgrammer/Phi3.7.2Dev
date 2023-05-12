@@ -614,31 +614,6 @@ telepath = {
 			}
 			energy = 2
 		}
-		upkeep = {
-			trigger = {
-				exists = owner
-				owner = { has_civic = civic_dystopian_society }
-			}
-			consumer_goods = 1
-		}
-	}
-
-	triggered_pop_modifier = {
-		potential = {
-			exists = owner
-			owner = { has_civic = civic_dystopian_society }
-		}
-		pop_happiness = 0.3
-		pop_political_power = 0.6
-	}
-
-	triggered_planet_modifier = {
-		potential = {
-			exists = owner
-			owner = { has_civic = civic_dystopian_society }
-		}
-		planet_amenities_add = 1
-		mult = value:scripted_modifier_mult|MODIFIER|pop_job_amenities_mult|
 	}
 
 	planet_modifier = {
@@ -817,7 +792,7 @@ entertainer = {
 		}
 
 		trade_value_add = @councilor_corporate_hedonism_entertainer_trade_value
-		mult = value:trade_value_councilor_corporate_hedonism_mult
+		mult = value:scripted_modifier_councilor_level_mult|MODIFIER|pop_job_trade_mult|TYPE|councilor_corporate_hedonism|
 	}
 
 	triggered_planet_modifier = {
@@ -2452,7 +2427,7 @@ pearl_diver = {
 		}
 
 		trade_value_add = @councilor_corporate_anglers_pearl_diver_trade_value_bonus
-		mult = value:trade_value_corporate_angler_councilor_mult
+		mult = value:scripted_modifier_councilor_level_mult|MODIFIER|pop_job_trade_mult|TYPE|councilor_corporate_anglers|
 	}
 
 	overlord_resources = {

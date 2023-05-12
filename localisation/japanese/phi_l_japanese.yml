@@ -3,26 +3,30 @@
 ##################
 ### START MENU ###
 ##################
-phi_game_start.1.name: "PHI START MENU"
-phi_game_start.1.desc: "You are playing §HPHI v2.0G (gobbi porting for 3.7.4)§!.\n\nChangelog is available at:\n§Bhttps://stellaris.paradoxwikis.com/Phi_mp_balancing/Phi_updates_and_changelog§!\n\nConsider putting a §Gthumbs up§! on the steam page of the mod!\n\nSelect your options for the game, then press OK to start."
+phi_game_start.1.name: "PHIGOスタートメニュー"
+phi_game_start.1.desc: "あなたは§HPHIGO v1.2§をプレイしています。\n"
 
-phi_game_start.1.border_gore_allowed: "Border Gore is §GALLOWED§!"
-phi_game_start.1.border_gore_allowedTT: "§YBorder Gore = Allowed§! means that you §Gcan§! build outposts and have parts of your empire not directly connected to a fully colonized planet.\n\nClick here to §RDISALLOW§! Border Gore"
-phi_game_start.1.border_gore_disallowed: "Border Gore is §RDISALLOWED§! §Y(default option)§!"
-phi_game_start.1.border_gore_disallowedTT: "§YBorder Gore = Disallowed§! means that you §Rcannot§! build outposts and have parts of your empire not directly connected to a fully colonized planet.\n\n§HAny non-connected outpost will be destroyed at the end of the month (unless you are at war).§!\n\nClick here to §GALLOW§!"
+phi_game_start.1.border_gore_allowed: "領土拡張が§許可§されています！"
+phi_game_start.1.border_gore_allowedTT: "§Y領土拡張 = 許可§されている場合、§Gアウトポストを建設§し、完全に植民地化された惑星に直接接続されていない部分の帝国を持つことができます（ワームホールとゲートウェイが有効です）。\n\nここをクリックして領土拡張を§禁止§する"
+phi_game_start.1.border_gore_disallowed: "領土拡張が§禁止§されています！ §Y（デフォルトオプション）§"
+phi_game_start.1.border_gore_disallowedTT: "§Y領土拡張 = 禁止§されている場合、§Gアウトポストを建設§することができず、完全に植民地化された惑星に直接接続されていない部分の帝国を持つことができません。\n\n§H接続されていないアウトポストは、月末に破壊されます（戦争中でない場合）。§!\n\nここをクリックして領土拡張を§許可§する"
 
-phi_game_start.1.sublimation_allowed: "Sublimation is §GALLOWED§! §Y(default option)§!"
-phi_game_start.1.sublimation_allowedTT: "§YSublimation = Allowed§! means that you §Gcan§! build special structures on starbases orbiting pulsars and black holes (§Bemitters§! and §Breceivers§!).\nIf you:\n- have researched Meta-dimensional Theory\n- have built an emitter around a blackhole\n- have built a receiver around a pulsar\n- are indipendent\nyou'll get an event at the end of the next month that will enable your empire to complete a §Bspecial project§!, and then try to §Gwin the game§! by sublimating into a new reality...\n\n§HMeta-dimensional Theory is a tier 5 Physics tech, unlocked by the +20% physics from researchers chain.§!\n\nClick here to §RDISALLOW§! Sublimation"
-phi_game_start.1.sublimation_disallowed: "Sublimation is §RDISALLOWED§!"
-phi_game_start.1.sublimation_disallowedTT: "§YSublimation = Disallowed§! means that you §Ystill can§! build special structures on starbases orbiting pulsars and black holes (§Bemitters§! and §Breceivers§!) but you §Rwon't§! get any event at the end of the month to enable the special project.\n\nClick here to §GALLOW§! Sublimation"
+phi_game_start.1.sublimation_allowed: "昇華が§許可§されています！ §Y（デフォルトオプション）§"
+phi_game_start.1.sublimation_allowedTT: "§Y昇華 = 許可§されている場合、§Gパルサーやブラックホール周りのスターベースに特殊構造物§（§Bエミッター§と§Bレシーバー§）を建設できます。\nもし:\n- メタ次元理論を研究している\n- ブラックホール周りにエミッターを建設した\n- パルサー周りにレシーバーを建設した\n- 独立している\nならば、次の月の終わりに§B特別なプロジェクト§を完成させるイベントが発生し、新しい現実に昇華して§Gゲームに勝利§することができます...\n\n§Hメタ次元理論は、研究者の+20%物理学によってロックされるティア5の物理学技術です。§!\n\nここをクリックして昇華を§禁止§する"
+phi_game_start.1.sublimation_disallowed: "昇華が§禁止§されています！"
+phi_game_start.1.sublimation_disallowedTT: "§Y昇華 = 禁止§されている場合、§Gパルサーやブラックホール周りのスターベースに特殊構造物§（§Bエミッター§と§Bレシーバー§）を建設することはできますが、月末のイベントで特別なプロジェクトを有効にすることはできません。\n\nここをクリックして昇華を§許可§する"
 
-phi_game_start.1.emperor_win_allowed: "Emperor Victory is §GALLOWED§! §Y(default option)§!"
-phi_game_start.1.emperor_win_allowedTT: "§YEmperor Victory = Allowed§! means that the game will end if the §BGalactic Empire§! is established and:\n- the Emperor is not at war\n- every default country is a member of the Empire\n- there is no crisis ongoing\n\n§HThe Emperor player will be proclaimed winner of the game by an end of month event.§!"
-phi_game_start.1.emperor_win_disallowed: "Emperor Victory is §RDISALLOWED§!"
-phi_game_start.1.emperor_win_disallowedTT: "§YEmperor Victory = Disallowed§! means that the game will continue even if the Galactic Empire is proclaimed and is exerting authority on all the Galaxy."
+phi_game_start.1.emperor_win_allowed: "皇帝勝利が§許可§されています！ §Y（デフォルトオプション）§"
+phi_game_start.1.emperor_win_allowedTT: "§Y皇帝勝利 = 許可§されている場合、§B銀河帝国§が確立され、以下の条件をすべて満たす場合、ゲームが終了します。\n- 皇帝が戦争中でない\n- すべてのデフォルト国が帝国のメンバーである\n- 危機が発生していない\n\n§H月末のイベントで、皇帝プレイヤーがゲームの勝者として宣言されます。§!"
+phi_game_start.1.emperor_win_disallowed: "皇帝勝利が§禁止§されています！"
+phi_game_start.1.emperor_win_disallowedTT: "§Y皇帝勝利 = 禁止§されている場合、§B銀河帝国§が宣言され、銀河全体に権威が及んでいる場合でも、ゲームは続行されます。"
 
-phi_game_start.2.desc: "The mod has been upgraded to §HPHI v2.0G (porting of gobbibomb to 3.7.4)§!.\n\nChangelog is available at:\n§Bhttps://stellaris.paradoxwikis.com/Phi_mp_balancing/Phi_updates_and_changelog§!\n\nConsider putting a §Gthumbs up§! on the steam page of the mod!"
+phi_realistic_upkeep_researcher_allowed: "リアルな維持管理が§許可§されています！ §G（美しいオプション）§"
+phi_realistic_upkeep_researcher_allowedTT: "§Yリアルな維持管理 = 許可§されている場合、研究者のエンジニアリングには、少量の合金や鉱物の維持が必要です。\n物理学の研究者には、少量の消耗品または合金（ハイブの場合は）の維持が必要で、どちらも基本物質（他の帝国のエネルギーとハイブの場合は食料）のメンテナンスが必要です。"
+phi_realistic_upkeep_researcher_disallowed: "アーケードスタイルの維持管理が§許可§されています！ §Y（デフォルトオプション）§"
+phi_realistic_upkeep_researcher_disallowedTT: "§Yアーケードスタイルの維持管理 = 許可§されている場合、すべての物理学とエンジニアリングの研究者は、維持管理に§Yエネルギー§だけを使用します。"
 
+phi_game_start.2.desc: "このモッドは§HPHIGO v1.2§にアップグレードされ、3.8.1に対応しています。\n\n"
 phi_game_start.1.phi_artifact_is_only_mining_station_allowed: "Science artifact station is §GALLOWED§! §Y(default option)§!"
 phi_game_start.1.phi_artifact_is_only_mining_station_allowedTT: "Science artifact station Gore = Allowed§! means that artifact research stations will be allowed and will undergo the massive Phi bonuses for research stations.\n\nClick here to §RDISALLOW§! Science artifact station"
 phi_game_start.1.phi_artifact_is_only_mining_station_disallowed: "Science artifact station §RDISALLOWED§! "
@@ -992,3 +996,8 @@ edict_greater_than_ourselves_light_desc:1 "無職の人口が、雇用と住居�
 origin_tooltip_doomsday_effects:2 "§G- 注意：簡単な起源§！"
 small10players:0 "小大"
 mediumover16:0 "中大"
+
+leader_trait_xenophile: "異星人の多様性を愛する"
+leader_trait_xenophile_2: "異星人の多様性を愛する2"
+
+phi_open_arms: "$contact$は10の社会研究を追加します。"

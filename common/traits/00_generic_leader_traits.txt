@@ -189,7 +189,7 @@ leader_trait_adaptable = {
 		TIER = 1
 	}
 	self_modifier = {
-		species_leader_exp_gain = 0.3
+		species_leader_exp_gain = 0.1
 	}
 	leader_class = { admiral scientist general governor }
 	opposites = {
@@ -210,7 +210,7 @@ leader_trait_adaptable_2 = {
 		TIER = 2
 	}
 	self_modifier = {
-		species_leader_exp_gain = 0.6
+		species_leader_exp_gain = 0.2
 	}
 	leader_class = { admiral scientist general governor }
 	opposites = {
@@ -306,6 +306,9 @@ leader_trait_capitalist = {
 		RESOURCE = energy
 		AMOUNT = 4
 	}
+	leader_potential_add = {
+		has_global_flag = game_started
+	}
 	leader_class = { admiral scientist general governor }
 	opposites = {
 		leader_trait_lavish_lifestyle
@@ -362,6 +365,9 @@ leader_trait_private_mines = {
 		RESOURCE = minerals
 		AMOUNT = 4
 	}
+	leader_potential_add = {
+		has_global_flag = game_started
+	}
 	leader_class = { admiral scientist general governor }
 	selectable_weight = {
 		weight = @shared_trait_weight
@@ -411,6 +417,7 @@ leader_trait_homesteader = {
 		AMOUNT = 4
 	}
 	leader_potential_add = {
+		has_global_flag = game_started
 		owner = { country_uses_food = yes }
 	}
 	leader_class = { admiral scientist general governor }
@@ -588,9 +595,6 @@ trait_imperial_heir = {
 		}
 		leader_trait_selection_options_add = 1
 	}
-	self_modifier = {
-		leaders_upkeep_mult = -1
-	}
 	on_gained_effect = {
 		change_background_job = noble
 	}
@@ -611,7 +615,10 @@ leader_trait_scrapper = {
 	inline_script = {
 		script = paragon/leader_resource_produces
 		RESOURCE = alloys
-		AMOUNT = 3
+		AMOUNT = 1
+	}
+	leader_potential_add = {
+		has_global_flag = game_started
 	}
 	leader_class = { admiral scientist general governor }
 	selectable_weight = {
@@ -641,7 +648,7 @@ leader_trait_scrapper_2 = {
 	inline_script = {
 		script = paragon/leader_resource_produces
 		RESOURCE = alloys
-		AMOUNT = 6
+		AMOUNT = 2
 	}
 	leader_class = { admiral scientist general governor }
 }
@@ -662,6 +669,7 @@ leader_trait_entrepreneur = {
 		AMOUNT = 3
 	}
 	leader_potential_add = {
+		has_global_flag = game_started
 		is_gestalt = no
 	}
 	leader_class = { admiral scientist general governor }
@@ -696,7 +704,7 @@ leader_trait_entrepreneur_2 = {
 	inline_script = {
 		script = paragon/leader_resource_produces
 		RESOURCE = consumer_goods
-		AMOUNT = 6
+		AMOUNT = 5
 	}
 	leader_class = { admiral scientist general governor }
 	opposites = {
@@ -721,6 +729,7 @@ leader_trait_venerated = {
 		AMOUNT = 3
 	}
 	leader_potential_add = {
+		has_global_flag = game_started
 		NOT = { has_ethic = ethic_materialist }
 	}
 	leader_class = { admiral scientist general governor }
@@ -1146,7 +1155,7 @@ leader_trait_excessive_2 = {
 	inline_script = {
 		script = paragon/leader_resource_upkeep
 		RESOURCE = consumer_goods
-		AMOUNT = 15
+		AMOUNT = 10
 	}
 	leader_class = { governor scientist admiral general }
 	opposites = {

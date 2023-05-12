@@ -1013,7 +1013,7 @@ planet_merchants = {
 
 planet_entertainers = {
 	parent = planet_jobs
-	generate_mult_modifiers = {
+	generate_add_modifiers = {
 		produces
 	}
 }

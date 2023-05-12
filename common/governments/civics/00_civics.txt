@@ -617,7 +617,10 @@ civic_environmentalist = {
 	}
 	possible = {
 		civics = {
-			NOT = { value = civic_relentless_industrialists }
+			NOR = {
+				value = civic_relentless_industrialists
+				value = civic_dystopian_society
+			}
 		}
 	}
 	random_weight = { base = @civic_default_random_weight }
@@ -798,7 +801,8 @@ civic_warrior_culture = {
 			}
 		}
 		civics = {
-			NOT = {
+			NOR = {
+				value = civic_dystopian_society
 				value = civic_pleasure_seekers
 			}
 		}
@@ -899,7 +903,7 @@ civic_distinguished_admiralty = {
 	}
 	modifier = {
 		ship_fire_rate_mult = 0.20
-		admiral_skill_levels = 1
+		admiral_exp_gain = 0.2
 		command_limit_add = 50
 	}
 }
@@ -918,8 +922,9 @@ civic_free_haven = {
 			}
 		}
 		civics = {
-			NOT = {
+			NOR = {
 				value = civic_corvee_system
+				value = civic_dystopian_society
 			}
 		}
 	}
@@ -1090,8 +1095,9 @@ civic_agrarian_idyll = {
 			}
 		}
 		civics = {
-			NOT = {
+			NOR = {
 				value = civic_relentless_industrialists
+				value = civic_dystopian_society
 			}
 		}
 	}
@@ -2028,6 +2034,9 @@ civic_crafters = {
 	possible = {
 		civics = { NOT = { value = civic_corporate_crafters }	}
 	}
+	modifier = {
+		commercial_pact_mult = 0.5
+	}
 	random_weight = {
 		base = @civic_uncommon_random_weight
 	}
@@ -2069,6 +2078,7 @@ civic_pleasure_seekers = {
 				value = civic_shared_burden
 				value = civic_slaver_guilds # would enslave hedonists
 				value = civic_corporate_hedonism
+				value = civic_dystopian_society
 			}
 		}
 	}

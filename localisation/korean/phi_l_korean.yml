@@ -3,26 +3,30 @@
 ##################
 ### START MENU ###
 ##################
-phi_game_start.1.name: "PHI START MENU"
-phi_game_start.1.desc: "You are playing §HPHI v2.0G (gobbi porting for 3.7.4)§!.\n\nChangelog is available at:\n§Bhttps://stellaris.paradoxwikis.com/Phi_mp_balancing/Phi_updates_and_changelog§!\n\nConsider putting a §Gthumbs up§! on the steam page of the mod!\n\nSelect your options for the game, then press OK to start."
+phi_game_start.1.name: "PHIGO 시작 메뉴"
+phi_game_start.1.desc: "§HPHIGO v1.2§에서 플레이 중입니다.\n"
 
-phi_game_start.1.border_gore_allowed: "Border Gore is §GALLOWED§!"
-phi_game_start.1.border_gore_allowedTT: "§YBorder Gore = Allowed§! means that you §Gcan§! build outposts and have parts of your empire not directly connected to a fully colonized planet.\n\nClick here to §RDISALLOW§! Border Gore"
-phi_game_start.1.border_gore_disallowed: "Border Gore is §RDISALLOWED§! §Y(default option)§!"
-phi_game_start.1.border_gore_disallowedTT: "§YBorder Gore = Disallowed§! means that you §Rcannot§! build outposts and have parts of your empire not directly connected to a fully colonized planet.\n\n§HAny non-connected outpost will be destroyed at the end of the month (unless you are at war).§!\n\nClick here to §GALLOW§!"
+phi_game_start.1.border_gore_allowed: "국경 분쟁이 §G허용§되었습니다!"
+phi_game_start.1.border_gore_allowedTT: "§YBorder Gore = Allowed§!은 아웃포스트를 건설하고 완전히 식민화된 행성과 직접 연결되지 않은 제국의 일부를 가질 수 있음을 의미합니다(웜홀과 게이트웨이가 유효함).\n\n여기를 클릭하여 국경 분쟁을 §R금지§하십시오"
+phi_game_start.1.border_gore_disallowed: "국경 분쟁이 §R금지§되었습니다! §Y(기본 옵션)§!"
+phi_game_start.1.border_gore_disallowedTT: "§YBorder Gore = Disallowed§!은 아웃포스트를 건설할 수 없으며, 완전히 식민화된 행성과 직접 연결되지 않은 제국의 일부를 가질 수 없음을 의미합니다.\n\n§H연결되지 않은 아웃포스트는 월말에 파괴됩니다(전쟁 중이 아닌 경우).§!\n\n여기를 클릭하여 국경 분쟁을 §G허용§하십시오!"
 
-phi_game_start.1.sublimation_allowed: "Sublimation is §GALLOWED§! §Y(default option)§!"
-phi_game_start.1.sublimation_allowedTT: "§YSublimation = Allowed§! means that you §Gcan§! build special structures on starbases orbiting pulsars and black holes (§Bemitters§! and §Breceivers§!).\nIf you:\n- have researched Meta-dimensional Theory\n- have built an emitter around a blackhole\n- have built a receiver around a pulsar\n- are indipendent\nyou'll get an event at the end of the next month that will enable your empire to complete a §Bspecial project§!, and then try to §Gwin the game§! by sublimating into a new reality...\n\n§HMeta-dimensional Theory is a tier 5 Physics tech, unlocked by the +20% physics from researchers chain.§!\n\nClick here to §RDISALLOW§! Sublimation"
-phi_game_start.1.sublimation_disallowed: "Sublimation is §RDISALLOWED§!"
-phi_game_start.1.sublimation_disallowedTT: "§YSublimation = Disallowed§! means that you §Ystill can§! build special structures on starbases orbiting pulsars and black holes (§Bemitters§! and §Breceivers§!) but you §Rwon't§! get any event at the end of the month to enable the special project.\n\nClick here to §GALLOW§! Sublimation"
+phi_game_start.1.sublimation_allowed: "昇華이 §G허용§되었습니다! §Y(기본 옵션)§!"
+phi_game_start.1.sublimation_allowedTT: "§YSublimation = Allowed§!은 펄서와 블랙홀 주변의 스타베이스에 특수 구조물(§Bemitters§! 및 §Breceivers§!)을 건설할 수 있음을 의미합니다.\n만약:\n- 메타 차원 이론을 연구했다면\n- 블랙홀 주변에 에미터를 건설했다면\n- 펄서 주변에 리시버를 건설했다면\n- 독립한 경우\n다음 달에 이벤트가 발생하여 제국이 §B특별한 프로젝트§!를 완료하고 새로운 현실로 §G승리§!를 시도할 수 있습니다...\n\n§H메타 차원 이론은 연구자 체인에서 +20% 물리학으로 잠금 해제되는 5단계 물리학 기술입니다.§!\n\n여기를 클릭하여 昇華을 §R금지§하십시오"
+phi_game_start.1.sublimation_disallowed: "昇華이 §R금지§되었습니다!"
+phi_game_start.1.sublimation_disallowedTT: "§YSublimation = Disallowed§!은 펄서와 블랙홀 주변의 스타베이스에 특수 구조물(§Bemitters§! 및 §Breceivers§!)을 건설할 수 있지만, 특별한 프로젝트를 활성화하기 위한 이벤트를 받을 수 없다는 것을 의미합니다.\n\n여기를 클릭하여 昇華을 §G허용§하십시오!"
 
-phi_game_start.1.emperor_win_allowed: "Emperor Victory is §GALLOWED§! §Y(default option)§!"
-phi_game_start.1.emperor_win_allowedTT: "§YEmperor Victory = Allowed§! means that the game will end if the §BGalactic Empire§! is established and:\n- the Emperor is not at war\n- every default country is a member of the Empire\n- there is no crisis ongoing\n\n§HThe Emperor player will be proclaimed winner of the game by an end of month event.§!"
-phi_game_start.1.emperor_win_disallowed: "Emperor Victory is §RDISALLOWED§!"
-phi_game_start.1.emperor_win_disallowedTT: "§YEmperor Victory = Disallowed§! means that the game will continue even if the Galactic Empire is proclaimed and is exerting authority on all the Galaxy."
+phi_game_start.1.emperor_win_allowed: "황제 승리가 §G허용§되었습니다! §Y(기본 옵션)§!"
+phi_game_start.1.emperor_win_allowedTT: "§YEmperor Victory = Allowed§!은 §BGalactic Empire§!가 성립하고 다음 조건이 충족되면 게임이 종료됩니다:\n- 황제가 전쟁 중이 아님\n- 모든 기본 국가가 제국의 일원임\n- 위기가 발생하지 않음\n\n§H월말 이벤트에서 황제 플레이어가 게임의 승자로 선언됩니다.§!"
+phi_game_start.1.emperor_win_disallowed: "황제 승리가 §R금지§되었습니다!"
+phi_game_start.1.emperor_win_disallowedTT: "§YEmperor Victory = Disallowed§!은 §BGalactic Empire§!가 선언되고 은하 전역에 영향력을 행사하더라도 게임이 계속됩니다."
 
-phi_game_start.2.desc: "The mod has been upgraded to §HPHI v2.0G (porting of gobbibomb to 3.7.4)§!.\n\nChangelog is available at:\n§Bhttps://stellaris.paradoxwikis.com/Phi_mp_balancing/Phi_updates_and_changelog§!\n\nConsider putting a §Gthumbs up§! on the steam page of the mod!"
+phi_realistic_upkeep_researcher_allowed: "리얼리틱 유지 관리 연구원이 §G허용§되었습니다! §G(아름다운 옵션)§!"
+phi_realistic_upkeep_researcher_allowedTT: "§YRealistic upkeep researcher = Allowed§!\n연구자 공학은 약간의 합금과 미네랄 유지 비용이 필요합니다.\n연구자 물리학은 소비 재화 또는 합금(하이브의 경우)의 약간의 유지 비용과 기본 물질(다른 제국의 경우 에너지, 하이브의 경우 식량)의 유지 비용이 필요합니다."
+phi_realistic_upkeep_researcher_disallowed: "아케이드 유지 관리 연구원이 §G허용§되었습니다! §Y(기본 옵션)§!"
+phi_realistic_upkeep_researcher_disallowedTT: "§YArcade upkeep researcher = Allowed§!\n모든 연구자 물리학과 공학은 유지 관리를 위해 §Y에너지§! 만 사용합니다"
 
+phi_game_start.2.desc: "모드가 §HPHIGO v1.2§와 3.8.1 호환되도록 업그레이드되었습니다.\n\n"
 phi_game_start.1.phi_artifact_is_only_mining_station_allowed: "Science artifact station is §GALLOWED§! §Y(default option)§!"
 phi_game_start.1.phi_artifact_is_only_mining_station_allowedTT: "Science artifact station Gore = Allowed§! means that artifact research stations will be allowed and will undergo the massive Phi bonuses for research stations.\n\nClick here to §RDISALLOW§! Science artifact station"
 phi_game_start.1.phi_artifact_is_only_mining_station_disallowed: "Science artifact station §RDISALLOWED§! "
@@ -993,3 +997,8 @@ tr_domination_colonial_viceroys_desc:0 "§Y지도자§!와 §Y독재자§!는 §
 origin_tooltip_doomsday_effects:2 "§G- 경고: 쉬운 원조§!"
 small10players:0 "작은 큰"
 mediumover16:0 "큰 중간"
+
+leader_trait_xenophile: "외계인 다양성을 사랑합니다"
+leader_trait_xenophile_2: "외계인 다양성을 사랑합니다 2"
+
+phi_open_arms: "$contact$는 10개의 사회 연구를 추가합니다."

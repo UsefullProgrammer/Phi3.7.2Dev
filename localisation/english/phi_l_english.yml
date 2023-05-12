@@ -3,11 +3,11 @@
 ##################
 ### START MENU ###
 ##################
-phi_game_start.1.name: "PHI START MENU"
-phi_game_start.1.desc: "You are playing §HPHI v2.0G (gobbi porting for 3.7.4)§!.\n\nChangelog is available at:\n§Bhttps://stellaris.paradoxwikis.com/Phi_mp_balancing/Phi_updates_and_changelog§!\n\nConsider putting a §Gthumbs up§! on the steam page of the mod!\n\nSelect your options for the game, then press OK to start."
+phi_game_start.1.name: "PHIGO START MENU"
+phi_game_start.1.desc: "You are playing at §HPHIGO v1.2.\n"
 
 phi_game_start.1.border_gore_allowed: "Border Gore is §GALLOWED§!"
-phi_game_start.1.border_gore_allowedTT: "§YBorder Gore = Allowed§! means that you §Gcan§! build outposts and have parts of your empire not directly connected to a fully colonized planet.\n\nClick here to §RDISALLOW§! Border Gore"
+phi_game_start.1.border_gore_allowedTT: "§YBorder Gore = Allowed§! means that you §Gcan§! build outposts and have parts of your empire not directly connected  (are valid wormhole and gateway ) to a fully colonized planet.\n\nClick here to §RDISALLOW§! Border Gore"
 phi_game_start.1.border_gore_disallowed: "Border Gore is §RDISALLOWED§! §Y(default option)§!"
 phi_game_start.1.border_gore_disallowedTT: "§YBorder Gore = Disallowed§! means that you §Rcannot§! build outposts and have parts of your empire not directly connected to a fully colonized planet.\n\n§HAny non-connected outpost will be destroyed at the end of the month (unless you are at war).§!\n\nClick here to §GALLOW§!"
 
@@ -21,7 +21,12 @@ phi_game_start.1.emperor_win_allowedTT: "§YEmperor Victory = Allowed§! means t
 phi_game_start.1.emperor_win_disallowed: "Emperor Victory is §RDISALLOWED§!"
 phi_game_start.1.emperor_win_disallowedTT: "§YEmperor Victory = Disallowed§! means that the game will continue even if the Galactic Empire is proclaimed and is exerting authority on all the Galaxy."
 
-phi_game_start.2.desc: "The mod has been upgraded to §HPHI v2.0G (porting of gobbibomb to 3.7.4)§!.\n\nChangelog is available at:\n§Bhttps://stellaris.paradoxwikis.com/Phi_mp_balancing/Phi_updates_and_changelog§!\n\nConsider putting a §Gthumbs up§! on the steam page of the mod!"
+phi_game_start.1.phi_realistic_upkeep_researcher_allowed: "Realistic upkeep researcher is §GALLOWED§! §G(beatiful option)§!"
+phi_game_start.1.phi_realistic_upkeep_researcher_allowedTT: "§YRealistic upkeep researcher = Allowed§!\nFor researchers engineering they require a little upkeep of alloy and minerals.\nFor researchers physics they require a little upkeep of consumable goods or alloy (for hive), both also requiring a maintenance of the base substance (energy for other empires and food for hive)."
+phi_game_start.1.phi_realistic_upkeep_researcher_disallowed: "Realistic upkeep researcher is §RDISALLOWED§! §Y(default option)§!"
+phi_game_start.1.phi_realistic_upkeep_researcher_disallowedTT: "§YArcade upkeep researcher = Allowed§! \nAll Researcher physics and engineering use only §Yenergy§! for upkeep"
+
+phi_game_start.2.desc: "The mod has been upgraded to §HPHIGO v1.2 compatible with 3.8.1.\n\n"
 
 phi_game_start.1.phi_artifact_is_only_mining_station_allowed: "Science artifact station is §GALLOWED§! §Y(default option)§!"
 phi_game_start.1.phi_artifact_is_only_mining_station_allowedTT: "Science artifact station Gore = Allowed§! means that artifact research stations will be allowed and will undergo the massive Phi bonuses for research stations.\n\nClick here to §RDISALLOW§! Science artifact station"
@@ -985,5 +990,10 @@ edict_greater_than_ourselves_light_desc:1 "Encourages free unemployed pops to vo
 tr_domination_colonial_viceroys_desc:0 "§YRulers§! and §YGovernors§! start at level §Y3§!."
 origin_tooltip_doomsday_effects:2 "§G- WARNING: Easy Origin§!"
 
- small10players:0 "Big Small"
- mediumover16:0 "Big Medium"
+small10players:0 "Big Small"
+mediumover16:0 "Big Medium"
+
+leader_trait_xenophile: "Love xeno diversity"
+leader_trait_xenophile_2: "Love xeno diversity 2"
+
+phi_open_arms: "The $contact$ adds another 10 £social_research£ for 10 years"

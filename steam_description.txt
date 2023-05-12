@@ -1,36 +1,36 @@
 This is the conversion of gobbibomb by [url=https://steamcommunity.com/sharedfiles/filedetails/?id=2274421915]phi dev[/url]
-Is currently in beta, if found bug write in comments.
-[b]PHI 2.0.8G[/b]
+If found bug write in comments.
+[b]PHIGO 1.2.1[/b]
 
-Wiki page --> [url=https://stellaris.paradoxwikis.com/Phi_mp_balancing] [b]HERE[/b] [/url]
+Wiki page --> In development, can use old version [url=https://stellaris.paradoxwikis.com/Phi_mp_balancing] [b]HERE[/b] [/url]
 
-Strategy Guide --> [url=https://stellaris.paradoxwikis.com/Phi_mp_balancing/Phi_strategy_guide] [b]HERE[/b] [/url]
-Complete Changelog (obsolete) --> [url=https://stellaris.paradoxwikis.com/Phi_mp_balancing/Phi_updates_and_changelog] [b]HERE[/b] [/url]
 
-This mod was create by [url=https://steamcommunity.com/id/mariominaccia]mariominaccia[/url]
-This mod is in beta [b]actually not in under further development[/b] but only fix bug and patch for new version by [url=https://steamcommunity.com/profiles/76561198021478310]gobbibomb[/url].
+This mod was inspired and copy by phy crated by [url=https://steamcommunity.com/id/mariominaccia]mariominaccia[/url]
+This mod is in beta [b]actually in under further development[/b] by [url=https://steamcommunity.com/profiles/76561198021478310]gobbibomb[/url].
 
 [hr][/hr]
 
 [h1][b]Overview[/b][/h1]
 This mod is intended to offer a multiplayer audience a [b]fair[/b] and [b]interesting[/b] game-set. It takes many things already present in the vanilla game and it reworks them in order to make them more interesting or more balanced.
-PHI also adds a lot of stuff that is still bigly missing in vanilla: [i]breaking truces[/i], [i]navy attrition[/i], [i]victory conditions[/i] and more !
+PHIGO also adds a lot of stuff that is still bigly missing in vanilla: [i]breaking truces[/i], [i]navy attrition[/i], [i]victory conditions[/i] and more !
 
 [h1][b]How to install[/b][/h1]
-PHI is a standalone mod.
+PHIGO is a standalone mod.
 
 [h1][b]The Biggest Changes to Vanilla[/b][/h1]
 [h2]Admin capacity and planets management[/h2]
-While playing with PHI, you'll have much [b]less planets[/b] to manage and colonize, and you'll put much more emphasys on [b]systems' resources[/b] (especially for science). This is done by:
+While playing with PHIGO, you'll have much [b]less planets[/b] to manage and colonize, and you'll put much more emphasys on [b]systems' resources[/b] (especially for science). This is done by:
 [list]
 [*]increasing the [b]admin capacity cost[/b] of every planet you own (they now cost 25 empire size points)
 [*]increasing the penalties you face going over your admin cap (you get [b]+1% research and tradition cost[/b] and [b]0.5 crime on every planet[/b] per point over the limit)
 [*]changing the [b]bonus to research station[/b] production you get from tech, traditions and events (you now get +100% instead of +10%)
+[*]Society research is hard produce, can produce with contacts and infiltrate tradition if you are homicidal
+[*]Lab research are 2, 1 for physics 1 for engineering
 [/list]
 These basic changes make the game [b]less focused on colonizing[/b] everything you see, letting you focus on the [b]strategic value[/b] of your systems and the [b]quality[/b] of your planets. A bonus side effect is also that the game will run much faster as less pops are created. The [b]increased research output of your station[/b] will more than compensate for anything you'll find yourself short.
 
 [h2]Federations and Senate[/h2]
-PHI reworks totally the federations available in-game:
+PHIGO reworks totally the federations available in-game:
 [list]
 [*]every federation type is linked to an [b]ethic[/b]
 [*]having different ethics between members will have [b]bigger penalties[/b] on the xp accumulation
@@ -40,9 +40,14 @@ PHI reworks totally the federations available in-game:
 [/list]
 
 [h2]Vassals[/h2]
+Vassals and subsidiaries are no longer integrable. Instead:
 [list]
-[*] each  [b]vassal [/b] each relation will now cost 1 influence per month (with the exception of protectorates). Ultimatums to vassalize other empires no longer check against relative power.
+[*][b]vassals[/b] give [b]10% of their alloys, consumer goods and research[/b] points monthly production to their overlord
+[*][b]tributaries[/b] give [b]10% of their energy and minerals[/b] monthly production to their overlord
+[*][b]subsidiaries[/b] give [b]5% of their energy, minerals, alloys, consumer goods and research[/b] points monthly production to their overlord
+[*][b]protectorates[/b] give a bonus [b]+200 society research[/b] per month to their overlord
 [/list]
+Moreover, each normal vassal relation will now cost 1 influence per month (with the exception of protectorates). Ultimatums to vassalize other empires no longer check against relative power.
 
 [h2]Ships and Stations[/h2]
 [list]

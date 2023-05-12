@@ -274,26 +274,26 @@ country_event = {
 				}
 				country_event = { id = sublimation.600 }
 			}
-			0 = { #disabled because not balance for MARIO
-				#negative: deamonic incursion
-				modifier = {
-					factor = 1.5
-					has_ethic = ethic_spiritualist
-				}
-				modifier = {
-					factor = 2
-					has_ethic = ethic_fanatic_spiritualist
-				}
-				modifier = {
-					factor = 0.75
-					has_ethic = ethic_pacifist
-				}
-				modifier = {
-					factor = 0.5
-					has_ethic = ethic_fanatic_pacifist
-				}
-				country_event = { id = sublimation.140 }
-			}
+			# 0 = { #disabled because not balance for MARIO
+			# 	#negative: deamonic incursion
+			# 	modifier = {
+			# 		factor = 1.5
+			# 		has_ethic = ethic_spiritualist
+			# 	}
+			# 	modifier = {
+			# 		factor = 2
+			# 		has_ethic = ethic_fanatic_spiritualist
+			# 	}
+			# 	modifier = {
+			# 		factor = 0.75
+			# 		has_ethic = ethic_pacifist
+			# 	}
+			# 	modifier = {
+			# 		factor = 0.5
+			# 		has_ethic = ethic_fanatic_pacifist
+			# 	}
+			# 	country_event = { id = sublimation.140 }
+			# }
 			3 = {
 				#negative: random fallen empire awakes
 				modifier = {
@@ -1180,7 +1180,7 @@ country_event = {
 #daemonicIncursion
 country_event = {
 	id = sublimation.141
-	#hide_windows = yes
+	hide_window = yes
 
 	is_triggered_only = yes
 	

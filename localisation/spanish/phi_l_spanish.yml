@@ -3,25 +3,30 @@
 ##################
 ### START MENU ###
 ##################
-phi_game_start.1.name: "PHI START MENU"
-phi_game_start.1.desc: "You are playing §HPHI v2.0G (gobbi porting for 3.7.4)§!.\n\nChangelog is available at:\n§Bhttps://stellaris.paradoxwikis.com/Phi_mp_balancing/Phi_updates_and_changelog§!\n\nConsider putting a §Gthumbs up§! on the steam page of the mod!\n\nSelect your options for the game, then press OK to start."
+phi_game_start.1.name: "MENÚ DE INICIO DE PHIGO"
+phi_game_start.1.desc: "Estás jugando en §HPHIGO v1.2.\n"
 
-phi_game_start.1.border_gore_allowed: "Border Gore is §GALLOWED§!"
-phi_game_start.1.border_gore_allowedTT: "§YBorder Gore = Allowed§! means that you §Gcan§! build outposts and have parts of your empire not directly connected to a fully colonized planet.\n\nClick here to §RDISALLOW§! Border Gore"
-phi_game_start.1.border_gore_disallowed: "Border Gore is §RDISALLOWED§! §Y(default option)§!"
-phi_game_start.1.border_gore_disallowedTT: "§YBorder Gore = Disallowed§! means that you §Rcannot§! build outposts and have parts of your empire not directly connected to a fully colonized planet.\n\n§HAny non-connected outpost will be destroyed at the end of the month (unless you are at war).§!\n\nClick here to §GALLOW§!"
+phi_game_start.1.border_gore_allowed: "¡El efecto de sangre en las fronteras está §GPERMITIDO§!"
+phi_game_start.1.border_gore_allowedTT: "§YEl efecto de sangre en las fronteras = Permitido§! significa que §Gpuedes§! construir puestos avanzados y tener partes de tu imperio que no están conectadas directamente (son válidos los agujeros de gusano y las puertas estelares) a un planeta totalmente colonizado.\n\nHaz clic aquí para §DENO PERMITIR§! el efecto de sangre en las fronteras"
+phi_game_start.1.border_gore_disallowed: "¡El efecto de sangre en las fronteras está §DENO PERMITIDO§! §Y(opción por defecto)§!"
+phi_game_start.1.border_gore_disallowedTT: "§YEl efecto de sangre en las fronteras = No permitido§! significa que §Rno puedes§! construir puestos avanzados y tener partes de tu imperio que no están conectadas directamente a un planeta totalmente colonizado.\n\n§HCualquier puesto avanzado no conectado se destruirá al final del mes (a menos que estés en guerra).§!\n\nHaz clic aquí para §DOPERMITIR§! el efecto de sangre en las fronteras"
 
-phi_game_start.1.sublimation_allowed: "Sublimation is §GALLOWED§! §Y(default option)§!"
-phi_game_start.1.sublimation_allowedTT: "§YSublimation = Allowed§! means that you §Gcan§! build special structures on starbases orbiting pulsars and black holes (§Bemitters§! and §Breceivers§!).\nIf you:\n- have researched Meta-dimensional Theory\n- have built an emitter around a blackhole\n- have built a receiver around a pulsar\n- are indipendent\nyou'll get an event at the end of the next month that will enable your empire to complete a §Bspecial project§!, and then try to §Gwin the game§! by sublimating into a new reality...\n\n§HMeta-dimensional Theory is a tier 5 Physics tech, unlocked by the +20% physics from researchers chain.§!\n\nClick here to §RDISALLOW§! Sublimation"
-phi_game_start.1.sublimation_disallowed: "Sublimation is §RDISALLOWED§!"
-phi_game_start.1.sublimation_disallowedTT: "§YSublimation = Disallowed§! means that you §Ystill can§! build special structures on starbases orbiting pulsars and black holes (§Bemitters§! and §Breceivers§!) but you §Rwon't§! get any event at the end of the month to enable the special project.\n\nClick here to §GALLOW§! Sublimation"
+phi_game_start.1.sublimation_allowed: "¡La sublimación está §GPERMITIDA§! §Y(opción por defecto)§!"
+phi_game_start.1.sublimation_allowedTT: "§YSublimación = Permitida§! significa que §Gpuedes§! construir estructuras especiales en las bases estelares que orbitan púlsares y agujeros negros (§Bemisores§! y §Breceptores§!).\nSi tú:\n- has investigado la Teoría meta-dimensional\n- has construido un emisor alrededor de un agujero negro\n- has construido un receptor alrededor de un púlsar\n- eres independiente\nObtendrás un evento al final del próximo mes que permitirá a tu imperio completar un §Bproyecto especial§! y luego intentar §Gganar el juego§! sublimándote a una nueva realidad...\n\n§HLa Teoría meta-dimensional es una tecnología de Física de nivel 5, desbloqueada por la cadena de investigadores con +20% de física.§!\n\nHaz clic aquí para §DENO PERMITIR§! la sublimación"
+phi_game_start.1.sublimation_disallowed: "¡La sublimación está §DENO PERMITIDA§!"
+phi_game_start.1.sublimation_disallowedTT: "§YSublimación = No permitida§! significa que §Yaún puedes§! construir estructuras especiales en las bases estelares que orbitan púlsares y agujeros negros (§Bemisores§! y §Breceptores§!), pero §Rno recibirás§! ningún evento al final del mes para habilitar el proyecto especial.\n\nHaz clic aquí para §DOPERMITIR§! la sublimación"
 
-phi_game_start.1.emperor_win_allowed: "Emperor Victory is §GALLOWED§! §Y(default option)§!"
-phi_game_start.1.emperor_win_allowedTT: "§YEmperor Victory = Allowed§! means that the game will end if the §BGalactic Empire§! is established and:\n- the Emperor is not at war\n- every default country is a member of the Empire\n- there is no crisis ongoing\n\n§HThe Emperor player will be proclaimed winner of the game by an end of month event.§!"
-phi_game_start.1.emperor_win_disallowed: "Emperor Victory is §RDISALLOWED§!"
-phi_game_start.1.emperor_win_disallowedTT: "§YEmperor Victory = Disallowed§! means that the game will continue even if the Galactic Empire is proclaimed and is exerting authority on all the Galaxy."
+phi_game_start.1.emperor_win_allowed: "¡La victoria del Emperador está §GPERMITIDA§! §Y(opción por defecto)§!"
+phi_game_start.1.emperor_win_allowedTT: "§YVictoria del Emperador = Permitida§! significa que el juego terminará si se establece el §BImperio Galáctico§! y:\n- el Emperador no está en guerra\n- todos los países predeterminados son miembros del Imperio\n- no hay crisis en curso\n\n§HEl jugador Emperador será proclamado ganador del juego por un evento al final del mes.§!"
+phi_game_start.1.emperor_win_disallowed: "¡La victoria del Emperador está §DENO PERMITIDA§!"
+phi_game_start.1.emperor_win_disallowedTT: "§YVictoria del Emperador = No permitida§! significa que el juego continuará incluso si el Imperio Galáctico es proclamado y ejerce autoridad sobre toda la Galaxia."
 
-phi_game_start.2.desc: "The mod has been upgraded to §HPHI v2.0G (porting of gobbibomb to 3.7.4)§!.\n\nChangelog is available at:\n§Bhttps://stellaris.paradoxwikis.com/Phi_mp_balancing/Phi_updates_and_changelog§!\n\nConsider putting a §Gthumbs up§! on the steam page of the mod!"
+phi_realistic_upkeep_researcher_allowed: "¡El mantenimiento realista del investigador está §GPERMITIDO§! §G(opción hermosa)§!"
+phi_realistic_upkeep_researcher_allowedTT: "§YMantenimiento realista del investigador = Permitido§!\nPara los investigadores de ingeniería, requieren un poco de mantenimiento de aleación y minerales.\nPara los investigadores de física, requieren un poco de mantenimiento de bienes de consumo o aleación (para la colmena), ambos también requieren un mantenimiento de la sustancia base (energía para otros imperios y alimentos para la colmena)."
+phi_realistic_upkeep_researcher_disallowed: "¡El mantenimiento de arcade del investigador está §GPERMITIDO§! §Y(opción por defecto)§!"
+phi_realistic_upkeep_researcher_disallowedTT: "§YMantenimiento de arcade del investigador = Permitido§! \nTodos los investigadores de física e ingeniería utilizan solo §Yenergía§! para el mantenimiento"
+
+phi_game_start.2.desc: "El mod se ha actualizado a §HPHIGO v1.2 compatible con 3.8.1.\n\n"
 
 phi_game_start.1.phi_artifact_is_only_mining_station_allowed: "Science artifact station is §GALLOWED§! §Y(default option)§!"
 phi_game_start.1.phi_artifact_is_only_mining_station_allowedTT: "Science artifact station Gore = Allowed§! means that artifact research stations will be allowed and will undergo the massive Phi bonuses for research stations.\n\nClick here to §RDISALLOW§! Science artifact station"
@@ -993,3 +998,8 @@ tr_domination_colonial_viceroys_desc:0 "Los §YGobernantes§! y §YGobernadores�
 origin_tooltip_doomsday_effects:2 "§G- ADVERTENCIA: Origen fácil§!"
 small10players:0 "Pequeño Grande"
 mediumover16:0 "Mediano Grande"
+
+leader_trait_xenophile: "Amor a la diversidad xeno"
+leader_trait_xenophile_2: "Amor a la diversidad xeno 2"
+
+phi_open_arms: "El $contact$ añade 10 de investigación social"

@@ -249,6 +249,7 @@ Se sei un bbeg overlord ora dai un bonus di +50 al vassalo invece di +500.
 -Il tratto Power drills bonus produzione minatori da 15% a 25%
 -Toxoide bonus prod minatori aumentato
 -Cyborg power drills bonus prod minatori aumentato
+-Nuovo tratto generico che da society research
 [b]Edicts[/b]
 -Aggiunto editto spedizioni archeologiche un editto che ti permette di fare minor artifact
 Nuovo editto sbloccabile tramite space trading permette di aumentare la probabilità di resettle dei disoccupati # da testare
@@ -261,6 +262,7 @@ Nuovo editto sbloccabile tramite space trading permette di aumentare la probabil
 [b]Bilanciametno[/b]
 -Fix problema con minatori, poichè minano solo 4 minerals ora le tech tech mining danno +30% invece di 20% in maniera tale che in late game i minerali sono scavati similmente come le altre risorse basi.
 -Frequenza con cui un accordo vassalizzazione può essere modificato cambiato da 60 mesi a 30 mesi
+-Opzione nello start menu della phi per mettere upkeep realistico mantenimento ricercatori, per engineering ora hanno un minimo di alloy,mineral e per phisics consumergoods o alloy(se hive),minerals entrambi hanno anche una manuntenzione per sostanza base ( energia per gli altri imperi e food per i hive)
 [b]Altro[/b]
 -Messo localization in tutte le lingue, integrato lingua italiana.
 
@@ -270,19 +272,26 @@ Nuovo editto sbloccabile tramite space trading permette di aumentare la probabil
 -Aggiunto per gestire automatismi nuovi 2 tipologie di pianeti Pianeta ricerca fisica e pianeta ricerca ingegneria
 [b]bugs[/b]
 -La decisione che aumenta il trade costava 100 unity, corretta a 1000
+-Fixato un bug in Education campaign che se l attivavi e disattivavi sta attivo a vita senza dover pagare il costo.
 [b]size galaxy[/b]
 -Aggiunto 2 size alla galassia per 12 giocatori e per 16-20 giocatori
 [b]Megastructure[/b]
 Gateway ci mettono molto meno a costruirsi e costano molto meno ma hanno upkeep a energy = 10
-Modifiche per la 3.7.8
+
+[h2][b]Modifiche per la 3.7.8[/b][/h2]
 -I leader possono uscire leggermente più giovani o molto più vecchi (se hanno una storia probabilmente non sono giovani, giusto?)
 Diminuito hull regen mult da 0.1 a 0.05 
 -Agenda old delete.
 -Tolto editti per cambiare dittatore imperatore o figlio
--Tolto rules trait s perchè obsoleto.
+-Tolto rules traits perchè obsoleto.
 -Tolto Mandati perchè obsoleti
--Education campaign diminuito bonus xp al mese da 5 a 3 inoltre fixato un bug che se l attivavi e disattivavi sta attivo a vita senza dover pagare il costo.
+-Education campaign diminuito bonus xp al mese da 5 a 3
 -Trascendence learning da 200% invece di 300% leader exp gain
--Settori ripristinati come in vanilla
--Equilibrati bonus alloy e malus upkeep consumer goods dei tratti dei leader
+-Settori ripristinati come in vanilla //si ringranzia Pietro
+-Equilibrati bonus alloy e malus upkeep consumer goods dei tratti dei leader //si ringranzia edo
+-LEADER CAPACITY BASE da 6 a 4. //si ringranzia primate.
+
+[h2][b]Modifiche per la 3.8.2[/b][/h2]
+-Messo dati nuovi
+-Il caricamento per attivazione agenda è il 20% più veloce di base (12 value base invece di 10)
 

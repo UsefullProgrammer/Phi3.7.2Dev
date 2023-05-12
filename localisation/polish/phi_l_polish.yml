@@ -3,26 +3,30 @@
 ##################
 ### START MENU ###
 ##################
-phi_game_start.1.name: "PHI START MENU"
-phi_game_start.1.desc: "You are playing §HPHI v2.0G (gobbi porting for 3.7.4)§!.\n\nChangelog is available at:\n§Bhttps://stellaris.paradoxwikis.com/Phi_mp_balancing/Phi_updates_and_changelog§!\n\nConsider putting a §Gthumbs up§! on the steam page of the mod!\n\nSelect your options for the game, then press OK to start."
+phi_game_start.1.name: "MENU STARTOWE PHIGO"
+phi_game_start.1.desc: "Grajesz w §HPHIGO v1.2§.\n"
 
-phi_game_start.1.border_gore_allowed: "Border Gore is §GALLOWED§!"
-phi_game_start.1.border_gore_allowedTT: "§YBorder Gore = Allowed§! means that you §Gcan§! build outposts and have parts of your empire not directly connected to a fully colonized planet.\n\nClick here to §RDISALLOW§! Border Gore"
-phi_game_start.1.border_gore_disallowed: "Border Gore is §RDISALLOWED§! §Y(default option)§!"
-phi_game_start.1.border_gore_disallowedTT: "§YBorder Gore = Disallowed§! means that you §Rcannot§! build outposts and have parts of your empire not directly connected to a fully colonized planet.\n\n§HAny non-connected outpost will be destroyed at the end of the month (unless you are at war).§!\n\nClick here to §GALLOW§!"
+phi_game_start.1.border_gore_allowed: "Granice terytorialne §ZDOZWOLONE§!"
+phi_game_start.1.border_gore_allowedTT: "§YBorder Gore = Allowed§! oznacza, że §ZMOŻESZ§! budować placówki i posiadać części swojego imperium niepołączone bezpośrednio z w pełni skolonizowaną planetą (są ważne przezrobola i brama).\n\nKliknij tutaj, aby §ZABRONIĆ§! Border Gore"
+phi_game_start.1.border_gore_disallowed: "Granice terytorialne §ZABRONIONE§! §Y(domyślna opcja)§!"
+phi_game_start.1.border_gore_disallowedTT: "§YBorder Gore = Disallowed§! oznacza, że §ZNIEMOŻESZ§! budować placówek i posiadać części swojego imperium niepołączone bezpośrednio z w pełni skolonizowaną planetą.\n\n§HKażda niepołączona placówka zostanie zniszczona pod koniec miesiąca (chyba że jesteś w stanie wojny).§!\n\nKliknij tutaj, aby §ZDOZWOLIĆ§!"
 
-phi_game_start.1.sublimation_allowed: "Sublimation is §GALLOWED§! §Y(default option)§!"
-phi_game_start.1.sublimation_allowedTT: "§YSublimation = Allowed§! means that you §Gcan§! build special structures on starbases orbiting pulsars and black holes (§Bemitters§! and §Breceivers§!).\nIf you:\n- have researched Meta-dimensional Theory\n- have built an emitter around a blackhole\n- have built a receiver around a pulsar\n- are indipendent\nyou'll get an event at the end of the next month that will enable your empire to complete a §Bspecial project§!, and then try to §Gwin the game§! by sublimating into a new reality...\n\n§HMeta-dimensional Theory is a tier 5 Physics tech, unlocked by the +20% physics from researchers chain.§!\n\nClick here to §RDISALLOW§! Sublimation"
-phi_game_start.1.sublimation_disallowed: "Sublimation is §RDISALLOWED§!"
-phi_game_start.1.sublimation_disallowedTT: "§YSublimation = Disallowed§! means that you §Ystill can§! build special structures on starbases orbiting pulsars and black holes (§Bemitters§! and §Breceivers§!) but you §Rwon't§! get any event at the end of the month to enable the special project.\n\nClick here to §GALLOW§! Sublimation"
+phi_game_start.1.sublimation_allowed: "Sublimacja §ZDOZWOLONA§! §Y(domyślna opcja)§!"
+phi_game_start.1.sublimation_allowedTT: "§YSublimation = Allowed§! oznacza, że §ZMOŻESZ§! budować specjalne struktury na stacjach kosmicznych krążących wokół pulsarów i czarnych dziur (§Bemitters§! i §Breceivers§!).\nJeśli:\n- posiadasz badania Meta-dimensional Theory\n- zbudowałeś emiter wokół czarnej dziury\n- zbudowałeś odbiornik wokół pulsara\n- jesteś niezależny\notrzymasz wydarzenie pod koniec następnego miesiąca, które pozwoli twojemu imperium na ukończenie §Bspecjalnego projektu§!, a następnie spróbowanie §Zwycięstwa§! poprzez sublimację w nową rzeczywistość...\n\n§HMeta-dimensional Theory to technologia fizyczna poziomu 5, odblokowana przez łańcuch badawczy +20% fizyki.§!\n\nKliknij tutaj, aby §ZABRONIĆ§! Sublimacji"
+phi_game_start.1.sublimation_disallowed: "Sublimacja §ZABRONIONA§!"
+phi_game_start.1.sublimation_disallowedTT: "§YSublimation = Disallowed§! oznacza, że §ZDALEJ MOŻESZ§! budować specjalne struktury na stacjach kosmicznych krążących wokół pulsarów i czarnych dziur (§Bemitters§! i §Breceivers§!), ale nie otrzymasz żadnego wydarzenia pod koniec miesiąca, aby umożliwić realizację specjalnego projektu.\n\nKliknij tutaj, aby §ZDOZWOLIĆ§! Sublimację"
 
-phi_game_start.1.emperor_win_allowed: "Emperor Victory is §GALLOWED§! §Y(default option)§!"
-phi_game_start.1.emperor_win_allowedTT: "§YEmperor Victory = Allowed§! means that the game will end if the §BGalactic Empire§! is established and:\n- the Emperor is not at war\n- every default country is a member of the Empire\n- there is no crisis ongoing\n\n§HThe Emperor player will be proclaimed winner of the game by an end of month event.§!"
-phi_game_start.1.emperor_win_disallowed: "Emperor Victory is §RDISALLOWED§!"
-phi_game_start.1.emperor_win_disallowedTT: "§YEmperor Victory = Disallowed§! means that the game will continue even if the Galactic Empire is proclaimed and is exerting authority on all the Galaxy."
+phi_game_start.1.emperor_win_allowed: "Zwycięstwo cesarza §ZDOZWOLONE§! §Y(domyślna opcja)§!"
+phi_game_start.1.emperor_win_allowedTT: "§YEmperor Victory = Allowed§! oznacza, że gra się skończy, jeśli zostanie ustanowione §BGalaktyczne Imperium§! i:\n- Cesarz nie jest w stanie wojny\n- każde domyślne państwo jest członkiem Imperium\n- nie ma trwającego kryzysu\n\n§HGracz Cesarza zostanie ogłoszony zwycięzcą gry przez wydarzenie pod koniec miesiąca.§!"
+phi_game_start.1.emperor_win_disallowed: "Zwycięstwo cesarza §ZABRONIONE§!"
+phi_game_start.1.emperor_win_disallowedTT: "§YEmperor Victory = Disallowed§! oznacza, że gra będzie trwać nawet jeśli Galaktyczne Imperium zostanie ogłoszone i będzie sprawować władzę nad całym galaktyką."
 
-phi_game_start.2.desc: "The mod has been upgraded to §HPHI v2.0G (porting of gobbibomb to 3.7.4)§!.\n\nChangelog is available at:\n§Bhttps://stellaris.paradoxwikis.com/Phi_mp_balancing/Phi_updates_and_changelog§!\n\nConsider putting a §Gthumbs up§! on the steam page of the mod!"
+phi_realistic_upkeep_researcher_allowed: "Realistyczne koszty utrzymania badacza §ZDOZWOLONE§! §G(piękna opcja)§!"
+phi_realistic_upkeep_researcher_allowedTT: "§YRealistic upkeep researcher = Allowed§!\nDla badaczy inżynierii wymagają małych kosztów stopnia stopu i minerałów.\nDla badaczy fizyki wymagają małych kosztów towarów konsumpcyjnych lub stopu (dla rój), oba również wymagają utrzymania substancji bazowej (energii dla innych imperiów i jedzenia dla roju)."
+phi_realistic_upkeep_researcher_disallowed: "Arcade upkeep researcher §ZDOZWOLONY§! §Y(domyślna opcja)§!"
+phi_realistic_upkeep_researcher_disallowedTT: "§YArcade upkeep researcher = Allowed§! \nWszyscy badacze fizyki i inżynierii używają tylko §Yenergii§! do utrzymania."
 
+phi_game_start.2.desc: "Modyfikacja została zaktualizowana do §HPHIGO v1.2§, kompatybilna z wersją 3.8.1.\n\n"
 phi_game_start.1.phi_artifact_is_only_mining_station_allowed: "Science artifact station is §GALLOWED§! §Y(default option)§!"
 phi_game_start.1.phi_artifact_is_only_mining_station_allowedTT: "Science artifact station Gore = Allowed§! means that artifact research stations will be allowed and will undergo the massive Phi bonuses for research stations.\n\nClick here to §RDISALLOW§! Science artifact station"
 phi_game_start.1.phi_artifact_is_only_mining_station_disallowed: "Science artifact station §RDISALLOWED§! "
@@ -993,3 +997,8 @@ tr_domination_colonial_viceroys_desc:0 "§YWładcy§! i §YGubernatorzy§! zaczy
 origin_tooltip_doomsday_effects:2 "§G- Uwaga: Łatwe Początki§!"
 small10players:0 "Mały Duży"
 mediumover16:0 "Średni Duży"
+
+leader_trait_xenophile: "Miłość do zróżnicowania kseno"
+leader_trait_xenophile_2: "Miłość do zróżnicowania kseno 2"
+
+phi_open_arms: "$contact$ dodaje 10 badań społecznych"

@@ -18,22 +18,22 @@ Da fare poi
 ship_hull_regen_add_perc
 ship_hull_regen_add_static = 1
 		ship_armor_regen_add_static = 2
+		Robot hanno un potenziamento ulteriore al pop assembly sbloccabile tramite una tecnologia rara "Giga-Assembly Systems" il building gli da 5 roboticisti.
+		Controllare che non puoi rieleggiere o cambiare dittatore o re. OK
+		Cambiare gateway, fare che basta costruirlo la prima volta o comunque diminuire costo e tempi da tstare OK
 
 
 
-Robot hanno un potenziamento ulteriore al pop assembly sbloccabile tramite una tecnologia rara "Giga-Assembly Systems" il building gli da 5 roboticisti.
-Controllare che non puoi rieleggiere o cambiare dittatore o re.
-Cambiare gateway, fare che basta costruirlo la prima volta o comunque diminuire costo e tempi da tstare
 
 accelerare         COUNCIL_AGENDA_BASE_COUNCILOR_DAILY_PROGRESS = 10.0  # Daily progress gained towards advancing an agenda per councilor
-
+leader_skill_levels provare a rimetterlo intrascendetal e vedere se funzione
 controllare colonie
 Galaxy size diverse
 errores:
 [21:21:54][trigger.cpp:465]: invalid scope for trigger. got [country], expected {galactic_object}.  file: common/game_rules/00_rules.txt line: 150
 Fare dopo:
 
-pop_assembly Implant livello 3 con tech rara.
+pop_assembly Implant livello 3 con tech rara. OK
 Dominion bonus influenza da 0.5 a 1
 risolvere civic_tooltip_exalted_priesthood_effects
 Indagare su origin.57
