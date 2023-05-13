@@ -1011,6 +1011,9 @@ origin_imperial_fiefdom_bulwark_specialization_effect = {
 			tech = tech_corvette_hull_1
 			message = yes
 		}
+		add_resource = {
+			Alloys = 100 
+		}
 	}
 }
 
@@ -1048,10 +1051,12 @@ origin_imperial_fiefdom_scholarium_specialization_effect = {
 			assign_leader = last_created_leader
 		}
 		give_technology = {
-			tech = tech_archeology_lab
+			tech = tech_archaeostudies
 			message = yes
 		}
-		
+		add_resource = {
+			minor_artifacts = 45 
+		}
 	}
 }
 
@@ -1084,6 +1089,9 @@ origin_imperial_fiefdom_prospectorium_specialization_effect = {
 		give_technology = {
 			tech = tech_mining_1
 			message = yes
+		}
+		add_resource = {
+			minerals = 400 
 		}
 	}
 }
