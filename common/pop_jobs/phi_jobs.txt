@@ -170,6 +170,20 @@ engineering_researcher = {
 	possible = {
 		complex_specialist_job_check_trigger = yes
 	}
+	
+	triggered_pop_modifier = {
+		potential = {
+			planet = {
+				exists = army_leader
+				army_leader = {
+					has_trait = leader_trait_academia_recruiter
+				}
+			}
+		}
+		modifier = {
+			pop_defense_armies_add = 1
+		}
+	}
 
 	resources = {
 		category = planet_researchers_phi
@@ -185,6 +199,17 @@ engineering_researcher = {
 			unity = 1
 		}
 		upkeep = {
+			trigger = {
+				has_global_flag = phi_realistic_upkeep_researcher
+			}
+			alloys = 0.5
+			minerals = 2
+			energy = 4
+		}
+		upkeep = {
+			trigger = {
+				has_global_flag = phi_realistic_upkeep_researcher_disallowed
+			}
 			energy = 8
 		}
 		upkeep = {
@@ -331,7 +356,19 @@ engineering_brain_drone = {
 	possible_precalc = can_fill_drone_job
 
 	possible = { NOT = { has_trait = trait_nerve_stapled } }
-
+	triggered_pop_modifier = {
+		potential = {
+			planet = {
+				exists = army_leader
+				army_leader = {
+					has_trait = leader_trait_academia_recruiter
+				}
+			}
+		}
+		modifier = {
+			pop_defense_armies_add = 1
+		}
+	}
 	resources = {
 		category = planet_researchers_phi
 		produces = {
@@ -339,6 +376,17 @@ engineering_brain_drone = {
 			engineering_research = 8
 		}
 		upkeep = {
+			trigger = {
+				has_global_flag = phi_realistic_upkeep_researcher
+			}
+			alloys = 0.5
+			minerals = 2
+			food = 4
+		}
+		upkeep = {
+			trigger = {
+				has_global_flag = phi_realistic_upkeep_researcher_disallowed
+			}
 			food = 8
 		}
 		upkeep = {
@@ -429,7 +477,19 @@ engineering_calculator = {
 	}
 
 	possible_precalc = can_fill_drone_job
-
+	triggered_pop_modifier = {
+		potential = {
+			planet = {
+				exists = army_leader
+				army_leader = {
+					has_trait = leader_trait_academia_recruiter
+				}
+			}
+		}
+		modifier = {
+			pop_defense_armies_add = 1
+		}
+	}
 	resources = {
 		category = planet_researchers_phi
 		produces = {
@@ -437,6 +497,17 @@ engineering_calculator = {
 			engineering_research = 8
 		}
 		upkeep = {
+			trigger = {
+				has_global_flag = phi_realistic_upkeep_researcher
+			}
+			alloys = 0.5
+			minerals = 2
+			energy = 4
+		}
+		upkeep = {
+			trigger = {
+				has_global_flag = phi_realistic_upkeep_researcher_disallowed
+			}
 			energy = 8
 		}
 		upkeep = {
@@ -521,7 +592,19 @@ physics_researcher = {
 	possible = {
 		complex_specialist_job_check_trigger = yes
 	}
-
+	triggered_pop_modifier = {
+		potential = {
+			planet = {
+				exists = army_leader
+				army_leader = {
+					has_trait = leader_trait_academia_recruiter
+				}
+			}
+		}
+		modifier = {
+			pop_defense_armies_add = 1
+		}
+	}
 	resources = {
 		category = planet_researchers_phi
 		produces = {
@@ -536,6 +619,17 @@ physics_researcher = {
 			unity = 1
 		}
 		upkeep = {
+			trigger = {
+				has_global_flag = phi_realistic_upkeep_researcher
+			}
+			consumer_goods = 1
+			minerals = 1
+			energy = 5
+		}
+		upkeep = {
+			trigger = {
+				has_global_flag = phi_realistic_upkeep_researcher_disallowed
+			}
 			energy = 8
 		}
 		upkeep = {
@@ -683,7 +777,19 @@ physics_brain_drone = {
 	possible_precalc = can_fill_drone_job
 
 	possible = { NOT = { has_trait = trait_nerve_stapled } }
-
+	triggered_pop_modifier = {
+		potential = {
+			planet = {
+				exists = army_leader
+				army_leader = {
+					has_trait = leader_trait_academia_recruiter
+				}
+			}
+		}
+		modifier = {
+			pop_defense_armies_add = 1
+		}
+	}
 	resources = {
 		category = planet_researchers_phi
 		produces = {
@@ -691,6 +797,17 @@ physics_brain_drone = {
 			engineering_research = 2
 		}
 		upkeep = {
+			trigger = {
+				has_global_flag = phi_realistic_upkeep_researcher
+			}
+			alloys = 0.5
+			minerals = 1
+			food = 5
+		}
+		upkeep = {
+			trigger = {
+				has_global_flag = phi_realistic_upkeep_researcher_disallowed
+			}
 			food = 8
 		}
 		upkeep = {
@@ -781,7 +898,19 @@ physics_calculator = {
 	}
 
 	possible_precalc = can_fill_drone_job
-
+	triggered_pop_modifier = {
+		potential = {
+			planet = {
+				exists = army_leader
+				army_leader = {
+					has_trait = leader_trait_academia_recruiter
+				}
+			}
+		}
+		modifier = {
+			pop_defense_armies_add = 1
+		}
+	}
 	resources = {
 		category = planet_researchers_phi
 		produces = {
@@ -789,6 +918,17 @@ physics_calculator = {
 			engineering_research = 2
 		}
 		upkeep = {
+			trigger = {
+				has_global_flag = phi_realistic_upkeep_researcher
+			}
+			alloys = 0.5
+			minerals = 1
+			energy = 5
+		}
+		upkeep = {
+			trigger = {
+				has_global_flag = phi_realistic_upkeep_researcher_disallowed
+			}
 			energy = 8
 		}
 		upkeep = {
