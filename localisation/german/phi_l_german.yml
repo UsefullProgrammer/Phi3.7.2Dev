@@ -1002,4 +1002,9 @@ mediumover16:0 "Mittel Groß"
 leader_trait_xenophile: "Liebe zur Xeno-Vielfalt"
 leader_trait_xenophile_2: "Liebe zur Xeno-Vielfalt 2"
 
-"Der $contact$ fügt weitere 10 gesellschaftliche Forschung hinzu"
+phi_open_arms: "Der $contact$ fügt weitere 10 gesellschaftliche Forschung hinzu"
+
+tech_collective_self_gob:0 "Revolutionäre Regierung"
+tech_collective_self_gob_desc:1 "Gruppenbezogene Aspekte des eigenen Selbst zu finden ist natürlich und unausweichlich; schließlich müssen diese geteilten Aspekte höher bewertet werden als individuelle Identitäten."
+tech_embodied_dynamism_gob:0 "Regierung Universalis"
+tech_embodied_dynamism_gob_desc:0 "Initiative und ein gewisses Maß an Ehrgeiz müssen in unseren autonomen Führungseinheiten gefördert werden, während gleichzeitig sichergestellt wird, dass sie sich nicht zu weit von den Richtlinien der zentralen Intelligenz entfernen."

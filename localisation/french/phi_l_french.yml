@@ -1003,3 +1003,8 @@ leader_trait_xenophile: "Amour de la diversité xéno"
 leader_trait_xenophile_2: "Amour de la diversité xéno 2"
 
 phi_open_arms: "Le $contact$ ajoute une autre recherche sociale de 10"
+
+tech_collective_self_gob:0 "Gouvernement révolutionnaire"
+tech_collective_self_gob_desc:1 "Trouver des aspects de soi au sein du groupe est naturel et inévitable ; finalement, ces aspects partagés doivent être valorisés plus que les identités individuelles."
+tech_embodied_dynamism_gob:0 "Gouvernement Universalis"
+tech_embodied_dynamism_gob_desc:0 "L'initiative et une certaine mesure d'ambition doivent être promues dans nos unités dirigeantes autonomes, tout en veillant à ce qu'elles ne s'éloignent pas trop des directives de l'intelligence centrale."

@@ -1011,3 +1011,8 @@ trade_victory.22.desc: "Finalmente possiamo imporre la nostra influenza tramite 
 trade_victory.22.a: "Bene ora iniziamo l'agenda per la trade league universale"
 
 trade_victory.22.a.tooltip: "Bisogna avviare l'agenda il prima possibile per iniziare a ottenere potere tramite il trade"
+
+tech_collective_self_gob:0 "Governement revolutionary"
+tech_collective_self_gob_desc:1 "Finding aspects of the self within the group is natural and inevitable; eventually those shared aspects must be valued higher than individual identities."
+tech_embodied_dynamism_gob:0 "Governement Universalis"
+tech_embodied_dynamism_gob_desc:0 "Initiative and some measure of ambition must be promoted in our autonomous leader units, while still making certain that they do not stray too far from the directives of the core intelligence."

@@ -1002,3 +1002,8 @@ leader_trait_xenophile: "Miłość do zróżnicowania kseno"
 leader_trait_xenophile_2: "Miłość do zróżnicowania kseno 2"
 
 phi_open_arms: "$contact$ dodaje 10 badań społecznych"
+
+tech_collective_self_gob:0 "Rząd rewolucyjny"
+tech_collective_self_gob_desc:1 "Znajdowanie aspektów siebie wewnątrz grupy jest naturalne i nieuniknione; ostatecznie te współdzielone aspekty muszą być cenione wyżej niż indywidualne tożsamości."
+tech_embodied_dynamism_gob:0 "Rząd Universalis"
+tech_embodied_dynamism_gob_desc:0 "W naszych autonomicznych jednostkach przywódczych należy promować inicjatywę i pewien stopień ambicji, przy jednoczesnym zapewnieniu, że nie oddalają się zbytnio od dyrektyw głównej inteligencji."

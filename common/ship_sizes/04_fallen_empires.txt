@@ -41,8 +41,8 @@ massive_ship_fallen_empire = {
 	collision_radius = @titan_collision_radius
 	modifier = {
 		ship_evasion_add = 2
-		ship_hull_regen_add_perc = @regen_mult_lv1
-		ship_armor_regen_add_perc = @regen_mult_lv2
+		ship_hull_regen_add_perc = @regen_mult_lv2
+		ship_armor_regen_add_perc = @regen_mult_lv3
 	}
 	max_hitpoints = @ship_5
 	size_multiplier = 32
@@ -90,8 +90,8 @@ large_ship_fallen_empire = {
 	collision_radius = @battleship_collision_radius
 	modifier = {
 		ship_evasion_add = 10
-		ship_hull_regen_add_perc = @regen_mult_lv1
-		ship_armor_regen_add_perc = @regen_mult_lv2
+		ship_hull_regen_add_perc = @regen_mult_lv2
+		ship_armor_regen_add_perc = @regen_mult_lv3
 	}
 	max_hitpoints = @ship_4
 	size_multiplier = 8
@@ -136,8 +136,8 @@ small_ship_fallen_empire = {
 	collision_radius = @destroyer_collision_radius
 	modifier = {
 		ship_evasion_add = 35
-		ship_hull_regen_add_perc = @regen_mult_lv1
-		ship_armor_regen_add_perc = @regen_mult_lv2
+		ship_hull_regen_add_perc = @regen_mult_lv2
+		ship_armor_regen_add_perc = @regen_mult_lv3
 	}
 	max_hitpoints = @ship_3
 	size_multiplier = 2
@@ -180,8 +180,8 @@ military_station_small_fallen_empire = {
 	acceleration = 10
 	modifier = {
 		ship_evasion_mult = -1
-		ship_hull_regen_add_perc = @regen_mult_lv1
-		ship_armor_regen_add_perc = @regen_mult_lv2
+		ship_hull_regen_add_perc = @regen_mult_lv2
+		ship_armor_regen_add_perc = @regen_mult_lv3
 		ships_upkeep_mult = -0.25
 	}
 	ship_modifier = {

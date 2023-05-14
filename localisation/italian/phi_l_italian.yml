@@ -1011,3 +1011,8 @@ leader_trait_xenophile: "Amore per la diversità xeno"
 leader_trait_xenophile_2: "Amore per la diversità xeno 2"
 
 phi_open_arms: "Il $contact$ aggiunge 10 £social_research£ per 10 anni "
+
+tech_collective_self_gob:0 "Governo rivoluzionario"
+tech_collective_self_gob_desc:1 "Trovare aspetti del sé all'interno del gruppo è naturale e inevitabile; alla fine, questi aspetti condivisi devono essere valutati più delle identità individuali."
+tech_embodied_dynamism_gob:0 "Governo Universalis"
+tech_embodied_dynamism_gob_desc:0 "Iniziativa e una certa misura di ambizione devono essere promosse nelle nostre unità di comando autonome, assicurandoci allo stesso tempo che non si allontanino troppo dalle direttive dell'intelligenza centrale."

@@ -1001,3 +1001,8 @@ leader_trait_xenophile: "異星人の多様性を愛する"
 leader_trait_xenophile_2: "異星人の多様性を愛する2"
 
 phi_open_arms: "$contact$は10の社会研究を追加します。"
+
+tech_collective_self_gob:0 "革命政府"
+tech_collective_self_gob_desc:1 "集団の中での自己の側面に気づくのは自然で必然的である。最終的にそうした共有された側面は、個別のアイデンティティよりも高く評価されなければならない。"
+tech_embodied_dynamism_gob:0 "政府ユニバーサリス"
+tech_embodied_dynamism_gob_desc:0 "我々自律リーダーユニットの中でイニシアチブとある程度の野心を促進しながら、同時に中央インテリジェンスの指令からあまり離れないようにしなければならない。"

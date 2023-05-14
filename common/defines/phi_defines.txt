@@ -415,7 +415,7 @@
 
 		COUNCIL_AGENDA_BASE_COUNCILOR_DAILY_PROGRESS = 12.0  # Daily progress gained towards advancing an agenda per councilor
 		COUNCIL_AGENDA_COUNCILOR_PROGRESS_PER_SKILL = 1.0  # Daily progress gained towards advancing an agenda per councilor skill level
-		COUNCIL_AGENDA_COOLDOWN 				= 10800 # Number of days before you can pick the same agenda after finishing it
+		COUNCIL_AGENDA_COOLDOWN 				= 8640 # Number of days before you can pick the same agenda after finishing it
 		COUNCIL_AGENDA_FINISHING_EFFECT_DURATION = 3600 # Duration of agenda finishing effect. Should match @agenda_finish_modifier_duration
 		COUNCIL_AGENDA_ETHIC_MATCH_EFFECT = 0.50 		# Effect of council agenda progress speed based on matching or missmatching ethic
 

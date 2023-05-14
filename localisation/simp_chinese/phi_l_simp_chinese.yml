@@ -1002,3 +1002,8 @@ leader_trait_xenophile: "热爱异星人多样性"
 leader_trait_xenophile_2: "热爱异星人多样性2"
 
 phi_open_arms: "$contact$增加10社会研究。"
+
+tech_collective_self_gob:0 "革命政府"
+tech_collective_self_gob_desc:1 "在集体中找到自我的方面是自然而不可避免的; 最终,这些共享的方面必须高于个人身份。"
+tech_embodied_dynamism_gob:0 "政府万能体"
+tech_embodied_dynamism_gob_desc:0 "需要在我们的自治领导单元中提倡主动精神和某种程度的雄心壮志,同时确保它们不会偏离核心智能的指令太远。"

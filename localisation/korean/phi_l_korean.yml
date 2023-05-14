@@ -1002,3 +1002,8 @@ leader_trait_xenophile: "외계인 다양성을 사랑합니다"
 leader_trait_xenophile_2: "외계인 다양성을 사랑합니다 2"
 
 phi_open_arms: "$contact$는 10개의 사회 연구를 추가합니다."
+
+tech_collective_self_gob:0 "혁명 정부"
+tech_collective_self_gob_desc:1 "집단 내에서 자기 자신의 측면을 찾는 것은 자연스럽고 피할 수 없다. 결국 공유된 이러한 측면들은 개인의 정체성보다 높이 평가돼야 한다."
+tech_embodied_dynamism_gob:0 "정부 유니버설리스"
+tech_embodied_dynamism_gob_desc:0 "우리의 자율 지휘부위에서 초기화력과 어느 정도의 야심은 장려되어야하지만, 중앙 지성의 지침으로부터 너무 멀어지지 않도록 해야 한다."

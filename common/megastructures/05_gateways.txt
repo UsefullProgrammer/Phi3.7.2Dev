@@ -14,7 +14,8 @@ gateway_0 = {
 	resources = {
 		category = megastructures
 		cost = {
-			alloys = 1500
+			alloys = 2000
+			sr_dark_matter = 50
 			influence = 75
 			
 		}
@@ -134,7 +135,7 @@ gateway_final = {
 		category = megastructures
 		cost = {
 			alloys = 1500
-			energy = 5000
+			energy = 4000
 			sr_dark_matter = 50
 		}
 		upkeep = {

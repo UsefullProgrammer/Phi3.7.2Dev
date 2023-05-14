@@ -30,7 +30,7 @@ ship_hull_regen_add_static = 1
 accelerare         COUNCIL_AGENDA_BASE_COUNCILOR_DAILY_PROGRESS = 10.0  # Daily progress gained towards advancing an agenda per councilor
 leader_skill_levels provare a rimetterlo intrascendetal e vedere se funzione
 controllare colonie
-Galaxy size diverse
+Galaxy size diverse OK
 errores:
 [21:21:54][trigger.cpp:465]: invalid scope for trigger. got [country], expected {galactic_object}.  file: common/game_rules/00_rules.txt line: 150
 Fare dopo:

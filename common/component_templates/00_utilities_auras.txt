@@ -315,8 +315,8 @@ utility_component_template = {
 		}
 
 		modifier = {
-			ship_hull_regen_add_perc = 0.02
-			ship_armor_regen_add_perc = 0.15
+			ship_hull_regen_add_static = @regen_hull_lv4
+			ship_armor_regen_add_static = @regen_armor_lv4
 		}
 
 		graphics = {
@@ -746,7 +746,7 @@ utility_component_template = {
 		}
 
 		modifier = {
-			ship_hull_regen_add_perc = 0.05
+			ship_hull_regen_add_perc = @regen_mult_lvmax
 		}
 
 		graphics = {

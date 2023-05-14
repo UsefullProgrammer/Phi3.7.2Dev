@@ -295,7 +295,13 @@ Diminuito hull regen mult da 0.1 a 0.05
 -Messo dati nuovi
 -Il caricamento per attivazione agenda è il 20% più veloce di base (12 value base invece di 10)
 
-1.3 Warfare
+1.3 Warfare annd matter dark matter
 Fatto weight corretto dei ricercatori di fisica e eng con valori da script_values
+Ora il gateway costa meno ci metti meno ma ha un costo in dark matter e manuntenzioone di 10
 Diminuito regen shield e armor di fallen e khan+
+Messo variabili in regen per gestirle meglio in futuro
+Regen khan e fallen diminuiti (erano al 10% armor e hull)
 Point defence hanno un range di 40 invece di 30.
+cooldown ridotte da 30 anni a 24
+COUNCIL AGENDA BASE COUNCILOR DAILY PROGRESS cambiata da 10 a 12
+Aggiunto tecnologia distaccata per governement civics (prima erano in una tecnologia)
