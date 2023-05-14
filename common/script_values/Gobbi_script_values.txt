@@ -36,6 +36,25 @@ edict_pop_size_effect = {
 	mult = trigger:num_pops
 	add = 1
 }
+mult_years_passed = {
+	base = 0.025 #test , set 0.025
+	mult = trigger:years_passed
+	add = 1
+}
+edict_mult_num_empires = {
+	base = 0.9
+	mult = num_empires
+	add = 1
+}
+edict_trade_minimum_galactic_trade = {
+	base = 150
+	mult = num_empires
+	min = 500
+	max = 2500
+}
+
+
+
 edict_fleet_size_effect = {
 	base = 0.015
 	#mult = trigger:num_pops
@@ -88,4 +107,38 @@ power_fleet_factor = {
 	min = 0
 	max = 6
 	round = yes
+}
+job_weights_research_eng_modifier = {
+	complex_trigger_modifier = {
+		trigger = check_economic_production_modifier_for_job
+		parameters = {
+			job = $JOB$
+			resource = {
+				physics_research = 0.9
+				engineering_research = 0.1
+			}
+		}
+		mode = add
+	}
+	add = value:job_weights_manual_corrections|JOB|$JOB$|
+	add = 1
+	min = 0
+	pow = 3 #we need it to have a bit more impact
+}
+job_weights_research_phy_modifier = {
+	complex_trigger_modifier = {
+		trigger = check_economic_production_modifier_for_job
+		parameters = {
+			job = $JOB$
+			resource = {
+				physics_research = 0.1
+				engineering_research = 0.9
+			}
+		}
+		mode = add
+	}
+	add = value:job_weights_manual_corrections|JOB|$JOB$|
+	add = 1
+	min = 0
+	pow = 3 #we need it to have a bit more impact
 }

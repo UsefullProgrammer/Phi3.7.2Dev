@@ -12,3 +12,20 @@
 @ship_10 = 500000 #conversione dei 150k livello Dio
 @ship_4_X2 = 18000
 @robotic_maintenance_alloys = 0.25
+
+#regen
+@regen_hull_lv1 = 1
+@regen_armor_lv1 = 2
+@regen_hull_lv2 = 3
+@regen_armor_lv2 = 6
+@regen_hull_lv3 = 6
+@regen_armor_lv3 = 12
+@regen_hull_lv4 = 12
+@regen_armor_lv4 = 24
+
+@regen_mult_lv1 = 0.005
+@regen_mult_lv2 = 0.01
+@regen_mult_lv3 = 0.02
+@regen_mult_lv4 = 0.03
+@regen_mult_lvmax = 0.05 # oltre le navi diventano virtualmente invincibili
+@regen_mult_lv_self = 0.1 # oltre le navi diventano virtualmente invincibili

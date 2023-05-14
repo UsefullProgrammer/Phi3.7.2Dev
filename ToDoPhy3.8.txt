@@ -14,6 +14,8 @@ MOD_LEADER_SKILL_LEVELS OK
 Aggiungere tech o roba nuova per i tag #old phi
 controllare diplomatic_stance OK e economic_policy OK
 controllre in 3.8 set_skill
+
+Mettere variabile mult per produces e upkeep per i leader
 Da fare poi 
 ship_hull_regen_add_perc
 ship_hull_regen_add_static = 1

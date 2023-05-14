@@ -108,7 +108,7 @@ leader_trait_admiral_warform = {
 		TIER = none
 	}
 	modifier = {
-		ship_armor_regen_add_static = 4
+		ship_armor_regen_add_static = @regen_armor_lv1
 		ship_armor_hardening_add = 0.15
 		ship_sensor_range_add = 1
   		ship_hyperlane_range_add = 2
@@ -136,7 +136,7 @@ leader_trait_admiral_warform_node = {
 		TIER = none
 	}
 	modifier = {
-		ship_armor_regen_add_static = 6
+		ship_armor_regen_add_static = @regen_armor_lv2
 		ship_armor_hardening_add = 0.15
 		ship_sensor_range_add = 1
   		ship_hyperlane_range_add = 2

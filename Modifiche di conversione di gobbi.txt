@@ -295,3 +295,7 @@ Diminuito hull regen mult da 0.1 a 0.05
 -Messo dati nuovi
 -Il caricamento per attivazione agenda è il 20% più veloce di base (12 value base invece di 10)
 
+1.3 Warfare
+Fatto weight corretto dei ricercatori di fisica e eng con valori da script_values
+Diminuito regen shield e armor di fallen e khan+
+Point defence hanno un range di 40 invece di 30.

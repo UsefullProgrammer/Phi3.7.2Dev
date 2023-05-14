@@ -1424,7 +1424,7 @@ archaeo_overcharger = {
 	defense_platform_modifier = {
 		ship_shield_mult = 0.25
 		ship_shield_hardening_add = 0.25
-		ship_shield_regen_add_perc = 0.1
+		ship_shield_regen_add_perc = @regen_mult_lv3
 	}
 
 	custom_tooltip = sm_archaeo_overcharger_desc_modifier

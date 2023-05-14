@@ -696,8 +696,8 @@ space_dragon_origin = {
 	modifier = {
 		ship_evasion_add = 25
 		ship_armor_add = 100000
-		ship_hull_regen_add_static = 3
-		ship_armor_regen_add_static = 6
+		ship_hull_regen_add_static = @regen_hull_lv2
+		ship_armor_regen_add_static = @regen_armor_lv2
 	}
 	max_hitpoints = @ship_10
 	combat_size_multiplier = 50
@@ -741,8 +741,8 @@ space_dragon_origin_baby = {
 	modifier = {
 		ship_evasion_add = 25
 		ships_upkeep_mult = -1
-		ship_hull_regen_add_static = 3
-		ship_armor_regen_add_static = 6
+		ship_hull_regen_add_static = @regen_hull_lv2
+		ship_armor_regen_add_static = @regen_armor_lv2
 	}
 	max_hitpoints = @ship_5
 	size_multiplier = 8

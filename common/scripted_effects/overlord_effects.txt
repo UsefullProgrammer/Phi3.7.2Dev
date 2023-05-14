@@ -1012,7 +1012,7 @@ origin_imperial_fiefdom_bulwark_specialization_effect = {
 			message = yes
 		}
 		add_resource = {
-			Alloys = 100 
+			alloys = 100 
 		}
 	}
 }

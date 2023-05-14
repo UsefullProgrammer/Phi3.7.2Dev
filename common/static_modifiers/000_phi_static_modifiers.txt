@@ -193,15 +193,16 @@ surge_research = {
 }
 
 cheat_code = {
-	ship_hull_regen_add_perc = 0.01
-	ship_armor_regen_add_perc = 0.01
+	
+	ship_hull_regen_add_perc = @regen_mult_lv2
+	ship_armor_regen_add_perc = @regen_mult_lv2
 	ship_weapon_range_mult = 0.1
 	megastructure_build_speed_mult = 1
 }
 
 minor_cheat_code = {
-	ship_hull_regen_add_perc = 0.005
-	ship_armor_regen_add_perc = 0.005
+	ship_hull_regen_add_perc = @regen_mult_lv1
+	ship_armor_regen_add_perc = @regen_mult_lv1
 	ship_weapon_range_mult = 0.05
 	megastructure_build_speed_mult = 0.5
 }

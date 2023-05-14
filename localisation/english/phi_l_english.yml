@@ -3,8 +3,9 @@
 ##################
 ### START MENU ###
 ##################
+version: "v1.3 DEV"
 phi_game_start.1.name: "PHIGO START MENU"
-phi_game_start.1.desc: "You are playing at §HPHIGO v1.2.\n"
+phi_game_start.1.desc: "You are playing at §HPHIGO v1.3 DEV.\n"
 
 phi_game_start.1.border_gore_allowed: "Border Gore is §GALLOWED§!"
 phi_game_start.1.border_gore_allowedTT: "§YBorder Gore = Allowed§! means that you §Gcan§! build outposts and have parts of your empire not directly connected  (are valid wormhole and gateway ) to a fully colonized planet.\n\nClick here to §RDISALLOW§! Border Gore"
@@ -26,7 +27,7 @@ phi_game_start.1.phi_realistic_upkeep_researcher_allowedTT: "§YRealistic upkeep
 phi_game_start.1.phi_realistic_upkeep_researcher_disallowed: "Realistic upkeep researcher is §RDISALLOWED§! §Y(default option)§!"
 phi_game_start.1.phi_realistic_upkeep_researcher_disallowedTT: "§YArcade upkeep researcher = Allowed§! \nAll Researcher physics and engineering use only §Yenergy§! for upkeep"
 
-phi_game_start.2.desc: "The mod has been upgraded to §HPHIGO v1.2 compatible with 3.8.1.\n\n"
+phi_game_start.2.desc: "The mod has been upgraded to §HPHIGO v1.3 compatible with 3.8.1.\n\n"
 
 phi_game_start.1.phi_artifact_is_only_mining_station_allowed: "Science artifact station is §GALLOWED§! §Y(default option)§!"
 phi_game_start.1.phi_artifact_is_only_mining_station_allowedTT: "Science artifact station Gore = Allowed§! means that artifact research stations will be allowed and will undergo the massive Phi bonuses for research stations.\n\nClick here to §RDISALLOW§! Science artifact station"
@@ -997,3 +998,16 @@ leader_trait_xenophile: "Love xeno diversity"
 leader_trait_xenophile_2: "Love xeno diversity 2"
 
 phi_open_arms: "The $contact$ adds another 10 £social_research£ for 10 years"
+
+trade_victory.11.name: "The thrade capital is in building"
+trade_victory.11.desc: "With this news trade grows in the galaxy"
+trade_victory.11.a:"Perfiecto"
+trade_victory.21.name: "Il trade capital è stato costruito"
+trade_victory.21.desc: "§B[From.GetName]§! has finish the trade capital, we need decide if accepted or refuse affiliation"
+trade_victory.21.a: "Yes this is good choice for our planes (You can't declare war contro §B[From.GetName]§!)"
+trade_victory.21.b: "No questo è inaccettabile"
+trade_victory.22.name: "Trade capital è stato costruiro"
+trade_victory.22.desc: "Finalmente possiamo imporre la nostra influenza tramite il trade"
+trade_victory.22.a: "Bene ora iniziamo l'agenda per la trade league universale"
+
+trade_victory.22.a.tooltip: "Bisogna avviare l'agenda il prima possibile per iniziare a ottenere potere tramite il trade"

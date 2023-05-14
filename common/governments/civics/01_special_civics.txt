@@ -333,8 +333,8 @@ civic_mercenary_enclave = {
 	}
 	random_weight = { base = @civic_default_random_weight }
 	modifier = {
-		ship_hull_regen_add_perc = 0.05
-		ship_armor_regen_add_perc = 0.05
+		ship_hull_regen_add_perc = @regen_mult_lv2
+		ship_armor_regen_add_perc = @regen_mult_lv2
 		ship_speed_mult = 0.25
 		starbase_shipyard_build_cost_mult = -0.25
 		starbase_shipyard_build_speed_mult = 0.25

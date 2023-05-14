@@ -146,10 +146,6 @@ can_add_claim = {
 						}
 						root = { 
 								has_claim = prev 
-								OR = {
-									has_natural_wormhole = no
-									has_technology = tech_wormhole_stabilization
-								}
 						}
 					}
 				}
