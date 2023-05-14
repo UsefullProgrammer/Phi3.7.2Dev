@@ -70,7 +70,7 @@ strike_craft_component_template = {
 
 	count = 8
 	regeneration_per_day = 1
-	launch_time = 1.5
+	launch_time = 2.7
 
 	damage = { min = 4 max = 10 }
 	cooldown = 2.3
@@ -80,7 +80,7 @@ strike_craft_component_template = {
 	tracking = 0.30
 
 	health = 40
-	armor = 10
+	armor = 50
 	shield = 0
 	evasion = 0.50
 
