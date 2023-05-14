@@ -152,8 +152,8 @@ utility_component_template = {
 	}
 
 	modifier = {
-		ship_hull_regen_add_static = 3
-		ship_armor_regen_add_static = 6
+		ship_hull_regen_add_static = @regen_hull_lv2
+		ship_armor_regen_add_static = @regen_armor_lv2
 	}
 
 	prerequisites = { tech_regenerative_hull_tissue }
@@ -358,8 +358,8 @@ utility_component_template = {
 	}
 
 	modifier = {
-		ship_hull_regen_add_perc = 0.05
-		ship_armor_regen_add_perc = 0.05
+		ship_hull_regen_add_perc = @regen_mult_lv1
+		ship_armor_regen_add_perc = @regen_mult_lv2
 	}
 
 	prerequisites = { tech_covenant_composer }

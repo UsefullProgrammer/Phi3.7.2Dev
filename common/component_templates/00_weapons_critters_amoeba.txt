@@ -1,6 +1,6 @@
 @attack_range = 10
 @engagement_range = 100
-@launch_time = 2
+@launch_time = 7.3
 @count = 8
 @regen = 0.5
 
