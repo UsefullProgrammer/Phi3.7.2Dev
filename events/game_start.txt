@@ -14,6 +14,18 @@ event = {
 			limit = { is_ai = no }
 			country_event = { id = country.900 days = 460 random = 60 }
 		}
+		every_country = {
+			limit = { 
+				is_regular_empire = yes 
+				is_gestalt = no
+				NOt = { has_origin = origin_imperial_vassal }
+			}
+			unlock_council_slots = 1
+		}
+		every_country = {
+			limit = { has_civic = civic_machine_cult }
+			set_country_flag = divine_algorithm
+		}
 
 		### SPAWN UNIQUE SYSTEMS
 		if = {
@@ -623,6 +635,7 @@ event = {
 			}
 		}
 	}
+	
 }
 
 ### Hidden Game Start Event that resets tutorial for advisor trigger purposes

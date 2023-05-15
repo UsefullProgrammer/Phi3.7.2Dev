@@ -972,8 +972,7 @@ civic_machine_cult = {
 	}
 	modifier = {
 		councilor_gestalt_governor_exp_gain = @gestalt_civic_node_xp_rate
-		country_edict_fund_add = 50
-		country_edict_fund_mult = 0.1
+		country_edict_fund_mult = 0.15
 	}
 }
 civic_machine_despoilers = {

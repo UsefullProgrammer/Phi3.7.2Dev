@@ -295,12 +295,12 @@ desired_colonizers_base = {
 			is_country_type = awakened_fallen_empire
 		}
 		ai_colonize_plans > 0
-		empire_sprawl_over_cap < -20
-		# NOT = {
-		# 	any_owned_planet = {
-		# 		num_pops < 25
-		# 	}
-		# }
+		empire_sprawl_over_cap < -30
+		NOT = {
+		 	any_owned_planet = {
+		 		num_pops < 20
+		 	}
+		}
 	}
 }
 

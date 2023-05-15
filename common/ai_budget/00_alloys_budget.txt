@@ -219,10 +219,10 @@ alloys_expenditure_colonies_expand = {
 		is_machine_empire = no
 		OR = {
 			is_at_war = no
-			mid_game_years_passed > 0
+			years_passed > 10
 		}
 		ai_colonize_plans > 0
-		empire_sprawl_over_cap < -150
+		empire_sprawl_over_cap < -30
 		OR = {
 			AND = {
 				is_lithoid_empire = no
@@ -244,7 +244,7 @@ alloys_expenditure_colonies_expand = {
 	}
 
 	weight = {
-		weight = 0.5
+		weight = 1
 	}
 
 	desired_min = {
@@ -265,14 +265,14 @@ alloys_expenditure_colonies_expand_machine = {
 		is_machine_empire = yes
 		OR = {
 			is_at_war = no
-			mid_game_years_passed > 0
+			years_passed > 10
 		}
 		ai_colonize_plans > 0
-		empire_sprawl_over_cap < -150
+		empire_sprawl_over_cap < -30
 	}
 
 	weight = {
-		weight = 0.5
+		weight = 1
 	}
 
 	desired_min = {

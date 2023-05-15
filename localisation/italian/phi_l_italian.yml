@@ -569,7 +569,7 @@ civic_machine_despoilers: "Predatori delle Macchine"
 civic_scavengers_machine:0 "Protocollo Xenon" #dedicato a pietor
 civic_scavengers_machine_desc:0 "In questo protocollo, niente va sprecato, neanche nei momenti più gravi della guerra: nessuna tecnologia nemica rimarrà inosservata, poiché squadre di demolitori accompagnano le flotte di guerra per recuperare qualsiasi cosa valga la pena di essere recuperata dai relitti."
 civic_machine_cult:0 "Culto delle Macchine" # dedicato a primate
-civic_machine_cult_desc:0 "Questa gestait ha una religione simile, con il culto della divinità delle macchine."
+civic_machine_cult_desc:0 "Questa gestait ha un credo simile a una religione, con il culto della divinità delle macchine.\nLa decisione §Ydell'algoritmo divino§! è già disponibile."
 
 #Federazioni
 galactic_trade_consortium: "Consorzio di Commercio Galattico"

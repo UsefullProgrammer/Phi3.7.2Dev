@@ -563,8 +563,8 @@ civic_machine_despoilers: "Machine Despoilers"
   #1.2
 civic_scavengers_machine:0 "Xenon protocol" #dedicato a pietor
 civic_scavengers_machine_desc:0 "In this protocol, nothing goes to waste, even in the grimmest times of war: no enemy technology will go undiscovered, as teams of scrappers accompanying the war fleets scrape wreckages of anything and everything worth salvaging."
-civic_machine_cult:0 "Machine Cult" # dedicato a primate
-civic_machine_cult_desc:0 "This gestait has a similar religion where the have cult of machine god."
+civic_machine_cult:0 "Culto de la máquina"
+civic_machine_cult_desc:0 "Esta gestalt tiene una religión similar donde tiene un culto al dios de la máquina \n La decisión §Yel algoritmo divino§! ya está disponible."
 #Federations
 galactic_trade_consortium: "Galactic Trade Consortium"
 galactic_empire: "Galactic Empire"

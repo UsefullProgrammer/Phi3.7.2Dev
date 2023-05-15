@@ -306,3 +306,8 @@ cooldown ridotte da 30 anni a 24
 COUNCIL AGENDA BASE COUNCILOR DAILY PROGRESS cambiata da 10 a 12
 Aggiunto tecnologia distaccata per governement civics (prima erano in una tecnologia)
 Sperimentale: scudi e armor per 5 sennò il bonus hull è troppo grosso e sbilanciato, le armi anti hull sono le migliori
+
+Gli imperi normali partono con 4 slot concilio invece di 3
+Bonus leader ripristinato a 5% come nella vecchia phi.
+Finalmente le ia fanno colonie ora sono molto più temibili
+Fix armor e shield non erano moltiplicati per 5 per environment e orbital ring
