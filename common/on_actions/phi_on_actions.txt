@@ -25,6 +25,8 @@ on_war_beginning = {
 # this = country
 on_yearly_pulse_country = {
 	events = {
+		gob_check_crisis.0
+		rules.2				#border gore check # basta farla ogni anno
 		#victory.4
 		phi_war_in_heaven.0		#ensures that every vassal joins overlord's war in heaven stance
 		phi_ai.4				#market simulator for non gestalts empires
@@ -38,6 +40,7 @@ on_yearly_pulse_country = {
 		phi_ai.8				#building assault armies
 		phi_ai.10				#send alloys to fed prez
 		phi_ai.15				#attack bbeg
+		
 	}
 }
 
@@ -57,7 +60,7 @@ on_entering_wormhole = {
 # this = country
 on_monthly_pulse_country = {
 	events = {
-		rules.2				#border gore check
+		
 		naval_attrition.9
 		#victory.7
 		phi_politics.4

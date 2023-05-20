@@ -178,3 +178,6 @@ EDICT_DESC:8 "\nGli §HEditto dell'Impero§! sono divisi in editto e campagne, e
 civic_tooltip_machine_servitor_effects:12 "Iniziate il gioco con §Y5§! £pop£ Popolazioni organiche con cittadinanza §Y$citizenship_organic_trophy$§! e standard di vita §Y$living_standard_organic_trophy$§!\nPotete costruire edifici §Y$building_organic_sanctuary$§! che consentono ai Bio-Trofei di produrre §YUnity§! e ricerca §YSocietà§! invece degli edifici del vostro Impero di Macchine come l'edificio §Y$building_uplink_node$§!.\n\nGarantisce l'accesso all'edificio §Y$holding_organic_sanctuary$§!."
 
 tr_synchronicity_machine_finish_desc:3 "§HSblocca Editto:§! $edict_industrial_maintenance$.\n$MOD_PLANETARY_ASCENSION_EFFECT_MULT$: §G+25%§!\nPerks di Ascensione Sbloccati: §G+1§!\nChance di Trasferimento Automatico: §G+30%§!"
+
+ OUR_CLAIMS_ON_ENEMY:1 "" #fix problem that ssend you can gt claim when not true.
+ ALLY_CLAIMS_ON_ENEMY:1 ""

@@ -8,7 +8,7 @@
  tr_expansion_galactic_ambition_desc:7 "§Y$mod_starbases_upkeep_mult$§! reduced by §G20%§!.\n§YPlanetary Structures maintenance§! reduced by §G20%§!."
  tr_discovery_databank_uplinks_desc: "§HUnlocks Edict:§! $edict_research_subsidies$\n§Y$mod_station_researchers_produces_mult$§! increased by §G50%§!."
  tr_discovery_polytechnic_education_desc: "§Y$MOD_LEADER_SPECIES_EXP_GAIN$§! increased by §G+25%§! and §Y$MOD_LEADER_SKILL_LEVELS$§! increased by §Y1§!.\n§YScientists§! start at level §Y3§!."
- tr_synchronicity_integrated_preservation_desc:4 "§Y$job_coordinator_plural$§! produce §Y0.25§! additional £mod_country_admin_cap_add£ §Y$MOD_COUNTRY_ADMIN_CAP_ADD$§! and §Y$job_evaluator_plural$§! reduce  §Y$MOD_PLANET_CRIME_NO_HAPPINESS_ADD$§! by 2."
+ #tr_synchronicity_integrated_preservation_desc:4 "§Y$job_coordinator_plural$§! produce §Y0.25§! additional £mod_country_admin_cap_add£ §Y$MOD_COUNTRY_ADMIN_CAP_ADD$§! and §Y$job_evaluator_plural$§! reduce  §Y$MOD_PLANET_CRIME_NO_HAPPINESS_ADD$§! by 2."
  tr_harmony_finish_effect:7 "§E$TRADITIONS_FINISH$:§!\nAdopting all $tr_harmony_adopt$ will reduce §Y$MOD_EMPIRE_SIZE_POPS_MULT$§! by §G10%§! and allow the §YDisarmament§! diplomatic stance."
  tr_supremacy_finish_effect:1 "§E$TRADITIONS_FINISH$:§!\nAdopting all $tr_supremacy_adopt$ will unlock the §YWar Doctrines§! Policies and allow the §YFull Scale Mobilization§! diplomatic stance."
  
@@ -150,7 +150,7 @@ tradition_domination_desc:0 "If we do not impose our will on others, they will i
  ADMIN_CAP_VALUE_2:0 "$VALUE|Y$"
 #ADMIN_CAP_VALUE:0 "$MOD_COUNTRY_ADMIN_CAP_ADD$: $VALUE|Y$"($ADMIN_CAP_VALUE_2$)
 #empire_sprawl_over_cap_g:0 "From $NUM|Y$ $empire_sprawl_over_cap$: $VALUE$
- EMPIRE_SIZE_NO_EFFECTS:4 "While §Y$EMPIRE_SIZE$§! is at or below §Y$EMPIRE_SIZE_TOTAL_2$§! + §YAdministration Capacity§! , no other costs are being modified."
+ 
  BuildingS_total:0 "$MOD_PLANET_MAX_BUILDINGS_ADD$: $VALUE|Y$"
 
  #ascension perk
@@ -168,3 +168,12 @@ EDICT_DESC:8 "\n§E§HEmpire Edicts§! are divided into edicts and campaigns, an
 
 tr_synchronicity_machine_finish_desc:3 "§HUnlocks Edict:§! $edict_industrial_maintenance$.\n$MOD_PLANETARY_ASCENSION_EFFECT_MULT$: §G+25%§!\nAscension Perks Unlocked: §G+1§!\nAutomatic Resettlement Chance: §G+30%§!"
 
+
+ empire_sprawl_over_cap:1 "$VALUE|$"
+ #EMPIRE_SIZE_EFFECTS:5 "At our current §Y$EMPIRE_SIZE$§! of [This.empire_sprawl_over_cap] $empire_sprawl_over_cap$, we have the following modifiers:"
+ EMPIRE_SIZE_NO_EFFECTS:4 "While §Y$EMPIRE_SIZE$§! is at or below §Y$EMPIRE_SIZE_TOTAL_2$§! + §YAdministration Capacity§!, no other costs are being modified." #actually you are in [Root.owner.empire_sprawl_over_cap] $empire_sprawl_over_cap$
+ 
+ OUR_CLAIMS_ON_ENEMY:1 " " #fix problem that ssend you can gt claim when not true.
+ ALLY_CLAIMS_ON_ENEMY:1 " "
+
+war_goal_wg_conquest_desc:1 "War is waged to seize Claimed enemy systems. Using this wargoal to take claims generates §Y25%§! less §YThreat§! for each conquered system.\n$OUR_CLAIMS_ON_ENEMYS$\n$ALLY_CLAIMS_ON_ENEMYS$"

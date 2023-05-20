@@ -139,7 +139,7 @@ gateway_final = {
 			sr_dark_matter = 50
 		}
 		upkeep = {
-			energy = 25
+			energy = 20
 		}
 	}
 	construction_blocks_and_blocked_by = self_type

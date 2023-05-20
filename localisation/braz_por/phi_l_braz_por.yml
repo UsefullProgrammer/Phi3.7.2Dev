@@ -1009,3 +1009,9 @@ tech_collective_self_gob:0 "Governo revolucionário"
 tech_collective_self_gob_desc:1 "Encontrar aspectos do próprio ser dentro do grupo é natural e inevitável; eventualmente, esses aspectos compartilhados devem ser valorizados mais do que identidades individuais."
 tech_embodied_dynamism_gob:0 "Governo Universalis"
 tech_embodied_dynamism_gob_desc:0 "Iniciativa e alguma medida de ambição devem ser promovidas em nossas unidades líderes autônomas, ao mesmo tempo em que garantimos que elas não se afastem muito das diretrizes da inteligência central."
+
+tech_shield_point_zero:0 "Escudos de Energia Zero-Ponto-Absoluto"
+tech_shield_point_zero_desc:1 "Este escudo de tecnologia de ponta usa a energia do Zero-Ponto-Absoluto. O escudo de energia pode ricochetear em superfícies sem consumir a energia do escudo\n§RAtenção§! Se você estudar essa tecnologia, terá §Rmenos§! chance de descobrir §YArmaduras de Energia Zero-Ponto-Absoluto§! que aumentam a armadura em 33%."
+tech_armor_boost:0 "Armaduras de Energia Zero-Ponto-Absoluto"
+tech_armor_boost_desc:1 "Esta tecnologia de ponta utiliza a energia do Zero-Ponto-Absoluto na superfície da armadura. O escudo de energia pode ricochetear em superfícies sem danificar a armadura\n§RAtenção§! Se você estudar essa tecnologia, terá §Rmenos§! chance de descobrir §YEscudos de Energia Zero-Ponto-Absoluto§! que aumentam o escudo em 33%."
+

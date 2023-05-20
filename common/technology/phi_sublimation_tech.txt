@@ -14,6 +14,10 @@ tech_physics_4 = {
 
 	weight_modifier = {
 		modifier = {
+			factor = @ap_technological_ascendancy_rare_tech
+			has_ascension_perk = ap_technological_ascendancy
+		}
+		modifier = {
 			factor = 2
 			years_passed > 50
 		}

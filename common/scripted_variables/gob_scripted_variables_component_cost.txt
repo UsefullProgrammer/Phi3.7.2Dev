@@ -1,0 +1,5 @@
+@xl_t5_darkMatter = 1
+@xl_t6_darkMatter = 1.6
+@xl_t5_upkeep_darkMatter = 0.08
+@xl_t6_upkeep_darkMatter = 0.11
+@xl_t8_upkeep_energy = 3.87

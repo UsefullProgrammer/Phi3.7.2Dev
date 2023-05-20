@@ -7,7 +7,7 @@
 @n500 = 20
 gears_of_war = {
 	length = 720
-	icon = "GFX_edict_type_time"
+	icon = "GFX_gear"
 	resources = {
 		category = edicts
 		cost = {
@@ -37,7 +37,7 @@ gears_of_war = {
 
 gnam_gnam_gnam = {
 	length = 720
-	icon = "GFX_edict_type_time"
+	icon = "GFX_gearr"
 	resources = {
 		category = edicts
 		cost = {
@@ -67,7 +67,7 @@ gnam_gnam_gnam = {
 
 total_noob = {
 	length = @EdictDuration
-	icon = "GFX_edict_type_policy"
+	icon = "GFX_noob"
 	
 	potential = {
 		is_ai = no
@@ -89,7 +89,7 @@ total_noob = {
 
 phi_war_in_heaven_ongoing = {
 	length = @EdictDuration
-	icon = "GFX_edict_type_policy"
+	icon = "GFX_war_in_heaven"
 	
 	potential = {
 		always = yes
@@ -121,6 +121,7 @@ phi_war_in_heaven_ongoing = {
 
 breaking_truce_normal = {
 	length = 0
+	icon = "GFX_break_truce"
 	potential = {
 		is_homicidal = no
 		is_ai = no
@@ -135,6 +136,7 @@ breaking_truce_normal = {
 
 breaking_truce_homicidal = {
 	length = 0
+	icon = "GFX_break_truce"
 	potential = {
 		is_homicidal = yes
 		is_ai = no
@@ -155,6 +157,7 @@ breaking_truce_homicidal = {
 
 phi_join_defensive_war = {
 	length = 0
+	icon = "GFX_join_defensive_war"
 	potential = {
 		is_homicidal = no
 		is_ai = no
@@ -181,6 +184,7 @@ phi_join_defensive_war = {
 
 phi_set_survive_wg = {
 	length = 0
+	icon = "GFX_survive"
 	potential = {
 		is_homicidal = no
 		is_ai = no
@@ -191,7 +195,10 @@ phi_set_survive_wg = {
 			any_defender = {
 				is_same_value = root
 				is_war_leader = yes
+				
 			}
+			War_Valid_survive = yes
+			#root = { Valid_survive = yes }
 		}
 	}
 	effect = {
@@ -208,6 +215,7 @@ phi_set_survive_wg = {
 
 phi_set_conquest_wg = {
 	length = 0
+	icon = "GFX_set_conquest_wg"
 	potential = {
 		is_homicidal = no
 		is_ai = no
@@ -223,9 +231,11 @@ phi_set_conquest_wg = {
 				root = {
 					has_claim = prev
 				}
+				
 			}
-			NOT = {
+			NOR = {
 				using_war_goal = { type = wg_phi_survive owner = root }
+				War_Valid_survive = no #wg border
 			}
 		}
 	}
@@ -235,8 +245,9 @@ phi_set_conquest_wg = {
 				any_defender = {
 					is_same_value = root
 				}
-				NOT = {
+				NOR = {
 					using_war_goal = { type = wg_phi_survive owner = root }
+					War_Valid_survive = no #wg border
 				}
 			}
 			set_war_goal = { type = wg_conquest target = root }
@@ -297,78 +308,83 @@ phi_set_conquest_wg = {
 
 #### POLITICS ####
 #3.8 obsolete
-# abdicate = {
-# 	length = 0
-# 	potential = {
-# 		has_authority = auth_imperial
-# 	}
-# 	allow = {
-# 		exists = heir
-# 	}
-# 	effect = {
-# 		kill_leader = {
-# 			type = ruler
-# 			show_notification = yes
-# 			fire = yes
-# 		}
-# 	}
-# 	resources = {
-# 		category = edicts
-# 		cost = {
-# 			influence = 100
-# 		}
-# 	}
-# }
+ abdicate = {
+ 	length = 0
+	icon = "GFX_leave"
+ 	potential = {
+ 		has_authority = auth_imperial
+ 	}
+ 	allow = {
+		exists = ruler
+ 		exists = heir
+ 	}
+ 	effect = {
+ 		ruler = {
+				kill_leader = {
+					show_notification = yes
+				}
+		}
+ 	}
+ 	resources = {
+ 		category = edicts
+ 		cost = {
+ 			influence = 100
+ 		}
+ 	}
+ }
 
-# new_heir = {
-# 	length = 0
-# 	potential = {
-# 		has_authority = auth_imperial
-# 	}
-# 	allow = {
-# 		exists = heir
-# 	}
-# 	effect = {
-# 		kill_leader = {
-# 			type = ruler
-# 			heir = yes
-# 			show_notification = yes
-# 			fire = yes
-# 		}
-# 	}
-# 	resources = {
-# 		category = edicts
-# 		cost = {
-# 			influence = 100
-# 		}
-# 	}
-# }
+ new_heir = {
+ 	length = 0
+	icon = "GFX_new_heir"
+ 	potential = {
+ 		has_authority = auth_imperial
+ 	}
+ 	allow = {
+ 		exists = heir
+ 	}
+	effect = {
+ 		heir = {
+			kill_leader = {
+				show_notification = yes
+				fire = yes
+ 			}
+		}
+ 	}
+ 	resources = {
+ 		category = edicts
+ 		cost = {
+ 			influence = 100
+ 		}
+ 	}
+ }
 
-# retire = {
-# 	length = 0
-# 	potential = {
-# 		has_authority = auth_dictatorial
-# 	}
-# 	allow = {
-# 		exists = ruler
-# 	}
-# 	effect = {
-# 		kill_leader = {
-# 			type = ruler
-# 			show_notification = yes
-# 			fire = yes
-# 		}
-# 	}
-# 	resources = {
-# 		category = edicts
-# 		cost = {
-# 			influence = 100
-# 		}
-# 	}
-# }
+retire = {
+ 	length = 0
+	 icon = "GFX_leave"
+ 	potential = {
+ 		has_authority = auth_dictatorial
+ 	}
+ 	allow = {
+ 		exists = ruler
+ 	}
+ 	effect = {
+ 		ruler = {
+				kill_leader = {
+					show_notification = yes
+				}
+		}
+ 	}
+ 	resources = {
+ 		category = edicts
+ 		cost = {
+ 			influence = 100
+ 		}
+ 	}
+ }
 
 presidential_run = {
 	length = 0
+	icon = "GFX_fed"
 	potential = {
 		is_ai = no
 	}
@@ -391,6 +407,7 @@ presidential_run = {
 
 federal_integration_act = {
 	length = 0
+	icon = "GFX_fed"
 	potential = {
 		is_ai = no
 	}
@@ -427,6 +444,7 @@ federal_integration_act = {
 
 supranational_authority_bill = {
 	length = 0
+	icon = "GFX_fed"
 	potential = {
 		is_ai = no
 	}
@@ -473,6 +491,7 @@ supranational_authority_bill = {
 
 blood_tribute = {
 	length = 0
+	icon = "GFX_blood"
 	potential = {
 		is_ai = no
 	}
@@ -612,3 +631,25 @@ archeologist_spedition = {
 		}
 	}
 }
+
+
+expansion_planer = {
+	length = -1
+	icon = "GFX_expansion_planer"
+	resources = {
+		category = special
+		cost = {
+			influence = 1000
+		}
+		upkeep = {
+			influence = 3
+		}
+	}
+	modifier = {
+		all_technology_research_speed = -0.35
+		country_leader_cap_add = 1
+		country_admin_cap_add = 25
+	}
+}
+
+

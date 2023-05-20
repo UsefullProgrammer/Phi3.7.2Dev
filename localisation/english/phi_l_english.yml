@@ -4,8 +4,9 @@
 ### START MENU ###
 ##################
 version: "v1.3 DEV"
+Compatible: "1.8.3"
 phi_game_start.1.name: "PHIGO START MENU"
-phi_game_start.1.desc: "You are playing at §HPHIGO v1.3 DEV.\n"
+phi_game_start.1.desc: "You are playing at §HPHIGO $version$.\n"
 
 phi_game_start.1.border_gore_allowed: "Border Gore is §GALLOWED§!"
 phi_game_start.1.border_gore_allowedTT: "§YBorder Gore = Allowed§! means that you §Gcan§! build outposts and have parts of your empire not directly connected  (are valid wormhole and gateway ) to a fully colonized planet.\n\nClick here to §RDISALLOW§! Border Gore"
@@ -27,7 +28,7 @@ phi_game_start.1.phi_realistic_upkeep_researcher_allowedTT: "§YRealistic upkeep
 phi_game_start.1.phi_realistic_upkeep_researcher_disallowed: "Realistic upkeep researcher is §RDISALLOWED§! §Y(default option)§!"
 phi_game_start.1.phi_realistic_upkeep_researcher_disallowedTT: "§YArcade upkeep researcher = Allowed§! \nAll Researcher physics and engineering use only §Yenergy§! for upkeep"
 
-phi_game_start.2.desc: "The mod has been upgraded to §HPHIGO v1.3 compatible with 3.8.1.\n\n"
+phi_game_start.2.desc: "The mod has been upgraded to §HPHIGO $version$ compatible with $Compatible$.\n\n"
 
 phi_game_start.1.phi_artifact_is_only_mining_station_allowed: "Science artifact station is §GALLOWED§! §Y(default option)§!"
 phi_game_start.1.phi_artifact_is_only_mining_station_allowedTT: "Science artifact station Gore = Allowed§! means that artifact research stations will be allowed and will undergo the massive Phi bonuses for research stations.\n\nClick here to §RDISALLOW§! Science artifact station"
@@ -1016,3 +1017,48 @@ tech_collective_self_gob:0 "Governement revolutionary"
 tech_collective_self_gob_desc:1 "Finding aspects of the self within the group is natural and inevitable; eventually those shared aspects must be valued higher than individual identities."
 tech_embodied_dynamism_gob:0 "Governement Universalis"
 tech_embodied_dynamism_gob_desc:0 "Initiative and some measure of ambition must be promoted in our autonomous leader units, while still making certain that they do not stray too far from the directives of the core intelligence."
+
+tech_shield_point_zero:0 "Shields Zero-point-absolute Energy"
+tech_shield_point_zero_desc:1 "This cut-edge tecnology shield uses Zero-point-absolute Energy. The energy shield could ricochet off surfaces without consume energy of shield\n§RWarning§! if study this tech will have §Rless§! chance of being discovered §YArmors Zero-point-absolute Energy§! that boost armor of 33%"
+tech_armor_boost:0 "Armors Zero-point-absolute Energy"
+tech_armor_boost_desc:1 "This cut-edge tecnology uses Zero-point-absolute Energy in surface of armor. The energy shield could ricochet off surfaces without damage armor\n§RWarning§! if study this tech  will have §Rless§! chance of being discovered §YShields Zero-point-absolute Energy§! that boost shield of 33%"
+
+CORVETTE_MID_M1S2:3 "Heavy Torpedo Boat"
+OFFSPRING_CORVETTE_MID_M1S2:0 "$CORVETTE_MID_M1S1$"
+CORVETTE_MID_S4:3 "Shielded design"
+OFFSPRING_CORVETTE_MID_S4:0 "$CORVETTE_MID_S4$"
+  
+casus_belli_FW_cb_border:0 "Border closed"
+ war_goal_FW_wg_open_border: "Open border"
+ war_goal_FW_wg_open_border_desc: "Start a war to open the borders of hostile civilization and obtain 20 years of right of passage.\n\nEnemy §Gcan't§! set survive war, §Rcan't§! get claim!"
+ z_fw_open_border_tooltip:0 "§Y[From.GetName]§! has been defeated, they put down their arrogance and agreed to open the border to us within §Y20§! years.\n§Y[Root.GetName]§! has gained §G+100§! £influence£\n"
+ war_goal_FW_wg_open_border_long: "Long Open border"
+ war_goal_FW_wg_open_border_long_desc: "Start a war to open the borders of hostile civilizations, gain 50 years of right of way and end the competition.\n\nEnemy §Gcan't§! set survive war, §Rcan't§! get claim!"
+ z_fw_open_border_long_tooltip:0 "§Y[From.GetName]§! has been completely defeated, they had to put down their arrogance and agreed to open the border to us within §Y50§!. At the same time, we also ended the state of rivals with them, but obviously they did not agree with this result and would strike back one day in the future.\n§Y[Root.GetName]§! has gained §G+150§! £influence£\n"
+ z_fw_opinion_wg_open_boder_long:0 "Be rampant in our territory"
+
+trait_talented_2:0 "Overhelm Talented"
+trait_talented_2_desc:0 "§LMembers of this species are genetically modified with an Overwhelm aptitude.§!\n"
+job_organic_brain:0 "Brain calculator"
+job_organic_brain_desc:0 "Can use they brain how an calculator they are optimized for society research and unity"
+slavery_brain:0 "Slavery brain"
+
+tech_defense_platform_hull_2:0 "$tech_defense_platform_hull_1$ MK2"
+
+edict_expansion_planer: "Expand empire size"
+edict_expansion_planer_desc:0 "Expand limit of our empire for new colony"
+
+tech_defense_platform_hull_2_desc:0 "$tech_defense_platform_hull_1_desc$"
+
+job_organic_brain_plural:0 "Brain calculators"
+slavery_brain_tooltip:0 "Use they organic brain how an calculator they are optimized for society research and unity"
+slavery_brain_tooltip_delayed:0 "Every organic brain produces 2 £society_research£ and 0.25 £unity£"
+OUR_CLAIMS_ON_ENEMYS:1 "If we have claims that we are trying to conquer from the enemy and their allies."
+ALLY_CLAIMS_ON_ENEMYS:1 "If Our allies have claims that we are trying to conquer from the enemy and their allies."
+
+edict_dark_matter_explosives: "Dark Matter explosives"
+edict_dark_matter_explosives_desc:0 "Using dark matter for missiles can be very useful if you want to cause damage."
+edict_dark_matter_point_grid: "Dark Matter defense grid"
+edict_dark_matter_point_grid_desc:0 "Use dark matter to create a defense grid for point defense."
+edict_dark_matter_ammunition: "Dark Matter air strike"
+edict_dark_matter_ammunition_desc:0 "Use dark matter for ammunition of air strike"

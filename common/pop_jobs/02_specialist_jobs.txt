@@ -116,6 +116,18 @@ researcher = {
 			society_research = 4
 		}
 		upkeep = {
+			trigger = {
+				has_global_flag = phi_realistic_upkeep_researcher
+			}
+			consumer_goods = 0.25
+			alloys = 0.25
+			minerals = 2
+			energy = 4
+		}
+		upkeep = {
+			trigger = {
+				has_global_flag = phi_realistic_upkeep_researcher_disallowed
+			}
 			energy = 8
 		}
 		upkeep = {

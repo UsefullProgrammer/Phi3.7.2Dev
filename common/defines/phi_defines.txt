@@ -247,7 +247,7 @@
 		EXTERNAL_LEADER_POOL_SIZE	= 1			# Base amount of external leaders in the leader pool
 		LEADER_POOL_REFRESH_TIME = 1800 		# Number of days between leader pool refresh
 		LEADER_BASE_SKILL_CAP	= 10
-		LEADER_MAX_SKILL_CAP	= 10
+		LEADER_MAX_SKILL_CAP	= 13
 		LEADER_SKILL_MIN		= 1
 		LEADER_AGE_HEIR_MIN		= 18				# Min age of generated heirs in dynastic governments
 		LEADER_AGE_HEIR_MAX		= 26				# Max age of generated heirs in dynastic governments
@@ -501,7 +501,7 @@
 
 		STATION_SELF_REPAIR_TIMER_DAYS			= 10	# Number of days after taking damage before a station will start self-repairing
 
-		STARBASE_SELF_REPAIR_TIMER_DAYS			= 30	# Number of days after taking damage before a starbase will start self-repairing
+		STARBASE_SELF_REPAIR_TIMER_DAYS			= 20	# Number of days after taking damage before a starbase will start self-repairing
 		STARBASE_DISABLED_HEALTH_PERCENTAGE		= 0		# Percentage of max health when a starbase that can be disabled will be disabled.
 		STARBASE_ENABLED_HEALTH_PERCENTAGE		= 0.05	# Percentage of max health when a starbase that can be disabled will be enabled.
 		STARBASE_AUTO_CONTROL_DISTANCE			= 80	# Distance at which a fleet can seize control of a disabled starbase
@@ -935,7 +935,7 @@
 
 		OUT_OF_COMBAT_ARMOR_REGEN_MULT		= 5.0		# Armor recharge this much faster outside combat
 
-		OUT_OF_COMBAT_HULL_REGEN_MULT		= 5.0		# Hull recharge this much faster outside combat
+		OUT_OF_COMBAT_HULL_REGEN_MULT		= 2.0		# Hull recharge this much faster outside combat
 
 		SHIP_SPEED_SCALE					= 0.045		# Setting this to 1 makes the scripted speed value correspond to units/day
 

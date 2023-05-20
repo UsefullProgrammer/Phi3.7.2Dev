@@ -9,6 +9,7 @@ country_event = {
 	
 	trigger = {
 		is_at_war = no
+		crisis_run_optimized = no
 		NOT = { has_global_flag = phi_border_gore_allowed }
 	}
 	immediate = { 
@@ -33,31 +34,54 @@ country_event = {
 				set_star_flag = connected
 			}
 		}
-		
 		every_system_within_border = {
 			limit = {
 				NOT = { has_star_flag = connected }
 			}
 			if = {
 				limit = {
+					any_neighbor_system = {
+						exists = owner
+						owner = {
+							OR = {
+								AND = {
+									is_subject = yes
+									overlord = { is_same_value = root }
+								}
+								is_in_federation_with = root
+								root = {
+									is_subject = yes
+									overlord = { is_same_value = prev }
+								}
+							}
+						}
+					}
+				}
+				set_star_flag = connected
+			}
+		}
+		every_system_within_border = {
+			limit = {
+				NOT = { has_star_flag = connected }
+				has_natural_wormhole = yes
+			}
+			if = {
+				limit = {
 					closest_system = {
 						limit = {
-							OR = {
-								exists = owner
-								owner = {
-									OR = {
-										AND = {
-											is_subject = yes
-											has_overlord = root
-										}
-										is_in_federation_with = root
-										root = {
-											is_subject = yes
-											overlord = { is_same_value = prev }
-										}
+							exists = owner
+							owner = {
+								OR = {
+									AND = {
+										is_subject = yes
+										has_overlord = root
+									}
+									is_in_federation_with = root
+									root = {
+										is_subject = yes
+										overlord = { is_same_value = prev }
 									}
 								}
-							
 							}
 						}
 						use_bypasses = yes
@@ -94,9 +118,11 @@ country_event = {
 			}
 		}
 		every_system_within_border = {
+			limit = {
+				NOT = { has_star_flag = connected }
+			}
 			if = {
 				limit = {
-				
 					closest_system = {
 						limit = {
 							has_star_flag = connected

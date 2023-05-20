@@ -1008,3 +1008,8 @@ tech_collective_self_gob:0 "Gobierno revolucionario"
 tech_collective_self_gob_desc:1 "Encontrar aspectos del yo dentro del grupo es natural e inevitable; finalmente, esos aspectos compartidos deben valorarse más que las identidades individuales."
 tech_embodied_dynamism_gob:0 "Gobierno Universalis"
 tech_embodied_dynamism_gob_desc:0 "Debe promoverse la iniciativa y cierta medida de ambición en nuestras unidades líder autónomas, asegurándonos al mismo tiempo que no se alejen demasiado de las directrices de la inteligencia central."
+
+tech_shield_point_zero:0 "Escudos de energía absoluta de punto cero"
+tech_shield_point_zero_desc:1 "Este escudo de tecnología de vanguardia utiliza la energía absoluta de punto cero. El escudo de energía podría rebotar en superficies sin consumir la energía del escudo.\n§RAdvertencia§! Si estudias esta tecnología tendrás §Menos§! posibilidades de descubrir §YArmaduras de energía absoluta de punto cero§!, que aumentan la armadura en un 33%."
+tech_armor_boost:0 "Armaduras de energía absoluta de punto cero"
+tech_armor_boost_desc:1 "Esta tecnología de vanguardia utiliza la energía absoluta de punto cero en la superficie de la armadura. El escudo de energía podría rebotar en superficies sin dañar la armadura.\n§RAdvertencia§! Si estudias esta tecnología tendrás §Menos§! posibilidades de descubrir §YEscudos de energía absoluta de punto cero§!, que aumentan el escudo en un 33%."

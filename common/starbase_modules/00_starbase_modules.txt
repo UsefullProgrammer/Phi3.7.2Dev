@@ -27,7 +27,10 @@ shipyard = {
 			energy = 1
 		}
 	}
-
+	orbit_modifier = {
+		ship_hull_regen_add_perc = 0.25
+		ship_armor_regen_add_perc = 0.25
+	}
 	station_modifier = {
 		starbase_shipyard_capacity_add = 1
 	}

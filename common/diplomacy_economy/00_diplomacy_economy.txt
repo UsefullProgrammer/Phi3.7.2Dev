@@ -209,7 +209,7 @@ per_relation = {
 			}
 		}
 	}
-		migration_pact = {
+	migration_pact = {
 		trigger = {
 			exists = ruler
 			ruler = { has_trait = leader_trait_legendary_scientific_diplomacy }

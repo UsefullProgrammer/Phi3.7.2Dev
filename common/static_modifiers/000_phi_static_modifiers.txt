@@ -18,8 +18,9 @@ empire_size = {
 	#edicts_upkeep_mult = 0.005
 	# in 3.7.4 useless
 	#rare_edicts_cost_mult = 0.01
-	leader_upkeep_empire_size_mult = 0.004
-	leader_cost_empire_size_mult = 0.004
+	# in 3.8 useless
+	#leader_upkeep_empire_size_mult = 0.004
+	#leader_cost_empire_size_mult = 0.004
 }
 
 

@@ -320,7 +320,7 @@ cruiser = {
 	enable_3dview_in_ship_browser = yes
 
 	default_behavior = line
-	ship_roles = { gunship artillery carrier }
+	ship_roles = { gunship artillery }
 	triggered_ship_roles = {
 		{
 			name = explosive
@@ -424,7 +424,7 @@ battleship = {
 	enable_3dview_in_ship_browser = yes
 
 	default_behavior = artillery
-	ship_roles = { artillery carrier gunship }
+	ship_roles = { artillery gunship }
 
 	prerequisites = { "tech_battleships" }
 
@@ -503,7 +503,7 @@ carrier = {
 	base_buildtime = @battleship_build_time
 	can_have_federation_design = yes
 	enable_default_design = yes	#if yes, countries will have an auto-generated design at start
-
+	ship_roles = { carrier }
 	default_behavior = carrier
 
 	prerequisites = { "tech_carriers" }

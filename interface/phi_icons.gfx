@@ -67,9 +67,74 @@ spriteTypes = {
 		name = "GFX_colony_type_researcheng"
 		texturefile = "gfx/interface/planetview/colony_type_phi_eng.dds"
 	}
+	spriteType = {
+		name = "GFX_expansion_planer"
+		textureFile = "gfx/interface/icons/governments/edicts/job_colonist.dds"
+	}
 	# spriteType = {
 	# 	name = "GFX_resolution_galactic_studies_malus"
 	# 	texturefile = "gfx/interface/icons/main_menu/resolution_galactic_studies_malus.dds"
 	# }
-	
+	spriteType = {
+		name = "GFX_join_defensive_war"
+		textureFile = "gfx/interface/icons/governments/edicts/join_defensive_war.dds"
+	}
+	spriteType = {
+		name = "GFX_break_truce"
+		textureFile = "gfx/interface/icons/governments/edicts/break_truce.dds"
+	}
+	spriteType = {
+		name = "GFX_fed"
+		textureFile = "gfx/interface/icons/governments/edicts/fed.dds"
+	}
+
+	spriteType = {
+		name = "GFX_leave"
+		textureFile = "gfx/interface/icons/governments/edicts/leave.dds"
+	}
+
+	spriteType = {
+		name = "GFX_new_heir"
+		textureFile = "gfx/interface/icons/governments/edicts/new_heir.dds"
+	}
+
+	spriteType = {
+		name = "GFX_set_conquest_wg"
+		textureFile = "gfx/interface/icons/governments/edicts/set_conquest_wg.dds"
+	}
+
+	spriteType = {
+		name = "GFX_survive"
+		textureFile = "gfx/interface/icons/governments/edicts/survive.dds"
+	}
+
+	spriteType = {
+		name = "GFX_blood"
+		textureFile = "gfx/interface/icons/governments/edicts/blood.dds"
+	}
+	spriteType = {
+		name = "GFX_gear"
+		textureFile = "gfx/interface/icons/governments/edicts/gear.dds"
+	}
+	spriteType = {
+		name = "GFX_gearr"
+		textureFile = "gfx/interface/icons/governments/edicts/gearr.dds"
+	}
+
+	spriteType = {
+		name = "GFX_noob"
+		textureFile = "gfx/interface/icons/governments/edicts/noob.dds"
+	}
+	spriteType = {
+		name = "GFX_war_in_heaven"
+		textureFile = "gfx/interface/icons/governments/edicts/war_in_heaven.dds"
+	}
+	spriteType = {
+		name = "GFX_stats"
+		textureFile = "gfx/interface/icons/governments/edicts/stats.dds"
+	}
+	spriteType = {
+    	name = "GFX_sr_dark_matter"
+    	texturefile = "gfx/interface/icons/governments/edicts/sr_dark_matter.dds"
+	}
 }

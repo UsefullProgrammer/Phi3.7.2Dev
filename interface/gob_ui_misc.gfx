@@ -1,0 +1,12 @@
+spriteTypes = {
+	spriteType = {
+		name = "GFX_FW_wg_open_border"
+		texturefile = "gfx/interface/icons/diplomacy/FW_wg_open_border.dds"
+	}
+	spriteType = {
+    	name = "GFX_FW_wg_open_border_long"
+    	texturefile = "gfx/interface/icons/diplomacy/FW_wg_open_border.dds"
+	}
+	
+	
+}

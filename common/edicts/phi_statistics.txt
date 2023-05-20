@@ -2,6 +2,7 @@
 
 phi_dump_stats = {
 	length = 0
+	icon = "GFX_stats"
 	potential = {
 		always = yes
 	}

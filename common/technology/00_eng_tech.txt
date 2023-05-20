@@ -1800,6 +1800,7 @@ tech_defense_platform_hull_1 = {
 	}
 }
 
+
 # ##################
 # Industry and Robotics
 # ##################

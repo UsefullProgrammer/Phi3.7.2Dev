@@ -384,7 +384,7 @@ fleet_academy = {
 		exists = owner
 		owner = { has_technology = tech_interstellar_fleet_traditions }
 
-		is_orbital_ring = no
+		#is_orbital_ring = no
 	}
 
 	possible = {

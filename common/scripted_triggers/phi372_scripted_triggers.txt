@@ -33,3 +33,35 @@ is_in_learning_campaign = {
 		has_edict = learning_campaign
 	}
 }
+
+have_genetics_adopt = {
+	hidden_trigger = { exists = from }
+	from = {
+		has_tradition = tr_genetics_adopt
+	}
+}
+crisis_run = {
+	NOR = {
+		crisis_happened_and_defeated = yes #Contingency, Extradimensionals or Prethoryn
+		AND = { #If the Khan is defeated, Crisis Beacon should be hidden until a new crisis happens
+			has_global_flag = great_khan_dead
+			has_crisis = no
+		}
+		AND = { #If the Gray Tempest is defeated, Crisis Beacon should be hidden until a new crisis happens
+			has_global_flag = graygoo_defeated
+			has_crisis = no
+		}
+		has_crisis_stage_4 = yes
+	}
+}
+crisis_run_optimized = {
+	has_global_flag = crisis_run_flag
+}
+War_Valid_survive = { #scope war
+	NOR = {
+		using_war_goal = { type = FW_wg_open_border_long owner = root }
+		using_war_goal = { type = FW_wg_open_border owner = root }
+	}
+}
+
+ 

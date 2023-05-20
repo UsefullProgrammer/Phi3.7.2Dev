@@ -163,6 +163,7 @@ organic_battery = {
 
 	pop_modifier = {
 		pop_housing_usage_add = -0.5
+		
 	}
 
 	possible_pre_triggers = {
@@ -198,6 +199,7 @@ organic_battery = {
 		weight = @special_job_weight
 	}
 }
+
 
 livestock = {
 	category = worker

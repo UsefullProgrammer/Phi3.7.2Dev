@@ -23,7 +23,7 @@
 # ai_acceptance: weight field where you can define AI reasons to accept or reject the proposal. root is recipient, from is actor. Does not overwrite hardcoded reasons, and only using add and subtract is recommended, since multiplication won't affect reasons outside the ai_acceptance field
 
 
-@cb_subjugation_length = 360
+@cb_subjugation_length = 720
 
 # Improve opinion
 action_improve_relation = {

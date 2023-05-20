@@ -133,9 +133,14 @@ tech_carrier_hull_2 = {
 			factor = 1.25
 			has_tradition = tr_supremacy_adopt
 		}
+		modifier = {
+			factor = 1.5
+			is_specialist_subject_type = { TYPE = bulwark }
+		}
 	}
 
 	ai_weight = {
 		factor = 1000 # ship upgrades are supposed to be good!
 	}
 }
+

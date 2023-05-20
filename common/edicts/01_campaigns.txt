@@ -495,6 +495,9 @@ motes_explosives = {
 			has_edict = motes_explosives
 		}
 	}
+	allow = {
+		NOT = { has_edict = dark_matter_explosives }
+	}
 
 	modifier = {
 		weapon_type_explosive_weapon_damage_mult = 0.25
@@ -597,6 +600,101 @@ crystal_focus = {
 			is_at_war = yes
 			has_resource = { type = rare_crystals amount > 100 }
 		}
+	}
+}
+
+dark_matter_explosives = {
+	length = @EdictDuration
+	icon = "GFX_sr_dark_matter"
+	resources = {
+		category = ship_edicts
+		cost = {
+			sr_dark_matter = 2
+			multiplier = value:edict_fleet_size_effect
+		}
+		upkeep = {
+			sr_dark_matter = 0.55
+			multiplier = value:edict_fleet_size_effect
+		}
+	}
+
+	potential = {
+		OR = {
+			has_resource = { type = sr_dark_matter amount > 0 }
+			has_edict = dark_matter_explosives
+		}
+	}
+	allow = {
+		NOT = { has_edict = motes_explosives }
+	}
+
+	modifier = {
+		weapon_type_explosive_weapon_damage_mult = 0.5
+	}
+
+	ai_weight = {
+		weight = 0
+	}
+}
+dark_matter_point_grid = {
+	length = @EdictDuration
+	icon = "GFX_sr_dark_matter"
+	resources = {
+		category = ship_edicts
+		cost = {
+			sr_dark_matter = 2
+			multiplier = value:edict_fleet_size_effect
+		}
+		upkeep = {
+			sr_dark_matter = 0.55
+			multiplier = value:edict_fleet_size_effect
+		}
+	}
+
+	potential = {
+		OR = {
+			has_resource = { type = sr_dark_matter amount > 0 }
+			has_edict = dark_matter_point_grid
+		}
+	}
+	
+
+	modifier = {
+		weapon_type_point_defense_weapon_damage_mult = 0.25
+	}
+
+	ai_weight = {
+		weight = 0
+	}
+}
+dark_matter_ammunition = {
+	length = @EdictDuration
+	icon = "GFX_sr_dark_matter"
+	resources = {
+		category = ship_edicts
+		cost = {
+			sr_dark_matter = 1
+			multiplier = value:edict_fleet_size_effect
+		}
+		upkeep = {
+			sr_dark_matter = 0.2
+			multiplier = value:edict_fleet_size_effect
+		}
+	}
+
+	potential = {
+		OR = {
+			has_resource = { type = sr_dark_matter amount > 0 }
+			has_edict = dark_matter_ammunition
+		}
+	}
+
+	modifier = {
+		weapon_type_strike_craft_weapon_damage_mult = 0.25
+	}
+
+	ai_weight = {
+		weight = 0
 	}
 }
 

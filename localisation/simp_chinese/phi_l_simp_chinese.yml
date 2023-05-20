@@ -1007,3 +1007,8 @@ tech_collective_self_gob:0 "革命政府"
 tech_collective_self_gob_desc:1 "在集体中找到自我的方面是自然而不可避免的; 最终,这些共享的方面必须高于个人身份。"
 tech_embodied_dynamism_gob:0 "政府万能体"
 tech_embodied_dynamism_gob_desc:0 "需要在我们的自治领导单元中提倡主动精神和某种程度的雄心壮志,同时确保它们不会偏离核心智能的指令太远。"
+
+tech_shield_point_zero:0 "零点绝对能量护盾"
+tech_shield_point_zero_desc:1 "这种尖端技术的护盾使用零点绝对能量。能量护盾可以在表面上反弹，而不消耗护盾的能量\n§R警告§！如果研究这项技术，则发现33％的§Y零点绝对能量装甲§！的机会将§R减少§！。"
+tech_armor_boost:0 "零点绝对能量装甲"
+tech_armor_boost_desc:1 "这种尖端技术在装甲表面使用零点绝对能量。能量护盾可以在表面上反弹，而不会损害装甲\n§R警告§！如果研究这项技术，则发现33％的§Y零点绝对能量护盾§！的机会将§R减少§！。"

@@ -1,6 +1,6 @@
 This is the conversion of gobbibomb by [url=https://steamcommunity.com/sharedfiles/filedetails/?id=2274421915]phi dev[/url]
 If found bug write in comments.
-[b]PHIGO 1.2.1[/b]
+[b]PHIGO 1.3[/b]
 
 Wiki page --> In development, can use old version [url=https://stellaris.paradoxwikis.com/Phi_mp_balancing] [b]HERE[/b] [/url]
 

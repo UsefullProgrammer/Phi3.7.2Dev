@@ -27,5 +27,5 @@
 @regen_mult_lv2 = 0.01
 @regen_mult_lv3 = 0.02
 @regen_mult_lv4 = 0.03
-@regen_mult_lvmax = 0.05 # oltre le navi diventano virtualmente invincibili
-@regen_mult_lv_self = 0.1 # oltre le navi diventano virtualmente invincibili
+@regen_mult_lvmax = 0.05 # WARNING oltre le navi diventano virtualmente invincibili
+@regen_mult_lv_self = 0.25 # il self che si attiva out of combat per le stazioni in teoria è 0.1 ma io lo aumentato per il riparazioni out of combat passato da 5 a 2.

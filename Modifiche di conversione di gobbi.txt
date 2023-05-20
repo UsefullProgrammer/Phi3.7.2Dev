@@ -295,19 +295,116 @@ Diminuito hull regen mult da 0.1 a 0.05
 -Messo dati nuovi
 -Il caricamento per attivazione agenda è il 20% più veloce di base (12 value base invece di 10)
 
-1.3 Warfare annd matter dark matter
-Fatto weight corretto dei ricercatori di fisica e eng con valori da script_values
-Ora il gateway costa meno ci metti meno ma ha un costo in dark matter e manuntenzioone di 10
-Diminuito regen shield e armor di fallen e khan+
-Messo variabili in regen per gestirle meglio in futuro
-Regen khan e fallen diminuiti (erano al 10% armor e hull)
-Point defence hanno un range di 40 invece di 30.
-cooldown ridotte da 30 anni a 24
-COUNCIL AGENDA BASE COUNCILOR DAILY PROGRESS cambiata da 10 a 12
-Aggiunto tecnologia distaccata per governement civics (prima erano in una tecnologia)
-Sperimentale: scudi e armor per 5 sennò il bonus hull è troppo grosso e sbilanciato, le armi anti hull sono le migliori
 
+[h2][b]1.3 Warfare and matter dark matter[/b][/h2]
+Inanzitutto voglio ringranziare tutti i player che hanno giocato con me o fatto notare degli squilibri, più o meno veritieri.
+In questo aggiornamento mi sono concentrato su:
+[list]
+[*]Rendere la dark matter leggermente più utile
+[*]Ottimizzare e bilanciare alcuni aspetti delle battaglie rendendole leggermente più lunghe e tattiche.
+[*]E rendere più divertenti le guerre e strategiche le guerre.
+[*]Ho anche aggiunto alcune chicche tecnologiche che alcuni di voi spero apprezziate.
+[*]Rendere leggermente le agende un pò più veloci come nello spirito phi : "Non devi mai poterti annoiare".
+[*]Ringranziamento particolare a Mario minaccia che mi ha fatto capire alcune meccaniche che non avevo visto o non capito appieno.
+[*]Come in ogni patch ho cercato di migliorare le ai così che possiate giocare da soli e veramente impegnarvi.
+[/list]
+Spero possiate divertirvi almeno il 0,1% più di prima!
+
+[h1][b]Ottimizzazioni e utility:[/b][/h1]
+Modificato border gore da 1 mese a 1 anno, non fa nessuna differenza e rende il gioco più leggero.
+Fatto weight corretto dei ricercatori di fisica e eng con valori da script_values
+Messo variabili in regen per gestirle meglio in futuro
+Ritornano gli editti per far fuori il dittatore e imperatore e figlio, nel caso non vi piacciono...
+
+[h1][b]Megastructures:[/b][/h1]
+Ora il gateway costa meno ci metti meno ma ha un costo in dark matter e manuntenzioone di 20
+
+[h1][b]Bilanciamenti:[/b][/h1]
+Void dweller hanno 2 leader size in più invece del bonus di buildings cost e upkeep
+Regen hull e armor khan e fallen diminuiti (erano al 10% armor e hull)
+Point defence hanno un range di 40 invece di 30.
 Gli imperi normali partono con 4 slot concilio invece di 3
-Bonus leader ripristinato a 5% come nella vecchia phi.
-Finalmente le ia fanno colonie ora sono molto più temibili
-Fix armor e shield non erano moltiplicati per 5 per environment e orbital ring
+Bonus leader a capo della ricerca nel concilio ripristinato a 5% come nella vecchia phi.
+[img]https://i.imgur.com/Uhrareb.png[/img]
+
+Modificato la tradition dei robot che permetteva di avere un bonus di 0.25 administrative capacity, anche se i robot sono svantaggiati perchè non possono fare vassali così sbilanciava troppo il gioco.
+
+Aumentati del 10% scudo e armor per renderle più omogenee con stats dell'hull (sopratutto in late game)
+[img]https://i.imgur.com/JiamCSd.png[/img]
+[img]https://i.imgur.com/7QyHxym.png[/img]
+
+Ora la tradition genetica ti sblocca un tratto overwhelm talented che ti da 1 livello cap in più e un tratto negativo in meno.
+[url]https://i.imgur.com/W9O6ex5.png[/url]
+
+Fleet academy puoi farlo sul orbital ring
+[h1][b]Agenda:[/b][/h1]
+Agenda cooldown ridotte da 30 anni a 24
+COUNCIL AGENDA BASE COUNCILOR DAILY PROGRESS cambiata da 10 a 12
+Agende militari diminuite costo costruzione navi da -25% a -15%
+[h1][b]Tecnologie:[/b][/h1]
+Tech defense hull 2 che aumenta ulteriormente del 33% le platform
+Aggiunto tecnologia distaccata per governement civics (prima erano in una tecnologia)
+[img]https://i.imgur.com/BsZW4DU.png[/img]
+
+2 nuove tecnologie rare che permettono di avere ancora più scudo o più armor:
+[img]https://i.imgur.com/YwOQjDD.png[/img]
+[img]https://i.imgur.com/Mc8cETg.png[/img]
+
+
+[h1][b]Phigo AI :[/b][/h1]
+Finalmente le ia fanno colonie molto prima e ora sono molto più temibili
+
+[h1][b]Leaders[/b][/h1]
+È stato settato al max livello raggiungibile tramite bonus il 13 (parti comunque con livello cappato al 10) 
+Ora Trascendence learning ti da 1 livello cap in più, diventando più forte che mai.
+
+[h1][b]Flotta, battaglie e warfare[/b][/h1]
+3 nuovi editti che usano la [b]dark matter[/b] che pottenziano armi esplosive , point defence e Hangar.
+[img]https://i.imgur.com/AH9awD1.png[/img]
+
+Cambiato rigenerazione fuori battaglia ora invece di 5 volte è solo 2 volte.
+Ora per ogni shipyard aumenta la rigenerazione di armatura e hull in orbita del 25%
+Nuovo template per le corvette in mid game che da +33% shield ma -10% hull dopo che sblocchi tech shield hardeners
+[img]https://i.imgur.com/OKKe7nB.png[/img]
+
+Nuovo template per le fregate con torretta media ma ha meno difesa e un malus su armi a energia e cinetiche del -50%
+[img]https://i.imgur.com/bnhDCME.png[/img]
+
+I missili hanno un bonus scalare in base al livello verso gli hull.
+[img]https://i.imgur.com/31UoBxh.png[/img]
+
+Cambiato bonus danni di laser e kinetic ora il bonus verso scudo e armor va a scalare in base a livello e inoltre hanno più bonus il size large fino a un massimo di 50%
+[img]https://i.imgur.com/2GZg2M2.png[/img]
+[img]https://i.imgur.com/oIPJeeG.png[/img]
+
+Distruptor cambiati, ora scalano damage hull e con la nuova meccanica dell'hardner possono essere counterati senza problemi, aumento consumo energietico ma aumento range in base al livello
+[img]https://i.imgur.com/uBjaDYJ.png[/img]
+
+Ora i tachyon lance costano dark matter e hanno manuntenzione dark matter ma molto meno di energia e il tachyion livello 2 fa 2,5% più danno.
+[img]https://i.imgur.com/KTb59Er.png[/img][img][/img]
+
+Mass accelerator ora ha una manuntenzione del 30% più alta.
+Torpedo, penetrazione scudi migliorata, ora in late sono bestiali contro giocatori che usano meccanica hardner.
+[img]https://i.imgur.com/wZngIx1.png[/img]
+
+Aggiunta guerra di open border, questa è una guerra speciale che da come war goal entrambi open border e non puoi settare survive.
+[img]https://i.imgur.com/isqbq4C.png[/img]
+
+
+[h1][b]Miglioramenti grafici[/b][/h1]
+Messo icone a tutti gli editti e campagne della phi
+[img]https://i.imgur.com/Lg6hcIi.png[/img]
+
+Ora i gestait hanno il tipo di slavery per gli organici per usare il cervello come fonte di unity e society research da fare icona e slavery type
+[omg]https://i.imgur.com/j4ZQ5Hg.png[/img]
+
+Nel casus bellis no ti dice più che puoi prendere i claim se non li puoi prendere
+esempio: 
+Humiliate nella Phigo non si prendono i claim è così ora
+[img]https://i.imgur.com/0gd5ia2.png[/img]
+Mentre conquest è così:
+[img]https://i.imgur.com/Nzxdln0.png[/img]
+
+[h1][b]Miglioramento mid-late game[/b][/h1]
+Messo editto nuovo che ti permette di avere un pò di administrative capacity in più nel late game
+Se c'è una crisi in corso il border gore viene sospeso finchè c'è la crisi.

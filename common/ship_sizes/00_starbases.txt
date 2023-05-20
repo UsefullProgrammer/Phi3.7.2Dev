@@ -748,7 +748,7 @@ ion_cannon = {
 	max_speed = 6
 	rotation_speed = 10
 	acceleration = 10
-	max_hitpoints = @ship_5
+	max_hitpoints = @ship_6
 	modifier = {
 		ship_evasion_mult = -1
 	}
