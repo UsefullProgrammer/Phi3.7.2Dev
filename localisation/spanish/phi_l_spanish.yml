@@ -1013,3 +1013,64 @@ tech_shield_point_zero:0 "Escudos de energía absoluta de punto cero"
 tech_shield_point_zero_desc:1 "Este escudo de tecnología de vanguardia utiliza la energía absoluta de punto cero. El escudo de energía podría rebotar en superficies sin consumir la energía del escudo.\n§RAdvertencia§! Si estudias esta tecnología tendrás §Menos§! posibilidades de descubrir §YArmaduras de energía absoluta de punto cero§!, que aumentan la armadura en un 33%."
 tech_armor_boost:0 "Armaduras de energía absoluta de punto cero"
 tech_armor_boost_desc:1 "Esta tecnología de vanguardia utiliza la energía absoluta de punto cero en la superficie de la armadura. El escudo de energía podría rebotar en superficies sin dañar la armadura.\n§RAdvertencia§! Si estudias esta tecnología tendrás §Menos§! posibilidades de descubrir §YEscudos de energía absoluta de punto cero§!, que aumentan el escudo en un 33%."
+
+CORVETTE_MID_M1S2:3 "Embarcación Torpedera Pesada"
+OFFSPRING_CORVETTE_MID_M1S1:0 "$CORVETTE_MID_M1S1$"
+CORVETTE_MID_S4:3 "Diseño blindado"
+OFFSPRING_CORVETTE_MID_S4:0 "$CORVETTE_MID_S4$"
+
+casus_belli_FW_cb_border:0 "Frontera cerrada"
+war_goal_FW_wg_open_border: "Frontera abierta"
+war_goal_FW_wg_open_border_desc: "Inicia una guerra para abrir las fronteras de una civilización hostil y obtener 20 años de derecho de paso.
+
+¡El enemigo §N no puede§! sobrevivir la guerra, §N no puede§! conseguir reclamaciones!"
+
+trait_talented_2:0 "Sobradamente dotado"
+job_organic_brain: "Calculadora cerebral"
+slavery_brain: "Esclavitud cerebral"
+
+tech_defense_platform_hull_2:0 "$tech_defense_platform_hull_1$ MK2"
+
+edict_expansion_planer: "Ampliar el tamaño del imperio"
+edict_expansion_planer_desc:0 "Ampliar el límite de nuestro imperio para una nueva colonia"
+
+tech_defense_platform_hull_2_desc:0 "$tech_defense_platform_hull_1_desc$"
+job_organic_brain_plural:0 "Calculadores cerebrales"
+slavery_brain_tooltip:0 "Utiliza su cerebro orgánico como un calculador están optimizados para la investigación social y la unidad"
+slavery_brain_tooltip_delayed:0 "Cada cerebro orgánico produce 2 £investigación_social£ y 0,25 £unidad£"
+OUR_CLAIMS_ON_ENEMYS:1 "Si tenemos reclamaciones que estamos tratando de conquistar al enemigo y sus aliados."
+ALLY_CLAIMS_ON_ENEMYS:1 "Si nuestros aliados tienen reclamaciones que estamos tratando de conquistar al enemigo y sus aliados."
+
+edict_dark_matter_explosives: "Dark Matter explosives"
+edict_dark_matter_explosives_desc:0 "Using dark matter for missiles can be very useful if you want to cause damage."
+edict_dark_matter_point_grid: "Dark Matter defense grid"
+edict_dark_matter_point_grid_desc:0 "Use dark matter to create a defense grid for point defense."
+edict_dark_matter_ammunition: "Dark Matter air strike"
+edict_dark_matter_ammunition_desc:0 "Use dark matter for ammunition of air strike"
+
+economic_policy_leader_focus: "Leader Focus"
+economic_policy_leader_focus_desc: "We allocate the necessary resources for our leaders to be the best."
+economic_policy_politics: "Politics Focus"
+economic_policy_politics_desc: "We allocate the necessary resources for our politics have power and resource for all.."
+economic_policy_statecraft: "Statecraft Focus"
+economic_policy_statecraft_desc: "We will bring twice the resources to the council."
+old_economic_policy_statecraft_desc: "\n\n§YUnlock§! 1 slot of council and new rule powerfull vice ruler"
+drone_economic_policy_leader_focus: "Leader Focus"
+drone_economic_policy_leader_focus_desc: "We allocate the necessary resources for our protocol leader to be the best of 3,167777%."
+drone_economic_policy_politics: "Politics Focus"
+drone_economic_policy_politics_desc: "We allocate the necessary resources for our politics have power and resource for all.."
+drone_economic_policy_statecraft: "Statecraft Focus"
+drone_economic_policy_statecraft_desc: "We will bring twice of calculation to the council."
+mod_planet_jobs_ruler_upkeep_mult:0 "Ruler Jobs Upkeep"
+
+councilor_vice_governor:0 "vice $councilor_ruler$"
+councilor_vice_governor_female:0 "vice $councilor_ruler_female$"
+councilor_vice_governor_desc:0 "The vice work with best counciliors and best optimization of governement"
+councilor_corporate_dominion_2:0 "$councilor_corporate_dominion$"
+councilor_corporate_dominion_2_female:0 "$councilor_ruler_female$"
+councilor_corporate_dominion_2_desc:0 "$councilor_corporate_dominion_desc$"
+
+
+councilor_franchise_state:0 "franchises ruler"
+councilor_franchise_state_female:0 "franchises ruler"
+councilor_franchise_state_desc:0 "franchises ruler talk with other franchise"

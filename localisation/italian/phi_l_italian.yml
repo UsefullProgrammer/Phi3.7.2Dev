@@ -1076,3 +1076,14 @@ drone_economic_policy_politics_desc: "Destiniamo le risorse necessarie affinché
 drone_economic_policy_statecraft: "Focus sulla Diplomazia"
 drone_economic_policy_statecraft_desc: "Porteremo al consiglio il doppio dei calcoli."
 mod_planet_jobs_ruler_upkeep_mult:0 "Costi di mantenimento dei Lavori del Governatore"
+
+councilor_vice_governor:0 "Vice $councilor_ruler$"
+councilor_vice_governor_female:0 "Vice $councilor_ruler_female$"
+councilor_vice_governor_desc:0 "Il Vice lavora con i migliori consiglieri e per l'ottimizzazione del governo."
+councilor_corporate_dominion_2:0 "$councilor_corporate_dominion$"
+councilor_corporate_dominion_2_female:0 "$councilor_ruler_female$"
+councilor_corporate_dominion_2_desc:0 "$councilor_corporate_dominion_desc$"
+
+councilor_franchise_state:0 "Governatore delle Franchigie"
+councilor_franchise_state_female:0 "Governatore delle Franchigie"
+councilor_franchise_state_desc:0 "Il Governatore delle Franchigie parla con altri governatori delle franchigie."

@@ -408,3 +408,21 @@ Mentre conquest è così:
 [h1][b]Miglioramento mid-late game[/b][/h1]
 Messo editto nuovo che ti permette di avere un pò di administrative capacity in più nel late game
 Se c'è una crisi in corso il border gore viene sospeso finchè c'è la crisi.
+
+
+1.3.1
+Messo piccola probabilità di spawn metallo vivo (1-2 depositi in galassia media)
+Tech dark matter ora è più facile trovarla e serve solo sensori livello 3
+Tornato a 10 il councilior add di base.
+[img][/img]
+Aggiunte 3 nuove politiche economiche per le 3 nuove tradizioni.
+[img][/img]
+[img][/img]
+[img][/img]
+Ora la economic policy bilanciata da +20% speed councilior agenda
+[img][/img]
+Ottieni il casus bellis subjugation contro l'attacante se sei in una guerra difensiva
+
+Fix bug dichiarazione crisi quando è un impero normale che veniva e si settava survive se era un IA oppure anche se il war leader era un giocatore ma c'era un AI.
+Fix bug paradox in pre_ftl_awreness su fleet event quando entrava in un sistema lo scope verso il sistema non c'era mancando un FROM
+Migliorata AI franchising + 2 nuove posizioni concilio per 2 civiche della phi.

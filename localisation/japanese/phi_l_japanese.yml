@@ -1025,3 +1025,67 @@ war_goal_FW_wg_open_border_long: "長期間の国境開放"
 war_goal_FW_wg_open_border_long_desc: "敵対的な文明の国境を開き、50年間の通行権を得て、競争を終了するために戦争を開始します。"
 z_fw_open_border_long_tooltip:0 "§Y[From.GetName]§!は完全に撃破され、彼らは次の§Y50§!年間で我々に国境を開くことに同意する必要がありました。同時に、彼らとの敵対関係も終了しましたが、明らかに彼らはこの結果に同意しておらず、将来的に反撃するでしょう。\n§Y[Root.GetName]§!は§G+150§! £影響力£を獲得しました。\n"
 z_fw_opinion_wg_open_boder_long:0 "我々の領土で自由にする"
+
+CORVETTE_MID_M1S2:3 "重魚雷艇"
+OFFSPRING_CORVETTE_MID_M1S1:0 "$CORVETTE_MID_M1S1$"
+CORVETTE_MID_S4:3 "装甲設計"
+OFFSPRING_CORVETTE_MID_S4:0 "$CORVETTE_MID_S4$"
+
+casus_belli_FW_cb_border:0 "閉ざされた国境"
+war_goal_FW_wg_open_border: "開かれた国境"
+war_goal_FW_wg_open_border_desc: "敵となる文明の国境を開放し、20年間の通過権を取得する戦争を開始します。
+
+敵は§G生き残れない§!、§R故地を請求できない§!。"
+
+z_fw_open_border_tooltip:0 " §Y[From.GetName] §!は制圧され、高慢を捨てて §Y20§! 年以内に国境を開放することに同意しました。
+§Y[Root.GetName]§! は§G+100§! £影響£ を獲得しました。\n"
+
+trait_talented_2:0 "至上の才能"
+job_organic_brain: "脳の計算機"
+slavery_brain: "脳の奴隷制"
+
+tech_defense_platform_hull_2:0 "$tech_defense_platform_hull_1$ MK2"
+
+edict_expansion_planer: "帝国の規模を拡大する"
+edict_expansion_planer_desc:0 "我が帝国の限界を拡大し、新しい植民地を造る"
+
+tech_defense_platform_hull_2_desc:0 "$tech_defense_platform_hull_1_desc$"
+job_organic_brain_plural:0 "電脳計算機"
+slavery_brain_tooltip:0 "彼らの有機脳を計算機として使用します。彼らは社会研究と統一のために最適化されています。"
+slavery_brain_tooltip_delayed:0 "すべての有機脳が 2 £社会研究£ と 0.25 £統一£ を生成します。"
+OUR_CLAIMS_ON_ENEMYS:1 "我々が敵とその同盟国から征服しようとしている請求がある場合。"
+ALLY_CLAIMS_ON_ENEMYS:1 "我々の同盟国が敵とその同盟国から征服しようとしている請求がある場合。"
+
+edict_dark_matter_explosives: "Dark Matter explosives"
+edict_dark_matter_explosives_desc:0 "Using dark matter for missiles can be very useful if you want to cause damage."
+edict_dark_matter_point_grid: "Dark Matter defense grid"
+edict_dark_matter_point_grid_desc:0 "Use dark matter to create a defense grid for point defense."
+edict_dark_matter_ammunition: "Dark Matter air strike"
+edict_dark_matter_ammunition_desc:0 "Use dark matter for ammunition of air strike"
+
+economic_policy_leader_focus: "Leader Focus"
+economic_policy_leader_focus_desc: "We allocate the necessary resources for our leaders to be the best."
+economic_policy_politics: "Politics Focus"
+economic_policy_politics_desc: "We allocate the necessary resources for our politics have power and resource for all.."
+economic_policy_statecraft: "Statecraft Focus"
+economic_policy_statecraft_desc: "We will bring twice the resources to the council."
+old_economic_policy_statecraft_desc: "\n\n§YUnlock§! 1 slot of council and new rule powerfull vice ruler"
+drone_economic_policy_leader_focus: "Leader Focus"
+drone_economic_policy_leader_focus_desc: "We allocate the necessary resources for our protocol leader to be the best of 3,167777%."
+drone_economic_policy_politics: "Politics Focus"
+drone_economic_policy_politics_desc: "We allocate the necessary resources for our politics have power and resource for all.."
+drone_economic_policy_statecraft: "Statecraft Focus"
+drone_economic_policy_statecraft_desc: "We will bring twice of calculation to the council."
+mod_planet_jobs_ruler_upkeep_mult:0 "Ruler Jobs Upkeep"
+
+councilor_vice_governor:0 "vice $councilor_ruler$"
+councilor_vice_governor_female:0 "vice $councilor_ruler_female$"
+councilor_vice_governor_desc:0 "The vice work with best counciliors and best optimization of governement"
+councilor_corporate_dominion_2:0 "$councilor_corporate_dominion$"
+councilor_corporate_dominion_2_female:0 "$councilor_ruler_female$"
+councilor_corporate_dominion_2_desc:0 "$councilor_corporate_dominion_desc$"
+
+
+councilor_franchise_state:0 "franchises ruler"
+councilor_franchise_state_female:0 "franchises ruler"
+councilor_franchise_state_desc:0 "franchises ruler talk with other franchise"

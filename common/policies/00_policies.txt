@@ -2291,7 +2291,9 @@ economic_policy = {
 	option = {
 		name = "economic_policy_balanced"
 
-		modifier = {}
+		modifier = {
+			council_agenda_progress_speed = 0.20
+		}
 
 		AI_weight = {
 			factor = 1
@@ -2338,6 +2340,7 @@ economic_policy = {
 		}
 		
 		modifier = {
+			planet_colony_development_speed_mult = 0.1
 			pop_environment_tolerance = 0.20
 			terraform_speed_mult = 1
 			planet_jobs_minerals_produces_mult = -0.2
@@ -2359,7 +2362,8 @@ economic_policy = {
 		
 		modifier = {
 			country_alloys_produces_mult = -0.1
-			ships_upkeep_mult = -0.25
+			ships_upkeep_mult = -0.20
+			damage_vs_rival_mult = 0.1
 		}
 
 		AI_weight = {
@@ -2530,6 +2534,69 @@ economic_policy = {
 			factor = 0
 		}
 	}
+	option = {
+		name = "economic_policy_leader_focus"
+		
+		valid = {
+			has_tradition = tr_aptitude_adopt
+		}
+		
+		modifier = {
+			envoys_add = 1
+			country_leader_cap_add = 1
+			external_leader_pool_add = 1
+			planet_jobs_ruler_produces_mult = 1
+			planet_jobs_ruler_upkeep_mult = 1.1
+			leaders_upkeep_mult = 0.2
+			pop_cat_specialist_happiness = -0.05
+			pop_cat_worker_happiness = -0.05
+		}
+
+		AI_weight = {
+			factor = 0
+		}
+	}
+	option = {
+		name = "economic_policy_politics"
+		
+		valid = {
+			has_tradition = tr_politics_adopt
+		}
+		
+		modifier = {
+			diplo_weight_envoys_mult = 1
+			envoys_add = 1
+			country_leader_cap_add = -1
+			planet_pops_consumer_goods_upkeep_mult = 0.25
+			country_trust_cap_add = -50
+			
+		}
+		AI_weight = {
+			factor = 0
+		}
+	}
+	option = {
+		name = "economic_policy_statecraft"
+		
+		valid = {
+			has_tradition = tr_statecraft_adopt
+		}
+		policy_flags = {
+			economic_policy_statecraft
+		}
+		modifier = {
+			diplo_weight_council_mult = 0.5
+			country_society_tech_research_speed = +0.05
+			pop_amenities_usage_mult = 0.20
+			council_agenda_progress_speed = -0.10
+		}
+
+		AI_weight = {
+			factor = 0
+		}
+	}
+	
+	
 }
 
 trade_policy = {
@@ -2646,7 +2713,9 @@ drone_policy = {
 	option = {
 		name = "drone_policy_balanced"
 
-		modifier = {}
+		modifier = {
+			council_agenda_progress_speed = 0.20
+		}
 
 		AI_weight = {
 			factor = 1
@@ -2740,6 +2809,7 @@ drone_policy = {
 		}
 		
 		modifier = {
+			planet_colony_development_speed_mult = 0.1
 			terraform_speed_mult = 2
 			planet_jobs_minerals_produces_mult = -0.2
 			planet_jobs_energy_produces_mult = -0.2
@@ -2760,7 +2830,8 @@ drone_policy = {
 		
 		modifier = {
 			country_alloys_produces_mult = -0.1
-			ships_upkeep_mult = -0.25
+			ships_upkeep_mult = -0.20
+			damage_vs_rival_mult = 0.1
 		}
 
 		AI_weight = {
@@ -2880,6 +2951,61 @@ drone_policy = {
 				factor = 0
 				is_homicidal = no
 			}
+		}
+	}
+	option = {
+		name = "drone_economic_policy_leader_focus"
+		
+		valid = {
+			has_tradition = tr_aptitude_adopt
+		}
+		
+		modifier = {
+			envoys_add = 1
+			country_leader_cap_add = 2
+			external_leader_pool_add = 1
+            leaders_upkeep_mult = -0.3
+		}
+
+		AI_weight = {
+			factor = 0
+		}
+	}
+	option = {
+		name = "drone_economic_policy_politics"
+		
+		valid = {
+			has_tradition = tr_politics_adopt
+		}
+		
+		modifier = {
+			diplo_weight_envoys_mult = 1
+			envoys_add = 1
+			country_leader_cap_add = -1
+			planet_pops_upkeep_mult = 0.25
+			country_trust_cap_add = -50
+			
+		}
+		AI_weight = {
+			factor = 0
+		}
+	}
+	option = {
+		name = "drone_economic_policy_statecraft"
+		
+		valid = {
+			has_tradition = tr_statecraft_adopt
+		}
+		
+		modifier = {
+			leader_skill_levels = 1
+			diplo_weight_council_mult = 0.5
+            pop_amenities_usage_mult = 0.20
+            council_agenda_progress_speed = -0.10
+		}
+
+		AI_weight = {
+			factor = 0
 		}
 	}
 }

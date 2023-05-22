@@ -1012,3 +1012,76 @@ tech_shield_point_zero:0 "零点绝对能量护盾"
 tech_shield_point_zero_desc:1 "这种尖端技术的护盾使用零点绝对能量。能量护盾可以在表面上反弹，而不消耗护盾的能量\n§R警告§！如果研究这项技术，则发现33％的§Y零点绝对能量装甲§！的机会将§R减少§！。"
 tech_armor_boost:0 "零点绝对能量装甲"
 tech_armor_boost_desc:1 "这种尖端技术在装甲表面使用零点绝对能量。能量护盾可以在表面上反弹，而不会损害装甲\n§R警告§！如果研究这项技术，则发现33％的§Y零点绝对能量护盾§！的机会将§R减少§！。"
+
+CORVETTE_MID_M1S2:3 "重鱼雷艇"
+OFFSPRING_CORVETTE_MID_M1S1:0 "$CORVETTE_MID_M1S1$"
+CORVETTE_MID_S4:3 "有装甲设计"
+OFFSPRING_CORVETTE_MID_S4:0 "$CORVETTE_MID_S4$"
+
+casus_belli_FW_cb_border:0"封闭边境"
+war_goal_FW_wg_open_border: "开放边境"
+war_goal_FW_wg_open_border_desc: "发动战争打开敌对文明的边境并获得20年通行权。
+敌方§G生存不下去§!,§R不能要领土§!。"
+
+trait_talented_2:0 "超凡的才能"
+job_organic_brain: "脑计算器"
+slavery_brain: "脑奴隶制"
+
+tech_defense_platform_hull_2:0 "$tech_defense_platform_hull_1$ MK2"
+
+Another example:
+
+CORVETTE_MID_M1S2:3 "重型鱼雷艇"
+OFFSPRING_CORVETTE_MID_M1S1:0"$CORVETTE_MID_M1S1$"
+CORVETTE_MID_S4:3 "有装甲设计图"
+OFFSPRING_CORVETTE_MID_S4:0 "$CORVETTE_MID_S4$"
+
+casus_belli_FW_cb_border:0 "关闭边境"
+war_goal_FW_wg_open_border: "开放边境"
+war_goal_FW_wg_open_border_desc: "发动战争打开敌对文明边境并获得20年通行权。
+
+敌人§G活不下去§!,§R不能领地§!。"
+
+edict_expansion_planer: "扩大帝国规模"
+edict_expansion_planer_desc:0 "扩大我们帝国的边界制定新的殖民地"
+
+tech_defense_platform_hull_2_desc:0 "$tech_defense_platform_hull_1_desc$"
+job_organic_brain_plural:0 "脑计算器"
+slavery_brain_tooltip:0 "使用他们的有机脑作为计算器,他们被优化用于社会研究和统一"
+slavery_brain_tooltip_delayed:0 "每个有机脑可产生2 £社会研究£ 和 0.25 £统一£"
+OUR_CLAIMS_ON_ENEMYS:1 "如果我们有企图从敌人和它们的盟友手中征服的要求。"
+ALLY_CLAIMS_ON_ENEMYS:1 "如果我们的盟友有企图从敌人和它们的盟友手中征服的要求。"
+
+edict_dark_matter_explosives: "Dark Matter explosives"
+edict_dark_matter_explosives_desc:0 "Using dark matter for missiles can be very useful if you want to cause damage."
+edict_dark_matter_point_grid: "Dark Matter defense grid"
+edict_dark_matter_point_grid_desc:0 "Use dark matter to create a defense grid for point defense."
+edict_dark_matter_ammunition: "Dark Matter air strike"
+edict_dark_matter_ammunition_desc:0 "Use dark matter for ammunition of air strike"
+
+economic_policy_leader_focus: "Leader Focus"
+economic_policy_leader_focus_desc: "We allocate the necessary resources for our leaders to be the best."
+economic_policy_politics: "Politics Focus"
+economic_policy_politics_desc: "We allocate the necessary resources for our politics have power and resource for all.."
+economic_policy_statecraft: "Statecraft Focus"
+economic_policy_statecraft_desc: "We will bring twice the resources to the council."
+old_economic_policy_statecraft_desc: "\n\n§YUnlock§! 1 slot of council and new rule powerfull vice ruler"
+drone_economic_policy_leader_focus: "Leader Focus"
+drone_economic_policy_leader_focus_desc: "We allocate the necessary resources for our protocol leader to be the best of 3,167777%."
+drone_economic_policy_politics: "Politics Focus"
+drone_economic_policy_politics_desc: "We allocate the necessary resources for our politics have power and resource for all.."
+drone_economic_policy_statecraft: "Statecraft Focus"
+drone_economic_policy_statecraft_desc: "We will bring twice of calculation to the council."
+mod_planet_jobs_ruler_upkeep_mult:0 "Ruler Jobs Upkeep"
+
+councilor_vice_governor:0 "vice $councilor_ruler$"
+councilor_vice_governor_female:0 "vice $councilor_ruler_female$"
+councilor_vice_governor_desc:0 "The vice work with best counciliors and best optimization of governement"
+councilor_corporate_dominion_2:0 "$councilor_corporate_dominion$"
+councilor_corporate_dominion_2_female:0 "$councilor_ruler_female$"
+councilor_corporate_dominion_2_desc:0 "$councilor_corporate_dominion_desc$"
+
+
+councilor_franchise_state:0 "franchises ruler"
+councilor_franchise_state_female:0 "franchises ruler"
+councilor_franchise_state_desc:0 "franchises ruler talk with other franchise"

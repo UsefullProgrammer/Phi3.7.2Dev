@@ -222,7 +222,11 @@ alloys_expenditure_colonies_expand = {
 			years_passed > 10
 		}
 		ai_colonize_plans > 0
-		empire_sprawl_over_cap < -30
+		OR = {
+			has_civic = civic_franchising
+			empire_sprawl_over_cap < -30
+		}
+		
 		OR = {
 			AND = {
 				is_lithoid_empire = no
@@ -268,7 +272,10 @@ alloys_expenditure_colonies_expand_machine = {
 			years_passed > 10
 		}
 		ai_colonize_plans > 0
-		empire_sprawl_over_cap < -30
+		OR = {
+			has_civic = civic_franchising
+			empire_sprawl_over_cap < -30
+		}
 	}
 
 	weight = {

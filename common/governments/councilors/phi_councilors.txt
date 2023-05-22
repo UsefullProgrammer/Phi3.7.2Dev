@@ -1,0 +1,43 @@
+# councilor_vice_governor = {
+# 	leader_class = { general governor }
+
+# 	possible = {
+# 		has_policy_flag = economic_policy_statecraft
+# 		is_gestalt = no
+# 	}
+
+# 	is_leader_possible = {
+# 		OR = {
+# 			leader_class = general
+# 			leader_class = governor
+# 		}
+# 	}
+# 	modifier = {
+# 		planet_stability_add = 0.5
+# 		councilor_exp_gain = 0.1
+# 	}
+# 	icon = "GFX_icon_councilor_ruler"
+# }
+councilor_corporate_dominion_2 = {
+	leader_class = { governor }
+	is_leader_possible = {
+		leader_class = governor
+	}
+	civic = civic_foreign_markets_arbitrage
+	modifier = {
+		pop_lifestyle_trade_mult = 0.01
+		country_trade_fee = -0.005
+	}
+}
+councilor_franchise_state = { #OP livello drago
+	leader_class = { governor }
+	is_leader_possible = {
+		leader_class = governor
+	}
+	civic = civic_franchise_state
+	modifier = {
+		pop_government_ethic_attraction = 0.05
+		pop_growth_speed = 0.01
+		pop_environment_tolerance = 0.01
+	}
+}

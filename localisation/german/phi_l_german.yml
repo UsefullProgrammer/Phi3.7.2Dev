@@ -1027,3 +1027,67 @@ war_goal_FW_wg_open_border_long: "Langfristige offene Grenze"
 war_goal_FW_wg_open_border_long_desc: "Beginnen Sie einen Krieg, um die Grenzen feindlicher Zivilisationen zu öffnen, erhalten Sie 50 Jahre Durchgangsrecht und beenden Sie den Wettbewerb."
 z_fw_open_border_long_tooltip:0 "§Y[From.GetName]§! wurde vollständig besiegt, sie mussten ihre Arroganz ablegen und sich bereit erklären, innerhalb von §Y50§! Jahren ihre Grenzen für uns zu öffnen. Gleichzeitig haben wir auch den Status des Rivalen mit ihnen beendet, aber offensichtlich stimmen sie diesem Ergebnis nicht zu und werden eines Tages in der Zukunft zurückschlagen.\n§Y[Root.GetName]§! hat §G+150§! £Influence£ gewonnen.\n"
 z_fw_opinion_wg_open_boder_long:0 "In unserem Territorium frei sein"
+
+CORVETTE_MID_M1S2:3 "Schweres Torpedoboot"
+OFFSPRING_CORVETTE_MID_M1S1:0 "$CORVETTE_MID_M1S1$"
+CORVETTE_MID_S4:3 "Gepanzertes Design"
+OFFSPRING_CORVETTE_MID_S4:0 "$CORVETTE_MID_S4$"
+
+casus_belli_FW_cb_border:0 "Geschlossene Grenze"
+war_goal_FW_wg_open_border: "Offene Grenze"
+war_goal_FW_wg_open_border_desc: "Führe einen Krieg, um die Grenzen einer feindlichen Zivilisation zu öffnen und 20 Jahre Durchreisefreiheit zu erhalten.
+
+Der Feind kann §G nicht§! den Krieg überleben, §Kann §R nicht§! Ansprüche erheben!"
+
+z_fw_open_border_tooltip:0 "Der §Y[From.GetName] §! wurde besiegt, sie senkten ihre Arroganz und stimmten zu, die Grenze innerhalb von §Y20§! Jahren für uns zu öffnen.
+Der §Y[Root.GetName]§! erhielt §G+ 100 §! £Einfluss£ \n"
+
+trait_talented_2:0 "Überragend talentiert"
+job_organic_brain: "Gehirnrechner "
+slavery_brain: "Gehirnsklaverei"
+
+tech_defense_platform_hull_2: 0 "$tech_defense_platform_hull_1$ MK2"
+
+edict_expansion_planer: "Vergrößern der Reichsgröße"
+edict_expansion_planer_desc:0 "Erweitern Sie die Grenzen unseres Imperiums für eine neue Kolonie"
+
+tech_defense_platform_hull_2_desc:0 "$tech_defense_platform_hull_1_desc$"
+job_organic_brain_plural:0 "Gehirnrechner"
+slavery_brain_tooltip:0 "Verwenden Sie das organische Gehirn wie einen Rechner, sie sind optimiert für gesellschaftliche Forschung und Einheit"
+slavery_brain_tooltip_delayed:0 "Jedes organische Gehirn produziert 2 £gesellschaftliche Forschung£ und 0,25 £Einheit£"
+OUR_CLAIMS_ON_ENEMYS:1 "Wenn wir Ansprüche haben, die wir von den Feinden und ihren Verbündeten zu erobern versuchen."
+ALLY_CLAIMS_ON_ENEMYS:1 "Wenn unsere Verbündeten Ansprüche haben, die wir von den Feinden und ihren Verbündeten zu erobern versuchen."
+
+edict_dark_matter_explosives: "Dark Matter explosives"
+edict_dark_matter_explosives_desc:0 "Using dark matter for missiles can be very useful if you want to cause damage."
+edict_dark_matter_point_grid: "Dark Matter defense grid"
+edict_dark_matter_point_grid_desc:0 "Use dark matter to create a defense grid for point defense."
+edict_dark_matter_ammunition: "Dark Matter air strike"
+edict_dark_matter_ammunition_desc:0 "Use dark matter for ammunition of air strike"
+
+economic_policy_leader_focus: "Leader Focus"
+economic_policy_leader_focus_desc: "We allocate the necessary resources for our leaders to be the best."
+economic_policy_politics: "Politics Focus"
+economic_policy_politics_desc: "We allocate the necessary resources for our politics have power and resource for all.."
+economic_policy_statecraft: "Statecraft Focus"
+economic_policy_statecraft_desc: "We will bring twice the resources to the council."
+old_economic_policy_statecraft_desc: "\n\n§YUnlock§! 1 slot of council and new rule powerfull vice ruler"
+drone_economic_policy_leader_focus: "Leader Focus"
+drone_economic_policy_leader_focus_desc: "We allocate the necessary resources for our protocol leader to be the best of 3,167777%."
+drone_economic_policy_politics: "Politics Focus"
+drone_economic_policy_politics_desc: "We allocate the necessary resources for our politics have power and resource for all.."
+drone_economic_policy_statecraft: "Statecraft Focus"
+drone_economic_policy_statecraft_desc: "We will bring twice of calculation to the council."
+mod_planet_jobs_ruler_upkeep_mult:0 "Ruler Jobs Upkeep"
+
+councilor_vice_governor:0 "vice $councilor_ruler$"
+councilor_vice_governor_female:0 "vice $councilor_ruler_female$"
+councilor_vice_governor_desc:0 "The vice work with best counciliors and best optimization of governement"
+councilor_corporate_dominion_2:0 "$councilor_corporate_dominion$"
+councilor_corporate_dominion_2_female:0 "$councilor_ruler_female$"
+councilor_corporate_dominion_2_desc:0 "$councilor_corporate_dominion_desc$"
+
+
+councilor_franchise_state:0 "franchises ruler"
+councilor_franchise_state_female:0 "franchises ruler"
+councilor_franchise_state_desc:0 "franchises ruler talk with other franchise"

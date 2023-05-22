@@ -1047,9 +1047,7 @@ tech_defense_platform_hull_2:0 "$tech_defense_platform_hull_1$ MK2"
 
 edict_expansion_planer: "Expand empire size"
 edict_expansion_planer_desc:0 "Expand limit of our empire for new colony"
-
 tech_defense_platform_hull_2_desc:0 "$tech_defense_platform_hull_1_desc$"
-
 job_organic_brain_plural:0 "Brain calculators"
 slavery_brain_tooltip:0 "Use they organic brain how an calculator they are optimized for society research and unity"
 slavery_brain_tooltip_delayed:0 "Every organic brain produces 2 £society_research£ and 0.25 £unity£"
@@ -1068,7 +1066,8 @@ economic_policy_leader_focus_desc: "We allocate the necessary resources for our 
 economic_policy_politics: "Politics Focus"
 economic_policy_politics_desc: "We allocate the necessary resources for our politics have power and resource for all.."
 economic_policy_statecraft: "Statecraft Focus"
-economic_policy_statecraft_desc: "We will bring twice the resources to the council.\n\n §YUnlock§! 1 slot of council"
+economic_policy_statecraft_desc: "We will bring twice the resources to the council."
+old_economic_policy_statecraft_desc: "\n\n§YUnlock§! 1 slot of council and new rule powerfull vice ruler"
 drone_economic_policy_leader_focus: "Leader Focus"
 drone_economic_policy_leader_focus_desc: "We allocate the necessary resources for our protocol leader to be the best of 3,167777%."
 drone_economic_policy_politics: "Politics Focus"
@@ -1077,10 +1076,16 @@ drone_economic_policy_statecraft: "Statecraft Focus"
 drone_economic_policy_statecraft_desc: "We will bring twice of calculation to the council."
 mod_planet_jobs_ruler_upkeep_mult:0 "Ruler Jobs Upkeep"
 
+councilor_vice_governor:0 "vice $councilor_ruler$"
+councilor_vice_governor_female:0 "vice $councilor_ruler_female$"
+councilor_vice_governor_desc:0 "The vice work with best counciliors and best optimization of governement"
+councilor_corporate_dominion_2:0 "$councilor_corporate_dominion$"
+councilor_corporate_dominion_2_female:0 "$councilor_ruler_female$"
+councilor_corporate_dominion_2_desc:0 "$councilor_corporate_dominion_desc$"
 
 
-
-
-
+councilor_franchise_state:0 "franchises ruler"
+councilor_franchise_state_female:0 "franchises ruler"
+councilor_franchise_state_desc:0 "franchises ruler talk with other franchise"
 
 

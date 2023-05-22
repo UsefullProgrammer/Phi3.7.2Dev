@@ -1026,3 +1026,64 @@ war_goal_FW_wg_open_border_long: "Długa otwarta granica"
 war_goal_FW_wg_open_border_long_desc: "Rozpocznij wojnę, aby otworzyć granice wrogiej cywilizacji, uzyskać 50 lat prawa przejazdu i zakończyć rywalizację."
 z_fw_open_border_long_tooltip:0 "§Y[From.GetName]§! zostało całkowicie pokonane, musieli złożyć broń i zgodzili się otworzyć dla nas granice w ciągu §Y50§! lat. Jednocześnie zakończyliśmy stan rywalizacji z nimi, ale oczywiście nie zgodzili się na ten wynik i kiedyś w przyszłości będą chcieli się zemścić.\n§Y[Root.GetName]§! zyskało §G+150§! £influence£\n"
 z_fw_opinion_wg_open_boder_long:0 "Być swobodnym w naszym terytorium"
+
+CORVETTE_MID_M1S2:3 "Ciężki Torpedowiec"
+OFFSPRING_CORVETTE_MID_M1S1:0 "$CORVETTE_MID_M1S1$"
+CORVETTE_MID_S4:3 "Opancerzony projekt"
+OFFSPRING_CORVETTE_MID_S4:0 "$CORVETTE_MID_S4$"
+
+casus_belli_FW_cb_border:0 "Zamknięta granica"
+war_goal_FW_wg_open_border: "Otwarta granica"
+war_goal_FW_wg_open_border_desc:"Rozpocznij wojnę w celu otwarcia granic wrogiej cywilizacji i uzyskania 20 lat prawa przeprawy.
+
+Wróg §N nie może§! przetrwać wojny, §N nie może §! uzyskać roszczeń!"
+
+trait_talented_2:0 "Nadzwyczaj utalentowany"
+job_organic_brain: "Mózg-kalkulator"
+slavery_brain: "Niewolnictwo mózgu"
+
+tech_defense_platform_hull_2:0 "$tech_defense_platform_hull_1$ MK2"
+
+edict_expansion_planer: "Rozszerzenie rozmiaru imperium"
+edict_expansion_planer_desc:0 "Rozszerzenie granic naszego imperium dla nowej kolonii"
+
+tech_defense_platform_hull_2_desc:0 "$tech_defense_platform_hull_1_desc$"
+job_organic_brain_plural:0 "Mózgowe procesory"
+slavery_brain_tooltip:0 "Użyj ich organicznego mózgu jako procesora są one zoptymalizowane do badań społecznych i jedności"
+slavery_brain_tooltip_delayed:0 "Każdy organiczny mózg produkuje 2 £społeczne_badania£ i 0,25 £jedność£"
+OUR_CLAIMS_ON_ENEMYS:1 "Jeśli mamy roszczenia, które próbujemy podbić wrogowi i jego sojusznikom."
+ALLY_CLAIMS_ON_ENEMYS:1 "Jeśli nasi sojusznicy mają roszczenia, które próbujemy podbić wrogowi i jego sojusznikom."
+
+edict_dark_matter_explosives: "Dark Matter explosives"
+edict_dark_matter_explosives_desc:0 "Using dark matter for missiles can be very useful if you want to cause damage."
+edict_dark_matter_point_grid: "Dark Matter defense grid"
+edict_dark_matter_point_grid_desc:0 "Use dark matter to create a defense grid for point defense."
+edict_dark_matter_ammunition: "Dark Matter air strike"
+edict_dark_matter_ammunition_desc:0 "Use dark matter for ammunition of air strike"
+
+economic_policy_leader_focus: "Leader Focus"
+economic_policy_leader_focus_desc: "We allocate the necessary resources for our leaders to be the best."
+economic_policy_politics: "Politics Focus"
+economic_policy_politics_desc: "We allocate the necessary resources for our politics have power and resource for all.."
+economic_policy_statecraft: "Statecraft Focus"
+economic_policy_statecraft_desc: "We will bring twice the resources to the council."
+old_economic_policy_statecraft_desc: "\n\n§YUnlock§! 1 slot of council and new rule powerfull vice ruler"
+drone_economic_policy_leader_focus: "Leader Focus"
+drone_economic_policy_leader_focus_desc: "We allocate the necessary resources for our protocol leader to be the best of 3,167777%."
+drone_economic_policy_politics: "Politics Focus"
+drone_economic_policy_politics_desc: "We allocate the necessary resources for our politics have power and resource for all.."
+drone_economic_policy_statecraft: "Statecraft Focus"
+drone_economic_policy_statecraft_desc: "We will bring twice of calculation to the council."
+mod_planet_jobs_ruler_upkeep_mult:0 "Ruler Jobs Upkeep"
+
+councilor_vice_governor:0 "vice $councilor_ruler$"
+councilor_vice_governor_female:0 "vice $councilor_ruler_female$"
+councilor_vice_governor_desc:0 "The vice work with best counciliors and best optimization of governement"
+councilor_corporate_dominion_2:0 "$councilor_corporate_dominion$"
+councilor_corporate_dominion_2_female:0 "$councilor_ruler_female$"
+councilor_corporate_dominion_2_desc:0 "$councilor_corporate_dominion_desc$"
+
+
+councilor_franchise_state:0 "franchises ruler"
+councilor_franchise_state_female:0 "franchises ruler"
+councilor_franchise_state_desc:0 "franchises ruler talk with other franchise"

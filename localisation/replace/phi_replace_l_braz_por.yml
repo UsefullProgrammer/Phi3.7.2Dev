@@ -168,3 +168,7 @@ tr_synchronicity_machine_finish_desc:3 "§HUnlocks Edict:§! $edict_industrial_m
 
  OUR_CLAIMS_ON_ENEMY:1 "" #fix problem that ssend you can gt claim when not true.
  ALLY_CLAIMS_ON_ENEMY:1 ""
+
+war_goal_wg_conquest_desc:1 "War is waged to seize Claimed enemy systems. Using this wargoal to take claims generates §Y25%§! less §YThreat§! for each conquered system.\n$OUR_CLAIMS_ON_ENEMYS$\n$ALLY_CLAIMS_ON_ENEMYS$"
+
+origin_tooltip_imperial_vassal_effects:1 "§G- WARNING: Easy Origin for new players.§!\n- Start as the vassal of an §HAdvanced AI Empire§!.\n- Gain the option to choose a §HSpecialist Empire§! vassal type at the start of the game."

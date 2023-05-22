@@ -46,9 +46,26 @@ cb_subjugation = {
 		is_subject = no
 	}
 	is_valid = {
-		NOT = { is_overlord_to = FROM }
-		is_country_type = awakened_fallen_empire
-		NOT = { has_authority = auth_machine_intelligence }
+		OR = {
+			AND = {
+				NOT = { is_overlord_to = FROM }
+				is_country_type = awakened_fallen_empire
+				NOT = { has_authority = auth_machine_intelligence }
+			}
+			from = {
+				is_at_war = yes
+				any_war = {
+					is_war_participant = { who = prev side = attackers } # get casual participant TO DO
+					is_war_participant = { who = root side = defenders }
+					NOT = {
+						using_war_goal = {
+							type = wg_humiliation
+							owner = attacker
+						}
+					}
+				}
+			}
+		}
 	}
 }
 
