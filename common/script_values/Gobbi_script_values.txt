@@ -63,6 +63,17 @@ edict_fleet_size_effect = {
 	mult = trigger:used_naval_capacity_integer
 	add = 1
 }
+edict_fleet_starbase_size_effect = {
+	base = 0.015
+	#mult = trigger:num_pops
+	#mult = owner.trigger:num_ships
+	#mult = trigger:fleet_size #non funziona
+	mult = trigger:used_naval_capacity_integer
+	divide = 2
+	mult = trigger:num_starbases
+	add = 1
+}
+
 pop_size_ventesimal_floor = {
 	base = 0
 	add = trigger:num_pops

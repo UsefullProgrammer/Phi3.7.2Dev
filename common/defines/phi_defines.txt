@@ -413,7 +413,7 @@
 		FALLEN_EMPIRE_OUTER_BOUNDARY  		= 100	# Outer boundary of galaxy that fallen empire generation will try to avoid
 		FALLEN_EMPIRE_INNER_BOUNDARY		= 0		# Inner boundary of galaxy that fallen empire generation will try to avoid
 
-		COUNCIL_AGENDA_BASE_COUNCILOR_DAILY_PROGRESS = 12.0  # Daily progress gained towards advancing an agenda per councilor
+		COUNCIL_AGENDA_BASE_COUNCILOR_DAILY_PROGRESS = 10.0  # Daily progress gained towards advancing an agenda per councilor
 		COUNCIL_AGENDA_COUNCILOR_PROGRESS_PER_SKILL = 1.0  # Daily progress gained towards advancing an agenda per councilor skill level
 		COUNCIL_AGENDA_COOLDOWN 				= 8640 # Number of days before you can pick the same agenda after finishing it
 		COUNCIL_AGENDA_FINISHING_EFFECT_DURATION = 3600 # Duration of agenda finishing effect. Should match @agenda_finish_modifier_duration

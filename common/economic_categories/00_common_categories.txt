@@ -772,6 +772,15 @@ planet_jobs = {
 			is_pop_category = ruler
 		}
 	}
+	triggered_upkeep_modifier = {
+		key = planet_jobs_ruler
+		modifier_types = {
+			mult
+		}
+		trigger = {
+			is_pop_category = ruler
+		}
+	}
 
 	triggered_produces_modifier = {
 		key = planet_jobs_simple_drone

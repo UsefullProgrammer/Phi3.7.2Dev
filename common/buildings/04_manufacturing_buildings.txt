@@ -1880,6 +1880,7 @@ building_archaeo_refinery = {
 			has_modifier = slave_colony
 			has_modifier = crucible_colony
 		}
+		exists = owner
 		owner = { has_technology = tech_archaeo_refinery }
 	}
 
@@ -1915,6 +1916,7 @@ building_archaeo_refinery = {
 
 	triggered_planet_modifier = {
 		potential = {
+			exists = owner
 			owner = {
 				has_ascension_perk = ap_archaeoengineers
 			}

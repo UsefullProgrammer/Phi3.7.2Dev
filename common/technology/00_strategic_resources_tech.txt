@@ -363,14 +363,14 @@ tech_mine_dark_matter = {
 	area = physics
 	tier = 3
 	category = { field_manipulation }
-	prerequisites = { "tech_sensors_4" }
-	weight = @tier3weight3
+	prerequisites = { "tech_sensors_3" }
+	weight = @tier3weight2
 
 	## unlock see dark matter
 
 	weight_modifier = {
 		modifier = {
-			factor = 0
+			factor = 0.5
 			NOR = {
 				has_country_flag = dark_matter_found
 				any_system_within_border = { any_system_planet = { has_resource = { type = sr_dark_matter amount > 0 } } }

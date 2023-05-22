@@ -613,7 +613,7 @@ dark_matter_explosives = {
 			multiplier = value:edict_fleet_size_effect
 		}
 		upkeep = {
-			sr_dark_matter = 0.55
+			sr_dark_matter = 0.6
 			multiplier = value:edict_fleet_size_effect
 		}
 	}
@@ -646,7 +646,7 @@ dark_matter_point_grid = {
 			multiplier = value:edict_fleet_size_effect
 		}
 		upkeep = {
-			sr_dark_matter = 0.55
+			sr_dark_matter = 0.6
 			multiplier = value:edict_fleet_size_effect
 		}
 	}
@@ -674,11 +674,11 @@ dark_matter_ammunition = {
 		category = ship_edicts
 		cost = {
 			sr_dark_matter = 1
-			multiplier = value:edict_fleet_size_effect
+			multiplier = value:edict_fleet_starbase_size_effect
 		}
 		upkeep = {
-			sr_dark_matter = 0.2
-			multiplier = value:edict_fleet_size_effect
+			sr_dark_matter = 0.25
+			multiplier = value:edict_fleet_starbase_size_effect
 		}
 	}
 

@@ -456,8 +456,12 @@ d_dark_matter_deposit_2 = {
 	drop_weight = {
 		weight = 0
 		modifier = {
-			weight = 1
+			weight = 2
 			is_planet_class = pc_black_hole
+		}
+		modifier = {
+			factor = 0.5
+			is_inside_nebula = no
 		}
 	}
 }
@@ -474,6 +478,14 @@ d_dark_matter_deposit_3 = {
 
 	drop_weight = {
 		weight = 0
+		modifier = {
+			weight = 1
+			is_planet_class = pc_black_hole
+		}
+		modifier = {
+			factor = 0.5
+			is_inside_nebula = no
+		}
 	}
 }
 
@@ -499,10 +511,13 @@ d_living_metal_deposit = {
 			sr_living_metal = 1
 		}
 	}
+	potential = {
+		is_planet_class = pc_asteroid
+	}
 	station = shipclass_mining_station
 	is_for_colonizable = no
 
 	drop_weight = {
-		weight = 0
+		weight = 0.5
 	}
 }
