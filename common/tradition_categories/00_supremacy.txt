@@ -23,6 +23,13 @@ tradition_supremacy = {
 	}
 
 	ai_weight = {
-		factor = 500
+		factor = 2500 # 5000 priority.
+		modifier = {
+			factor = 0.1
+			NOR = {
+				has_ai_personality_behaviour = conqueror
+				has_ai_personality_behaviour = subjugator
+			}
+		}
 	}
 }

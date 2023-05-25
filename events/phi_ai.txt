@@ -354,6 +354,7 @@ country_event = {
 	
 	immediate = {
 		while = {
+			count = 10
 			limit = {
 				OR = {
 					AND = {
@@ -369,22 +370,37 @@ country_event = {
 					free_jobs > 0
 				}
 			}
+			random_owned_planet = {
+				
+				limit = {
+					any_owned_pop = {
+						is_unemployed = yes
+					}
+					
+				}
+				save_event_target_as = planet_option_start 
+			}
 			random_owned_pop = {
 				limit = { is_unemployed = yes }
-				root = {
+				root = { 
 					random_owned_planet = {
-						limit = { free_jobs > 0 }
-						create_pop = {
-							species = prevprev
+						limit = { 
+							free_jobs > 0
+							NOT = { is_same_value = event_target:planet_option_start } 
+						}
+						resettle_pop = {
+							pop = prevprev
+							planet = this
+						}
+						owner  = {
+							if = {
+								limit = { NOT = { has_civic = civic_corvee_system } }
+								add_resource = { energy = -100 }
+								add_resource = { unity = -10 }
+							}
 						}
 					}
 				}
-				kill_pop = yes
-			}
-			if = {
-				limit = { NOT = { has_civic = civic_corvee_system } }
-				add_resource = { energy = -100 }
-				add_resource = { unity = -10 }
 			}
 		}
 	}
@@ -483,7 +499,7 @@ country_event = {
 	immediate = {
 		while = {
 			limit = {
-				has_resource = { type = consumer_goods amount > 500 }
+				has_resource = { type = consumer_goods amount > 1000 }
 				has_monthly_income = { resource = consumer_goods value > 0 }
 			}
 			add_resource = { consumer_goods = -100 }
@@ -494,6 +510,7 @@ country_event = {
 				has_resource = { type = energy amount > 500 }
 				has_resource = { type = food amount < 500 }
 				has_monthly_income = { resource = food value < 0 }
+				has_monthly_income = { resource = energy value > 0 }
 			}
 			add_resource = { food = 500 }
 			add_resource = { energy = -500 }
@@ -501,6 +518,7 @@ country_event = {
 		if = {
 			limit = {
 				has_resource = { type = energy amount > 1000 }
+				has_monthly_income = { resource = energy value > 0 }
 				has_resource = { type = minerals amount < 500 }
 			}
 			add_resource = { minerals = 500 }
@@ -509,6 +527,17 @@ country_event = {
 		if = {
 			limit = {
 				has_resource = { type = energy amount > 1000 }
+				has_monthly_income = { resource = energy value > 0 }
+				has_monthly_income = { resource = consumer_goods value < 0 }
+				has_resource = { type = consumer_goods amount < 100 }
+			}
+			add_resource = { consumer_goods = 12 }
+			add_resource = { energy = -24 }
+		}
+		if = {
+			limit = {
+				has_resource = { type = energy amount > 1000 }
+				has_monthly_income = { resource = energy value > 0 }
 				has_resource = { type = minerals amount < 1000 }
 			}
 			add_resource = { minerals = 500 }
@@ -517,6 +546,7 @@ country_event = {
 		if = {
 			limit = {
 				has_resource = { type = minerals amount > 12000 }
+				has_monthly_income = { resource = energy value > 0 }
 				has_resource = { type = alloys amount < 10000 }
 			}
 			add_resource = { alloys = 300 }
@@ -533,10 +563,20 @@ country_event = {
 		if = {
 			limit = {
 				has_resource = { type = energy amount > 11000 }
+				has_monthly_income = { resource = energy value > 0 }
 				has_resource = { type = alloys amount < 10000 }
 			}
 			add_resource = { alloys = 1000 }
 			add_resource = { energy = -6000 }
+		}
+		if = {
+			limit = {
+				has_resource = { type = energy amount > 1000 }
+				has_monthly_income = { resource = energy value > 0 }
+				has_resource = { type = exotic_gases amount < 100 }
+			}
+			add_resource = { exotic_gases = 3 }
+			add_resource = { energy = -10 }
 		}
 	}
 }
@@ -560,6 +600,96 @@ country_event = {
 			limit = {
 				is_capital = yes
 				NOT = { is_planet_class = pc_habitat }
+			}
+			if = {
+				limit = {
+					owner = {
+						has_monthly_income = { resource = food value > 20 }
+						NOT = { has_valid_civic = civic_agrarian_idyll }
+					}
+					num_districts = { type = district_farming value > 0 }
+				}
+				remove_district = district_farming
+				random_list = {
+					50 = {
+						modifier = {
+							factor = 0
+							num_free_districts = { type = district_generator value = 0 }
+						}
+						modifier = {
+							factor = 0
+							owner = { has_monthly_income = { resource = energy value > 20 } }
+						}
+						modifier = {
+							factor = 0
+							free_jobs > 0
+						}
+						add_district = district_generator
+					}
+					50 = {
+						modifier = {
+							factor = 0
+							owner = { has_resource = { type = minerals amount < 100 } }
+						}
+						owner = { add_resource = { minerals = -100 } }
+						add_district = district_city
+					}
+				}
+			}
+			if = {
+				limit = {
+					owner = { has_monthly_income = { resource = minerals value > 100 } }
+					num_districts = { type = district_mining value > 0 }
+				}
+				remove_district = district_mining
+				random_list = {
+					50 = {
+						modifier = {
+							factor = 0
+							num_free_districts = { type = district_generator value = 0 }
+						}
+						modifier = {
+							factor = 0
+							owner = { has_monthly_income = { resource = energy value > 20 } }
+						}
+						modifier = {
+							factor = 0
+							free_jobs > 0
+						}
+						add_district = district_generator
+					}
+					50 = {
+						modifier = {
+							factor = 0
+							owner = { has_resource = { type = minerals amount < 100 } }
+						}
+						modifier = {
+							factor = 0
+							owner = { has_valid_civic = civic_agrarian_idyll }
+							num_free_districts = { type = district_farming value > 0 }
+						}
+						owner = { add_resource = { minerals = -100 } }
+						add_district = district_city
+					}
+					50 = {
+						modifier = {
+							factor = 0
+							num_free_districts = { type = district_farming value = 0 }
+						}
+						modifier = {
+							factor = 0
+							owner = { NOT = { has_valid_civic = civic_agrarian_idyll } }
+						}
+						add_district = district_farming
+					}
+				}
+			}
+		}
+		random_owned_planet = {
+			limit = {
+				is_capital = no
+				NOT = { is_planet_class = pc_habitat }
+				NOT = { is_planet_class = pc_city } # ecumenopolis
 			}
 			if = {
 				limit = {
@@ -957,8 +1087,9 @@ country_event = {
 		has_country_flag = phi_lagger
 		any_country = {
 			has_communications = root
-			has_country_flag = phi_lagger
+			#has_country_flag = phi_lagger
 			is_at_war = yes
+			opinion_level = { who = root level >= neutral }
 		}
 	}
 	
@@ -966,10 +1097,12 @@ country_event = {
 		random_country = {
 			limit = {
 				has_communications = root
-				has_country_flag = phi_lagger
+				#has_country_flag = phi_lagger
+				opinion_level = { who = root level >= neutral }
 				any_war = {
 					using_war_goal = { type = wg_phi_survive owner = prev }
 					NOT = { is_war_participant = { who = root } }
+					defender_war_exhaustion < 0.5
 				}
 			}
 			random_war = {
@@ -983,17 +1116,20 @@ country_event = {
 				save_event_target_as = survive_cb_war
 			}
 		}
-		root = { #mettere check se survive_cb_war esiste. TO DO TODO
-			join_war_on_side = {
-				war = event_target:survive_cb_war
-				side = defenders
-			}
-			if = {
-				limit = { is_federation_leader = yes }
-				every_federation_ally = {
-					join_war_on_side = {
-						war = event_target:survive_cb_war
-						side = defenders
+		if = {
+			limit = { exists = event_target:survive_cb_war }
+			root = { #mettere check se survive_cb_war esiste. TO DO TODO
+				join_war_on_side = {
+					war = event_target:survive_cb_war
+					side = defenders
+				}
+				if = {
+					limit = { is_federation_leader = yes }
+					every_federation_ally = {
+						join_war_on_side = {
+							war = event_target:survive_cb_war
+							side = defenders
+						}
 					}
 				}
 			}
@@ -1274,6 +1410,69 @@ country_event = {
 }
 
 country_event = {
+#	phi_ai.16	yearly checked - market simulator for gestalts empires
+
+	id = phi_ai.16
+	hide_window = yes
+
+	is_triggered_only = yes
+	
+	trigger = {
+		is_ai = yes
+		is_country_type = default
+		has_ethic = ethic_gestalt_consciousness
+	}
+	
+	immediate = {
+		if = {
+			limit = {
+				has_resource = { type = energy amount > 500 }
+				has_resource = { type = food amount < 500 }
+				has_monthly_income = { resource = food value < 0 }
+				has_monthly_income = { resource = energy value > 0 }
+			}
+			add_resource = { food = 500 }
+			add_resource = { energy = -500 }
+		}
+		if = {
+			limit = {
+				has_resource = { type = energy amount > 1000 }
+				has_monthly_income = { resource = energy value > 0 }
+				has_resource = { type = minerals amount < 500 }
+
+			}
+			add_resource = { minerals = 500 }
+			add_resource = { energy = -500 }
+		}
+		if = {
+			limit = {
+				has_resource = { type = minerals amount > 12000 }
+				has_monthly_income = { resource = energy value > 0 }
+				has_resource = { type = alloys amount < 10000 }
+			}
+			add_resource = { alloys = 15 }
+			add_resource = { minerals = -20 }
+		}
+		if = {
+			limit = {
+				has_resource = { type = minerals amount > 12000 }
+				has_resource = { type = energy amount < 20000 }
+			}
+			add_resource = { energy = 2000 }
+			add_resource = { minerals = -2000 }
+		}
+		if = {
+			limit = {
+				has_resource = { type = energy amount > 1000 }
+				has_monthly_income = { resource = energy value > 10 }
+				has_resource = { type = exotic_gases amount < 100 }
+			}
+			add_resource = { exotic_gases = 3 }
+			add_resource = { energy = -10 }
+		}
+	}
+}
+country_event = {
 #	phi_ai.777	test event
 
 	id = phi_ai.777
@@ -1283,10 +1482,37 @@ country_event = {
 	is_triggered_only = yes
 	
 	trigger = {
-	
 	}
 	
 	immediate = {
-		
+
 	}
+}
+country_event = {
+    id = phi_ai.17
+
+    hide_window = yes
+    is_triggered_only = yes
+	trigger = {
+		is_at_war = yes
+		any_war = {
+			any_attacker = {
+				is_same_value = root
+				is_war_leader = yes
+				is_ai = yes
+			}
+			any_defender = {
+				is_war_leader = yes
+				is_ai = yes
+			}
+			OR = {
+				using_war_goal = { type = wg_subjugation owner = attacker }
+				using_war_goal = { type = wg_tribute owner = attacker }
+			}
+		}
+	}
+    immediate = {
+		# THEN
+		add_resource = { influence = -150} #remove 150 influence
+    }
 }

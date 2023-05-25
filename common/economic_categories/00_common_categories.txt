@@ -55,7 +55,10 @@ edicts = {
 	}
 	modifier_category = country
 }
-
+special = {
+	parent = country
+	modifier_category = country
+}
 campaigns = {
 	parent = country
 	ai_use_parent_for_resources_upkeep = {

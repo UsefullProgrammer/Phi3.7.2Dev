@@ -18,7 +18,7 @@ tradition_diplomacy = {
 	}
 
 	ai_weight = {
-		factor = 5
+		factor = 10
 		modifier = {
 			factor = 500
 			has_federation = yes
@@ -50,5 +50,14 @@ tradition_diplomacy = {
 			factor = 0.5
 			is_gestalt = yes
 		}
+		modifier = {
+			factor = 100
+			any_country = {
+				is_country_type = default
+				has_communications = root
+				opinion_level = { who = root level > neutral }
+			}
+		}
+		
 	}
 }

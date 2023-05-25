@@ -23,7 +23,6 @@ tradition_domination = {
 	}
 
 	ai_weight = {
-		factor = 10
 		modifier = {
 			factor = 2
 			has_ethic = ethic_authoritarian
@@ -31,6 +30,62 @@ tradition_domination = {
 		modifier = {
 			factor = 3
 			has_ethic = ethic_fanatic_authoritarian
+		}
+		modifier = {
+			factor = 5000
+			AND = {
+				OR = {
+					has_ai_personality_behaviour = subjugator
+					has_ai_personality_behaviour = wants_tribute
+				}
+				fleet_power > 2000
+				any_country = {
+					is_country_type = default
+					has_communications = root.owner
+					NOT = { is_in_federation_with = root }
+					relative_power = {
+						who = root.owner
+						category = fleet
+						value < equivalent
+					}
+				}
+			}
+		}
+		modifier = {
+			factor = 0.5
+			fleet_power < 1000
+		}
+		modifier = {
+			factor = 2
+			OR = {
+				has_ai_personality_behaviour = subjugator
+				has_ai_personality_behaviour = wants_tribute
+			}
+		}
+		modifier = {
+			factor = 0
+			NOR = {
+				has_ai_personality_behaviour = subjugator
+				has_ai_personality_behaviour = wants_tribute
+			}
+		}
+		modifier = {
+			factor = 0
+			AND = {
+				NOR = {
+					has_ai_personality_behaviour = subjugator
+					has_ai_personality_behaviour = wants_tribute
+				}
+				any_country = {
+					has_communications = root.owner
+					is_country_type = default
+					relative_power = {
+						who = root.owner
+						category = fleet
+						value > equivalent
+					}
+				}
+			}
 		}
 	}
 }

@@ -245,16 +245,16 @@ automate_robotic_pop_assembly = {
 		}
 		AND = { #Capital not have much
 				has_designation = col_capital
-				num_buildings = { type = building_machine_assembly_plant value < 1 }
+				num_buildings = { type = building_robot_assembly_plant value < 1 }
 		}
 		OR = {
 			AND = {
 				has_designation = col_default
-				num_buildings = { type = building_machine_assembly_plant value < 1 }
+				num_buildings = { type = building_robot_assembly_plant value < 1 }
 			}
 			AND = {
 				NOT = { has_designation = col_default }
-				num_buildings = { type = building_machine_assembly_plant value < 2 }
+				num_buildings = { type = building_robot_assembly_plant value < 2 }
 			}
 		}
 	}

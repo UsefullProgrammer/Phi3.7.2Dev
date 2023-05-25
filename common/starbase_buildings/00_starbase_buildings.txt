@@ -1417,11 +1417,13 @@ archaeo_overcharger = {
 		potential = {
 			owner = { has_ascension_perk = ap_archaeoengineers }
 		}
+		ship_shield_add = @shield_L3
 		ship_shield_mult = 0.5
 		ship_shield_hardening_add = 0.5
 	}
 
 	defense_platform_modifier = {
+		ship_shield_add = @shield_L1
 		ship_shield_mult = 0.25
 		ship_shield_hardening_add = 0.25
 		ship_shield_regen_add_perc = @regen_mult_lv3

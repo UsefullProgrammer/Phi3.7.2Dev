@@ -305,6 +305,13 @@ desired_colonizers_base = {
 		 	}
 		}
 	}
+	modifier = {
+		factor = 0
+		
+		any_owned_planet = {
+			num_pops < 20
+		}
+	}
 }
 
 desired_constructors_min = {

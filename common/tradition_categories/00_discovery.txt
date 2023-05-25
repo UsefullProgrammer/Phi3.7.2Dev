@@ -23,7 +23,7 @@ tradition_discovery = {
 	}
 
 	ai_weight = {
-		factor = 200
+		factor = 1000
 		modifier = {
 			factor = 5
 			years_passed < 20

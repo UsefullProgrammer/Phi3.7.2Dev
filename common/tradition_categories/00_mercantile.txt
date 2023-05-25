@@ -15,13 +15,13 @@ tradition_mercantile = {
 	}
 
 	ai_weight = {
-		factor = 5000
+		factor = 2
 		modifier = {
 			factor = 3
 			has_authority = auth_corporate
 		}
 		modifier = {
-			factor = 10
+			factor = 2500
 			should_ai_focus_on_trade = yes
 		}
 		modifier = {

@@ -32,11 +32,13 @@ opinion_hegemon = {
 opinion_potential_ally = {
 	trigger = {
 		has_country_flag = phi_lagger
-		from = {
-			has_country_flag = phi_lagger
-		}
-		from = { is_subject = no }
 		is_subject = no
+		from = {
+			AND = { 
+				has_country_flag = phi_lagger
+				is_subject = no
+			}
+		}
 	}
 
 	opinion = {
@@ -68,12 +70,10 @@ opinion_our_bbeg = {
 }
 opinion_our_bbeg_overlord = {
 	trigger = {
-		OR = {
-			AND = {
-				OR = {
-					has_country_flag = phi_bbeg
-					from = { has_country_flag = phi_bbeg }
-				}
+		AND = {
+			OR = {
+				has_country_flag = phi_bbeg
+				from = { has_country_flag = phi_bbeg }
 			}
 			AND = { 
 				is_subject = yes
@@ -88,7 +88,8 @@ opinion_our_bbeg_overlord = {
 	
 	unique = yes
 }
-# opinion_bbeg_vassals = {
+
+#opinion_bbeg_vassals = {
 # 	trigger = {
 # 		OR = {
 # 			AND = { 

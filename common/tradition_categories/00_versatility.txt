@@ -15,7 +15,6 @@ tradition_versatility = {
 	}
 
 	ai_weight = {
-		factor = 5
 		modifier = {
 			factor = 2
 			has_valid_civic = civic_machine_servitor

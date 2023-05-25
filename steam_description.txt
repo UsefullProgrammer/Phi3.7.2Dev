@@ -18,7 +18,7 @@ PHIGO also adds a lot of stuff that is still bigly missing in vanilla: [i]breaki
 PHIGO is a standalone mod.
 
 [h1][b]The Biggest Changes to Vanilla[/b][/h1]
-[h2]Admin capacity and planets management[/h2]
+[h2]Planets management[/h2]
 While playing with PHIGO, you'll have much [b]less planets[/b] to manage and colonize, and you'll put much more emphasys on [b]systems' resources[/b] (especially for science). This is done by:
 [list]
 [*]increasing the [b]admin capacity cost[/b] of every planet you own (they now cost 25 empire size points)
@@ -40,13 +40,7 @@ PHIGO reworks totally the federations available in-game:
 [/list]
 
 [h2]Vassals[/h2]
-Vassals and subsidiaries are no longer integrable. Instead:
-[list]
-[*][b]vassals[/b] give [b]10% of their alloys, consumer goods and research[/b] points monthly production to their overlord
-[*][b]tributaries[/b] give [b]10% of their energy and minerals[/b] monthly production to their overlord
-[*][b]subsidiaries[/b] give [b]5% of their energy, minerals, alloys, consumer goods and research[/b] points monthly production to their overlord
-[*][b]protectorates[/b] give a bonus [b]+200 society research[/b] per month to their overlord
-[/list]
+Vassals and subsidiaries are no longer integrable.
 Moreover, each normal vassal relation will now cost 1 influence per month (with the exception of protectorates). Ultimatums to vassalize other empires no longer check against relative power.
 
 [h2]Ships and Stations[/h2]
@@ -66,6 +60,8 @@ Moreover, each normal vassal relation will now cost 1 influence per month (with 
 [*][b]breaking truces[/b]: now you can [b]break truces[/b] (from the edicts screen) but you'll become a galactic pariah
 [*][b]disarm your enemies[/b]: humiliations are stingy, causing a wopping [b]-33% influence, alloys, unity, diplo weight[/b] and [b]naval cap[/b] for 15 years
 [*][b]win with a different strategy[/b]: you can now win the game by using your overwhelming trade power to subjugate all the lesser empires into a new [b]Galactic Empire[/b]!
+[*][b]War for open border[/b]
+[*][b]Weapon laser and mass driver low level low damage bonus armor or shield[/b]
 [/list]
 
 [h2]Policies, Traditions, etc[/h2]

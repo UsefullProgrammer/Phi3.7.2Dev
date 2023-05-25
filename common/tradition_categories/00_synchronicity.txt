@@ -15,7 +15,6 @@ tradition_synchronicity = {
 	}
 
 	ai_weight = {
-		factor = 10
 		modifier = {
 			factor = 3
 			has_origin = origin_necrophage

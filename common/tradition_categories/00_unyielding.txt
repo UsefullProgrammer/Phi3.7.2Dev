@@ -18,7 +18,6 @@ tradition_unyielding = {
 	}
 
 	ai_weight = {
-		factor = 5
 		modifier = {
 			factor = 5
 			has_ethic = ethic_pacifist
@@ -32,7 +31,7 @@ tradition_unyielding = {
 			has_valid_civic = civic_inwards_perfection
 		}
 		modifier = {
-			factor = 3
+			factor = 50
 			any_neighbor_country = {
 				is_country_type = default
 				opinion_level = { who = prev level <= poor }

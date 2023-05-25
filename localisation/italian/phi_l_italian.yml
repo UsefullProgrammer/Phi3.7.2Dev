@@ -1087,3 +1087,14 @@ councilor_corporate_dominion_2_desc:0 "$councilor_corporate_dominion_desc$"
 councilor_franchise_state:0 "Governatore delle Franchigie"
 councilor_franchise_state_female:0 "Governatore delle Franchigie"
 councilor_franchise_state_desc:0 "Il Governatore delle Franchigie parla con altri governatori delle franchigie."
+
+
+MINOR_ARTIFACT_LGATE_ALERT_MESSAGE_TITLE:0 "Gli artefatti minori possono essere studiati!"
+MINOR_ARTIFACT_LGATE_ALERT_MESSAGE:0 "Gli artefatti minori possono essere studiati per ottenere una conoscenza sull'L-Gate!"
+
+MINOR_ARTIFACT_PRECURSOR_ALERT_MESSAGE_TITLE:0 "Gli artefatti minori possono essere studiati!"
+MINOR_ARTIFACT_PRECURSOR_ALERT_MESSAGE:0 "Gli artefatti minori possono essere studiati per ottenere una conoscenza sui precursori!"
+
+PHI_EMPIRE_IN_SURVIVE_AVAIBLE_TITLE:0 "Un impero cerca di sopravvivere"
+PHI_EMPIRE_IN_SURVIVE_AVAIBLE_ALERT_MESSAGE:0 "Un impero sta cercando di sopravvivere in una guerra impari, potresti aiutarlo prima §Ymigliorando le relazioni§! e poi cliccando sull'editto §Y$edict_phi_join_defensive_war$§!"
+

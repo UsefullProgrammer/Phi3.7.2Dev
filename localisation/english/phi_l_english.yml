@@ -3,7 +3,7 @@
 ##################
 ### START MENU ###
 ##################
-version: "v1.3 DEV"
+version: "v1.3.1 DEV"
 Compatible: "1.8.3"
 phi_game_start.1.name: "PHIGO START MENU"
 phi_game_start.1.desc: "You are playing at §HPHIGO $version$.\n"
@@ -1087,5 +1087,15 @@ councilor_corporate_dominion_2_desc:0 "$councilor_corporate_dominion_desc$"
 councilor_franchise_state:0 "franchises ruler"
 councilor_franchise_state_female:0 "franchises ruler"
 councilor_franchise_state_desc:0 "franchises ruler talk with other franchise"
+
+MINOR_ARTIFACT_LGATE_ALERT_MESSAGE_TITLE:0 "Minor Artifacts may be studied!"
+MINOR_ARTIFACT_LGATE_ALERT_MESSAGE:0 "Minor Artifacts may be studied in order to obtain L-Gate Insight!"
+
+MINOR_ARTIFACT_PRECURSOR_ALERT_MESSAGE_TITLE:0 "Minor Artifacts may be studied!"
+MINOR_ARTIFACT_PRECURSOR_ALERT_MESSAGE:0 "Minor Artifacts may be studied in order to obtain Precursor Insight!"
+
+PHI_EMPIRE_IN_SURVIVE_AVAIBLE_TITLE:0 "An empire try survive"
+PHI_EMPIRE_IN_SURVIVE_AVAIBLE_ALERT_MESSAGE:0 "An empire is trying to survive in an unequal war, could you help it by §Yimproving relation§! and clicking on the edict §Y$edict_phi_join_defensive_war$§!"
+
 
 

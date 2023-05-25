@@ -16,7 +16,7 @@ tech_lasers_1 = {
 # Blue Lasers
 tech_lasers_2 = {
 	area = physics
-	cost = @tier1cost2
+	cost = @tier1cost3
 	tier = 1
 	category = { particles }
 	ai_update_type = military
@@ -61,7 +61,7 @@ tech_lasers_2 = {
 # UV Lasers
 tech_lasers_3 = {
 	area = physics
-	cost = @tier2cost1
+	cost = @tier2cost2
 	tier = 2
 	category = { particles }
 	ai_update_type = military
@@ -106,7 +106,7 @@ tech_lasers_3 = {
 # X-Ray Lasers
 tech_lasers_4 = {
 	area = physics
-	cost = @tier3cost1
+	cost = @tier3cost2
 	tier = 3
 	category = { particles }
 	ai_update_type = military
@@ -151,7 +151,7 @@ tech_lasers_4 = {
 # Gamma Lasers
 tech_lasers_5 = {
 	area = physics
-	cost = @tier4cost1
+	cost = @tier4cost2
 	tier = 4
 	category = { particles }
 	ai_update_type = military

@@ -2581,9 +2581,9 @@ economic_policy = {
 		valid = {
 			has_tradition = tr_statecraft_adopt
 		}
-		policy_flags = {
-			economic_policy_statecraft
-		}
+		# policy_flags = {
+		# 	economic_policy_statecraft
+		# }
 		modifier = {
 			diplo_weight_council_mult = 0.5
 			country_society_tech_research_speed = +0.05

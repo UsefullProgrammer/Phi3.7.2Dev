@@ -81,8 +81,8 @@ imperialist = {
 		unfulfilled_title = "MILITARIST_FLEET_LAG"
 		desc = "MILITARIST_FLEET_LEAP_DESC"
 
-		fulfilled_effect = 20
-		unfulfilled_effect = -10
+		fulfilled_effect = 10
+		unfulfilled_effect = 0
 
 		potential = {
 			exists = owner

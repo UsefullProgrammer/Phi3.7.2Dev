@@ -296,7 +296,7 @@ Diminuito hull regen mult da 0.1 a 0.05
 -Il caricamento per attivazione agenda è il 20% più veloce di base (12 value base invece di 10)
 
 
-[h2][b]1.3 Warfare and matter dark matter[/b][/h2]
+[h2][b]1.3.1 Warfare and matter dark matter[/b][/h2]
 Inanzitutto voglio ringranziare tutti i player che hanno giocato con me o fatto notare degli squilibri, più o meno veritieri.
 In questo aggiornamento mi sono concentrato su:
 [list]
@@ -324,10 +324,18 @@ Void dweller hanno 2 leader size in più invece del bonus di buildings cost e up
 Regen hull e armor khan e fallen diminuiti (erano al 10% armor e hull)
 Point defence hanno un range di 40 invece di 30.
 Gli imperi normali partono con 4 slot concilio invece di 3
+Migliorata AI franchising + 2 nuove posizioni concilio per 2 civiche della phi.
+Messo piccola probabilità di spawn metallo vivo (1-2 depositi in galassia media)
+Tech dark matter ora è più facile trovarla e serve solo sensori livello 3
+Tornato a 10 il councilior add di base.
+Fleet academy puoi farlo sul orbital ring.
+Modificato la tradition dei robot che permetteva di avere un bonus di 0.25 administrative capacity, anche se i robot sono svantaggiati perchè non possono fare vassali così sbilanciava troppo il gioco.
 Bonus leader a capo della ricerca nel concilio ripristinato a 5% come nella vecchia phi.
 [img]https://i.imgur.com/Uhrareb.png[/img]
 
-Modificato la tradition dei robot che permetteva di avere un bonus di 0.25 administrative capacity, anche se i robot sono svantaggiati perchè non possono fare vassali così sbilanciava troppo il gioco.
+Le starbase hanno uno scudo ausiliario (aumenta leggermente lo scudo base (500 poi 2000 alla cittadella))
+[img]https://i.imgur.com/2ewk4F9.png[/img]
+
 
 Aumentati del 10% scudo e armor per renderle più omogenee con stats dell'hull (sopratutto in late game)
 [img]https://i.imgur.com/JiamCSd.png[/img]
@@ -336,11 +344,18 @@ Aumentati del 10% scudo e armor per renderle più omogenee con stats dell'hull (
 Ora la tradition genetica ti sblocca un tratto overwhelm talented che ti da 1 livello cap in più e un tratto negativo in meno.
 [url]https://i.imgur.com/W9O6ex5.png[/url]
 
-Fleet academy puoi farlo sul orbital ring
+Tratti leader_trait_shipwright e leader_trait_retired_fleet_officer totalmente cambiati
+[img]https://i.imgur.com/G5wVxSE.png[/img]
+[img]https://i.imgur.com/ueDfPwz.png[/img]
+Mentre per le gestait
+[img]https://i.imgur.com/P5KeRqY.png[/img]
+
+
 [h1][b]Agenda:[/b][/h1]
 Agenda cooldown ridotte da 30 anni a 24
 COUNCIL AGENDA BASE COUNCILOR DAILY PROGRESS cambiata da 10 a 12
 Agende militari diminuite costo costruzione navi da -25% a -15%
+
 [h1][b]Tecnologie:[/b][/h1]
 Tech defense hull 2 che aumenta ulteriormente del 33% le platform
 Aggiunto tecnologia distaccata per governement civics (prima erano in una tecnologia)
@@ -353,10 +368,26 @@ Aggiunto tecnologia distaccata per governement civics (prima erano in una tecnol
 
 [h1][b]Phigo AI :[/b][/h1]
 Finalmente le ia fanno colonie molto prima e ora sono molto più temibili
+AI ulteriormente migliorata.
+Ai ora soggioga altre AI anche con la violenza
+
 
 [h1][b]Leaders[/b][/h1]
 È stato settato al max livello raggiungibile tramite bonus il 13 (parti comunque con livello cappato al 10) 
 Ora Trascendence learning ti da 1 livello cap in più, diventando più forte che mai.
+
+[h1][b]Economic policy[/b][/h1]
+Aggiunte 3 nuove politiche economiche per le 3 nuove tradizioni.
+[img]https://i.imgur.com/0oOzGEI.png[/img]
+[img]https://i.imgur.com/KouElqD.png[/img]
+[img]https://i.imgur.com/9cjTeK5.png[/img]
+e per le gestait
+[img]https://i.imgur.com/nWSWA2J.png[/img]
+Ora la economic policy bilanciata da +20% speed councilior agenda
+[img]https://i.imgur.com/IUEdcbk.png[/img]
+
+[h1][b]War[/b][/h1]
+Ottieni il casus bellis subjugation contro l'attacante se sei in una guerra difensiva non open border e non humiliation.
 
 [h1][b]Flotta, battaglie e warfare[/b][/h1]
 3 nuovi editti che usano la [b]dark matter[/b] che pottenziano armi esplosive , point defence e Hangar.
@@ -376,6 +407,10 @@ I missili hanno un bonus scalare in base al livello verso gli hull.
 Cambiato bonus danni di laser e kinetic ora il bonus verso scudo e armor va a scalare in base a livello e inoltre hanno più bonus il size large fino a un massimo di 50%
 [img]https://i.imgur.com/2GZg2M2.png[/img]
 [img]https://i.imgur.com/oIPJeeG.png[/img]
+inoltre
+Aumentato danni di armi livello 1 base (mass driver) e (red laser) sennò facevano troppo pena con le attuali modifiche
+Diminuito solo per i red laser danno all'hull nei primi livelli.
+Aumentato leggermente costo tech mass driver e laser
 
 Distruptor cambiati, ora scalano damage hull e con la nuova meccanica dell'hardner possono essere counterati senza problemi, aumento consumo energietico ma aumento range in base al livello
 [img]https://i.imgur.com/uBjaDYJ.png[/img]
@@ -398,31 +433,33 @@ Messo icone a tutti gli editti e campagne della phi
 Ora i gestait hanno il tipo di slavery per gli organici per usare il cervello come fonte di unity e society research da fare icona e slavery type
 [omg]https://i.imgur.com/j4ZQ5Hg.png[/img]
 
-Nel casus bellis no ti dice più che puoi prendere i claim se non li puoi prendere
+Nel casus bellis non ti dice più che puoi prendere i claim se non li puoi prendere
 esempio: 
 Humiliate nella Phigo non si prendono i claim è così ora
 [img]https://i.imgur.com/0gd5ia2.png[/img]
 Mentre conquest è così:
 [img]https://i.imgur.com/Nzxdln0.png[/img]
 
+Messo 3 allert che è disponibile le azioni per artefatti lgate e insight e inoltre messo alert per quando un impero chce conosci è in survive.
+[img]https://i.imgur.com/fPXDxb0.png[/img]
+[img]https://i.imgur.com/I3ON0s2.png[/img]
+
 [h1][b]Miglioramento mid-late game[/b][/h1]
 Messo editto nuovo che ti permette di avere un pò di administrative capacity in più nel late game
 Se c'è una crisi in corso il border gore viene sospeso finchè c'è la crisi.
 
-
-1.3.1
-Messo piccola probabilità di spawn metallo vivo (1-2 depositi in galassia media)
-Tech dark matter ora è più facile trovarla e serve solo sensori livello 3
-Tornato a 10 il councilior add di base.
-[img][/img]
-Aggiunte 3 nuove politiche economiche per le 3 nuove tradizioni.
-[img][/img]
-[img][/img]
-[img][/img]
-Ora la economic policy bilanciata da +20% speed councilior agenda
-[img][/img]
-Ottieni il casus bellis subjugation contro l'attacante se sei in una guerra difensiva
-
+[h1][b]Fix[/b][/h1]
 Fix bug dichiarazione crisi quando è un impero normale che veniva e si settava survive se era un IA oppure anche se il war leader era un giocatore ma c'era un AI.
 Fix bug paradox in pre_ftl_awreness su fleet event quando entrava in un sistema lo scope verso il sistema non c'era mancando un FROM
-Migliorata AI franchising + 2 nuove posizioni concilio per 2 civiche della phi.
+Fix bug in automazione che faceva più assembly del previsto per gli impero non machina
+
+
+
+
+
+
+
+
+
+
+

@@ -2502,7 +2502,6 @@ action_demand_subjugation = {
 	possible = {
 		
 		has_tradition = tr_domination_adopt
-		relative_power = { who = from category = fleet value >= superior }
 		custom_tooltip = {
 			fail_text = "requires_actor_not_fanatic_purifiers"
 			OR = {

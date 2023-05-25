@@ -31,7 +31,7 @@ weapon_component_template = {
 		upkeep = {
 			energy = @l_t1_upkeep_energy
 			alloys = @xl_t5_upkeep_alloys
-			sr_dark_matter = xl_t5_upkeep_darkMatter
+			sr_dark_matter = @xl_t5_upkeep_darkMatter
 		}
 	}
 
@@ -76,7 +76,7 @@ weapon_component_template = {
 		upkeep = {
 			energy = @l_t2_upkeep_energy
 			alloys = @xl_t6_upkeep_alloys
-			sr_dark_matter = xl_t6_upkeep_darkMatter
+			sr_dark_matter = @xl_t6_upkeep_darkMatter
 		}
 	}
 

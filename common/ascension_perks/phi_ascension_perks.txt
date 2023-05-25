@@ -55,7 +55,17 @@ ap_operations_red_star = {
 	}
 
 	ai_weight = {
-		factor = 100
+		factor = 10
+		modifier = {
+			factor = 15
+			years_passed < 25
+			num_rivals > 0
+		}
+		modifier = {
+			factor = 2
+			years_passed < 25
+			num_rivals > 1
+		}
 	}
 }
 
@@ -84,5 +94,15 @@ ap_operations_blue_star = {
 
 	ai_weight = {
 		factor = 10
+		modifier = {
+			factor = 15
+			years_passed >= 25
+			num_rivals > 0
+		}
+		modifier = {
+			factor = 2
+			years_passed >= 25
+			num_rivals > 1
+		}
 	}
 }

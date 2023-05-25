@@ -16,9 +16,8 @@ tradition_subterfuge = {
 	}
 
 	ai_weight = {
-		factor = 5
 		modifier = {
-			factor = 1000
+			factor = 5000
 			is_homicidal = yes
 		}
 	}

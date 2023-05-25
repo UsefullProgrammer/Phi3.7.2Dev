@@ -23,8 +23,7 @@ tradition_prosperity = {
 	}
 
 	ai_weight = {
-		factor = 20
-		
+		factor = 5
 		modifier = {
 			factor = 2
 			has_ethic = ethic_pacifist

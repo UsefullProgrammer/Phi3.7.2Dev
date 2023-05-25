@@ -298,7 +298,11 @@ leader_trait_retired_fleet_officer = {
 	}
 	modifier = {
 		starbase_shipyard_build_speed_mult = 0.20
-		starbase_shipyard_build_cost_mult = -0.10
+		#starbase_shipyard_build_cost_mult = -0.01 # 10
+		ship_disengage_chance_reduction = 0.2
+		ship_emergency_ftl_min_days_mult = 0.2
+		ship_starting_experience_add = 300
+		ship_hull_mult = 0.33
 	}
 	leader_potential_add = {
 		is_pool_leader = yes # Starting trait only.
@@ -330,7 +334,11 @@ leader_trait_retired_fleet_officer_2 = {
 	}
 	modifier = {
 		starbase_shipyard_build_speed_mult = 0.25
-		starbase_shipyard_build_cost_mult = -0.15
+		#starbase_shipyard_build_cost_mult = -0.15 #15
+		ship_disengage_chance_reduction = 0.5
+		ship_emergency_ftl_min_days_mult = 0.5
+		ship_starting_experience_add = 900
+		ship_hull_mult = 1
 	}
 	leader_class = { governor }
 	opposites = { "leader_trait_army_veteran" }
@@ -655,9 +663,31 @@ leader_trait_shipwright = {
 		COUNCIL = no
 		TIER = 1
 	}
-	modifier = {
+	triggered_modifier = {
+		potential = {
+			exists = owner
+			owner = { is_gestalt = yes }
+		}
 		starbase_shipyard_build_speed_mult = 0.1
-		starbase_shipyard_build_cost_mult = -0.1
+		#starbase_shipyard_build_cost_mult = -0.1
+		ship_orbit_upkeep_mult = -0.10
+		starbase_shipyard_capacity_add = 2
+		local_trade_protection_add = 3
+	}
+	triggered_modifier = {
+		potential = {
+			exists = owner
+			owner = { is_gestalt = no }
+		}
+		starbase_shipyard_build_speed_mult = 0.1
+		#starbase_shipyard_build_cost_mult = -0.1
+		ship_orbit_upkeep_mult = -0.10
+		starbase_upgrade_cost_mult = -0.25
+		starbase_shipyard_capacity_add = 1
+		starbase_defense_platform_capacity_add = 3
+	}
+	modifier = {
+		
 	}
 	leader_potential_add = {
 		is_ruler = no
@@ -687,9 +717,28 @@ leader_trait_shipwright_2 = {
 		COUNCIL = no
 		TIER = 2
 	}
-	modifier = {
+	triggered_modifier = {
+		potential = {
+			exists = owner
+			owner = { is_gestalt = yes }
+		}
 		starbase_shipyard_build_speed_mult = 0.15
-		starbase_shipyard_build_cost_mult = -0.15
+		#starbase_shipyard_build_cost_mult = -0.15
+		ship_orbit_upkeep_mult = -0.30
+		starbase_shipyard_capacity_add = 1
+		local_trade_protection_add = 9
+	}
+	triggered_modifier = {
+		potential = {
+			exists = owner
+			owner = { is_gestalt = no }
+		}
+		starbase_shipyard_build_speed_mult = 0.15
+		#starbase_shipyard_build_cost_mult = -0.15
+		ship_orbit_upkeep_mult = -0.30
+		starbase_upgrade_cost_mult = -0.5
+		starbase_shipyard_capacity_add = 1
+		starbase_defense_platform_capacity_add = 9
 	}
 	leader_class = { governor }
 	opposites = {

@@ -16,7 +16,7 @@ tech_mass_drivers_1 = {
 # Coilguns
 tech_mass_drivers_2 = {
 	area = engineering
-	cost = @tier1cost2
+	cost = @tier1cost3
 	tier = 1
 	category = { propulsion }
 	ai_update_type = military
@@ -62,7 +62,7 @@ tech_mass_drivers_2 = {
 # Railguns
 tech_mass_drivers_3 = {
 	area = engineering
-	cost = @tier2cost1
+	cost = @tier2cost2
 	tier = 2
 	category = { propulsion }
 	ai_update_type = military
@@ -108,7 +108,7 @@ tech_mass_drivers_3 = {
 # Advanced Railguns
 tech_mass_drivers_4 = {
 	area = engineering
-	cost = @tier3cost1
+	cost = @tier3cost2
 	tier = 3
 	category = { propulsion }
 	ai_update_type = military
@@ -154,7 +154,7 @@ tech_mass_drivers_4 = {
 # Gauss Cannons
 tech_mass_drivers_5 = {
 	area = engineering
-	cost = @tier4cost1
+	cost = @tier4cost2
 	tier = 4
 	category = { propulsion }
 	ai_update_type = military

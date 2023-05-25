@@ -1,0 +1,42 @@
+#########################################
+#
+# MINOR ARTIFACTS
+#
+#########################################
+#MESSAGE_TYPE_RELICS_GAINED_INTEGRATION
+message_type = {
+	key = "MESSAGE_TYPE_RELICS_MINOR_ARTIFACT_LGATE_AVAILABLE"
+	icon = "GFX_alert_minor_artifact_lgate"
+	icon_frame = 1
+	name = "MINOR_ARTIFACT_LGATE_ALERT_MESSAGE_TITLE"
+	sound = "notification"
+	ping = "ping_notification_green"
+	auto_opens = others # all = Popup Window EVERY notification | others = seemingly never | yes = Popup Window only once| none = Popup Either EVERY notification or nothinf at all
+}
+
+message_type = {
+	key = "MESSAGE_TYPE_RELICS_MINOR_ARTIFACT_PRECURSOR_AVAILABLE"
+	icon = "GFX_alert_minor_artifact_precursor_insight"
+	icon_frame = 1
+	name = "MINOR_ARTIFACT_PRECURSOR_ALERT_MESSAGE_TITLE"
+	sound = "notification"
+	ping = "ping_notification_green"
+	auto_opens = others # all = Popup Window EVERY notification | others = seemingly never | yes = Popup Window only once| none = Popup Either EVERY notification or nothinf at all
+}
+
+#########################################
+#
+# Survive
+#
+#########################################
+
+message_type = {
+	key = "MESSAGE_TYPE_EDICTS_PHI_EMPIRE_IN_SURVIVE_AVAIBLE"
+	icon = "GFX_alert_defensive_war"
+	icon_frame = 1 #useless
+	name = "PHI_EMPIRE_IN_SURVIVE_AVAIBLE_TITLE"
+	sound = "notification"
+	ping = "ping_notification_red"
+	auto_opens = others # all = Popup Window EVERY notification | others = seemingly never | yes = Popup Window only once| none = Popup Either EVERY notification or nothinf at all
+	category = diplomacy
+}
