@@ -40,8 +40,10 @@ PHIGO reworks totally the federations available in-game:
 [/list]
 
 [h2]Vassals[/h2]
-Vassals and subsidiaries are no longer integrable.
-Moreover, each normal vassal relation will now cost 1 influence per month (with the exception of protectorates). Ultimatums to vassalize other empires no longer check against relative power.
+[list]
+[*]Vassals and subsidiaries are no longer integrable.
+[*]Moreover, each normal vassal relation will now cost 1 influence per month (with the exception of protectorates). [*]Ultimatums to vassalize other empires no longer check against relative power.
+[/list]
 
 [h2]Ships and Stations[/h2]
 [list]
