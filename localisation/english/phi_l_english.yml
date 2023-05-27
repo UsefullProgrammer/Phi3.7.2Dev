@@ -1095,7 +1095,7 @@ MINOR_ARTIFACT_PRECURSOR_ALERT_MESSAGE_TITLE:0 "Minor Artifacts may be studied!"
 MINOR_ARTIFACT_PRECURSOR_ALERT_MESSAGE:0 "Minor Artifacts may be studied in order to obtain Precursor Insight!"
 
 PHI_EMPIRE_IN_SURVIVE_AVAIBLE_TITLE:0 "An empire try survive"
-PHI_EMPIRE_IN_SURVIVE_AVAIBLE_ALERT_MESSAGE:0 "An empire is trying to survive in an unequal war, could you help it by §Yimproving relation§! and clicking on the edict §Y$edict_phi_join_defensive_war$§!"
+PHI_EMPIRE_IN_SURVIVE_AVAIBLE_ALERT_MESSAGE:0 "An empire $EMPIRE|Y$ is trying to survive in an unequal war, could you help it by §Yimproving relation§! and clicking on the edict §Y$edict_phi_join_defensive_war$§!"
 
 
 

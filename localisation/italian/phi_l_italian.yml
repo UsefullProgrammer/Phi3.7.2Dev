@@ -1096,5 +1096,5 @@ MINOR_ARTIFACT_PRECURSOR_ALERT_MESSAGE_TITLE:0 "Gli artefatti minori possono ess
 MINOR_ARTIFACT_PRECURSOR_ALERT_MESSAGE:0 "Gli artefatti minori possono essere studiati per ottenere una conoscenza sui precursori!"
 
 PHI_EMPIRE_IN_SURVIVE_AVAIBLE_TITLE:0 "Un impero cerca di sopravvivere"
-PHI_EMPIRE_IN_SURVIVE_AVAIBLE_ALERT_MESSAGE:0 "Un impero sta cercando di sopravvivere in una guerra impari, potresti aiutarlo prima §Ymigliorando le relazioni§! e poi cliccando sull'editto §Y$edict_phi_join_defensive_war$§!"
+PHI_EMPIRE_IN_SURVIVE_AVAIBLE_ALERT_MESSAGE:0 "Un impero  $target|Y$ sta cercando di sopravvivere in una guerra impari, potresti aiutarlo prima §Ymigliorando le relazioni§! e poi cliccando sull'editto §Y$edict_phi_join_defensive_war$§!"
 

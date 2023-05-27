@@ -1,6 +1,6 @@
 namespace = phi_notification
 # Check if player can discover L-Gate insight via Minor Artifact
-@message_alert_display_duration_days_tier_2 = 30
+@message_alert_display_duration_days_tier_2 = 15
 country_event = {
 	id = phi_notification.0
 	hide_window = yes
@@ -39,6 +39,7 @@ country_event = {
 		if = {
 			limit = {
 				NOT = { has_modifier = "artifact_lgate_insight_cooldown" } # Off Cooldown
+				NOT = { has_country_flag = minor_artifact_lgate_notified_flag }
 			}
 			create_message = {
 				type = MESSAGE_TYPE_RELICS_MINOR_ARTIFACT_LGATE_AVAILABLE
@@ -48,6 +49,10 @@ country_event = {
 				#onclick = relics
 			}
 			set_country_flag = minor_artifact_lgate_notified_flag
+		}
+		else_if = {
+			limit = { has_country_flag = minor_artifact_lgate_notified_flag }
+			remove_country_flag = minor_artifact_lgate_notified_flag
 		}
 	}
 }
@@ -59,7 +64,6 @@ country_event = {
 	hide_window = yes
 	is_triggered_only = yes
 	trigger = {
-		
 		has_resource = { type = minor_artifacts amount >= 500 }
 		Has_precursor_chain = yes
 		# OR = {
@@ -71,6 +75,7 @@ country_event = {
 		if = {
 			limit = {
 				NOT = { has_modifier = "artifact_precursor_insight_cooldown" } # Off Cooldown
+				NOT = { has_country_flag = minor_artifact_precursor_insight_notified_flag }
 			}
 			create_message = {
 				type = MESSAGE_TYPE_RELICS_MINOR_ARTIFACT_PRECURSOR_AVAILABLE
@@ -79,9 +84,15 @@ country_event = {
 			
 				target = event_target:$LEADER$
 			}
-			#set_country_flag = minor_artifact_precursor_insight_notified_flag
+			set_country_flag = minor_artifact_precursor_insight_notified_flag
 		
 		}
+		else_if = {
+			limit = { has_country_flag = minor_artifact_precursor_insight_notified_flag }
+			remove_country_flag = minor_artifact_precursor_insight_notified_flag
+		}
+
+
 	}
 }
 country_event = {
@@ -93,6 +104,7 @@ country_event = {
 			has_communications = root
 			any_war = {
 				using_war_goal = { type = wg_phi_survive owner = prev }
+				
 				defender_war_exhaustion < 0.5
 			}
 		}
@@ -104,6 +116,14 @@ country_event = {
 				has_communications = root
 				any_war = {
 					using_war_goal = { type = wg_phi_survive owner = prev }
+					any_defender = { 
+						NOT = { is_same_value = prevprevprev } 
+						is_same_value = prevprev
+						is_war_leader = yes
+					}
+					any_attacker = {
+						NOT = { is_same_value = prevprevprev }
+					}
 					defender_war_exhaustion < 0.5
 				}
 			}
@@ -112,6 +132,7 @@ country_event = {
 		if = {
 			limit = {
 				exists = event_target:survive_avaible_target
+				NOT = { has_country_flag = phi_empire_in_survive_flag }
 				#NOT = { has_country_flag = phi_empire_in_survive_flag } # No Notified Flag
 			}
 			create_message = {
@@ -120,15 +141,17 @@ country_event = {
 				days = @message_alert_display_duration_days_tier_2
 			
 				target = event_target:survive_avaible_target
+				variable = {
+					type = name
+					localization = EMPIRE
+					scope = event_target:survive_avaible_target
+				}
 			}
-			#set_country_flag = phi_empire_in_survive_flag
+			set_country_flag = phi_empire_in_survive_flag
 		
-		} #else_if = {
-			# Reset the notified flag when the player uses one to obtain insight.
-		# 	limit = {
-		# 		has_country_flag = phi_empire_in_survive_flag # No Notified Flag
-		# 	}
-		# 	remove_country_flag = phi_empire_in_survive_flag
-		# }
+		}else_if = {
+			limit = { has_country_flag = phi_empire_in_survive_flag }
+			remove_country_flag = phi_empire_in_survive_flag
+		}
 	}
 }

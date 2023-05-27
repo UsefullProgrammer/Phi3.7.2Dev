@@ -11,7 +11,7 @@ FW_wg_open_border = {
 		surrender
 		demand_surrender
 	}
-	surrender_acceptance = 25
+	surrender_acceptance = 50
 	
 	potential = {
 		has_total_war_cb = no
