@@ -480,6 +480,7 @@ planets = {
 	use_for_ai_budget = yes
 	ai_use_parent_for_resources_upkeep = {
 		energy
+		consumer_goods
 	}
 
 	hidden = yes
@@ -1346,6 +1347,7 @@ leaders = {
 leader_admirals = {
 	parent = leaders
 	generate_mult_modifiers = {
+		upkeep
 		cost
 	}
 	generate_add_modifiers = {
@@ -1357,6 +1359,7 @@ leader_admirals = {
 leader_generals = {
 	parent = leaders
 	generate_mult_modifiers = {
+		upkeep
 		cost
 	}
 	generate_add_modifiers = {
@@ -1368,6 +1371,7 @@ leader_generals = {
 leader_scientists = {
 	parent = leaders
 	generate_mult_modifiers = {
+		upkeep
 		cost
 	}
 	generate_add_modifiers = {
@@ -1379,6 +1383,7 @@ leader_scientists = {
 leader_governors = {
 	parent = leaders
 	generate_mult_modifiers = {
+		upkeep
 		cost
 	}
 	generate_add_modifiers = {

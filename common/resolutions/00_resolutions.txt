@@ -3434,6 +3434,7 @@ resolution_greatergood_repeal_1 = {
 			OR = {
 				has_valid_civic = civic_slaver_guilds
 				has_valid_civic = civic_indentured_assets
+				has_valid_civic = civic_dystopian_society
 				is_slaver = yes
 			}
 			desc = gal_com_slaver_empire
@@ -3545,6 +3546,7 @@ resolution_greatergood_repeal_2 = {
 			OR = {
 				has_valid_civic = civic_slaver_guilds
 				has_valid_civic = civic_indentured_assets
+				has_valid_civic = civic_dystopian_society
 				is_slaver = yes
 			}
 			desc = gal_com_slaver_empire
@@ -3665,6 +3667,7 @@ resolution_greatergood_repeal_3 = {
 			OR = {
 				has_valid_civic = civic_slaver_guilds
 				has_valid_civic = civic_indentured_assets
+				has_valid_civic = civic_dystopian_society
 				is_slaver = yes
 			}
 			desc = gal_com_slaver_empire
@@ -3787,6 +3790,7 @@ resolution_greatergood_repeal_4 = {
 			OR = {
 				has_valid_civic = civic_slaver_guilds
 				has_valid_civic = civic_indentured_assets
+				has_valid_civic = civic_dystopian_society
 				is_slaver = yes
 			}
 			desc = gal_com_slaver_empire
@@ -3903,6 +3907,7 @@ resolution_greatergood_repeal_5 = {
 			OR = {
 				has_valid_civic = civic_slaver_guilds
 				has_valid_civic = civic_indentured_assets
+				has_valid_civic = civic_dystopian_society
 				is_slaver = yes
 			}
 			desc = gal_com_slaver_empire
@@ -4023,6 +4028,7 @@ resolution_greatergood_workers_rights = {
 			OR = {
 				has_valid_civic = civic_slaver_guilds
 				has_valid_civic = civic_indentured_assets
+				has_valid_civic = civic_dystopian_society
 				is_slaver = yes
 			}
 			desc = gal_com_slaver_empire
@@ -4150,6 +4156,7 @@ resolution_greatergood_five_year_plans = {
 			OR = {
 				has_valid_civic = civic_slaver_guilds
 				has_valid_civic = civic_indentured_assets
+				has_valid_civic = civic_dystopian_society
 				is_slaver = yes
 				any_owned_species = {
 					is_sapient = yes
@@ -4228,6 +4235,7 @@ resolution_greatergood_greater_than_ourselves = {
 								OR = {
 									has_living_standard = { type = living_standard_subsistence country = prev }
 									has_living_standard = { type = living_standard_stratified country = prev }
+									has_living_standard = { type = living_standard_dystopian_society country = prev }
 								}
 							}
 						}
@@ -4292,6 +4300,7 @@ resolution_greatergood_greater_than_ourselves = {
 					OR = {
 						has_living_standard = { type = living_standard_subsistence country = prev }
 						has_living_standard = { type = living_standard_stratified country = prev }
+						has_living_standard = { type = living_standard_dystopian_society country = prev }
 					}
 				}
 			}
@@ -4362,6 +4371,7 @@ resolution_greatergood_greater_than_ourselves = {
 					OR = {
 						has_living_standard = { type = living_standard_subsistence country = prev }
 						has_living_standard = { type = living_standard_stratified country = prev }
+						has_living_standard = { type = living_standard_dystopian_society country = prev }
 					}
 				}
 			}
@@ -4439,6 +4449,7 @@ resolution_greatergood_balance_in_the_middle = {
 									has_living_standard = { type = living_standard_stratified country = prev }
 									has_living_standard = { type = living_standard_normal country = prev }
 									has_living_standard = { type = living_standard_academic_privilege country = prev }
+									has_living_standard = { type = living_standard_dystopian_society country = prev }
 								}
 							}
 						}
@@ -4499,6 +4510,7 @@ resolution_greatergood_balance_in_the_middle = {
 						has_living_standard = { type = living_standard_stratified country = prev }
 						has_living_standard = { type = living_standard_normal country = prev }
 						has_living_standard = { type = living_standard_academic_privilege country = prev }
+						has_living_standard = { type = living_standard_dystopian_society country = prev }
 					}
 				}
 			}
@@ -4571,6 +4583,7 @@ resolution_greatergood_balance_in_the_middle = {
 						has_living_standard = { type = living_standard_stratified country = prev }
 						has_living_standard = { type = living_standard_normal country = prev }
 						has_living_standard = { type = living_standard_academic_privilege country = prev }
+						has_living_standard = { type = living_standard_dystopian_society country = prev }
 					}
 				}
 			}
@@ -4651,6 +4664,7 @@ resolution_greatergood_universal_prosperity_mandate = {
 									has_living_standard = { type = living_standard_academic_privilege country = prev }
 									has_living_standard = { type = living_standard_good country = prev }
 									has_living_standard = { type = living_standard_decadent country = prev }
+									has_living_standard = { type = living_standard_dystopian_society country = prev }
 								}
 							}
 						}
@@ -4708,6 +4722,7 @@ resolution_greatergood_universal_prosperity_mandate = {
 						has_living_standard = { type = living_standard_academic_privilege country = prev }
 						has_living_standard = { type = living_standard_good country = prev }
 						has_living_standard = { type = living_standard_decadent country = prev }
+						has_living_standard = { type = living_standard_dystopian_society country = prev }
 					}
 				}
 			}

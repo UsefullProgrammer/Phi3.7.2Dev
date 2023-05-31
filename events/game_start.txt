@@ -822,10 +822,7 @@ country_event = {
 		}
 		else_if = {
 			limit = {
-				NOT = {
-					has_origin = origin_broken_shackles
-					# Assigned in origin.110 instead
-				}
+				has_origin = origin_payback
 			}
 			create_leader = {
 				class = scientist
@@ -2261,6 +2258,15 @@ country_event = {
 
 	immediate = {
 		capital_scope = {
+			if = {
+				limit = {
+					free_building_slots <= 0
+					has_district = district_generator
+					has_district = district_city
+				}
+				remove_district = district_generator
+				add_district = district_city
+			}
 			set_variable = {
 				which = paragon_memory_vault
 				value = 0
@@ -2331,7 +2337,24 @@ country_event = {
 	is_triggered_only = yes
 
 	immediate = {
-		capital_scope = { add_building = building_clinic }
+		capital_scope = {
+			if = {
+				limit = {
+					has_building = building_commercial_zone
+				}
+				remove_building = building_commercial_zone
+			}
+			if = {
+				limit = {
+					free_building_slots <= 0
+					has_district = district_generator
+					has_district = district_city
+				}
+				remove_district = district_generator
+				add_district = district_city
+			}
+			add_building = building_clinic
+		}
 		give_technology = { message = no tech = tech_frontier_health }
 		add_research_option = tech_subdermal_stimulation
 	}
@@ -2355,7 +2378,27 @@ country_event = {
 	is_triggered_only = yes
 
 	immediate = {
-		capital_scope = { add_building = building_precinct_house }
+		capital_scope = {
+			switch = {
+				trigger = has_building
+				building_commercial_zone = {
+					remove_building = building_commercial_zone
+				}
+				building_temple = {
+					remove_building = building_temple
+				}
+			}
+			if = {
+				limit = {
+					free_building_slots <= 0
+					has_district = district_generator
+					has_district = district_city
+				}
+				remove_district = district_generator
+				add_district = district_city
+			}
+			add_building = building_precinct_house
+		}
 	}
 }
 
