@@ -9,19 +9,19 @@ country_event = {
 	
 	trigger = {
 		is_at_war = no
-		NOR = {
-			crisis_happened_and_defeated = yes #Contingency, Extradimensionals or Prethoryn
-			AND = { #If the Khan is defeated, Crisis Beacon should be hidden until a new crisis happens
-				has_global_flag = great_khan_dead
-				has_crisis = no
-			}
-			AND = { #If the Gray Tempest is defeated, Crisis Beacon should be hidden until a new crisis happens
-				has_global_flag = graygoo_defeated
-				has_crisis = no
-			}
-			has_crisis_stage_4 = yes
-		}
-		#crisis_run_optimized = no
+		# NOR = {
+		# 	crisis_happened_and_defeated = yes #Contingency, Extradimensionals or Prethoryn
+		# 	AND = { #If the Khan is defeated, Crisis Beacon should be hidden until a new crisis happens
+		# 		has_global_flag = great_khan_dead
+		# 		has_crisis = no
+		# 	}
+		# 	AND = { #If the Gray Tempest is defeated, Crisis Beacon should be hidden until a new crisis happens
+		# 		has_global_flag = graygoo_defeated
+		# 		has_crisis = no
+		# 	}
+		# 	has_crisis_stage_4 = yes
+		# }
+		crisis_run_optimized = no
 		NOT = { has_global_flag = phi_border_gore_allowed }
 	}
 	immediate = { 

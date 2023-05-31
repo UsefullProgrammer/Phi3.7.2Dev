@@ -657,6 +657,7 @@ expansion_planer = {
 			influence = 1000
 		}
 		upkeep = {
+			
 			influence = 3
 		}
 	}
@@ -664,6 +665,13 @@ expansion_planer = {
 		all_technology_research_speed = -0.5
 		country_leader_cap_add = 1
 		country_admin_cap_add = 25
+	}
+	ai_weight = {
+		weight = 0
+		modifier = {
+			weight = @EdictHighPrio
+			empire_sprawl_over_cap >= 25
+		}
 	}
 }
 
