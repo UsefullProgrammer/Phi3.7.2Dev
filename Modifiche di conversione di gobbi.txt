@@ -460,7 +460,8 @@ Fix codice paradox su can_get_external_leader_pool_candidate
 Fix notification
 Fix border gore
 Fix AI new edict
-1.3.3
+[h1][b]1.3.3[/b][/h1]
+Change for [b] 3.8.3 [/b] compatible
 Fix border gore in crisis
 Trait shipwright is same for all gestait or normal empire
 
