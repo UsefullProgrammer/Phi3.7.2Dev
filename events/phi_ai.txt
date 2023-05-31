@@ -1118,7 +1118,7 @@ country_event = {
 		}
 		if = {
 			limit = { exists = event_target:survive_cb_war }
-			root = { #mettere check se survive_cb_war esiste. TO DO TODO
+			root = {
 				join_war_on_side = {
 					war = event_target:survive_cb_war
 					side = defenders
@@ -1473,6 +1473,540 @@ country_event = {
 	}
 }
 country_event = {
+	#	phi_ai.20	yearly checked - replace up building of  gestalt empires
+	
+		id = phi_ai.20
+		hide_window = yes
+	
+		is_triggered_only = yes
+		
+		trigger = {
+			is_ai = yes
+			is_country_type = default
+			has_ethic = ethic_gestalt_consciousness
+			any_owned_planet = {
+				is_capital = no
+				is_under_colonization = no
+			}
+			has_resource = { type = minerals amount > 400 }
+			has_monthly_income = { resource = energy value > 20 }
+		}
+		immediate = {
+			random_owned_planet = {
+				limit = {
+					num_unemployed >= 20
+				}
+				random_list = {
+					1 = { }
+					50 = {
+						modifier = {
+							factor = 0
+							OR = {
+								is_capital = no
+								num_pops > 70
+								num_buildings = { type = building_spawning_pool value < 2 }
+							}
+							num_buildings = { type = building_spawning_pool value = 0 }
+						}
+						remove_building = building_spawning_pool
+						random_list = {
+							50 = {
+								modifier = {
+									factor = 0
+									free_building_slots = 0
+								}
+								modifier = {
+									factor = 0
+									num_buildings = { type = building_foundry_1 value > 0 }
+								}
+								add_building = building_foundry_1
+								owner = { add_resource = { minerals = -400 } }
+							}
+							25 = {
+								modifier = {
+									factor = 0
+									free_building_slots = 0
+								}
+								add_building = building_engineering_lab_1
+								owner = { add_resource = { minerals = -400 } }
+								
+							}
+							25 = {
+								modifier = {
+									factor = 0
+									free_building_slots = 0
+								}
+								add_building = building_physics_lab_1
+								owner = { add_resource = { minerals = -400 } }
+							}
+						}
+					}
+				}
+			}
+			random_owned_planet = {
+				limit = {
+					is_capital = no
+				}
+				random_list = {
+					10 = {
+						
+					}
+					20 = {
+						modifier = {
+							factor = 0
+							num_free_districts = { type = district_generator value = 0 }
+						}
+						modifier = {
+							factor = 0
+							owner = { has_monthly_income = { resource = energy value > 20 } }
+						}
+						add_district = district_generator
+						owner = { add_resource = { minerals = -300 } }
+					}
+					15 = {
+						modifier = {
+							factor = 0
+							num_free_districts = { type = district_mining value = 0 }
+						}
+						modifier = {
+							factor = 0
+							owner = { has_monthly_income = { resource = minerals value > 100 } }
+						}
+						modifier = {
+							factor = 10
+							owner = { has_monthly_income = { resource = minerals value < 50 } }
+						}
+						add_district = district_mining
+						owner = { add_resource = { minerals = -300 } }
+					}
+					20 = {
+						modifier = {
+							factor = 0
+							num_free_districts = { type = district_farming value = 0 }
+						}
+						modifier = {
+							factor = 0
+							owner = { has_monthly_income = { resource = food value > 10 } }
+						}
+						add_district = district_farming
+						owner = { add_resource = { minerals = -300 } }
+					}
+					20 = {
+						modifier = {
+							factor = 0
+							num_districts = { type = district_farming value = 0 }
+						}
+						modifier = {
+							factor = 100
+							owner = { has_monthly_income = { resource = food value > 50 } }
+						}
+						remove_district = district_farming
+						owner = { add_resource = { minerals = 300 } }
+					}
+					40 = {
+						modifier = {
+							factor = 0
+							num_free_districts = { type = district_industrial value = 0 }
+						}
+						add_district = district_industrial
+						owner = { add_resource = { minerals = -400 } }
+					}
+					20 = {
+						modifier = {
+							factor = 0
+							num_free_districts = { type = district_city value = 0 }
+						}
+						modifier = {
+							factor = 0.1
+							free_building_slots > 0
+						}
+						modifier = {
+							factor = 100
+							free_housing < 0
+						}
+						add_district = district_city
+						owner = { add_resource = { minerals = -400 } }
+					}
+					100 = {
+						modifier = {
+							factor = 0
+							free_building_slots = 0
+						}
+						modifier = {
+							factor = 0
+							num_buildings = { type = building_foundry_1 value > 0 }
+						}
+						add_building = building_foundry_1
+						owner = { add_resource = { minerals = -400 } }
+					}
+				}
+			}
+			random_owned_planet = {
+				limit = {
+					is_capital = yes
+					NOT = { is_planet_class = pc_habitat }
+				}
+				random_list = {
+					50 = {
+						modifier = {
+							factor = 0
+							free_building_slots = 0
+						}
+						modifier = {
+							factor = 0
+							AND = {
+								num_buildings = { type = building_autochthon_monument value < 1 }
+								owner = {
+									NOR = {
+										is_spiritualist = yes
+										is_megacorp = yes
+									}
+								}
+							}
+						}
+						modifier = {
+							factor = 0
+							AND = {
+								num_buildings = { type = building_temple value < 2 }
+								owner = {
+									is_spiritualist = yes
+								}
+							}
+						}
+						modifier = {
+							factor = 0
+							AND = {
+								num_buildings = { type = building_corporate_monument value < 1 }
+								owner = {
+									is_megacorp = yes
+								}
+							}
+						}
+						modifier = {
+							factor = 10
+							AND = {
+								num_buildings = { type = building_engineering_lab_1 value > 2 }
+							}
+						}
+						add_building = building_physics_lab_1
+						owner = { add_resource = { minerals = -400 } }
+					}
+					50 = {
+						modifier = {
+							factor = 0
+							free_building_slots = 0
+						}
+						modifier = {
+							factor = 0
+							AND = {
+								num_buildings = { type = building_autochthon_monument value < 1 }
+								owner = {
+									NOR = {
+										is_spiritualist = yes
+										is_megacorp = yes
+									}
+								}
+							}
+						}
+						modifier = {
+							factor = 0
+							AND = {
+								num_buildings = { type = building_temple value < 2 }
+								owner = {
+									is_spiritualist = yes
+								}
+							}
+						}
+						modifier = {
+							factor = 0
+							AND = {
+								num_buildings = { type = building_corporate_monument value < 1 }
+								owner = {
+									is_megacorp = yes
+								}
+							}
+						}
+						modifier = {
+							factor = 10
+							AND = {
+								num_buildings = { type = building_physics_lab_1 value > 2 }
+							}
+						}
+						add_building = building_engineering_lab_1
+						owner = { add_resource = { minerals = -400 } }
+					}
+					100 = {
+						modifier = {
+							factor = 0
+							free_building_slots = 0
+						}
+						modifier = {
+							factor = 0
+							owner = {
+								OR = {
+									is_spiritualist = yes
+									is_megacorp = yes
+								}
+							}
+						}
+						modifier = {
+							factor = 0
+							num_buildings = { type = building_autochthon_monument value > 0 }
+						}
+						add_building = building_autochthon_monument
+						owner = { add_resource = { minerals = -400 } }
+					}
+					100 = {
+						modifier = {
+							factor = 0
+							free_building_slots = 0
+						}
+						modifier = {
+							factor = 0
+							owner = { is_spiritualist = no }
+						}
+						modifier = {
+							factor = 0
+							num_buildings = { type = building_temple value > 1 }
+						}
+						add_building = building_temple
+						owner = { add_resource = { minerals = -400 } }
+					}
+					100 = {
+						modifier = {
+							factor = 0
+							free_building_slots = 0
+						}
+						modifier = {
+							factor = 0
+							owner = {
+								OR = {
+									is_spiritualist = yes
+									is_megacorp = no
+								}
+							}
+						}
+						modifier = {
+							factor = 0
+							num_buildings = { type = building_corporate_monument value > 1 }
+						}
+						add_building = building_corporate_monument
+						owner = { add_resource = { minerals = -400 } }
+					}
+					100 = {
+						modifier = {
+							factor = 0
+							num_free_districts = { type = district_city value = 0 }
+						}
+						modifier = {
+							factor = 0
+							free_building_slots > 0
+						}
+						add_district = district_city
+						owner = { add_resource = { minerals = -400 } }
+					}
+				}
+			}
+		}
+	}
+country_event = {
+	#	phi_ai.17	yearly checked - refines the capital planet of gestalt 
+	
+		id = phi_ai.17
+		hide_window = yes
+	
+		is_triggered_only = yes
+		
+		trigger = {
+			is_ai = yes
+			is_country_type = default
+			has_ethic = ethic_gestalt_consciousness
+		}
+		
+		immediate = {
+			random_owned_planet = {
+				limit = {
+					is_capital = yes
+					NOT = { is_planet_class = pc_habitat }
+				}
+				if = {
+					limit = {
+						owner = {
+							has_monthly_income = { resource = food value > 40 }
+							NOT = { has_valid_civic = civic_agrarian_idyll }
+						}
+						num_districts = { type = district_farming value > 0 }
+					}
+					remove_district = district_farming
+					random_list = {
+						50 = {
+							modifier = {
+								factor = 0
+								num_free_districts = { type = district_generator value = 0 }
+							}
+							modifier = {
+								factor = 0
+								owner = { has_monthly_income = { resource = energy value > 20 } }
+							}
+							modifier = {
+								factor = 0
+								free_jobs > 0
+							}
+							add_district = district_generator
+						}
+						50 = {
+							modifier = {
+								factor = 0
+								owner = { has_resource = { type = minerals amount < 100 } }
+							}
+							owner = { add_resource = { minerals = -100 } }
+							add_district = district_city
+						}
+					}
+				}
+				if = {
+					limit = {
+						owner = { has_monthly_income = { resource = minerals value > 100 } }
+						num_districts = { type = district_mining value > 0 }
+					}
+					remove_district = district_mining
+					random_list = {
+						50 = {
+							modifier = {
+								factor = 0
+								num_free_districts = { type = district_generator value = 0 }
+							}
+							modifier = {
+								factor = 0
+								owner = { has_monthly_income = { resource = energy value > 20 } }
+							}
+							modifier = {
+								factor = 0
+								free_jobs > 0
+							}
+							add_district = district_generator
+						}
+						50 = {
+							modifier = {
+								factor = 0
+								owner = { has_resource = { type = minerals amount < 100 } }
+							}
+							modifier = {
+								factor = 0
+								owner = { has_valid_civic = civic_agrarian_idyll }
+								num_free_districts = { type = district_farming value > 0 }
+							}
+							owner = { add_resource = { minerals = -100 } }
+							add_district = district_city
+						}
+						50 = {
+							modifier = {
+								factor = 0
+								num_free_districts = { type = district_farming value = 0 }
+							}
+							modifier = {
+								factor = 0
+								owner = { NOT = { has_valid_civic = civic_agrarian_idyll } }
+							}
+							add_district = district_farming
+						}
+					}
+				}
+			}
+			random_owned_planet = {
+				limit = {
+					is_capital = no
+					NOT = { is_planet_class = pc_habitat }
+					NOT = { is_planet_class = pc_city } # ecumenopolis
+				}
+				if = {
+					limit = {
+						owner = {
+							has_monthly_income = { resource = food value > 20 }
+							NOT = { has_valid_civic = civic_agrarian_idyll }
+						}
+						num_districts = { type = district_farming value > 0 }
+					}
+					remove_district = district_farming
+					random_list = {
+						50 = {
+							modifier = {
+								factor = 0
+								num_free_districts = { type = district_generator value = 0 }
+							}
+							modifier = {
+								factor = 0
+								owner = { has_monthly_income = { resource = energy value > 20 } }
+							}
+							modifier = {
+								factor = 0
+								free_jobs > 0
+							}
+							add_district = district_generator
+						}
+						50 = {
+							modifier = {
+								factor = 0
+								owner = { has_resource = { type = minerals amount < 100 } }
+							}
+							owner = { add_resource = { minerals = -100 } }
+							add_district = district_city
+						}
+					}
+				}
+				if = {
+					limit = {
+						owner = { has_monthly_income = { resource = minerals value > 100 } }
+						num_districts = { type = district_mining value > 0 }
+					}
+					remove_district = district_mining
+					random_list = {
+						50 = {
+							modifier = {
+								factor = 0
+								num_free_districts = { type = district_generator value = 0 }
+							}
+							modifier = {
+								factor = 0
+								owner = { has_monthly_income = { resource = energy value > 20 } }
+							}
+							modifier = {
+								factor = 0
+								free_jobs > 0
+							}
+							add_district = district_generator
+						}
+						50 = {
+							modifier = {
+								factor = 0
+								owner = { has_resource = { type = minerals amount < 100 } }
+							}
+							modifier = {
+								factor = 0
+								owner = { has_valid_civic = civic_agrarian_idyll }
+								num_free_districts = { type = district_farming value > 0 }
+							}
+							owner = { add_resource = { minerals = -100 } }
+							add_district = district_city
+						}
+						50 = {
+							modifier = {
+								factor = 0
+								num_free_districts = { type = district_farming value = 0 }
+							}
+							modifier = {
+								factor = 0
+								owner = { NOT = { has_valid_civic = civic_agrarian_idyll } }
+							}
+							add_district = district_farming
+						}
+					}
+				}
+			}
+		}
+	}
+	
+country_event = {
 #	phi_ai.777	test event
 
 	id = phi_ai.777
@@ -1482,10 +2016,350 @@ country_event = {
 	is_triggered_only = yes
 	
 	trigger = {
+		OR = {
+			AND= {
+				OR = { #c'è crisi?
+					has_crisis = yes #Contingency, Extradimensionals or Prethoryn
+					has_global_flag = marauder_crisis_ongoing #Khan
+					has_global_flag = gray_goo_crisis_active #Gray Tempest
+				}
+				NOR = { #che non sia finita
+					crisis_happened_and_defeated = yes #Contingency, Extradimensionals or Prethoryn finish
+					AND = { #If the Khan is defeated, Crisis Beacon should be hidden until a new crisis happens
+						has_global_flag = great_khan_dead
+						has_crisis = no
+					}
+					AND = { #If the Gray Tempest is defeated, Crisis Beacon should be hidden until a new crisis happens
+						has_global_flag = graygoo_defeated
+						has_crisis = no
+					}
+				}
+			}
+			any_playable_country = { # controllo crisis da player
+				has_crisis_level = crisis_level_5
+			}
+		}
+		
 	}
 	
 	immediate = {
-
+		random_owned_planet = {
+			limit = {
+				num_unemployed >= 20
+			}
+			random_list = {
+				1 = { }
+				50 = {
+					modifier = {
+						factor = 0
+						OR = {
+							is_capital = no
+							AND = {
+								num_pops < 70
+								num_buildings = { type = building_spawning_pool value < 2 }
+							}
+						}
+						num_buildings = { type = building_spawning_pool value = 0 }
+					}
+					remove_building = building_spawning_pool
+					random_list = {
+						50 = {
+							modifier = {
+								factor = 0
+								free_building_slots = 0
+							}
+							modifier = {
+								factor = 0
+								num_buildings = { type = building_foundry_1 value > 0 }
+							}
+							add_building = building_foundry_1
+							owner = { add_resource = { minerals = -400 } }
+						}
+						25 = {
+							modifier = {
+								factor = 0
+								free_building_slots = 0
+							}
+							add_building = building_engineering_lab_1
+							owner = { add_resource = { minerals = -400 } }
+							
+						}
+						25 = {
+							modifier = {
+								factor = 0
+								free_building_slots = 0
+							}
+							add_building = building_physics_lab_1
+							owner = { add_resource = { minerals = -400 } }
+						}
+					}
+				}
+			}
+		}
+		random_owned_planet = {
+			limit = {
+				is_capital = no
+			}
+			random_list = {
+				10 = {
+					
+				}
+				20 = {
+					modifier = {
+						factor = 0
+						num_free_districts = { type = district_generator value = 0 }
+					}
+					modifier = {
+						factor = 0
+						owner = { has_monthly_income = { resource = energy value > 20 } }
+					}
+					add_district = district_generator
+					owner = { add_resource = { minerals = -300 } }
+				}
+				15 = {
+					modifier = {
+						factor = 0
+						num_free_districts = { type = district_mining value = 0 }
+					}
+					modifier = {
+						factor = 0
+						owner = { has_monthly_income = { resource = minerals value > 100 } }
+					}
+					modifier = {
+						factor = 10
+						owner = { has_monthly_income = { resource = minerals value < 50 } }
+					}
+					add_district = district_mining
+					owner = { add_resource = { minerals = -300 } }
+				}
+				20 = {
+					modifier = {
+						factor = 0
+						num_free_districts = { type = district_farming value = 0 }
+					}
+					modifier = {
+						factor = 0
+						owner = { has_monthly_income = { resource = food value > 10 } }
+					}
+					add_district = district_farming
+					owner = { add_resource = { minerals = -300 } }
+				}
+				20 = {
+					modifier = {
+						factor = 0
+						num_districts = { type = district_farming value = 0 }
+					}
+					modifier = {
+						factor = 100
+						owner = { has_monthly_income = { resource = food value > 50 } }
+					}
+					remove_district = district_farming
+					owner = { add_resource = { minerals = 300 } }
+				}
+				40 = {
+					modifier = {
+						factor = 0
+						num_free_districts = { type = district_industrial value = 0 }
+					}
+					add_district = district_industrial
+					owner = { add_resource = { minerals = -400 } }
+				}
+				20 = {
+					modifier = {
+						factor = 0
+						num_free_districts = { type = district_city value = 0 }
+					}
+					modifier = {
+						factor = 0.1
+						free_building_slots > 0
+					}
+					modifier = {
+						factor = 100
+						free_housing < 0
+					}
+					add_district = district_city
+					owner = { add_resource = { minerals = -400 } }
+				}
+				100 = {
+					modifier = {
+						factor = 0
+						free_building_slots = 0
+					}
+					modifier = {
+						factor = 0
+						num_buildings = { type = building_foundry_1 value > 0 }
+					}
+					add_building = building_foundry_1
+					owner = { add_resource = { minerals = -400 } }
+				}
+			}
+		}
+		random_owned_planet = {
+			limit = {
+				is_capital = yes
+				NOT = { is_planet_class = pc_habitat }
+			}
+			random_list = {
+				50 = {
+					modifier = {
+						factor = 0
+						free_building_slots = 0
+					}
+					modifier = {
+						factor = 0
+						AND = {
+							num_buildings = { type = building_autochthon_monument value < 1 }
+							owner = {
+								NOR = {
+									is_spiritualist = yes
+									is_megacorp = yes
+								}
+							}
+						}
+					}
+					modifier = {
+						factor = 0
+						AND = {
+							num_buildings = { type = building_temple value < 2 }
+							owner = {
+								is_spiritualist = yes
+							}
+						}
+					}
+					modifier = {
+						factor = 0
+						AND = {
+							num_buildings = { type = building_corporate_monument value < 1 }
+							owner = {
+								is_megacorp = yes
+							}
+						}
+					}
+					modifier = {
+						factor = 10
+						AND = {
+							num_buildings = { type = building_engineering_lab_1 value > 2 }
+						}
+					}
+					add_building = building_physics_lab_1
+					owner = { add_resource = { minerals = -400 } }
+				}
+				50 = {
+					modifier = {
+						factor = 0
+						free_building_slots = 0
+					}
+					modifier = {
+						factor = 0
+						AND = {
+							num_buildings = { type = building_autochthon_monument value < 1 }
+							owner = {
+								NOR = {
+									is_spiritualist = yes
+									is_megacorp = yes
+								}
+							}
+						}
+					}
+					modifier = {
+						factor = 0
+						AND = {
+							num_buildings = { type = building_temple value < 2 }
+							owner = {
+								is_spiritualist = yes
+							}
+						}
+					}
+					modifier = {
+						factor = 0
+						AND = {
+							num_buildings = { type = building_corporate_monument value < 1 }
+							owner = {
+								is_megacorp = yes
+							}
+						}
+					}
+					modifier = {
+						factor = 10
+						AND = {
+							num_buildings = { type = building_physics_lab_1 value > 2 }
+						}
+					}
+					add_building = building_engineering_lab_1
+					owner = { add_resource = { minerals = -400 } }
+				}
+				100 = {
+					modifier = {
+						factor = 0
+						free_building_slots = 0
+					}
+					modifier = {
+						factor = 0
+						owner = {
+							OR = {
+								is_spiritualist = yes
+								is_megacorp = yes
+							}
+						}
+					}
+					modifier = {
+						factor = 0
+						num_buildings = { type = building_autochthon_monument value > 0 }
+					}
+					add_building = building_autochthon_monument
+					owner = { add_resource = { minerals = -400 } }
+				}
+				100 = {
+					modifier = {
+						factor = 0
+						free_building_slots = 0
+					}
+					modifier = {
+						factor = 0
+						owner = { is_spiritualist = no }
+					}
+					modifier = {
+						factor = 0
+						num_buildings = { type = building_temple value > 1 }
+					}
+					add_building = building_temple
+					owner = { add_resource = { minerals = -400 } }
+				}
+				100 = {
+					modifier = {
+						factor = 0
+						free_building_slots = 0
+					}
+					modifier = {
+						factor = 0
+						owner = {
+							OR = {
+								is_spiritualist = yes
+								is_megacorp = no
+							}
+						}
+					}
+					modifier = {
+						factor = 0
+						num_buildings = { type = building_corporate_monument value > 1 }
+					}
+					add_building = building_corporate_monument
+					owner = { add_resource = { minerals = -400 } }
+				}
+				100 = {
+					modifier = {
+						factor = 0
+						num_free_districts = { type = district_city value = 0 }
+					}
+					modifier = {
+						factor = 0
+						free_building_slots > 0
+					}
+					add_district = district_city
+					owner = { add_resource = { minerals = -400 } }
+				}
+			}
+		}
 	}
 }
 country_event = {

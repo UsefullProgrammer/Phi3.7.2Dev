@@ -93,18 +93,13 @@ trait_ruler_corvette_focus = {
 		TIER = none
 	}
 	modifier = {
-		ship_corvette_cost_mult = -0.3
+		ship_corvette_cost_mult = -0.15
 	}
 	leader_potential_add = {
 		has_paragon_dlc = no
 	}
 	leader_class = { admiral }
 	prerequisites = { tech_destroyers } # 'corvette focus' is a bit silly when it's the only available ship
-	opposites = {
-		trait_ruler_destroyer_focus
-		trait_ruler_cruiser_focus
-		trait_ruler_battleship_focus
-	}
 	selectable_weight = @class_trait_weight
 }
 
@@ -119,7 +114,7 @@ trait_ruler_destroyer_focus = {
 		TIER = none
 	}
 	modifier = {
-		ship_destroyer_cost_mult = -0.3
+		ship_destroyer_cost_mult = -0.15
 	}
 	leader_potential_add = {
 		has_paragon_dlc = no
@@ -127,9 +122,9 @@ trait_ruler_destroyer_focus = {
 	leader_class = { admiral }
 	prerequisites = { tech_destroyers }
 	opposites = {
-		trait_ruler_corvette_focus
 		trait_ruler_cruiser_focus
 		trait_ruler_battleship_focus
+		trait_ruler_carrier_focus
 	}
 	selectable_weight = @class_trait_weight
 }
@@ -145,7 +140,7 @@ trait_ruler_cruiser_focus = {
 		TIER = none
 	}
 	modifier = {
-		ship_cruiser_cost_mult = -0.3
+		ship_cruiser_cost_mult = -0.15
 	}
 	leader_potential_add = {
 		has_paragon_dlc = no
@@ -153,9 +148,9 @@ trait_ruler_cruiser_focus = {
 	leader_class = { admiral }
 	prerequisites = { tech_cruisers }
 	opposites = {
-		trait_ruler_corvette_focus
 		trait_ruler_destroyer_focus
 		trait_ruler_battleship_focus
+		trait_ruler_carrier_focus
 	}
 	selectable_weight = @class_trait_weight
 }
@@ -171,7 +166,7 @@ trait_ruler_battleship_focus = {
 		TIER = none
 	}
 	modifier = {
-		ship_battleship_cost_mult = -0.3
+		ship_battleship_cost_mult = -0.15
 	}
 	leader_potential_add = {
 		has_paragon_dlc = no
@@ -179,13 +174,37 @@ trait_ruler_battleship_focus = {
 	leader_class = { admiral }
 	prerequisites = { tech_battleships }
 	opposites = {
-		trait_ruler_corvette_focus
 		trait_ruler_destroyer_focus
 		trait_ruler_cruiser_focus
+		trait_ruler_carrier_focus
 	}
 	selectable_weight = @class_trait_weight
 }
-
+trait_ruler_carrier_focus = {
+	councilor_trait = yes
+	inline_script = {
+		script = trait/icon
+		CLASS = admiral
+		ICON = GFX_leader_trait_battleship_focus
+		RARITY = common
+		COUNCIL = yes
+		TIER = none
+	}
+	modifier = {
+		ship_carrier_cost_mult = -0.15
+	}
+	leader_potential_add = {
+		has_paragon_dlc = no
+	}
+	leader_class = { admiral }
+	prerequisites = { tech_carrier }
+	opposites = {
+		trait_ruler_destroyer_focus
+		trait_ruler_cruiser_focus
+		trait_ruler_battleship_focus
+	}
+	selectable_weight = @class_trait_weight
+}
 leader_trait_fleet_logistician = {
 	inline_script = {
 		script = trait/icon

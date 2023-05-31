@@ -41,17 +41,28 @@ have_genetics_adopt = {
 	}
 }
 crisis_run = {
-	NOR = {
-		crisis_happened_and_defeated = yes #Contingency, Extradimensionals or Prethoryn
-		AND = { #If the Khan is defeated, Crisis Beacon should be hidden until a new crisis happens
-			has_global_flag = great_khan_dead
-			has_crisis = no
+	OR = {
+		AND = {
+			OR = { #c'è crisi?
+				has_crisis = yes #Contingency, Extradimensionals or Prethoryn
+				has_global_flag = marauder_crisis_ongoing #Khan
+				has_global_flag = gray_goo_crisis_active #Gray Tempest
+			}
+			NOR = { #che non sia finita
+				crisis_happened_and_defeated = yes #Contingency, Extradimensionals or Prethoryn finish
+				AND = { #If the Khan is defeated, Crisis Beacon should be hidden until a new crisis happens
+					has_global_flag = great_khan_dead
+					has_crisis = no
+				}
+				AND = { #If the Gray Tempest is defeated, Crisis Beacon should be hidden until a new crisis happens
+					has_global_flag = graygoo_defeated
+					has_crisis = no
+				}
+			}
 		}
-		AND = { #If the Gray Tempest is defeated, Crisis Beacon should be hidden until a new crisis happens
-			has_global_flag = graygoo_defeated
-			has_crisis = no
+		any_playable_country = { # controllo crisis da player
+			has_crisis_level = crisis_level_5
 		}
-		has_crisis_stage_4 = yes
 	}
 }
 crisis_run_optimized = {

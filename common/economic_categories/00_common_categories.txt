@@ -223,6 +223,22 @@ ships = {
 			}
 		}
 	}
+	triggered_cost_modifier = {
+		key = ship_carrier
+		use_parent_icon = yes
+		modifier_types = {
+			mult
+		}
+
+		trigger = {
+			is_scope_valid = yes
+			OR = {
+				is_ship_size = carrier
+				is_ship_size = offspring_carrier
+			}
+		}
+	}
+	
 
 	triggered_cost_modifier = {
 		key = ship_military_station_small

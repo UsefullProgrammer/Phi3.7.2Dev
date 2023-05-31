@@ -34,6 +34,7 @@ on_yearly_pulse_country = {
 		phi_ai.16				#market simulator for gestalts empires
 		phi_ai.0				#builds up the capital planet of non-gestalt non-voids empires
 		phi_ai.1				#builds up the other planets of non gestalt empires
+		phi_ai.20				#builds up the other planets of gestalt empires
 		phi_ai.2				#manages unemployed pops of non gestalts empires
 		phi_ai.3				#transfers pops between capital and colonies for non gestalts empires
 		phi_ai.5				#refines the capital planet of non-gestalt non-voids empires
@@ -42,6 +43,7 @@ on_yearly_pulse_country = {
 		phi_ai.8				#building assault armies
 		phi_ai.10				#send alloys to fed prez
 		phi_ai.15				#attack bbeg
+		phi_ai.17				#refines the capital planet of gestalt
 		
 	}
 }
