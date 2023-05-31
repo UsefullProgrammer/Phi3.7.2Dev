@@ -1483,7 +1483,7 @@ col_capital_foundry = {
 					is_ai = no
 					AND = {
 						years_passed > 25
-						num_owned_planets >= 5
+						num_owned_planets >= 2
 					}
 				}
 			}
@@ -1551,7 +1551,7 @@ col_capital_factory = {
 					is_ai = no
 					AND = {
 						years_passed > 25
-						num_owned_planets >= 5
+						num_owned_planets >= 2
 					}
 				}
 			}
@@ -1620,7 +1620,7 @@ col_capital_trade = {
 					is_ai = no
 					AND = {
 						years_passed > 25
-						num_owned_planets >= 5
+						num_owned_planets >= 2
 					}
 				}
 			}
@@ -1663,7 +1663,7 @@ col_capital_extraction = {
 					is_ai = no
 					AND = {
 						years_passed > 25
-						num_owned_planets >= 5
+						num_owned_planets >= 2
 					}
 				}
 			}
