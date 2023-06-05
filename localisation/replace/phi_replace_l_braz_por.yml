@@ -172,3 +172,5 @@ tr_synchronicity_machine_finish_desc:3 "§HUnlocks Edict:§! $edict_industrial_m
 war_goal_wg_conquest_desc:1 "War is waged to seize Claimed enemy systems. Using this wargoal to take claims generates §Y25%§! less §YThreat§! for each conquered system.\n$OUR_CLAIMS_ON_ENEMYS$\n$ALLY_CLAIMS_ON_ENEMYS$"
 
 origin_tooltip_imperial_vassal_effects:1 "§G- WARNING: Easy Origin for new players.§!\n- Start as the vassal of an §HAdvanced AI Empire§!.\n- Gain the option to choose a §HSpecialist Empire§! vassal type at the start of the game."
+
+void_dweller_trait_tooltip:0 £ Felicidade da População em Mundos Não Artificiais: §R-30%§! \n Regras pop e uso de especialistas §Gmenos§! §Ytamanho do império§! e moradia pop.

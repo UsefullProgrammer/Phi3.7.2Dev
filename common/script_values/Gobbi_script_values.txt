@@ -112,7 +112,7 @@ pop_size = {
 power_fleet_factor = {
 	base = 1
 	add = trigger:fleet_power
-	div = 70000
+	divide = 70000
 	mult = 10
 	subtract = 5
 	min = 0
@@ -159,11 +159,76 @@ Expanse_planer_admin_modifier = {
 }
 Expanse_planer_malus_research_modifier = {
 	base = owner.max_example_variable
-	div = 10
+	divide = 10
 	mult = -1
 }
-
+Count_pop_Shypiard_modifier = {
+	modifier = {
+		add = owner.value:Count_pop_weight
+	}
+	modifier = {
+		divide = owner.value:count_civilian_shipyard|TYPE|civilian_shipyard|
+	}
+}
+Count_pop_SR = {
+	modifier = {
+		add = owner.value:Count_pop_weight
+	}
+	
+	
+}
+Count_pop_weight = {
+	# if ai outlawed: SPECIALISTS * 0.5 + NONSPECIALIST * 0.5
+	#   not outlawed: SPECIALISTS * 2 + NONSPECIALIST * 0.5
+	#ruler
+	complex_trigger_modifier = {
+		trigger = count_owned_pop
+		parameters = {
+			limit = {
+				has_job_category = ruler
+				has_trait = trait_void_dweller_1
+			}
+		}
+		mode = add
+		multiplier = 0.75
+	}
+	# Specialist 
+	complex_trigger_modifier = {
+		trigger = count_owned_pop
+		parameters = {
+			limit = {
+				has_job_category = specialist
+				has_trait = trait_void_dweller_1
+			}
+		}
+		mode = add
+		multiplier = 0.25
+	}
+	# Specialist 
+	complex_trigger_modifier = {
+		trigger = count_owned_pop
+		parameters = {
+			limit = {
+				has_job_category = worker
+				has_trait = trait_void_dweller_1
+			}
+		}
+		mode = add
+		multiplier = 0.1
+	}
+}
 # 	modifier = {
 # 		max = owner.max_example_variable 					#Variable set by set_variable
 # 		owner = { is_variable_set = max_example_variable }	#Only applied if this trigger is true
 # 	}
+count_civilian_shipyard = {
+	complex_trigger_modifier = {
+		trigger = count_starbase_modules
+		parameters = {
+			type = $TYPE$
+		}
+		mode = add
+		multiplier = 0.75
+	}
+	min = 1
+}

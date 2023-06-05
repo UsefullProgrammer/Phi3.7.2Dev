@@ -9,7 +9,11 @@ tech_solar_panel_network = {
 	start_tech = yes
 
 	potential = {
-		is_gestalt = yes
+		OR = {
+			is_gestalt = yes
+			has_origin = origin_void_dwellers 
+		}
+		
 	}
 }
 

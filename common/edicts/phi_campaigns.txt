@@ -664,7 +664,7 @@ expansion_planer = {
 	modifier = {
 		all_technology_research_speed = -0.5
 		country_leader_cap_add = 1
-		country_admin_cap_add = 25
+		empire_size_add = -25
 	}
 	ai_weight = {
 		weight = 0

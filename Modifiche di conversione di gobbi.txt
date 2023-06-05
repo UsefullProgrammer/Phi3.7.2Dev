@@ -464,9 +464,14 @@ Fix AI new edict
 Change for [b] 3.8.3 [/b] compatible
 Fix border gore in crisis
 Trait shipwright is same for all gestait or normal empire
+Fix localization
+Cambiato country admin cap -> empire size add
+Fix new skill admiral
 
 
-
+1.4
+void dweller sono cambiati, ora è un modo diverso di giocare puntato sulle stazioni spaziali, in cambio però hanno moduli e strutture speciali per le stazioni
+Inoltre la specie void dweller usa meno housing e empire pop size poichè una parte della popolazione medio ricca usa le proprie navi come casa.
 
 
 

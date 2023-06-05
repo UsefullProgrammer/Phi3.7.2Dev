@@ -120,7 +120,6 @@ spriteTypes = {
 		name = "GFX_gearr"
 		textureFile = "gfx/interface/icons/governments/edicts/gearr.dds"
 	}
-
 	spriteType = {
 		name = "GFX_noob"
 		textureFile = "gfx/interface/icons/governments/edicts/noob.dds"
@@ -137,4 +136,21 @@ spriteTypes = {
     	name = "GFX_sr_dark_matter"
     	texturefile = "gfx/interface/icons/governments/edicts/sr_dark_matter.dds"
 	}
+	spriteType = {
+		name = "GFX_spaceport_nebula_alloy_refinery"
+		texturefile = "gfx/interface/icons/modules/nebula_alloy_refinery.dds"
+	}
+	spriteType = {
+		name = "GFX_civilian_starbase_anchorage"
+		texturefile = "gfx/interface/icons/modules/civilian_starbase_anchorage.dds"
+	}
+	spriteType = {
+		name = "GFX_civilian_starbase_shipyard"
+		texturefile = "gfx/interface/icons/modules/civilian_starbase_shipyard.dds"
+	}
+	spriteType = {
+		name = "GFX_starbase_Governmental_Orbital_Exchange_Market"
+		texturefile = "gfx/interface/icons/modules/starbase_Governmental_Orbital_Exchange_Market.dds"
+	}
+	
 }

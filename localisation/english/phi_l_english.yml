@@ -1101,3 +1101,24 @@ PHI_EMPIRE_IN_SURVIVE_AVAIBLE_ALERT_MESSAGE:0 "An empire $EMPIRE|Y$ is trying to
 
 
 
+
+sm_nebula_alloy_refinery:0 "Alloy refinery"
+sm_nebula_alloy_refinery_desc:0 "High tech alloy refinery at 0 gravity"
+sm_civilian_anchorage:0 "Civil anchorage"
+sm_civilian_anchorage_desc:0 "Civil anchorages, also known as spatial ports."
+sm_civilian_shipyard:0 "Civil shypiard"
+sm_civilian_shipyard_desc:0 "Produces energy sell ship at pop void dweller for everyone more civilian shipyard less energy, has 0.5 ship build need 2 shipyard for buil governement ship."
+
+ sm_starm_science_hub:0 "Research Hub"
+ sm_starm_science_hub_desc:0 "A high-tech facility where our scientists meet to advance diverse fields of research.\n"
+ sm_starm_science_booster:0 "Laboratories"
+ sm_starm_science_booster_desc:0 "Cutting edge facilities that provide controlled conditions in which high risk experiments are performed away from prying eyes.\n"
+ sm_starm_science_booster_effect:0 "£society£ £physics£ £engineering£ §Y$RESEARCH$§! from Science Hubs: §G+2§!.\n"
+ sm_starm_culture_booster:0 "Embassy"
+ sm_starm_culture_booster_desc:0 "This majestic complex can host anything from small clandestine meetings to large scale public events, art exhibitions and diplomatic conferences.\n"
+ sm_starm_culture_booster_effect:0 "£unity£Unity & £society£society research production from Starbase Modules: §G+2§!.\n"
+ sm_starm_culture_hub:0 "Cultural Hub"
+ sm_starm_culture_hub_desc:0 "A magnificent facility where our most creative minds meet to promote culture and the arts.\n"
+ sm_art_college_effect:0 "£unity£10 £society£10. Unity & society research from Cultural Hubs: §G+2§!.\n"
+
+ sm_curator_think_tank_effect:0 "£society£5 £engineering£5 £physics£5. Society, engineering & physics research from Science Hubs: §G+2§!.\n"
