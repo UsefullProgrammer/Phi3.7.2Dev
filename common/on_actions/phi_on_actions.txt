@@ -44,6 +44,7 @@ on_yearly_pulse_country = {
 		phi_ai.10				#send alloys to fed prez
 		phi_ai.15				#attack bbeg
 		phi_ai.17				#refines the capital planet of gestalt
+		phi_ai.18				#vassalization with war
 		
 	}
 }

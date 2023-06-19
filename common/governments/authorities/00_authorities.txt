@@ -1,7 +1,7 @@
 #auth_example = {
 #	potential = {}									# requirements list, see ../readme_requirements.txt
 #	possible = {}									# requirements list, see ../readme_requirements.txt
-#	random_weight = { value = 1 }					# random weight, no scope (DLC check etc only); default: 1
+#	random_weight = { value = 1 }					# random weight, no scope; default: 1
 #
 #	traits = { trait = tait1 trait = tait2 }		# force listed traits on the founder species (only verified for empire designs, no eefect after game start)
 #
@@ -53,9 +53,7 @@ auth_democratic = {
 		custom_tooltip = auth_democratic_tt
 	}
 	random_weight = {
-		modifier = {
-			factor = 2
-		}
+		base = 2
 	}
 	tags = {
 		AUTHORITY_ELECTION_DEMOCRATIC
@@ -93,9 +91,7 @@ auth_oligarchic = {
 		councilor_skill_add = 2
 	}
 	random_weight = {
-		modifier = {
-			factor = 2
-		}
+		base = 2
 	}
 	tags = {
 		AUTHORITY_ELECTION_OLIGARCHIC
@@ -130,9 +126,7 @@ auth_dictatorial = {
 
 	}
 	random_weight = {
-		modifier = {
-			factor = 2
-		}
+		base = 2
 	}
 	tags = {
 		AUTHORITY_ELECTION_ON_RULER_DEATH
@@ -167,9 +161,7 @@ auth_imperial = {
 	}
 
 	random_weight = {
-		modifier = {
-			factor = 2
-		}
+		base = 2
 	}
 
 	tags = {
@@ -196,15 +188,7 @@ auth_hive_mind = {
 		}
 	}
 	random_weight = {
-		factor = 0.5
-		modifier = {
-			factor = 0
-			NOT = { host_has_dlc = "Utopia" }
-		}
-		modifier = {
-			factor = 2
-			host_has_dlc = "Utopia"
-		}
+		base = 2
 	}
 
 	traits = {

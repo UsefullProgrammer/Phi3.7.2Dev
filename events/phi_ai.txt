@@ -2370,7 +2370,7 @@ country_event = {
 	}
 }
 country_event = {
-    id = phi_ai.17
+    id = phi_ai.18
 
     hide_window = yes
     is_triggered_only = yes
