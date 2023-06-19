@@ -80,7 +80,7 @@ influence_expenditure_resolutions = {
 	}
 
 	weight = {
-		weight = 0.30
+		weight = 0.20
 	}
 
 	# min/max resolution proposal costs defined in resolutions.txt

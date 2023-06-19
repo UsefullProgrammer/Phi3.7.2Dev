@@ -468,11 +468,13 @@ Fix localization
 Cambiato country admin cap -> empire size add
 Fix new skill admiral
 
+Ribilanciato bonus empire size da champion of empire
 
+Fix problema ai con survivfe in domination
 1.4
 void dweller sono cambiati, ora è un modo diverso di giocare puntato sulle stazioni spaziali, in cambio però hanno moduli e strutture speciali per le stazioni
 Inoltre la specie void dweller usa meno housing e empire pop size poichè una parte della popolazione medio ricca usa le proprie navi come casa.
-
+Ai leggermente migliorate in economia, trade e proposte di resoluzioni
 
 
 

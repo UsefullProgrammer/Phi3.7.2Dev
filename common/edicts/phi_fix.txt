@@ -1,0 +1,66 @@
+phi_set_fix = {
+	length = 0
+	icon = "GFX_set_conquest_wg"
+	potential = {
+		is_homicidal = no
+		is_ai = no
+		always = no
+	}
+	allow = {
+		is_at_war = yes
+		any_war = {
+			any_defender = {
+				is_same_value = root
+			}
+			# OR = {
+			# 	any_attacker = {
+			# 		root = {
+			# 			has_claim = prev
+			# 		}
+			# 	}
+			# 	using_war_goal = { type = wg_declared_crisis owner = attacker }
+			# }
+			OR = {
+				NOR = {
+			 		War_Valid_survive = no #wg border
+			 		using_war_goal = { type = wg_phi_survive owner = root }
+			 	}
+			 	using_war_goal = { type = wg_declared_crisis owner = attacker }
+				using_war_goal = { type = wg_ae_domination owner = attacker }
+			}
+		}
+	}
+	effect = {
+		every_war = {
+			limit = {
+				any_defender = {
+					is_same_value = root
+				}
+				NOR = {
+						using_war_goal = { type = wg_phi_survive owner = root }
+						War_Valid_survive = no #wg border
+						NOT = { using_war_goal = { type = wg_declared_crisis owner = attacker } }
+				}
+			}
+			set_war_goal = { type = wg_conquest target = root enemy = attacker }
+		}
+		every_war = {
+			limit = {
+				any_defender = {
+					is_same_value = root
+				}
+				using_war_goal = { type = wg_declared_crisis owner = attacker }
+			}
+			set_war_goal = { type = wg_declared_crisis target = root enemy = attacker }
+		}
+		every_war = {
+			limit = {
+				any_defender = {
+					is_same_value = root
+				}
+				using_war_goal = { type = wg_ae_domination owner = attacker }
+			}
+			set_war_goal = { type = wg_end_threat target = root enemy = attacker }
+		}
+	}
+}

@@ -1021,6 +1021,8 @@ country_event = {
 				using_war_goal = { type = wg_humiliation owner = attacker }
 				War_Valid_survive = no #wg border
 				using_war_goal = { type = wg_declared_crisis owner = attacker }
+				using_war_goal = { type = wg_ae_domination owner = attacker }
+				using_war_goal = { type = wg_end_threat_ae owner = attacker }
 			}
 			any_attacker = {
 				relative_power = {
@@ -1052,6 +1054,8 @@ country_event = {
 					using_war_goal = { type = wg_humiliation owner = attacker }
 					War_Valid_survive = no #wg border
 					using_war_goal = { type = wg_declared_crisis owner = attacker }
+					using_war_goal = { type = wg_ae_domination owner = attacker }
+					using_war_goal = { type = wg_end_threat_ae owner = attacker }
 				}
 			}
 			set_war_goal = { type = wg_phi_survive target = root enemy = attacker }
@@ -1117,7 +1121,10 @@ country_event = {
 			}
 		}
 		if = {
-			limit = { exists = event_target:survive_cb_war }
+			limit = { 
+				exists = event_target:survive_cb_war 
+				is_homicidal = no 
+			}
 			root = {
 				join_war_on_side = {
 					war = event_target:survive_cb_war

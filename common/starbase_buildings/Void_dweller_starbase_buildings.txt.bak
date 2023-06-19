@@ -165,31 +165,3 @@ Governmental_Orbital_Exchange_Market = {
 		weight = 0 #use same weight here - ai weighting is done in starbase_types.txt
 	}
 }
-Governmental_diplomatic_asset = {
-	icon = "GFX_orbitalring_embassy_complex"
-	construction_days = 360
-
-	potential = {
-		exists = owner
-		owner = { 
-            has_origin = origin_void_dwellers
-        }
-	}
-	resources = {
-		category = starbase_buildings
-		cost = {
-			alloys = 100
-			influence = 25
-		}
-
-		upkeep = {
-			energy = 5
-		}
-	}
-	country_modifier = {
-		diplo_weight_envoys_mult = 0.025
-	}
-	ai_weight = {
-		weight = 0 #use same weight here - ai weighting is done in starbase_types.txt
-	}
-}

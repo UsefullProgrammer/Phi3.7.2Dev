@@ -36,6 +36,10 @@ alloys_expenditure_ships = {
 			OR = {
 				recently_lost_war = yes
 				is_at_war = yes
+				AND = {
+					years_passed > 15
+					is_homicidal = yes
+				}
 			}
 		}
 

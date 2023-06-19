@@ -153,8 +153,8 @@ starm_science_hub = {
 		}
 
 		produces = {
-			society_research = 4
-			engineering_research = 4
+			society_research = 2
+			engineering_research = 2
 		}
 
 		produces = {
@@ -171,7 +171,7 @@ starm_science_hub = {
 		}
 
 		upkeep = {
-			energy = 6
+			energy = 3
 		}
 	}
 
@@ -205,8 +205,8 @@ starm_culture_hub = {
 		}
 
 		produces = {
-			unity = 4
-			society_research = 4
+			unity = 2
+			society_research = 2
 		}
 
 		produces = {
@@ -222,7 +222,7 @@ starm_culture_hub = {
 		}
 
 		upkeep = {
-			energy = 6
+			energy = 3
 		}
 	}
 
@@ -230,58 +230,5 @@ starm_culture_hub = {
 	ai_build_outside_chokepoint = yes
 	ai_weight = {
 		weight = 15
-	}
-}
-
-administrative_hub = {
-	icon = "GFX_starbase_deep_space_black_site"
-	construction_days = 360
-
-	potential = {
-		exists = owner
-		owner = { 
-			has_origin = origin_void_dwellers
-		}
-	}
-
-	possible = {
-		custom_tooltip = {
-			fail_text = "requires_starport"
-			has_starbase_size >= starbase_starport
-		}
-		custom_tooltip = {
-			fail_text = "requires_colonized_planet"
-			solar_system = {
-				any_system_colony = {
-					is_owned_by = from
-				}
-			}
-		}
-	}
-
-	resources = {
-		category = starbase_buildings
-		cost = {
-			alloys = 100
-			influence = 25
-		}
-
-		produces = {
-			unity = 2
-		}
-
-		upkeep = {
-			energy = 2
-		}
-	}
-
-	system_modifier = {
-		planet_stability_add = 1
-	}
-
-	show_in_tech = "tech_living_state"
-
-	ai_weight = {
-		weight = 100 #use same weight here - ai weighting is done in starbase_types.txt
 	}
 }

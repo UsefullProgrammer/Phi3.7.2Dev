@@ -623,7 +623,7 @@ champs_of_empire_mil_effect = {
 
 champs_of_empire_gov_effect = {
 	hide_from_country_list = yes
-	empire_size_add = -5
+	empire_size_add = -1
 }
 
 champs_of_empire_sci_effect = {

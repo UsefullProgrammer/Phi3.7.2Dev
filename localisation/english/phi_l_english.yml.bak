@@ -1122,7 +1122,3 @@ sm_civilian_shipyard_desc:0 "Produces energy sell ship at pop void dweller for e
  sm_art_college_effect:0 "£unity£10 £society£10. Unity & society research from Cultural Hubs: §G+2§!.\n"
 
  sm_curator_think_tank_effect:0 "£society£5 £engineering£5 £physics£5. Society, engineering & physics research from Science Hubs: §G+2§!.\n"
-
- sm_Governmental_Orbital_Exchange_Market: "Orbital Exchange Market"
- sm_administrative_hub:0 "Orbital $building_low_tech_admin_hub$"
- sm_Governmental_diplomatic_asset:0 "Diplomatic Embassy"

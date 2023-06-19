@@ -56,7 +56,21 @@ energy_expenditure_trade = {
 	}
 
 	weight = {
-		weight = 0.5
+		weight = 0.6
+		modifier = {
+			factor = 1.25
+			has_resource = {
+				type = energy
+				amount > 10000
+			}
+		}
+		modifier = {
+			factor = 1.25
+			has_resource = {
+				type = energy
+				amount > 20000
+			}
+		}
 	}
 }
 
@@ -74,7 +88,7 @@ energy_expenditure_trade_deficit = {
 			AND = {
 				has_monthly_income = {
 					resource = minerals
-					value < -1
+					value < 30
 				}
 				has_resource = {
 					type = minerals
@@ -88,7 +102,7 @@ energy_expenditure_trade_deficit = {
 				}
 				has_resource = {
 					type = food
-					amount < 500
+					amount < 48
 				}
 			}
 			AND = {
@@ -98,13 +112,13 @@ energy_expenditure_trade_deficit = {
 				}
 				has_resource = {
 					type = consumer_goods
-					amount < 500
+					amount < 24
 				}
 			}
 			AND = {
 				has_monthly_income = {
 					resource = alloys
-					value < -1
+					value < 10
 				}
 				has_resource = {
 					type = alloys
