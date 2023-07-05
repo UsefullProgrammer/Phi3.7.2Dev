@@ -186,3 +186,9 @@ war_goal_wg_conquest_desc:1 "La guerra è combattuta per conquistare i sistemi n
 
 origin_tooltip_imperial_vassal_effects:1 "§G- ATTENZIONE: Origine facile per i nuovi giocatori.§!\n- Inizia come vassallo di un §HImpero AI avanzato§!.\n- Ottieni l'opzione di scegliere un tipo di vassallo §HEmpire Specialist§! all'inizio del gioco."
 void_dweller_trait_tooltip:0 £ Felicità della popolazione su mondi non artificiali: §R-30%§! \ n Utilizzo §Gminore§! per governanti pop e specialisti  e §Ydimensioni dell' impero §! e alloggi della pop.
+
+sm_curator_think_tank:0 "Think Tank dei Curatori"
+sm_curator_think_tank_desc:0 "Costruendo una struttura di ricerca interamente incentrata sull'apprendimento e sulla cooperazione con i Curatori, siamo in grado di fare significativi contributi al nostro progresso scientifico.\n"
+sm_art_college:0 "Accademia d'arte"
+sm_art_college_desc:1 "Questa accademia d'arte in gravità zero, gestita in collaborazione con l'enclave degli artigiani nelle vicinanze, celebra la bellezza dello spazio nei lavori prodotti dai suoi talentuosi studenti.\n"
+sm_naval_logistics_office_desc_modifier:2 "Ancoraggi e ancoraggi civili: §G+2§! §YCapacità navale§!"

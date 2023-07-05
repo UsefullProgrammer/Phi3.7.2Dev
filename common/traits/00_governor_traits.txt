@@ -242,7 +242,7 @@ leader_trait_army_veteran = {
 	}
 	modifier = {
 		planet_army_build_speed_mult = 0.15
-		armies_cost_mult = -0.15
+		armies_cost_mult = -0.10
 		army_defense_damage_mult = 0.15
 	}
 	leader_potential_add = {
@@ -270,7 +270,7 @@ leader_trait_army_veteran_2 = {
 	}
 	modifier = {
 		planet_army_build_speed_mult = 0.25
-		armies_cost_mult = -0.10
+		armies_cost_mult = -0.25
 		army_defense_damage_mult = 0.25
 	}
 	leader_class = { governor }
@@ -279,7 +279,7 @@ leader_trait_army_veteran_2 = {
 
 ###################
 leader_trait_retired_fleet_officer = {
-	councilor_trait = yes
+	councilor_trait = no
 	inline_script = {
 		script = trait/icon
 		CLASS = governor
@@ -309,7 +309,7 @@ leader_trait_retired_fleet_officer = {
 }
 
 leader_trait_retired_fleet_officer_2 = {
-	councilor_trait = yes
+	councilor_trait = no
 	replace_traits = { "leader_trait_retired_fleet_officer" }
 	inline_script = {
 		script = trait/icon
@@ -642,13 +642,13 @@ leader_trait_enlister_2 = {
 
 ###################
 leader_trait_shipwright = {
-	councilor_trait = yes
+	councilor_trait = no
 	inline_script = {
 		script = trait/icon
 		CLASS = governor
 		ICON = "GFX_leader_trait_shipwright"
 		RARITY = common
-		COUNCIL = yes
+		COUNCIL = no
 		TIER = 1
 	}
 	modifier = {
@@ -678,14 +678,14 @@ leader_trait_shipwright = {
 }
 
 leader_trait_shipwright_2 = {
-	councilor_trait = yes
+	councilor_trait = no
 	replace_traits = { "leader_trait_shipwright" }
 	inline_script = {
 		script = trait/icon
 		CLASS = governor
 		ICON = "GFX_leader_trait_shipwright"
 		RARITY = common
-		COUNCIL = yes
+		COUNCIL = no
 		TIER = 2
 	}
 	modifier = {

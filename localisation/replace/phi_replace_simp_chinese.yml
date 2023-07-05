@@ -174,3 +174,9 @@ war_goal_wg_conquest_desc:1 "War is waged to seize Claimed enemy systems. Using 
 origin_tooltip_imperial_vassal_effects:1 "§G- WARNING: Easy Origin for new players.§!\n- Start as the vassal of an §HAdvanced AI Empire§!.\n- Gain the option to choose a §HSpecialist Empire§! vassal type at the start of the game."
 
 void_dweller_trait_tooltip:0 £在非人工世界上的人口幸福感:§R-30%§! \ n人口统治者和专业人员的 §G较少 §!的使用 §Y帝国§! 的大小和人口住房。
+
+sm_curator_think_tank:0 "馆长智囊团"
+sm_curator_think_tank_desc:0 "通过构建一个完全专注于向馆长学习和合作的研究设施，我们能够为我们的科学进步做出重大贡献。\n"
+sm_art_college:0 "艺术学院"
+sm_art_college_desc:1 "这个零重力的艺术学院与附近的工匠飞地合作运营，赞美了其才华横溢的学生创作的作品中的外太空之美。\n"
+sm_naval_logistics_office_desc_modifier:2 "锚地和民用锚地：§G+2§! §Y海军能力§!"

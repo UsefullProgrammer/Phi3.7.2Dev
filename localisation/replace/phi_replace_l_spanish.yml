@@ -173,4 +173,10 @@ war_goal_wg_conquest_desc:1 "War is waged to seize Claimed enemy systems. Using 
 
 origin_tooltip_imperial_vassal_effects:1 "§G- WARNING: Easy Origin for new players.§!\n- Start as the vassal of an §HAdvanced AI Empire§!.\n- Gain the option to choose a §HSpecialist Empire§! vassal type at the start of the game."
 
-void_dweller_trait_tooltip:0 £在非人工世界上的人口幸福感:§R-30%§! \ n人口统治者和专业人员的 §G较少 §!的使用 §Y帝国§! 的大小和人口住房。
+void_dweller_trait_tooltip:0 "Felicidad de la población en Mundos No-Artificiales: §R-30%§!\nLos gobernantes y especialistas de la población usan §Gmenos§! §YTamaño del Imperio§! y viviendas para la población.\n§YTiene Edificios y Módulos especiales y poderosos para Bases Estelares§!"
+
+sm_curator_think_tank:0 "Grupo de reflexión de los Curadores"
+sm_curator_think_tank_desc:0 "Al construir una instalación de investigación totalmente enfocada en el aprendizaje y la cooperación con los Curadores, podemos hacer contribuciones significativas a nuestro progreso científico.\n"
+sm_art_college:0 "Colegio de Arte"
+sm_art_college_desc:1 "Este Colegio de Arte en gravedad cero, operado en conjunto con el cercano Enclave de Artesanos, celebra la belleza del espacio en las obras producidas por sus talentosos estudiantes.\n"
+sm_naval_logistics_office_desc_modifier:2 "Fondeaderos y fondeaderos civiles: §G+2§! §YCapacidad naval§!"

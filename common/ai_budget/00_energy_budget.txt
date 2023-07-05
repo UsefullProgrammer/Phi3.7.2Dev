@@ -112,7 +112,7 @@ energy_expenditure_trade_deficit = {
 				}
 				has_resource = {
 					type = consumer_goods
-					amount < 24
+					amount < 100
 				}
 			}
 			AND = {

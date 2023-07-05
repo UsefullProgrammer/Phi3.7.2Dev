@@ -19,7 +19,7 @@ on_entering_system_fleet = {
 on_war_beginning = {
 	events = {
 		naval_attrition.2
-		phi_ai.17 # cost influence subjugation ai vs ai
+		phi_ai.18 # cost influence subjugation ai vs ai
 	}
 }
 
@@ -44,7 +44,6 @@ on_yearly_pulse_country = {
 		phi_ai.10				#send alloys to fed prez
 		phi_ai.15				#attack bbeg
 		phi_ai.17				#refines the capital planet of gestalt
-		phi_ai.18				#vassalization with war
 		
 	}
 }

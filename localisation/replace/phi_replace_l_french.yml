@@ -174,3 +174,9 @@ war_goal_wg_conquest_desc:1 "War is waged to seize Claimed enemy systems. Using 
 origin_tooltip_imperial_vassal_effects:1 "§G- WARNING: Easy Origin for new players.§!\n- Start as the vassal of an §HAdvanced AI Empire§!.\n- Gain the option to choose a §HSpecialist Empire§! vassal type at the start of the game."
 
 void_dweller_trait_tooltip:0 £ Le bonheur de la population sur les mondes non artificiels : §R-30%§! \n Utilisation moins importante des dirigeants et spécialistes de la pop §G§ !et taille de l'§Yempire§! et logement de la pop.
+
+sm_curator_think_tank:0 "Think tank des Curateurs"
+sm_curator_think_tank_desc:0 "En construisant une installation de recherche entièrement axée sur l'apprentissage et la coopération avec les Curateurs, nous sommes en mesure de faire des contributions significatives à notre progrès scientifique.\n"
+sm_art_college:0 "Collège d'art"
+sm_art_college_desc:1 "Ce collège d'art en gravité zéro, exploité en collaboration avec l'enclave d'artisans à proximité, célèbre la beauté de l'espace dans les œuvres produites par ses talentueux étudiants.\n"
+sm_naval_logistics_office_desc_modifier:2 "Anchors et Ports civils : §G+2§! §YCapacité navale§!"

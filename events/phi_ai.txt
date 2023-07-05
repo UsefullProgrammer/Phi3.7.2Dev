@@ -1018,11 +1018,8 @@ country_event = {
 			}
 			NOR = {
 				using_war_goal = { type = wg_phi_survive owner = root }
-				using_war_goal = { type = wg_humiliation owner = attacker }
-				War_Valid_survive = no #wg border
+				War_Valid_survive = no #wg border wg_end_threat_ae
 				using_war_goal = { type = wg_declared_crisis owner = attacker }
-				using_war_goal = { type = wg_ae_domination owner = attacker }
-				using_war_goal = { type = wg_end_threat_ae owner = attacker }
 			}
 			any_attacker = {
 				relative_power = {

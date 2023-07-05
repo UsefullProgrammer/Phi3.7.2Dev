@@ -72,6 +72,8 @@ War_Valid_survive = { #scope war
 	NOR = {
 		using_war_goal = { type = FW_wg_open_border_long owner = root }
 		using_war_goal = { type = FW_wg_open_border owner = root }
+		using_war_goal = { type = wg_end_threat_ae owner = root }
+		using_war_goal = { type = wg_humiliation owner = attacker }
 	}
 }
 Has_precursor_chain = {
