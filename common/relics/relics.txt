@@ -90,7 +90,7 @@ r_khans_throne = {
 		custom_tooltip = khans_throne_passive_effect
 	}
 
-	score = 3000
+	score = 1000
 
 	active_effect = {
 		add_modifier = {
@@ -247,7 +247,7 @@ r_galaxy = {
 		all_technology_research_speed = 0.05
 	}
 
-	score = 2000
+	score = 1000
 
 	active_effect = {
 		custom_tooltip = relic_galaxy_active
@@ -304,7 +304,7 @@ r_omnicodex = {
 		custom_tooltip = relic_omicodex_opinon
 	}
 
-	score = 500
+	score = 1000
 
 	active_effect = {
 		custom_tooltip = relic_omnicodex_active
@@ -351,7 +351,7 @@ r_surveyor = {
 		ship_sensor_range_add = 1
 	}
 
-	score = 200
+	score = 1000
 
 	active_effect = {
 		custom_tooltip = relic_surveyor_active
@@ -412,7 +412,7 @@ r_galatron = {
 		diplo_weight_mult = 1.0
 	}
 
-	score = 20000
+	score = 1000
 
 	active_effect = {
 		custom_tooltip = relic_galatron_active
@@ -462,7 +462,7 @@ r_ancient_sword = {
 		diplo_weight_mult = 0.10
 	}
 
-	score = 200
+	score = 1000
 
 	active_effect = {
 		add_modifier = {
@@ -511,7 +511,7 @@ r_severed_head = {
 		custom_tooltip = r_severed_head_passive
 	}
 
-	score = 200
+	score = 1000
 
 	active_effect = {
 		custom_tooltip = relic_summon_pilgrims
@@ -573,7 +573,7 @@ r_prethoryn_queen = {
 			mult = brood_usage
 	}
 
-	score = 5000
+	score = 1000
 
 	active_effect = {
 		custom_tooltip = relic_queen_spawn
@@ -632,7 +632,7 @@ r_unbidden_warlock = {
 		ship_weapon_range_mult = 0.30
 	}
 
-	score = 5000
+	score = 1000
 
 	active_effect = {
 		add_modifier = {
@@ -683,7 +683,7 @@ r_contingency_core = {
 		custom_tooltip = relic_contingecy_core
 	}
 
-	score = 5000
+	score = 1000
 
 	active_effect = {
 		add_modifier = {
@@ -914,7 +914,7 @@ r_reality_perforator = {
 		pop_amenities_usage_mult = -0.10
 	}
 
-	score = 5000
+	score = 1000
 
 	active_effect = {
 		custom_tooltip = relic_reality_perforated
@@ -963,7 +963,7 @@ r_pox_sample = {
 		custom_tooltip = relic_javorian_pox
 	}
 
-	score = 5000
+	score = 1000
 
 	active_effect = {
 		add_modifier = {
@@ -1014,7 +1014,7 @@ r_cryo_core = {
 		weapon_type_energy_weapon_fire_rate_mult = 0.2
 	}
 
-	score = 5000
+	score = 1000
 
 	active_effect = {
 		add_modifier = {
@@ -1068,7 +1068,7 @@ r_war_forge = {
 		custom_tooltip = relic_cybrex_passive
 	}
 
-	score = 5000
+	score = 1000
 
 	active_effect = {
 		add_resource = {
@@ -1187,7 +1187,7 @@ r_toxic_god = {
 		weapon_type_strike_craft_weapon_damage_mult = 0.15
 	}
 
-	score = 3000
+	score = 1000
 
 	active_effect = {
 		hidden_effect = {
@@ -1251,7 +1251,7 @@ r_odryskan_crystal = {
 		country_rare_crystals_produces_mult = 0.15
 	}
 
-	score = 3000
+	score = 1000
 
 	active_effect = {
 		hidden_effect = {
@@ -1396,7 +1396,7 @@ r_wormhole_key = {
 		ship_jumpdrive_cooldown_mult = -0.25
 	}
 
-	score = 2500
+	score = 4000
 
 	active_effect = {
 		add_modifier = {

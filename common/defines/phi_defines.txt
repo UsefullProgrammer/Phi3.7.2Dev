@@ -19,17 +19,19 @@
 		VICTORY_YEAR_MAX = 1050
 		VICTORY_YEAR_MIN = 100
 		VICTORY_YEAR_SLIDER_INTERVAL = 50
-
-		SCORE_NO_ECONOMY = 5000 # For countries with no economy that still count for victory
-		SCORE_ECONOMIC_POWER = 0 # Per economic power
-		SCORE_TECH_POWER = 1 # Per tech power
-		SCORE_MILITARY_POWER = 1 # Per fleet power
-		SCORE_POPS = 0 # Per pop
-		SCORE_PLANETS = 0 # Per colony
-		SCORE_SYSTEMS = 0 # Per system
-		SCORE_SUBJECTS = 0 # Fraction of subject's own score
-		SCORE_FEDERATION_MEMBERS = 0 # Fraction of Federation member's own score
-		SCORE_CRISIS_KILLS = 0 # Per crisis ship killed
+		#non mergiare roba per capire punteggi in multi 
+			SCORE_NO_ECONOMY = 5000 # For countries with no economy that still count for victory
+			SCORE_ECONOMIC_POWER = 1 # Per economic power
+			SCORE_TECH_POWER = 1 # Per tech power
+			SCORE_MILITARY_POWER = 1 # Per fleet power
+			SCORE_POPS = 1 # Per pop
+			SCORE_PLANETS = 0 # Per colony
+			SCORE_SYSTEMS = 0 # Per system
+			SCORE_SUBJECTS = 0 # Fraction of subject's own score
+			SCORE_FEDERATION_MEMBERS = 0 # Fraction of Federation member's own score
+			SCORE_CRISIS_KILLS = 1 # Per crisis ship killed
+			SCORE_RELICS = 1
+		#----------------------------------------------
 
 		TECH_COST_DEFAULT = 1.0
 		TECH_COST_MIN = 0.25

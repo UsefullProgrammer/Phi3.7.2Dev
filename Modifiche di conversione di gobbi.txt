@@ -482,5 +482,8 @@ Fix AI in survive che si metteva anche in casi che non aveva senso
 1.4.1
 Fix trait military veteran
 
+1.5
+Puoi commerciale le relique
+
 
 
