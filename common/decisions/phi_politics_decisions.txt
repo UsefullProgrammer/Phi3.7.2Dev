@@ -484,6 +484,7 @@ decision_phi_release_client_state = {
 			energy = 100
 			minerals = 150
 			consumer_goods = 100
+			alloys = 200
 			unity = 100
 			influence = 15
 		}

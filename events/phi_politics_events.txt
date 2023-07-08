@@ -738,6 +738,7 @@ planet_event = {
 					energy = 100
 					minerals = 150
 					consumer_goods = 100
+					alloys = 200
 					unity = 100
 					influence = 15
 				}
@@ -748,11 +749,19 @@ planet_event = {
 					skill = 2
 					traits = {}
 				}
-				
 				set_leader = last_created_leader
 				set_subject_of = {
 					who = event_target:releasing_empire
 					preset = preset_vassal
+				}
+				random_owned_starbase = {
+					limit = { has_starbase_size = starbase_outpost }
+					set_starbase_size = starbase_starport
+					prev = {
+						add_resource = {
+							alloys = -200
+						}
+					}
 				}
 			}
 		}

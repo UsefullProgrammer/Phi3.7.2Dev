@@ -484,6 +484,6 @@ Fix trait military veteran
 
 1.5
 Puoi commerciale le relique
-
+Quando rilasci con la decisione il vassalo in automatico aggiorna la star base al primo livello, questo porta il rilascio a costare anche 200 alloys che verranno usati se non è già una starbase di primo livello
 
 
