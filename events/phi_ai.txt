@@ -1064,7 +1064,7 @@ country_event = {
 
 country_event = {
 #	phi_ai.12	monthly checked - joins defensive wars of laggers
-
+# root is defender
 	id = phi_ai.12
 	hide_window = yes
 
@@ -1090,9 +1090,11 @@ country_event = {
 		has_country_flag = phi_lagger
 		any_country = {
 			has_communications = root
-			#has_country_flag = phi_lagger
-			is_at_war = yes
 			opinion_level = { who = root level >= neutral }
+			is_at_war = yes
+			any_war = {
+				using_war_goal = { type = wg_phi_survive owner = this }
+			}
 		}
 	}
 	
@@ -1102,10 +1104,15 @@ country_event = {
 				has_communications = root
 				#has_country_flag = phi_lagger
 				opinion_level = { who = root level >= neutral }
+				is_homicidal = no
 				any_war = {
 					using_war_goal = { type = wg_phi_survive owner = prev }
 					NOT = { is_war_participant = { who = root } }
 					defender_war_exhaustion < 0.5
+					attacker = {
+						root = { opinion_level = { who = prev level < neutral } }
+						NOT = { has_truce = root } #non puoi entrare se hai un truce
+					}
 				}
 			}
 			random_war = {
@@ -1125,16 +1132,19 @@ country_event = {
 				is_homicidal = no 
 			}
 			root = {
-				join_war_on_side = {
-					war = event_target:survive_cb_war
-					side = defenders
-				}
 				if = {
-					limit = { is_federation_leader = yes }
-					every_federation_ally = {
-						join_war_on_side = {
-							war = event_target:survive_cb_war
-							side = defenders
+					
+					join_war_on_side = {
+						war = event_target:survive_cb_war
+						side = defenders
+					}
+					if = {
+						limit = { is_federation_leader = yes }
+						every_federation_ally = {
+							join_war_on_side = {
+								war = event_target:survive_cb_war
+								side = defenders
+							}
 						}
 					}
 				}

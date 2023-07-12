@@ -171,6 +171,9 @@ phi_join_defensive_war = {
 			any_war = {
 				using_war_goal = { type = wg_phi_survive owner = prev }
 				defender_war_exhaustion < 0.5
+				attacker = {
+					NOT = { has_truce = root } #non puoi entrare se hai un truce
+				}
 			}
 		}	
 	}
