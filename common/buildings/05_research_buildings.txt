@@ -15,15 +15,18 @@ building_research_lab_1 = {
 			has_modifier = crucible_colony
 		}
 	}
-
 	destroy_trigger = {
+		exists = owner
 		OR = {
 			has_modifier = resort_colony
 			has_modifier = slave_colony
 			has_modifier = crucible_colony
+			always = yes
 		}
 	}
-
+	convert_to = {
+		building_physics_lab_1
+	}
 	triggered_planet_modifier = {
 		potential = {
 			exists = owner
@@ -63,7 +66,7 @@ building_research_lab_1 = {
 			energy = @b1_upkeep
 		}
 	}
-
+	
 	upgrades = {
 		"building_research_lab_2"
 	}
@@ -106,15 +109,19 @@ building_research_lab_2 = {
 	allow = {
 		has_upgraded_capital = yes
 	}
-
+	
 	destroy_trigger = {
+		exists = owner
 		OR = {
 			has_modifier = resort_colony
 			has_modifier = slave_colony
 			has_modifier = crucible_colony
+			always = yes
 		}
 	}
-
+	convert_to = {
+		building_physics_lab_2
+	}
 	triggered_planet_modifier = {
 		potential = {
 			exists = owner
@@ -161,10 +168,6 @@ building_research_lab_2 = {
 		"building_research_lab_3"
 	}
 
-	prerequisites = {
-		"tech_basic_science_lab_2"
-	}
-
 	triggered_desc = {
 		trigger = {
 			exists = owner
@@ -199,7 +202,13 @@ building_research_lab_3 = {
 	allow = {
 		has_major_upgraded_capital = yes
 	}
-
+	destroy_trigger = { # destroys and/or triggers conversion if true
+		exists = owner
+		always = yes
+	}
+	convert_to = {
+		building_physics_lab_3
+	}
 	destroy_trigger = {
 		OR = {
 			has_modifier = resort_colony
@@ -290,10 +299,6 @@ building_research_lab_3 = {
 			}
 			sr_zro = 1
 		}
-	}
-
-	prerequisites = {
-		"tech_basic_science_lab_3"
 	}
 
 	triggered_desc = {

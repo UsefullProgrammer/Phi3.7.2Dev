@@ -485,5 +485,8 @@ Fix trait military veteran
 1.5
 Puoi commerciale le relique
 Quando rilasci con la decisione il vassalo in automatico aggiorna la star base al primo livello, questo porta il rilascio a costare anche 200 alloys che verranno usati se non è già una starbase di primo livello
-
-
+gateway_restored ora costa meno
+Le ai non entrano nel survive se hanno rapporti neutrali o superiori con te
+Le ai non entrano nel survive se hanno un truce con il war_leader
+Non puoi entrare in una survive se hai un truce con il war_leader
+Puoi fare gli orbital ring sui habitat

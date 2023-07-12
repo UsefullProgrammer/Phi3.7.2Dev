@@ -156,7 +156,11 @@ Governmental_Orbital_Exchange_Market = {
 
 		upkeep = {
 			energy = 2
+			mult = value:Count_planet_system
 		}
+	}
+	system_modifier = {
+		job_clerk_add = 1
 	}
 	country_modifier = {
 		country_trade_fee = -0.01

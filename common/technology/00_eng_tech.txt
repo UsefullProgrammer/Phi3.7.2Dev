@@ -11,7 +11,7 @@ tech_solar_panel_network = {
 	potential = {
 		OR = {
 			is_gestalt = yes
-			has_origin = origin_void_dwellers 
+			#has_origin = origin_void_dwellers #tolto perchè troppo forte
 		}
 		
 	}

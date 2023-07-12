@@ -73,8 +73,10 @@ civilian_shipyard = {
 		ship_hull_regen_add_perc = 0.1
 		ship_armor_regen_add_perc = 0.1
 	}
+	system_modifier = {
+		job_clerk_add = 1
+	}
 	station_modifier = {
-		trade_value_add = 2
 		starbase_shipyard_capacity_add = 0.5
 	}
 	country_modifier = {

@@ -17,7 +17,14 @@
 # 	# 	- abs (multiply by -1 if negative)
 # 	# 	- square (multiply by itself)
 # 	# 	- square_root
-
+Count_planet_system = {
+	base = 1
+	complex_trigger_modifier = {
+		trigger = count_system_colony
+		trigger_scope = solar_system
+		mode = mult
+	}
+}
 edict_size_effect = {
 	base = 0.02
 	#mult = trigger:num_pops
