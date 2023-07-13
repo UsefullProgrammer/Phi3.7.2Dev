@@ -1671,6 +1671,14 @@ can_build_branch_office_on_planet = {
 		}
 	}
 	custom_tooltip = {
+		fail_text = CRIMINAL_BRANCH_OFFICE_NOT_COMMERCIAL_PACT
+		exists = owner
+		NAND = {
+			root = { is_criminal_syndicate = yes }
+			owner = { has_commercial_pact = root } #se ha un patto commerciale non può fare branch office
+		}
+	}
+	custom_tooltip = {
 		fail_text = BRANCH_OFFICE_NOT_COMMERCIAL_PACT
 		exists = owner
 		OR = {

@@ -83,7 +83,7 @@
 		RESEARCH_DEBRIS_POLICY_FLAG = "research_debris"
 		SCAVENGE_DEBRIS_POLICY_FLAG = "scavenge_debris"
 		SCAVENGE_AND_RESEARCH_DEBRIS_POLICY_FLAG = "scavenge_and_research_debris"
-		SCAVENGE_DEBRIS_RESOURCE_MULT = 0.1		# The amount of resources of the cost for the shipdesign of the debris that should be given when scavenging it
+		SCAVENGE_DEBRIS_RESOURCE_MULT = 0.25		# The amount of resources of the cost for the shipdesign of the debris that should be given when scavenging it
 
 		DECADENCE_START = 20	# After this many years of being awakened, an awakened empire will experience decadence
 		DECADENCE_CHANCE = 0.5	# Chance of decadence increasing each month (multiplied by total size of empire & subjects)
@@ -363,7 +363,7 @@
 		FEDERATION_EXPERIENCE_BUFFER 		= 2000	# When a federation reaches max level, it will carry on gaining experience up to this level
 
 		DEBRIS_BASE_COST					= 0	# Base cost of special project for analyzing debris
-		DEBRIS_ANALYZED_AREA_POINTS			= 20	# Points * Level given for each component analyzed
+		DEBRIS_ANALYZED_AREA_POINTS			= 30	# Points * Level given for each component analyzed
 		DEBRIS_ANALYZED_TECH_PROGRESS		= 0.10	# Tech progress added when analyzing component that require tech you don't have
 		DEBRIS_DAYS							= 1800	# How many days the debris is visible for
 		DEBRIS_RESEARCH_TIME				= 90	# How many days it takes to analyze 1 debris.

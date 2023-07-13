@@ -36,9 +36,19 @@ per_relation = {
 	in_war = {
 		trigger = {
 			is_at_war = yes
-			this = { is_country_type = default }
+			this = { 
+				AND = {
+					is_country_type = default 
+					is_homicidal = no
+				}
+			}
 			from = { is_country_type = default }
 			any_war = {
+				NOR = { 
+					using_war_goal = { type = wg_humiliation owner = attacker } 
+					using_war_goal = { type = wg_humiliation owner = defender }
+					using_war_goal = { type = wg_independence owner = attacker }
+				}
 				any_attacker = { is_same_value = this }
 				any_defender = { is_same_value = from }
 			}

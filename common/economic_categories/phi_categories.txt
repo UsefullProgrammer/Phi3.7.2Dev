@@ -15,6 +15,12 @@ planet_researchers_phi = {
 	}
 	modifier_category = pop
 }
+wars = {
+	parent = country
+	generate_mult_modifiers = {
+		upkeep
+	}
+}
 relative_technology = {
 	parent = diplomacy
 }

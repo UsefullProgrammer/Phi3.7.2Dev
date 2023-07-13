@@ -3,6 +3,7 @@ tr_supremacy_adopt = {
 	modifier = {
 		country_naval_cap_add = 20
 		army_damage_mult = 0.20
+		wars_influence_upkeep_mult = -0.25
 	}
 }
 
@@ -10,7 +11,7 @@ tr_supremacy_finish = {
 	custom_tooltip = tr_supremacy_finish_desc
 	modifier = {
 		ascension_perks_add = 1
-		wars_influence_upkeep_mult = -0.75
+		wars_influence_upkeep_mult = -0.5
 	}
 }
 

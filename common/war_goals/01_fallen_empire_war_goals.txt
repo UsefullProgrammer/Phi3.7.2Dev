@@ -15,10 +15,7 @@ wg_fe_humiliation = {
 		surrender
 		demand_surrender
 	}
-
-	potential = {
-		end_game_years_passed >= 0
-	}
+	
 	possible = {
 		always = yes
 	}

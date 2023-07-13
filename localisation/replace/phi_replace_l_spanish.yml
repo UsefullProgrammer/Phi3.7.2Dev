@@ -180,3 +180,8 @@ sm_curator_think_tank_desc:0 "Al construir una instalación de investigación to
 sm_art_college:0 "Colegio de Arte"
 sm_art_college_desc:1 "Este Colegio de Arte en gravedad cero, operado en conjunto con el cercano Enclave de Artesanos, celebra la belleza del espacio en las obras producidas por sus talentosos estudiantes.\n"
 sm_naval_logistics_office_desc_modifier:2 "Fondeaderos y fondeaderos civiles: §G+2§! §YCapacidad naval§!"
+
+ civic_tooltip_criminal_heritage_effects:3 "Can form criminal §YCommercial Pacts§!\nCan build §YBranch Offices§! on the planet of any regular empire they have no war or active truce with\nCrime on §YBranch Office§! Planets increases Branch Office Value\nCan build special Crime-increasing £building£ §Y$BRANCH_OFFICE_BUILDINGS$§!"
+ tr_supremacy_finish_desc:0 "Unlocks the §YWar Doctrines§! Policies.\nAscension Perks Unlocked: §G+1§!\n£mod_wars_influence_upkeep_mult$ -§G66%§!."
+war_goal_wg_humiliation_desc:0 "War is waged to undermine the enemy regime and the populace's faith in their institutions. \n This war Not cost influence upkeep (for togheter) "
+war_goal_wg_independence_desc:0 "War is waged to secure independence.\nThis war Not cost influence upkeep ( Only for you) "

@@ -187,3 +187,8 @@ origin_tooltip_imperial_vassal_effects:1 "§G- WARNING: Easy Origin for new play
  sm_art_college:0 "Art College"
  sm_art_college_desc:1 "This zero-g Art College, operated in conjunction with the nearby Artisan Enclave, celebrates the beauty of outer space in the works produced by its talented students.\n"
 sm_naval_logistics_office_desc_modifier:2 "Anchorages and civil Anchorages: §G+2§! §YNaval Capacity§!"
+
+ civic_tooltip_criminal_heritage_effects:3 "Can form criminal §YCommercial Pacts§!\nCan build §YBranch Offices§! on the planet of any regular empire they have no war or active truce with\nCrime on §YBranch Office§! Planets increases Branch Office Value\nCan build special Crime-increasing £building£ §Y$BRANCH_OFFICE_BUILDINGS$§!"
+ tr_supremacy_finish_desc:0 "Unlocks the §YWar Doctrines§! Policies.\nAscension Perks Unlocked: §G+1§!\n§Y$mod_wars_influence_upkeep_mult$§! §G-66%§!."
+war_goal_wg_humiliation_desc:0 "War is waged to undermine the enemy regime and the populace's faith in their institutions. \n This war Not cost influence upkeep (for togheter) "
+war_goal_wg_independence_desc:0 "War is waged to secure independence.\nThis war Not cost influence upkeep ( Only for you) "

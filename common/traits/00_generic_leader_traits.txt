@@ -661,6 +661,11 @@ leader_trait_scrapper_2 = {
 		RESOURCE = alloys
 		AMOUNT = 2
 	}
+	inline_script = {
+		script = paragon/leader_resource_produces
+		RESOURCE = minerals
+		AMOUNT = 8
+	}
 	leader_class = { admiral scientist general governor }
 }
 
@@ -716,7 +721,7 @@ leader_trait_entrepreneur_2 = {
 	inline_script = {
 		script = paragon/leader_resource_produces
 		RESOURCE = consumer_goods
-		AMOUNT = 5
+		AMOUNT = 12
 	}
 	leader_class = { admiral scientist general governor }
 	opposites = {

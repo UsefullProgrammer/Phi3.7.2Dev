@@ -1093,7 +1093,7 @@ country_event = {
 			opinion_level = { who = root level >= neutral }
 			is_at_war = yes
 			any_war = {
-				using_war_goal = { type = wg_phi_survive owner = this }
+				using_war_goal = { type = wg_phi_survive owner = prev }
 			}
 		}
 	}

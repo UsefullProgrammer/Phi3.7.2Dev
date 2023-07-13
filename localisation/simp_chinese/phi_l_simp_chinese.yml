@@ -1179,3 +1179,35 @@ sm_curator_think_tank_effect:0 "从科学中心进行社会、工程和物理研
 sm_Governmental_Orbital_Exchange_Market: "轨道交易市场"
 sm_administrative_hub:0 "$building_low_tech_admin_hub$ Orbital"
 sm_Governmental_diplomatic_asset:0 "外交大使馆"
+
+ decision_upgrade_habitat_3:0 "$decision_upgrade_habitat$"
+ decision_upgrade_habitat_3_effects:0 "Further upgrades this §H$habitat_1$§!, granting §Y2 Additional Districts§!."
+ decision_upgrade_habitat_3_effects_short:0 "Upgrades this Habitat"
+ decision_upgrade_habitat_3_desc:0 "$tech_habitat_3_desc$"
+
+ decision_upgrade_habitat_4:0 "$decision_upgrade_habitat$"
+ decision_upgrade_habitat_4_effects:0 "Further upgrades this §H$habitat_1$§!, granting §Y2 Additional Districts§!."
+ decision_upgrade_habitat_4_effects_short:0 "Upgrades this Habitat"
+ decision_upgrade_habitat_4_desc:0 "$tech_habitat_3_desc$"
+
+ decision_upgrade_habitat_5:0 "$decision_upgrade_habitat$"
+ decision_upgrade_habitat_5_effects:0 "Further upgrades this §H$habitat_1$§!, granting §Y2 Additional Districts§!."
+ decision_upgrade_habitat_5_effects_short:0 "Upgrades this Habitat"
+ decision_upgrade_habitat_5_desc:0 "$tech_habitat_3_desc$"
+
+ decision_upgrade_habitat_6:0 "$decision_upgrade_habitat$"
+ decision_upgrade_habitat_6_effects:0 "Further upgrades this §H$habitat_1$§!, granting §Y2 Additional Districts§!."
+ decision_upgrade_habitat_6_effects_short:0 "Upgrades this Habitat"
+ decision_upgrade_habitat_6_desc:0 "$tech_habitat_3_desc$"
+
+ decision_upgrade_habitat_7:0 "$decision_upgrade_habitat$"
+ decision_upgrade_habitat_7_effects:0 "Further upgrades this §H$habitat_1$§!, granting §Y2 Additional Districts§!."
+ decision_upgrade_habitat_7_effects_short:0 "Upgrades this Habitat"
+ decision_upgrade_habitat_7_desc:0 "$tech_habitat_3_desc$"
+
+ humiliated_phi:0 "Humiliate/Demilitarization"
+ humiliated_phi _desc:0 "§LWe were publicly humiliated by another Empire with demilitarization.§! effect: \n 
+$diplo_weight_mult$ §R-0.33§! \n
+$country_alloys_produces_mult$ §R-0.33§! \n
+$country_unity_produces_mult$ §R-0.33§! \n
+$country_naval_cap_mult$ §R-0.33§! "

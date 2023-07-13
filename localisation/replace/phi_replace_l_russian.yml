@@ -172,3 +172,8 @@ tr_synchronicity_machine_finish_desc:3 "§HUnlocks Edict:§! $edict_industrial_m
 war_goal_wg_conquest_desc:1 "War is waged to seize Claimed enemy systems. Using this wargoal to take claims generates §Y25%§! less §YThreat§! for each conquered system.\n$OUR_CLAIMS_ON_ENEMYS$\n$ALLY_CLAIMS_ON_ENEMYS$"
 
 origin_tooltip_imperial_vassal_effects:1 "§G- WARNING: Easy Origin for new players.§!\n- Start as the vassal of an §HAdvanced AI Empire§!.\n- Gain the option to choose a §HSpecialist Empire§! vassal type at the start of the game."
+
+ civic_tooltip_criminal_heritage_effects:3 "Can form criminal §YCommercial Pacts§!\nCan build §YBranch Offices§! on the planet of any regular empire they have no war or active truce with\nCrime on §YBranch Office§! Planets increases Branch Office Value\nCan build special Crime-increasing £building£ §Y$BRANCH_OFFICE_BUILDINGS$§!"
+ tr_supremacy_finish_desc:0 "Unlocks the §YWar Doctrines§! Policies.\nAscension Perks Unlocked: §G+1§!\n£mod_wars_influence_upkeep_mult$ -§G66%§!."
+war_goal_wg_humiliation_desc:0 "War is waged to undermine the enemy regime and the populace's faith in their institutions. \n This war Not cost influence upkeep (for togheter) "
+war_goal_wg_independence_desc:0 "War is waged to secure independence.\nThis war Not cost influence upkeep ( Only for you) "

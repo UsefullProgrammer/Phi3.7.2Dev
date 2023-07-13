@@ -180,3 +180,8 @@ sm_curator_think_tank_desc:0 "관리자들과 학습 및 협력에 집중한 연
 sm_art_college:0 "미술 대학"
 sm_art_college_desc:1 "이 제로 중력 미술 대학은 근처의 장인 군영과 함께 운영되며, 재능 있는 학생들이 제작한 작품에서 우주의 아름다움을 축하합니다.\n"
 sm_naval_logistics_office_desc_modifier:2 "닻고리 및 민간 닻고리 : §G+2§! §Y해군 용량§!"
+
+ civic_tooltip_criminal_heritage_effects:3 "Can form criminal §YCommercial Pacts§!\nCan build §YBranch Offices§! on the planet of any regular empire they have no war or active truce with\nCrime on §YBranch Office§! Planets increases Branch Office Value\nCan build special Crime-increasing £building£ §Y$BRANCH_OFFICE_BUILDINGS$§!"
+ tr_supremacy_finish_desc:0 "Unlocks the §YWar Doctrines§! Policies.\nAscension Perks Unlocked: §G+1§!\n£mod_wars_influence_upkeep_mult$ -§G66%§!."
+war_goal_wg_humiliation_desc:0 "War is waged to undermine the enemy regime and the populace's faith in their institutions. \n This war Not cost influence upkeep (for togheter) "
+war_goal_wg_independence_desc:0 "War is waged to secure independence.\nThis war Not cost influence upkeep ( Only for you) "

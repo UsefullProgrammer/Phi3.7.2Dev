@@ -389,6 +389,7 @@ civic_criminal_heritage = {
 		spy_network_daily_value_mult = 1
 		planet_branch_offices_cost_mult = -0.10
 		intel_decryption_add = 1
+		commercial_pact_mult = -0.25
 	}
 
 	description = "civic_tooltip_criminal_heritage_effects"

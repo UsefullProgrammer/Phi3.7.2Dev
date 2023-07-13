@@ -88,6 +88,7 @@ diplomatic_stance = {
 			ships_upkeep_mult = -0.2
 			diplo_weight_economy_mult = 0.2
 			diplo_weight_naval_mult = -0.2
+			wars_influence_upkeep_mult = 0.5
 		}
 
 		on_enabled = {
@@ -251,6 +252,7 @@ diplomatic_stance = {
 			ships_upkeep_mult = 0.1
 			diplo_weight_economy_mult = -0.1
 			diplo_weight_naval_mult = 0.1
+			wars_influence_upkeep_mult = -0.25
 		}
 
 		on_enabled = {
@@ -325,6 +327,8 @@ diplomatic_stance = {
 			ships_upkeep_mult = 0.2
 			diplo_weight_economy_mult = -0.2
 			diplo_weight_naval_mult = 0.2
+			wars_influence_upkeep_mult = -0.33
+			diplomacy_influence_upkeep_mult = +0.1
 		}
 
 		on_enabled = {
@@ -836,7 +840,7 @@ war_philosophy = {
 			army_defense_damage_mult = 0.5
 			army_attack_morale_mult = 1
 			army_attack_damage_mult = 0.5
-			
+			wars_influence_upkeep_mult = -0.25
 		}
 
 		potential = {
@@ -907,17 +911,22 @@ war_philosophy = {
 			planet_stability_add = 5
 			army_defense_health_mult = 1
 			army_defense_damage_mult = 1
+			wars_influence_upkeep_mult = 0.5
 		}
 
 		AI_weight = {
 			modifier = {
+				factor = 200
+				is_ai = no
+			}
+			modifier = {
 				factor = 5
 				has_ethic = "ethic_fanatic_pacifist"
 			}
-			modifier = {
-				factor = 0
-				NOT = { has_ethic = "ethic_fanatic_pacifist" }
-			}
+			# modifier = {
+			# 	factor = 0
+			# 	NOT = { has_ethic = "ethic_fanatic_pacifist" }
+			# }
 		}
 	}
 }
@@ -2563,7 +2572,7 @@ economic_policy = {
 		}
 		
 		modifier = {
-			trade_value_mult = 0.10
+			commercial_pact_mult = 0.5
 			starbase_trade_collection_range_add = 1
 		}
 		
@@ -2728,7 +2737,7 @@ economic_policy = {
 			country_leader_cap_add = -1
 			planet_pops_consumer_goods_upkeep_mult = 0.25
 			country_trust_cap_add = -50
-			
+			council_agenda_progress_speed = -0.10
 		}
 		AI_weight = {
 			factor = 0
@@ -2744,10 +2753,10 @@ economic_policy = {
 		# 	economic_policy_statecraft
 		# }
 		modifier = {
-			diplo_weight_council_mult = 0.5
+			councilor_skill_add = 1
 			country_society_tech_research_speed = +0.05
 			pop_amenities_usage_mult = 0.20
-			council_agenda_progress_speed = -0.10
+			council_agenda_progress_speed = -0.15
 		}
 
 		AI_weight = {
