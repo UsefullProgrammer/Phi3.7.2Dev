@@ -106,8 +106,8 @@ origin_hegemon_npc_desc:0 "Questa civiltà ha stabilito un contatto precoce con 
 #Fazioni politiche --> federations_l_english.yml
 SUPREMACIST_ISOLATIONIST_NO_FEDERATION_DESC:1 "Permettere che la [Root.Owner.GetName] sia sfruttata dagli interessi alieni §Yunendosi a una Federazione§! e non essendo il suo Presidente scontenterà la [Root.GetName]."
 
-#Guerre e CB
-wg_humiliation_accept:1 "§Y[From.GetName]§! è umiliato, riducendo la loro produzione di §YInfluenza§!, §YUnità§! e §YLeghe§! del §R-33%§!. Anche la loro §YCapacità Navale§! e il §YPeso Diplomatico§! sono ridotti del §R-33%§!. Questo effetto dura per §Y15§! anni\n§Y[Root.GetName]§! guadagna §G+100§! £influence£\n"
+ #Wargoals and CBs
+ wg_humiliation_phi_accept:1 "§Y[From.GetName]§! è umiliato, riducendo la loro produzione di §YInfluenza§!, §YUnità§! del §R-33%§!. Anche la loro §YCapacità Navale§! e il §YPeso Diplomatico§! sono ridotti del §R-33%§! La costruzione di navi costa il 33% in più. Questo effetto dura per §Y15§! anni\n§Y[Root.GetName]§! guadagna §G+100§! £influence£\n"
 #Armi
 MISSILE_1:0 "Missili Nucleari"
 MISSILE_1_DESC:0 "Missili spaziali equipaggiati con testate nucleari ad alto rendimento. Anche se basati sulla vecchia tecnologia pre-spazio, queste armi grezze 'sparare e dimenticare' possono essere sorprendentemente efficaci a distanza.\nVelocità della nave: §G+2.5%§!"
@@ -192,3 +192,8 @@ sm_curator_think_tank_desc:0 "Costruendo una struttura di ricerca interamente in
 sm_art_college:0 "Accademia d'arte"
 sm_art_college_desc:1 "Questa accademia d'arte in gravità zero, gestita in collaborazione con l'enclave degli artigiani nelle vicinanze, celebra la bellezza dello spazio nei lavori prodotti dai suoi talentuosi studenti.\n"
 sm_naval_logistics_office_desc_modifier:2 "Ancoraggi e ancoraggi civili: §G+2§! §YCapacità navale§!"
+
+ civic_tooltip_criminal_heritage_effects:3 "Can form criminal §YCommercial Pacts§!\nCan build §YBranch Offices§! on the planet of any regular empire they have no war or active truce with\nCrime on §YBranch Office§! Planets increases Branch Office Value\nCan build special Crime-increasing £building£ §Y$BRANCH_OFFICE_BUILDINGS$§!"
+ tr_supremacy_finish_desc:0 "Unlocks the §YWar Doctrines§! Policies.\nAscension Perks Unlocked: §G+1§!\n-75% upkeep influence from wars"
+war_goal_wg_humiliation_desc:0 "War is waged to undermine the enemy regime and the populace's faith in their institutions. \n This war Not cost influence upkeep (for togheter) "
+war_goal_wg_independence_desc:0 "War is waged to secure independence.\nThis war Not cost influence upkeep ( Only for you) "

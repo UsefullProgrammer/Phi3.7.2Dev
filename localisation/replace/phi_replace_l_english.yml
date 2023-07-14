@@ -84,7 +84,7 @@
  SUPREMACIST_ISOLATIONIST_NO_FEDERATION_DESC:1 "Allowing the [Root.Owner.GetName] to be exploited by alien interests by §Yjoining a Federation§! and not being its President will displease the [Root.GetName]."
  
  #Wargoals and CBs
- wg_humiliation_accept:1 "§Y[From.GetName]§! is humiliated, reducing their §Yinfluence§!, §Yunity§! and §Yalloys§! production by §R-33%§!. Their §Ynaval capacity§! and §Ydiplomatic weight§! are also reduced by §R-33%§!. This effect lasts for §Y15§! years\n§Y[Root.GetName]§! gains §G+100§! £influence£\n"
+ wg_humiliation_phi_accept:1 "§Y[From.GetName]§! is humiliated, reducing their §Yinfluence§!, §Yunity§! production by §R-33%§!. Their §Ynaval capacity§! and §Ydiplomatic weight§! are also reduced by §R-33%§! Their ship cost increase §R+33%.§! This effect lasts for §Y15§! years\n§Y[Root.GetName]§! gains §G+100§! £influence£\n"
  
  #Civics
  #civic_tooltip_technocracy_effects:2 "£building£ §YCapital Buildings§! replace some £job_administrator£ §Y$job_administrator$§! Jobs with £job_head_researcher£ §Y$job_head_researcher_plural$§!\n§Y$job_researcher_plural$§! also produce §Y0.5§! £unity£ Unity"
@@ -190,5 +190,5 @@ sm_naval_logistics_office_desc_modifier:2 "Anchorages and civil Anchorages: §G+
 
  civic_tooltip_criminal_heritage_effects:3 "Can form criminal §YCommercial Pacts§!\nCan build §YBranch Offices§! on the planet of any regular empire they have no war or active truce with\nCrime on §YBranch Office§! Planets increases Branch Office Value\nCan build special Crime-increasing £building£ §Y$BRANCH_OFFICE_BUILDINGS$§!"
  tr_supremacy_finish_desc:0 "Unlocks the §YWar Doctrines§! Policies.\nAscension Perks Unlocked: §G+1§!\n§Y$mod_wars_influence_upkeep_mult$§! §G-66%§!."
-war_goal_wg_humiliation_desc:0 "War is waged to undermine the enemy regime and the populace's faith in their institutions. \n This war Not cost influence upkeep (for togheter) "
+war_goal_wg_humiliation_desc:0 "War is waged to undermine the enemy regime and the populace's faith in their institutions. \n This war Not cost influence upkeep (for both) "
 war_goal_wg_independence_desc:0 "War is waged to secure independence.\nThis war Not cost influence upkeep ( Only for you) "

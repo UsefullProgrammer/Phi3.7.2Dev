@@ -83,7 +83,7 @@
  SUPREMACIST_ISOLATIONIST_NO_FEDERATION_DESC:1 "Allowing the [Root.Owner.GetName] to be exploited by alien interests by §Yjoining a Federation§! and not being its President will displease the [Root.GetName]."
  
  #Wargoals and CBs
- wg_humiliation_accept:1 "§Y[From.GetName]§! is humiliated, reducing their §Yinfluence§!, §Yunity§! and §Yalloys§! production by §R-33%§!. Their §Ynaval capacity§! and §Ydiplomatic weight§! are also reduced by §R-33%§!. This effect lasts for §Y15§! years\n§Y[Root.GetName]§! gains §G+100§! £influence£\n"
+ wg_humiliation_phi_accept:1 "§Y[From.GetName]§! is humiliated, reducing their §Yinfluence§!, §Yunity§! production by §R-33%§!. Their §Ynaval capacity§! and §Ydiplomatic weight§! are also reduced by §R-33%§! Their ship cost increase §R+33%.§! This effect lasts for §Y15§! years\n§Y[Root.GetName]§! gains §G+100§! £influence£\n"
  
  #Civics
  #civic_tooltip_technocracy_effects:2 "£building£ §YCapital Buildings§! replace some £job_administrator£ §Y$job_administrator$§! Jobs with £job_head_researcher£ §Y$job_head_researcher_plural$§!\n§Y$job_researcher_plural$§! also produce §Y0.5§! £unity£ Unity"
