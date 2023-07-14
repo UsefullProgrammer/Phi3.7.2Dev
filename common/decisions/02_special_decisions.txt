@@ -2194,7 +2194,7 @@ decision_upgrade_habitat = {
 	owned_planets_only = yes
 	icon = decision_satellite_in_orbit
 
-	enactment_time = 720
+	enactment_time = 360
 	resources = {
 		category = decisions
 		cost = {
@@ -2268,7 +2268,7 @@ decision_upgrade_habitat_2 = {
 	owned_planets_only = yes
 	icon = decision_satellite_in_orbit
 
-	enactment_time = 1440
+	enactment_time = 720
 	resources = {
 		category = decisions
 		cost = {
@@ -2280,7 +2280,7 @@ decision_upgrade_habitat_2 = {
 				}
 			}
 			influence = 50
-			alloys = 1500
+			alloys = 1250
 		}
 		cost = {
 			trigger = {
@@ -2289,7 +2289,7 @@ decision_upgrade_habitat_2 = {
 				}
 			}
 			influence = 40
-			alloys = 1200
+			alloys = 1000
 		}
 	}
 
@@ -2327,7 +2327,6 @@ decision_upgrade_habitat_2 = {
 		weight = 1
 	}
 }
-
 # Crystalline Empire decision
 decision_crystalline_refugees = {
 	owned_planets_only = yes
