@@ -21,3 +21,25 @@ FW_cb_border = {
         # }
 	}
 }
+cb_phi_war_reparation = {
+	show_in_diplomacy = yes
+	show_notification = no
+	potential = {
+		is_country_type = default
+		NOR = {
+			is_in_federation_with = from
+			from = { is_homicidal = yes }
+			is_homicidal = yes
+		}
+		is_at_war = yes
+	}
+	is_valid = {
+		from = {
+			is_at_war = yes
+			any_war = {
+				is_war_participant = { who = from side = attackers }
+				is_war_participant = { who = root side = defenders }
+			}
+		}
+	}
+}
