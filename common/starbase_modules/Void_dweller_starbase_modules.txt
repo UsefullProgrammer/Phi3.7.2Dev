@@ -155,13 +155,13 @@ starm_science_hub = {
 		}
 
 		produces = {
-			society_research = 4
+			physics_research = 4
 			engineering_research = 4
 		}
 
 		produces = {
 			trigger = { has_starbase_building = starm_science_booster }
-			society_research = 2
+			physics_research = 2
 			engineering_research = 2
 		}
 
