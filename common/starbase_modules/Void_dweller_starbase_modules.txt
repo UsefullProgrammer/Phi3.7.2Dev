@@ -13,7 +13,7 @@ civilian_anchorage = {
 		category = starbase_modules
 		cost = {
 			alloys = 50
-            influence = 50
+            influence = 10
 		}
 
 		upkeep = {
@@ -151,7 +151,7 @@ starm_science_hub = {
 		category = starbase_modules
 		cost = {
 			alloys = 50
-			influence = 50
+			influence = 25
 		}
 
 		produces = {
@@ -203,7 +203,7 @@ starm_culture_hub = {
 		category = starbase_modules
 		cost = {
 			alloys = 50
-			influence = 50
+			influence = 25
 		}
 
 		produces = {
