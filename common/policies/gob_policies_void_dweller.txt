@@ -1,0 +1,37 @@
+research_lab_focus = {
+	potential = {
+		has_origin = origin_void_dwellers
+	}
+
+	option = {
+		name = "focus_physics"
+
+		policy_flags = { focus_physics }
+		modifier = {
+		}
+		
+		AI_weight = {
+			factor = 10
+			modifier = {
+				factor = 100
+				years_passed < 20
+			}
+		}
+	}
+
+	option = {
+		name = "focus_engineering"
+
+		policy_flags = { focus_engineering }
+		modifier = {
+		}
+
+		AI_weight = {
+			factor = 1
+			modifier = {
+				factor = 100
+				years_passed > 20
+			}
+		}
+	}
+}
