@@ -168,10 +168,10 @@ EDICT_DESC:8 "\n§E§HEmpire Edicts§! are divided into edicts and campaigns, an
 
 tr_synchronicity_machine_finish_desc:3 "§HUnlocks Edict:§! $edict_industrial_maintenance$.\n$MOD_PLANETARY_ASCENSION_EFFECT_MULT$: §G+25%§!\nAscension Perks Unlocked: §G+1§!\nAutomatic Resettlement Chance: §G+30%§!"
 
-
+EMPIRE_SIZE_TOTAL_2:0 "$VALUE|0Y$"
  empire_sprawl_over_cap:1 "$VALUE|$"
  #EMPIRE_SIZE_EFFECTS:5 "At our current §Y$EMPIRE_SIZE$§! of [This.empire_sprawl_over_cap] $empire_sprawl_over_cap$, we have the following modifiers:"
- EMPIRE_SIZE_NO_EFFECTS:4 "While §Y$EMPIRE_SIZE$§! is at or below §Y$EMPIRE_SIZE_TOTAL_2$§! + §YAdministration Capacity§!, no other costs are being modified." #actually you are in [Root.owner.empire_sprawl_over_cap] $empire_sprawl_over_cap$
+ EMPIRE_SIZE_NO_EFFECTS:4 "While §Y$EMPIRE_SIZE$§! is at or below §Y100§! + §YAdministration Capacity§!, no other costs are being modified." #actually you are in [Root.owner.empire_sprawl_over_cap] $empire_sprawl_over_cap$
  
  OUR_CLAIMS_ON_ENEMY:1 " " #fix problem that ssend you can gt claim when not true.
  ALLY_CLAIMS_ON_ENEMY:1 " "

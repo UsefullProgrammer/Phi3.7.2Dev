@@ -1091,10 +1091,10 @@ OFFSPRING_CORVETTE_MID_S4:0 "$CORVETTE_MID_S4$"
 
 casus_belli_FW_cb_border:0 "Frontiera chiusa"
 war_goal_FW_wg_open_border: "Aprire la frontiera"
-war_goal_FW_wg_open_border_desc: "Iniziare una guerra per aprire le frontiere di una civiltà ostile e ottenere 20 anni di diritto di passaggio.\n\nIl nemico §Gnon può§! settare sopravvivere alla guerra, §Rnon puoi§! ottenere rivendicazioni!"
+war_goal_FW_wg_open_border_desc: "Iniziare una guerra per aprire le frontiere di una civiltà ostile e ottenere 20 anni di diritto di passaggio.\n\nIl nemico §Gnon può§! settare sopravvivere alla guerra, tu §Rnon puoi§! ottenere rivendicazioni!"
 z_fw_open_border_tooltip:0 "§Y[From.GetName]§! è stato sconfitto, hanno abbassato la testa e hanno accettato di aprire la loro frontiera per noi nei prossimi §Y20§! anni.\n§Y[Root.GetName]§! ha guadagnato §G+100§! £influenza£\n"
 war_goal_FW_wg_open_border_long: "Lunga apertura della frontiera"
-war_goal_FW_wg_open_border_long_desc: "Iniziare una guerra per aprire le frontiere di civiltà ostili, ottenere 50 anni di diritto di passaggio e mettere fine alla competizione.\n\nIl nemico §Gnon può§! settare sopravvivere alla guerra, §Rnon puoi§! ottenere rivendicazioni!"
+war_goal_FW_wg_open_border_long_desc: "Iniziare una guerra per aprire le frontiere di civiltà ostili, ottenere 50 anni di diritto di passaggio e mettere fine alla competizione.\n\nIl nemico §Gnon può§! settare sopravvivere alla guerra, tu §Rnon puoi§! ottenere rivendicazioni!"
 z_fw_open_border_long_tooltip:0 "§Y[From.GetName]§! è stato completamente sconfitto, hanno dovuto abbassare la testa e hanno accettato di aprire la loro frontiera per noi nei prossimi §Y50§! anni. Allo stesso tempo, abbiamo anche messo fine allo stato di rivalità con loro, ma ovviamente non sono d'accordo con questo risultato e un giorno nel futuro contrattaccheranno.\n§Y[Root.GetName]§! ha guadagnato §G+150§! £influenza£\n"
 z_fw_opinion_wg_open_boder_long:0 "Essere liberi nel nostro territorio"
 
@@ -1158,7 +1158,7 @@ MINOR_ARTIFACT_PRECURSOR_ALERT_MESSAGE_TITLE:0 "Gli artefatti minori possono ess
 MINOR_ARTIFACT_PRECURSOR_ALERT_MESSAGE:0 "Gli artefatti minori possono essere studiati per ottenere una conoscenza sui precursori!"
 
 PHI_EMPIRE_IN_SURVIVE_AVAIBLE_TITLE:0 "Un impero cerca di sopravvivere"
-PHI_EMPIRE_IN_SURVIVE_AVAIBLE_ALERT_MESSAGE:0 "Un impero  $target|Y$ sta cercando di sopravvivere in una guerra impari, potresti aiutarlo prima §Ymigliorando le relazioni§! e poi cliccando sull'editto §Y$edict_phi_join_defensive_war$§!"
+PHI_EMPIRE_IN_SURVIVE_AVAIBLE_ALERT_MESSAGE:0 "Un impero $EMPIRE|Y$ sta cercando di sopravvivere in una guerra impari, potresti aiutarlo prima §Ymigliorando le relazioni§! e poi cliccando sull'editto §Y$edict_phi_join_defensive_war$§!"
 
 sm_nebula_alloy_refinery:0 "Raffineria di leghe"
 sm_nebula_alloy_refinery_desc:0 "Raffineria di leghe ad alta tecnologia a gravità 0"
@@ -1182,6 +1182,11 @@ sm_curator_think_tank_effect:0 "Ricerca sulla società, l'ingegneria e la fisica
 sm_Governmental_Orbital_Exchange_Market: "Mercato di scambio orbitale"
 sm_administrative_hub:0 "$building_low_tech_admin_hub$ orbitale"
 sm_Governmental_diplomatic_asset:0 "Ambasciata diplomatica"
+
+phi_game_start.1.phi_realistic_upkeep_researcher_allowed: "Il ricercatore con costo realistico è §GCONSENTITO§! §G(opzione bellissima)§!"
+phi_game_start.1.phi_realistic_upkeep_researcher_allowedTT: "§YRicercatore con costo realistico = Consentito§!\nPer i ricercatori ingegneri è richiesto un piccolo costo di lega e minerali.\nPer i ricercatori fisici è richiesto un piccolo costo di beni di consumo o lega (per gli alveari), entrambi richiedono anche la manutenzione della sostanza di base (energia per gli altri imperi e cibo per gli alveari)."
+phi_game_start.1.phi_realistic_upkeep_researcher_disallowed: "Il ricercatore con costo realistico è §RNON CONSENTITO§! §Y(opzione predefinita)§!"
+phi_game_start.1.phi_realistic_upkeep_researcher_disallowedTT: "§YRicercatore con costo arcade = Consentito§! \nTutti i ricercatori fisici e ingegneri usano solo §Yenergia§! per il costo"
 
  decision_upgrade_habitat_3:0 "$decision_upgrade_habitat$"
  decision_upgrade_habitat_3_effects:0 "Ulteriori miglioramenti per questo §H$habitat_1$§!, che conferiscono §Y2 Additional Districts§!."
@@ -1207,3 +1212,24 @@ sm_Governmental_diplomatic_asset:0 "Ambasciata diplomatica"
  decision_upgrade_habitat_7_effects:0 "Ulteriori miglioramenti per questo §H$habitat_1$§!, che conferiscono §Y3 Additional Districts§!."
  decision_upgrade_habitat_7_effects_short:0 "Migliora questo Habitat"
  decision_upgrade_habitat_7_desc:0 "$tech_habitat_3_desc$"
+
+war_goal_wg_phi_war_reparation: "Pagamento riparazioni di guerra"
+war_goal_wg_phi_war_reparation_desc: "Richiedi il pagamento della riparazione di guerra in §Ycrediti energetici§!!"
+has_criminal_branch_office_our:0 "§RAbbiamo un ufficio di ramo criminale su di loro§!"
+has_criminal_branch_office:0 "§RHanno un ufficio di ramo criminale su di noi§!"
+wars: "Guerre"
+in_war : "In guerra"
+mod_wars_influence_upkeep_mult: "Mantenimento dell'influenza dalle guerre"
+CRIMINAL_BRANCH_OFFICE_NOT_COMMERCIAL_PACT:1 "£trigger_no£ §RNon dobbiamo avere un Patto Commerciale con il proprietario di questo pianeta per stabilire un $BRANCH_OFFICE$ qui§!"
+
+wg_phi_war_rep_accept_us:0 "§Y[Root.GetName]§! guadagna per ogni popolazione di §Y[From.GetName]§! : \n§G+150§! £energy£ e §Y[From.GetName]§! avrà una riduzione del 40% dei §Ycrediti energetici§! per 10 anni\n\nNon §Rpuoi§! ottenere rivendicazioni!"
+casus_belli_cb_phi_war_reparation:0 "Riparazione di guerra"
+
+policy_research_lab_focus:0 "focus del $district_hab_science$ nel laboratorio di ricerca"
+policy_research_lab_focus_desc:1 "Concentriamo la ricerca nel $district_hab_science$ specifici"
+focus_physics:0 "Focus sulla fisica"
+focus_physics_name:0 "Focalizzazione della fisica nel $district_hab_science$"
+focus_physics_desc:0 "Aggiunge 1 posto di lavoro per la fisica nel $district_hab_science$"
+focus_engineering:0 "Focus sulla l'ingegneria"
+focus_engineering_name:0 "Focalizzazione dell'ingegneria nel $district_hab_science$"
+focus_engineering_desc:0 "Aggiunge 1 posto di lavoro per l'ingegneria nel $district_hab_science$"

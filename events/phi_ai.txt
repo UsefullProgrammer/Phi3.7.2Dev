@@ -1086,6 +1086,7 @@ country_event = {
 				}
 			}
 		}
+		
 		is_homicidal = no
 		has_country_flag = phi_lagger
 		any_country = {
@@ -1105,6 +1106,14 @@ country_event = {
 				#has_country_flag = phi_lagger
 				opinion_level = { who = root level >= neutral }
 				is_homicidal = no
+				OR = {
+					mid_game_years_passed > 25
+					AND = {
+						NOT = { has_country_flag = is_advanced_start_AI }
+						NOT = { has_origin = origin_imperial_vassal_overlord }
+						NOT = { has_origin = origin_broken_shackles }
+					}
+				}
 				any_war = {
 					using_war_goal = { type = wg_phi_survive owner = prev }
 					NOT = { is_war_participant = { who = root } }

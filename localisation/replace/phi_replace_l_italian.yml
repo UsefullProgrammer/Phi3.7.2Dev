@@ -161,7 +161,7 @@ EMPIRE_SIZE_TOTAL_2:0 "$VALUE|0Y$"
 ADMIN_CAP_TOTAL_2:0 "$VALUE|Y$"
 ADMIN_CAP_VALUE_2:0 "$VALUE|Y$"
 #ADMIN_CAP_VALUE:0 "$MOD_COUNTRY_ADMIN_CAP_ADD$: $VALUE|Y$"($ADMIN_CAP_VALUE_2$)
-EMPIRE_SIZE_NO_EFFECTS:4 "Fino a quando §Y$EMPIRE_SIZE$§! è uguale o inferiore a §Y$EMPIRE_SIZE_TOTAL_2$§! + §YCapacità Amministrativa§! , nessun altro costo viene modificato."
+EMPIRE_SIZE_NO_EFFECTS:4 "Fino a quando §Y$EMPIRE_SIZE$§! è uguale o inferiore a §Y100§! + §YCapacità Amministrativa§! , nessun altro costo viene modificato."
 BuildingS_total:0 "$MOD_PLANET_MAX_BUILDINGS_ADD$: $VALUE|Y$"
 
 #ascension perk
@@ -193,7 +193,8 @@ sm_art_college:0 "Accademia d'arte"
 sm_art_college_desc:1 "Questa accademia d'arte in gravità zero, gestita in collaborazione con l'enclave degli artigiani nelle vicinanze, celebra la bellezza dello spazio nei lavori prodotti dai suoi talentuosi studenti.\n"
 sm_naval_logistics_office_desc_modifier:2 "Ancoraggi e ancoraggi civili: §G+2§! §YCapacità navale§!"
 
- civic_tooltip_criminal_heritage_effects:3 "Can form criminal §YCommercial Pacts§!\nCan build §YBranch Offices§! on the planet of any regular empire they have no war or active truce with\nCrime on §YBranch Office§! Planets increases Branch Office Value\nCan build special Crime-increasing £building£ §Y$BRANCH_OFFICE_BUILDINGS$§!"
- tr_supremacy_finish_desc:0 "Unlocks the §YWar Doctrines§! Policies.\nAscension Perks Unlocked: §G+1§!\n-75% upkeep influence from wars"
-war_goal_wg_humiliation_desc:0 "War is waged to undermine the enemy regime and the populace's faith in their institutions. \n This war Not cost influence upkeep (for togheter) "
-war_goal_wg_independence_desc:0 "War is waged to secure independence.\nThis war Not cost influence upkeep ( Only for you) "
+civic_tooltip_criminal_heritage_effects:3 "Posso formare §YPatti Commerciali§! criminale\nPosso costruire §YFiliali§! sul pianeta di qualsiasi impero regolare con cui non ho una guerra o una tregua attiva\nIl crimine sulle Filiali aumenta il loro valore\nPosso costruire speciali £edifici£ che aumentano il crimine come i §Y$BRANCH_OFFICE_BUILDINGS$§!"
+tr_supremacy_finish_desc:0 "Sblocca le Politiche delle §YDottrine di Guerra§!\nPerk di Ascensione Sbloccati: §G+1§!\n-75% di mantenimento dell'influenza dalle guerre"
+war_goal_wg_humiliation_desc:0 "La guerra viene combattuta per minare il regime nemico e la fede della popolazione nelle loro istituzioni. \nQuesta guerra non costa mantenimento dell'influenza (per entrambi)"
+war_goal_wg_independence_desc:0 "La guerra viene combattuta per garantire l'indipendenza.\nQuesta guerra non costa mantenimento dell'influenza (Solo per te)"
+

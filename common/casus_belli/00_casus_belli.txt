@@ -578,6 +578,10 @@ cb_phi_survive = {
 					is_war_participant = { who = prev side = attackers }
 					is_war_participant = { who = root side = defenders }
 					War_Valid_survive = yes #wg border wg_end_threat_ae and humiliation
+					NOR = {
+						using_war_goal = { type = wg_declared_crisis owner = attacker }
+						using_war_goal = { type = wg_humiliation owner = attacker }
+					}
 				}
 			}
 		}

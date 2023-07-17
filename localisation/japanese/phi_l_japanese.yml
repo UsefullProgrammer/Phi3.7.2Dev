@@ -1213,3 +1213,24 @@ $diplo_weight_mult$ §R-0.33§! \n
 $country_alloys_produces_mult$ §R-0.33§! \n
 $country_unity_produces_mult$ §R-0.33§! \n
 $country_naval_cap_mult$ §R-0.33§! "
+
+war_goal_wg_phi_war_reparation: "Pay War reparation"
+war_goal_wg_phi_war_reparation_desc: "Ask pay war reparation in energy credits!"
+has_criminal_branch_office_our:0 "§RWe have criminal branch office on Their§!"
+has_criminal_branch_office:0 "§RThey have criminal branch office on our§!"
+wars: "Wars"
+in_war : "Wars"
+mod_wars_influence_upkeep_mult: "Influence upkeep from wars"
+CRIMINAL_BRANCH_OFFICE_NOT_COMMERCIAL_PACT:1 "£trigger_no£ §RWe must NOT have a Commercial Pact with the owner of this planet in order to establish a $BRANCH_OFFICE$ here§!"
+
+wg_phi_war_rep_accept_us:0 "§Y[Root.GetName]§! gains for every pop of §Y[From.GetName]§! : \n§G+150§! £energy£ and §Y[From.GetName]§! for 10 years will have -40% energy credits\n\nYou §Rcan't§! get claim!"
+casus_belli_cb_phi_war_reparation:0 "War reparation"
+
+policy_research_lab_focus:0 "$district_hab_science$ focus"
+policy_research_lab_focus_desc:1 "Can focus research on $district_hab_science$"
+focus_physics:0 "Focus physics"
+focus_physics_name:0 "Focus physics $district_hab_science$"
+focus_physics_desc:0 "Add 1 physic job at $district_hab_science$"
+focus_engineering:0 "Focus engineering"
+focus_engineering_name:0 "Focus engineering $district_hab_science$"
+focus_engineering_desc:0 "Add 1 engineering job at $district_hab_science$"
