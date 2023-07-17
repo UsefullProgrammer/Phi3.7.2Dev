@@ -25,5 +25,8 @@ spriteTypes = {
         masking_texture = "gfx/interface/situation_log/event_mask.dds"
         texturefile = "gfx/interface/icons/message/message_join_defensive_war.dds"
     }
-    
+    spriteType = {
+    	name = "GFX_wg_phi_war_reparation"
+    	texturefile = "gfx/interface/icons/diplomacy/war_reparation.dds"
+	}
 }
