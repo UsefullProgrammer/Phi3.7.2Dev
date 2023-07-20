@@ -3028,6 +3028,7 @@ tech_doctrine_navy_size_1 = {
 
 	modifier = {
 		#country_naval_cap_add = 30
+		ship_starting_experience_add = 10
 		country_naval_cap_mult = 0.05
 	}
 
@@ -3060,6 +3061,7 @@ tech_doctrine_navy_size_2 = {
 
 	modifier = {
 		#country_naval_cap_add = 30
+		country_leader_cap_add = 1
 		country_naval_cap_mult = 0.05
 	}
 
@@ -3092,6 +3094,7 @@ tech_doctrine_navy_size_3 = {
 
 	modifier = {
 		#country_naval_cap_add = 30
+		ship_starting_experience_add = 50
 		country_naval_cap_mult = 0.05
 	}
 
@@ -3124,6 +3127,7 @@ tech_doctrine_navy_size_4 = {
 
 	modifier = {
 		#country_naval_cap_add = 30
+		admiral_skill_levels = 1
 		country_naval_cap_mult = 0.05
 	}
 

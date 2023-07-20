@@ -152,8 +152,8 @@ ruler = {
 			has_trait = trait_void_dweller_1
 		}
 		key = trait_void_dweller_1
-		species_empire_size_mult = -0.5
-		pop_housing_usage_mult = -0.7
+		species_empire_size_mult = -0.25
+		pop_housing_usage_mult = -0.5
 	}
 
 	triggered_planet_modifier = {
@@ -393,8 +393,8 @@ specialist = {
 			has_trait = trait_void_dweller_1
 		}
 		key = trait_void_dweller_1
-		species_empire_size_mult = -0.5
-		pop_housing_usage_mult = -0.5
+		species_empire_size_mult = -0.1
+		pop_housing_usage_mult = -0.25
 	}
 
 	triggered_planet_modifier = {
