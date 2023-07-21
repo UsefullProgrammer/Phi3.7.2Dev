@@ -1,0 +1,20 @@
+Comunity_help_weak = {
+	if = {
+		limit = { 
+			I_have_weak_fleet = yes 
+		}
+		add_modifier = { modifier = phi_fleet_bonus days = 360 }
+	}
+	if = {
+		limit = { 
+			I_have_weak_technology = yes 
+		}
+		add_modifier = { modifier = phi_tech_bonus days = 360 }
+	}
+	if = {
+		limit = { 
+			I_have_weak_economy = yes 
+		}
+		add_modifier = { modifier = phi_economy_bonus days = 360 }
+	}
+}

@@ -44,7 +44,8 @@ on_yearly_pulse_country = {
 		phi_ai.10				#send alloys to fed prez
 		phi_ai.15				#attack bbeg
 		phi_ai.17				#refines the capital planet of gestalt
-		
+		phi_ai.30				#yearly checked - Set Flag washuman
+		#enhanced_diplomacy.10 #give bonus galactic community to more weak.
 	}
 }
 

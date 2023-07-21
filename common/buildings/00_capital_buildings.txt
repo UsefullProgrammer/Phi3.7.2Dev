@@ -1189,6 +1189,7 @@ building_machine_capital = {
 		job_maintenance_drone_add = 2
 		planet_max_buildings_add = @buildings_t2
 		defense_armies_add = @tier_2_capital_defense_armies
+		planet_max_branch_office_buildings_add = 1
 	}
 
 	inline_script = {
@@ -1336,6 +1337,7 @@ building_machine_major_capital = {
 		job_maintenance_drone_add = 3
 		planet_max_buildings_add = @buildings_t3
 		defense_armies_add = @tier_3_capital_defense_armies
+		planet_max_branch_office_buildings_add = 2
 	}
 
 	inline_script = {
@@ -1491,6 +1493,7 @@ building_machine_system_capital = {
 		job_maintenance_drone_add = 4
 		planet_max_buildings_add = @buildings_t4
 		defense_armies_add = @tier_4_capital_defense_armies
+		planet_max_branch_office_buildings_add = 4
 	}
 	inline_script = {
 		script = buildings/on_all_capital_buildings
@@ -1679,6 +1682,7 @@ building_hive_capital = {
 		job_patrol_drone_add = 1
 		planet_max_buildings_add = @buildings_t2
 		defense_armies_add = @tier_2_capital_defense_armies
+		planet_max_branch_office_buildings_add = 1
 	}
 
 	inline_script = {
@@ -1794,6 +1798,7 @@ building_hive_major_capital = {
 		job_patrol_drone_add = 2
 		planet_max_buildings_add = @buildings_t4
 		defense_armies_add = @tier_3_capital_defense_armies
+		planet_max_branch_office_buildings_add = 2
 	}
 
 	inline_script = {
@@ -3426,6 +3431,7 @@ building_imperial_machine_capital = {
 		planet_max_buildings_add = 11
 		planet_max_branch_office_buildings_add = 3
 		defense_armies_add = @tier_4_capital_defense_armies
+		planet_max_branch_office_buildings_add = 4
 	}
 
 	inline_script = {
@@ -3591,6 +3597,7 @@ building_imperial_hive_capital = {
 		planet_max_buildings_add = 11
 		planet_max_branch_office_buildings_add = 3
 		defense_armies_add = @tier_4_capital_defense_armies
+		planet_max_branch_office_buildings_add = 4
 	}
 
 	inline_script = {

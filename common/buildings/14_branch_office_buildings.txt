@@ -9,9 +9,8 @@ building_private_mining_consortium = {
 	base_buildtime = @b1_time
 
 	owner_type = corporate
-
+	
 	category = resource
-
 	potential = {
 		has_branch_office = yes
 		branch_office_owner = {
@@ -24,10 +23,27 @@ building_private_mining_consortium = {
 			is_planet_class = pc_machine
 			is_planet_class = pc_city
 		}
+		
 	}
 
-	planet_modifier = {
-		job_miner_add = 1
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			Can_Branch_office_on_gestait = yes
+			owner = { is_gestalt = yes }
+		}
+		modifier = {
+			job_mining_drone_add = 1
+		}
+	}
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { is_gestalt = no }
+		}
+		modifier = {
+			job_miner_add = 1
+		}
 	}
 
 	resources = {
@@ -83,6 +99,13 @@ building_food_conglomerate = {
 			is_planet_class = pc_hive
 			is_planet_class = pc_machine
 			is_planet_class = pc_relic
+		}
+		OR = {
+			Can_Branch_office_on_gestait = no
+			AND = {
+				Can_Branch_office_on_gestait = yes
+				owner = { is_gestalt = no }
+			}
 		}
 	}
 
@@ -163,6 +186,13 @@ building_virtual_entertainment_studios = {
 	potential = {
 		has_branch_office = yes
 		branch_office_owner = { is_criminal_syndicate = no }
+		OR = {
+			Can_Branch_office_on_gestait = no
+			AND = {
+				Can_Branch_office_on_gestait = yes
+				owner = { is_gestalt = no }
+			}
+		}
 	}
 
 	planet_modifier = {
@@ -236,6 +266,13 @@ building_private_shipyards = {
 			is_ai = no
 			is_criminal_syndicate = no
 		}
+		OR = {
+			Can_Branch_office_on_gestait = no
+			AND = {
+				Can_Branch_office_on_gestait = yes
+				owner = { is_gestalt = no }
+			}
+		}
 	}
 
 	planet_modifier = {
@@ -291,6 +328,13 @@ building_military_contractors = {
 			is_ai = no
 			is_criminal_syndicate = no
 		}
+		OR = {
+			Can_Branch_office_on_gestait = no
+			AND = {
+				Can_Branch_office_on_gestait = yes
+				owner = { is_gestalt = no }
+			}
+		}
 	}
 
 	country_modifier = {
@@ -330,6 +374,13 @@ building_public_relations_office = {
 	potential = {
 		has_branch_office = yes
 		branch_office_owner = { is_criminal_syndicate = no }
+		OR = {
+			Can_Branch_office_on_gestait = no
+			AND = {
+				Can_Branch_office_on_gestait = yes
+				owner = { is_gestalt = no }
+			}
+		}
 	}
 
 	planet_modifier = {
@@ -383,6 +434,13 @@ building_private_research_initiative = {
 	potential = {
 		has_branch_office = yes
 		branch_office_owner = { is_criminal_syndicate = no }
+		OR = {
+			Can_Branch_office_on_gestait = no
+			AND = {
+				Can_Branch_office_on_gestait = yes
+				owner = { is_gestalt = no }
+			}
+		}
 	}
 
 	planet_modifier = {
@@ -441,6 +499,7 @@ building_amusement_megaplex = {
 		has_branch_office = yes
 		branch_office_owner = { is_criminal_syndicate = no }
 		branch_office_owner = { NOT = { has_origin = origin_toxic_knights } }
+
 	}
 
 	planet_modifier = {
@@ -483,6 +542,13 @@ building_commercial_forum = {
 	potential = {
 		has_branch_office = yes
 		branch_office_owner = { is_criminal_syndicate = no }
+		OR = {
+			Can_Branch_office_on_gestait = no
+			AND = {
+				Can_Branch_office_on_gestait = yes
+				owner = { is_gestalt = no }
+			}
+		}
 	}
 
 	planet_modifier = {
@@ -516,6 +582,13 @@ building_corporate_embassy = {
 	potential = {
 		has_branch_office = yes
 		branch_office_owner = { is_criminal_syndicate = no }
+		OR = {
+			Can_Branch_office_on_gestait = no
+			AND = {
+				Can_Branch_office_on_gestait = yes
+				owner = { is_gestalt = no }
+			}
+		}
 	}
 
 	allow = {
@@ -925,6 +998,13 @@ building_syndicate_outreach_office = {
 	potential = {
 		has_branch_office = yes
 		branch_office_owner = { is_criminal_syndicate = yes }
+		OR = {
+			Can_Branch_office_on_gestait = no
+			AND = {
+				Can_Branch_office_on_gestait = yes
+				owner = { is_gestalt = no }
+			}
+		}
 	}
 
 	planet_modifier = {
@@ -979,6 +1059,13 @@ building_illicit_research_labs = {
 	potential = {
 		has_branch_office = yes
 		branch_office_owner = { is_criminal_syndicate = yes }
+		OR = {
+			Can_Branch_office_on_gestait = no
+			AND = {
+				Can_Branch_office_on_gestait = yes
+				owner = { is_gestalt = no }
+			}
+		}
 	}
 
 	planet_modifier = {
@@ -1038,6 +1125,13 @@ building_smuggling_rings = {
 	potential = {
 		has_branch_office = yes
 		branch_office_owner = { is_criminal_syndicate = yes }
+		OR = {
+			Can_Branch_office_on_gestait = no
+			AND = {
+				Can_Branch_office_on_gestait = yes
+				owner = { is_gestalt = no }
+			}
+		}
 	}
 
 	planet_modifier = {
@@ -1072,6 +1166,13 @@ building_disinformation_center = {
 	potential = {
 		has_branch_office = yes
 		branch_office_owner = { is_criminal_syndicate = yes }
+		OR = {
+			Can_Branch_office_on_gestait = no
+			AND = {
+				Can_Branch_office_on_gestait = yes
+				owner = { is_gestalt = no }
+			}
+		}
 	}
 
 	allow = {
@@ -1132,6 +1233,13 @@ building_subversive_shrine = {
 			has_valid_civic = civic_gospel_of_the_masses
 			is_criminal_syndicate = yes
 		}
+		OR = {
+			Can_Branch_office_on_gestait = no
+			AND = {
+				Can_Branch_office_on_gestait = yes
+				owner = { is_gestalt = no }
+			}
+		}
 	}
 	planet_modifier = {
 		job_preacher_add = 2
@@ -1178,6 +1286,13 @@ building_temple_of_prosperity = {
 		branch_office_owner = {
 			has_valid_civic = civic_gospel_of_the_masses
 			is_criminal_syndicate = no
+		}
+		OR = {
+			Can_Branch_office_on_gestait = no
+			AND = {
+				Can_Branch_office_on_gestait = yes
+				owner = { is_gestalt = no }
+			}
 		}
 	}
 
@@ -1273,6 +1388,13 @@ building_xeno_tourism_agency = {
 		has_branch_office = yes
 		branch_office_owner = {
 			is_ai = no
+		}
+		OR = {
+			Can_Branch_office_on_gestait = no
+			AND = {
+				Can_Branch_office_on_gestait = yes
+				owner = { is_gestalt = no }
+			}
 		}
 	}
 
@@ -1408,6 +1530,13 @@ building_corporate_clinics = {
 	potential = {
 		has_branch_office = yes
 		branch_office_owner = { has_valid_civic = civic_private_healthcare_corporate }
+		OR = {
+			Can_Branch_office_on_gestait = no
+			AND = {
+				Can_Branch_office_on_gestait = yes
+				owner = { is_gestalt = no }
+			}
+		}
 	}
 
 	on_built = {

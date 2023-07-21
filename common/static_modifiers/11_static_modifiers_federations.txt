@@ -232,6 +232,7 @@ resolution_mutualdefense_the_readied_shield = {
 	diplo_weight_naval_mult = 0.2
 	country_naval_cap_add = 20
 	ships_upkeep_mult = 0.05
+	wars_influence_upkeep_mult = -0.25
 }
 
 resolution_mutualdefense_naval_weight = {
@@ -245,6 +246,7 @@ resolution_rulesofwar_guardian_angels = {
 	army_defense_morale_mult = 1
 	army_defense_health_mult = 1
 	army_defense_damage_mult = 1
+	wars_influence_upkeep_mult = 0.25
 	armies_upkeep_mult = 1
 }
 
@@ -278,6 +280,7 @@ resolution_rulesofwar_demobilization_initiative = {
 	country_war_exhaustion_mult = -0.05
 	country_naval_cap_mult = -0.25
 	pop_ethic_pacifist_attraction_mult = 0.5
+	wars_influence_upkeep_mult = 1
 }
 
 resolution_galacticstudies_cooperative_research_channels = {

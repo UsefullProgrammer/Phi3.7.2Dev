@@ -1,3 +1,4 @@
+
 nebula_alloy_refinery = {
 	icon = "GFX_spaceport_nebula_alloy_refinery"
 	construction_days = 360
@@ -40,6 +41,16 @@ nebula_alloy_refinery = {
 			minerals = 8
             energy = 4
 		}
+		triggered_system_modifier = {
+			potential = {
+				exists = owner
+				owner = { 
+					has_ascension_perk = ap_voidborn 
+					is_gestalt = no
+				}
+			}
+			job_foundry_add = 1
+		}
 	}
 
 	ai_weight = {
@@ -75,7 +86,16 @@ starm_culture_booster = {
 			energy = 3
 		}
 	}
-
+	triggered_system_modifier = {
+		potential = {
+			exists = owner
+			owner = { 
+				has_ascension_perk = ap_voidborn 
+				is_gestalt = no
+			}
+		}
+		job_culture_worker_add = 1
+	}
 	custom_tooltip = sm_starm_culture_booster_effect
 
 	ai_build_at_chokepoint = no
@@ -91,7 +111,10 @@ starm_culture_booster = {
 		}
 	}
 }
-
+# has_policy_flag = focus_physics
+# has_policy_flag = focus_engineering
+# engineering_researcher
+# physics_researcher
 starm_science_booster = {
 	icon = "GFX_starm_sm_science_booster"
 	construction_days = 360
@@ -121,7 +144,28 @@ starm_science_booster = {
 			energy = 3
 		}
 	}
-
+	triggered_system_modifier = {
+		potential = {
+			exists = owner
+			owner = { 
+				has_ascension_perk = ap_voidborn 
+				is_gestalt = no
+			}
+			has_policy_flag = focus_physics
+		}
+		job_physics_researcher_add = 1
+	}
+	triggered_system_modifier = {
+		potential = {
+			exists = owner
+			owner = { 
+				has_ascension_perk = ap_voidborn 
+				is_gestalt = no
+			}
+			has_policy_flag = focus_engineering
+		}
+		job_engineering_researcher_add = 1
+	}
 	custom_tooltip = sm_starm_science_booster_effect
 
 	ai_build_at_chokepoint = no
@@ -159,7 +203,14 @@ Governmental_Orbital_Exchange_Market = {
 			mult = value:Count_planet_system
 		}
 	}
-	system_modifier = {
+	triggered_system_modifier = {
+		potential = {
+			exists = owner
+			owner = { 
+				has_ascension_perk = ap_voidborn 
+				is_gestalt = no
+			}
+		}
 		job_clerk_add = 1
 	}
 	country_modifier = {
@@ -190,6 +241,27 @@ Governmental_diplomatic_asset = {
 			energy = 5
 		}
 	}
+	triggered_system_modifier = {
+		potential = {
+			exists = owner
+			owner = { 
+				has_ascension_perk = ap_voidborn 
+				is_gestalt = no
+				owner = { is_megacorp = no }
+			}
+		}
+		job_bureaucrat_add = 1
+	}
+	triggered_system_modifier = {
+		potential = {
+			exists = owner
+			has_ascension_perk = ap_voidborn 
+			owner = { is_megacorp = yes }
+		}
+		modifier = {
+			job_manager_add = 1
+		}
+	}
 	country_modifier = {
 		diplo_weight_envoys_mult = 0.025
 	}
@@ -197,3 +269,111 @@ Governmental_diplomatic_asset = {
 		weight = 0 #use same weight here - ai weighting is done in starbase_types.txt
 	}
 }
+Governmental_manager_asset = {
+	icon = "GFX_starbase_curator_think_tank"
+	construction_days = 360
+
+	potential = {
+		exists = owner
+		owner = { 
+            has_origin = origin_void_dwellers
+        }
+	}
+	resources = {
+		category = starbase_buildings
+		cost = {
+			alloys = 200
+			influence = 50
+		}
+
+		upkeep = {
+			energy = 5
+			mult = value:Count_planet_system
+		}
+	}
+	triggered_system_modifier = {
+		potential = {
+			exists = owner
+			owner = { 
+				has_ascension_perk = ap_voidborn 
+				is_gestalt = no
+			}
+		}
+		job_manager_add = 1
+	}
+	
+	triggered_system_modifier = {
+		potential = {
+			exists = owner
+			owner = { 
+				is_megacorp = no 
+				has_ascension_perk = ap_voidborn 
+				is_gestalt = no
+			}
+		}
+		modifier = {
+			job_bureaucrat_add = 1
+		}
+	}
+	triggered_system_modifier = {
+		potential = {
+			exists = owner
+			has_ascension_perk = ap_voidborn 
+			owner = { is_megacorp = yes }
+		}
+		modifier = {
+			job_manager_add = 1
+		}
+	}
+	country_modifier = {
+		planet_managers_produces_mult = 0.10
+		planet_administrators_produces_mult = 0.10
+	}
+	ai_weight = {
+		weight = 0 #use same weight here - ai weighting is done in starbase_types.txt
+	}
+}
+Research_relic = {
+	icon = "GFX_starbase_Governmental_Orbital_Exchange_Market"
+	construction_days = 360
+
+	potential = {
+		exists = owner
+		owner = { 
+            has_origin = origin_void_dwellers
+        }
+	}
+	allow = {
+		owner = { has_technology = tech_archaeostudies }
+	}
+	resources = {
+		category = starbase_buildings
+		cost = {
+			alloys = 100
+			influence = 50
+			minor_artifacts = 50
+		}
+
+		upkeep = {
+			energy = 5
+			mult = value:Count_planet_system
+		}
+	}
+	triggered_system_modifier = {
+		potential = {
+			exists = owner
+			owner = { 
+				has_ascension_perk = ap_voidborn 
+				is_gestalt = no
+			}
+		}
+		job_archaeoengineers_add = 1
+	}
+	system_modifier = {
+		stations_minor_artifacts_produces_mult = 0.5
+	}
+	ai_weight = {
+		weight = 0 #use same weight here - ai weighting is done in starbase_types.txt
+	}
+}
+

@@ -1,0 +1,64 @@
+# Declare war, usable by regular, fallen & awakened empires
+# action_force_declare_war = {
+# 	icon = "GFX_diplomacy_status_war"
+# 	requires_actor_independence = no # You are able to declare war only on your overlord when being a vassal, this special case is handled in code instead.
+# 	requires_recipient_independence = no
+# 	requires_alliance_vote = yes
+# 	requires_unanimous_vote = yes
+# 	auto_accepted = yes
+# 	should_show_auto_accept_message_actor = yes
+# 	should_show_auto_accept_message_recipient = yes
+# 	should_open_auto_accept_message_recipient = yes
+# 	should_notify_all_communications = yes
+# 	action_type = aggressive
+	
+# 	potential = {
+# 		is_ai = no
+# 	}
+	
+# 	possible = {
+# 		has_resource = { type = influence amount >= 100 }
+# 		custom_tooltip = {
+# 			fail_text = "requires_recipient_not_subject_of_federation_member"
+# 			NOT = {
+# 				any_federation_ally = {
+# 					is_overlord_to = fromfrom
+# 				}
+# 			}
+# 		}
+# 		custom_tooltip = {
+# 			fail_text = "phi_requires_good_or_better_opinion"
+# 			OR = {
+# 				opinion_level = { who = from level >= good }
+# 				any_federation_ally = {
+# 					opinion_level = { who = from level >= good }
+# 				}
+# 			}
+
+# 		}
+# 	}
+# 	on_accept = {
+# 		hidden_effect = {
+# 			if = {
+# 				limit = {
+# 					has_federation = yes
+# 				}
+# 				every_federation_ally = {
+# 					add_modifier = {
+# 						modifier = "phi_force_war"
+# 						days = 3600
+# 					}
+# 				}
+# 			}
+# 			else = {
+# 				add_modifier = {
+# 					modifier = "phi_force_war"
+# 					days = 3600
+# 				}
+# 			}
+# 			add_resource = {
+# 				influence = -100
+# 			}
+# 		}
+# 	}
+# }

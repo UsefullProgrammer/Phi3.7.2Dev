@@ -1620,14 +1620,22 @@ can_support_branch_offices = {
 	}
 	custom_tooltip = {
 		fail_text = BRANCH_OFFICE_NOT_ON_MEGACORP_PLANET
-		NOR = {
-			has_authority = auth_corporate
-			has_civic = civic_galactic_sovereign_megacorp
+		OR = {
+			Can_Branch_office_on_megacorp = yes
+			NOR = {
+			
+				has_authority = auth_corporate
+				has_civic = civic_galactic_sovereign_megacorp
+			}
+		
 		}
 	}
 	custom_tooltip = {
 		fail_text = BRANCH_OFFICE_NOT_REGULAR_EMPIRE
-		is_gestalt = no
+		OR = {
+			is_gestalt = no
+			Can_Branch_office_on_gestait = yes
+		}
 	}
 	custom_tooltip = {
 		fail_text = BRANCH_OFFICE_NOT_ADVANCED_PRE_FTL
@@ -1652,8 +1660,10 @@ can_build_branch_office_on_planet = {
 		exists = owner
 		owner = {
 			OR = {
+				root = { is_criminal_syndicate = yes } #i criminali fanno quel cazzo che vogliono
 				is_same_species = root
 				NOT = { has_civic = civic_fanatic_purifiers }
+				is_homicidal = no
 			}
 		}
 	}

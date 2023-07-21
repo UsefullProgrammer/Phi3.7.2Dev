@@ -15,6 +15,11 @@ namespace = phi_ai
 #	phi_ai.12	monthly checked - joins defensive wars of laggers
 #	phi_ai.13	5-yearly checked - shifts ethics towards fed type
 #	phi_ai.14	monthly checked - scorched earth tactics
+#	phi_ai.15	yearly checked - attack bbeg
+#	phi_ai.16	yearly checked - market simulator for gestalts empires
+#	phi_ai.17	yearly checked - refines the capital planet of gestalt 
+#	phi_ai.20	yearly checked - replace up building of  gestalt empires
+#	phi_ai.30	yearly checked - Set Flag washuman
 #	set_colony_type
 
 country_event = {
@@ -850,10 +855,13 @@ country_event = {
 			set_country_flag = phi_lagger
 		}
 		
-		#human players are never weak
+		#human players and homicidal are never weak
 		if = {
 			limit = {
-				is_ai = no
+				OR = {
+					is_ai = no
+					is_homicidal = yes
+				}
 				has_country_flag = phi_lagger
 			}
 			remove_country_flag = phi_lagger
@@ -943,18 +951,88 @@ country_event = {
 		is_country_type = default
 		is_at_war = yes
 	}
-	
 	immediate = {
 		every_owned_starbase = {
 			limit = {
-				has_starbase_size > starbase_outpost
-				solar_system = {
-					is_capital_system = no
-					any_neighbor_system = {
-						any_fleet_in_system = {
-							exists = owner
-							owner = { is_at_war_with = root }
-							fleet_power > 4000
+				OR = {
+					AND = {
+						has_starbase_size = starbase_starport
+						solar_system = {
+							is_capital_system = no
+							NOT = {
+								any_fleet_in_system = {
+									exists = owner
+									owner = { is_same_value = root }
+									fleet_power > 4000
+								}
+							}
+							any_neighbor_system = {
+								any_fleet_in_system = {
+									exists = owner
+									owner = { is_at_war_with = root }
+									fleet_power > 4000
+								}
+							}
+						}
+					}
+					AND = {
+						has_starbase_size = starbase_starhold
+						solar_system = {
+							is_capital_system = no
+							NOT = {
+								any_fleet_in_system = {
+									exists = owner
+									owner = { is_same_value = root }
+									fleet_power > 6000
+								}
+							}
+							any_neighbor_system = {
+								any_fleet_in_system = {
+									exists = owner
+									owner = { is_at_war_with = root }
+									fleet_power > 6000
+								}
+							}
+						}
+					}
+					AND = {
+						has_starbase_size = starbase_starfortress
+						solar_system = {
+							is_capital_system = no
+							NOT = {
+								any_fleet_in_system = {
+									exists = owner
+									owner = { is_same_value = root }
+									fleet_power > 8000
+								}
+							}
+							any_neighbor_system = {
+								any_fleet_in_system = {
+									exists = owner
+									owner = { is_at_war_with = root }
+									fleet_power > 8000
+								}
+							}
+						}
+					}
+					AND = {
+						has_starbase_size = starbase_citadel
+						solar_system = {
+							is_capital_system = no
+							NOT = {
+								any_fleet_in_system = {
+									exists = owner
+									owner = { is_same_value = root }
+									fleet_power > 10000
+								}
+							}
+							any_neighbor_system = {
+								any_fleet_in_system = {
+									exists = owner
+									owner = { is_at_war_with = root }
+									fleet_power > 10000
+								}
+							}
 						}
 					}
 				}
@@ -1035,128 +1113,159 @@ country_event = {
 	}
 	
 	immediate = {
-		every_war = {
-			limit = {
-				any_defender = {
-					is_same_value = root
-				}
-				any_attacker = {
-					relative_power = {
-						who = root
-						category = fleet
-						value > equivalent
+		random_list = {
+			7  = {
+				every_war = {
+					limit = {
+						any_defender = {
+							is_same_value = root
+						}
+						any_attacker = {
+							relative_power = {
+								who = root
+								category = fleet
+								value > equivalent
+							}
+						}
+						NOR = {
+							using_war_goal = { type = wg_phi_survive owner = root }
+							using_war_goal = { type = wg_humiliation owner = attacker }
+							War_Valid_survive = no #wg border
+							using_war_goal = { type = wg_declared_crisis owner = attacker }
+							using_war_goal = { type = wg_ae_domination owner = attacker }
+							using_war_goal = { type = wg_end_threat_ae owner = attacker }
+							using_war_goal = { type = wg_humiliation owner = attacker }
+						}
 					}
-				}
-				NOR = {
-					using_war_goal = { type = wg_phi_survive owner = root }
-					using_war_goal = { type = wg_humiliation owner = attacker }
-					War_Valid_survive = no #wg border
-					using_war_goal = { type = wg_declared_crisis owner = attacker }
-					using_war_goal = { type = wg_ae_domination owner = attacker }
-					using_war_goal = { type = wg_end_threat_ae owner = attacker }
-					using_war_goal = { type = wg_humiliation owner = attacker }
+					set_war_goal = { type = wg_phi_survive target = root enemy = attacker }
 				}
 			}
-			set_war_goal = { type = wg_phi_survive target = root enemy = attacker }
+			93 = {}
 		}
 	}
 }
 
 country_event = {
 #	phi_ai.12	monthly checked - joins defensive wars of laggers
-# root is defender
+# root is joiner
 	id = phi_ai.12
 	hide_window = yes
 
 	is_triggered_only = yes
 	
 	trigger = {
-		is_ai = yes
-		is_country_type = default
-		is_subject = no
-		OR = {
-			has_federation = no
-			is_federation_leader = yes
-		}
-		NAND = {
-			is_at_war = yes
-			any_war = {
-				any_attacker = {
-					is_same_value = root
+		AND = {
+			is_ai = yes
+			is_country_type = default
+			NOT = { has_country_flag = was_human }
+			is_subject = no
+			is_homicidal = no
+			has_country_flag = phi_lagger
+			OR = {
+				has_federation = no
+				is_federation_leader = yes
+			}
+			NAND = {
+				is_at_war = yes
+				any_war = {
+					any_attacker = {
+						is_same_value = root
+					}
 				}
 			}
-		}
-		
-		is_homicidal = no
-		has_country_flag = phi_lagger
-		any_country = {
-			has_communications = root
-			opinion_level = { who = root level >= neutral }
-			is_at_war = yes
-			any_war = {
-				using_war_goal = { type = wg_phi_survive owner = prev }
+			
+			OR = {
+				mid_game_years_passed > 25
+				AND = {
+					NOT = { has_country_flag = is_advanced_start_AI }
+					NOT = { has_origin = origin_imperial_vassal_overlord }
+					NOT = { has_origin = origin_broken_shackles }
+				}
+			}
+			
+			any_country = {
+				has_communications = root
+				opinion_level = { who = root level >= neutral }
+				is_at_war = yes
+				any_war = {
+					using_war_goal = { type = wg_phi_survive owner = prev }
+				}
 			}
 		}
 	}
 	
 	immediate = {
-		random_country = {
-			limit = {
-				has_communications = root
-				#has_country_flag = phi_lagger
-				opinion_level = { who = root level >= neutral }
-				is_homicidal = no
-				OR = {
-					mid_game_years_passed > 25
-					AND = {
-						NOT = { has_country_flag = is_advanced_start_AI }
-						NOT = { has_origin = origin_imperial_vassal_overlord }
-						NOT = { has_origin = origin_broken_shackles }
+		random_list = {
+			5  = {
+				random_country = {
+					limit = { #how need country that can help
+						AND = {
+							is_homicidal = no
+							is_at_war = yes
+							has_communications = root
+							opinion_level = { who = root level >= neutral }
+							any_war = {
+								using_war_goal = { type = wg_phi_survive owner = prev }
+								NOT = { is_war_participant = { who = root } }
+								defender_war_exhaustion < 0.5
+								attacker = {
+									root = { opinion_level = { who = prev level < neutral } }
+									NOT = { has_truce = root } #non puoi entrare se hai un truce
+								}
+								defender = {
+									NOT = { has_truce = root } #non puoi entrare se hai un truce
+									NOT = { is_at_war_with = root }# non puoi entrare se sei già in guerra
+								}
+							}
+							#has_country_flag = phi_lagger
+							OR = {
+								mid_game_years_passed > 25
+								AND = {
+									NOT = { has_country_flag = is_advanced_start_AI }
+									NOT = { has_origin = origin_imperial_vassal_overlord }
+									NOT = { has_origin = origin_broken_shackles }
+								}
+							}
+						}
 					}
-				}
-				any_war = {
-					using_war_goal = { type = wg_phi_survive owner = prev }
-					NOT = { is_war_participant = { who = root } }
-					defender_war_exhaustion < 0.5
-					attacker = {
-						root = { opinion_level = { who = prev level < neutral } }
-						NOT = { has_truce = root } #non puoi entrare se hai un truce
-					}
-				}
-			}
-			random_war = {
-				limit = {
-					NOT = { is_war_participant = { who = root } }
-					using_war_goal = { type = wg_phi_survive owner = defender }
-					any_defender = {
-						is_same_value = prevprev
-					}
-				}
-				save_event_target_as = survive_cb_war
-			}
-		}
-		if = {
-			limit = { 
-				exists = event_target:survive_cb_war 
-				is_homicidal = no 
-			}
-			root = {
-				if = {
-					
-					join_war_on_side = {
-						war = event_target:survive_cb_war
-						side = defenders
+					random_war = {
+						limit = {
+							NOT = { is_war_participant = { who = root } }
+							using_war_goal = { type = wg_phi_survive owner = defender }
+							any_defender = {
+								is_same_value = prevprev
+							}
+						}
+						save_event_target_as = survive_cb_war
 					}
 					if = {
-						limit = { is_federation_leader = yes }
-						every_federation_ally = {
-							join_war_on_side = {
-								war = event_target:survive_cb_war
-								side = defenders
+						limit = { 
+							exists = event_target:survive_cb_war 
+							is_homicidal = no 
+						}
+						root = {
+							if = {
+								
+								join_war_on_side = {
+									war = event_target:survive_cb_war
+									side = defenders
+								}
+								if = {
+									limit = { is_federation_leader = yes }
+									every_federation_ally = {
+										join_war_on_side = {
+											war = event_target:survive_cb_war
+											side = defenders
+										}
+									}
+								}
 							}
 						}
 					}
 				}
+			}
+			95 = {
+
 			}
 		}
 	}
@@ -1508,6 +1617,7 @@ country_event = {
 		trigger = {
 			is_ai = yes
 			is_country_type = default
+			NOT = { has_country_flag = was_human }
 			has_ethic = ethic_gestalt_consciousness
 			any_owned_planet = {
 				is_capital = no
@@ -2030,7 +2140,22 @@ country_event = {
 			}
 		}
 	}
+country_event = {
+	#	phi_ai.30	yearly checked - Set Flag washuman
 	
+		id = phi_ai.30
+		hide_window = yes
+	
+		is_triggered_only = yes
+		
+		trigger = {
+			is_ai = no
+			NOT = { has_country_flag = was_human }
+		}
+		immediate = {
+			set_country_flag = was_human
+		}
+}
 country_event = {
 #	phi_ai.777	test event
 
@@ -2041,30 +2166,41 @@ country_event = {
 	is_triggered_only = yes
 	
 	trigger = {
-		OR = {
-			AND= {
-				OR = { #c'è crisi?
-					has_crisis = yes #Contingency, Extradimensionals or Prethoryn
-					has_global_flag = marauder_crisis_ongoing #Khan
-					has_global_flag = gray_goo_crisis_active #Gray Tempest
-				}
-				NOR = { #che non sia finita
-					crisis_happened_and_defeated = yes #Contingency, Extradimensionals or Prethoryn finish
-					AND = { #If the Khan is defeated, Crisis Beacon should be hidden until a new crisis happens
-						has_global_flag = great_khan_dead
-						has_crisis = no
-					}
-					AND = { #If the Gray Tempest is defeated, Crisis Beacon should be hidden until a new crisis happens
-						has_global_flag = graygoo_defeated
-						has_crisis = no
+		AND = {
+			is_country_type = default
+			is_subject = no
+			is_homicidal = no
+			OR = {
+				has_federation = no
+				is_federation_leader = yes
+			}
+			NAND = {
+				is_at_war = yes
+				any_war = {
+					any_attacker = {
+						is_same_value = root
 					}
 				}
 			}
-			any_playable_country = { # controllo crisis da player
-				has_crisis_level = crisis_level_5
+			
+			OR = {
+				mid_game_years_passed > 25
+				AND = {
+					NOT = { has_country_flag = is_advanced_start_AI }
+					NOT = { has_origin = origin_imperial_vassal_overlord }
+					NOT = { has_origin = origin_broken_shackles }
+				}
+			}
+			has_country_flag = phi_lagger
+			any_country = {
+				has_communications = root
+				opinion_level = { who = root level >= neutral }
+				is_at_war = yes
+				any_war = {
+					using_war_goal = { type = wg_phi_survive owner = prev }
+				}
 			}
 		}
-		
 	}
 	
 	immediate = {

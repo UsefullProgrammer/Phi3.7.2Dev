@@ -615,6 +615,7 @@ ap_interstellar_dominion = {
 	modifier = {
 		country_starbase_influence_cost_mult = -0.20
 		country_claim_influence_cost_mult = -0.20
+		country_starbase_capacity_mult = 0.1
 		empire_size_systems_mult = -0.30
 	}
 
@@ -978,6 +979,41 @@ ap_voidborn = {
 
 	modifier = {
 		pc_habitat_habitability = 0.2
+	}
+	tradition_swap = {
+		name = ap_voidborn
+		inherit_effects = no
+		inherit_icon = yes
+		trigger = {
+			has_origin = origin_void_dwellers
+		}
+
+		on_enabled = {
+			custom_tooltip = "ap_voidborn_dweller_habitat_effect"
+			if = {
+				limit = {
+					NOT = { has_technology = tech_habitat_2 }
+				}
+				add_research_option = tech_habitat_2
+				custom_tooltip = "add_research_options_voidborn"
+			}
+			if = {
+				limit = {
+					has_technology = tech_habitat_2
+					NOT = { has_technology = tech_habitat_3 }
+				}
+				add_research_option = tech_habitat_3
+			}
+		}
+
+		modifier = {
+			country_starbase_capacity_mult = 0.5
+			empire_size_systems_mult = -0.10
+		}
+
+		weight = {
+			factor = 1
+		}
 	}
 
 	ai_weight = {

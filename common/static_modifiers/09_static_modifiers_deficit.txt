@@ -27,7 +27,10 @@ food_deficit = {
 }
 
 influence_deficit = {
-	pop_happiness = -0.20
+	country_war_exhaustion_mult = 1
+	pop_happiness = -0.10
+	council_agenda_progress_speed = -0.5
+	country_election_cost_mult = 0.5
 }
 
 alloys_deficit = {

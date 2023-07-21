@@ -79,7 +79,7 @@ xenoist = {
 			is_event_leader = yes
 		}
 	}
-
+	#5|-10 GC
 	demand = {
 		title = "GC"
 		unfulfilled_title = "GC_NO"
@@ -99,7 +99,7 @@ xenoist = {
 			}
 		}
 	}
-	
+	#5|-15 GC_NO_BREACH
 	demand = {
 		title = "GC_NO_BREACH"
 		unfulfilled_title = "GC_BREACH"
@@ -122,7 +122,7 @@ xenoist = {
 			}
 		}
 	}
-
+	#5|-35 XENOIST_NO_SLAVES
 	demand = { # "XENOIST_NO_SLAVES"
 		title = "XENOIST_NO_SLAVES"
 		unfulfilled_title = "XENOIST_SLAVES"
@@ -155,7 +155,7 @@ xenoist = {
 			}
 		}
 	}
-
+	#5|-55 XENOIST_NO_PURGE
 	demand = { # "XENOIST_NO_PURGE"
 		title = "XENOIST_NO_PURGE"
 		unfulfilled_title = "XENOIST_PURGE"
@@ -177,7 +177,7 @@ xenoist = {
 			}
 		}
 	}
-	
+	#5|-75 XENOIST_NO_APPROPRIATION
 	demand = {
 		title = "XENOIST_NO_APPROPRIATION"
 		unfulfilled_title = "XENOIST_APPROPRIATION"
@@ -201,7 +201,7 @@ xenoist = {
 			}
 		}
 	}
-
+	#10|-85 XENOIST_REFUGEES_WELCOME
 	demand = { # "XENOIST_REFUGEES_WELCOME"
 		title = "XENOIST_REFUGEES_WELCOME"
 		unfulfilled_title = "XENOIST_REFUGEES_UNWELCOME"
@@ -226,7 +226,7 @@ xenoist = {
 			}
 		}
 	}
-
+	#15|-85 XENOIST_COMMERCIAL_PACTS
 	demand = {
 		title = "XENOIST_COMMERCIAL_PACTS"
 		unfulfilled_title = "XENOIST_NO_COMMERCIAL_PACTS"
@@ -249,7 +249,7 @@ xenoist = {
 			}
 		}
 	}
-
+	#25|-85 XENOIST_ENCLAVE_BORDERS
 	demand = {
 		title = "XENOIST_ENCLAVE_BORDERS"
 		unfulfilled_title = "XENOIST_NO_ENCLAVE_BORDERS"
@@ -279,7 +279,7 @@ xenoist = {
 			}
 		}
 	}
-
+	#25|-95 XENOIST_NO_PRIMITIVE_INVASION
 	demand = {
 		title = "XENOIST_NO_PRIMITIVE_INVASION" # Landgrab Opposition
 		unfulfilled_title = "XENOIST_NO_PRIMITIVE_INVASION"
@@ -302,7 +302,7 @@ xenoist = {
 			}
 		}
 	}
-
+	#45|-95 XENOIST_FEDERATED
 	demand = {
 		title = "XENOIST_FEDERATED"
 		unfulfilled_title = "XENOIST_NOT_FEDERATED"
@@ -329,7 +329,7 @@ xenoist = {
 			}
 		}
 	}
-	
+	#60|-95 XENOIST_TRADE_LEAP
 	demand = {
 		title = "XENOIST_TRADE_LEAP"
 		unfulfilled_title = "XENOIST_TRADE_LAG"
@@ -370,7 +370,7 @@ xenoist = {
 			}
 		}
 	}
-
+	#60|-135 NOT_THRALL
 	demand = {
 		title = "NOT_THRALL"
 		unfulfilled_title = "THRALL"

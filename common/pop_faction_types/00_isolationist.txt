@@ -96,14 +96,14 @@ isolationist = {
 			is_event_leader = yes
 		}
 	}
-
+	#5|-20
 	demand = {
 		title = "ISOLATIONIST_NO_AGGRESSIVE_WAR"
 		unfulfilled_title = "ISOLATIONIST_AGGRESSIVE_WAR"
 		desc = "ISOLATIONIST_NO_AGGRESSIVE_WAR_DESC"
 
 		unfulfilled_effect = -20
-		fulfilled_effect = 0.001
+		fulfilled_effect = 5
 
 		potential = {
 			exists = owner
@@ -119,7 +119,7 @@ isolationist = {
 			}
 		}
 	}
-
+	#15|-30
 	demand = {
 		title = "SUPREMACIST_ISOLATIONIST_NO_FEDERATION"
 		unfulfilled_title = "SUPREMACIST_ISOLATIONIST_FEDERATION"
@@ -144,7 +144,7 @@ isolationist = {
 			}
 		}
 	}
-
+	#15|-40
 	demand = {
 		title = "ISOLATIONIST_MOVEMENT_RESTRICTED"
 		unfulfilled_title = "ISOLATIONIST_MOVEMENT_UNRESTRICTED"
@@ -181,7 +181,7 @@ isolationist = {
 			}
 		}
 	}
-
+	#25|-40
 	demand = {
 		title = "ISOLATIONIST_PEACE1"
 		unfulfilled_title = "ISOLATIONIST_NO_PEACE1"
@@ -205,7 +205,7 @@ isolationist = {
 			}
 		}
 	}
-
+	#40|-40
 	demand = {
 		title = "ISOLATIONIST_PEACE2"
 		unfulfilled_title = "ISOLATIONIST_NO_PEACE2"
@@ -233,7 +233,7 @@ isolationist = {
 		}
 	}
 
-
+	#50|-40
 	demand = {
 		title = "DEMOBILIZED_MILITARY"
 		unfulfilled_title = "MOBILIZED_MILITARY"
@@ -263,7 +263,7 @@ isolationist = {
 			}
 		}
 	}
-
+	#50|-50
 	demand = {
 		title = "DEMOBILIZED_MILITARY"
 		unfulfilled_title = "MOBILIZED_MILITARY"
@@ -293,14 +293,14 @@ isolationist = {
 			}
 		}
 	}
-	
+	#60|-55
 	demand = {
 		title = "GC_NO"
 		unfulfilled_title = "GC"
 		desc = "XENOPHOBE_GC_DESC"
 
 		fulfilled_effect = 10
-		unfulfilled_effect = -10
+		unfulfilled_effect = -5
 
 		potential = {
 			exists = owner
@@ -313,13 +313,13 @@ isolationist = {
 			}
 		}
 	}
-
+	#60|-90 #signatory special isolationist
 	demand = {
 		title = "NOT_SIGNATORY"
 		unfulfilled_title = "SIGNATORY"
 		desc = "SIGNATORY_DESC"
 
-		unfulfilled_effect = -40
+		unfulfilled_effect = -30
 		fulfilled_effect = 0.001
 
 		potential = {
@@ -343,9 +343,10 @@ isolationist = {
 			}
 		}
 	}
-
+	#90|-120
 	# Faction Demands for Ruler and Council positions.
 	inline_script = {
+		#30|-30 ^ loaded upper
 		script = "paragon/global_faction_demands"
 		ETHIC = ethic_xenophobe
 		ETHIC_FANATIC = ethic_fanatic_xenophobe

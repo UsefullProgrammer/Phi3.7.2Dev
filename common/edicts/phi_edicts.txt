@@ -34,3 +34,42 @@ greater_than_ourselves_light = {
 		weight = @EdictLowPrio
 	}
 }
+Force_declare_war = {
+	length = 0
+	icon = "GFX_force_war"
+	potential = {
+		is_homicidal = no
+		is_ai = no
+	}
+	allow = {
+		NOT = { has_modifier = phi_force_war }
+		has_policy_flag = unrestricted_wars
+		OR = {
+			has_federation = no
+			AND = {
+				has_federation = yes
+				is_federation_leader = yes
+			}
+		}
+		# any_country = {
+		# 	root = {
+		# 		NOT = { has_truce = prev }
+		# 		NOT = { is_at_war_with = prev }
+		# 		is_harming_relations_with = prev
+		# 	}
+		# }
+	}
+	resources = {
+		category = special
+		cost = {
+			influence = 100
+		}
+	}
+	effect = {
+		custom_tooltip = "edict_tooltip_Force_declare_war_effects"
+		
+		hidden_effect = {
+			country_event = { id = enhanced_diplomacy.3 }
+		}
+	}
+}

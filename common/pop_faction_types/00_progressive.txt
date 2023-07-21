@@ -81,7 +81,7 @@ progressive = {
 			is_event_leader = yes
 		}
 	}
-
+	#0|-20
 	demand = {
 		title = "PROGRESSIVE_NO_AUTO"
 		unfulfilled_title = "PROGRESSIVE_AUTO"
@@ -109,7 +109,7 @@ progressive = {
 			}
 		}
 	}
-	
+	#20|-20
 	demand = {
 		title = "PROGRESSIVE_DEMOCRACY"
 		unfulfilled_title = "PROGRESSIVE_NO_DEMOCRACY"
@@ -137,7 +137,7 @@ progressive = {
 			}
 		}
 	}
-
+	#20|-30
 	demand = {
 		title = "PROGRESSIVE_NO_AUTHORITARIAN_ALLIES"
 		unfulfilled_title = "PROGRESSIVE_AUTHORITARIAN_ALLIES"
@@ -176,7 +176,7 @@ progressive = {
 			}
 		}
 	}
-
+	#20|-35
 	demand = {
 		title = "PROGRESSIVE_FREE_MOVEMENT"
 		unfulfilled_title = "PROGRESSIVE_NO_FREE_MOVEMENT"
@@ -205,7 +205,7 @@ progressive = {
 			}
 		}
 	}
-
+	#30|-45
 	demand = {
 		title = "PROGRESSIVE_REPRODUCTIVE_FREEDOM"
 		unfulfilled_title = "PROGRESSIVE_NO_REPRODUCTIVE_FREEDOM"
@@ -224,7 +224,7 @@ progressive = {
 			}
 		}
 	}
-
+	#30|-55
 	demand = {
 		title = "PROGRESSIVE_NO_STRATIFIED"
 		unfulfilled_title = "PROGRESSIVE_STRATIFIED"
@@ -250,7 +250,7 @@ progressive = {
 			}
 		}
 	}
-
+	#35|-65
 	demand = {
 		title = "PROGRESSIVE_NO_ELITISM"
 		unfulfilled_title = "PROGRESSIVE_ELITISM"
@@ -278,13 +278,13 @@ progressive = {
 			}
 		}
 	}
-	
+	#40|-75
 	demand = {
 		title = "PROGRESSIVE_NO_SLAVERY"
 		unfulfilled_title = "PROGRESSIVE_SLAVERY"
 		desc = "PROGRESSIVE_NO_SLAVERY_DESC"
 
-		fulfilled_effect = 10
+		fulfilled_effect = 5
 		unfulfilled_effect = -10
 
 		potential = {
@@ -297,7 +297,7 @@ progressive = {
 			}
 		}
 	}
-	
+	#50|-75
 	demand = {
 		title = "GC_EGALITARIAN_LAWS"
 		unfulfilled_title = "GC_NO_EGALITARIAN_LAWS"
@@ -326,7 +326,7 @@ progressive = {
 			}
 		}
 	}
-	
+	#50|-85
 	demand = {
 		title = "GC_NO_AUTHORITARIAN_LAWS"
 		unfulfilled_title = "GC_AUTHORITARIAN_LAWS"
@@ -353,6 +353,24 @@ progressive = {
 				is_active_resolution = "resolution_phi_aristocracy_anti_slacker_act"
 				is_active_resolution = "resolution_phi_aristocracy_government_of_the_fittest"
 			}
+		}
+	}
+	#60|-90 militarist_federation
+	demand = {
+		title = egalitarian_federation
+		unfulfilled_title = egalitarian_federation_NOT_egalitarian
+		desc = egalitarian_federation_DESC
+
+		fulfilled_effect = 10
+		unfulfilled_effect = -5
+
+		potential = {
+			exists = owner.federation
+			has_federations_dlc = yes
+		}
+
+		trigger = {
+			owner.federation = { has_federation_type = egalitarian_federation }
 		}
 	}
 

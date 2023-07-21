@@ -80,7 +80,7 @@ traditionalist = {
 			is_event_leader = yes
 		}
 	}
-
+	#10|-20 NO_AI
 	demand = {
 		title = "NO_AI"
 		unfulfilled_title = "AI"
@@ -102,7 +102,7 @@ traditionalist = {
 			}
 		}
 	}
-
+	#10|-30 TRADITIONALIST_SPIRITUALIST_GOVERNMENT
 	demand = {
 		title = "TRADITIONALIST_SPIRITUALIST_GOVERNMENT"
 		unfulfilled_title = "TRADITIONALIST_SECULAR_GOVERNMENT"
@@ -124,8 +124,7 @@ traditionalist = {
 			}
 		}
 	}
-
-
+	#30|-30 TRADITIONALIST_GAIA_WORLDS
 	demand = {
 		title = "TRADITIONALIST_GAIA_WORLDS"
 		unfulfilled_title = "TRADITIONALIST_NO_GAIA_WORLDS"
@@ -157,7 +156,7 @@ traditionalist = {
 			}
 		}
 	}
-
+	#50|-30 TRADITIONALIST_PSIONIC_PURSUIT
 	demand = {
 		title = "TRADITIONALIST_PSIONIC_PURSUIT"
 		unfulfilled_title = "TRADITIONALIST_NO_PSIONIC_PURSUIT"
@@ -184,7 +183,7 @@ traditionalist = {
 			}
 		}
 	}
-	
+	#60|-30 TRADITIONALIST_PSIONIC_TEACHINGS
 	demand = { # "TRADITIONALIST_PSIONIC_TEACHINGS"
 		title = "TRADITIONALIST_PSIONIC_TEACHINGS"
 		unfulfilled_title = "TRADITIONALIST_NO_PSIONIC_TEACHINGS"
@@ -206,7 +205,7 @@ traditionalist = {
 			}
 		}
 	}
-	
+	#60|-45 TRADITIONALIST_FLESH_IS_STRONG
 	demand = {
 		title = "TRADITIONALIST_FLESH_IS_STRONG"
 		unfulfilled_title = "TRADITIONALIST_FLESH_IS_WEAK"
@@ -231,7 +230,7 @@ traditionalist = {
 			}
 		}
 	}
-
+	#60|-55 TRADITIONALIST_UNSPIRITUALIST
 	demand = {
 		title = "TRADITIONALIST_UNSPIRITUALIST"
 		unfulfilled_title = "TRADITIONALIST_NOT_UNSPIRITUALIST"
@@ -259,7 +258,7 @@ traditionalist = {
 			}
 		}
 	}
-	
+	#70|-55 GC_SPIRITUALIST_LAWS
 	demand = {
 		title = "GC_SPIRITUALIST_LAWS"
 		unfulfilled_title = "GC_NO_SPIRITUALIST_LAWS"
@@ -288,7 +287,7 @@ traditionalist = {
 			}
 		}
 	}
-	
+	#70|-65 GC_NO_MATERIALIST_LAWS
 	demand = {
 		title = "GC_NO_MATERIALIST_LAWS"
 		unfulfilled_title = "GC_MATERIALIST_LAWS"
@@ -314,14 +313,14 @@ traditionalist = {
 			}
 		}
 	}
-
+	#75|-75 TRADITIONALIST_FEDERATION
 	demand = {
 		title = TRADITIONALIST_FEDERATION
 		unfulfilled_title = TRADITIONALIST_FEDERATION_NOT_SPIRITUALIST
 		desc = TRADITIONALIST_FEDERATION_DESC
 
 		fulfilled_effect = 5
-		unfulfilled_effect = -0.001
+		unfulfilled_effect = -10
 
 		potential = {
 			exists = owner.federation

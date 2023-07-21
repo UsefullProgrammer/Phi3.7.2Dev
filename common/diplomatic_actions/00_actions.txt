@@ -349,7 +349,6 @@ action_harm_relation = {
 		}
 	}
 }
-
 # Declare war, usable by regular, fallen & awakened empires
 action_declare_war = {
 	icon = "GFX_diplomacy_status_war"
@@ -382,6 +381,20 @@ action_declare_war = {
 			NOT = {
 				any_federation_ally = {
 					is_overlord_to = fromfrom
+				}
+			}
+		}
+		custom_tooltip = {
+			fail_text = "phi_requires_neutral_opinion_or_supremacist"
+			OR = {
+				is_ai = yes
+				opinion_level = { who = from level <= neutral }
+				has_policy_flag = "diplo_stance_full_scale_mobilization"
+				from = { has_policy_flag = "diplo_stance_full_scale_mobilization" }
+				is_fallen_empire = yes
+				from = { is_fallen_empire = yes }
+				any_federation_ally = {
+					NOT = { opinion_level = { who = from level > neutral } }
 				}
 			}
 		}

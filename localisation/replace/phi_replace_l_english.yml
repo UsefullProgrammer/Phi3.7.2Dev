@@ -192,3 +192,6 @@ sm_naval_logistics_office_desc_modifier:2 "Anchorages and civil Anchorages: §G+
  tr_supremacy_finish_desc:0 "Unlocks the §YWar Doctrines§! Policies.\nAscension Perks Unlocked: §G+1§!\n§Y$mod_wars_influence_upkeep_mult$§! §G-66%§!."
 war_goal_wg_humiliation_desc:0 "War is waged to undermine the enemy regime and the populace's faith in their institutions. \n This war Not cost influence upkeep (for both) "
 war_goal_wg_independence_desc:0 "War is waged to secure independence.\nThis war Not cost influence upkeep ( Only for you) "
+
+ap_voidborn_habitat_effect:0 "§YHabitats§! owned by our Empire have §Y2 Additional Building Slots§!. Our upgraded habitats can support advanced housing buildings can, after Research §Y$tech_habitat_3$§! you will can upgrade 5 times habitat instead 1."
+ add_research_options_voidborn:0 "Research options gained after upgrading a Habitat:\n£engineering_research£§Y$tech_habitat_3$§!"

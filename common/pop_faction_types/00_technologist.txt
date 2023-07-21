@@ -81,7 +81,7 @@ technologist = {
 			is_event_leader = yes
 		}
 	}
-
+	#10|-20
 	demand = {
 		title = "TECHNOLOGIST_ROBOTS_ALLOWED"
 		unfulfilled_title = "TECHNOLOGIST_ROBOTS_BANNED"
@@ -103,7 +103,7 @@ technologist = {
 			}
 		}
 	}
-
+	#30|-30
 	demand = {
 		title = "TECHNOLOGIST_TECH_LEAP"
 		unfulfilled_title = "TECHNOLOGIST_TECH_LAG"
@@ -145,7 +145,7 @@ technologist = {
 			}
 		}
 	}
-
+	#50|-30
 	demand = {
 		title = "MATERIALIST_BIGGEST_FISH"
 		unfulfilled_title = "MATERIALIST_AMBITION"
@@ -184,7 +184,7 @@ technologist = {
 			}
 		}
 	}
-	
+	#50|-50
 	demand = {
 		title = "MATERIALIST_MEDIUM_FISH"
 		unfulfilled_title = "MATERIALIST_SMALLEST_FISH"
@@ -221,6 +221,24 @@ technologist = {
 					}
 				}
 			}
+		}
+	}
+	#60|-60 materialist_federation
+	demand = {
+		title = materialist_federation
+		unfulfilled_title = materialist_federation_NOT_materialist
+		desc = materialist_federation_DESC
+
+		fulfilled_effect = 10
+		unfulfilled_effect = -10
+
+		potential = {
+			exists = owner.federation
+			has_federations_dlc = yes
+		}
+
+		trigger = {
+			owner.federation = { has_federation_type = materialist_federation }
 		}
 	}
 

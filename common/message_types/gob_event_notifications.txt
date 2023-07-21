@@ -40,3 +40,14 @@ message_type = {
 	auto_opens = others # all = Popup Window EVERY notification | others = seemingly never | yes = Popup Window only once| none = Popup Either EVERY notification or nothinf at all
 	category = diplomacy
 }
+message_type = {
+	key = "MESSAGE_TYPE_phi_empire_size_over"
+	icon = "GFX_alert_phi_empire_size_over"
+	icon_frame = 1 #useless
+	name = "phi_empire_size_over_TITLE"
+	sound = "notification"
+	ping = "ping_notification_red"
+	auto_opens = others # all = Popup Window EVERY notification | others = seemingly never | yes = Popup Window only once| none = Popup Either EVERY notification or nothinf at all
+	category = policies
+}
+

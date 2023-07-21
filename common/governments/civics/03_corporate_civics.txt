@@ -115,6 +115,7 @@ civic_media_conglomerate = {
 		country_war_exhaustion_mult = -0.25
 		pop_citizen_happiness = 0.10
 		pop_factions_unity_produces_mult = 0.1
+		wars_influence_upkeep_mult = -0.2
 	}
 }
 
@@ -221,6 +222,7 @@ civic_free_traders = {
 	modifier = {
 		trade_value_mult = 0.20
 		branch_office_value_mult = 0.20
+		wars_influence_upkeep_mult = 0.33
 	}
 }
 

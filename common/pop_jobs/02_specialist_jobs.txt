@@ -1366,7 +1366,7 @@ roboticist = {
 				NOT = { exists = owner }
 			}
 		}
-		planet_pop_assembly_add = 2
+		planet_pop_assembly_add = 1
 	}
 
 	triggered_planet_modifier = {
@@ -1423,7 +1423,8 @@ roboticist = {
 	resources = {
 		category = planet_pop_assemblers
 		upkeep = {
-			alloys = 2
+			alloys = 1
+			consumer_goods = 2
 		}
 	}
 

@@ -17,6 +17,20 @@ once = {
 			}
 		}
 	}
+	galactic_community_upkeep = {
+		trigger = {
+			is_galactic_community_formed = yes
+			is_galactic_community_member = yes
+			is_country_type = default
+		}
+		resources = {
+			category = galactic_community
+			upkeep = {
+				influence = 0.25
+				energy = 2
+			}
+		}
+	}
 }
 
 per_relation = {
@@ -25,23 +39,33 @@ per_relation = {
 	# commercial_pact = {
 	# 	trigger = {
 	# 		has_commercial_pact = FROM
-	# 		# FROM = { is_criminal_syndicate = yes }
+	# 		#FROM = { is_criminal_syndicate = yes }
 	# 	}
-	# 	modifier = {
-	# 		planet_crime_add = 10
-	# 		planet_crime_mult = 0.1
+	# 	every_owned_planet ={ 
+	# 		planet_modifier = {
+	# 			planet_crime_add = 10
+	# 			planet_crime_mult = 0.1
+	# 		}
+	# 	}
+	# }
+	# galactic_community_upkeep = {
+	# 	trigger = {
+	# 		is_galactic_community_formed = yes
+	# 		is_galactic_community_member = yes
+	# 		is_country_type = default
+	# 	}
+	# 	resources = {
+	# 		category = galactic_community
+	# 		upkeep = {
+	# 			energy = 1
+	# 		}
 	# 	}
 	# }
 	
 	in_war = {
 		trigger = {
 			is_at_war = yes
-			this = { 
-				AND = {
-					is_country_type = default 
-					is_homicidal = no
-				}
-			}
+			is_country_type = default 
 			from = { is_country_type = default }
 			any_war = {
 				NOR = { 

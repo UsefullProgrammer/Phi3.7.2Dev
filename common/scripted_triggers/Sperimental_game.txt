@@ -1,0 +1,6 @@
+Can_Branch_office_on_gestait = {
+	always = no
+}
+Can_Branch_office_on_megacorp = {
+	always = no
+}

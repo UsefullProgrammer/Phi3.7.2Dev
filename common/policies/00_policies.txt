@@ -800,7 +800,7 @@ war_philosophy = {
 						is_ai = no
 						OR = {
 							has_ethic = "ethic_militarist"
-							has_ethic = "ethic_militarist_pacifist"
+							has_ethic = "ethic_fanatic_militarist"
 						}
 				}
 			}
@@ -2523,7 +2523,9 @@ economic_policy = {
 			planet_jobs_energy_produces_mult = -0.2
 			planet_jobs_food_produces_mult = -0.2
 		}
-
+		policy_flags = {
+			economic_policy_expansion
+		}
 		AI_weight = {
 			factor = 0
 		}
@@ -2705,7 +2707,9 @@ economic_policy = {
 			empire_size_systems_mult = -0.10
 			leaders_upkeep_mult = 0.50
 		}
-
+		policy_flags = {
+			economic_policy_adaptability
+		}
 		AI_weight = {
 			factor = 0
 		}

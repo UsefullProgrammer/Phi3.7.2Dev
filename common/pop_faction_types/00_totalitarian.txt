@@ -71,7 +71,7 @@ totalitarian = {
 			is_event_leader = yes
 		}
 	}
-	
+	#10|0
 	demand = {
 		title = "TRADITIONAL_DOMINATION"
 		unfulfilled_title = "NO_TRADITIONAL_DOMINATION"
@@ -90,7 +90,7 @@ totalitarian = {
 			}
 		}
 	}
-
+	#30|0
 	demand = {
 		title = "TOTALITARIAN_AUTOCRACY"
 		unfulfilled_title = "TOTALITARIAN_NO_AUTOCRACY"
@@ -115,7 +115,7 @@ totalitarian = {
 			}
 		}
 	}
-
+	#30|-20
 	demand = {
 		title = "TOTALITARIAN_NO_DEMOCRACY"
 		unfulfilled_title = "TOTALITARIAN_DEMOCRACY"
@@ -140,7 +140,7 @@ totalitarian = {
 			}
 		}
 	}
-
+	#40|-30
 	demand = {
 		title = "TOTALITARIAN_STRATIFICATION"
 		unfulfilled_title = "TOTALITARIAN_NO_STRATIFICATION"
@@ -177,13 +177,13 @@ totalitarian = {
 			}
 		}
 	}
-
+	#40|-40
 	demand = {
 		title = "TOTALITARIAN_ELITISM"
 		unfulfilled_title = "TOTALITARIAN_NO_ELITISM"
 		desc = "TOTALITARIAN_ELITISM_DESC"
 
-		fulfilled_effect = 10
+		fulfilled_effect = 0
 		unfulfilled_effect = -10
 
 		potential = {
@@ -205,7 +205,7 @@ totalitarian = {
 			}
 		}
 	}
-
+	#50|-40
 	demand = {
 		title = "TOTALITARIAN_EXTRANATIONAL_AUTHORITY"
 		unfulfilled_title = "TOTALITARIAN_NO_EXTRANATIONAL_AUTHORITY"
@@ -234,7 +234,7 @@ totalitarian = {
 			}
 		}
 	}
-
+	#50|-50
 	demand = {
 		title = "TOTALITARIAN_UNDERLING"
 		unfulfilled_title = "TOTALITARIAN_NOT_UNDERLING"
@@ -253,7 +253,7 @@ totalitarian = {
 			}
 		}
 	}
-	
+	#50|-60
 	demand = {
 		title = "GC_NO_EGALITARIAN_LAWS"
 		unfulfilled_title = "GC_EGALITARIAN_LAWS"
@@ -279,13 +279,13 @@ totalitarian = {
 			}
 		}
 	}
-	
+	#55|-60
 	demand = {
 		title = "GC_AUTHORITARIAN_LAWS"
 		unfulfilled_title = "GC_NO_AUTHORITARIAN_LAWS"
 		desc = "GC_AUTHORITARIAN_LAWS_DESC"
 
-		fulfilled_effect = 10
+		fulfilled_effect = 5
 		unfulfilled_effect = 0.001
 
 		potential = {
@@ -308,13 +308,13 @@ totalitarian = {
 			}
 		}
 	}
-	
+	#60|-60
 	demand = {
 		title = "AUTHORITARIAN_LEAP"
 		unfulfilled_title = "AUTHORITARIAN_LAG"
 		desc = "AUTHORITARIAN_LEAP_DESC"
 
-		fulfilled_effect = 10
+		fulfilled_effect = 5
 		unfulfilled_effect = 0.001
 
 		potential = {

@@ -84,6 +84,10 @@ spriteTypes = {
 		textureFile = "gfx/interface/icons/governments/edicts/break_truce.dds"
 	}
 	spriteType = {
+		name = "GFX_force_war"
+		textureFile = "gfx/interface/icons/governments/edicts/force_war.dds"
+	}
+	spriteType = {
 		name = "GFX_fed"
 		textureFile = "gfx/interface/icons/governments/edicts/fed.dds"
 	}

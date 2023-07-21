@@ -27,7 +27,7 @@
 			SCORE_POPS = 1 # Per pop
 			SCORE_PLANETS = 0 # Per colony
 			SCORE_SYSTEMS = 0 # Per system
-			SCORE_SUBJECTS = 0 # Fraction of subject's own score
+			SCORE_SUBJECTS = 1 # Fraction of subject's own score
 			SCORE_FEDERATION_MEMBERS = 0 # Fraction of Federation member's own score
 			SCORE_CRISIS_KILLS = 1 # Per crisis ship killed
 			SCORE_RELICS = 1

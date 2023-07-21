@@ -190,11 +190,11 @@ specialist_prospectorium = {
 @subsidy_maximum = 0.75
 
 @set_factor_0 = 0.15
-@set_factor_0_neg = -0.15
+@set_factor_0_neg = -0.10
 @set_factor_1 = 0.30
-@set_factor_1_neg = -0.30
+@set_factor_1_neg = -0.20
 @set_factor_2 = 0.45
-@set_factor_2_neg = -0.45
+@set_factor_2_neg = -0.40
 @set_factor_3 = 0.60
 @set_factor_3_neg = -0.60
 
@@ -234,10 +234,10 @@ resource_subsidies_basic = {
 	resource_max = {
 		base = @subsidy_maximum
 
-		# modifier = {
-		# 	set = @set_factor_0_neg
-		# 	agreement_preset = preset_scholarium
-		# }
+		 modifier = {
+		 	set = @set_factor_0_neg
+		 	agreement_preset = preset_scholarium
+		}
 
 		modifier = {
 			set = @set_factor_1_neg
@@ -263,7 +263,6 @@ resource_subsidies_basic = {
 			set = @set_factor_2
 			OR = {
 				agreement_preset = preset_vassal
-				agreement_preset = preset_scholarium
 				agreement_preset = preset_protectorate
 				
 			}

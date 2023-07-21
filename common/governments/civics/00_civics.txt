@@ -186,6 +186,7 @@ civic_beacon_of_liberty = {
 	modifier = {
 		pop_factions_unity_produces_mult = 0.1
 		empire_size_pops_mult = -0.15
+		wars_influence_upkeep_mult = 0.3
 	}
 }
 
@@ -1009,6 +1010,7 @@ civic_cutthroat_politics = {
 		edicts_cost_mult = -0.20
 		edicts_upkeep_mult = -0.20
 		intel_decryption_add = 1
+		wars_influence_upkeep_mult = -0.2
 	}
 }
 

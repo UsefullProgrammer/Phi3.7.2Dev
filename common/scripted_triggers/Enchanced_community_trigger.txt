@@ -1,0 +1,54 @@
+I_have_weak_fleet = {
+	NOT = { 
+		any_country = { #tutte le country umane sono > equivalent a me
+			NOT = { is_same_value = prev }
+			OR = {
+				is_ai = no
+				has_country_flag = was_human
+			}
+			is_galactic_community_member = yes
+			is_country_type = default
+			relative_power = {
+				who = prev
+				category = fleet
+				value < equivalent
+			}
+		}
+	}
+}
+I_have_weak_technology = {
+	NOT = { 
+		any_country = { #una qualunque  country 
+			NOT = { is_same_value = prev }
+			OR = {
+				is_ai = no
+				has_country_flag = was_human
+			}
+			is_galactic_community_member = yes
+			is_country_type = default
+			relative_power = {
+				who = prev
+				category = technology
+				value < equivalent
+			}
+		}
+	}
+}
+I_have_weak_economy = {
+	NOT = { 
+		any_country = { #tutte le country umane sono > equivalent a me
+			NOT = { is_same_value = prev }
+			OR = {
+				is_ai = no
+				has_country_flag = was_human
+			}
+			is_galactic_community_member = yes
+			is_country_type = default
+			relative_power = {
+				who = prev
+				category = economy
+				value < equivalent
+			}
+		}
+	}
+}

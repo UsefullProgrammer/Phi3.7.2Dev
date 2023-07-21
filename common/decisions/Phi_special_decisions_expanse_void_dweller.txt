@@ -40,6 +40,7 @@ decision_upgrade_habitat_3 = {
 	allow = {
 		free_district_slots = 0
 		has_major_upgraded_capital = yes
+		owner = { has_ascension_perk = ap_voidborn }
 	}
 
 	effect = {
@@ -99,6 +100,7 @@ decision_upgrade_habitat_4 = {
 	allow = {
 		free_district_slots = 0
 		has_major_upgraded_capital = yes
+		owner = { has_ascension_perk = ap_voidborn }
 	}
 
 	effect = {
@@ -158,6 +160,7 @@ decision_upgrade_habitat_5 = {
 	allow = {
 		free_district_slots = 0
 		has_major_upgraded_capital = yes
+		owner = { has_ascension_perk = ap_voidborn }
 	}
 
 	effect = {

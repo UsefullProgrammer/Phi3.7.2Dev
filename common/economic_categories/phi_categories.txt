@@ -31,3 +31,9 @@ diplomatic_networking = {
 infiltration = {
 	parent = diplomacy
 }
+galactic_community = {
+	parent = diplomacy
+	generate_mult_modifiers = {
+		upkeep
+	}
+}

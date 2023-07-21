@@ -77,7 +77,7 @@ prosperity = {
 			is_event_leader = yes
 		}
 	}
-	
+	#10|0
 	demand = {
 		title = "TRADITIONAL_MERCANTILISM"
 		unfulfilled_title = "NO_TRADITIONAL_MERCANTILISM"
@@ -96,7 +96,7 @@ prosperity = {
 			}
 		}
 	}
-
+	#20|0
 	demand = {
 		title = "PROSPERITY_PHILOSOPHY"
 		unfulfilled_title = "PROSPERITY_NO_PHILOSOPHY"
@@ -122,7 +122,7 @@ prosperity = {
 			}
 		}
 	}
-
+	#30|0
 	demand = {
 		title = "PROSPERITY_PEACE"
 		unfulfilled_title = "PROSPERITY_NO_PEACE"
@@ -141,7 +141,7 @@ prosperity = {
 			}
 		}
 	}
-
+	#30|-25
 	demand = {
 		title = "PROSPERITY_NOT_AGGRESSOR"
 		unfulfilled_title = "PROSPERITY_AGGRESSOR"
@@ -166,7 +166,7 @@ prosperity = {
 			}
 		}
 	}
-	
+	#30|-45
 	demand = {
 		title = "NO_INDISCRIMINATE_BOMBING"
 		unfulfilled_title = "INDISCRIMINATE_BOMBING"
@@ -188,13 +188,13 @@ prosperity = {
 			}
 		}
 	}	
-
+	#30|-45
 	demand = {
 		title = "DEMOBILIZED_MILITARY"
 		unfulfilled_title = "MOBILIZED_MILITARY"
 		desc = "PEACE_DEMOBILIZED_MILITARY_DESC"
 
-		fulfilled_effect = 10
+		fulfilled_effect = 0
 		unfulfilled_effect = 0.001
 
 		potential = {
@@ -218,7 +218,7 @@ prosperity = {
 			}
 		}
 	}
-
+	#30|-55
 	demand = {
 		title = "DEMOBILIZED_MILITARY"
 		unfulfilled_title = "MOBILIZED_MILITARY"
@@ -248,7 +248,7 @@ prosperity = {
 			}
 		}
 	}
-
+	#40|-55
 	demand = {
 		title = "PEACE_5Y"
 		unfulfilled_title = "NO_PEACE_5Y"
@@ -272,12 +272,13 @@ prosperity = {
 			}
 		}
 	}
+	#50|-55
 	demand = {
 		title = "ISOLATIONIST_PEACE2"
 		unfulfilled_title = "ISOLATIONIST_NO_PEACE2"
 		desc = "ISOLATIONIST_PEACE_DESC2"
 
-		fulfilled_effect = 20
+		fulfilled_effect = 10
 		unfulfilled_effect = 0.001
 
 		potential = {
@@ -298,7 +299,7 @@ prosperity = {
 			}
 		}
 	}
-	
+	#55|-55
 	demand = {
 		title = "ISOLATIONIST_NON_AGGRESSION1"
 		unfulfilled_title = "ISOLATIONIST_FEW_NON_AGGRESSION1"
@@ -324,6 +325,24 @@ prosperity = {
 					}
 				}
 			}
+		}
+	}
+	#60|-60 pacifist_federation
+	demand = {
+		title = pacifist_federation
+		unfulfilled_title = pacifist_federation_NOT_materialist
+		desc = pacifist_federation_DESC
+
+		fulfilled_effect = 5
+		unfulfilled_effect = -5
+
+		potential = {
+			exists = owner.federation
+			has_federations_dlc = yes
+		}
+
+		trigger = {
+			owner.federation = { has_federation_type = pacifist_federation }
 		}
 	}
 

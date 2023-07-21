@@ -144,6 +144,7 @@ country_event = {
 					attacker = {
 						NOT = { has_truce = root } #non puoi entrare se hai un truce
 					}
+					NOT = { is_at_war_with = root }# non puoi entrare se sei già in guerra
 				}
 			}
 			random_war = {
@@ -160,5 +161,135 @@ country_event = {
 			war = event_target:survive_cb_war
 			side = defenders
 		}
+	}
+}
+
+#force the war with friend
+country_event = {
+	id = enhanced_diplomacy.3
+	hide_window = yes
+
+	is_triggered_only = yes
+	
+	immediate = {
+		random_country = {
+			limit = {
+				root = {
+					NOT = { has_truce = prev }
+					NOT = { is_at_war_with = prev }
+					is_harming_relations_with = prev
+					# OR = {
+					# 	prev = { has_subject = root } #la nazione random è overlord della root (prev)
+					# 	has_casus_belli = {
+					# 		target = prev
+					# 		type = cb_claim
+					# 	}
+					# 	has_casus_belli = {
+					# 		target = prev
+					# 		type = cb_subjugation
+					# 	}
+					# 	has_casus_belli = {
+					# 		target = prev
+					# 		type = cb_ideology
+					# 	}
+					# }
+				}
+			}
+			save_event_target_as = war_enemy
+		}
+		
+		if = {
+			limit = { exists = event_target:war_enemy }
+			random_country = {
+				limit = {
+					is_same_value = event_target:war_enemy #trovo country tramite event_target
+				}
+				
+				root = {
+					if = {
+						limit = {
+							prev = {
+								has_subject = root #la nazione è overlord della root (prev)
+							}
+						}
+						declare_war = {
+							target = event_target:war_enemy
+							attacker_war_goal = wg_independence
+						}
+					}
+					else_if = {
+						limit = {
+							has_casus_belli = {
+								target = prev
+								type = cb_subjugation
+							}
+						}
+						declare_war = {
+							target = event_target:war_enemy
+							attacker_war_goal = wg_subjugation
+						}
+					}
+					else_if = {
+						limit = {
+							has_claim = prev
+						}
+						declare_war = {
+							target = event_target:war_enemy
+							attacker_war_goal = wg_conquest
+						}
+					}
+					else_if = {
+						limit = {
+							has_casus_belli = {
+								target = prev
+								type = cb_ideology
+							}
+						}
+						declare_war = {
+							target = event_target:war_enemy
+							attacker_war_goal = wg_force_ideology
+						}
+					}
+					else = {
+						declare_war = {
+							target = event_target:war_enemy
+							attacker_war_goal = wg_humiliation
+						}
+					}
+					if = {
+						limit = {
+							has_federation = yes
+						}
+						every_federation_ally = {
+							add_modifier = {
+								modifier = "phi_force_war"
+								days = 3600
+							}
+						}
+					}
+					else = {
+						add_modifier = {
+							modifier = "phi_force_war"
+							days = 3600
+						}
+					}
+				}
+			}
+		}
+	}
+}
+#enchached community, help weak country 
+country_event = {
+	id = enhanced_diplomacy.10
+	hide_window = yes
+
+	is_triggered_only = yes
+	trigger = {
+		is_galactic_community_formed = yes
+		is_galactic_community_member = yes
+		is_country_type = default
+	}
+	immediate = {
+		Comunity_help_weak = yes
 	}
 }

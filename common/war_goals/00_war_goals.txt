@@ -1,5 +1,8 @@
 # See wg_example.txt for an explanation
-
+#onaccept:
+#fromfrom is the war
+#from is the loser
+#this is the winner
 wg_independence = {
 	casus_belli = cb_subject
 
@@ -77,6 +80,7 @@ wg_independence = {
 					}
 				}
 			}
+			Lost_War_Standard_Bonus = yes
 		}
 	}
 
@@ -315,7 +319,9 @@ wg_assimilation = {
 			}
 		}
 	}
-
+	on_status_quo = {
+		Lost_War_Standard_Bonus = yes
+	}
 	ai_weight = {
 		weight = 100
 	}
@@ -375,7 +381,9 @@ wg_cleansing = {
 			}
 		}
 	}
-
+	on_status_quo = {
+		Lost_War_Standard_Bonus = yes
+	}
 	ai_weight = {
 		weight = 100
 	}
@@ -435,7 +443,9 @@ wg_absorption = {
 			}
 		}
 	}
-
+	on_status_quo = {
+		Lost_War_Standard_Bonus = yes
+	}
 	ai_weight = {
 		weight = 100
 	}
@@ -592,7 +602,7 @@ wg_plunder = {
 		demand_surrender
 	}
 
-	surrender_acceptance = -25
+	surrender_acceptance = -50
 
 	potential = {
 		has_total_war_cb = no
@@ -632,6 +642,7 @@ wg_plunder = {
 			}
 		}
 	}
+	
 	on_accept = {
 		if = {
 			limit = {
@@ -989,6 +1000,9 @@ wg_subjugation = {
 			}
 		}
 	}
+	on_status_quo = {
+		Lost_War_Standard_Bonus = yes
+	}
 	on_accept = {
 		hidden_effect = {
 			from = {
@@ -1216,6 +1230,9 @@ wg_tribute = {
 			}
 		}
 	}
+	on_status_quo = {
+		Lost_War_Standard_Bonus = yes
+	}
 	on_accept = {
 		hidden_effect = {
 			from = {
@@ -1347,6 +1364,9 @@ wg_megacorp_subjugate = {
 				from = { is_galactic_community_member = yes }
 			}
 		}
+	}
+	on_status_quo = {
+		Lost_War_Standard_Bonus = yes
 	}
 	on_accept = {
 		hidden_effect = {
@@ -1588,6 +1608,7 @@ wg_force_ideology = {
 				}
 			}
 		}
+		Lost_War_Standard_Bonus = yes
 	}
 	on_accept = {
 
@@ -1711,6 +1732,7 @@ wg_force_ideology = {
 				}
 			}
 		}
+		Lost_War_Standard_Bonus = yes
 	}
 
 	ai_weight = {
@@ -1766,6 +1788,14 @@ wg_conquest = {
 				target = root
 				type = cb_humiliation
 			}
+		}
+	}
+	on_status_quo = {
+		Lost_War_Standard_Bonus = yes
+	}
+	on_accept = {
+		hidden_effect = {
+			Lost_War_Standard_Bonus = yes 
 		}
 	}
 
@@ -1838,7 +1868,7 @@ wg_humiliation = {
 			hidden_effect = {
 				add_resource = { influence = 100 }
 				from = {
-					add_modifier = { modifier = humiliated days = 5400 }
+					add_modifier = { modifier = humiliated_phi days = 5400 }
 					if = {
 						limit = { has_policy_flag = diplo_stance_full_scale_mobilization }
 						set_policy = {
@@ -1851,12 +1881,13 @@ wg_humiliation = {
 						}
 					}
 				}
+				Lost_War_Standard_Bonus = yes
 			}
 		}
 	}
 
 	ai_weight = {
-		weight = 0
+		weight = 1
 	}
 }
 
@@ -1926,6 +1957,7 @@ wg_take_galatron = {
 		}
 		hidden_effect = { country_event = { id = cara.950 } }
 		add_relic = r_galatron
+		Lost_War_Standard_Bonus = yes
 	}
 
 	on_status_quo = {
@@ -2411,7 +2443,7 @@ wg_hegemon = {
 		}
 		from = {
 			join_alliance = { who = root override_requirements = yes }
-			add_modifier = { modifier = humiliated days = 5400 }
+			add_modifier = { modifier = humiliated_phi days = 5400 }
 			if = {
 				limit = {
 					NOT = { has_ethic = ethic_gestalt_consciousness }
@@ -2893,11 +2925,19 @@ wg_phi_survive = {
 	ai_weight = {
 		weight = 0
 		modifier = {
-			weight = 100
-			any_war = {
-				any_defender = {
-					is_same_value = root
-				}
+			weight = 50
+			relative_power = {#this = chi setta war goal è più debole del nemico
+				who = from
+				category = fleet
+				value < equivalent
+			}
+		}
+		modifier = {
+			factor = 1.5
+			relative_power = {
+				who = from
+				category = fleet
+				value < inferior
 			}
 		}
 	}

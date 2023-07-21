@@ -482,11 +482,109 @@ Fix AI in survive che si metteva anche in casi che non aveva senso
 1.4.1
 Fix trait military veteran
 
-1.5
-Puoi commerciale le relique
-Quando rilasci con la decisione il vassalo in automatico aggiorna la star base al primo livello, questo porta il rilascio a costare anche 200 alloys che verranno usati se non è già una starbase di primo livello
-gateway_restored ora costa meno
+[h3][b]1.5 The cost of war[/b][/h3]
+
+[h1][b]AI[/b][/h1]
 Le ai non entrano nel survive se hanno rapporti neutrali o superiori con te
 Le ai non entrano nel survive se hanno un truce con il war_leader
+Creato un flag "was_human" se la nazione è stata giocata da un humano il flag è true è usato per non far fare cose brutte alle ai (tipo entrare nelle survive).
+IA che era un umano non fa grossi cambiamenti per 360 mesi
+Autodistruzione starbase cambiata leggermente, ora in base al livello a parametri diverso, inoltre se c'è una flotta dell'impero non l'autodistrugge.
+
+[h2][b]Origine civiche[/b][/h2]
+[h1][b]Void dweller[/b][/h1]
+Tolto la possibilità dei void dweller di fare i panelli solari come moduli, erano troppo forti così.
+Diminuito tempo per potenziare gli habitat del 50%
+Ora puoi potenziare gli habitat 5 volte invece di 2
+district_hab_science non dà più 3 ricercatori tutto fare ma 2 di base , 2 di phisica e l'altro di ingegneri
+I void dweller hanno un politica speciale che permette ai district_hab_science di avere +1 ricercatore fisica o +1 ricerca ingegneria
+district_hab_commercial ti da 5 clerk job e non più 3
+district_hab_cultural ti da 4 housing invece di 3
+I distretti habitat diminuiscono la manuntenzione delle strutture del 5%
+[h1][b]Criminal sindicate[/b][/h1]
+Ora il criminal sindacate può fare patti commerciali ma se li fa non può fare branch office ( l'incontrario della megacorp )
+
+
+[h1][b]Guerre[/b][/h1]
+Ripristinato effetto humiliated originale così per tutte le altre war goal con humiliated funziona come prima.
+Invece gli humiliated per gli imperi nuovo ha i seguenti effetti:
+[list]
+[*]diplo_weight_mult -0.33
+[*]costo navi costruzione +0.35
+[*]country_unity_produces_mult -0.33
+[*]country_naval_cap_mult -0.33
+[/list]
+Aggiunto WarGoal war reparation per chi è combatte una guerra difensiva
+[img=https://i.imgur.com/ObzpcO7.png][/img]
+Ogni guerra costa 0.5 influenza mantenerla
+Le guerre con umiliazione non hanno manuntenzione guerra in influenza
+Le guerre con indipendenza non hanno manuntenzione guerra in influenza ma solo per chi chiede indipendenza
+Se si finisce tutta la tradizione di supremazia si ha il mantenimento delle guerre a -75%
+Editto quarantena riduce il mantenimento delle guerre a -10%
+Le Ai hanno il 7% ogni mese di settare survive e il 5% ogni mese di entrare in difesa di un survive inoltre non entrano se:
+-Sono in guerra con chi è in survive 
+-Se hanno un truce con il difensore o attaccante principale oppure
+-Se sono in buoni rapporti con l'attacante
+In survive tolto surrender e demand surrender in questo modo se non sbaglio ogni fazione può andarsene indipendentemente dalla guerra
+[h1]RP[/h1]
+Ora non puoi dichiarare guerra a un amico ma puoi dichiarare tramite l'editto force war se stai harming relation e hai un casus bellis valido.
+
+[h1][b]Vassali[/b][/h1]
+Il vassalo non costa più influenza che non ha senso ora, aveva ragione Mario.
+
+[h1][b]Bilanciamento[/b][/h1]
+Politica full scale mobilization ora aumenta del 10% il mantenimento delle relazioni displomatiche
+influence_deficit ora invece di -20% happines dà:
+[list]
+[*]war exhaustion +100%
+[*]happiness -10%
+[*]council agenda progress speed -50%
+[*]Election cost + 50%
+[/list]
+Se si setta survive per 2700 giorni si ha attrazione alla pop + 25%
+Ora le tech di dottrina navali danno altri bonus, come exp start , capacity leader e bonus livello di admiraglio
+Ribilanciati housing e empire size per le pop dei voidweller ruler (-50% housing -25% empire size) specialist (-25% housing e -10% empire size ) 
+[h1][b]Galactic community migliorata (sperimentale)[/b][/h1]
+La galactic community usa 0.25 influence e 2 energy
+Alcune risoluzioni aumentano o diminuiscono l'upkeep influence delle guerre.
+
+
+[h1][b]Altro o miglioramenti[/b][/h1]
+Aumentato l'ammontare di alloy o scienza della ricerca dei relitti da 10% a 25% e per la scienza da 20 a 30 punti per livello rendendo le guerre più profittabili.
+La politica di guerra è settata di default in difensiva tranne per i militaristi.
+gateway_restored ora costa meno
+Puoi commerciale le relique
+Quando rilasci con la decisione il vassalo in automatico aggiorna la star base al primo livello, questo porta il rilascio a costare anche 200 alloys che verranno usati se non è già una starbase di primo livello
 Non puoi entrare in una survive se hai un truce con il war_leader
-Puoi fare gli orbital ring sui habitat
+Influenza massima settata al massimo a 2048 in onore di Kevin Mitnick
+
+Quando superi empire sprawn di 24 ti manda una notifica che ti consiglia cosa potresti fare per risolvere.
+
+
+1.5.1 help weak and balance
+
+La galactic community aiuta i più deboli nella communità se risultano gli unici a essere inferior o pathetic
+[list]
+[*]Il più debole in flotta se è nella commmunità galattica ha uno sconto sull'upkeep di flotta
+[*]Il più debole in tech  se è nella commmunità galattica ha uno bonus su tech
+[*]Il più debole in economia se è nella commmunità galattica ha uno bonus su economia
+[/list]
+
+[h1][b]Bilanciamento sperimentale[/b][/h1]
+I costruttori di robot per gli imperi non machine invece di costare 2 alloys costano 1 alloys e 2 consumer goods, chips is consumer goods.
+I costruttori di robot per gli imperi non machine ora fanno solo 1 planet_pop_assembly_add invece che 2.
+
+[h1][b]fix[/b][/h1]
+Fix force war che crashava.
+
+[h1][b]Void dweller[/b][/h1]
+Ascension per voidborn per i voiddweller ti permette per i starbase building di avere un workjob per ogni pianeta nel sistema in base al tipo starbase building
+
+[h1][b]Bilanciamento[/b][/h1]
+Ascension perk voidborn ti permette di fare anche gli altri 3 upgrade dopo il terzo
+Migliorato leggermente ap interstellar dominion
+Tradizione diplomazia se l'adotti ora ti da un upkeep reduction all'influenza della diplomazia di -0,5 poi se la completi un ulteriore -0,45 , prima se l'addottavi ti dava subito -1
+Diminuito per il lord quante deve per forza dare in risorse al vassalo (da -0.15 -0.3 0.45 a -0.1 -0.2 -0.4)
+Ora scholarium è obbligatorio subsidiare il vassalo di 0.10 risorse base
+Ribilanciate approval faction
+phi_planet_deviant_experiments ora da solo +50% e non più +75%

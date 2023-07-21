@@ -175,6 +175,7 @@ phi_join_defensive_war = {
 					NOT = { has_truce = root } #non puoi entrare se hai un truce
 				}
 			}
+			NOT = { is_at_war_with = root }# non puoi entrare se sei già in guerra
 		}	
 	}
 	effect = {

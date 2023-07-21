@@ -21,6 +21,12 @@ country_event = {
 			id = phi_notification.3  #notification survive_avaible_target
 			days = 3
 		} 
+		country_event = { 
+			id = phi_notification.10  #notification survive_avaible_target
+			days = 3
+		} 
+		
+
 	}
 }
 country_event = {
@@ -28,6 +34,7 @@ country_event = {
 	hide_window = yes
 	is_triggered_only = yes
 	trigger = {
+		is_ai = no
 		has_resource = { type = minor_artifacts amount >= 1000 }
 		has_country_flag = encountered_first_lgate
 		NOT = { has_country_flag = completed_lcluster_chain }
@@ -64,6 +71,7 @@ country_event = {
 	hide_window = yes
 	is_triggered_only = yes
 	trigger = {
+		is_ai = no
 		has_resource = { type = minor_artifacts amount >= 500 }
 		Has_precursor_chain = yes
 		# OR = {
@@ -100,6 +108,7 @@ country_event = {
 	hide_window = yes
 	is_triggered_only = yes
 	trigger = {
+		is_ai = no
 		any_country = {
 			has_communications = root
 			any_war = {
@@ -152,6 +161,63 @@ country_event = {
 		}else_if = {
 			limit = { has_country_flag = phi_empire_in_survive_flag }
 			remove_country_flag = phi_empire_in_survive_flag
+		}
+	}
+}
+#notified empire size over
+country_event = {
+	id = phi_notification.10
+	hide_window = yes
+	is_triggered_only = yes
+	trigger = {
+		is_ai = no
+		empire_sprawl_over_cap >= 24
+	}
+
+	immediate = {
+		if = {
+			limit = {
+				NOT = { has_country_flag = phi_empire_size_over_flag }
+			}
+			if = {
+				limit = {
+					has_resource = { type = influence amount >= 1000 }
+					NOT = { has_edict = expansion_planer }
+					
+				}
+				create_message = {
+					type = MESSAGE_TYPE_phi_empire_size_over
+					localization = phi_empire_size_over_expansion_planer_MESSAGE
+					days = @message_alert_display_duration_days_tier_2
+				}
+			}
+			else_if = {
+				limit = {
+					NAND = {
+						has_edict = expansion_planer
+						has_policy_flag = economic_policy_adaptability
+					}
+					
+				}
+				create_message = {
+					type = MESSAGE_TYPE_phi_empire_size_over
+					localization = phi_empire_size_over_tip_MESSAGE
+					days = @message_alert_display_duration_days_tier_2
+				}
+			}
+			else = {
+				create_message = {
+					type = MESSAGE_TYPE_phi_empire_size_over
+					localization = phi_empire_size_over_MESSAGE
+					days = @message_alert_display_duration_days_tier_2
+				}
+				
+			}
+			set_country_flag = phi_empire_size_over_flag
+		}
+		else_if = {
+			limit = { has_country_flag = phi_empire_size_over_flag }
+			remove_country_flag = phi_empire_size_over_flag
 		}
 	}
 }

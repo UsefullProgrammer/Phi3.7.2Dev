@@ -88,13 +88,13 @@ supremacist = {
 			is_event_leader = yes
 		}
 	}
-
+	#5|-10
 	demand = {
 		title = "SUPREMACIST_RULER_SAME_SPECIES"
 		unfulfilled_title = "SUPREMACIST_RULER_NOT_SAME_SPECIES"
 		desc = "SUPREMACIST_RULER_NOT_SAME_SPECIES_DESC"
 
-		fulfilled_effect = 10
+		fulfilled_effect = 5
 		unfulfilled_effect = -10
 
 		potential = {
@@ -109,13 +109,13 @@ supremacist = {
 			}
 		}
 	}
-
+	#10|-20
 	demand = {
 		title = "SUPREMACIST_ISOLATIONIST_NO_FEDERATION"
 		unfulfilled_title = "SUPREMACIST_ISOLATIONIST_FEDERATION"
 		desc = "SUPREMACIST_ISOLATIONIST_NO_FEDERATION_DESC"
 
-		fulfilled_effect = 10
+		fulfilled_effect = 5
 		unfulfilled_effect = -10
 
 		potential = {
@@ -135,7 +135,7 @@ supremacist = {
 		}
 	}
 
-
+	#20|-30
 	demand = {
 		title = "SUPREMACIST_NO_FREE_ALIENS"
 		unfulfilled_title = "SUPREMACIST_HAS_FREE_ALIENS"
@@ -174,7 +174,7 @@ supremacist = {
 			}
 		}
 	}
-
+	#20|-40
 	demand = {
 		title = "SUPREMACIST_NO_MIGRATION_TREATIES"
 		unfulfilled_title = "SUPREMACIST_MIGRATION_TREATIES"
@@ -211,7 +211,7 @@ supremacist = {
 			}
 		}
 	}
-
+	#20|-50
 	demand = {
 		title = "SUPREMACIST_REFUGEES_UNWELCOME"
 		unfulfilled_title = "SUPREMACIST_REFUGEES_WELCOME"
@@ -236,7 +236,7 @@ supremacist = {
 			}
 		}
 	}
-
+	#20|-60
 	demand = {
 		title = "SUPREMACIST_NO_COMMERCIAL_PACTS"
 		unfulfilled_title = "SUPREMACIST_COMMERCIAL_PACTS"
@@ -259,7 +259,7 @@ supremacist = {
 			}
 		}
 	}
-	
+	#30|-60
 	demand = {
 		title = "SUPREMACIST_FANATIC_PURIFIERS"
 		unfulfilled_title = "SUPREMACIST_NOT_FANATIC_PURIFIERS"
@@ -281,7 +281,7 @@ supremacist = {
 			}
 		}
 	}
-
+	#40|-60
 	demand = {
 		title = "MOBILIZED_MILITARY"
 		unfulfilled_title = "DEMOBILIZED_MILITARY"
@@ -311,7 +311,7 @@ supremacist = {
 			}
 		}
 	}
-
+	#40|-70
 	demand = {
 		title = "DEMOBILIZED_MILITARY"
 		unfulfilled_title = "MOBILIZED_MILITARY"
@@ -341,14 +341,14 @@ supremacist = {
 			}
 		}
 	}
-	
+	#60|-70
 	demand = {
 		title = "GC_NO"
 		unfulfilled_title = "GC"
 		desc = "XENOPHOBE_GC_DESC"
 
 		fulfilled_effect = 20
-		unfulfilled_effect = -5
+		unfulfilled_effect = 0
 
 		potential = {
 			exists = owner
@@ -361,12 +361,13 @@ supremacist = {
 			}
 		}
 	}
+	#60|-110
 	demand = {
 		title = "SUPREMACIST_OPPRESSIVE_SUBJUGATION_POLICY"
 		unfulfilled_title = "SUPREMACIST_NO_OPPRESSIVE_SUBJUGATION_POLICY"
 		desc = "SUPREMACIST_NO_OPPRESSIVE_SUBJUGATION_POLICY_DESC"
 
-		unfulfilled_effect = -40#copy da pphi not_signatory
+		unfulfilled_effect = -40 #copy da pphi not_signatory
 		fulfilled_effect = 0.001
 
 		potential = {
@@ -382,7 +383,7 @@ supremacist = {
 			}
 		}
 	}
-
+	
 	# Faction Demands for Ruler and Council positions.
 	inline_script = {
 		script = "paragon/global_faction_demands"

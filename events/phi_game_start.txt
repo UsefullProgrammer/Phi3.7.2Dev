@@ -57,6 +57,11 @@ event = {
 		set_global_flag = phi_sublimation_allowed
 		set_global_flag = phi_emperor_win_allowed
 		set_global_flag = phi_realistic_upkeep_researcher_disallowed
+		
+		every_country = {
+			limit = { is_ai = no }
+			set_country_flag = was_human
+		}
 		country_event = { id = phi_game_start.1 }
 	}
 }

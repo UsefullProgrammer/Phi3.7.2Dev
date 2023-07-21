@@ -1,0 +1,24 @@
+#from is the loser this is the winner
+Lost_War_Standard_Bonus = {
+	if = {
+		limit = { 
+			have_fleet_destroy = yes 
+			from = { NOT = { has_modifier = phi_lost_war_ship } }
+		}
+		from = { add_modifier = { modifier = phi_lost_war_ship days = 3600 } }
+	}
+	if = {
+		limit = { 
+			have_building_destroy = yes 
+			from = { NOT = { has_modifier = phi_lost_war_building } }
+		}
+		from = { add_modifier = { modifier = phi_lost_war_building days = 3600 } }
+	}
+	if = {
+		limit = {
+			have_pop_destroy = yes 
+			from = { NOT = { has_modifier = phi_lost_war_pop } }
+		}
+		from = { add_modifier = { modifier = phi_lost_war_pop days = 3600 }  }
+	}
+}
