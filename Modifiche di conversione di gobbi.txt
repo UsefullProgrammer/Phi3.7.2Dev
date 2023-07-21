@@ -588,3 +588,6 @@ Diminuito per il lord quante deve per forza dare in risorse al vassalo (da -0.15
 Ora scholarium è obbligatorio subsidiare il vassalo di 0.10 risorse base
 Ribilanciate approval faction
 phi_planet_deviant_experiments ora da solo +50% e non più +75%
+
+1.5.2
+Roboticisti rifanno 2 pop assembly

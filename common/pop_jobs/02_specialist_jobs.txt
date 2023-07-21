@@ -1366,7 +1366,7 @@ roboticist = {
 				NOT = { exists = owner }
 			}
 		}
-		planet_pop_assembly_add = 1
+		planet_pop_assembly_add = 2
 	}
 
 	triggered_planet_modifier = {
