@@ -1002,84 +1002,6 @@ wg_subjugation = {
 	}
 	on_status_quo = {
 		Lost_War_Standard_Bonus = yes
-	}
-	on_accept = {
-		hidden_effect = {
-			from = {
-				add_threat = {
-					who = root
-					amount = 0.5
-				}
-			}
-		}
-		if = {
-			limit = { from = { has_been_declared_crisis = no } }
-			from = {
-				if = {
-					limit = {
-						tech_unlocked_ratio = {
-							who = ROOT
-							ratio < @protectorate_tech_threshold
-						}
-					}
-					set_subject_of = {
-						who = ROOT
-						preset = preset_protectorate
-					}
-				}
-				else = {
-					ROOT = {
-						switch = {
-							trigger = has_policy_flag
-							oppressive_terms = {
-								if = {
-									limit = {
-										ROOT = { is_ai = yes }
-									}
-									FROM = {
-										set_subject_of = {
-											who = ROOT
-											preset = preset_vassal_oppressive_ai
-										}
-									}
-								}
-								else = {
-									FROM = {
-										set_subject_of = {
-											who = ROOT
-											preset = preset_vassal_oppressive
-										}
-									}
-								}
-							}
-							balanced_terms = {
-								FROM = {
-									set_subject_of = {
-										who = ROOT
-										preset = preset_vassal_balanced
-									}
-								}
-							}
-							benevolent_terms = {
-								FROM = {
-									set_subject_of = {
-										who = ROOT
-										preset = preset_vassal_benevolent
-									}
-								}
-							}
-						}
-					}
-				}
-				add_modifier = {
-					modifier = newly_subjugated_loyalty
-					years = 5
-				}
-			}
-		}
-	}
-
-	on_status_quo = {
 		if = {
 			limit = {
 				exists = last_created_country
@@ -1164,6 +1086,84 @@ wg_subjugation = {
 		}
 	}
 
+	on_accept = {
+		hidden_effect = {
+			from = {
+				add_threat = {
+					who = root
+					amount = 0.5
+				}
+			}
+		}
+		if = {
+			limit = { from = { has_been_declared_crisis = no } }
+			from = {
+				if = {
+					limit = {
+						tech_unlocked_ratio = {
+							who = ROOT
+							ratio < @protectorate_tech_threshold
+						}
+					}
+					set_subject_of = {
+						who = ROOT
+						preset = preset_protectorate
+					}
+				}
+				else = {
+					ROOT = {
+						switch = {
+							trigger = has_policy_flag
+							oppressive_terms = {
+								if = {
+									limit = {
+										ROOT = { is_ai = yes }
+									}
+									FROM = {
+										set_subject_of = {
+											who = ROOT
+											preset = preset_vassal_oppressive_ai
+										}
+									}
+								}
+								else = {
+									FROM = {
+										set_subject_of = {
+											who = ROOT
+											preset = preset_vassal_oppressive
+										}
+									}
+								}
+							}
+							balanced_terms = {
+								FROM = {
+									set_subject_of = {
+										who = ROOT
+										preset = preset_vassal_balanced
+									}
+								}
+							}
+							benevolent_terms = {
+								FROM = {
+									set_subject_of = {
+										who = ROOT
+										preset = preset_vassal_benevolent
+									}
+								}
+							}
+						}
+					}
+				}
+				add_modifier = {
+					modifier = newly_subjugated_loyalty
+					years = 5
+				}
+			}
+		}
+	}
+
+	
+
 	ai_weight = {
 		weight = 100
 		modifier = {
@@ -1230,9 +1230,6 @@ wg_tribute = {
 			}
 		}
 	}
-	on_status_quo = {
-		Lost_War_Standard_Bonus = yes
-	}
 	on_accept = {
 		hidden_effect = {
 			from = {
@@ -1268,6 +1265,7 @@ wg_tribute = {
 	}
 
 	on_status_quo = {
+		Lost_War_Standard_Bonus = yes
 		if = {
 			limit = {
 				exists = last_created_country
@@ -1365,9 +1363,6 @@ wg_megacorp_subjugate = {
 			}
 		}
 	}
-	on_status_quo = {
-		Lost_War_Standard_Bonus = yes
-	}
 	on_accept = {
 		hidden_effect = {
 			from = {
@@ -1428,6 +1423,7 @@ wg_megacorp_subjugate = {
 	}
 
 	on_status_quo = {
+		Lost_War_Standard_Bonus = yes
 		if = {
 			limit = {
 				exists = last_created_country
@@ -2031,68 +2027,84 @@ wg_expel_corp = {
 		}
 	}
 	on_status_quo = {
-		if = {
-			limit = {
-				is_overlord = no
-			}
-			custom_tooltip = wg_expel_corp_status_quo_effects
-			hidden_effect = {
-				every_owned_planet = {
-					limit = { has_branch_office = from }
-					branch_office_owner = { add_resource = { energy = 1000 } }
-					close_branch_office = yes
+		fromfrom = {
+			every_war_participant = {#0:prevprev
+				limit = {
+					fromfrom = {
+						is_war_participant = {
+							who = prev
+							side = defenders
+						}
+					}
 				}
-			}
-		}
-		else = {
-			custom_tooltip = wg_expel_corp_subject_status_quo_effects
-			hidden_effect = {
-				every_owned_planet = {
-					limit = { has_branch_office = from }
-					branch_office_owner = { add_resource = { energy = 1000 } }
-					close_branch_office = yes
-				}
-				every_subject = {
-					every_owned_planet = {
-						limit = { has_branch_office = from }
-						branch_office_owner = { add_resource = { energy = 1000 } }
+				root = {#0:prev
+					every_owned_planet = { #0:this
+						limit = { has_branch_office = prevprev }
 						close_branch_office = yes
+						branch_office_owner =  { add_resource = { energy = 1000 } }
 					}
 				}
 			}
 		}
 	}
 	on_accept = {
-		if = {
-			limit = {
-				is_overlord = no
-			}
-			custom_tooltip = wg_expel_corp_effects
-			hidden_effect = {
-				every_owned_planet = {
-					limit = { has_branch_office = from }
-					close_branch_office = yes
-					owner = { add_resource = { energy = 1000 } }
+		#custom_tooltip = wg_expel_corp_effects
+		fromfrom = {
+			every_war_participant = {#0:prevprev
+				limit = {
+					fromfrom = {
+						is_war_participant = {
+							who = prev
+							side = defenders
+						}
+					}
 				}
-			}
-		}
-		else = {
-			custom_tooltip = wg_expel_corp_subject_effects
-			hidden_effect = {
-				every_owned_planet = {
-					limit = { has_branch_office = from }
-					close_branch_office = yes
-					owner = { add_resource = { energy = 1000 } }
-				}
-				every_subject = {
-					every_owned_planet = {
-						limit = { has_branch_office = from }
+				root = {#0:prev
+					random_owned_planet = { #0:this
+						limit = { has_branch_office = prevprev }
+						branch_office_owner = { add_modifier = { modifier = phi_criminal_expropriation days = 600 multiplier = value:edict_size_effect } }
+					}
+					every_owned_planet = { #0:this
+						limit = { has_branch_office = prevprev }
 						close_branch_office = yes
-						owner = { add_resource = { energy = 1000 } }
+						root  = { add_resource = { energy = 1000 } }
 					}
 				}
 			}
 		}
+		# if = {
+		# 	limit = {
+		# 		is_overlord = no
+		# 	}
+		# 	custom_tooltip = wg_expel_corp_effects
+		# 	hidden_effect = {
+		# 		every_owned_planet = {
+		# 			limit = { has_branch_office = from }
+		# 			branch_office_owner = { add_modifier = { modifier = phi_criminal_expropriation days = 600 } }
+		# 			close_branch_office = yes
+		# 			owner = { add_resource = { energy = 1000 } }
+		# 		}
+		# 	}
+		# }
+		# else = {
+		# 	custom_tooltip = wg_expel_corp_subject_effects
+		# 	hidden_effect = {
+		# 		every_owned_planet = {
+		# 			limit = { has_branch_office = from }
+		# 			branch_office_owner = { add_modifier = { modifier = phi_criminal_expropriation days = 600 } }
+		# 			close_branch_office = yes
+		# 			owner = { add_resource = { energy = 1000 } }
+		# 		}
+		# 		every_subject = {
+		# 			every_owned_planet = {
+		# 				limit = { has_branch_office = from }
+		# 				branch_office_owner = { add_modifier = { modifier = phi_criminal_expropriation days = 600 } }
+		# 				close_branch_office = yes
+		# 				owner = { add_resource = { energy = 1000 } }
+		# 			}
+		# 		}
+		# 	}
+		# }
 	}
 
 	ai_weight = {
@@ -2158,6 +2170,7 @@ wg_hostile_takeover = {
 					has_commercial_pact = root
 					is_in_federation_with = root
 				}
+				NOT = { is_same_value = root }
 			}
 			every_owned_planet = {
 				limit = {

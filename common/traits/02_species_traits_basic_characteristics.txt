@@ -305,6 +305,8 @@ trait_aquatic = {
 	}
 	modifier = {
 		pc_ocean_habitability = 0.2
+		species_empire_size_mult = 1
+		pop_resettlement_cost_mult = 1
 	}
 
 	icon = "gfx/interface/icons/traits/trait_aquatic.dds"
@@ -411,7 +413,7 @@ trait_clone_soldier_infertile = {
 	modifier = {
 		# Pop modifiers
 		pop_government_ethic_attraction = 0.50
-		species_empire_size_mult = -0.33
+		species_empire_size_mult = 0.4
 
 		# Leader modifiers
 		leader_age = -40
@@ -458,7 +460,7 @@ trait_clone_soldier_infertile_full_potential = {
 		pop_environment_tolerance = 0.20
 		planet_jobs_ruler_produces_mult = 0.4
 		planet_jobs_specialist_produces_mult = 0.25
-		species_empire_size_mult = -0.33
+		species_empire_size_mult = 0.4
 
 		# Leader modifiers
 		army_damage_mult = 0.75
@@ -500,7 +502,7 @@ trait_clone_soldier_fertile = {
 	modifier = {
 		# Pop modifiers
 		pop_government_ethic_attraction = 0.20
-		species_empire_size_mult = -0.33
+		species_empire_size_mult = 0.4
 
 		# Leader modifiers
 		army_damage_mult = 0.2

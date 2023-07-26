@@ -71,9 +71,9 @@ per_relation = {
 				NOR = { 
 					using_war_goal = { type = wg_humiliation owner = attacker } 
 					using_war_goal = { type = wg_humiliation owner = defender }
-					using_war_goal = { type = wg_independence owner = attacker }
+					using_war_goal = { type = wg_independence owner = prev }
 				}
-				any_attacker = { is_same_value = prev }
+				any_attacker = { is_same_value = prevprev }
 				any_defender = { is_same_value = from }
 			}
 		}
@@ -195,6 +195,54 @@ per_relation = {
 			category = research_agreements
 			upkeep = {
 				influence = 0.25
+			}
+		}
+	}
+	research_agreement = {
+		trigger = {
+			has_research_agreement = FROM
+			#has_valid_civic = civic_foreign_markets_private_brevets
+			always = no
+			relative_power = {
+				who = from
+				category = technology
+				value = superior
+			}
+		}
+
+		resources = {
+			category = research_agreements
+			produces = {
+				energy = 150
+				society_research = 50
+			}
+			upkeep = {
+				engineering_research = 50
+				physics_research = 50
+			}
+		}
+	}
+	research_agreement = {
+		trigger = {
+			has_research_agreement = FROM
+			#has_valid_civic = civic_foreign_markets_private_brevets
+			always = no
+			relative_power = {
+				who = from
+				category = technology
+				value = overwhelming
+			}
+		}
+
+		resources = {
+			category = research_agreements
+			produces = {
+				energy = 250
+				society_research = 75
+			}
+			upkeep = {
+				engineering_research = 100
+				physics_research = 100
 			}
 		}
 	}
@@ -328,11 +376,7 @@ per_relation = {
 				NOT = { has_ascension_perk = ap_enigmatic_engineering} #gobbi : se hai enigmatic engineering non si pu� imparare nulla
 				OR = {#if advance AI origin can't
 					mid_game_years_passed > 0
-					AND = {
-						NOT = { has_country_flag = is_advanced_start_AI }
-						NOT = { has_origin = origin_imperial_vassal_overlord }
-						NOT = { has_origin = origin_broken_shackles }
-					}
+					NOT = { has_country_flag = is_advanced_start_AI }
 					
 					
 				}
@@ -372,11 +416,7 @@ per_relation = {
 				NOT = { has_ascension_perk = ap_enigmatic_engineering} #gobbi : se hai enigmatic engineering non si pu� imparare nulla
 				OR = {#if advance AI origin can't
 					mid_game_years_passed > 0
-					AND = {
-						NOT = { has_country_flag = is_advanced_start_AI }
-						NOT = { has_origin = origin_imperial_vassal_overlord }
-						NOT = { has_origin = origin_broken_shackles }
-					}
+					NOT = { has_country_flag = is_advanced_start_AI }
 					
 				}
 				
@@ -412,11 +452,7 @@ per_relation = {
 				NOT = { has_ascension_perk = ap_enigmatic_engineering} #gobbi : se hai enigmatic engineering non si pu� imparare nulla
 				OR = {#if advance AI origin can't
 					mid_game_years_passed > 0
-					AND = {
-						NOT = { has_country_flag = is_advanced_start_AI }
-						NOT = { has_origin = origin_imperial_vassal_overlord }
-						NOT = { has_origin = origin_broken_shackles }
-					}
+					NOT = { has_country_flag = is_advanced_start_AI }
 					
 					
 				}
@@ -454,11 +490,7 @@ per_relation = {
 				NOT = { has_ascension_perk = ap_enigmatic_engineering} #gobbi : se hai enigmatic engineering non si pu� imparare nulla
 				OR = {#if advance AI origin can't
 					mid_game_years_passed > 0
-					AND = {
-						NOT = { has_country_flag = is_advanced_start_AI }
-						NOT = { has_origin = origin_imperial_vassal_overlord }
-						NOT = { has_origin = origin_broken_shackles }
-					}
+					NOT = { has_country_flag = is_advanced_start_AI }
 					
 				}
 				
@@ -530,11 +562,7 @@ per_relation = {
 				NOT = { has_ascension_perk = ap_enigmatic_engineering} #gobbi : se hai enigmatic engineering non si pu� imparare nulla
 				OR = {#if advance AI origin can't
 					mid_game_years_passed > 0
-					AND = {
-						NOT = { has_country_flag = is_advanced_start_AI }
-						NOT = { has_origin = origin_imperial_vassal_overlord }
-						NOT = { has_origin = origin_broken_shackles }
-					}
+					NOT = { has_country_flag = is_advanced_start_AI }
 					
 					
 				}
@@ -572,11 +600,7 @@ per_relation = {
 				NOT = { has_ascension_perk = ap_enigmatic_engineering} #gobbi : se hai enigmatic engineering non si pu� imparare nulla
 				OR = {#if advance AI origin can't
 					mid_game_years_passed > 0
-					AND = {
-						NOT = { has_country_flag = is_advanced_start_AI }
-						NOT = { has_origin = origin_imperial_vassal_overlord }
-						NOT = { has_origin = origin_broken_shackles }
-					}
+					NOT = { has_country_flag = is_advanced_start_AI }
 				}
 				
 			}
@@ -607,11 +631,7 @@ per_relation = {
 				NOT = { has_ascension_perk = ap_enigmatic_engineering} #gobbi : se hai enigmatic engineering non si pu� imparare nulla
 				OR = {#if advance AI origin can't
 					mid_game_years_passed > 0
-					AND = {
-						NOT = { has_country_flag = is_advanced_start_AI }
-						NOT = { has_origin = origin_imperial_vassal_overlord }
-						NOT = { has_origin = origin_broken_shackles }
-					}
+					NOT = { has_country_flag = is_advanced_start_AI }
 					
 				}
 				
@@ -647,11 +667,7 @@ per_relation = {
 				NOT = { has_ascension_perk = ap_enigmatic_engineering} #gobbi : se hai enigmatic engineering non si pu� imparare nulla
 				OR = {#if advance AI origin can't
 					mid_game_years_passed > 0
-					AND = {
-						NOT = { has_country_flag = is_advanced_start_AI }
-						NOT = { has_origin = origin_imperial_vassal_overlord }
-						NOT = { has_origin = origin_broken_shackles }
-					}
+					NOT = { has_country_flag = is_advanced_start_AI }
 					
 				}
 				
@@ -688,11 +704,7 @@ per_relation = {
 				NOT = { has_ascension_perk = ap_enigmatic_engineering} #gobbi : se hai enigmatic engineering non si pu� imparare nulla
 				OR = {#if advance AI origin can't
 					mid_game_years_passed > 0
-					AND = {
-						NOT = { has_country_flag = is_advanced_start_AI }
-						NOT = { has_origin = origin_imperial_vassal_overlord }
-						NOT = { has_origin = origin_broken_shackles }
-					}
+					NOT = { has_country_flag = is_advanced_start_AI }
 				}
 				
 			}
@@ -723,11 +735,7 @@ per_relation = {
 				NOT = { has_ascension_perk = ap_enigmatic_engineering} #gobbi : se hai enigmatic engineering non si pu� imparare nulla
 				OR = {#if advance AI origin can't
 					mid_game_years_passed > 0
-					AND = {
-						NOT = { has_country_flag = is_advanced_start_AI }
-						NOT = { has_origin = origin_imperial_vassal_overlord }
-						NOT = { has_origin = origin_broken_shackles }
-					}
+					NOT = { has_country_flag = is_advanced_start_AI }
 				}
 				
 			}
@@ -763,11 +771,7 @@ per_relation = {
 				NOT = { has_ascension_perk = ap_enigmatic_engineering} #gobbi : se hai enigmatic engineering non si pu� imparare nulla
 				OR = {#if advance AI origin can't
 					mid_game_years_passed > 0
-					AND = {
-						NOT = { has_country_flag = is_advanced_start_AI }
-						NOT = { has_origin = origin_imperial_vassal_overlord }
-						NOT = { has_origin = origin_broken_shackles }
-					}
+					NOT = { has_country_flag = is_advanced_start_AI }
 					
 					
 				}

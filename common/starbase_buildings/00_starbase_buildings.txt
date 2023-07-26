@@ -212,6 +212,17 @@ nebula_refinery = {
 			energy = 2
 		}
 	}
+	triggered_system_modifier = {
+		potential = {
+			star = { is_inside_nebula = yes }
+			exists = owner
+			owner = { 
+				has_ascension_perk = ap_voidborn 
+				is_gestalt = no
+			}
+		}
+		job_miner_add = 2
+	}
 
 	show_in_tech = "tech_space_mining_1"
 

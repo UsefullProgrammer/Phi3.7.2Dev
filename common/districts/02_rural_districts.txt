@@ -498,7 +498,18 @@ district_farming = {
 		exists = owner
 		AND = {
 			owner = { is_ai = yes }
-			owner = { country_uses_food = no }
+			free_district_slots = 0
+			free_jobs > 1
+			owner = { is_anglers_empire = no }
+			OR = {
+				owner = { country_uses_food = no }
+				owner = { 
+					has_monthly_income = {
+						resource = food
+						value > 40
+					}
+				} 
+			}
 		}
 	}
 }

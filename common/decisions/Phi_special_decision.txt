@@ -1,0 +1,87 @@
+# centralization Colony
+# decision_centralization_colony = {
+# 	owned_planets_only = yes
+
+# 	resources = {
+# 		category = decisions
+# 		cost = {
+# 			influence = 50
+# 			unity = 500
+# 		}
+# 	}
+
+# 	potential = {
+# 		is_capital = no
+# 		owner = {
+# 			is_machine_empire = yes
+# 		}
+		
+# 	}
+
+# 	allow = {
+# 		is_artificial = yes
+# 		custom_tooltip = {
+# 			fail_text = decision_centralization_colony_no_districts
+# 			num_districts = { type = any value < 1 }
+# 			num_buildings = { type = any value < 2 }
+# 		}
+# 		custom_tooltip = {
+# 			fail_text = no_upgraded_capital_tooltip
+# 			has_upgraded_capital = no
+# 		}
+# 		custom_tooltip = {
+# 			fail_text = decision_centralization_colony_only_one
+# 			NOT = {
+# 				owner = {
+# 					any_owned_planet = { has_modifier = centralization_colony }
+# 				}
+# 			}
+# 		}
+# 	}
+
+# 	effect = {
+# 		add_modifier = {
+# 			modifier = centralization_colony
+# 			days = -1
+# 		}
+# 		hidden_effect = {
+# 			remove_building = building_colony_shelter
+# 			add_building = building_centralization_capital
+# 		}
+# 		hidden_effect = { validate_planet_buildings_and_districts = yes }
+# 	}
+
+# 	ai_weight = {
+# 		weight = 0
+# 	}
+# }
+
+# decision_abolish_centralization_colony = {
+# 	owned_planets_only = yes
+# 	icon = decision_centralization_colony
+
+# 	resources = {
+# 		category = decisions
+# 		cost = {
+# 			influence = 100
+# 			unity = 1500
+# 		}
+# 	}
+
+# 	potential = {
+# 		has_modifier = centralization_colony
+# 	}
+
+# 	effect = {
+# 		remove_modifier = centralization_colony
+# 		hidden_effect = {
+# 			remove_building = building_centralization_capital
+# 			add_building = building_colony_shelter
+# 		}
+# 		hidden_effect = { validate_planet_buildings_and_districts = yes }
+# 	}
+
+# 	ai_weight = {
+# 		weight = 0
+# 	}
+# }

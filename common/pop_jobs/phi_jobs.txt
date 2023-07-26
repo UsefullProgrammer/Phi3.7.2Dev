@@ -454,6 +454,7 @@ physics_researcher = {
 	}
 	triggered_pop_modifier = {
 		potential = {
+			exists = planet
 			planet = {
 				exists = army_leader
 				army_leader = {
@@ -501,6 +502,7 @@ physics_researcher = {
 		}
 		upkeep = {
 			trigger = {
+				exists = planet
 				planet = {
 					has_planet_flag = has_science_ministry
 				}
@@ -512,6 +514,7 @@ physics_researcher = {
 		category = planet_requisitioned_research
 		produces = {
 			trigger = {
+				exists = planet
 				planet = {
 					has_planet_flag = has_science_ministry
 				}
@@ -567,6 +570,7 @@ physics_brain_drone = {
 	possible = { NOT = { has_trait = trait_nerve_stapled } }
 	triggered_pop_modifier = {
 		potential = {
+			exists = planet
 			planet = {
 				exists = army_leader
 				army_leader = {
@@ -600,6 +604,7 @@ physics_brain_drone = {
 		}
 		upkeep = {
 			trigger = {
+				exists = planet
 				planet = {
 					has_planet_flag = has_science_ministry
 				}
@@ -611,6 +616,7 @@ physics_brain_drone = {
 		category = planet_requisitioned_research
 		produces = {
 			trigger = {
+				exists = planet
 				planet = {
 					has_planet_flag = has_science_ministry
 				}
@@ -649,6 +655,7 @@ physics_calculator = {
 	possible_precalc = can_fill_drone_job
 	triggered_pop_modifier = {
 		potential = {
+			exists = planet
 			planet = {
 				exists = army_leader
 				army_leader = {

@@ -19,6 +19,15 @@ district_crashed_slaver_ship = {
 	allow = {
 		NOT = { has_modifier = resort_colony }
 		NOT = { has_modifier = slave_colony }
+		
+		OR = {
+			AND = { 
+				exists = owner
+				owner = { is_ai = no } 
+			}
+			free_housing < 21
+			free_building_slots > 0
+		}
 	}
 
 	conversion_ratio = 1
@@ -193,6 +202,14 @@ district_city = {
 	allow = {
 		NOT = { has_modifier = resort_colony }
 		NOT = { has_modifier = slave_colony }
+		OR = {
+			AND = { 
+				exists = owner
+				owner = { is_ai = no } 
+			}
+			free_housing < 21
+			free_building_slots > 0
+		}
 	}
 
 	conversion_ratio = 1
@@ -334,6 +351,14 @@ district_hive = {
 
 	allow = {
 		NOT = { has_modifier = resort_colony }
+		OR = {
+			AND = { 
+				exists = owner
+				owner = { is_ai = no } 
+			}
+			free_housing < 21
+			free_building_slots > 0
+		}
 	}
 
 	conversion_ratio = 1
@@ -430,6 +455,12 @@ district_nexus = {
 
 	allow = {
 		NOT = { has_modifier = resort_colony }
+		OR = {
+			exists = owner
+			owner = { is_ai = no }
+			free_housing < 21
+			free_building_slots > 0
+		}
 	}
 
 	conversion_ratio = 1

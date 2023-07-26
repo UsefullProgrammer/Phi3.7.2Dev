@@ -198,3 +198,12 @@ tr_supremacy_finish_desc:0 "Sblocca le Politiche delle §YDottrine di Guerra§!\
 war_goal_wg_humiliation_desc:0 "La guerra viene combattuta per minare il regime nemico e la fede della popolazione nelle loro istituzioni. \nQuesta guerra non costa mantenimento dell'influenza (per entrambi)"
 war_goal_wg_independence_desc:0 "La guerra viene combattuta per garantire l'indipendenza.\nQuesta guerra non costa mantenimento dell'influenza (Solo per te)"
 
+ap_voidborn_habitat_effect:0 "I nostri §YHabitat§! posseduti dall'Impero avranno §Y2 slot edifici aggiuntivi§!. I nostri habitat migliorati possono ospitare edifici abitativi avanzati e, dopo la ricerca di §Y$tech_habitat_3$§!, potrai aggiornare gli habitat 5 volte invece di 1."
+
+add_research_options_voidborn:0 "Opzioni di ricerca ottenute dopo l'aggiornamento di un Habitat:\n£engineering_research£§Y$tech_habitat_3$§!"
+
+wg_expel_corp_status_quo_effects:1 "Tutte le Filiali possedute dalla §Y[From.GetName]§! nel §Y[Root.GetName]§! verranno chiuse.\n§Y[From.GetName]§! riceverà £energy£ §Y1000§! per ogni Filiale chiusa."
+
+wg_expel_corp_effects:2 "Tutte le Filiali possedute dalla §Y[From.GetName]§! nel §Y[Root.GetName]§! verranno chiuse.\n§Y[Root.GetName]§! riceverà £energy£ §Y1000§! per ogni Filiale chiusa e §Y[From.GetName]§! dovrà pagare entro 20 mesi."
+
+resort_colony_empire_effects:0 "Dimensione dell'Impero diminuita di 10 Colonie di altri Imperi:\n $MOD_PLANET_AMENITIES_MULT$: §G+15%§!\n $MOD_PLANET_IMMIGRATION_PULL_MULT$: §G+15%§!"

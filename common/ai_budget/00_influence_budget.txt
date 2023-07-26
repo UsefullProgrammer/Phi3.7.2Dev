@@ -80,7 +80,19 @@ influence_expenditure_resolutions = {
 	}
 
 	weight = {
-		weight = 0.20
+		weight = 0.10
+		modifier = {
+			factor = 2
+			has_ai_personality = peaceful_traders
+		}
+		modifier = {
+			factor = 3
+			has_ai_personality = federation_builders
+		}
+		modifier = {
+			factor = 0.5
+			has_country_flag = was_human
+		}
 	}
 
 	# min/max resolution proposal costs defined in resolutions.txt

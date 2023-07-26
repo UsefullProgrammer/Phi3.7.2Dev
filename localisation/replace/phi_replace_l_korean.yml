@@ -185,3 +185,11 @@ sm_naval_logistics_office_desc_modifier:2 "닻고리 및 민간 닻고리 : §G+
  tr_supremacy_finish_desc:0 "Unlocks the §YWar Doctrines§! Policies.\nAscension Perks Unlocked: §G+1§!\n£mod_wars_influence_upkeep_mult$ -§G66%§!."
 war_goal_wg_humiliation_desc:0 "War is waged to undermine the enemy regime and the populace's faith in their institutions. \n This war Not cost influence upkeep (for togheter) "
 war_goal_wg_independence_desc:0 "War is waged to secure independence.\nThis war Not cost influence upkeep ( Only for you) "
+
+ap_voidborn_habitat_effect:0 "§YHabitats§! owned by our Empire have §Y2 Additional Building Slots§!. Our upgraded habitats can support advanced housing buildings can, after Research §Y$tech_habitat_3$§! you will can upgrade 5 times habitat instead 1."
+ add_research_options_voidborn:0 "Research options gained after upgrading a Habitat:\n£engineering_research£§Y$tech_habitat_3$§!"
+
+ wg_expel_corp_status_quo_effects:1 "All Branch Offices owned by the §Y[From.GetName]§! in the §Y[Root.GetName]§! are closed.\n§Y[From.GetName]§! receives £energy£ §Y1000§! for each closed Branch Office."
+ wg_expel_corp_effects:2 "All Branch Offices owned by the §Y[From.GetName]§! in the §Y[Root.GetName]§! are closed.\n§Y[Root.GetName]§! receives £energy£ §Y1000§! for each closed Branch Office and §Y[From.GetName]§! need pay in 20 months this."
+
+ resort_colony_empire_effects:0 "Empire size add:-10 Other Empire Colonies:\n   $MOD_PLANET_AMENITIES_MULT$: §G+15%§!\n   $MOD_PLANET_IMMIGRATION_PULL_MULT$: §G+15%§!"

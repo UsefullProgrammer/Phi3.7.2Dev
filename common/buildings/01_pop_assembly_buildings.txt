@@ -300,6 +300,7 @@ building_machine_assembly_plant = {
 			OR = {
 				owner = { is_ai = no }
 				AND = {
+					free_jobs > 0
 					num_buildings = { type = building_machine_assembly_plant value <= 4 }
 					NOT = { is_planet_class = pc_habitat }
 				}
@@ -322,6 +323,7 @@ building_machine_assembly_plant = {
 				owner = { is_ai = yes }
 				free_jobs < 1
 				OR = {
+					free_jobs < -10
 					num_buildings = { type = any value = 16 }
 					is_planet_class = pc_habitat
 				}
@@ -387,6 +389,7 @@ building_machine_assembly_complex = {
 				owner = { is_ai = yes }
 				free_jobs < 1
 				OR = {
+					free_jobs > -10
 					num_buildings = { type = any value = 16 }
 					is_planet_class = pc_habitat
 				}
@@ -453,6 +456,7 @@ building_machine_assembly_complex_3 = {
 				owner = { is_ai = yes }
 				free_jobs < 1
 				OR = {
+					free_jobs > -10
 					num_buildings = { type = any value = 16 }
 					is_planet_class = pc_habitat
 				}
@@ -506,18 +510,40 @@ building_spawning_pool = {
 			is_hive_empire = yes
 			NOT = { has_origin = origin_progenitor_hive }
 		}
-		or = {
-			num_buildings = { type = any value < 15 }
+		OR = {
+			AND = {
+				free_jobs > 0
+				num_buildings = { type = any value < 15 }
+			}
 			owner = { is_ai = no }
 		}
 	}
 
 	destroy_trigger = {
 		exists = owner
-		owner = {
-			OR = {
-				is_hive_empire = no
-				has_origin = origin_progenitor_hive
+		OR = {
+			owner = {
+				OR = {
+					is_hive_empire = no
+					has_origin = origin_progenitor_hive
+				}
+			}
+			AND = {
+				owner = { is_ai = yes }
+				free_jobs < 1
+				OR = {
+					free_jobs < -10
+					num_buildings = {
+						type = any
+						value = 16
+					}
+					is_planet_class = pc_habitat
+				}
+				#merge3.7.2
+				#free_district_slots = 0
+				#free_building_slots = 0
+				#free_housing <= 0
+				#free_jobs <= 0
 			}
 		}
 	}
@@ -599,14 +625,36 @@ building_offspring_nest = {
 		exists = owner
 		owner = { has_origin = origin_progenitor_hive }
 		or = {
-			num_buildings = { type = any value < 15 }
+			AND = {
+				free_jobs > 0
+				num_buildings = { type = any value < 15 }
+			}
 			owner = { is_ai = no }
 		}
 	}
 
 	destroy_trigger = {
 		exists = owner
-		owner = { NOT = { has_origin = origin_progenitor_hive } }
+		OR = {
+			owner = { NOT = { has_origin = origin_progenitor_hive } }
+			AND = {
+				owner = { is_ai = yes }
+				free_jobs < 1
+				OR = {
+					free_jobs < -10
+					num_buildings = {
+						type = any
+						value = 16
+					}
+					is_planet_class = pc_habitat
+				}
+				#merge3.7.2
+				#free_district_slots = 0
+				#free_building_slots = 0
+				#free_housing <= 0
+				#free_jobs <= 0
+			}
+		}
 	}
 
 	#ruined_trigger = {

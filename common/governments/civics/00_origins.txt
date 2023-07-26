@@ -863,7 +863,6 @@ origin_clone_army = {
 	}
 	
 	modifier = {
-		species_empire_size_mult = 0.5
 	}
 
 	advanced_start = yes
@@ -933,8 +932,7 @@ origin_ocean_paradise = {
 	}
 
 	modifier = {
-		species_empire_size_mult = 1
-		pop_resettlement_cost_mult = 1
+		
 	}
 
 	advanced_start = yes

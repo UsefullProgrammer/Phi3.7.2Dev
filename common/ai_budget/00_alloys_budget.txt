@@ -36,11 +36,12 @@ alloys_expenditure_ships = {
 			OR = {
 				recently_lost_war = yes
 				is_at_war = yes
-				AND = {
-					years_passed > 15
-					is_homicidal = yes
-				}
 			}
+		}
+		modifier = {
+			factor = 2
+			years_passed > 15
+			is_homicidal = yes
 		}
 
 		# If we want to colonize and are at peace then prio that
@@ -336,6 +337,13 @@ alloys_expenditure_habitats = {
 
 	weight = {
 		weight = 0.2
+		modifier = {
+			factor = 0
+			OR = {
+				has_civic = civic_franchising
+				empire_sprawl_over_cap < -30
+			}
+		}
 		modifier = {
 			factor = 2.5
 			has_origin = origin_void_dwellers

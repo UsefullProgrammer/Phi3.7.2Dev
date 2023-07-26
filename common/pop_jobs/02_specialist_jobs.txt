@@ -468,6 +468,13 @@ enforcer = {
 			}
 			energy = 2
 		}
+		upkeep = {
+			trigger = {
+				exists = owner
+				owner = { is_ai = yes }
+			}
+			energy = 2
+		}
 	}
 
 	pop_modifier = {
@@ -490,6 +497,15 @@ enforcer = {
 	planet_modifier = {
 		planet_crime_add = -25
 		planet_stability_add = 1
+	}
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { is_ai = yes }
+		}
+		modifier = {
+			planet_crime_add = -25
+		}
 	}
 
 	triggered_planet_modifier = {
@@ -1419,12 +1435,24 @@ roboticist = {
 		planet_amenities_add = 3
 		mult = value:scripted_modifier_mult|MODIFIER|pop_job_amenities_mult|
 	}
-
+	
+	
 	resources = {
 		category = planet_pop_assemblers
 		upkeep = {
+			trigger = {
+				exists = owner
+				owner = { country_uses_consumer_goods = yes }
+			}
 			alloys = 1
-			consumer_goods = 2
+			consumer_goods = 2.5
+		}
+		upkeep = {
+			trigger = {
+				exists = owner
+				owner = { country_uses_consumer_goods = no }
+			}
+			alloys = 2
 		}
 	}
 

@@ -1627,7 +1627,6 @@ can_support_branch_offices = {
 				has_authority = auth_corporate
 				has_civic = civic_galactic_sovereign_megacorp
 			}
-		
 		}
 	}
 	custom_tooltip = {
@@ -1668,6 +1667,10 @@ can_build_branch_office_on_planet = {
 		}
 	}
 	custom_tooltip = {
+		fail_text = NOT_SAME_VALUE
+		owner = { NOT = { is_same_value = root } }
+	}
+	custom_tooltip = {
 		fail_text = BRANCH_OFFICE_NO_OBSERVATION_OUTPOST
 		if = {
 			limit = {
@@ -1681,11 +1684,40 @@ can_build_branch_office_on_planet = {
 		}
 	}
 	custom_tooltip = {
+		fail_text = Only_CRIMINAL_BRANCH_OFFICE
+		exists = owner
+		OR = {
+			owner = { is_criminal_syndicate = no }	
+			AND = {
+				root = { is_criminal_syndicate = yes }
+				owner = { is_criminal_syndicate = yes }#i criminali possono fare branch office su criminali.
+			}
+		}
+	}
+	custom_tooltip = {
 		fail_text = CRIMINAL_BRANCH_OFFICE_NOT_COMMERCIAL_PACT
 		exists = owner
 		NAND = {
-			root = { is_criminal_syndicate = yes }
-			owner = { has_commercial_pact = root } #se ha un patto commerciale non può fare branch office
+			root = { 
+				AND = {
+					is_criminal_syndicate = yes 
+					OR = {
+						is_ai = no
+						is_subject = no
+						AND = {
+							is_subject = yes
+							has_loyalty > 0
+						}
+					}
+				}
+			}
+			owner = { 
+				OR = {
+					has_commercial_pact = root
+					has_non_aggression_pact = root
+					is_in_federation_with = root
+				}
+			 } #se ha un patto commerciale non agressione o in federazione non può fare branch office
 		}
 	}
 	custom_tooltip = {
@@ -1801,6 +1833,15 @@ can_build_branch_office_on_planet = {
 			}
 		}
 	}
+	custom_tooltip = {
+		fail_text = BRANCH_OFFICE_COOLDOWN
+		exists = owner
+		OR = {
+				root = { is_criminal_syndicate = no }
+				NOT = { has_planet_flag = phi_planet_buyout_mc@root }
+		}
+	}
+	
 	custom_tooltip = {
 		fail_text = BRANCH_OFFICE_CRIMINAL_COOLDOWN
 		exists = owner

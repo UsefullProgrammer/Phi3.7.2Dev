@@ -522,7 +522,7 @@ country_event = {
 		}
 		if = {
 			limit = {
-				has_resource = { type = energy amount > 1000 }
+				has_resource = { type = energy amount > 1500 }
 				has_monthly_income = { resource = energy value > 0 }
 				has_resource = { type = minerals amount < 500 }
 			}
@@ -531,7 +531,7 @@ country_event = {
 		}
 		if = {
 			limit = {
-				has_resource = { type = energy amount > 1000 }
+				has_resource = { type = energy amount > 1500 }
 				has_monthly_income = { resource = energy value > 0 }
 				has_monthly_income = { resource = consumer_goods value < 0 }
 				has_resource = { type = consumer_goods amount < 100 }
@@ -541,7 +541,7 @@ country_event = {
 		}
 		if = {
 			limit = {
-				has_resource = { type = energy amount > 1000 }
+				has_resource = { type = energy amount > 1500 }
 				has_monthly_income = { resource = energy value > 0 }
 				has_resource = { type = minerals amount < 1000 }
 			}
@@ -820,7 +820,7 @@ country_event = {
 							relative_power = {
 								who = prev
 								category = technology
-								value > equivalent
+								value >= equivalent
 							}
 						}
 					}
@@ -846,7 +846,7 @@ country_event = {
 						relative_power = {
 							who = root
 							category = technology
-							value > equivalent
+							value >= equivalent
 						}
 					}
 				}
@@ -959,13 +959,14 @@ country_event = {
 						has_starbase_size = starbase_starport
 						solar_system = {
 							is_capital_system = no
-							NOT = {
-								any_fleet_in_system = {
-									exists = owner
-									owner = { is_same_value = root }
-									fleet_power > 4000
-								}
-							}
+							# NOT = {
+							# 	any_fleet_in_system = {
+							# 		exists = owner
+							# 		owner = { is_same_value = root }
+							# 		NOT = { is_same_value = prevprev }
+							# 		fleet_power > 4000
+							# 	}
+							# }
 							any_neighbor_system = {
 								any_fleet_in_system = {
 									exists = owner
@@ -979,18 +980,19 @@ country_event = {
 						has_starbase_size = starbase_starhold
 						solar_system = {
 							is_capital_system = no
-							NOT = {
-								any_fleet_in_system = {
-									exists = owner
-									owner = { is_same_value = root }
-									fleet_power > 6000
-								}
-							}
+							# NOT = {
+							# 	any_fleet_in_system = {
+							# 		exists = owner
+							# 		owner = { is_same_value = root }
+							# 		NOT = { is_same_value = prevprev }
+							# 		fleet_power > 6000
+							# 	}
+							# }
 							any_neighbor_system = {
 								any_fleet_in_system = {
 									exists = owner
 									owner = { is_at_war_with = root }
-									fleet_power > 6000
+									fleet_power > 11000
 								}
 							}
 						}
@@ -999,18 +1001,19 @@ country_event = {
 						has_starbase_size = starbase_starfortress
 						solar_system = {
 							is_capital_system = no
-							NOT = {
-								any_fleet_in_system = {
-									exists = owner
-									owner = { is_same_value = root }
-									fleet_power > 8000
-								}
-							}
+							# NOT = {
+							# 	any_fleet_in_system = {
+							# 		exists = owner
+							# 		owner = { is_same_value = root }
+							# 		NOT = { is_same_value = prevprev }
+							# 		fleet_power > 8000
+							# 	}
+							# }
 							any_neighbor_system = {
 								any_fleet_in_system = {
 									exists = owner
 									owner = { is_at_war_with = root }
-									fleet_power > 8000
+									fleet_power > 20000
 								}
 							}
 						}
@@ -1019,18 +1022,19 @@ country_event = {
 						has_starbase_size = starbase_citadel
 						solar_system = {
 							is_capital_system = no
-							NOT = {
-								any_fleet_in_system = {
-									exists = owner
-									owner = { is_same_value = root }
-									fleet_power > 10000
-								}
-							}
+							# NOT = {
+							# 	any_fleet_in_system = {
+							# 		exists = owner
+							# 		owner = { is_same_value = root }
+							# 		NOT = { is_same_value = prevprev }
+							# 		fleet_power > 10000
+							# 	}
+							# }
 							any_neighbor_system = {
 								any_fleet_in_system = {
 									exists = owner
 									owner = { is_at_war_with = root }
-									fleet_power > 10000
+									fleet_power > 25000
 								}
 							}
 						}
@@ -1176,11 +1180,7 @@ country_event = {
 			
 			OR = {
 				mid_game_years_passed > 25
-				AND = {
-					NOT = { has_country_flag = is_advanced_start_AI }
-					NOT = { has_origin = origin_imperial_vassal_overlord }
-					NOT = { has_origin = origin_broken_shackles }
-				}
+				NOT = { has_country_flag = is_advanced_start_AI }
 			}
 			
 			any_country = {
@@ -2185,11 +2185,7 @@ country_event = {
 			
 			OR = {
 				mid_game_years_passed > 25
-				AND = {
-					NOT = { has_country_flag = is_advanced_start_AI }
-					NOT = { has_origin = origin_imperial_vassal_overlord }
-					NOT = { has_origin = origin_broken_shackles }
-				}
+				NOT = { has_country_flag = is_advanced_start_AI }
 			}
 			has_country_flag = phi_lagger
 			any_country = {

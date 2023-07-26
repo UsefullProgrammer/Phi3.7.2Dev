@@ -590,4 +590,41 @@ Ribilanciate approval faction
 phi_planet_deviant_experiments ora da solo +50% e non più +75%
 
 1.5.2
-Roboticisti rifanno 2 pop assembly
+
+
+[h1][b]fix[/b][/h1]
+Fix bug vanilla che se un megacorp sindicato criminale era vassalo di un overlord che la difendeva Tramite wargoal expel branch office non veniva chiuso nessun branch office
+origin_imperial_vassal_overlord,origin_imperial_vassal_overlord hanno il flag di advanced ai, non si capisce perchè la paradox non gliel'abbia messo
+Fix diplomacy economy in_war not triggered, wrong code.
+Fix flag big bad evil guy anche quando era solo equivalente come tecnologia.
+
+[h1][b]Ai[/b][/h1]
+Le ai non fanno branch office criminali sull'overlord se sono fedeli.
+Modificato economic plans ia ora leggermente meglio
+Migliorato economia AI sul distruggere edifici non utili
+
+[h1][b]Bilanciamento[/b][/h1]
+Se hai un patto commerciale, non agressione o in federazione non può fare branch office criminale
+Ora puoi fare un branch office su una mc ma la competizione da un malus al -25% al trade value.
+Le megacorp possono fare buy out dei branch office che hanno supoi propri pianeti per chiuderle alla modica cifra di 500 energy e 100 unity.
+Se expel branch viene vinta il sindacato criminale dovrà pagare mensilmente il risarcimento in base a quante branch sono state chiuse.
+Gli overlord possono chiudere i branch office criminali se sono loro vassali pagando 100 unity.
+Nebula refinery ora se prendi ap di voidborn ti da 2 miner job
+Ora la decisione decision_phi_planet_expropriation setta il contatore che il criminale non può rifare per 10 anni il branch office.
+Pop job roboticist increase consume consumer goods by 2 at 2.5
+
+Roboticisti rifanno 2 pop assembly (nella 1.5.1 l'avevo abbassato a 1)
+Tratto voidling +10% pop empire size
+
+[h1][b]Total war[/b][/h1]
+AutoWar nemesi, se per caso 2 total war di cui 1 non è in guerra confinano esplode una guerra in automatico,  fidarsi del nemico che non ti attaccherà? o attaccarlo per primi appena si distrae? Fare pace bianca ma essere umiliato? cosa conviene fare?
+I driven assimilator fanno autowar solo a chi non è driven assimilator
+
+[h1][b]Origini[/b][/h1]
+Ora i cloni pop hanno il malus dell'empire size e non tutta l'origine.
+Ora gli aquatici hanno il malus dell'empire size e non tutta l'origine.
+Voidveller building speciali ora invece di job add alcune ti danno job per popolazione ogni 20 o 50.
+
+
+
+

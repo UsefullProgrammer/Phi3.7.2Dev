@@ -25,6 +25,18 @@ Count_planet_system = {
 		mode = mult
 	}
 }
+count_owned_planet = {
+	base = 1
+	complex_trigger_modifier = {
+		trigger = count_owned_planet
+		parameters = {
+			limit = { 
+				has_branch_office = prevprev
+			}
+		}
+		mode = add
+	}
+}
 edict_size_effect = {
 	base = 0.02
 	#mult = trigger:num_pops

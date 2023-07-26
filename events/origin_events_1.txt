@@ -2353,6 +2353,7 @@ country_event = {
 		set_country_flag = Story6
 		set_country_flag = Story7
 		set_country_flag = has_encountered_other_empire
+		set_country_flag = is_advanced_start_AI
 
 		if = {
 			limit = {

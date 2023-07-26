@@ -33,3 +33,24 @@ phi_economy_bonus = {
 	country_alloys_produces_mult = 0.05
 	country_consumer_goods_produces_mult = 0.25
 }
+phi_criminal_expropriation = {
+	country_base_energy_produces_add = -50
+}
+phi_megacorp_competition = {
+	trade_value_mult = -0.25
+}
+Phi_nemesis_white_peace = {
+	country_unity_produces_mult = -0.30
+	country_society_research_produces_mult = -0.15
+	wars_influence_upkeep_mult = 1
+}
+# centralization_colony = {
+# 	icon = "gfx/interface/icons/planet_modifiers/pm_resort_planet.dds"
+# 	icon_frame = 1
+# 	planet_pop_assembly_mult = 0.1 = -1
+# 	job_coordinator_per_pop = 0.5
+# 	custom_tooltip = resort_colony_empire_effects
+# 	show_only_custom_tooltip = no
+# 	# This only works on timed planet modifiers!
+# 	apply_modifier_to_other_planets = resort_colony_other_planets
+# }

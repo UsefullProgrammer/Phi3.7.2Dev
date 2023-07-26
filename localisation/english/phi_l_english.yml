@@ -992,7 +992,6 @@ tech_mega_assembly_Mk2_desc:0 "Giga-Advanced templates allow us to drastically i
 edict_greater_than_ourselves_light:0 "Free resettlement"
 edict_greater_than_ourselves_light_desc:1 "Encourages free unemployed pops to voluntarily resettle themselves to suitable planets with jobs and housing within our empire."
 tr_domination_colonial_viceroys_desc:0 "§YRulers§! and §YGovernors§! start at level §Y3§!."
-origin_tooltip_doomsday_effects:2 "§G- WARNING: Easy Origin§!"
 
 small10players:0 "Big Small"
 mediumover16:0 "Big Medium"
@@ -1152,7 +1151,7 @@ sm_civilian_shipyard_desc:0 "Produces energy sell ship at pop void dweller for e
  decision_upgrade_habitat_7_desc:0 "$tech_habitat_3_desc$"
 
  humiliated_phi:0 "Humiliate/Demilitarization"
- humiliated_phi _desc:0 "§LWe were publicly humiliated by another Empire with demilitarization.§! effect: \n 
+ humiliated_phi_desc:0 "§LWe were publicly humiliated by another Empire with demilitarization.§! effect: \n 
 $diplo_weight_mult$ §R-0.33§! \n
 $country_alloys_produces_mult$ §R-0.33§! \n
 $country_unity_produces_mult$ §R-0.33§! \n
@@ -1163,7 +1162,7 @@ war_goal_wg_phi_war_reparation_desc: "Ask pay war reparation in energy credits!"
 has_criminal_branch_office_our:0 "§RWe have criminal branch office on Their§!"
 has_criminal_branch_office:0 "§RThey have criminal branch office on our§!"
 wars: "Wars"
-in_war : "Wars"
+in_war: "Wars"
 mod_wars_influence_upkeep_mult: "Influence upkeep from wars"
 CRIMINAL_BRANCH_OFFICE_NOT_COMMERCIAL_PACT:1 "£trigger_no£ §RWe must NOT have a Commercial Pact with the owner of this planet in order to establish a $BRANCH_OFFICE$ here§!"
 
@@ -1194,6 +1193,7 @@ phi_fleet_bonus: "Community Galactic subsidy fleet"
 phi_tech_bonus: "Community Galactic subsidy tech"
 phi_economy_bonus: "Community Galactic subsidy economy"
 galactic_community_upkeep:0 "$galactic_community$ upkeep"
+
 phi_empire_size_over_TITLE:0 "Your empire in over size!"
 phi_empire_size_over_expansion_planer_MESSAGE:0 "Use your £influence£ for activate edict $edict_expansion_planer$"
 phi_empire_size_over_tip_MESSAGE:0 "Your empire is in over size, set $diplo_economic_policy$ in $economic_policy_expansion$ or try save £influence£ for activate edict $economic_policy_adaptability$"
@@ -1203,15 +1203,31 @@ ap_voidborn_void_dweller:0 "$ap_voidborn$"
 ap_voidborn_dweller_habitat_effect:0 "$ap_voidborn_habitat_effect$\n\nAll Starbase buildings with cost influence, add 1 work job at planet in system in base at starbase building type"
 sm_Governmental_manager_asset:0 "Manager great hall"
 Research_relic:0 "Minor artifact lab"
-#materialist_federation:0 "$materialist_federation$"
 materialist_federation_NOT_materialist:0 "$materialist_federation$"
 materialist_federation_DESC:0 "Being a member of a $materialist_federation$ will please the [Root.GetName]."
-#pacifist_federation:0 "$pacifist_federation$"
+
 pacifist_federation_NOT_materialist:0 "$pacifist_federation$"
 pacifist_federation_DESC:0 "Being a member of a $pacifist_federation$ will please the [Root.GetName]."
-#militarist_federation:0 "$militarist_federation$"
 militarist_federation_NOT_militarist:0 "$militarist_federation$"
 militarist_federation_DESC:0 "Being a member of a $militarist_federation$ will please the [Root.GetName]."
 egalitarian_federation_NOT_egalitarian:0 "$egalitarian_federation$"
 egalitarian_federation_DESC:0 "Being a member of a $egalitarian_federation$ will please the [Root.GetName]."
 mod_stations_minor_artifacts_produces_mult: "Minor artifacts Station Output"
+Only_CRIMINAL_BRANCH_OFFICE: "Only criminal branch office can establish there"
+Phi_nemesis_white_peace: "White Peace with our nemesi"
+wg_phi_nemesi: "Nemesi war"
+casus_belli_cb_nemesi: "Nemesi"
+economic_policy_expansion_name: "Expansion Focus"
+economic_policy_adaptability_name: "Adaptability Focus"
+
+phi_planet_buyout_mc: "Buy out branch office"
+phi_planet_buyout_mc_desc: "Buy out at market price this branch office and close it."
+ BRANCH_OFFICE_COOLDOWN:0 "£trigger_no£ §RThe local authorities recently buy out $BRANCH_OFFICE$ on this planet and are still not give license for new branch office.§!"
+ NAME_Only_1_can_exist:0 "Nemesi total war" #war
+disarmament:0 "Disarmament"
+PayWarWage:0 "Pay War Wage"
+phi_criminal_expropriation:0 "Expropriation of Criminal "
+phi_megacorp_competition:0 "Zone of Competion megacorp"
+pacifist: "Pacifist"
+
+NOT_SAME_VALUE: ""

@@ -43,3 +43,19 @@ cb_phi_war_reparation = {
 		}
 	}
 }
+cb_nemesi = {
+	show_in_diplomacy = no
+	show_notification = no
+	potential = {
+		is_homicidal = yes
+		from = {
+			is_homicidal = yes
+		}
+	}
+	is_valid = {
+		is_at_war = yes
+		from = {
+			is_homicidal = yes
+		}
+	}
+}

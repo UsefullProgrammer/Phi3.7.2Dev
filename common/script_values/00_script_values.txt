@@ -308,8 +308,33 @@ desired_colonizers_base = {
 	modifier = {
 		factor = 0
 		
-		any_owned_planet = {
-			num_pops < 20
+		OR = {
+			AND = {
+				has_monthly_income = { #se ha meno di 100 energia controlla altri parametri
+					resource = energy
+					value < 100
+				}
+				OR = {
+					has_resource = { type = food amount < 400 } # serve per mantenere nuova pop
+					has_resource = { type = energy amount < 1000 } # serve per mantenere colonia e muovere i pop
+					has_resource = { type = minerals amount < 1000 }  # serve per nuovi buildings
+					has_monthly_income = {
+						resource = food
+						value < 5
+					}
+					has_monthly_income = {
+						resource = energy
+						value < 20
+					}
+					has_monthly_income = {
+						resource = minerals
+						value < 30
+					}
+				}
+			}
+			any_owned_planet = {
+				num_pops < 20
+			}
 		}
 	}
 }

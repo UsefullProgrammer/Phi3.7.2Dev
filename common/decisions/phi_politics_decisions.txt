@@ -433,9 +433,21 @@ decision_phi_planet_expropriation = {
 		cost = {
 			trigger = {
 				owner = { is_gestalt = no }
+				branch_office_owner = {
+					NOT = { has_overlord = root }
+				}
 			}
 			unity = 1000
 		}
+		cost = {
+			trigger = {
+				branch_office_owner = {
+					has_overlord = root
+				}
+			}
+			unity = 100
+		}
+		
 		cost = {
 			trigger = {
 				owner = { is_gestalt = yes }
@@ -447,7 +459,10 @@ decision_phi_planet_expropriation = {
 	potential = {
 		has_branch_office = yes
 		branch_office_owner = {
-			NOT = { has_valid_civic = civic_criminal_heritage }
+			OR = {
+				NOT = { has_valid_civic = civic_criminal_heritage }
+				has_overlord = root
+			}
 		}
 		owner = { is_gestalt = no }
 	}
@@ -455,8 +470,13 @@ decision_phi_planet_expropriation = {
 	allow = {
 		owner = {
 			root = {
-				branch_office_owner = {
-					is_at_war_with = prevprev
+				OR = {
+					branch_office_owner = {
+						is_at_war_with = prevprev
+					}
+					branch_office_owner = {
+						has_overlord = root
+					}
 				}
 			}
 		}
@@ -465,6 +485,7 @@ decision_phi_planet_expropriation = {
 	effect = {
 		close_branch_office = yes
 		add_modifier = { modifier = "phi_planet_expropriation" days = 1800 }
+		set_timed_planet_flag = { flag = criminal_branch_closed_cooldown_planet@this days = 3600 }
 	}
 
 	ai_weight = {
@@ -505,5 +526,47 @@ decision_phi_release_client_state = {
 
 	ai_weight = {
 		weight = 0
+	}
+}
+
+decision_phi_buyout_mc = {
+	owned_planets_only = yes
+	sound = event_administrative_work
+	icon = decision_luxuries
+
+	resources = {
+		category = decisions
+		cost = {
+			energy = 500
+			unity = 100
+		}
+	}
+
+	potential = {
+		owner = { is_megacorp = yes }
+		has_branch_office = yes
+		owner = { is_criminal_syndicate = no }
+		branch_office_owner = {
+			is_criminal_syndicate = no
+		}
+	}
+
+	effect = {
+		branch_office_owner = {  add_resource = { energy = 500 } }
+		close_branch_office = yes
+		set_planet_flag = phi_planet_buyout_mc
+		set_timed_planet_flag = { flag = phi_planet_buyout_mc@root days = 1800 }
+	}
+
+	ai_weight = {
+		weight = 0
+		modifier = {
+			weight = 10
+			solar_system = { has_system_trade_value >= 250 }
+		}
+		modifier = {
+			factor = 10
+			solar_system = { has_system_trade_value >= 500 }
+		}
 	}
 }

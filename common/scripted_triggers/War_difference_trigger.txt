@@ -14,6 +14,7 @@ have_fleet_destroy = {
 have_building_destroy = {
 	from = {
 		any_owned_planet = {
+			num_pops > 1
 			planet_devastation >= 25
 		}
 	}
@@ -21,6 +22,7 @@ have_building_destroy = {
 have_pop_destroy = {
 	from = {
 		any_owned_planet = {
+			num_pops > 0
 			planet_devastation >= 90
 		}
 	}

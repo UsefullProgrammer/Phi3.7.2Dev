@@ -41,16 +41,16 @@ nebula_alloy_refinery = {
 			minerals = 8
             energy = 4
 		}
-		triggered_system_modifier = {
-			potential = {
-				exists = owner
-				owner = { 
-					has_ascension_perk = ap_voidborn 
-					is_gestalt = no
-				}
+	}
+	triggered_system_modifier = {
+		potential = {
+			exists = owner
+			owner = { 
+				has_ascension_perk = ap_voidborn 
+				is_gestalt = no
 			}
-			job_foundry_add = 1
 		}
+		job_foundry_add = 1
 	}
 
 	ai_weight = {
@@ -94,7 +94,7 @@ starm_culture_booster = {
 				is_gestalt = no
 			}
 		}
-		job_culture_worker_add = 1
+		job_culture_worker_per_pop = 0.04
 	}
 	custom_tooltip = sm_starm_culture_booster_effect
 
@@ -137,7 +137,7 @@ starm_science_booster = {
 		category = starbase_buildings
 		cost = {
 			alloys = 100
-			influence = 50
+			influence = 100
 		}
 
 		upkeep = {
@@ -148,10 +148,13 @@ starm_science_booster = {
 		potential = {
 			exists = owner
 			owner = { 
-				has_ascension_perk = ap_voidborn 
-				is_gestalt = no
+				AND = {
+					has_ascension_perk = ap_voidborn 
+					is_gestalt = no
+					has_policy_flag = focus_physics
+				}
 			}
-			has_policy_flag = focus_physics
+			
 		}
 		job_physics_researcher_add = 1
 	}
@@ -159,10 +162,13 @@ starm_science_booster = {
 		potential = {
 			exists = owner
 			owner = { 
-				has_ascension_perk = ap_voidborn 
-				is_gestalt = no
+				AND = {
+					has_ascension_perk = ap_voidborn 
+					is_gestalt = no
+					has_policy_flag = focus_engineering
+				}
 			}
-			has_policy_flag = focus_engineering
+			
 		}
 		job_engineering_researcher_add = 1
 	}
@@ -211,7 +217,7 @@ Governmental_Orbital_Exchange_Market = {
 				is_gestalt = no
 			}
 		}
-		job_clerk_add = 1
+		job_clerk_per_pop = 0.04
 	}
 	country_modifier = {
 		country_trade_fee = -0.01
@@ -255,8 +261,10 @@ Governmental_diplomatic_asset = {
 	triggered_system_modifier = {
 		potential = {
 			exists = owner
-			has_ascension_perk = ap_voidborn 
-			owner = { is_megacorp = yes }
+			owner = { 
+				has_ascension_perk = ap_voidborn 
+				is_megacorp = yes
+			}
 		}
 		modifier = {
 			job_manager_add = 1
@@ -312,17 +320,19 @@ Governmental_manager_asset = {
 			}
 		}
 		modifier = {
-			job_bureaucrat_add = 1
+			job_bureaucrat_per_pop = 0.02
 		}
 	}
 	triggered_system_modifier = {
 		potential = {
 			exists = owner
-			has_ascension_perk = ap_voidborn 
-			owner = { is_megacorp = yes }
+			owner = { 
+				has_ascension_perk = ap_voidborn 
+				owner = { is_megacorp = yes }
+			}
 		}
 		modifier = {
-			job_manager_add = 1
+			job_manager_per_pop = 0.02
 		}
 	}
 	country_modifier = {
@@ -343,7 +353,7 @@ Research_relic = {
             has_origin = origin_void_dwellers
         }
 	}
-	allow = {
+	possible = {
 		owner = { has_technology = tech_archaeostudies }
 	}
 	resources = {

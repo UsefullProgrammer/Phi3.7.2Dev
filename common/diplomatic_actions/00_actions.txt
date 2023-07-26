@@ -2081,6 +2081,44 @@ action_invite_to_federation = {
 				}
 			}
 		}
+		if = {
+			limit = { 
+				OR = {
+					AND = {
+						is_criminal_syndicate = yes
+						from = {
+							OR = {
+								any_owned_planet = {
+									has_branch_office = root
+								}
+								any_federation_ally = {
+									any_owned_planet = {
+										has_branch_office = root
+									}
+								}
+							}
+						}
+					}
+					AND = {
+						from = { is_criminal_syndicate = yes }
+						OR = {
+							any_owned_planet = {
+								has_branch_office = from
+							}
+							any_federation_ally = {
+								any_owned_planet = {
+									has_branch_office = from
+								}
+							}
+						}
+					}
+				}
+			}
+			custom_tooltip = {
+					fail_text = has_criminal_branch_office_our
+					always = no
+			}
+		}
 		# Members of the Galactic Empire can't be in federations
 		custom_tooltip = {
 			fail_text = "requires_actor_recipient_not_in_galactic_empire"
@@ -2294,6 +2332,29 @@ action_ask_to_join_federation = {
 			OR = {
 				opinion_level = { who = from level >= excellent }
 				is_improving_relations_with = from
+			}
+		}
+		if = {
+			limit = { 
+				AND = {
+					is_criminal_syndicate = yes
+					from = {
+						OR = {
+							any_owned_planet = {
+								has_branch_office = root
+							}
+							any_federation_ally = {
+								any_owned_planet = {
+									has_branch_office = root
+								}
+							}
+						}
+					}
+				}
+			}
+			custom_tooltip = {
+					fail_text = has_criminal_branch_office_our
+					always = no
 			}
 		}
 		custom_tooltip = {

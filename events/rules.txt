@@ -209,3 +209,96 @@ country_event = {
 		}
 	}
 }
+country_event = { #megacorp on megacorp
+	id = rules.10
+	hide_window = yes
+
+	is_triggered_only = yes
+
+	trigger = {
+		has_authority = auth_corporate
+	}
+
+	immediate = {
+		every_owned_planet = {
+			limit = { 
+				has_branch_office = yes
+				branch_office_owner = { is_criminal_syndicate = no }
+		    }
+			add_modifier = {
+				modifier = phi_megacorp_competition
+				days = 30
+			}
+		}
+	}
+}
+country_event = { #autowar,nemesy #check
+	id = rules.20
+	hide_window = yes
+
+	is_triggered_only = yes
+
+	trigger = {
+		is_country_type = default
+		is_a_total_war = yes
+		is_at_war = no
+		any_neighbor_country = {
+			is_country_type = default
+			is_homicidal = yes
+			NOT = { has_truce = root }
+		}
+	}
+	
+	immediate = {
+		every_neighbor_country = {
+			limit = {
+				is_country_type = default
+				is_homicidal = yes
+				NOT = { has_truce = root }
+			}
+			if = {
+				limit = {
+					any_system_within_border = {
+						root = {
+							any_system_within_border = {
+								has_hyperlane_to = prevprev
+							}
+						}
+					}
+				}
+				save_event_target_as = nemesi_target
+			}
+		}
+		root = {
+			declare_war = {
+				target = event_target:nemesi_target
+				name = "NAME_Only_1_can_exist"
+				attacker_war_goal = "wg_phi_nemesi"
+			}
+		}
+	}
+}
+country_event = { #test
+	id = rules.99
+	hide_window = yes
+
+	is_triggered_only = yes
+
+	trigger = {
+		is_at_war = yes
+		is_country_type = default 
+		
+		any_war = {
+			defender = { is_country_type = default }
+			NOR = { 
+				using_war_goal = { type = wg_humiliation owner = attacker } 
+				using_war_goal = { type = wg_humiliation owner = defender }
+				using_war_goal = { type = wg_independence owner = attacker }
+			}
+			any_attacker = { is_same_value = prevprev }
+		}
+	}
+	
+	immediate = {
+	}
+}

@@ -497,24 +497,50 @@ wg_expel_corp_imperium = {
 		}
 	}
 	on_status_quo = {
-		hidden_effect = {
-			every_owned_planet = {
-				limit = { has_branch_office = from }
-				branch_office_owner = { add_resource = { energy = 1000 } }
-				close_branch_office = yes
+		fromfrom = {
+			every_war_participant = {#0:prevprev
+				limit = {
+					fromfrom = {
+						is_war_participant = {
+							who = prev
+							side = defenders
+						}
+					}
+				}
+				root = {#0:prev
+					every_owned_planet = { #0:this
+						limit = { has_branch_office = prevprev }
+						close_branch_office = yes
+						branch_office_owner =  { add_resource = { energy = 1000 } }
+					}
+				}
 			}
 		}
-		custom_tooltip = wg_expel_corp_status_quo_effects
 	}
 	on_accept = {
-		hidden_effect = {
-			every_owned_planet = {
-				limit = { has_branch_office = from }
-				close_branch_office = yes
-				owner = { add_resource = { energy = 1000 } }
+		fromfrom = {
+			every_war_participant = {#0:prevprev
+				limit = {
+					fromfrom = {
+						is_war_participant = {
+							who = prev
+							side = defenders
+						}
+					}
+				}
+				root = {#0:prev
+					random_owned_planet = { #0:this
+						limit = { has_branch_office = prevprev }
+						branch_office_owner = { add_modifier = { modifier = phi_criminal_expropriation days = 600 multiplier = value:edict_size_effect } }
+					}
+					every_owned_planet = { #0:this
+						limit = { has_branch_office = prevprev }
+						close_branch_office = yes
+						root  = { add_resource = { energy = 1000 } }
+					}
+				}
 			}
 		}
-		custom_tooltip = wg_expel_corp_effects
 	}
 
 	ai_weight = {

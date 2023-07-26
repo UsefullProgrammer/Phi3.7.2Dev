@@ -141,3 +141,11 @@ Has_precursor_chain = {
 }
 
  
+is_a_total_war = {
+	OR = {
+		has_valid_civic = civic_fanatic_purifiers
+		has_valid_civic = civic_machine_terminator
+		has_valid_civic = civic_hive_devouring_swarm
+		has_valid_civic = civic_machine_assimilator
+	}
+}

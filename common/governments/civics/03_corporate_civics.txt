@@ -793,6 +793,9 @@ civic_corporate_crafters = {
 			civics = { value = civic_galactic_sovereign_megacorp }
 		}
 	}
+	modifier = {
+		commercial_pact_mult = 0.5
+	}
 	possible = {
 		civics = { NOT = { value = civic_crafters }	}
 	}

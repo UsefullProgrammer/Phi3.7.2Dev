@@ -34,4 +34,8 @@ spriteTypes = {
         masking_texture = "gfx/interface/situation_log/event_mask.dds"
         texturefile = "gfx/interface/icons/Alerts/empire_sprawl_icon.dds"
     }
+    spriteType = {
+    	name = "GFX_wg_phi_nemesi"
+    	texturefile = "gfx/interface/icons/diplomacy/war_reparation.dds"
+	}
 }

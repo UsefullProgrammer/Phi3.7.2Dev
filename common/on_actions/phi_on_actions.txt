@@ -77,6 +77,7 @@ on_monthly_pulse_country = {
 		phi_ai.11			#set survive cb in defensive wars when hope is lost
 		phi_ai.12			#joins defensive wars of laggers
 		phi_ai.14			#scorched earth tactics
+		rules.10
 		phi_notification.0
 		
 	}
