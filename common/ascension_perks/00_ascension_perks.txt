@@ -1007,7 +1007,7 @@ ap_voidborn = {
 		}
 
 		modifier = {
-			country_starbase_capacity_mult = 0.5
+			country_starbase_capacity_mult = 0.1
 			empire_size_systems_mult = -0.10
 		}
 

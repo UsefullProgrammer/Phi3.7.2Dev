@@ -540,7 +540,7 @@ building_embassy = {
 	potential = {
 		exists = owner
 		owner = { is_regular_empire = yes }
-
+		always = no
 		exists = planet
 		planet = { is_capital = yes }
 		NOT = { has_modifier = resort_colony }
@@ -599,9 +599,9 @@ building_embassy = {
 		is_regular_empire = yes
 	}
 
-	prerequisites = {
-		"tech_xeno_diplomacy"
-	}
+	#prerequisites = {
+	#	"tech_xeno_diplomacy"
+	#}
 }
 
 building_grand_embassy = {
@@ -663,9 +663,9 @@ building_grand_embassy = {
 		}
 	}
 
-	prerequisites = {
-		"tech_xeno_relations"
-	}
+	# prerequisites = {
+	# 	"tech_xeno_relations"
+	# }
 
 	show_tech_unlock_if = {
 		is_regular_empire = yes

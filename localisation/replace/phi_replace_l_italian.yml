@@ -1,6 +1,6 @@
 ﻿l_italian:
  # Traditions --> file traditions.yml
- tr_diplomacy_adopt_desc:4 "§E$TRADITIONS_ADOPT$:§!\n§HSblocca l'Editto:§! $edict_diplomatic_grants$\n§Y$MOD_COUNTRY_DIPLOMACY_INFLUENCE_COST$§! ridotto del §G100%§!."
+ tr_diplomacy_adopt_desc:4 "§E$TRADITIONS_ADOPT$:§!\n§HSblocca l'Editto:§! $edict_diplomatic_grants$\n§Y$MOD_COUNTRY_DIPLOMACY_INFLUENCE_COST$§! ridotto del §G66%§!."
  tr_diplomacy_finish_effect:1 "§E$TRADITIONS_FINISH$:§!\nAdottare tutte le tradizioni $tr_diplomacy_adopt$ aumenta i nostri §Y$MOD_COUNTRY_ENVOYS_ADD$§! di §G1§!."
  tr_diplomacy_eminent_diplomats_desc:0 "Peso Diplomatico: §G+100%§!\nGli emissari che §Ymigliorano le relazioni§! hanno §G1%§! al mese di probabilità di guadagnare un §YFavore§!."
  tr_diplomacy_entente_coordination_desc:0 "La quantità di flotta che contribuiamo verso la §YCapacità Navale Federale§! conta il doppio.\nCapacità Navale §G+10%§!"
@@ -207,3 +207,4 @@ wg_expel_corp_status_quo_effects:1 "Tutte le Filiali possedute dalla §Y[From.Ge
 wg_expel_corp_effects:2 "Tutte le Filiali possedute dalla §Y[From.GetName]§! nel §Y[Root.GetName]§! verranno chiuse.\n§Y[Root.GetName]§! riceverà £energy£ §Y1000§! per ogni Filiale chiusa e §Y[From.GetName]§! dovrà pagare entro 20 mesi."
 
 resort_colony_empire_effects:0 "Dimensione dell'Impero diminuita di 10 Colonie di altri Imperi:\n $MOD_PLANET_AMENITIES_MULT$: §G+15%§!\n $MOD_PLANET_IMMIGRATION_PULL_MULT$: §G+15%§!"
+ origin_tooltip_clone_army_effects:1 "- Inizia con 2 Strutture £building£ £building£ §H$building_clone_army_clone_vat$§! sul tuo pianeta natale, che producono £pops£ Pop §H$clone_soldier$§!.\n- Le §HAntiche Vasche per Cloni§! hanno un §HLimite Imperiale§! di 2.\n- Gli §HAmmiragli§! dell'Esercito Clone concederanno un ulteriore §G25%§! di §H$MOD_SHIP_FIRE_RATE_MULT$§! e riducono del §G10%§! il §HMantenimento Nave§!."

@@ -627,4 +627,14 @@ Voidveller building speciali ora invece di job add alcune ti danno job per popol
 
 
 
+1.5.3
 
+Fix localization per i cloni
+Corette altre localizzazioni
+void born ap ai void dweller da +10% starbase capacity invece di 50%
+Migliorato AI
+Migliorato building ranger lodge dà 5 unity per blocker invece di 2.
+Fix action_demand_subjugation che potevi solo chiederlo se l'altro non aveva domination
+Ora gli imperi IA che erano prima degli umani non mandando richieste di essere sudditi.
+Tolti gli edifici embassy che erano inutili, messo al loro posto una decisione sulla capitale.
+Migliorata ancora la AI

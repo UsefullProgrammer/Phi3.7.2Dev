@@ -1,6 +1,6 @@
 ﻿l_polish:
  # Traditions --> file traditions.yml
- tr_diplomacy_adopt_desc:4 "§HUnlocks Edict:§! $edict_diplomatic_grants$\n§Y$MOD_COUNTRY_DIPLOMACY_INFLUENCE_COST$§! reduced by §G100%§!."
+  tr_diplomacy_adopt_desc:4 "§HUnlocks Edict:§! $edict_diplomatic_grants$\n§Y$MOD_COUNTRY_DIPLOMACY_INFLUENCE_COST$§! reduced by §G66%§!."
  tr_diplomacy_finish_effect:1 "§E$TRADITIONS_FINISH$:§!\nAdopting all $tr_diplomacy_adopt$ will increase our §Y$MOD_COUNTRY_ENVOYS_ADD$§! by §G1§!."
  tr_diplomacy_entente_coordination_desc:0 "The amount we contribute towards the §YFederation Naval Capacity§! counts for twice as much.\nNaval Capacity §G+10%§!"
  tr_diplomacy_diplomatic_networking_desc:0 "Embassies: §G+10§! £unity£ §YUnity§!"
@@ -193,3 +193,4 @@ ap_voidborn_habitat_effect:0 "§YHabitats§! owned by our Empire have §Y2 Addit
  wg_expel_corp_effects:2 "All Branch Offices owned by the §Y[From.GetName]§! in the §Y[Root.GetName]§! are closed.\n§Y[Root.GetName]§! receives £energy£ §Y1000§! for each closed Branch Office and §Y[From.GetName]§! need pay in 20 months this."
 
  resort_colony_empire_effects:0 "Empire size add:-10 Other Empire Colonies:\n   $MOD_PLANET_AMENITIES_MULT$: §G+15%§!\n   $MOD_PLANET_IMMIGRATION_PULL_MULT$: §G+15%§!"
+ origin_tooltip_clone_army_effects:1 "- Start with 2 £building£ §H$building_clone_army_clone_vat$§! Buildings on your homeworld, producing £pops£ §H$clone_soldier$§! Pops.\n- §HAncient Clone Vats§! have an §HEmpire Limit§! of 2.\n- Clone Army §HAdmirals§! will grant an additional §G25%§! §H$MOD_SHIP_FIRE_RATE_MULT$§! and §G10%§! reduced §HShip Upkeep§!."

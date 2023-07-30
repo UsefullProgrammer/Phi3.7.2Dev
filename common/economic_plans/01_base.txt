@@ -20,6 +20,21 @@ basic_economy_plan = {
 	subplan = {
 		set_name = "base science + unity organics"
 		potential = {
+			years_passed <= 15
+			country_uses_consumer_goods = yes
+			has_monthly_income = { resource = consumer_goods value > @economic_plan_consumer_goods_target }
+			has_monthly_income = { resource = energy value > @economic_plan_energy_target }
+			has_monthly_income = { resource = minerals value > @economic_plan_minerals_target }
+		}
+		income = {
+			physics_research = @economic_plan_research_target
+			unity = @economic_plan_unity_target
+		}
+	}
+	subplan = {
+		set_name = "base science + unity organics over 15 years"
+		potential = {
+			years_passed > 15
 			country_uses_consumer_goods = yes
 			has_monthly_income = { resource = consumer_goods value > @economic_plan_consumer_goods_target }
 			has_monthly_income = { resource = energy value > @economic_plan_energy_target }
@@ -31,7 +46,7 @@ basic_economy_plan = {
 			engineering_research = @economic_plan_research_target
 			unity = @economic_plan_unity_target
 		}
-	}
+	}	
 
 	subplan = {
 		set_name = "base unity hivemind"
@@ -134,7 +149,7 @@ basic_economy_plan = {
 			minerals = 5
 			energy = 10
 			physics_research = @economic_plan_scaling_research_target
-			society_research = @economic_plan_scaling_research_target
+			society_research = @economic_plan_scaling_research_society_target_materialist
 			engineering_research = @economic_plan_scaling_research_target
 			unity = 20
 		}
@@ -186,7 +201,6 @@ basic_economy_plan = {
 			alloys = 15
 		}
 	}
-
 	#### MATERIALIST SCIENCE ####
 	subplan = {
 		scaling = yes
@@ -198,9 +212,9 @@ basic_economy_plan = {
 		}
 
 		income = {
-			physics_research = 15
-			society_research = 15
-			engineering_research = 15
+			physics_research = @economic_plan_scaling_research_target_materialist
+			society_research = @economic_plan_scaling_research_society_target_materialist
+			engineering_research = @economic_plan_scaling_research_target_materialist
 		}
 	}
 

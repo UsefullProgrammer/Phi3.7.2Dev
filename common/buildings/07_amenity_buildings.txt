@@ -1083,7 +1083,7 @@ building_ranger_lodge = {
 	}
 
 	ai_resource_production = {
-		unity = 2
+		unity = 5
 		mult = value:natural_blocker_count
 	}
 

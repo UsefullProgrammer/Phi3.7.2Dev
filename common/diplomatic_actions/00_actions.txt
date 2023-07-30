@@ -2563,7 +2563,7 @@ action_demand_subjugation = {
 	diplo_view_acceptance_icon = no
 	should_notify_all_communications = yes
 	requires_recipient_independence = no
-	AI_acceptance_base_value = -50
+	AI_acceptance_base_value = -60
 	action_type = aggressive
 
 	potential = {
@@ -2719,21 +2719,26 @@ action_ask_to_become_subjugated = {
 	diplo_view_acceptance_icon = no
 	should_notify_all_communications = yes
 	AI_acceptance_base_value = -50
+
 	action_type = positive
 
 	potential = {
 		hidden_trigger = {
 			is_subject = no
+			OR = {
+				is_ai = no
+				NOT = { has_country_flag = was_human }
+			}
 		}
 		#relative_power = { who = from category = fleet value >= superior }
 		years_passed > 20
+		
 	}
 
 	possible = {
 		if = {
-			
 			limit = {
-				from = { has_tradition = tr_domination_adopt }
+				from = { NOT = { has_tradition = tr_domination_adopt } }
 			}
 			if = {
 				limit = {

@@ -44,6 +44,7 @@ Phi_nemesis_white_peace = {
 	country_society_research_produces_mult = -0.15
 	wars_influence_upkeep_mult = 1
 }
+
 # centralization_colony = {
 # 	icon = "gfx/interface/icons/planet_modifiers/pm_resort_planet.dds"
 # 	icon_frame = 1

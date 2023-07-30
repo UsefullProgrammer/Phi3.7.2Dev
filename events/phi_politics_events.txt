@@ -767,3 +767,99 @@ planet_event = {
 		}
 	}
 }
+country_event = {
+	id = phi_politics.10
+	hide_window = yes
+
+	is_triggered_only = yes
+	
+	trigger = {
+		OR = {
+			any_owned_planet = {
+				OR = {
+					has_planet_flag = phi_embassy
+					has_planet_flag = phi_embassy_2
+				}
+			}
+
+			has_modifier = phi_embassy
+			has_modifier = phi_embassy_2
+		}
+	}
+	
+	immediate = {
+		every_owned_planet = {
+			limit = { 
+				planet = { is_capital = no }
+				OR = {
+					has_planet_flag = phi_embassy
+					has_planet_flag = phi_embassy_2
+				}
+			}
+			if = {
+				limit = {
+					has_planet_flag = phi_embassy
+				}
+				remove_planet_flag = phi_embassy
+			}
+			else_if = {
+				limit = {
+					has_planet_flag = phi_embassy_2
+				}
+				remove_planet_flag = phi_embassy_2
+			}
+		}
+		random_owned_planet = {
+			limit = { 
+				planet = { is_capital = yes }
+				NOR = {
+					has_planet_flag = phi_embassy
+					has_planet_flag = phi_embassy_2
+				}
+			}
+			owner = {
+				if = {
+					limit = {
+						has_modifier = phi_embassy
+					}
+					remove_modifier = phi_embassy
+				}
+				if = {
+					limit = {
+						has_modifier = phi_embassy_2
+					}
+					remove_modifier = phi_embassy_2
+				}
+			}
+		}
+		random_owned_planet = {
+			limit = { 
+				planet = { is_capital = yes }
+				OR = {
+					has_planet_flag = phi_embassy
+					has_planet_flag = phi_embassy_2
+				}
+			}
+			if = {
+				limit = {
+					has_planet_flag = phi_embassy
+				}
+				owner = { add_modifier = { modifier = "phi_embassy" } }
+			}
+			if = {
+				limit = {
+					has_planet_flag = phi_embassy_2
+					has_modifier = phi_embassy_2
+				}
+				owner = {
+					add_modifier = { modifier = "phi_embassy_2" }
+					if = {
+						limit = { has_modifier = phi_embassy }
+						remove_modifier = phi_embassy
+					}
+				}	
+			}
+		}
+	}
+}
+	

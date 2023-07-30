@@ -1009,8 +1009,8 @@ vassal_phi_plural: "Subject"
 
 not_allowed_for_vassal:0 "$TRIGGER_FAIL$Not allowed for §Yvassal§! preset."
 
-requires_actor_domination_tradition:0 "$TRIGGER_FAIL$§They haven't §YDomination tradition§! They can't have vassal!§!"
-requires_domination_tradition:0 "$TRIGGER_FAIL$§We haven't §YDomination tradition§! Can't have vassal!§!"
+requires_actor_domination_tradition:0 "$TRIGGER_FAIL$They haven't §YDomination tradition§! They can't have vassal!§!"
+requires_domination_tradition:0 "$TRIGGER_FAIL$We haven't §YDomination tradition§! Can't have vassal!§!"
 
 artifact_buy_collector:0 "Buy by Private speculative seller"
 artifact_buy_collector_desc:0 "Get minor artifacts by private speculative seller."

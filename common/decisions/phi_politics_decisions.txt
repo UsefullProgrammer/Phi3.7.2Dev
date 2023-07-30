@@ -554,7 +554,6 @@ decision_phi_buyout_mc = {
 	effect = {
 		branch_office_owner = {  add_resource = { energy = 500 } }
 		close_branch_office = yes
-		set_planet_flag = phi_planet_buyout_mc
 		set_timed_planet_flag = { flag = phi_planet_buyout_mc@root days = 1800 }
 	}
 
@@ -567,6 +566,171 @@ decision_phi_buyout_mc = {
 		modifier = {
 			factor = 10
 			solar_system = { has_system_trade_value >= 500 }
+		}
+	}
+}
+decision_phi_embassy = {
+	owned_planets_only = yes
+	sound = event_administrative_work
+	icon = decision_luxuries
+	prerequisites = {
+		"tech_xeno_diplomacy"
+	}
+	
+	resources = {
+		category = decisions
+		cost = {
+			minerals = @b3_minerals
+			rare_crystals = @b3_rare_cost
+		}
+	}
+
+	potential = {
+		exists = owner
+		owner = { is_regular_empire = yes }
+		planet = { is_capital = yes }
+		NOT = { has_modifier = resort_colony }
+		NOT = { has_modifier = slave_colony }
+		NOR = { 
+			has_planet_flag = phi_embassy
+			has_planet_flag = phi_embassy_2 }
+	}
+
+	effect = {
+		set_planet_flag = phi_embassy
+		owner = { add_modifier = { modifier = "phi_embassy" } }
+		#add_modifier = { modifier = "phi_embassy" }
+	}
+
+	ai_weight = {
+		weight = 10
+	}
+}
+decision_phi_embassy_2 = {
+	prerequisites = {
+		"tech_xeno_relations"
+	}
+	owned_planets_only = yes
+	sound = event_administrative_work
+	icon = decision_luxuries
+	prerequisites = {
+		"tech_xeno_relations"
+	}
+	
+	resources = {
+		category = decisions
+		cost = {
+			minerals = @b4_minerals
+			rare_crystals = @b4_rare_cost
+		}
+	}
+
+	potential = {
+		exists = owner
+		owner = { is_regular_empire = yes }
+		planet = { is_capital = yes }
+		NOT = { has_modifier = resort_colony }
+		NOT = { has_modifier = slave_colony }
+		has_planet_flag = phi_embassy
+		NOT = { has_planet_flag = phi_embassy_2 }
+	}
+
+	effect = {
+		remove_planet_flag = phi_embassy
+		owner = { remove_modifier = "phi_embassy" }
+		
+		set_planet_flag = phi_embassy_2
+		owner = { add_modifier = { modifier = "phi_embassy_2" } }
+	}
+
+	ai_weight = {
+		weight = 1
+	}
+}
+decision_end_decision_phi_embassy_2 = {
+	owned_planets_only = yes
+	sound = event_administrative_work
+	icon = decision_luxuries
+
+	resources = {
+		category = decisions
+		cost = {
+			trigger = {
+				owner = { is_gestalt = no }
+			}
+			unity = 100
+		}
+		cost = {
+			trigger = {
+				owner = { is_gestalt = yes }
+			}
+			influence = 10
+		}
+	}
+
+	potential = {
+		has_planet_flag = phi_embassy_2
+	}
+
+	allow = {
+		always = yes
+	}
+
+	effect = {
+		remove_planet_flag = phi_embassy_2
+		owner = { remove_modifier ="phi_embassy_2" }
+	
+		set_planet_flag = phi_embassy
+		owner = { add_modifier = { modifier = "phi_embassy" } }
+	}
+
+	ai_weight = {
+		weight = 0
+		modifier = {
+			weight = 20
+			owner = { has_deficit = rare_crystals }
+		}
+	}
+}
+decision_end_decision_phi_embassy = {
+	owned_planets_only = yes
+	sound = event_administrative_work
+	icon = decision_luxuries
+
+	resources = {
+		category = decisions
+		cost = {
+			trigger = {
+				owner = { is_gestalt = no }
+			}
+			unity = 100
+		}
+		cost = {
+			trigger = {
+				owner = { is_gestalt = yes }
+			}
+			influence = 10
+		}
+	}
+
+	potential = {
+		has_planet_flag = phi_embassy
+	}
+
+	allow = {
+		always = yes
+	}
+
+	effect = {
+		remove_planet_flag = "phi_embassy"
+		owner = { remove_modifier ="phi_embassy" }
+	}
+
+	ai_weight = {
+		weight = 0
+		modifier = {
+			weight = 20
+			owner = { has_deficit = rare_crystals }
 		}
 	}
 }

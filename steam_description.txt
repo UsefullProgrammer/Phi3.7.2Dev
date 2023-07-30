@@ -1,6 +1,6 @@
 This is the conversion of gobbibomb by [url=https://steamcommunity.com/sharedfiles/filedetails/?id=2274421915]phi dev[/url]
 If found bug write in comments.
-[b]PHIGO 1.3[/b]
+[b]PHIGO 1.5[/b]
 
 Wiki page --> In development, can use old version [url=https://stellaris.paradoxwikis.com/Phi_mp_balancing] [b]HERE[/b] [/url]
 
@@ -60,10 +60,20 @@ PHIGO reworks totally the federations available in-game:
 [*][b]no more going to the jugular[/b]: a regular empire will be able to claim systems from opponents only when those systems are [b]adiacent[/b] to its borders or to another claimed system. total wars empires can declare war only on [b]neighbors[/b]
 [*][b]naval attrition[/b]: fleets advancing in enemy territory take [b]12.5% hull damage[/b] upon entering enemy's systems (cumulative but capped at 50%)
 [*][b]breaking truces[/b]: now you can [b]break truces[/b] (from the edicts screen) but you'll become a galactic pariah
-[*][b]disarm your enemies[/b]: humiliations are stingy, causing a wopping [b]-33% influence, alloys, unity, diplo weight[/b] and [b]naval cap[/b] for 15 years
+[*][b]disarm your enemies[/b]: humiliations are stingy, causing a wopping for 15 years: 
+[list]
+[*]diplomatic weight -33%
+[*]build ships cost 35%
+[*]country unity -33%
+[*]country naval cap mult -33%
+[/list]
+
 [*][b]win with a different strategy[/b]: you can now win the game by using your overwhelming trade power to subjugate all the lesser empires into a new [b]Galactic Empire[/b]!
 [*][b]War for open border[/b]
 [*][b]Weapon laser and mass driver low level low damage bonus armor or shield[/b]
+[*][b]Much War cost influence upkeep[/b]
+[*][b]Empires Total war when they teritory are in neighbors start an auto war "nemesi"[/b]
+[*][b]Can't war with country friendly but can "force war" in edict[/b]
 [/list]
 
 [h2]Policies, Traditions, etc[/h2]
@@ -73,5 +83,8 @@ PHIGO reworks totally the federations available in-game:
 [*][b]diplomacy tradition[/b] is now stronger than ever!
 [*][b]politics tradition[/b] is now stronger than ever!
 [/list]
+
+[h2]Much fix[/h2]
+Much fix paradox how criminal war not work, Crash and more bugs are fixed.
 
 And many more things...
