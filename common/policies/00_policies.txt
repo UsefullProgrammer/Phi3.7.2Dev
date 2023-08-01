@@ -89,6 +89,7 @@ diplomatic_stance = {
 			diplo_weight_economy_mult = 0.2
 			diplo_weight_naval_mult = -0.2
 			wars_influence_upkeep_mult = 0.5
+			country_trust_cap_add = 50
 		}
 
 		on_enabled = {
@@ -253,6 +254,7 @@ diplomatic_stance = {
 			diplo_weight_economy_mult = -0.1
 			diplo_weight_naval_mult = 0.1
 			wars_influence_upkeep_mult = -0.25
+			country_trust_cap_add = -25
 		}
 
 		on_enabled = {
@@ -329,6 +331,7 @@ diplomatic_stance = {
 			diplo_weight_naval_mult = 0.2
 			wars_influence_upkeep_mult = -0.33
 			diplomacy_influence_upkeep_mult = +0.1
+			country_trust_cap_add = -50
 		}
 
 		on_enabled = {
@@ -2492,7 +2495,8 @@ economic_policy = {
 		}
 		
 		modifier = {
-
+			contact_produces_mult = 0.10
+			country_trust_cap_add = 50
 		}
 		
 		policy_flags = {
@@ -2673,7 +2677,9 @@ economic_policy = {
 		valid = {
 			has_tradition = tr_subterfuge_adopt
 		}
-		
+		potential = {
+			is_homicidal = no
+		}
 		on_enabled = {
 			custom_tooltip = "tooltip_economic_policy_subterfuge_effects"
 		}
@@ -2687,13 +2693,34 @@ economic_policy = {
 		}
 
 		AI_weight = {
-			factor = 30
-			modifier = {
-				factor = 0
-				is_homicidal = no
-			}
+			factor = 0
 		}
 	}
+	# option = {
+	# 	name = "economic_policy_subterfuge_2"
+		
+	# 	valid = {
+	# 		has_tradition = tr_subterfuge_adopt
+	# 	}
+	# 	potential = {
+	# 		is_homicidal = yes
+	# 	}
+	# 	on_enabled = {
+	# 		custom_tooltip = "tooltip_economic_policy_subterfuge_effects_2"
+	# 	}
+		
+	# 	modifier = {
+
+	# 	}
+		
+	# 	policy_flags = {
+	# 		economic_policy_subterfuge
+	# 	}
+
+	# 	AI_weight = {
+	# 		factor = 30
+	# 	}
+	# }
 	
 	option = {
 		name = "economic_policy_adaptability"
@@ -3114,7 +3141,7 @@ drone_policy = {
 		}
 		
 		on_enabled = {
-			custom_tooltip = "tooltip_economic_policy_subterfuge_effects"
+			custom_tooltip = "tooltip_economic_policy_subterfuge_effects_2"
 		}
 		
 		modifier = {

@@ -4,3 +4,10 @@ Can_Branch_office_on_gestait = {
 Can_Branch_office_on_megacorp = {
 	always = yes
 }
+valid_for_Upgrade_system = {
+	has_deposit = no
+	has_anomaly = no
+	is_preventing_anomaly = no
+	NOT = { has_planet_flag = phi_resource_discovery_flag }
+	can_have_resource_discovery = yes
+}

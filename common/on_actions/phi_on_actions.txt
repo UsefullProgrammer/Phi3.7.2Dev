@@ -50,10 +50,17 @@ on_yearly_pulse_country = {
 	}
 }
 
+# No scope, like on_game_start
+# on_five_year_pulse = {
+# 	events = {
+# 		phi_Upgrade_System.1 #not work
+# 	}
+# }
 # this = country
 on_five_year_pulse_country = {
 	events = {
 		phi_ai.13				#shifts ethics towards fed type
+		
 	}
 }
 

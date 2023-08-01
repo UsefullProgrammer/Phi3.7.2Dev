@@ -6,7 +6,7 @@ Wiki page --> In development, can use old version [url=https://stellaris.paradox
 
 
 This mod was inspired and copy by phy crated by [url=https://steamcommunity.com/id/mariominaccia]mariominaccia[/url]
-This mod is in beta [b]actually in under further development[/b] by [url=https://steamcommunity.com/profiles/76561198021478310]gobbibomb[/url].
+This mod is [b]actually in under further development[/b] by [url=https://steamcommunity.com/profiles/76561198021478310]gobbibomb[/url].
 
 [hr][/hr]
 
@@ -22,10 +22,10 @@ PHIGO is a standalone mod.
 While playing with PHIGO, you'll have much [b]less planets[/b] to manage and colonize, and you'll put much more emphasys on [b]systems' resources[/b] (especially for science). This is done by:
 [list]
 [*]increasing the [b]admin capacity cost[/b] of every planet you own (they now cost 25 empire size points)
-[*]increasing the penalties you face going over your admin cap (you get [b]+1% research and tradition cost[/b] and [b]0.5 crime on every planet[/b] per point over the limit)
+[*]increasing the penalties you face going over your admin cap (you get [b]+5% research and tradition cost[/b] and [b]2.5 crime on every planet[/b] per point over the limit)
 [*]changing the [b]bonus to research station[/b] production you get from tech, traditions and events (you now get +100% instead of +10%)
 [*]Society research is hard produce, can produce with contacts and infiltrate tradition if you are homicidal
-[*]Lab research are 2, 1 for physics 1 for engineering
+[*]Lab research are of 2 type, 1 for physics 1 for engineering
 [/list]
 These basic changes make the game [b]less focused on colonizing[/b] everything you see, letting you focus on the [b]strategic value[/b] of your systems and the [b]quality[/b] of your planets. A bonus side effect is also that the game will run much faster as less pops are created. The [b]increased research output of your station[/b] will more than compensate for anything you'll find yourself short.
 
@@ -42,7 +42,7 @@ PHIGO reworks totally the federations available in-game:
 [h2]Vassals[/h2]
 [list]
 [*]Vassals and subsidiaries are no longer integrable.
-[*]Moreover, each normal vassal relation will now cost 1 influence per month (with the exception of protectorates). [*]Ultimatums to vassalize other empires no longer check against relative power.
+[*]New decision on planet for release how vassal
 [/list]
 
 [h2]Ships and Stations[/h2]
@@ -85,6 +85,6 @@ PHIGO reworks totally the federations available in-game:
 [/list]
 
 [h2]Much fix[/h2]
-Much fix paradox how criminal war not work, Crash and more bugs are fixed.
+Much fix paradox how criminal war not work when not leader war, Crash rebels and more bugs of paradox are fixed.
 
 And many more things...

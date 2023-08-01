@@ -1,0 +1,88 @@
+resource_Upgrade_System_effect = {
+	random_list = {
+		27 = {
+			set_country_flag = Upgrade_System_resource_discovery_energy
+		}
+		54 = {
+			set_country_flag = Upgrade_System_resource_discovery_minerals
+		}
+		27 = {
+			set_country_flag = Upgrade_System_resource_discovery_alloys
+		}
+        9 = {
+			set_country_flag = Upgrade_System_resource_discovery_rare_crystals
+		}
+		9 = {
+			set_country_flag = Upgrade_System_resource_discovery_volatile_motes
+		}
+		9 = {
+			set_country_flag = Upgrade_System_resource_discovery_exotic_gases
+		}
+        3 = {
+			set_country_flag = Upgrade_System_resource_discovery_zro
+		}
+		3 = {
+			set_country_flag = Upgrade_System_resource_discovery_dark_matter
+		}
+		1 = {
+			set_country_flag = Upgrade_System_resource_discovery_living_metal
+		}
+	}
+}
+Upgrade_System_resource_discovery_remove_flag_effect = {
+	if = {
+		limit = {
+			has_country_flag = Upgrade_System_resource_discovery_energy
+		}
+		remove_country_flag = Upgrade_System_resource_discovery_energy
+	}
+	if = {
+		limit = {
+			has_country_flag = Upgrade_System_resource_discovery_minerals
+		}
+		remove_country_flag = Upgrade_System_resource_discovery_minerals
+	}
+	if = {
+		limit = {
+			has_country_flag = Upgrade_System_resource_discovery_alloys
+		}
+		remove_country_flag = Upgrade_System_resource_discovery_alloys
+	}
+	if = {
+		limit = {
+			has_country_flag = Upgrade_System_resource_discovery_rare_crystals
+		}
+		remove_country_flag = Upgrade_System_resource_discovery_rare_crystals
+	}
+	if = {
+		limit = {
+			has_country_flag = Upgrade_System_resource_discovery_volatile_motes
+		}
+		remove_country_flag = Upgrade_System_resource_discovery_volatile_motes
+	}
+	if = {
+		limit = {
+			has_country_flag = Upgrade_System_resource_discovery_exotic_gases
+		}
+		remove_country_flag = Upgrade_System_resource_discovery_exotic_gases
+	}
+
+	if = {
+		limit = {
+			has_country_flag = Upgrade_System_resource_discovery_zro
+		}
+		remove_country_flag = Upgrade_System_resource_discovery_zro
+	}
+	if = {
+		limit = {
+			has_country_flag = Upgrade_System_resource_discovery_dark_matter
+		}
+		remove_country_flag = Upgrade_System_resource_discovery_dark_matter
+	}
+	if = {
+		limit = {
+			has_country_flag = Upgrade_System_resource_discovery_living_metal
+		}
+		remove_country_flag = Upgrade_System_resource_discovery_living_metal
+	}
+}

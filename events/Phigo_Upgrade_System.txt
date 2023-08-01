@@ -1,0 +1,139 @@
+namespace = phi_Upgrade_System
+### Prospectorium - Resource Discovery ###
+event = { # Five Yearly Pulse
+	id = phi_Upgrade_System.1
+	hide_window = yes
+	is_triggered_only = yes
+
+	immediate = {
+		random_playable_country = {
+			random_planet_within_border = {
+				limit = { 
+					valid_for_Upgrade_system = yes 
+				}
+				save_event_target_as = Upgrade_System_target
+			}
+			country_event = {
+				id = phi_Upgrade_System.2
+				days = 1
+				#random = 15
+			}
+		}
+	}
+}
+
+country_event = { # Upgrade this system
+	id = phi_Upgrade_System.2
+	title = specialist.1150.title
+	desc = specialist.1150.desc
+	picture = GFX_evt_crystal_mining
+	show_sound = evn_ove_crystal_mining
+
+	is_triggered_only = yes
+	location = event_target:Upgrade_System_target
+
+	trigger = {
+		exists = event_target:Upgrade_System_target
+		event_target:Upgrade_System_target = {
+			valid_for_Upgrade_system = yes
+		}
+	}
+
+	immediate = {
+		event_target:Upgrade_System_target = { set_planet_flag = phi_resource_discovery_flag }
+		resource_Upgrade_System_effect = yes
+	}
+
+	option = { # Energy
+		name = specialist.1150.a
+		trigger = { has_country_flag = Upgrade_System_resource_discovery_energy }
+		enable_special_project = {
+			name = PROSPECTORIUM_RESOURCE_DISCOVERY_ENERGY
+			location = event_target:Upgrade_System_target
+		}
+		custom_tooltip = specialist.1150.a.tt
+	}
+
+	option = { # Minerals
+		name = specialist.1150.b
+		trigger = { has_country_flag = Upgrade_System_resource_discovery_minerals }
+		enable_special_project = {
+			name = PROSPECTORIUM_RESOURCE_DISCOVERY_MINERALS
+			location = event_target:Upgrade_System_target
+		}
+		custom_tooltip = specialist.1150.b.tt
+	}
+
+	option = { # Alloys
+		name = specialist.1150.c
+		trigger = { has_country_flag = Upgrade_System_resource_discovery_alloys }
+		enable_special_project = {
+			name = PROSPECTORIUM_RESOURCE_DISCOVERY_ALLOYS
+			location = event_target:Upgrade_System_target
+		}
+		custom_tooltip = specialist.1150.c.tt
+	}
+
+	option = { # Rare Crystals
+		name = specialist.1150.d
+		trigger = { has_country_flag = Upgrade_System_resource_discovery_rare_crystals }
+		enable_special_project = {
+			name = PROSPECTORIUM_RESOURCE_DISCOVERY_RARE_CRYSTALS
+			location = event_target:Upgrade_System_target
+		}
+		custom_tooltip = specialist.1150.d.tt
+	}
+
+	option = { # Volatile Motes
+		name = specialist.1150.e
+		trigger = { has_country_flag = Upgrade_System_resource_discovery_volatile_motes }
+		enable_special_project = {
+			name = PROSPECTORIUM_RESOURCE_DISCOVERY_VOLATILE_MOTES
+			location = event_target:Upgrade_System_target
+		}
+		custom_tooltip = specialist.1150.e.tt
+	}
+
+	option = { # Exotic Gases
+		name = specialist.1150.f
+		trigger = { has_country_flag = Upgrade_System_resource_discovery_exotic_gases }
+		enable_special_project = {
+			name = PROSPECTORIUM_RESOURCE_DISCOVERY_EXOTIC_GASES
+			location = event_target:Upgrade_System_target
+		}
+		custom_tooltip = specialist.1150.f.tt
+	}
+
+	option = { # Zro
+		name = specialist.1150.g
+		trigger = { has_country_flag = Upgrade_System_resource_discovery_zro }
+		enable_special_project = {
+			name = PROSPECTORIUM_RESOURCE_DISCOVERY_ZRO
+			location = event_target:Upgrade_System_target
+		}
+		custom_tooltip = specialist.1150.g.tt
+	}
+
+	option = { # Dark Matter
+		name = specialist.1150.h
+		trigger = { has_country_flag = Upgrade_System_resource_discovery_dark_matter }
+		enable_special_project = {
+			name = PROSPECTORIUM_RESOURCE_DISCOVERY_DARK_MATTER
+			location = event_target:Upgrade_System_target
+		}
+		custom_tooltip = specialist.1150.h.tt
+	}
+
+	option = { # Living Metal
+		name = specialist.1150.i
+		trigger = { has_country_flag = Upgrade_System_resource_discovery_living_metal }
+		enable_special_project = {
+			name = PROSPECTORIUM_RESOURCE_DISCOVERY_LIVING_METAL
+			location = event_target:Upgrade_System_target
+		}
+		custom_tooltip = specialist.1150.i.tt
+	}
+	after = {
+		Upgrade_System_resource_discovery_remove_flag_effect = yes
+	}
+}

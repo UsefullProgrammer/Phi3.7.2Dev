@@ -191,6 +191,7 @@ decision_phi_planet_local_administration = {
 	}
 
 	potential = {
+		always = no
 		owner = { is_regular_empire = yes }
 		NOT = { has_modifier = phi_planet_local_administration }
 	}

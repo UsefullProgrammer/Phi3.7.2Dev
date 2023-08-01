@@ -251,3 +251,17 @@ count_civilian_shipyard = {
 	}
 	min = 1
 }
+society_scaling_factor = {
+	base = 0
+	complex_trigger_modifier = {
+		trigger = count_country
+		mode = add
+	}
+	divide = 16
+	add = trigger:years_passed
+	divide = 18
+	mult = 5
+	ceiling = yes
+	
+	max = 18
+}

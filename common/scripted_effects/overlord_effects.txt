@@ -662,14 +662,14 @@ prospectorium_resource_discovery_flag_tier_2_effect = {
 
 prospectorium_resource_discovery_flag_tier_3_effect = {
 	random_list = {
-		1 = {
+		2 = {
 			modifier = {
 				factor = 0
 				has_country_flag = prospectorium_resource_discovery_energy
 			}
 			set_country_flag = prospectorium_resource_discovery_energy
 		}
-		1 = {
+		3 = {
 			modifier = {
 				factor = 0
 				has_country_flag = prospectorium_resource_discovery_minerals
@@ -685,27 +685,28 @@ prospectorium_resource_discovery_flag_tier_3_effect = {
 		}
 	}
 	random_list = {
-		1 = {
+		25 = {
 			modifier = {
 				factor = 0
 				has_country_flag = prospectorium_resource_discovery_rare_crystals
 			}
 			set_country_flag = prospectorium_resource_discovery_rare_crystals
 		}
-		1 = {
+		25 = {
 			modifier = {
 				factor = 0
 				has_country_flag = prospectorium_resource_discovery_volatile_motes
 			}
 			set_country_flag = prospectorium_resource_discovery_volatile_motes
 		}
-		1 = {
+		25 = {
 			modifier = {
 				factor = 0
 				has_country_flag = prospectorium_resource_discovery_exotic_gases
 			}
 			set_country_flag = prospectorium_resource_discovery_exotic_gases
 		}
+		25 = { }
 	}
 	random_list = {
 		1 = {
@@ -729,6 +730,7 @@ prospectorium_resource_discovery_flag_tier_3_effect = {
 			}
 			set_country_flag = prospectorium_resource_discovery_living_metal
 		}
+		2 = { }
 	}
 }
 

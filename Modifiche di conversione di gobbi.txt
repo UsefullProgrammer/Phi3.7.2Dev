@@ -627,7 +627,7 @@ Voidveller building speciali ora invece di job add alcune ti danno job per popol
 
 
 
-1.5.3
+[h2][b]1.5.3[/b][/h2]
 
 Fix localization per i cloni
 Corette altre localizzazioni
@@ -638,3 +638,16 @@ Fix action_demand_subjugation che potevi solo chiederlo se l'altro non aveva dom
 Ora gli imperi IA che erano prima degli umani non mandando richieste di essere sudditi.
 Tolti gli edifici embassy che erano inutili, messo al loro posto una decisione sulla capitale.
 Migliorata ancora la AI
+
+[h2][b]1.5.4[/b][/h2]
+
+Gli homicidal non prendono ricerca da imperi superiori e gli imperi inferiori non prendono ricerca dagli homicidal
+La decision decision_phi_planet_local_administration è stata rimossa in cambio ora il colony type che davano bonus trade value dannò tutti +50% trade value
+[img]https://i.imgur.com/tg0beeq.png[/img]
+[img]https://i.imgur.com/RO9pbYS.png[/img]
+Ora diplomacy economy da un bonus di 10% alla society data dai contatti
+Ora la ricerca di society tramite infiltration viene data anche se non si sta costruendo un spynetwork ma si ha almeno 30 spy network.
+[img]https://i.imgur.com/GzV7MpU.png[/img]
+Ora la society dal contact è scalare (aumenta per ogni anno) per gli anni di gioco fino al massimo di 18 punti society anno 1 = 1 anno 12 = 5 anno 75 = 18 e scala anche in base a quante country ci sono in mappa meno country = + bonus.
+Ora building istitute e gli edifici simili negli gestalt è un edificio over power
+[img]https://i.imgur.com/pPdACZ5.png[/img]

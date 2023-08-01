@@ -1118,7 +1118,7 @@ country_event = {
 	
 	immediate = {
 		random_list = {
-			7  = {
+			8  = {
 				every_war = {
 					limit = {
 						any_defender = {
