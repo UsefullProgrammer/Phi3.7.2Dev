@@ -2919,8 +2919,11 @@ trade_policy = {
 		
 		valid = {
 			has_tradition = tr_mercantile_finish
-			any_country = {
-				has_commercial_pact = prev
+			OR = {
+				any_country = {
+					has_commercial_pact = prev
+				}
+				has_federation = yes
 			}
 		}
 		

@@ -1696,7 +1696,7 @@ pre_ftl_trade_pacts = {
 
 
 contact = {
-	parent = diplomacy
+	parent = country
 	generate_mult_modifiers = {
 		produces
 	}

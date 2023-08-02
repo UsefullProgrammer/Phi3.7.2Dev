@@ -655,12 +655,12 @@ Ora building istitute e gli edifici simili negli gestalt è un edificio over pow
 
  [h2][b]Hotfix 1.5.5[/b][/h2]
 
- Solo la civica aristocratica elite permette di avere 2 stability dai nobili
+
  Fixato tooltip in full scale mobilization
- Cambiato society da contact, ora parte da 5 e verso l'anno 15 è 10.
+ Cambiato society da contact, ora da 10.
  Fix calcolo society da contact nel tempo
  Fix calcolo revolt_fleet_comparison_factor quando flotta ribelle è <= 0
- trade league bisogna avere almeno 1 patto commerciale.
+ trade league bisogna avere almeno 1 patto commerciale o una federazione.
  Peggiorata conversione di trade_league_conversion: 
  Energy	0,3
  CG	0,25
@@ -669,6 +669,7 @@ Ora building istitute e gli edifici simili negli gestalt è un edificio over pow
  Gli spiritualisti possono subito accedere al trade di unity
 
  [h2][b]1.5 Release[/b][/h2]
+ Solo la civica aristocratica elite permette di avere 2 stability dai nobili
  Nuovo trade "weapon trade" ti permette, in guerra, di fare alloys dal trade.
  Migliorata Ai nel market.
  Ecumonopoli non da più pop_growth_speed a gratis, visto che ora c'è l'housing che te lo fa avere growth speed.
