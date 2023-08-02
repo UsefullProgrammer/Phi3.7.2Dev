@@ -642,7 +642,8 @@ Migliorata ancora la AI
 [h2][b]1.5.4[/b][/h2]
 
 Gli homicidal non prendono ricerca da imperi superiori e gli imperi inferiori non prendono ricerca dagli homicidal
-La decision decision_phi_planet_local_administration è stata rimossa in cambio ora il colony type che davano bonus trade value dannò tutti +50% trade value
+Decisione planet trading guilds cambiato da +100% a +50%
+Ora il colony type che davano bonus trade value dannò tutti +50% trade value
 [img]https://i.imgur.com/tg0beeq.png[/img]
 [img]https://i.imgur.com/RO9pbYS.png[/img]
 Ora diplomacy economy da un bonus di 10% alla society data dai contatti
@@ -655,22 +656,22 @@ Ora building istitute e gli edifici simili negli gestalt è un edificio over pow
 
  [h2][b]Hotfix 1.5.5[/b][/h2]
 
-
  Fixato tooltip in full scale mobilization
  Cambiato society da contact, ora da 10.
  Fix calcolo society da contact nel tempo
  Fix calcolo revolt_fleet_comparison_factor quando flotta ribelle è <= 0
- trade league bisogna avere almeno 1 patto commerciale o una federazione.
  Peggiorata conversione di trade_league_conversion: 
  Energy	0,3
- CG	0,25
+ CG	0,2
  unity	0,2
  Society	0,125
- Gli spiritualisti possono subito accedere al trade di unity
 
  [h2][b]1.5 Release[/b][/h2]
- Solo la civica aristocratica elite permette di avere 2 stability dai nobili
+
+ Solo la civica aristocratica elite permette di avere 2 stability dai nobili in cambio però visto che full scale non ti da più stability dai nobily full scale e disarmament ti da un flat di +2 stability
  Nuovo trade "weapon trade" ti permette, in guerra, di fare alloys dal trade.
  Migliorata Ai nel market.
  Ecumonopoli non da più pop_growth_speed a gratis, visto che ora c'è l'housing che te lo fa avere growth speed.
  Ecumonopoli abbassato il planet_jobs_produces_mult dal 20% al 10% per avvicinarsi agli altri bonus da altri tipi di super planet
+ Cambiata economic_policy_mercantile per i inkward perf e i homicidal.
+ trade_policy_holy_covenant lo puoi fare anche con consecrated worlds

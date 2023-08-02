@@ -83,6 +83,7 @@ diplomatic_stance = {
 		}
 
 		modifier = {
+			planet_stability_add = 2
 			country_war_exhaustion_mult = 0.1
 			ship_fire_rate_mult = -0.2
 			ships_upkeep_mult = -0.2
@@ -292,9 +293,7 @@ diplomatic_stance = {
 			OR = {
 				is_country_type = default
 				is_country_type = awakened_fallen_empire
-				
 			}
-			is_gestalt = no
 			is_homicidal = no # They have their own variants of this
 		}
 		
@@ -325,6 +324,7 @@ diplomatic_stance = {
 		}
 
 		modifier = {
+			planet_stability_add = 2
 			country_war_exhaustion_mult = -0.1
 			ship_fire_rate_mult = 0.2
 			ships_upkeep_mult = 0.2
@@ -333,72 +333,18 @@ diplomatic_stance = {
 			wars_influence_upkeep_mult = -0.33
 			diplomacy_influence_upkeep_mult = +0.1
 			country_trust_cap_add = -50
-		}
-		on_enabled = {
-				add_modifier = { modifier = phi_full_scale_mobilization }
 			
 		}
-		
-		on_disabled = {
-			remove_modifier = phi_full_scale_mobilization
-			remove_modifier = phi_full_scale_mobilization_gestalt
-		}
 
-		ai_weight = {
-			weight = 1000
-		}	
-	}
-	option = {
-		name = "diplo_stance_full_scale_mobilization"
-		icon = "GFX_diplomatic_stance_supremacy"
-
-		potential = {
-			OR = {
-				is_country_type = default
-				is_country_type = awakened_fallen_empire
-			}
-			is_gestalt = yes
-			is_homicidal = no # They have their own variants of this
-		}
-		
-		in_breach_of = {
-			{
-				key = resolution_rulesofwar_demobilization_initiative
-			}
-		}
-		
-		valid = {
-			NAND = {
-				has_policy_flag = diplo_stance_conscription
-				has_modifier = tora_tora_tora
-			}
-			NOR = {
-				has_policy_flag = diplo_stance_disarmament
-				has_policy_flag = diplo_stance_minimal_army
-				has_policy_flag = diplo_stance_neutral
-			}
-			OR = {
-				has_tradition = tr_supremacy_finish
-				has_origin = origin_payback
-			}
-		}
-
-		policy_flags = {
-			diplo_stance_full_scale_mobilization
-		}
-
-		modifier = {
-			country_war_exhaustion_mult = -0.1
-			ship_fire_rate_mult = 0.2
-			ships_upkeep_mult = 0.2
-			diplo_weight_economy_mult = -0.2
-			diplo_weight_naval_mult = 0.2
-			wars_influence_upkeep_mult = -0.33
-			diplomacy_influence_upkeep_mult = +0.1
-			country_trust_cap_add = -50
-		}
 		on_enabled = {
-			add_modifier = { modifier = phi_full_scale_mobilization_gestalt }
+			if = {
+				limit = { is_gestalt = no }
+				add_modifier = { modifier = phi_full_scale_mobilization }
+			}
+			if = {
+				limit = { is_gestalt = yes }
+				add_modifier = { modifier = phi_full_scale_mobilization_gestalt }
+			}
 		}
 		
 		on_disabled = {
@@ -2541,6 +2487,7 @@ economic_policy = {
 		
 		potential = {
 			is_homicidal = no
+			NOT = { has_valid_civic = civic_inwards_perfection }
 		}
 		
 		valid = {
@@ -2637,13 +2584,45 @@ economic_policy = {
 		valid = {
 			has_tradition = tr_mercantile_adopt
 		}
-		
+		potential = {
+			is_homicidal = no
+			NOT = { has_valid_civic = civic_inwards_perfection }
+		}
 		on_enabled = {
 			custom_tooltip = "tooltip_economic_policy_mercantile_effects"
 		}
 		
 		modifier = {
-			commercial_pact_mult = 0.5
+			commercial_pact_mult = 0.25
+			starbase_trade_collection_range_add = 1
+		}
+		
+		policy_flags = {
+			economic_policy_mercantile
+		}
+
+		AI_weight = {
+			factor = 20
+		}
+	}
+	option = {
+		name = "economic_policy_mercantile"
+		
+		valid = {
+			has_tradition = tr_mercantile_adopt
+		}
+		potential = {
+			OR = {
+				is_homicidal = yes
+				has_valid_civic = civic_inwards_perfection
+			}
+		}
+		on_enabled = {
+			custom_tooltip = "tooltip_economic_policy_mercantile_effects"
+		}
+		
+		modifier = {
+			country_trade_fee = -0.03
 			starbase_trade_collection_range_add = 1
 		}
 		
@@ -2896,10 +2875,7 @@ trade_policy = {
 	option = {
 		name = "trade_policy_unity"
 		valid = {
-			OR = {
-				has_tradition = tr_harmony_finish
-				is_spiritualist = yes
-			}
+			has_tradition = tr_harmony_finish
 		}
 
 		policy_flags = {
@@ -2913,18 +2889,18 @@ trade_policy = {
 			factor = 1
 		}
 	}
-
+	
 	option = {
 		name = "trade_policy_trade_league"
 		
 		valid = {
 			has_tradition = tr_mercantile_finish
-			OR = {
-				any_country = {
-					has_commercial_pact = prev
-				}
-				has_federation = yes
-			}
+			# OR = {
+			# 	any_country = {
+			# 		has_commercial_pact = prev
+			# 	}
+			# 	has_federation = yes
+			# }
 		}
 		
 		policy_flags = {
@@ -2941,12 +2917,12 @@ trade_policy = {
 	option = {
 		name = "trade_policy_military"
 		potential = {
-			always = no
+		 	is_homicidal = no
 		}
 		valid = {
 			is_at_war = yes
 			OR = {
-				has_tradition = tr_politics_adopt
+				has_tradition = tr_politics_finish
 				is_criminal_syndicate = yes
 			}
 			any_country = {
@@ -2985,11 +2961,16 @@ trade_policy = {
 	}
 	option = {
 		name = "trade_policy_holy_covenant"
-		potential = {
-				has_federation = yes
-				federation = { has_federation_perk = unity_trade_1 }
+		
+		valid = {
+			OR = {
+				has_ascension_perk = ap_consecrated_worlds
+				AND = {
+					has_federation = yes
+					federation = { has_federation_perk = unity_trade_1 }
+				}
+			}
 		}
-
 		policy_flags = {
 			trade_conversion_holy_covenant
 		}

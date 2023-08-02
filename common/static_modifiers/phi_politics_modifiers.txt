@@ -70,7 +70,7 @@ phi_planet_trading_guilds = {
 	icon_frame = 2
 	planet_stability_add = -20
 	planet_crime_mult = 1
-	trade_value_mult = 1
+	trade_value_mult = 0.5
 }
 
 phi_planet_deviant_experiments = {
