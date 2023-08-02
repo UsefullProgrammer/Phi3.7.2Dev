@@ -83,7 +83,6 @@ diplomatic_stance = {
 		}
 
 		modifier = {
-			planet_stability_add = 2
 			country_war_exhaustion_mult = 0.1
 			ship_fire_rate_mult = -0.2
 			ships_upkeep_mult = -0.2
@@ -324,7 +323,6 @@ diplomatic_stance = {
 		}
 
 		modifier = {
-			planet_stability_add = 2
 			country_war_exhaustion_mult = -0.1
 			ship_fire_rate_mult = 0.2
 			ships_upkeep_mult = 0.2
@@ -2925,9 +2923,9 @@ trade_policy = {
 				has_tradition = tr_politics_finish
 				is_criminal_syndicate = yes
 			}
-			any_country = {
-				has_commercial_pact = prev
-			}
+			#any_country = {
+			#	has_commercial_pact = prev
+			#}
 		}
 		
 		policy_flags = {

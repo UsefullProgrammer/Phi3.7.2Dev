@@ -668,10 +668,11 @@ Ora building istitute e gli edifici simili negli gestalt è un edificio over pow
 
  [h2][b]1.5 Release[/b][/h2]
 
- Solo la civica aristocratica elite permette di avere 2 stability dai nobili in cambio però visto che full scale non ti da più stability dai nobily full scale e disarmament ti da un flat di +2 stability
- Nuovo trade "weapon trade" ti permette, in guerra, di fare alloys dal trade.
+ Nuovo trade "weapon trade" ti permette, in guerra se hai criminali syndacate o politics finish, di fare alloys dal trade.
  Migliorata Ai nel market.
  Ecumonopoli non da più pop_growth_speed a gratis, visto che ora c'è l'housing che te lo fa avere growth speed.
  Ecumonopoli abbassato il planet_jobs_produces_mult dal 20% al 10% per avvicinarsi agli altri bonus da altri tipi di super planet
  Cambiata economic_policy_mercantile per i inkward perf e i homicidal.
- trade_policy_holy_covenant lo puoi fare anche con consecrated worlds
+ Trade_policy_holy_covenant lo puoi fare anche con consecrated worlds
+ [h1][b]Sperimentale:[/h1][/b]
+ Diminuito empire size da pop da 0,20 a 0,15.

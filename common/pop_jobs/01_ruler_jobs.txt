@@ -271,14 +271,16 @@ noble = {
 		planet_amenities_add = 3
 		mult = value:scripted_modifier_mult|MODIFIER|pop_job_amenities_mult|
 	}
-
-	triggered_planet_modifier = {
-		potential = {
-			exists = owner
-			owner = { has_civic = civic_aristocratic_elite }
-		}
+	planet_modifier = {
 		planet_stability_add = 2
 	}
+	# triggered_planet_modifier = {
+	# 	potential = {
+	# 		exists = owner
+	# 		owner = { has_civic = civic_aristocratic_elite }
+	# 	}
+	# 	planet_stability_add = 2
+	# }
 
 	weight = {
 		weight = @ruler_job_weight

@@ -1100,7 +1100,7 @@
 		EMPIRE_SIZE_FROM_SYSTEMS				= 1		# Per system
 		EMPIRE_SIZE_FROM_COLONIES				= 25		# Per planet
 		EMPIRE_SIZE_FROM_BRANCH_OFFICES			= 1.25		# Per branch office
-		EMPIRE_SIZE_FROM_POPS					= 0.20		# Per pop
+		EMPIRE_SIZE_FROM_POPS					= 0.15		# Per pop
 	
 		DIPLOMACY_WEIGHT_BASE					= 0.0		# Base diplomacy weight for all empires
 		DIPLOMACY_WEIGHT_STANCE_FACTOR			= 0			# Factors weight from Diplo Stance before it is added to diplo weight
