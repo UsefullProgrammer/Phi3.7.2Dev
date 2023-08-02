@@ -527,6 +527,13 @@ decision_phi_release_client_state = {
 
 	ai_weight = {
 		weight = 0
+		modifier = {
+			weight = 1000
+			is_gestalt = no
+			empire_sprawl_over_cap > 30
+			solar_system = { is_bottleneck_system = no }
+			count_owned_pop = { count < 20 }
+		}
 	}
 }
 

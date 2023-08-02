@@ -2200,12 +2200,6 @@
 		MIN_NAVY_SIZE_FOR_ADMIRAL = 20		# AI wants a navy of at least this fleetsize before buying an admiral
 		FLEET_SPECIALIZATION_REFIT_TRESHOLD = 0.1 # AI will refit its fleet to fit into the admirals specialization if at least this ratio of ships will be upgraded
 		
-		LEADER_FRACTION_SCIENTIST = 0.6		# Fraction of AI Leaders that should be scientists
-		LEADER_FRACTION_ADMIRAL = 0.1			# Fraction of admirals
-		LEADER_FRACTION_GENERAL = 0.1			# Fraction of generals
-		LEADER_FRACTION_GOVERNOR = 0.2			# Fraction of governor
-		LEADER_FRACTION_CHANGE_CAP = 11		# Leader cap > this will decrease scientist fraction and increase other
-	
 		ABORT_MISSION_LIMIT = 0.25				# MilitaryPower fraction below this level will result in AI escaping battle
 	
 		WAR_EXHAUSTION_TO_INTERVENE = 0.25		# AI may want to intervene to help empires with this war exhaustion or higher
@@ -2262,7 +2256,7 @@
 		MAX_CLAIM_DISTANCE_SUBJECT = 2			# Max number of jumps away AI subjects will make claims on
 		CLAIM_BASE_VALUE = 100
 		CLAIM_RESOURCE_FACTOR = 2				# How much will AI prioritize resource-rich systems when making claims
-		CLAIM_BYPASS_FACTOR = 2					# How much will AI prioritize systems with bypasses when making claims
+		CLAIM_BYPASS_FACTOR = 10					# How much will AI prioritize systems with bypasses when making claims
 		CLAIM_RELATIONS_FACTOR = -0.1			# How much will AI factor in opinion when making claims
 		CLAIM_COST_FACTOR = -0.2				# How much will AI prioritize resource-rich systems when making claims
 		CLAIM_COLONY_FACTOR = 25				# How much will AI prioritize colonies when making claims
@@ -2279,7 +2273,7 @@
 		AI_ALLOWED_TO_BUY = { "minerals" "food" "alloys" "consumer_goods" "exotic_gases" "rare_crystals" "volatile_motes" "sr_living_metal" "sr_dark_matter" "sr_zro" }
 		AI_ALLOWED_TO_SELL = { "minerals" "food" "consumer_goods" "exotic_gases" "rare_crystals" "volatile_motes" "sr_living_metal" "sr_dark_matter" "sr_zro" }
 		AI_MIN_CURRENCY_TO_SELL = 6000.0		# If the AI has less currency (energy) than this it will consider selling resources
-		AI_MIN_CURRENCY_INCOME_TO_SELL = 1000.0	# If the AI has less currency (energy) gain last month than this it will consider selling resources
+		AI_MIN_CURRENCY_INCOME_TO_SELL = 20.0	# If the AI has less currency (energy) gain last month than this it will consider selling resources
 		AI_MAIN_CONSTRUCTION_CURRENCY = "minerals"			# Tells the AI which is the most important construction resource
 		AI_RARE_RESOURCES = { "exotic_gases" "rare_crystals" "volatile_motes" } #Tells AI which the "strategic" resources are used for their economy planing
 		AI_MAIN_CONSTRUCTION_CURRENCY_MINIMUM_TARGET = 25	# AI will forbid jobs consuming the main construction currency to reach this level of monthly income to recover from death spiral
@@ -2299,7 +2293,7 @@
 	
 		SLAVE_SELL_EC_THRESHOLD = 200 # if we have more ec than this and a positive net income, then don't sell any slaves
 		SLAVE_SELL_UNEMPLOYMENT_THRESHOLD = 1 # if any one planet has this many unemployed pops on it, consider selling one as a slave
-		SLAVE_SELL_MIN_POPS = 10			# do not sell slaves from this planet if it has this amount of pops, or less
+		SLAVE_SELL_MIN_POPS = 20			# do not sell slaves from this planet if it has this amount of pops, or less
 	
 		SCIENTIST_HIRING_REPLACEMENT_THRESHOLD = 1.25	# When hiring for a job category, how much the score has to be higher than the previous tenants's score to replace him
 		SCIENTIST_HIRING_PREV_JOB_THRESHOLD = 1.1		# When hiring a scientist, how much the better score for the new category has to be compared to your current employment score

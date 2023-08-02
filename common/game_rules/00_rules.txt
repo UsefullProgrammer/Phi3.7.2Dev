@@ -642,7 +642,14 @@ can_declare_war = {
 #Root = country
 #This = planet
 can_colonize_planet = {
-	always = yes
+	OR = {
+		root = { is_ai = no }
+		OR = {
+			root = { empire_sprawl_over_cap < -30 }
+			solar_system = { is_bottleneck_system = no }
+		}
+	}
+	
 }
 
 #Root = country

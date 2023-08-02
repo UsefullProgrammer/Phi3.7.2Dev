@@ -670,3 +670,6 @@ Ora building istitute e gli edifici simili negli gestalt è un edificio over pow
 
  [h2][b]1.5 Release[/b][/h2]
  Nuovo trade "weapon trade" ti permette, in guerra, di fare alloys dal trade.
+ Migliorata Ai nel market.
+ Ecumonopoli non da più pop_growth_speed a gratis, visto che ora c'è l'housing che te lo fa avere growth speed.
+ Ecumonopoli abbassato il planet_jobs_produces_mult dal 20% al 10% per avvicinarsi agli altri bonus da altri tipi di super planet

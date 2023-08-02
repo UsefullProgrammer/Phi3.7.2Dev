@@ -144,6 +144,19 @@ energy_expenditure_colonies = {
 			has_civic = civic_corporate_dominion
 			has_civic = civic_private_prospectors
 		}
+		OR = {
+			has_civic = civic_franchising
+			empire_sprawl_over_cap < -30
+			AND = {
+				is_at_war = no
+				empire_sprawl_over_cap < 30
+				any_owned_system = {
+					
+					solar_system = { is_bottleneck_system = no }
+					can_colonize = { who = prev status = yes}
+				}
+			}
+		}
 	}
 
 	# if we can colonize with energy, we should
