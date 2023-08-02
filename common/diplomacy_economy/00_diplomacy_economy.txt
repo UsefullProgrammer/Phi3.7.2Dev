@@ -864,30 +864,43 @@ per_relation = {
 	
 	contact = {
 		trigger = {
-			is_country_type = default
-			# FROM = { 
-			# 	OR = {
+			#is_country_type = default
+			FROM = { 
+			 	NOR = {
+					is_subject = yes
 			# 		is_country_type = default
 			# 		is_country_type = fallen_empire
 			# 		is_country_type = awakened_fallen_empire
-			# 	}
-			# }
+			 	}
+			}
 		}
 		resources = {
 			category = contact
 			produces = {
-				society_research = 1
-				multiplier = value:society_scaling_factor
+				society_research = 10
+				# multiplier = value:society_scaling_factor
+				# max = 18
 			}
 		}
 	}
 	contact = {
-		trigger = { has_country_flag = phi_open_arms }
+		trigger = { 
+			has_country_flag = phi_open_arms 
+			FROM = { 
+				NOR = {
+						is_subject = yes
+				# 		is_country_type = default
+				# 		is_country_type = fallen_empire
+				# 		is_country_type = awakened_fallen_empire
+				}
+			}
+		}
 		resources = {
 			category = contact
 			produces = {
-				society_research = 2
-				multiplier = value:society_scaling_factor
+				society_research = 10
+				# multiplier = value:society_scaling_factor
+				# max = 18
 			}
 		}
 	}
