@@ -651,3 +651,22 @@ Ora la ricerca di society tramite infiltration viene data anche se non si sta co
 Ora la society dal contact è scalare (aumenta per ogni anno) per gli anni di gioco fino al massimo di 18 punti society anno 1 = 1 anno 12 = 5 anno 75 = 18 e scala anche in base a quante country ci sono in mappa meno country = + bonus.
 Ora building istitute e gli edifici simili negli gestalt è un edificio over power
 [img]https://i.imgur.com/pPdACZ5.png[/img]
+
+
+ [h2][b]Hotfix 1.5.5[/b][/h2]
+
+ Solo la civica aristocratica elite permette di avere 2 stability dai nobili
+ Fixato tooltip in full scale mobilization
+ Cambiato society da contact, ora parte da 5 e verso l'anno 15 è 10.
+ Fix calcolo society da contact nel tempo
+ Fix calcolo revolt_fleet_comparison_factor quando flotta ribelle è <= 0
+ trade league bisogna avere almeno 1 patto commerciale.
+ Peggiorata conversione di trade_league_conversion: 
+ Energy	0,3
+ CG	0,25
+ unity	0,2
+ Society	0,125
+ Gli spiritualisti possono subito accedere al trade di unity
+
+ [h2][b]1.5 Release[/b][/h2]
+ Nuovo trade "weapon trade" ti permette, in guerra, di fare alloys dal trade.

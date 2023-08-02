@@ -37,12 +37,12 @@ count_owned_planet = {
 		mode = add
 	}
 }
-edict_size_effect = {
-	base = 0.02
-	#mult = trigger:num_pops
-	mult = trigger:empire_size
-	add = 1
-}
+# edict_size_effect = {
+# 	base = 0.02
+# 	#mult = trigger:num_pops
+# 	mult = trigger:empire_size
+# 	add = 1
+# }
 minor_artifact_size_effect = {
 	base = 0.02
 	#mult = trigger:num_pops
@@ -252,16 +252,15 @@ count_civilian_shipyard = {
 	min = 1
 }
 society_scaling_factor = {
-	base = 0
+	base = 16
 	complex_trigger_modifier = {
 		trigger = count_country
-		mode = add
+		mode = divide
 	}
-	divide = 16
-	add = trigger:years_passed
-	divide = 18
+	mult = trigger:years_passed
+	divide = 10
 	mult = 5
 	ceiling = yes
-	
+	min = 5
 	max = 18
 }

@@ -203,18 +203,18 @@ building_research_lab_3 = {
 		has_major_upgraded_capital = yes
 	}
 	destroy_trigger = { # destroys and/or triggers conversion if true
-		exists = owner
-		always = yes
-	}
-	convert_to = {
-		building_physics_lab_3
-	}
-	destroy_trigger = {
 		OR = {
+			AND = {
+				exists = owner
+				always = yes
+			}
 			has_modifier = resort_colony
 			has_modifier = slave_colony
 			has_modifier = crucible_colony
 		}
+	}
+	convert_to = {
+		building_physics_lab_3
 	}
 
 	triggered_planet_modifier = {

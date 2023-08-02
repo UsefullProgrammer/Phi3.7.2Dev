@@ -716,7 +716,7 @@ farming_districts_value = {
 }
 
 edict_size_effect = {
-	base = 0.01
+	base = 0.02
 	mult = trigger:empire_size
 	add = 1
 }

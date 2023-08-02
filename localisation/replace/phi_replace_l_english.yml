@@ -119,7 +119,7 @@
  TORPEDO_3_DESC:0 "Advanced torpedoes with very powerful warheads. They have a sleeker design, faster engines and upgraded shield modulators for slipping through energy screens.\nShip speed: §G+15%§!"
  
  #Policies
- trade_policy_trade_league_desc:1 "By banding together in a trade league, we are able to prosper and secure profits on a whole new level.\n\n§EEach collected £trade_value£ §YTrade Value§! earns us £energy£ §Y0.25§!, £unity£ §Y0.25§!, £consumer_goods£ §Y0.25§! and £society_research£ §Y0.25§!"
+ trade_policy_trade_league_desc:1 "By banding together in a trade league, we are able to prosper and secure profits on a whole new level.\n\n§EEach collected £trade_value£ §YTrade Value§! earns us £energy£ §Y0.3§!, £unity£ §Y0.2§!, £consumer_goods£ §Y0.2§! and £society_research£ §Y0.125§!"
  trade_policy_unity_desc:1 "Trade can be used not only to move goods around, but also to facilitate the spread of ideas. We should focus our trade efforts towards ensuring that the message of our government is heard on all planets where we do business.\n\n§EEach collected £trade_value£ §YTrade Value§! earns us £energy£ §Y0.25§! and £unity£ §Y0.5§!"
  trade_policy_consumer_goods_desc:0 "Profits and taxes must take second place to improving the lives of our citizens. We should focus our trade efforts towards the manufacture and distribution of everyday necessities.\n\n§EEach collected £trade_value£ §YTrade Value§! earns us £energy£ §Y0.25§! and £consumer_goods£ §Y0.5§!"
 trade_policy_holy_covenant:0 "Holy Covenant"
@@ -201,3 +201,4 @@ ap_voidborn_habitat_effect:0 "§YHabitats§! owned by our Empire have §Y2 Addit
 
  resort_colony_empire_effects:0 "Empire size add:-10 Other Empire Colonies:\n   $MOD_PLANET_AMENITIES_MULT$: §G+15%§!\n   $MOD_PLANET_IMMIGRATION_PULL_MULT$: §G+15%§!"
  origin_tooltip_clone_army_effects:1 "- Start with 2 £building£ §H$building_clone_army_clone_vat$§! Buildings on your homeworld, producing £pops£ §H$clone_soldier$§! Pops.\n- §HAncient Clone Vats§! have an §HEmpire Limit§! of 2.\n- Clone Army §HAdmirals§! will grant an additional §G25%§! §H$MOD_SHIP_FIRE_RATE_MULT$§! and §G10%§! reduced §HShip Upkeep§!."
+ civic_tooltip_aristocratic_elite_effects:7 "£building£ §YCapital Buildings§! replace some £job_politician£ §Y$job_politician$§! Jobs with £job_noble£ §Y$job_noble_plural$§!\nCan construct £building£ §Y$building_noble_estates$§! buildings that add additional £job_noble£ §Y$job_noble$§! Jobs that additional give +2 §YStability§!\nGrants access to the £building£ §Y$holding_noble_vacation_homes$§! Holding"

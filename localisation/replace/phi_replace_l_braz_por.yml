@@ -118,7 +118,7 @@
  TORPEDO_3_DESC:0 "Advanced torpedoes with very powerful warheads. They have a sleeker design, faster engines and upgraded shield modulators for slipping through energy screens.\nShip speed: §G+15%§!"
  
  #Policies
- trade_policy_trade_league_desc:1 "By banding together in a trade league, we are able to prosper and secure profits on a whole new level.\n\n§EEach collected £trade_value£ §YTrade Value§! earns us £energy£ §Y0.25§!, £unity£ §Y0.25§!, £consumer_goods£ §Y0.25§! and £society_research£ §Y0.25§!"
+ trade_policy_trade_league_desc:1 "By banding together in a trade league, we are able to prosper and secure profits on a whole new level.\n\n§EEach collected £trade_value£ §YTrade Value§! earns us £energy£ §Y0.3§!, £unity£ §Y0.2§!, £consumer_goods£ §Y0.2§! and £society_research£ §Y0.125§!"
  trade_policy_unity_desc:1 "Trade can be used not only to move goods around, but also to facilitate the spread of ideas. We should focus our trade efforts towards ensuring that the message of our government is heard on all planets where we do business.\n\n§EEach collected £trade_value£ §YTrade Value§! earns us £energy£ §Y0.25§! and £unity£ §Y0.5§!"
  trade_policy_consumer_goods_desc:0 "Profits and taxes must take second place to improving the lives of our citizens. We should focus our trade efforts towards the manufacture and distribution of everyday necessities.\n\n§EEach collected £trade_value£ §YTrade Value§! earns us £energy£ §Y0.25§! and £consumer_goods£ §Y0.5§!"
 trade_policy_holy_covenant:0 "Holy Covenant"

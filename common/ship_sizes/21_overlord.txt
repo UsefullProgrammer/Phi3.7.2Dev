@@ -336,7 +336,7 @@ offspring_carrier = {
 	base_buildtime = @battleship_build_time
 	can_have_federation_design = no
 	enable_default_design = yes	#if yes, countries will have an auto-generated design at start
-	use_shipnames_from = offspring_carrier
+	use_shipnames_from = carrier
 
 	default_behavior = carrier
 	ship_roles = { carrier }

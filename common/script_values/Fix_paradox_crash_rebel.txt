@@ -12,4 +12,10 @@ revolt_fleet_comparison_factor = {
 			fleet_power > 0
 		}
 	}
+	modifier = {
+		pow = 0
+		event_target:rebel_empire = {
+			fleet_power <= 0
+		}
+	}
 }
