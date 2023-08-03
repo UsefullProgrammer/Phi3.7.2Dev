@@ -2497,7 +2497,6 @@ economic_policy = {
 		}
 		
 		modifier = {
-			contact_produces_mult = 0.10
 			country_trust_cap_add = 50
 		}
 		
@@ -2805,12 +2804,11 @@ economic_policy = {
 		}
 		
 		modifier = {
-			diplo_weight_envoys_mult = 1
-			envoys_add = 1
+			contact_produces_mult = 0.5
+			envoys_add = 2
 			country_leader_cap_add = -1
 			planet_pops_consumer_goods_upkeep_mult = 0.25
 			country_trust_cap_add = -50
-			council_agenda_progress_speed = -0.10
 		}
 		AI_weight = {
 			factor = 0
@@ -3037,7 +3035,7 @@ drone_policy = {
 		}
 		
 		modifier = {
-			
+			country_trust_cap_add = 50
 		}
 		
 		policy_flags = {
@@ -3257,12 +3255,10 @@ drone_policy = {
 		}
 		
 		modifier = {
-			diplo_weight_envoys_mult = 1
-			envoys_add = 1
-			country_leader_cap_add = -1
+			contact_produces_mult = 0.5
+			envoys_add = 2
 			planet_pops_upkeep_mult = 0.25
 			country_trust_cap_add = -50
-			
 		}
 		AI_weight = {
 			factor = 0
@@ -3277,9 +3273,9 @@ drone_policy = {
 		
 		modifier = {
 			leader_skill_levels = 1
-			diplo_weight_council_mult = 0.5
+			country_society_research_produces_mult = 0.5
             pop_amenities_usage_mult = 0.20
-            council_agenda_progress_speed = -0.10
+			empire_size_pops_mult = -0.10
 		}
 
 		AI_weight = {

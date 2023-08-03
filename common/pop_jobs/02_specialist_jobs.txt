@@ -279,7 +279,7 @@ priest = {
 		category = planet_priests
 		produces = {
 			unity = 4
-			society_research = 2
+			society_research = 3
 		}
 		upkeep = {
 			consumer_goods = 2
@@ -1062,6 +1062,7 @@ bureaucrat = {
 		category = planet_administrators
 		produces = {
 			unity = 4
+			society_research = 1
 		}
 		upkeep = {
 			consumer_goods = 2

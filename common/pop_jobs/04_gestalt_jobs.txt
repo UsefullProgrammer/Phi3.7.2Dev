@@ -380,6 +380,7 @@ coordinator = {
 		category = planet_administrators
 		produces = {
 			unity = 4
+			society_research = 1
 		}
 		upkeep = {
 			energy = 4
@@ -439,6 +440,7 @@ evaluator = {
 		category = planet_evaluators
 		produces = {
 			unity = 4
+			society_research = 1
 		}
 		upkeep = {
 			energy = 2
@@ -490,6 +492,7 @@ synapse_drone = {
 		category = planet_administrators
 		produces = {
 			unity = 4
+			society_research = 2
 		}
 		upkeep = {
 			trigger = {
@@ -1150,6 +1153,7 @@ patrol_drone = {
 		category = planet_jobs
 		produces = {
 			unity = 1
+			society_research = 1
 		}
 	}
 
@@ -1895,7 +1899,7 @@ chronicle_drone = {
 		category = planet_evaluators
 		produces = {
 			unity = 4
-			society_research = 2
+			society_research = 3
 		}
 		upkeep = {
 			trigger = {

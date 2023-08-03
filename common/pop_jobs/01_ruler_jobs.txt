@@ -131,6 +131,7 @@ high_priest = {
 		category = planet_priests
 		produces = {
 			unity = 6
+			society_research = 4
 		}
 		upkeep = {
 			consumer_goods = 2
@@ -194,6 +195,7 @@ politician = {
 		category = planet_politicians
 		produces = {
 			unity = 6
+			society_research = 1
 		}
 		upkeep = {
 			consumer_goods = 2
@@ -406,6 +408,7 @@ executive = {
 		category = planet_executives
 		produces = {
 			unity = 6
+			society_research = 1
 		}
 		upkeep = {
 			consumer_goods = 2
@@ -492,7 +495,7 @@ knight_commander = {
 			trigger = { exists = owner }
 			physics_research = 2
 			engineering_research = 2
-			society_research = 2
+			society_research = 3
 			mult = value:knight_commander_research_output_modifier
 		}
 		upkeep = {

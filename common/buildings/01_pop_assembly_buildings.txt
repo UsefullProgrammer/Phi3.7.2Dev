@@ -1047,11 +1047,11 @@ building_necrophage_house_of_apotheosis = {
 #############
 
 building_clone_vats = {
-	base_buildtime = @b1_time
+	base_buildtime = @b2_time
 
 	category = pop_assembly
 
-	base_cap_amount = 1
+	base_cap_amount = 12
 
 	potential = {
 		exists = owner
@@ -1089,6 +1089,7 @@ building_clone_vats = {
 
 	planet_modifier = {
 		planet_pop_assembly_organic_add = 3
+		job_society_researcher_add = 1
 	}
 
 	triggered_planet_modifier = {
@@ -1126,7 +1127,7 @@ building_clone_vats = {
 
 		# Base upkeep
 		upkeep = {
-			energy = 2
+			energy = 5
 		}
 		# Org/Lith upkeep
 		upkeep = {
@@ -1134,14 +1135,14 @@ building_clone_vats = {
 				exists = owner
 				owner = { is_lithoid_empire = no }
 			}
-			food = 30
+			food = 20
 		}
 		upkeep = {
 			trigger = {
 				exists = owner
 				owner = { is_lithoid_empire = yes }
 			}
-			minerals = 30
+			minerals = 20
 		}
 	}
 

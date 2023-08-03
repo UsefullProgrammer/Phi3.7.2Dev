@@ -877,7 +877,7 @@ per_relation = {
 		resources = {
 			category = contact
 			produces = {
-				society_research = 10
+				society_research = 7
 				# multiplier = value:society_scaling_factor
 				# max = 18
 			}

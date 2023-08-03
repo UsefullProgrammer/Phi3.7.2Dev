@@ -782,7 +782,7 @@ country_event = {
 		}
 	}
 }
-
+#git
 country_event = {
 #	phi_ai.6	yearly checked - finds empires lagging behind and flags them
 
@@ -818,9 +818,9 @@ country_event = {
 							is_country_type = default
 							has_communications = prev
 							relative_power = {
-								who = prev
-								category = technology
-								value >= equivalent
+								who = root
+								category = fleet
+								value > equivalent # io sono uguale o più debole di lui? <= equivalent?
 							}
 						}
 					}
@@ -836,17 +836,24 @@ country_event = {
 							relative_power = {
 								who = root
 								category = fleet
-								value > equivalent
+								value >= equivalent # io sono più debole di lui? < equivalent?
 							}
 							OR = {
 								fleet_power > 20000
 								root = { fleet_power > 4000 }
 							}
 						}
-						relative_power = {
-							who = root
-							category = technology
-							value >= equivalent
+						AND = {
+							OR = { 
+									has_policy_flag = diplo_stance_neutral
+									has_policy_flag = diplo_stance_minimal_army
+									has_policy_flag = diplo_stance_disarmament
+							}
+							relative_power = {
+								who = root
+								category = technology
+								value >= equivalent
+							}
 						}
 					}
 				}

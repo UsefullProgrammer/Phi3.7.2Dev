@@ -484,28 +484,36 @@ Fix trait military veteran
 
 [h3][b]1.5 The cost of war[/b][/h3]
 
-[h1][b]AI[/b][/h1]
-Le ai non entrano nel survive se hanno rapporti neutrali o superiori con te
-Le ai non entrano nel survive se hanno un truce con il war_leader
-Creato un flag "was_human" se la nazione è stata giocata da un humano il flag è true è usato per non far fare cose brutte alle ai (tipo entrare nelle survive).
-IA che era un umano non fa grossi cambiamenti per 360 mesi
-Autodistruzione starbase cambiata leggermente, ora in base al livello a parametri diverso, inoltre se c'è una flotta dell'impero non l'autodistrugge.
+Ringranzio @primate per avermi aiutato.
+Prefazione:
+Questa patch sarà una delle ultime "grosse"
+In futuro penso punterò sul togliere e non più sull'aggiungere modifiche.
+L'obiettivo è che assomigli + al vanilla più possibile.
+
+In questa patch sono stati fatti grossi cambiamenti alle guerre in maniera tale che siano più abordabili da parte di tutti e che chi in difesa perde abbia dei piccoli bonus di "vendetta"
+Inoltre ora politics è una delle tradizioni più forti che ci sono.
+Ho fatto molti fix a bug della paradox, praticamente ora la phigo è più stabile della vanilla (ho già segnalato alcuni bug mesi fa (come che tentino di dividere per 0) ma la paradox mi ha ignorato)
 
 [h2][b]Origine civiche[/b][/h2]
+
 [h1][b]Void dweller[/b][/h1]
 Tolto la possibilità dei void dweller di fare i panelli solari come moduli, erano troppo forti così.
 Diminuito tempo per potenziare gli habitat del 50%
 Ora puoi potenziare gli habitat 5 volte invece di 2
 district_hab_science non dà più 3 ricercatori tutto fare ma 2 di base , 2 di phisica e l'altro di ingegneri
 I void dweller hanno un politica speciale che permette ai district_hab_science di avere +1 ricercatore fisica o +1 ricerca ingegneria
-district_hab_commercial ti da 5 clerk job e non più 3
 district_hab_cultural ti da 4 housing invece di 3
-I distretti habitat diminuiscono la manuntenzione delle strutture del 5%
+I distretti habitat diminuiscono la manuntenzione delle strutture del 3%
+Ascension per voidborn per i voiddweller ti permette per i starbase building di avere un workjob per ogni pianeta nel sistema in base al tipo starbase building
+Voidveller building speciali ora invece di job add alcune ti danno job per popolazione ogni 20 o 50.
+void born ap ai void dweller da +10% starbase capacity invece di 50%
 [h1][b]Criminal sindicate[/b][/h1]
 Ora il criminal sindacate può fare patti commerciali ma se li fa non può fare branch office ( l'incontrario della megacorp )
+Ora i cloni pop hanno il malus dell'empire size e non tutta l'origine.
+Ora gli aquatici hanno il malus dell'empire size e non tutta l'origine.
 
 
-[h1][b]Guerre[/b][/h1]
+[h2][b]Guerre[/b][/h2]
 Ripristinato effetto humiliated originale così per tutte le altre war goal con humiliated funziona come prima.
 Invece gli humiliated per gli imperi nuovo ha i seguenti effetti:
 [list]
@@ -526,14 +534,21 @@ Le Ai hanno il 7% ogni mese di settare survive e il 5% ogni mese di entrare in d
 -Se hanno un truce con il difensore o attaccante principale oppure
 -Se sono in buoni rapporti con l'attacante
 In survive tolto surrender e demand surrender in questo modo se non sbaglio ogni fazione può andarsene indipendentemente dalla guerra
+[h1][b]Total war[/b][/h1]
+AutoWar nemesi, se per caso 2 total war di cui 1 non è in guerra confinano esplode una guerra in automatico,  fidarsi del nemico che non ti attaccherà? o attaccarlo per primi appena si distrae? Fare pace bianca ma essere umiliato? cosa conviene fare?
+I driven assimilator fanno autowar solo a chi non è driven assimilator
 [h1]RP[/h1]
 Ora non puoi dichiarare guerra a un amico ma puoi dichiarare tramite l'editto force war se stai harming relation e hai un casus bellis valido.
+Diminuito empire size da pop da 0,20 a 0,15.
+Nuovo trade "weapon trade" ti permette, in guerra se hai criminali syndacate o politics finish, di fare alloys dal trade.
 
 [h1][b]Vassali[/b][/h1]
 Il vassalo non costa più influenza che non ha senso ora, aveva ragione Mario.
 
+[h1][b]Bilanciamento sperimentale[/b][/h1]
+I costruttori di robot per gli imperi non machine invece di costare 2 alloys costano 1 alloys e 2.5 consumer goods, chips is consumer goods.
+
 [h1][b]Bilanciamento[/b][/h1]
-Politica full scale mobilization ora aumenta del 10% il mantenimento delle relazioni displomatiche
 influence_deficit ora invece di -20% happines dà:
 [list]
 [*]war exhaustion +100%
@@ -541,13 +556,57 @@ influence_deficit ora invece di -20% happines dà:
 [*]council agenda progress speed -50%
 [*]Election cost + 50%
 [/list]
-Se si setta survive per 2700 giorni si ha attrazione alla pop + 25%
+
+[b]nerf[/b]
+Peggiorata conversione di trade_league_conversion: 
+Politica full scale mobilization ora aumenta del 10% il mantenimento delle relazioni displomatiche
+Se si setta survive per 2700 giorni si ha attrazione pacifica alla pop + 25%
+Ribilanciati housing e empire size per le pop dei voidweller ruler (-50% housing a -25% empire size) specialist (-25% housing a -10% empire size )
+Tradizione diplomazia se l'adotti ora ti da un upkeep reduction all'influenza della diplomazia di -0,5 poi se la completi un ulteriore -0,45 , prima se l'addottavi ti dava subito -1
+Ora scholarium è obbligatorio subsidiare il vassalo di 0.10 risorse base
+phi_planet_deviant_experiments ora da solo +50% e non più +75% (paradox ha messo a posto nella 3.8.4 unity da fazioni )
+Tratto voidling +10% pop empire size
+Decisione planet trading guilds cambiato da +100% a +50%
+Ecumonopoli non da più pop_growth_speed a gratis, visto che ora c'è l'housing che te lo fa avere growth speed.
+Ecumonopoli abbassato il planet_jobs_produces_mult dal 20% al 10% per avvicinarsi agli altri bonus da altri tipi di super planet
+
+[b]buff[/b]
 Ora le tech di dottrina navali danno altri bonus, come exp start , capacity leader e bonus livello di admiraglio
-Ribilanciati housing e empire size per le pop dei voidweller ruler (-50% housing -25% empire size) specialist (-25% housing e -10% empire size ) 
+Migliorato leggermente ap interstellar dominion
+Diminuito per il lord quante deve per forza dare in risorse al vassalo (da -0.15 -0.3 0.45 a -0.1 -0.2 -0.4)
+Se expel branch viene vinta il sindacato criminale dovrà pagare mensilmente il risarcimento in base a quante branch sono state chiuse.
+Nebula refinery ora se prendi ap di voidborn ti da 2 miner job
+Ora la decisione decision_phi_planet_expropriation setta il contatore che il non può rifare per 10 anni il branch office.
+Migliorato building ranger lodge dà 5 unity per blocker invece di 2.
+I ruler (pol,executive,high priest e knight commander) Danno 1 society_research in più
+I burocratici e piest danno Danno 1 society_research in più
+Anche le gestalt ora hanno alcuni lavori che gli danno society research
+Ora il colony type che davano bonus trade value dannò tutti +50% trade value
+[img]https://i.imgur.com/tg0beeq.png[/img]
+[img]https://i.imgur.com/RO9pbYS.png[/img]
+
+Ora politics economy da un bonus di 50% alla society data dai contatti
+Ora la ricerca di society tramite infiltration viene data anche se non si sta costruendo un spynetwork ma si ha almeno 30 spy network.
+[img]https://i.imgur.com/GzV7MpU.png[/img]
+
+Trade_policy_holy_covenant lo puoi fare anche con consecrated worlds
+Ora building istitute e gli edifici simili negli gestalt è un edificio over power
+[img]https://i.imgur.com/pPdACZ5.png[/img]
+
+clone_vats più forte che mai:
+[img]https://i.imgur.com/hZzvJ1W.png[/img]
+[b]neutro[/b]
 [h1][b]Galactic community migliorata (sperimentale)[/b][/h1]
 La galactic community usa 0.25 influence e 2 energy
 Alcune risoluzioni aumentano o diminuiscono l'upkeep influence delle guerre.
-
+Ascension perk voidborn ti permette di fare anche gli altri 3 upgrade dopo il terzo
+Ribilanciate approval faction
+Se hai un patto commerciale, non agressione o in federazione non può fare branch office criminale
+Ora puoi fare un branch office su una mc ma la competizione da un malus al -25% al trade value.
+Le megacorp possono fare buy out dei branch office che hanno supoi propri pianeti per chiuderle alla modica cifra di 500 energy e 100 unity.
+Gli overlord possono chiudere i branch office criminali se sono loro vassali pagando 100 unity.
+Gli homicidal non prendono ricerca da imperi superiori e gli imperi inferiori non prendono ricerca dagli homicidal
+Cambiata economic_policy_mercantile per i inkward perf e i homicidal.
 
 [h1][b]Altro o miglioramenti[/b][/h1]
 Aumentato l'ammontare di alloy o scienza della ricerca dei relitti da 10% a 25% e per la scienza da 20 a 30 punti per livello rendendo le guerre più profittabili.
@@ -557,122 +616,23 @@ Puoi commerciale le relique
 Quando rilasci con la decisione il vassalo in automatico aggiorna la star base al primo livello, questo porta il rilascio a costare anche 200 alloys che verranno usati se non è già una starbase di primo livello
 Non puoi entrare in una survive se hai un truce con il war_leader
 Influenza massima settata al massimo a 2048 in onore di Kevin Mitnick
-
 Quando superi empire sprawn di 24 ti manda una notifica che ti consiglia cosa potresti fare per risolvere.
+[b]Ora gli imperi IA che erano prima degli umani non mandando richieste di essere sudditi.[/b]
+Tolti gli edifici embassy che erano inutili, messo al loro posto una decisione sulla capitale.
 
-
-1.5.1 help weak and balance
-
-La galactic community aiuta i più deboli nella communità se risultano gli unici a essere inferior o pathetic
-[list]
-[*]Il più debole in flotta se è nella commmunità galattica ha uno sconto sull'upkeep di flotta
-[*]Il più debole in tech  se è nella commmunità galattica ha uno bonus su tech
-[*]Il più debole in economia se è nella commmunità galattica ha uno bonus su economia
-[/list]
-
-[h1][b]Bilanciamento sperimentale[/b][/h1]
-I costruttori di robot per gli imperi non machine invece di costare 2 alloys costano 1 alloys e 2 consumer goods, chips is consumer goods.
-I costruttori di robot per gli imperi non machine ora fanno solo 1 planet_pop_assembly_add invece che 2.
-
-[h1][b]fix[/b][/h1]
-Fix force war che crashava.
-
-[h1][b]Void dweller[/b][/h1]
-Ascension per voidborn per i voiddweller ti permette per i starbase building di avere un workjob per ogni pianeta nel sistema in base al tipo starbase building
-
-[h1][b]Bilanciamento[/b][/h1]
-Ascension perk voidborn ti permette di fare anche gli altri 3 upgrade dopo il terzo
-Migliorato leggermente ap interstellar dominion
-Tradizione diplomazia se l'adotti ora ti da un upkeep reduction all'influenza della diplomazia di -0,5 poi se la completi un ulteriore -0,45 , prima se l'addottavi ti dava subito -1
-Diminuito per il lord quante deve per forza dare in risorse al vassalo (da -0.15 -0.3 0.45 a -0.1 -0.2 -0.4)
-Ora scholarium è obbligatorio subsidiare il vassalo di 0.10 risorse base
-Ribilanciate approval faction
-phi_planet_deviant_experiments ora da solo +50% e non più +75%
-
-1.5.2
-
+[h1][b]AI[/b][/h1]
+Le ai non entrano nel survive se hanno rapporti neutrali o superiori con te o se hanno un truce con il war_leader
+Creato un flag "was_human" se la nazione è stata giocata da un humano il flag è true è usato per non far fare cose brutte alle ai (tipo entrare nelle survive).
+IA che era un umano non fa grossi cambiamenti per 360 mesi
+Autodistruzione starbase cambiata, ora in base al livello ha parametri diverso.
+Le ai non fanno branch office criminali sull'overlord se sono fedeli.
+Modificato economic plans ia ora leggermente meglio
 
 [h1][b]fix[/b][/h1]
 Fix bug vanilla che se un megacorp sindicato criminale era vassalo di un overlord che la difendeva Tramite wargoal expel branch office non veniva chiuso nessun branch office
 origin_imperial_vassal_overlord,origin_imperial_vassal_overlord hanno il flag di advanced ai, non si capisce perchè la paradox non gliel'abbia messo
 Fix diplomacy economy in_war not triggered, wrong code.
-Fix flag big bad evil guy anche quando era solo equivalente come tecnologia.
-
-[h1][b]Ai[/b][/h1]
-Le ai non fanno branch office criminali sull'overlord se sono fedeli.
-Modificato economic plans ia ora leggermente meglio
-Migliorato economia AI sul distruggere edifici non utili
-
-[h1][b]Bilanciamento[/b][/h1]
-Se hai un patto commerciale, non agressione o in federazione non può fare branch office criminale
-Ora puoi fare un branch office su una mc ma la competizione da un malus al -25% al trade value.
-Le megacorp possono fare buy out dei branch office che hanno supoi propri pianeti per chiuderle alla modica cifra di 500 energy e 100 unity.
-Se expel branch viene vinta il sindacato criminale dovrà pagare mensilmente il risarcimento in base a quante branch sono state chiuse.
-Gli overlord possono chiudere i branch office criminali se sono loro vassali pagando 100 unity.
-Nebula refinery ora se prendi ap di voidborn ti da 2 miner job
-Ora la decisione decision_phi_planet_expropriation setta il contatore che il criminale non può rifare per 10 anni il branch office.
-Pop job roboticist increase consume consumer goods by 2 at 2.5
-
-Roboticisti rifanno 2 pop assembly (nella 1.5.1 l'avevo abbassato a 1)
-Tratto voidling +10% pop empire size
-
-[h1][b]Total war[/b][/h1]
-AutoWar nemesi, se per caso 2 total war di cui 1 non è in guerra confinano esplode una guerra in automatico,  fidarsi del nemico che non ti attaccherà? o attaccarlo per primi appena si distrae? Fare pace bianca ma essere umiliato? cosa conviene fare?
-I driven assimilator fanno autowar solo a chi non è driven assimilator
-
-[h1][b]Origini[/b][/h1]
-Ora i cloni pop hanno il malus dell'empire size e non tutta l'origine.
-Ora gli aquatici hanno il malus dell'empire size e non tutta l'origine.
-Voidveller building speciali ora invece di job add alcune ti danno job per popolazione ogni 20 o 50.
-
-
-
-[h2][b]1.5.3[/b][/h2]
-
+Fix flag big bad evil guy anche quando era solo equivalente come tecnologia o di flotta.
 Fix localization per i cloni
-Corette altre localizzazioni
-void born ap ai void dweller da +10% starbase capacity invece di 50%
-Migliorato AI
-Migliorato building ranger lodge dà 5 unity per blocker invece di 2.
 Fix action_demand_subjugation che potevi solo chiederlo se l'altro non aveva domination
-Ora gli imperi IA che erano prima degli umani non mandando richieste di essere sudditi.
-Tolti gli edifici embassy che erano inutili, messo al loro posto una decisione sulla capitale.
-Migliorata ancora la AI
-
-[h2][b]1.5.4[/b][/h2]
-
-Gli homicidal non prendono ricerca da imperi superiori e gli imperi inferiori non prendono ricerca dagli homicidal
-Decisione planet trading guilds cambiato da +100% a +50%
-Ora il colony type che davano bonus trade value dannò tutti +50% trade value
-[img]https://i.imgur.com/tg0beeq.png[/img]
-[img]https://i.imgur.com/RO9pbYS.png[/img]
-Ora diplomacy economy da un bonus di 10% alla society data dai contatti
-Ora la ricerca di society tramite infiltration viene data anche se non si sta costruendo un spynetwork ma si ha almeno 30 spy network.
-[img]https://i.imgur.com/GzV7MpU.png[/img]
-Ora la society dal contact è scalare (aumenta per ogni anno) per gli anni di gioco fino al massimo di 18 punti society anno 1 = 1 anno 12 = 5 anno 75 = 18 e scala anche in base a quante country ci sono in mappa meno country = + bonus.
-Ora building istitute e gli edifici simili negli gestalt è un edificio over power
-[img]https://i.imgur.com/pPdACZ5.png[/img]
-
-
- [h2][b]Hotfix 1.5.5[/b][/h2]
-
- Fixato tooltip in full scale mobilization
- Cambiato society da contact, ora da 10.
- Fix calcolo society da contact nel tempo
- Fix calcolo revolt_fleet_comparison_factor quando flotta ribelle è <= 0
- Peggiorata conversione di trade_league_conversion: 
- Energy	0,3
- CG	0,2
- unity	0,2
- Society	0,125
-
- [h2][b]1.5 Release[/b][/h2]
-
- Nuovo trade "weapon trade" ti permette, in guerra se hai criminali syndacate o politics finish, di fare alloys dal trade.
- Migliorata Ai nel market.
- Ecumonopoli non da più pop_growth_speed a gratis, visto che ora c'è l'housing che te lo fa avere growth speed.
- Ecumonopoli abbassato il planet_jobs_produces_mult dal 20% al 10% per avvicinarsi agli altri bonus da altri tipi di super planet
- Cambiata economic_policy_mercantile per i inkward perf e i homicidal.
- Trade_policy_holy_covenant lo puoi fare anche con consecrated worlds
- [h1][b]Sperimentale:[/h1][/b]
- Diminuito empire size da pop da 0,20 a 0,15.
+Fix calcolo revolt_fleet_comparison_factor quando flotta ribelle è <= 0

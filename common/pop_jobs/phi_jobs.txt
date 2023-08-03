@@ -155,6 +155,118 @@ phi_archaeologist_drone = {
 
 ###RESEARCH JOBS###
 
+society_researcher = {
+	category = specialist
+	condition_string = SPECIALIST_JOB_TRIGGER
+	building_icon = building_research_lab_1
+	clothes_texture_index = 3
+
+	possible_pre_triggers = {
+		has_owner = yes
+		is_being_purged = no
+		is_being_assimilated = no
+		is_sapient = yes
+	}
+
+	possible_precalc = can_fill_specialist_job
+	possible = {
+		complex_specialist_job_check_trigger = yes
+	}
+	
+	triggered_pop_modifier = {
+		potential = {
+			planet = {
+				exists = army_leader
+				army_leader = {
+					has_trait = leader_trait_academia_recruiter
+				}
+			}
+		}
+		modifier = {
+			pop_defense_armies_add = 1
+		}
+	}
+
+	resources = {
+		category = planet_researchers_phi
+		produces = {
+			society_research = 10
+		}
+		produces = {
+			trigger = {
+				exists = owner
+				owner = { has_valid_civic = civic_technocracy }
+			}
+			unity = 1
+		}
+		upkeep = {
+			trigger = {
+				has_global_flag = phi_realistic_upkeep_researcher
+			}
+			food = 1
+			minerals = 1
+			energy = 6
+		}
+		upkeep = {
+			trigger = {
+				has_global_flag = phi_realistic_upkeep_researcher_disallowed
+			}
+			energy = 8
+		}
+		upkeep = {
+			trigger = {
+				exists = owner
+				owner = { has_valid_civic = civic_technocracy }
+			}
+			consumer_goods = 1
+		}
+		upkeep = {
+			trigger = {
+				planet = {
+					has_planet_flag = has_science_ministry
+				}
+			}
+			energy = 4
+		}
+	}
+	overlord_resources = {
+		category = planet_requisitioned_research
+		produces = {
+			trigger = {
+				planet = {
+					has_planet_flag = has_science_ministry
+				}
+			}
+			society_research = 5
+		}
+	}
+	weight = {
+		weight = @specialist_job_weight
+		mult = value:job_weights_research_eng_modifier|JOB|researcher|
+		modifier = {
+			factor = 0.2
+			has_citizenship_rights = no
+			NOT = { has_trait = trait_mechanical }
+		}
+		modifier = {
+			factor = 2
+			has_living_standard = { type = living_standard_academic_privilege }
+		}
+		modifier = {
+			factor = 0.1
+			can_take_servant_job = yes
+		}
+		modifier = {
+			factor = 1.5
+			has_job = researcher
+		}
+		modifier = {
+			factor = 0.8
+			is_enslaved = yes
+			has_slavery_type = { type = slavery_indentured }
+		}
+	}
+}
 engineering_researcher = {
 	category = specialist
 	condition_string = SPECIALIST_JOB_TRIGGER
