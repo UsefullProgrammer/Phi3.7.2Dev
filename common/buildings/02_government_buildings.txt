@@ -148,24 +148,30 @@ building_precinct_house = {
 			OR = {
 				owner = { is_ai = no }
 				AND = {
-					planet_crime > 15
-					NOR = {
+					NOT = { has_forbidden_jobs = enforcer }
+					NOT = { has_available_jobs = enforcer }
+					OR = {
 						AND = {
-							has_building = building_precinct_house
-							owner = { has_technology = tech_colonial_centralization }
+							planet_crime > 25
+							NOR = {
+								AND = {
+									has_building = building_precinct_house
+									owner = { has_technology = tech_colonial_centralization }
+								}
+								has_building = building_hall_judgment
+								num_buildings = { type = building_precinct_house value = 3 }
+							}
 						}
-						has_building = building_hall_judgment
-						num_buildings = { type = building_precinct_house value = 3 }
-					}
-				}
-				AND = {
-					planet_crime > 0
-					has_branch_office = yes
-					branch_office_owner = {
-						is_criminal_syndicate = yes
-					}
-					solar_system = {
-						has_system_trade_value > 250
+						AND = {
+							planet_crime > 0
+							has_branch_office = yes
+							branch_office_owner = {
+								is_criminal_syndicate = yes
+							}
+							solar_system = {
+								has_system_trade_value > 250
+							}
+						}
 					}
 				}
 			}
@@ -178,14 +184,14 @@ building_precinct_house = {
 			NOT = {	owner = { is_regular_empire = yes }	}
 			AND = {
 				owner = { is_ai = yes } #Players dont like random buildings blowing up
-				OR = {
-						
-						AND = {
-							planet_crime <= -15
-							has_available_jobs = enforcer
-							has_forbidden_jobs = enforcer
-						}
+				NAND = {
+					has_branch_office = yes
+					branch_office_owner = {
+						is_criminal_syndicate = yes
+					}
 				}
+				planet_crime < 15
+				has_forbidden_jobs = enforcer
 			}#This way the AI gets to reclaim its building slots that it sunk into this expense
 		}
 	}
@@ -238,14 +244,16 @@ building_hall_judgment = {
 			NOT = { owner = { is_regular_empire = yes } }
 			AND = {
 				owner = { is_ai = yes } #Players dont like random buildings blowing up
-				AND = {
-					planet_crime <= 0
-					has_branch_office = no
+				NAND = {
+					has_branch_office = yes
+					branch_office_owner = {
+						is_criminal_syndicate = yes
+					}
 				}
-				planet = {
-					has_modifier = crime_lord_deal
-					free_building_slots = 0
-				}
+				planet_crime < 15
+					
+				num_buildings = { type = building_hall_judgment value > 1 }
+				has_forbidden_jobs = enforcer
 
 			}#This way the AI gets to reclaim its building slots that it sunk into this expense
 		}

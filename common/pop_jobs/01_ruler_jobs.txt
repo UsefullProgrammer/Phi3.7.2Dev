@@ -37,6 +37,14 @@ head_researcher = {
 			}
 			consumer_goods = 1
 		}
+		produces = {
+			trigger = {
+				owner = {
+					has_tradition = tr_domination_colonial_viceroys
+				}
+			}
+			unity = 1
+		}
 	}
 
 	overlord_resources = {
@@ -136,6 +144,14 @@ high_priest = {
 		upkeep = {
 			consumer_goods = 2
 		}
+		produces = {
+			trigger = {
+				owner = {
+					has_tradition = tr_domination_colonial_viceroys
+				}
+			}
+			unity = 1
+		}
 	}
 
 	triggered_planet_modifier = {
@@ -200,6 +216,14 @@ politician = {
 		upkeep = {
 			consumer_goods = 2
 		}
+		produces = {
+			trigger = {
+				owner = {
+					has_tradition = tr_domination_colonial_viceroys
+				}
+			}
+			unity = 1
+		}
 	}
 
 	triggered_planet_modifier = {
@@ -261,6 +285,14 @@ noble = {
 		}
 		upkeep = {
 			consumer_goods = 2
+		}
+		produces = {
+			trigger = {
+				owner = {
+					has_tradition = tr_domination_colonial_viceroys
+				}
+			}
+			unity = 1
 		}
 	}
 	
@@ -340,6 +372,14 @@ merchant = {
 		upkeep = {
 			consumer_goods = 2
 		}
+		produces = {
+			trigger = {
+				owner = {
+					has_tradition = tr_domination_colonial_viceroys
+				}
+			}
+			unity = 1
+		}
 	}
 
 	triggered_planet_modifier = {
@@ -412,6 +452,14 @@ executive = {
 		}
 		upkeep = {
 			consumer_goods = 2
+		}
+		produces = {
+			trigger = {
+				owner = {
+					has_tradition = tr_domination_colonial_viceroys
+				}
+			}
+			unity = 1
 		}
 	}
 
@@ -497,6 +545,14 @@ knight_commander = {
 			engineering_research = 2
 			society_research = 3
 			mult = value:knight_commander_research_output_modifier
+		}
+		produces = {
+			trigger = {
+				owner = {
+					has_tradition = tr_domination_colonial_viceroys
+				}
+			}
+			unity = 1
 		}
 		upkeep = {
 			alloys = 2

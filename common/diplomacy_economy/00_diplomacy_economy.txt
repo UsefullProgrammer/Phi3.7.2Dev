@@ -74,13 +74,16 @@ per_relation = {
 					using_war_goal = { type = wg_independence owner = prev }
 				}
 				any_attacker = { is_same_value = prevprev }
-				any_defender = { is_same_value = from }
+				any_defender = { 
+					is_war_leader = yes
+					is_same_value = from 
+				}
 			}
 		}
 		resources = {
 			category = wars
 			upkeep = {
-				influence = 0.5
+				influence = 1
 			}
 		} 
 	}
@@ -95,6 +98,19 @@ per_relation = {
 			produces = {
 				alloys = 10
 				consumer_goods = 10
+			}
+		}
+	}
+	migration = {
+		trigger = {
+			has_migration_access = FROM
+			has_policy_flag = economic_policy_politics
+		}
+		resources = {
+			category = diplo_economic_policy
+			produces = {
+				society_research = 10
+				unity = 10
 			}
 		}
 	}
@@ -535,7 +551,6 @@ per_relation = {
 					AND = {
 						NOT = { has_country_flag = is_advanced_start_AI }#no
 						NOT = { has_origin = origin_imperial_vassal_overlord }#si=no
-						NOT = { has_origin = origin_broken_shackles }
 					}
 				}
 				

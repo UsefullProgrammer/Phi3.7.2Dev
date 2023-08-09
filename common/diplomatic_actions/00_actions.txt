@@ -1921,6 +1921,14 @@ action_invite_to_federation = {
 			from = { is_fallen_machine_empire = no }
 		}
 		hidden_trigger = {
+			OR = {
+				is_ai = no
+				NOT = {
+					FROM = { has_truce = root }
+				}
+			}
+		}
+		hidden_trigger = {
 			if = {
 				limit = {
 					FROM = {

@@ -979,6 +979,7 @@ ap_voidborn = {
 
 	modifier = {
 		pc_habitat_habitability = 0.2
+		empire_size_systems_mult = -0.10
 	}
 	tradition_swap = {
 		name = ap_voidborn

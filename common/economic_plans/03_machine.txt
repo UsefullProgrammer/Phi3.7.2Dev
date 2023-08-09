@@ -20,8 +20,8 @@ basic_economy_plan = {
 			has_monthly_income = { resource = minerals value > @economic_plan_minerals_target }
 		}
 		income = {
+			#society_research = @economic_plan_research_target
 			physics_research = @economic_plan_research_target
-			society_research = @economic_plan_research_target
 			engineering_research = @economic_plan_research_target
 		}
 	}

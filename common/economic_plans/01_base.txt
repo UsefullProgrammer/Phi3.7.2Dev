@@ -41,8 +41,8 @@ basic_economy_plan = {
 			has_monthly_income = { resource = minerals value > @economic_plan_minerals_target }
 		}
 		income = {
+			society_research = @economic_plan_scaling_research_society_target_materialist
 			physics_research = @economic_plan_research_target
-			society_research = @economic_plan_research_target
 			engineering_research = @economic_plan_research_target
 			unity = @economic_plan_unity_target
 		}
@@ -68,7 +68,7 @@ basic_economy_plan = {
 		}
 		income = {
 			physics_research = @economic_plan_research_target
-			society_research = @economic_plan_research_target
+			society_research = @economic_plan_scaling_research_society_target_materialist
 			engineering_research = @economic_plan_research_target
 			unity = @economic_plan_unity_target
 		}
@@ -78,7 +78,7 @@ basic_economy_plan = {
 		set_name = "extended food"
 		potential = {
 			has_monthly_income = { resource = physics_research value > @economic_plan_research_target }
-			has_monthly_income = { resource = society_research value > @economic_plan_research_target }
+			has_monthly_income = { resource = society_research value > @economic_plan_scaling_research_society_target_materialist }
 			has_monthly_income = { resource = engineering_research value > @economic_plan_research_target }
 			country_uses_food = yes
 		}
@@ -113,7 +113,7 @@ basic_economy_plan = {
 			has_monthly_income = { resource = energy value > @economic_plan_energy_target }
 			has_monthly_income = { resource = minerals value > @economic_plan_minerals_target }
 			has_monthly_income = { resource = physics_research value > @economic_plan_research_target }
-			has_monthly_income = { resource = society_research value > @economic_plan_research_target }
+			has_monthly_income = { resource = society_research value > @economic_plan_scaling_research_society_target_materialist }
 			has_monthly_income = { resource = engineering_research value > @economic_plan_research_target }
 		}
 		pops = @economic_plan_pops_target
@@ -249,47 +249,50 @@ basic_economy_plan = {
 	}
 
 
-	# subplan = {
-	# 	optional = yes
-	# 	scaling = yes
-	# 	set_name = "Scaling exotic gases"
+	 subplan = {
+	 	optional = yes
+	 	scaling = yes
+	 	set_name = "Scaling exotic gases"
 
-	# 	potential = {
-	# 		has_monthly_income = { resource = exotic_gases value < @economic_plan_rare_resource_limit }
-	# 	}
+	 	potential = {
+			always = no
+	 		has_monthly_income = { resource = exotic_gases value < @economic_plan_rare_resource_limit }
+	 	}
 
-	# 	income = {
-	# 		exotic_gases = @economic_plan_scaling_rare_resource_target
-	# 	}
-	# }
+	 	income = {
+	 		exotic_gases = @economic_plan_scaling_rare_resource_target
+	 	}
+	 }
 
-	# subplan = {
-	# 	optional = yes
-	# 	scaling = yes
-	# 	set_name = "Scaling volatile motes"
+	subplan = {
+		optional = yes
+		scaling = yes
+		set_name = "Scaling volatile motes"
 
-	# 	potential = {
-	# 		has_monthly_income = { resource = volatile_motes value < @economic_plan_rare_resource_limit }
-	# 	}
+		potential = {
+			always = no
+			has_monthly_income = { resource = volatile_motes value < @economic_plan_rare_resource_limit }
+		}
 
-	# 	income = {
-	# 		volatile_motes = @economic_plan_scaling_rare_resource_target
-	# 	}
-	# }
+		income = {
+			volatile_motes = @economic_plan_scaling_rare_resource_target
+		}
+	}
 	
-	# subplan = {
-	# 	optional = yes
-	# 	scaling = yes
-	# 	set_name = "Scaling rare crystals"
+	subplan = {
+		optional = yes
+		scaling = yes
+		set_name = "Scaling rare crystals"
 
-	# 	potential = {
-	# 		has_monthly_income = { resource = rare_crystals value < @economic_plan_rare_resource_limit }
-	# 	}
+		potential = {
+			always = no
+			has_monthly_income = { resource = rare_crystals value < @economic_plan_rare_resource_limit }
+		}
 
-	# 	income = {
-	# 		rare_crystals = @economic_plan_scaling_rare_resource_target
-	# 	}
-	# }
+		income = {
+			rare_crystals = @economic_plan_scaling_rare_resource_target
+		}
+	}
 
 	ai_weight = {
 		weight = 1

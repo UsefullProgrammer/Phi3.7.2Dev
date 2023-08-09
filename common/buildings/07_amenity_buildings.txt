@@ -7,6 +7,7 @@ building_luxury_residence = {
 	category = amenity
 
 	potential = {
+		
 		OR = {
 			NOT = { is_planet_class = pc_habitat }
 			has_planet_flag = advanced_habitat
@@ -14,10 +15,12 @@ building_luxury_residence = {
 		NOT = { has_modifier = slave_colony }
 		exists = owner
 		owner = {
+			is_ai = no
 			is_regular_empire = yes
 			NOT = { has_valid_civic = civic_shared_burden }
 		}
 		NOT = { has_building = building_low_tech_capital }
+		
 	}
 
 	destroy_trigger = {

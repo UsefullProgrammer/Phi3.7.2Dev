@@ -204,9 +204,17 @@ decision_phi_planet_local_administration = {
 	}
 
 	ai_weight = {
-		weight = 5
+		weight = 10
+		modifier = {
+			factor = 5
+			solar_system = { has_collected_system_trade_value > 500 }
+		}
 		modifier = {
 			factor = 0
+			NOR = { 
+				num_assigned_jobs = { job = clerk value < 25 }
+				num_pops < 100
+			}
 			planet_stability < 75
 		}
 	}
@@ -289,10 +297,19 @@ decision_phi_planet_trading_guilds = {
 	}
 
 	ai_weight = {
-		weight = 5
+		weight = 10
+		modifier = {
+			factor = 5
+			solar_system = { has_collected_system_trade_value > 500 }
+		}
 		modifier = {
 			factor = 0
-			planet_stability < 75
+			planet_crime > 0
+			NOR = { 
+				num_assigned_jobs = { job = clerk value < 25 }
+				num_pops < 100
+			}
+			planet_stability < 65
 		}
 	}
 }
@@ -332,9 +349,13 @@ decision_end_phi_planet_trading_guilds = {
 
 	ai_weight = {
 		weight = 5
+
 		modifier = {
 			factor = 0
-			planet_stability > 50
+			OR = {
+				planet_crime < 50	
+				planet_stability > 50
+			}
 		}
 	}
 }

@@ -2946,7 +2946,7 @@ wg_phi_survive = {
 			}
 		}
 		modifier = {
-			factor = 1.5
+			factor = 2
 			relative_power = {
 				who = from
 				category = fleet

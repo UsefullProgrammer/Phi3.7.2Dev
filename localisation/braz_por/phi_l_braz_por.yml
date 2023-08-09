@@ -1058,6 +1058,8 @@ tech_mega_assembly_Mk2_desc:0 "Modelos avançados de montagem gigante nos permit
 edict_greater_than_ourselves_light:0 "Realocação Livre"
 edict_greater_than_ourselves_light_desc:1 "Estimula a realocação voluntária de populações desempregadas para planetas adequados com empregos e habitação dentro do nosso império."
 tr_domination_colonial_viceroys_desc:0 "§YGovernantes§! e §YGovernadores§! começam no nível §Y3§!."
+tr_domination_colonial_viceroys_machine_desc:0 "Job $coordinator$ and $evaluator$ add 1 £unity£"
+tr_domination_colonial_viceroys_hives_desc:0 "Job $synapse_drone$ add 1 £unity£"
 
 small10players:0 "Pequeno Grande"
 mediumover16:0 "Médio Grande"
@@ -1129,6 +1131,7 @@ drone_economic_policy_politics_desc: "We allocate the necessary resources for ou
 drone_economic_policy_statecraft: "Statecraft Focus"
 drone_economic_policy_statecraft_desc: "We will bring twice of calculation to the council."
 mod_planet_jobs_ruler_upkeep_mult:0 "Ruler Jobs Upkeep"
+
 
 councilor_vice_governor:0 "vice $councilor_ruler$"
 councilor_vice_governor_female:0 "vice $councilor_ruler_female$"
@@ -1295,7 +1298,7 @@ mod_planet_researchers_phi_engineering_research_produces_add: "£engineering£ $
 trade_policy_military:1 "Trade Weapon"
 trade_policy_military_name:0 "$trade_policy_military$"
 trade_conversion_policy_military_name:0 "$trade_policy_military$"
-trade_policy_military_desc:1 "By banding together in a trade militar league, we are able trade with lord of war of other country for get alloys\n\n§EEach collected £trade_value£ §YTrade Value§! earns us £energy£ §Y-0.1§!, £alloys£ §Y0.25§!"
+trade_policy_military_desc:1 "By banding together in a trade militar league, we are able trade with lord of war of other country for get alloys\n\n§EEach collected £trade_value£ §YTrade Value§! earns us £alloys£ §Y0.16§!"
 job_society_researcher: "society researcher"
 job_society_researcher_desc: "Study genetic and culture of new, old and alien pops"
 mod_job_society_researcher_add:0 "$job_society_researcher$ Jobs"
@@ -1303,3 +1306,5 @@ mod_job_society_researcher_per_pop:0 "§G+1§! $job_society_researcher$ Job per 
 mod_job_society_researcher_per_pop_short:0 "\n§G+1§! £mod_job_society_researcher_add£ per $VALUE$ £pop£"
 job_society_researcher_plural:0 "society Researchers"
 job_society_researcher_effect_desc:0 "£job_society_researcher£ $job_society_researcher_plural$ turn §Y$resource of study$§! into £society£ §YResearch Points§! for new technologies"
+
+tooltip_economic_policy_politics_effects: "Gain 10 £unity£/month and 10 £society£/month for each migration pact."

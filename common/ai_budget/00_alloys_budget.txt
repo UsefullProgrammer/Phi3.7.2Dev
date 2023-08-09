@@ -350,7 +350,7 @@ alloys_expenditure_habitats = {
 		weight = 0.2
 		modifier = {
 			factor = 0
-			OR = {
+			NOR = {
 				has_civic = civic_franchising
 				empire_sprawl_over_cap < -30
 			}

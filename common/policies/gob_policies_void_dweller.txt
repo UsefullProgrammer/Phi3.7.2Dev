@@ -1,6 +1,8 @@
 research_lab_focus = {
 	potential = {
-		has_origin = origin_void_dwellers
+		any_owned_planet = {
+			is_planet_class = pc_habitat
+		}
 	}
 
 	option = {

@@ -90,7 +90,7 @@ influence_expenditure_resolutions = {
 			has_ai_personality = federation_builders
 		}
 		modifier = {
-			factor = 0.5
+			factor = 0.1
 			has_country_flag = was_human
 		}
 	}

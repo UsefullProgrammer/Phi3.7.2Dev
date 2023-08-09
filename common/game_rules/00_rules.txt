@@ -642,6 +642,7 @@ can_declare_war = {
 #Root = country
 #This = planet
 can_colonize_planet = {
+	exists = root
 	OR = {
 		root = { is_ai = no }
 		OR = {

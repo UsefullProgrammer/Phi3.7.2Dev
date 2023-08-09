@@ -332,7 +332,7 @@ country_event = {
 }
 
 country_event = {
-#	phi_ai.2	yearly checked - manages unemployed pops
+#	phi_ai.2	yearly checked - manages unemployed pops for NOT gestalt consciousness
 
 	id = phi_ai.2
 	hide_window = yes
@@ -372,7 +372,9 @@ country_event = {
 					is_unemployed = yes
 				}
 				any_owned_planet = {
+					free_housing > 0
 					free_jobs > 0
+					num_unemployed = 0
 				}
 			}
 			random_owned_planet = {
@@ -386,11 +388,18 @@ country_event = {
 				save_event_target_as = planet_option_start 
 			}
 			random_owned_pop = {
-				limit = { is_unemployed = yes }
+				limit = { 
+					is_unemployed = yes
+					planet = {
+						is_same_value = event_target:planet_option_start
+					} 
+				}
 				root = { 
 					random_owned_planet = {
 						limit = { 
+							free_housing > 0
 							free_jobs > 0
+							num_unemployed < 1
 							NOT = { is_same_value = event_target:planet_option_start } 
 						}
 						resettle_pop = {
@@ -429,8 +438,9 @@ country_event = {
 			any_owned_pop = { has_job = clerk }
 		}
 		any_owned_planet = {
-			is_capital = no
+			free_housing > 0
 			free_jobs > 0
+			num_unemployed = 0
 		}
 		OR = {
 			AND = {
@@ -467,8 +477,10 @@ country_event = {
 					root = {
 						random_owned_planet = {
 							limit = {
+								free_housing > 0
 								is_capital = no
 								free_jobs > 0
+								num_unemployed = 0
 							}
 							create_pop = {
 								species = prevprev
@@ -578,7 +590,7 @@ country_event = {
 			limit = {
 				has_resource = { type = energy amount > 1000 }
 				has_monthly_income = { resource = energy value > 0 }
-				has_resource = { type = exotic_gases amount < 100 }
+				has_resource = { type = exotic_gases amount < 500 }
 			}
 			add_resource = { exotic_gases = 3 }
 			add_resource = { energy = -10 }
@@ -845,7 +857,6 @@ country_event = {
 						}
 						AND = {
 							OR = { 
-									has_policy_flag = diplo_stance_neutral
 									has_policy_flag = diplo_stance_minimal_army
 									has_policy_flag = diplo_stance_disarmament
 							}
@@ -862,12 +873,13 @@ country_event = {
 			set_country_flag = phi_lagger
 		}
 		
-		#human players and homicidal are never weak
+		#human players or if was human player and homicidal are never weak
 		if = {
 			limit = {
 				OR = {
 					is_ai = no
 					is_homicidal = yes
+					has_country_flag = was_human
 				}
 				has_country_flag = phi_lagger
 			}
@@ -1221,7 +1233,7 @@ country_event = {
 								}
 								defender = {
 									NOT = { has_truce = root } #non puoi entrare se hai un truce
-									NOT = { is_at_war_with = root }# non puoi entrare se sei già in guerra
+									NOT = { is_at_war_with = root }# non puoi entrare se sei in guerra con il difensore
 								}
 							}
 							#has_country_flag = phi_lagger
@@ -1230,7 +1242,6 @@ country_event = {
 								AND = {
 									NOT = { has_country_flag = is_advanced_start_AI }
 									NOT = { has_origin = origin_imperial_vassal_overlord }
-									NOT = { has_origin = origin_broken_shackles }
 								}
 							}
 						}
@@ -1606,7 +1617,7 @@ country_event = {
 			limit = {
 				has_resource = { type = energy amount > 1000 }
 				has_monthly_income = { resource = energy value > 10 }
-				has_resource = { type = exotic_gases amount < 100 }
+				has_resource = { type = exotic_gases amount < 500 }
 			}
 			add_resource = { exotic_gases = 3 }
 			add_resource = { energy = -10 }
@@ -1626,17 +1637,13 @@ country_event = {
 			is_country_type = default
 			NOT = { has_country_flag = was_human }
 			has_ethic = ethic_gestalt_consciousness
-			any_owned_planet = {
-				is_capital = no
-				is_under_colonization = no
-			}
 			has_resource = { type = minerals amount > 400 }
 			has_monthly_income = { resource = energy value > 20 }
 		}
 		immediate = {
 			random_owned_planet = {
 				limit = {
-					num_unemployed >= 20
+					num_unemployed >= 20 # clean spawning_pool
 				}
 				random_list = {
 					1 = { }
@@ -1687,7 +1694,9 @@ country_event = {
 			}
 			random_owned_planet = {
 				limit = {
+					num_pops > 5
 					is_capital = no
+					NOT = { is_planet_class = pc_habitat }
 				}
 				random_list = {
 					10 = {
@@ -1789,40 +1798,10 @@ country_event = {
 					NOT = { is_planet_class = pc_habitat }
 				}
 				random_list = {
-					50 = {
+					75 = {
 						modifier = {
 							factor = 0
 							free_building_slots = 0
-						}
-						modifier = {
-							factor = 0
-							AND = {
-								num_buildings = { type = building_autochthon_monument value < 1 }
-								owner = {
-									NOR = {
-										is_spiritualist = yes
-										is_megacorp = yes
-									}
-								}
-							}
-						}
-						modifier = {
-							factor = 0
-							AND = {
-								num_buildings = { type = building_temple value < 2 }
-								owner = {
-									is_spiritualist = yes
-								}
-							}
-						}
-						modifier = {
-							factor = 0
-							AND = {
-								num_buildings = { type = building_corporate_monument value < 1 }
-								owner = {
-									is_megacorp = yes
-								}
-							}
 						}
 						modifier = {
 							factor = 10
@@ -1839,36 +1818,6 @@ country_event = {
 							free_building_slots = 0
 						}
 						modifier = {
-							factor = 0
-							AND = {
-								num_buildings = { type = building_autochthon_monument value < 1 }
-								owner = {
-									NOR = {
-										is_spiritualist = yes
-										is_megacorp = yes
-									}
-								}
-							}
-						}
-						modifier = {
-							factor = 0
-							AND = {
-								num_buildings = { type = building_temple value < 2 }
-								owner = {
-									is_spiritualist = yes
-								}
-							}
-						}
-						modifier = {
-							factor = 0
-							AND = {
-								num_buildings = { type = building_corporate_monument value < 1 }
-								owner = {
-									is_megacorp = yes
-								}
-							}
-						}
-						modifier = {
 							factor = 10
 							AND = {
 								num_buildings = { type = building_physics_lab_1 value > 2 }
@@ -1880,71 +1829,45 @@ country_event = {
 					100 = {
 						modifier = {
 							factor = 0
-							free_building_slots = 0
+							owner = { is_hive_empire = yes }
 						}
 						modifier = {
 							factor = 0
-							owner = {
-								OR = {
-									is_spiritualist = yes
-									is_megacorp = yes
-								}
-							}
-						}
-						modifier = {
-							factor = 0
-							num_buildings = { type = building_autochthon_monument value > 0 }
-						}
-						add_building = building_autochthon_monument
-						owner = { add_resource = { minerals = -400 } }
-					}
-					100 = {
-						modifier = {
-							factor = 0
-							free_building_slots = 0
-						}
-						modifier = {
-							factor = 0
-							owner = { is_spiritualist = no }
-						}
-						modifier = {
-							factor = 0
-							num_buildings = { type = building_temple value > 1 }
-						}
-						add_building = building_temple
-						owner = { add_resource = { minerals = -400 } }
-					}
-					100 = {
-						modifier = {
-							factor = 0
-							free_building_slots = 0
-						}
-						modifier = {
-							factor = 0
-							owner = {
-								OR = {
-									is_spiritualist = yes
-									is_megacorp = no
-								}
-							}
-						}
-						modifier = {
-							factor = 0
-							num_buildings = { type = building_corporate_monument value > 1 }
-						}
-						add_building = building_corporate_monument
-						owner = { add_resource = { minerals = -400 } }
-					}
-					100 = {
-						modifier = {
-							factor = 0
-							num_free_districts = { type = district_city value = 0 }
+							num_free_districts = { type = district_hive value = 0 }
 						}
 						modifier = {
 							factor = 0
 							free_building_slots > 0
 						}
-						add_district = district_city
+						add_district = district_hive
+						owner = { add_resource = { minerals = -400 } }
+					}
+					100 = {
+						modifier = {
+							factor = 0
+							owner = { is_machine_empire = yes }
+						}
+						modifier = {
+							factor = 0
+							num_free_districts = { type = district_nexus value = 0 }
+						}
+						modifier = {
+							factor = 0
+							free_building_slots > 0
+						}
+						add_district = district_nexus
+						owner = { add_resource = { minerals = -400 } }
+					}
+					100 = {
+						modifier = {
+							factor = 0
+							owner = { is_hive_empire = yes }
+						}
+						modifier = {
+							factor = 0
+							num_free_districts = { type = district_industrial value = 0 }
+						}
+						add_district = district_industrial
 						owner = { add_resource = { minerals = -400 } }
 					}
 				}
@@ -1999,10 +1922,14 @@ country_event = {
 						50 = {
 							modifier = {
 								factor = 0
-								owner = { has_resource = { type = minerals amount < 100 } }
+								owner = { has_resource = { type = minerals amount < 50 } }
 							}
 							owner = { add_resource = { minerals = -100 } }
 							add_district = district_city
+						}
+						50 = {
+							add_district = district_industrial
+							owner = { add_resource = { minerals = -100 } }
 						}
 					}
 				}
@@ -2038,6 +1965,10 @@ country_event = {
 								owner = { has_valid_civic = civic_agrarian_idyll }
 								num_free_districts = { type = district_farming value > 0 }
 							}
+							modifier = {
+								factor = 0
+								free_building_slots > 0
+							}
 							owner = { add_resource = { minerals = -100 } }
 							add_district = district_city
 						}
@@ -2050,7 +1981,15 @@ country_event = {
 								factor = 0
 								owner = { NOT = { has_valid_civic = civic_agrarian_idyll } }
 							}
+							modifier = {
+								factor = 0
+								owner = { country_uses_food = no }
+							}
 							add_district = district_farming
+						}
+						50 = {
+							add_district = district_industrial
+							owner = { add_resource = { minerals = -100 } }
 						}
 					}
 				}
@@ -2064,7 +2003,7 @@ country_event = {
 				if = {
 					limit = {
 						owner = {
-							has_monthly_income = { resource = food value > 20 }
+							has_monthly_income = { resource = food value > 25 }
 							NOT = { has_valid_civic = civic_agrarian_idyll }
 						}
 						num_districts = { type = district_farming value > 0 }
@@ -2094,6 +2033,10 @@ country_event = {
 							owner = { add_resource = { minerals = -100 } }
 							add_district = district_city
 						}
+						100 = {
+							add_district = district_industrial
+							owner = { add_resource = { minerals = -100 } }
+						}
 					}
 				}
 				if = {
@@ -2140,7 +2083,15 @@ country_event = {
 								factor = 0
 								owner = { NOT = { has_valid_civic = civic_agrarian_idyll } }
 							}
+							modifier = {
+								factor = 10
+								owner = { has_monthly_income = { resource = food value < 0 } }
+							}
 							add_district = district_farming
+						}
+						100 = {
+							add_district = district_industrial
+							owner = { add_resource = { minerals = -100 } }
 						}
 					}
 				}

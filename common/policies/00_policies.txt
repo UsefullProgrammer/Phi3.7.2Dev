@@ -2662,7 +2662,9 @@ economic_policy = {
 			pop_cat_specialist_happiness = -0.10
 			pop_cat_worker_happiness = -0.10
 		}
-
+		policy_flags = {
+			economic_policy_domination
+		}
 		AI_weight = {
 			factor = 10
 		}
@@ -2810,6 +2812,10 @@ economic_policy = {
 			planet_pops_consumer_goods_upkeep_mult = 0.25
 			country_trust_cap_add = -50
 		}
+		policy_flags = {
+			economic_policy_politics
+		}
+		
 		AI_weight = {
 			factor = 0
 		}
@@ -2865,6 +2871,21 @@ trade_policy = {
 
 		AI_weight = {
 			factor = 2
+			modifier = {
+				factor = 100
+				has_monthly_income = {
+					resource = energy
+					value < 0
+				}
+			}
+			modifier = {
+				factor = 100
+				has_resource = { type = energy amount < 2000 }
+				has_monthly_income = {
+					resource = energy
+					value < 700
+				}
+			}
 		}
 	}
 
@@ -2908,18 +2929,34 @@ trade_policy = {
 
 		AI_weight = {
 			factor = 100
+			modifier = {
+				factor = 0
+				has_monthly_income = {
+					resource = energy
+					value < 20
+				}
+			}
 		}
 	}
 	option = {
 		name = "trade_policy_military"
 		potential = {
 		 	is_homicidal = no
+			always = no
 		}
 		valid = {
 			is_at_war = yes
 			OR = {
 				has_tradition = tr_politics_finish
 				is_criminal_syndicate = yes
+			}
+			NOT = {
+				any_country = {
+					has_truce = root 
+				}
+			}
+			NOT = {
+				has_modifier = resolution_denounced
 			}
 			#any_country = {
 			#	has_commercial_pact = prev
@@ -2931,10 +2968,15 @@ trade_policy = {
 		}
 
 		modifier = {
+			wars_influence_upkeep_mult = 1
 		}
 
 		AI_weight = {
 			factor = 100
+			modifier = {
+				factor = 0
+				has_resource = { type = energy amount < 1000 }
+			}
 		}
 	}
 	option = {
@@ -3144,7 +3186,9 @@ drone_policy = {
 			planet_jobs_simple_drone_produces_mult = -0.2
 			planet_jobs_complex_drone_produces_mult = 0.1
 		}
-
+		policy_flags = {
+			economic_policy_domination
+		}
 		AI_weight = {
 			factor = 20
 		}

@@ -389,7 +389,7 @@ building_machine_assembly_complex = {
 				owner = { is_ai = yes }
 				free_jobs < 1
 				OR = {
-					free_jobs > -10
+					free_jobs < -10
 					num_buildings = { type = any value = 16 }
 					is_planet_class = pc_habitat
 				}
@@ -456,7 +456,7 @@ building_machine_assembly_complex_3 = {
 				owner = { is_ai = yes }
 				free_jobs < 1
 				OR = {
-					free_jobs > -10
+					free_jobs < -10
 					num_buildings = { type = any value = 16 }
 					is_planet_class = pc_habitat
 				}

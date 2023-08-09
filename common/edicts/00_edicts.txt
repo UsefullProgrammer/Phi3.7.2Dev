@@ -248,7 +248,7 @@ enhanced_surveillance = {
 	resources = {
 		category = edicts
 		upkeep = {
-			unity = @Edict2Cost
+			unity = @Edict3Cost
 			multiplier = value:edict_size_effect
 		}
 	}
@@ -919,7 +919,7 @@ encourage_free_thought = {
 	resources = {
 		category = edicts
 		upkeep = {
-			unity = @Edict1Cost
+			unity = @Edict2Cost
 			multiplier = value:edict_size_effect
 		}
 	}

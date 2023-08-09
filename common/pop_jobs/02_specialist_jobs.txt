@@ -525,7 +525,18 @@ enforcer = {
 			mult = value:job_weights_modifier|JOB|enforcer|RESOURCE|unity|FACTOR|0.25|
 			owner = { has_active_tradition = tr_domination_judgment_corps }
 		}
-
+		modifier = {
+			factor = 100
+			planet = { 
+				planet_crime >= -15
+				AND = {
+					has_branch_office = yes
+					branch_office_owner = {
+						is_criminal_syndicate = yes
+					}
+				}
+			}
+		}
 		modifier = {
 			factor = 10
 			has_job = enforcer
@@ -537,7 +548,16 @@ enforcer = {
 		}
 		modifier = {
 			factor = 0.01
-			planet = { planet_crime <= 15}
+			
+			planet = { 
+				NAND = { #valid only if not present criminal
+				has_branch_office = yes
+				branch_office_owner = {
+					is_criminal_syndicate = yes
+				}
+				}
+				planet_crime <= 15
+			}
 			NOT = { has_job = enforcer }
 		}
 

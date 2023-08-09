@@ -18,21 +18,32 @@ district_generator = {
 	}
 
 	allow = {
+		exists = owner
 		OR = {
-			NOT = { exists = owner }
-			owner = {
+			owner = { 
+				has_monthly_income = {
+					resource = energy
+					value < 0
+				}
+			} 
+			AND = {
 				OR = {
-					is_ai = no
-					should_ai_focus_on_trade = no
+					NOT = { exists = owner }
+					owner = {
+						OR = {
+							is_ai = no
+							should_ai_focus_on_trade = no
+						}
+					}
+				}
+
+				NOT = { has_modifier = resort_colony }
+				OR = {
+					owner = { is_ai = no }
+					owner = { is_machine_empire = yes }
+					is_capital = no
 				}
 			}
-		}
-
-		NOT = { has_modifier = resort_colony }
-		OR = {
-			owner = { is_ai = no }
-			owner = { is_machine_empire = yes }
-			is_capital = no
 		}
 	}
 	destroy_trigger = {
@@ -40,7 +51,9 @@ district_generator = {
 		owner = {
 			is_ai = yes
 			should_ai_focus_on_trade = yes
+			
 		}
+		free_jobs > 2
 	}
 
 	conversion_ratio = 1
@@ -324,8 +337,32 @@ district_farming = {
 		OR = {
 			owner = { is_ai = no }
 			owner = { is_machine_empire = yes }
-			is_capital = no
+			 OR = {
+			 	is_capital = no
+			 	AND = {
+			 		owner = { 
+			 			has_resource = { type = food amount < 10 }
+						has_monthly_income = {
+							resource = food
+							value < 0
+						}
+					}
+				}
+			 }
 			owner = { has_valid_civic = civic_agrarian_idyll }
+			owner = { 
+				has_resource = { type = food amount < 300 }
+				has_monthly_income = {
+					resource = food
+					value < -8
+				}
+			} 
+			owner = { 
+				has_monthly_income = {
+					resource = food
+					value < -25
+				}
+			} 
 		}
 	}
 

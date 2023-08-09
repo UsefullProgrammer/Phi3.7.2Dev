@@ -22,8 +22,6 @@ empire_size = {
 	#leader_upkeep_empire_size_mult = 0.004
 	#leader_cost_empire_size_mult = 0.004
 }
-
-
 humiliated = {
 	country_influence_produces_mult = -0.33
 	diplo_weight_mult = -0.25

@@ -1057,6 +1057,8 @@ tech_mega_assembly_Mk2_desc:0 "Des modèles avancés d'assemblage gigantesque no
 edict_greater_than_ourselves_light:0 "Réinstallation libre"
 edict_greater_than_ourselves_light_desc:1 "Encourage la réinstallation volontaire des populations sans emploi sur des planètes appropriées avec des emplois et un logement au sein de notre empire."
 tr_domination_colonial_viceroys_desc:0 "Les §YDirigeants§! et les §YGouverneurs§! commencent au niveau §Y3§!."
+tr_domination_colonial_viceroys_machine_desc:0 "Job $coordinator$ and $evaluator$ add 1 £unity£"
+tr_domination_colonial_viceroys_hives_desc:0 "Job $synapse_drone$ add 1 £unity£"
 small10players:0 "Petit Grand"
 mediumover16:0 "Moyen Grand"
 
@@ -1308,7 +1310,7 @@ mod_planet_researchers_phi_engineering_research_produces_add: "£engineering£ $
 trade_policy_military:1 "Trade Weapon"
 trade_policy_military_name:0 "$trade_policy_military$"
 trade_conversion_policy_military_name:0 "$trade_policy_military$"
-trade_policy_military_desc:1 "By banding together in a trade militar league, we are able trade with lord of war of other country for get alloys\n\n§EEach collected £trade_value£ §YTrade Value§! earns us £energy£ §Y-0.1§!, £alloys£ §Y0.25§!"
+trade_policy_military_desc:1 "By banding together in a trade militar league, we are able trade with lord of war of other country for get alloys\n\n§EEach collected £trade_value£ §YTrade Value§! earns us £alloys£ §Y0.16§!"
 job_society_researcher: "society researcher"
 job_society_researcher_desc: "Study genetic and culture of new, old and alien pops"
 mod_job_society_researcher_add:0 "$job_society_researcher$ Jobs"

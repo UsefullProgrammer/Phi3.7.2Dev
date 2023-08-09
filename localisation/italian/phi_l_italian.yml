@@ -3,7 +3,7 @@
 #####################################
  # TRADE ACTIONS
  #####################################
- trade_action_trade_relic_desc: "We have no need for this relic, maybe others will find value in it?"
+ trade_action_trade_relic_desc: "Non abbiamo bisogno di questo reliquiario, forse altri ne troveranno valore?"
  trade_action_r_dragon_trophy: "Relic: $r_dragon_trophy$"
  trade_action_r_dragon_trophy_desc: "$trade_action_trade_relic_desc$"
  trade_action_r_khans_throne: "Relic: $r_khans_throne$"
@@ -1065,6 +1065,9 @@ tech_mega_assembly_Mk2_desc:0 "I modelli avanzati di assemblaggio gigante ci con
 edict_greater_than_ourselves_light:0 "Ricollocazione libera"
 edict_greater_than_ourselves_light_desc:1 "Incentiva la ricollocazione volontaria delle popolazioni disoccupate su pianeti adeguati con lavoro e alloggi all'interno del nostro impero."
 tr_domination_colonial_viceroys_desc:0 "I §YRuler§! e i §YGovernatori§! iniziano al livello §Y3§!."
+tr_domination_colonial_viceroys_machine_desc:0 "I $coordinator$ e $evaluator$ producono 1 £unity£"
+tr_domination_colonial_viceroys_hives_desc:0 "I $synapse_drone$ producono 1 £unity£"
+origin_tooltip_doomsday_effects:2 "§G- ATTENZIONE: Origine facile§!"
 small10players:0 "Piccolo Grande"
 mediumover16: "Medio Grande"
 
@@ -1221,7 +1224,7 @@ in_war : "In guerra"
 mod_wars_influence_upkeep_mult: "Mantenimento dell'influenza dalle guerre"
 CRIMINAL_BRANCH_OFFICE_NOT_COMMERCIAL_PACT:1 "£trigger_no£ §RNon dobbiamo avere un Patto Commerciale con il proprietario di questo pianeta per stabilire un $BRANCH_OFFICE$ qui§!"
 
-wg_phi_war_rep_accept_us:0 "§Y[Root.GetName]§! guadagna per ogni popolazione di §Y[From.GetName]§! : \n§G+150§! £energy£ e §Y[From.GetName]§! avrà una riduzione del 40% dei §Ycrediti energetici§! per 10 anni\n\nNon §Rpuoi§! ottenere rivendicazioni!"
+wg_phi_war_rep_accept_us:0 "§Y[Root.GetName]§! guadagna per ogni popolazione di §Y[From.GetName]§! : \n§G+150§! £energy£ da ogni pop da §Y[From.GetName]§! avrà una riduzione del 40% dei §Ycrediti energetici§! per 10 anni\n\nNon §Rpuoi§! ottenere rivendicazioni!"
 casus_belli_cb_phi_war_reparation:0 "Riparazione di guerra"
 
 policy_research_lab_focus:0 "focus del $district_hab_science$ nel laboratorio di ricerca"

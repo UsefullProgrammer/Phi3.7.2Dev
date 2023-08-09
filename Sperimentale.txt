@@ -1,0 +1,3 @@
+Nuovo trade "weapon trade" ti permette, in guerra se hai criminali syndacate o politics finish, di fare alloys dal trade.
+Aggiunto WarGoal war reparation per chi è combatte una guerra difensiva
+Diminuito empire size da pop da 0,20 a 0,15.

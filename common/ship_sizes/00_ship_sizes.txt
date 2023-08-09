@@ -117,7 +117,12 @@ corvette = {
 					has_ai_personality = hegemonic_imperialists
 				}
 			}
+			modifier = {
+				factor = 0
+				has_technology = tech_destroyers
+			}
 		}
+		
 	}
 	potential_country = {
 		OR = {
@@ -200,7 +205,7 @@ frigate = {
 		fraction = {
 			base = 0
 			modifier = {
-				add = 10
+				add = 15
 				uses_standard_ship_sizes = yes
 			}
 			modifier = {
@@ -211,6 +216,7 @@ frigate = {
 				factor = 1.5
 				has_technology = tech_battleships
 			}
+			
 		}
 	}
 }
@@ -272,7 +278,7 @@ destroyer = {
 		fraction = {
 			base = 0
 			modifier = {
-				add = 15
+				add = 5
 				uses_standard_ship_sizes = yes
 			}
 			modifier = {
@@ -284,14 +290,18 @@ destroyer = {
 					has_ai_personality = peaceful_traders
 				}
 			}
+			# modifier = {
+			# 	factor = 1.5
+			# 	has_valid_civic = civic_hive_devouring_swarm
+			# }
 			modifier = {
 				factor = 1.5
 				has_valid_civic = civic_hive_devouring_swarm
+				has_technology = tech_battleships
 			}
 			modifier = {
-				factor = 1.5
-				has_valid_civic = civic_hive_devouring_swarm
-				NOT = { has_technology = tech_battleships }
+				factor = 0.5
+				is_at_war = yes
 			}
 		}
 	}
@@ -384,19 +394,6 @@ cruiser = {
 				add = 25
 				uses_standard_ship_sizes = yes
 			}
-			modifier = {
-				factor = 0.75
-				is_preferred_weapons = weapon_type_strike_craft
-			}
-			modifier = {
-				factor = 1.5
-				has_valid_ai_personality = yes
-				OR = {
-					has_ai_personality = evangelising_zealots
-					has_ai_personality = spiritual_seekers
-					has_ai_personality = slaving_despots
-				}
-			}
 		}
 	}
 }
@@ -461,24 +458,6 @@ battleship = {
 				add = 50
 				uses_standard_ship_sizes = yes
 			}
-			modifier = {
-				factor = 1.5
-				has_valid_civic = civic_hive_devouring_swarm
-			}
-			modifier = {
-				factor = 1.5
-				is_machine_empire = yes
-			}
-			modifier = {
-				factor = 1.5
-				has_valid_ai_personality = yes
-				OR = {
-					has_ai_personality = honorbound_warriors
-					has_ai_personality = hegemonic_imperialists
-					has_ai_personality = democratic_crusaders
-					has_ai_personality = became_the_crisis
-				}
-			}
 		}
 	}
 }
@@ -538,30 +517,8 @@ carrier = {
 		fraction = {
 			base = 0
 			modifier = {
-				add = 25
+				add = 50
 				uses_standard_ship_sizes = yes
-			}
-			modifier = {
-				factor = 5
-				is_preferred_weapons = weapon_type_strike_craft
-			}
-			modifier = {
-				factor = 1.5
-				has_valid_civic = civic_hive_devouring_swarm
-			}
-			modifier = {
-				factor = 1.5
-				is_machine_empire = yes
-			}
-			modifier = {
-				factor = 1.5
-				has_valid_ai_personality = yes
-				OR = {
-					has_ai_personality = honorbound_warriors
-					has_ai_personality = hegemonic_imperialists
-					has_ai_personality = democratic_crusaders
-					has_ai_personality = became_the_crisis
-				}
 			}
 		}
 	}
@@ -1059,7 +1016,7 @@ science = {
 	ai_ship_data = {
 		min = value:desired_science_ships
 		system_mult = value:desired_science_ships_system_mult
-		max = 2 #by 3.8.4 leader capacity is hard use more 2 science ship.
+		max = 3 #by 3.8.4 leader capacity is hard use more 2 science ship.
 	}
 }
 

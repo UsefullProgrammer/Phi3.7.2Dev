@@ -85,7 +85,7 @@ col_city = {
 	planet_modifier = {
 		planet_structures_upkeep_mult = -0.10
 		planet_district_city_build_speed_mult = 0.25
-		trade_value_mult = 0.50
+		trade_value_mult = 0.25
 	}
 
 	weight_modifier = {
@@ -1916,7 +1916,7 @@ col_habitat_trade = {
 	}
 	planet_modifier = {
 		planet_district_hab_commercial_build_speed_mult = 0.25
-		trade_value_mult = 0.50
+		trade_value_mult = 0.25
 	}
 	weight_modifier = {
 		modifier = {
@@ -3275,7 +3275,7 @@ col_ecu_mix = {
 
 	planet_modifier = {
 		planet_structures_upkeep_mult = -0.25
-		trade_value_mult = 0.50
+		trade_value_mult = 0.25
 	}
 
 	weight_modifier = {

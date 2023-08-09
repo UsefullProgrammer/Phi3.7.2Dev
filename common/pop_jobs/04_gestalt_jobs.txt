@@ -382,6 +382,14 @@ coordinator = {
 			unity = 4
 			society_research = 1
 		}
+		produces = {
+			trigger = {
+				owner = {
+					has_tradition = tr_domination_colonial_viceroys
+				}
+			}
+			unity = 1
+		}
 		upkeep = {
 			energy = 4
 		}
@@ -445,6 +453,14 @@ evaluator = {
 		upkeep = {
 			energy = 2
 		}
+		produces = {
+			trigger = {
+				owner = {
+					has_tradition = tr_domination_colonial_viceroys
+				}
+			}
+			unity = 1
+		}
 	}
 
 	triggered_planet_modifier = {
@@ -493,6 +509,14 @@ synapse_drone = {
 		produces = {
 			unity = 4
 			society_research = 2
+		}
+		produces = {
+			trigger = {
+				owner = {
+					has_tradition = tr_domination_colonial_viceroys
+				}
+			}
+			unity = 1
 		}
 		upkeep = {
 			trigger = {
@@ -1160,7 +1184,15 @@ patrol_drone = {
 	planet_modifier = {
 		planet_crime_no_happiness_add = -20
 	}
-
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { is_ai = yes }
+		}
+		modifier = {
+			planet_crime_no_happiness_add = -25
+		}
+	}
 	pop_modifier = {
 		pop_defense_armies_add = 2
 	}
@@ -1662,6 +1694,13 @@ maintenance_drone = {
 			NOT = { has_job = maintenance_drone }
 			planet = {
 				free_amenities < 3
+			}
+		}
+		modifier = {
+			factor = 0.1 # <- hive mind amenities jobs are non specialist so they have base weight 1 instead of 1000 but we still want them
+			has_job = maintenance_drone
+			planet = {
+				free_amenities > 120
 			}
 		}
 		modifier = {
