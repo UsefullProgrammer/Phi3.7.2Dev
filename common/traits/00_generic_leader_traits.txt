@@ -850,6 +850,7 @@ leader_trait_master_bureaucrat = {
 		leaders_upkeep_mult = -0.1
 		empire_size_penalty_mult = -0.1
 		country_edict_fund_add = 75
+		country_edict_fund_mult = 0.15
 	}
 	leader_potential_add = {
 		has_paragon_dlc = yes

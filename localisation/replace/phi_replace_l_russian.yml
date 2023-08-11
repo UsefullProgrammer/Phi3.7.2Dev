@@ -188,3 +188,5 @@ ap_voidborn_habitat_effect:0 "§YHabitats§! owned by our Empire have §Y2 Addit
  origin_tooltip_clone_army_effects:1 "- Start with 2 £building£ §H$building_clone_army_clone_vat$§! Buildings on your homeworld, producing £pops£ §H$clone_soldier$§! Pops.\n- §HAncient Clone Vats§! have an §HEmpire Limit§! of 2.\n- Clone Army §HAdmirals§! will grant an additional §G25%§! §H$MOD_SHIP_FIRE_RATE_MULT$§! and §G10%§! reduced §HShip Upkeep§!."
 
 tr_aptitude_champions_of_the_empire_desc:1 "Per $admiral_with_icon$ and $general_with_icon$ level\n$t$$MOD_COUNTRY_NAVAL_CAP_ADD$: §G+2§!\nPer $governor_with_icon$ level\n$t$$MOD_EMPIRE_SIZE_MULT$: §G-1§!\nPer $scientist_with_icon$ level\n$t$$MOD_LEADER_SPECIES_EXP_GAIN$: §G+0.5%§!"
+
+ civic_tooltip_aristocratic_elite_effects:7 "£building£ §YCapital Buildings§! replace some £job_politician£ §Y$job_politician$§! Jobs with £job_noble£ §Y$job_noble_plural$§!\nCan construct £building£ §Y$building_noble_estates$§! buildings that add additional £job_noble£ §Y$job_noble$§! Jobs\nGrants access to the £building£ §Y$holding_noble_vacation_homes$§!\nHolding £job_noble£ §Y$job_noble$§! Jobs produces additional 1 £society_research£"

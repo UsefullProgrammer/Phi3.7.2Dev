@@ -92,7 +92,12 @@ edict_fleet_starbase_size_effect = {
 	mult = trigger:num_starbases
 	add = 1
 }
-
+pop_size_edicts_floor = {
+	base = 0
+	add = trigger:num_pops
+	divide = 90
+	floor = yes
+}
 pop_size_ventesimal_floor = {
 	base = 0
 	add = trigger:num_pops
@@ -137,6 +142,23 @@ power_fleet_factor = {
 	min = 0
 	max = 6
 	round = yes
+}
+worker_slave_edict_size_effect = {
+	base = 0
+	complex_trigger_modifier = {
+		trigger = count_owned_pop
+		parameters = {
+			limit = {
+				OR = {
+					has_job_category = worker
+					has_job_category = slave
+				}
+			}
+		}
+		mode = add
+	}
+	divide = 50
+	add = 1
 }
 job_weights_research_eng_modifier = {
 	complex_trigger_modifier = {

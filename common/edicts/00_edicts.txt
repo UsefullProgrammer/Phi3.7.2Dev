@@ -85,8 +85,8 @@ nutritional_plenitude = {
 	resources = {
 		category = edicts
 		upkeep = {
-			unity = @Edict1Cost
-			multiplier = value:edict_size_effect
+			unity = @Edict2Cost
+			multiplier = value:pop_size_edicts_floor
 		}
 	}
 
@@ -249,7 +249,7 @@ enhanced_surveillance = {
 		category = edicts
 		upkeep = {
 			unity = @Edict3Cost
-			multiplier = value:edict_size_effect
+			multiplier = value:pop_size_edicts_floor
 		}
 	}
 
@@ -442,7 +442,7 @@ tracking_implants = {
 		category = edicts
 		upkeep = {
 			unity = @Edict3Cost
-			multiplier = value:edict_size_effect
+			multiplier = value:pop_size_edicts_floor
 		}
 	}
 
@@ -492,7 +492,7 @@ thought_enforcement = {
 		category = edicts
 		upkeep = {
 			unity = @Edict3Cost
-			multiplier = value:edict_size_effect
+			multiplier = value:pop_size_edicts_floor
 		}
 	}
 
@@ -540,7 +540,7 @@ extended_shifts = {
 		category = edicts
 		upkeep = {
 			unity = @Edict1Cost
-			multiplier = value:edict_size_effect
+			multiplier = value:worker_slave_edict_size_effect
 		}
 	}
 
@@ -893,7 +893,7 @@ information_quarantine = {
 		category = edicts
 		upkeep = {
 			unity = @Edict1Cost
-			multiplier = value:edict_size_effect
+			multiplier = value:pop_size_edicts_floor
 		}
 	}
 
@@ -920,12 +920,13 @@ encourage_free_thought = {
 		category = edicts
 		upkeep = {
 			unity = @Edict2Cost
-			multiplier = value:edict_size_effect
+			multiplier = value:pop_size_edicts_floor
 		}
 	}
 
 	modifier = {
 		pop_ethics_shift_speed_mult = 1
+		pop_government_ethic_attraction = -0.25
 		empire_size_pops_mult = -0.20
 	}
 

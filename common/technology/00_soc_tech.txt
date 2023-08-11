@@ -4219,6 +4219,7 @@ tech_adaptive_bureaucracy = {
 
 	modifier = {
 		country_edict_fund_add = 20
+		country_edict_fund_mult = 0.02
 	}
 
 	weight_modifier = {
@@ -4260,6 +4261,7 @@ tech_effective_bureaucracy = {
 
 	modifier = {
 		country_edict_fund_add = 20
+		country_edict_fund_mult = 0.02
 	}
 
 	weight_modifier = {
@@ -4301,6 +4303,7 @@ tech_colonial_bureaucracy = {
 		
 		empire_size_mult = -0.025
 		country_edict_fund_add = 5
+		country_edict_fund_mult = 0.05
 		add_base_country_intel = 10
 	}
 
@@ -4341,6 +4344,7 @@ tech_galactic_bureaucracy = {
 		#PHI 3.7.4
 		empire_size_mult = -0.025
 		country_edict_fund_add = 5
+		country_edict_fund_mult = 0.05
 		add_base_country_intel = 10
 	}
 

@@ -666,3 +666,17 @@ Cambiato living_standard_stratified ora da +25% happines rules e -15% happines w
 Ribilanciato domination ora è leggermente più forte
 Il perk Modular ora da +10.000 di resource max.
 Migliorato drasticamente ai.
+
+1.7.1 sperimentale
+Gli editti basati sul pop sono basati sul numero della pop (non comprende gli editti che aumentano la produzione di risporse )
+Alcune ambizioni sono basate sul numero della pop.
+In questa maniera chi gioca tall in late game non dovrebbe avere uno svantaggio sproporzionato almeno sugli editti e ambizioni.
+Ambizione grand fleet costa mantenerla 0,5 per naval capacity (usata)
+Diminuito empire size da branch.
+Diminuito pop empire size da 0,15 a 0,125
+Diminuito system da 1 a 0,5
+Ora politici,execute,knight,nobles e merchants ,Synapse drone e evaluato danno edict fund add + 4
+nobles danno 1 society research
+civic_aristocratic_elite da anche 1 society research aggiuntivo
+Implementato bonus percentuali negli edicts funds
+Dominion ora da bonus anche a worker oltre agli slave

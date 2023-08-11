@@ -85,6 +85,7 @@ tr_synchronicity_harmonious_directives = {
 
 	modifier = {
 		country_edict_fund_add = 50
+		edicts_upkeep_mult = -0.5
 	}
 
 	tradition_swap = {

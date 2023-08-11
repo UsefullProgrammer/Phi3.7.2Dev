@@ -21,6 +21,7 @@ councilor_ruler_democratic = {
 	modifier = {
 		pop_factions_unity_produces_mult = 0.02
 		country_edict_fund_add = 5
+		country_edict_fund_mult = 0.05
 	}
 	icon = "GFX_icon_councilor_ruler"
 }
@@ -32,6 +33,7 @@ councilor_ruler_oligarchic = {
 	modifier = {
 		councilor_exp_gain = 0.05
 		country_edict_fund_add = 5
+		country_edict_fund_mult = 0.05
 	}
 	icon = "GFX_icon_councilor_ruler"
 }
@@ -43,6 +45,7 @@ councilor_ruler_dictatorial = {
 	modifier = {
 		pop_amenities_usage_mult = -0.02
 		country_edict_fund_add = 10
+		country_edict_fund_mult = 0.1
 	}
 	icon = "GFX_icon_councilor_ruler"
 }
@@ -54,6 +57,7 @@ councilor_ruler_imperial = {
 	modifier = {
 		country_power_projection_influence_produces_add = 0.25
 		country_edict_fund_add = 5
+		country_edict_fund_mult = 0.05
 	}
 	icon = "GFX_icon_councilor_ruler"
 }
@@ -64,7 +68,9 @@ councilor_ruler_hive_mind = {
 	is_leader_possible = { always = yes }
 	modifier = {
 		country_unity_produces_mult = 0.02
-		country_edict_fund_add = 5
+		empire_size_pops_mult = -0.01
+		country_edict_fund_add = 10
+		country_edict_fund_mult = 0.05
 	}
 	icon = "GFX_icon_councilor_ruler"
 }
@@ -75,7 +81,8 @@ councilor_ruler_machine_intelligence = {
 	is_leader_possible = { always = yes }
 	modifier = {
 		empire_size_pops_mult = -0.03
-		country_edict_fund_add = 5
+		country_edict_fund_add = 10
+		country_edict_fund_mult = 0.05
 	}
 	icon = "GFX_icon_councilor_ruler"
 }
@@ -87,6 +94,7 @@ councilor_ruler_corporate = {
 	modifier = {
 		branch_office_value_mult = 0.02
 		country_edict_fund_add = 5
+		country_edict_fund_mult = 0.05
 	}
 	icon = "GFX_icon_councilor_ruler"
 }

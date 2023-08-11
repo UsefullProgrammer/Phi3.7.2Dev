@@ -153,6 +153,9 @@ high_priest = {
 			unity = 1
 		}
 	}
+	country_modifier = {
+		country_edict_fund_add = 3
+	}
 
 	triggered_planet_modifier = {
 		potential = {
@@ -225,7 +228,9 @@ politician = {
 			unity = 1
 		}
 	}
-
+	country_modifier = {
+		country_edict_fund_add = 3
+	}
 	triggered_planet_modifier = {
 		potential = {
 			always = yes
@@ -282,6 +287,7 @@ noble = {
 		category = planet_nobles
 		produces = {
 			unity = 6
+			society_research = 1
 		}
 		upkeep = {
 			consumer_goods = 2
@@ -294,8 +300,18 @@ noble = {
 			}
 			unity = 1
 		}
+		produces = {
+			trigger = {
+				owner = {
+					has_valid_civic = civic_aristocratic_elite
+				}
+			}
+			society_research = 1
+		}
 	}
-	
+	country_modifier = {
+		country_edict_fund_add = 3
+	}
 	
 
 	triggered_planet_modifier = {
@@ -308,13 +324,6 @@ noble = {
 	planet_modifier = {
 		planet_stability_add = 2
 	}
-	# triggered_planet_modifier = {
-	# 	potential = {
-	# 		exists = owner
-	# 		owner = { has_civic = civic_aristocratic_elite }
-	# 	}
-	# 	planet_stability_add = 2
-	# }
 
 	weight = {
 		weight = @ruler_job_weight
@@ -397,6 +406,9 @@ merchant = {
 		planet_amenities_add = 3
 		mult = value:scripted_modifier_mult|MODIFIER|pop_job_amenities_mult|
 	}
+	country_modifier = {
+		country_edict_fund_add = 3
+	}
 
 	weight = {
 		weight = @ruler_job_weight
@@ -462,7 +474,9 @@ executive = {
 			unity = 1
 		}
 	}
-
+	country_modifier = {
+		country_edict_fund_add = 3
+	}
 	triggered_planet_modifier = {
 		potential = {
 			always = yes
@@ -558,7 +572,6 @@ knight_commander = {
 			alloys = 2
 		}
 	}
-
 	triggered_planet_modifier = {
 		potential = {
 			always = yes
@@ -569,6 +582,7 @@ knight_commander = {
 
 	triggered_country_modifier = {
 		country_naval_cap_add = 6
+		country_edict_fund_add = 3
 		mult = value:scripted_modifier_mult|MODIFIER|knights_independent_category_produces_mult|
 	}
 

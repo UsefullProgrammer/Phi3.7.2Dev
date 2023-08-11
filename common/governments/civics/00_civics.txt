@@ -125,6 +125,7 @@ civic_imperial_cult = {
 	}
 	modifier = {
 		country_edict_fund_add = 50
+		country_edict_fund_mult = 0.05
 		edicts_upkeep_mult = -0.5
 	}
 }
@@ -784,6 +785,7 @@ civic_inwards_perfection = {
 		country_unity_produces_mult = 0.20
 		pop_growth_speed = 0.10
 		country_edict_fund_add = 50
+		country_edict_fund_mult = 0.05
 		pop_citizen_happiness = 0.05
 		envoys_add = -1
 		intel_encryption_add = 1

@@ -2,6 +2,7 @@ tr_statecraft_adopt = {
 	unlocks_agenda = agenda_departmental_efficiency
 	modifier = {
 		country_edict_fund_add = 20
+		edicts_upkeep_mult = -0.1
 	}
 }
 
@@ -10,7 +11,7 @@ tr_statecraft_finish = {
 		country_leader_cap_add = 1
 		councilor_skill_add = 1
 		ascension_perks_add = 1
-		country_edict_fund_mult = 0.25
+		country_edict_fund_mult = 1
 	}
 	on_enabled = {
 		if = {
@@ -37,6 +38,7 @@ tr_statecraft_finish = {
 			country_leader_cap_add = 1
 			councilor_skill_add = 1
 			ascension_perks_add = 1
+			country_edict_fund_mult = 1
 		}
 		weight = {
 			factor = 1
