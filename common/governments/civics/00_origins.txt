@@ -423,7 +423,7 @@ origin_void_dwellers = {
 	modifier = {
 		country_leader_cap_add = 2
 		planet_building_build_speed_mult = +0.10
-		empire_size_colonies_mult = -0.10
+		#empire_size_colonies_mult = -0.10
 	}
 
 	traits = {

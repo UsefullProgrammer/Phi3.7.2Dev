@@ -677,6 +677,13 @@ Diminuito pop empire size da 0,15 a 0,125
 Diminuito system da 1 a 0,5
 Ora politici,execute,knight,nobles e merchants ,Synapse drone e evaluato danno edict fund add + 4
 nobles danno 1 society research
-civic_aristocratic_elite da anche 1 society research aggiuntivo
+civic_aristocratic_elite da anche 1 society research aggiuntivo ai nobili
 Implementato bonus percentuali negli edicts funds
 Dominion ora da bonus anche a worker oltre agli slave
+
+1.7.2 balance
+Aumentanto leggermente il costo degli editti standard così in early non puoi spammarli (+25%)
+Highpriest al posto di avere edicts fund add 3 hanno 3 unity in più come produzione base
+origin void dwellers non ha più empire size planet 10% quel bonus è stato trasferito nell'ascension perk void born
+Quando sblocchi l'ascension perk hai tutti i moduli spaziali speciali
+Genetics tradition completata invece di dare +2 trait point da +1 trait point  +1 trait pick point

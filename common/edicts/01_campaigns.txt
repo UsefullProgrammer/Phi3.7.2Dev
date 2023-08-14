@@ -3,9 +3,9 @@
 # shorter duration, cost energy
 #################
 
-@Edict1Cost = 20
-@Edict2Cost = 25
-@Edict3Cost = 30
+@Edict1Cost = 25
+@Edict2Cost = 30
+@Edict3Cost = 40
 
 @EdictDuration = -1
 

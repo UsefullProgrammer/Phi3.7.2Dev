@@ -138,7 +138,7 @@ high_priest = {
 	resources = {
 		category = planet_priests
 		produces = {
-			unity = 6
+			unity = 9
 			society_research = 4
 		}
 		upkeep = {
@@ -153,9 +153,9 @@ high_priest = {
 			unity = 1
 		}
 	}
-	country_modifier = {
-		country_edict_fund_add = 3
-	}
+	# country_modifier = {
+	# 	country_edict_fund_add = 3
+	# }
 
 	triggered_planet_modifier = {
 		potential = {

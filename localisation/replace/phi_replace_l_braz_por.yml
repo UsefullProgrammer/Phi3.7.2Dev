@@ -198,3 +198,5 @@ tr_aptitude_champions_of_the_empire_desc:1 "Per $admiral_with_icon$ and $general
 
  civic_tooltip_aristocratic_elite_effects:7 "£building£ §YCapital Buildings§! replace some £job_politician£ §Y$job_politician$§! Jobs with £job_noble£ §Y$job_noble_plural$§!\nCan construct £building£ §Y$building_noble_estates$§! buildings that add additional £job_noble£ §Y$job_noble$§! Jobs\nGrants access to the £building£ §Y$holding_noble_vacation_homes$§!\nHolding £job_noble£ §Y$job_noble$§! Jobs produces additional 1 £society_research£"
 
+ap_voidborn_habitat_phi_effect:0 "$ap_voidborn_habitat_effect$\n\n§YUnlock§! new §Gpowerfull§! Starbase buildings and module with cost influence, that can add 1 work job at planet in system in base at starbase building type"
+

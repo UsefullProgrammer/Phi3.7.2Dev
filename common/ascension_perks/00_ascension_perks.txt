@@ -961,7 +961,7 @@ ap_voidborn = {
 	}
 
 	on_enabled = {
-		custom_tooltip = "ap_voidborn_habitat_effect"
+		custom_tooltip = "ap_voidborn_habitat_phi_effect"
 		if = {
 			limit = {
 				NOT = { has_technology = tech_habitat_2 }
@@ -981,6 +981,7 @@ ap_voidborn = {
 	modifier = {
 		pc_habitat_habitability = 0.2
 		empire_size_systems_mult = -0.10
+		empire_size_colonies_mult = -0.10
 	}
 	tradition_swap = {
 		name = ap_voidborn
@@ -989,7 +990,7 @@ ap_voidborn = {
 		trigger = {
 			has_origin = origin_void_dwellers
 		}
-
+		
 		on_enabled = {
 			custom_tooltip = "ap_voidborn_dweller_habitat_effect"
 			if = {
@@ -1009,8 +1010,8 @@ ap_voidborn = {
 		}
 
 		modifier = {
-			country_starbase_capacity_mult = 0.1
 			empire_size_systems_mult = -0.10
+			empire_size_colonies_mult = -0.10
 		}
 
 		weight = {

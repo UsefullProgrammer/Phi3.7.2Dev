@@ -187,6 +187,7 @@ war_goal_wg_humiliation_desc:0 "War is waged to undermine the enemy regime and t
 war_goal_wg_independence_desc:0 "War is waged to secure independence.\nThis war Not cost influence upkeep ( Only for you) "
 
 ap_voidborn_habitat_effect:0 "§YHabitats§! owned by our Empire have §Y2 Additional Building Slots§!. Our upgraded habitats can support advanced housing buildings can, after Research §Y$tech_habitat_3$§! you will can upgrade 5 times habitat instead 1."
+
  add_research_options_voidborn:0 "Research options gained after upgrading a Habitat:\n£engineering_research£§Y$tech_habitat_3$§!"
 
  wg_expel_corp_status_quo_effects:1 "All Branch Offices owned by the §Y[From.GetName]§! in the §Y[Root.GetName]§! are closed.\n§Y[From.GetName]§! receives £energy£ §Y1000§! for each closed Branch Office."
@@ -198,3 +199,5 @@ ap_voidborn_habitat_effect:0 "§YHabitats§! owned by our Empire have §Y2 Addit
 tr_aptitude_champions_of_the_empire_desc:1 "Per $admiral_with_icon$ and $general_with_icon$ level\n$t$$MOD_COUNTRY_NAVAL_CAP_ADD$: §G+2§!\nPer $governor_with_icon$ level\n$t$$MOD_EMPIRE_SIZE_MULT$: §G-1§!\nPer $scientist_with_icon$ level\n$t$$MOD_LEADER_SPECIES_EXP_GAIN$: §G+0.5%§!"
 
  civic_tooltip_aristocratic_elite_effects:7 "£building£ §YCapital Buildings§! replace some £job_politician£ §Y$job_politician$§! Jobs with £job_noble£ §Y$job_noble_plural$§!\nCan construct £building£ §Y$building_noble_estates$§! buildings that add additional £job_noble£ §Y$job_noble$§! Jobs\nGrants access to the £building£ §Y$holding_noble_vacation_homes$§!\nHolding £job_noble£ §Y$job_noble$§! Jobs produces additional 1 £society_research£"
+
+ap_voidborn_habitat_phi_effect:0 "$ap_voidborn_habitat_effect$\n\n§YUnlock§! new §Gpowerfull§! Starbase buildings and module with cost influence, that can add 1 work job at planet in system in base at starbase building type"

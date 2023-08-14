@@ -6,7 +6,12 @@ civilian_anchorage = {
 	potential = {
 		is_orbital_ring = no
         exists = owner
-		owner = { has_origin = origin_void_dwellers }
+		owner = { 
+			OR = {
+				has_origin = origin_void_dwellers
+				has_ascension_perk = ap_voidborn
+			} 
+		}
 	}
 
 	resources = {
@@ -52,7 +57,9 @@ civilian_shipyard = {
 	potential = {
 		is_orbital_ring = no
 		exists = owner
-		owner = { has_origin = origin_void_dwellers }
+		owner = { 
+				has_origin = origin_void_dwellers
+		}
 	}
 
 	resources = {
@@ -142,7 +149,10 @@ starm_science_hub = {
 	potential = {
 		exists = owner
 		owner = { 
-			has_origin = origin_void_dwellers
+			OR = {
+				has_origin = origin_void_dwellers
+				has_ascension_perk = ap_voidborn
+			}
 			#has_technology = "tech_space_science_1"
 		}
 	}
@@ -194,7 +204,10 @@ starm_culture_hub = {
 	potential = {
 		exists = owner
 		owner = { 
-			has_origin = origin_void_dwellers
+			OR = {
+				has_origin = origin_void_dwellers
+				has_ascension_perk = ap_voidborn
+			}
 			#has_technology = "tech_heritage_site"
 		}
 	}
@@ -242,7 +255,10 @@ administrative_hub = {
 	potential = {
 		exists = owner
 		owner = { 
-			has_origin = origin_void_dwellers
+			OR = {
+				has_origin = origin_void_dwellers
+				has_ascension_perk = ap_voidborn
+			}
 		}
 	}
 
@@ -273,7 +289,8 @@ administrative_hub = {
 		}
 
 		upkeep = {
-			energy = 2
+			energy = 4
+			mult = value:Count_planet_system
 		}
 	}
 

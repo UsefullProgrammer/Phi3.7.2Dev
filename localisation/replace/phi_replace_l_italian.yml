@@ -211,3 +211,5 @@ origin_tooltip_clone_army_effects:1 "- Inizia con 2 Strutture £building£ £bui
 tr_aptitude_champions_of_the_empire_desc:1 "Per ammiraglio e generale di livello $admiral_with_icon$ e $general_with_icon$\n$t$$MOD_COUNTRY_NAVAL_CAP_ADD$: §G+2§!\nPer governatore di livello $governor_with_icon$\n$t$$MOD_EMPIRE_SIZE_MULT$: §G-1§!\nPer scienziato di livello $scientist_with_icon$\n$t$$MOD_LEADER_SPECIES_EXP_GAIN$: §G+0.5%§!"
 
  civic_tooltip_aristocratic_elite_effects:7 "I £building£ §YEdifici Capitali§! sostituiscono alcuni £job_politician£ §Y$job_politician$§! con £job_noble£ §Y$job_noble_plural$§!\\nPuò costruire edifici £building£ §Y$building_noble_estates$§! che aggiungono ulteriori £job_noble£ §Y$job_noble$§! Jobs\\nConcede accesso all'edificio £building£ §Y$holding_noble_vacation_homes$§!\\nI lavori £job_noble£ §Y$job_noble$§! producono 1 £society_research£ aggiuntiva"
+
+ap_voidborn_habitat_phi_effect:0 "$ap_voidborn_habitat_effect$\n\n§YSblocca§! nuovi edifici e moduli §Gpotenti§! per la Stazione Stellare, con costo di influenza, che possono aggiungere 1 lavoro nel pianeta del sistema in base al tipo di edificio della stazione stellare"

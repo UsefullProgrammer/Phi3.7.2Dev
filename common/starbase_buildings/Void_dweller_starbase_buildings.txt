@@ -7,7 +7,10 @@ nebula_alloy_refinery = {
 		exists = owner
 		owner = { 
             has_technology = tech_space_mining_1 
-            has_origin = origin_void_dwellers
+			OR = {
+				has_origin = origin_void_dwellers
+				has_ascension_perk = ap_voidborn
+			}
         }
 	}
 
@@ -52,6 +55,31 @@ nebula_alloy_refinery = {
 		}
 		job_foundry_add = 1
 	}
+	triggered_system_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				has_ascension_perk = ap_voidborn 
+				is_hive_empire = yes
+			}
+		}
+		modifier = {
+			job_alloy_drone_add = @b1_jobs
+		}
+	}
+
+	triggered_system_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				has_ascension_perk = ap_voidborn 
+				is_machine_empire = yes
+			}
+		}
+		modifier = {
+			job_fabricator_add = @b1_jobs
+		}
+	}
 
 	ai_weight = {
 		weight = 100 #use same weight here - ai weighting is done in starbase_types.txt
@@ -66,7 +94,11 @@ starm_culture_booster = {
 	potential = {
 		exists = owner
 		owner = {
-			has_origin = origin_void_dwellers
+			OR = {
+				has_origin = origin_void_dwellers
+				has_ascension_perk = ap_voidborn
+			}
+
 			#has_technology = tech_hypercomms_forum
 		}
 	}
@@ -124,7 +156,10 @@ starm_science_booster = {
 	potential = {
 		exists = owner
 		owner = {
-			has_origin = origin_void_dwellers
+			OR = {
+				has_origin = origin_void_dwellers
+				has_ascension_perk = ap_voidborn
+			}
 			#has_technology = tech_space_science_2
 		}
 	}
@@ -172,6 +207,61 @@ starm_science_booster = {
 		}
 		job_engineering_researcher_add = 1
 	}
+	triggered_system_modifier = {
+		potential = {
+			exists = owner
+			owner = { 
+				has_ascension_perk = ap_voidborn 
+				is_hive_empire = yes 
+				has_policy_flag = focus_engineering
+			}
+		}
+		modifier = {
+			job_engineering_brain_drone_add = 1
+		}
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { 
+				has_ascension_perk = ap_voidborn 
+				is_machine_empire = yes 
+				has_policy_flag = focus_engineering
+			}
+		}
+		modifier = {
+			job_engineering_calculator_add = 1
+		}
+	}
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { 
+				has_ascension_perk = ap_voidborn 
+				is_hive_empire = yes 
+				has_policy_flag = focus_physics
+			}
+		}
+		modifier = {
+			job_physics_brain_drone_add = 1
+		}
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { 
+				has_ascension_perk = ap_voidborn 
+				is_machine_empire = yes 
+				has_policy_flag = focus_physics
+			}
+		}
+		modifier = {
+			job_physics_calculator_add = 1
+		}
+	}
+
 	custom_tooltip = sm_starm_science_booster_effect
 
 	ai_build_at_chokepoint = no
@@ -194,7 +284,11 @@ Governmental_Orbital_Exchange_Market = {
 	potential = {
 		exists = owner
 		owner = { 
-            has_origin = origin_void_dwellers
+            OR = {
+				has_origin = origin_void_dwellers
+				has_ascension_perk = ap_voidborn
+			}
+			is_gestalt = no
         }
 	}
 	resources = {
@@ -233,7 +327,10 @@ Governmental_diplomatic_asset = {
 	potential = {
 		exists = owner
 		owner = { 
-            has_origin = origin_void_dwellers
+            OR = {
+				has_origin = origin_void_dwellers
+				has_ascension_perk = ap_voidborn
+			}
         }
 	}
 	resources = {
@@ -284,7 +381,11 @@ Governmental_manager_asset = {
 	potential = {
 		exists = owner
 		owner = { 
-            has_origin = origin_void_dwellers
+            OR = {
+				has_origin = origin_void_dwellers
+				has_ascension_perk = ap_voidborn
+			}
+			is_gestalt = no
         }
 	}
 	resources = {
@@ -350,7 +451,10 @@ Research_relic = {
 	potential = {
 		exists = owner
 		owner = { 
-            has_origin = origin_void_dwellers
+            OR = {
+				has_origin = origin_void_dwellers
+				has_ascension_perk = ap_voidborn
+			}
         }
 	}
 	possible = {
@@ -378,6 +482,31 @@ Research_relic = {
 			}
 		}
 		job_archaeoengineers_add = 1
+	}
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { 
+				has_ascension_perk = ap_voidborn 
+				is_hive_empire = yes 
+			}
+		}
+		modifier = {
+			job_archaeo_drone_add = 1
+		}
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { 
+				has_ascension_perk = ap_voidborn 
+				is_machine_empire = yes 
+			}
+		}
+		modifier = {
+			job_archaeo_unit_add = 1
+		}
 	}
 	system_modifier = {
 		stations_minor_artifacts_produces_mult = 0.5
