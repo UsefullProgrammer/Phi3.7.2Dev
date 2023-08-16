@@ -1196,7 +1196,7 @@ country_event = {
 					}
 				}
 			}
-			
+			fleet_power > 2000
 			OR = {
 				mid_game_years_passed > 25
 				NOT = { has_country_flag = is_advanced_start_AI }
@@ -1216,6 +1216,26 @@ country_event = {
 	immediate = {
 		random_list = {
 			5  = {
+				modifier = {
+					factor = 2
+					fleet_power > 8000
+				}
+				modifier = {
+					factor = 2
+					fleet_power > 16000
+				}
+				modifier = {
+					factor = 2
+					fleet_power > 32000
+				}
+				modifier = {
+					factor = 2
+					has_ai_personality = honorbound_warriors
+				} 	
+				modifier = {
+					factor = 0.5
+					has_ai_personality_behaviour = isolationist
+				}				
 				random_country = {
 					limit = { #how need country that can help
 						AND = {
@@ -1283,7 +1303,13 @@ country_event = {
 				}
 			}
 			95 = {
-
+				modifier = {
+					factor = 2
+					OR = {
+						has_deficit = energy
+						has_deficit = consumer_goods
+					}
+				}
 			}
 		}
 	}

@@ -71,6 +71,12 @@ edict_trade_minimum_galactic_trade = {
 	min = 500
 	max = 2500
 }
+num_leaders_quarted = {
+	base = 1
+	mult = trigger:num_owned_leaders
+	divide = 4
+	min = 1
+}
 
 
 
@@ -97,6 +103,7 @@ pop_size_edicts_floor = {
 	add = trigger:num_pops
 	divide = 90
 	floor = yes
+	min = 1
 }
 pop_size_ventesimal_floor = {
 	base = 0

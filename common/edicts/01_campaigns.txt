@@ -5,7 +5,7 @@
 
 @Edict1Cost = 25
 @Edict2Cost = 30
-@Edict3Cost = 40
+@Edict3Cost = 50
 
 @EdictDuration = -1
 
@@ -21,6 +21,10 @@ fear_campaign = {
 		category = campaigns
 		upkeep = {
 			energy = @campaignCost
+			multiplier = value:edict_size_effect
+		}
+		upkeep = {
+			unity = @Edict1Cost
 			multiplier = value:edict_size_effect
 		}
 	}
@@ -51,8 +55,8 @@ education_campaign = {
 	resources = {
 		category = campaigns
 		upkeep = {
-			energy = @campaignCost
-			multiplier = value:edict_size_effect
+			energy = 32
+			multiplier = value:num_leaders_quarted
 		}
 	}
 
@@ -87,6 +91,10 @@ recycling_campaign = {
 			energy = @campaignCost
 			multiplier = value:edict_size_effect
 		}
+		upkeep = {
+			unity = @Edict1Cost
+			multiplier = value:edict_size_effect
+		}
 	}
 
 	modifier = {
@@ -117,7 +125,11 @@ healthcare_campaign = {
 		category = campaigns
 		upkeep = {
 			energy = @campaignCost
-			multiplier = value:edict_size_effect
+			multiplier = value:pop_size_edicts_floor
+		}
+		upkeep = {
+			unity = @Edict1Cost
+			multiplier = value:pop_size_edicts_floor
 		}
 	}
 
@@ -168,8 +180,8 @@ machine_learning_campaign = {
 	resources = {
 		category = campaigns
 		upkeep = {
-			energy = @campaignCost
-			multiplier = value:edict_size_effect
+			energy = 32
+			multiplier = value:num_leaders_quarted
 		}
 	}
 
@@ -241,15 +253,15 @@ learning_campaign = {
 			trigger = {
 				is_lithoid_empire = no
 			}
-			food = @hiveFood
-			multiplier = value:edict_size_effect
+			food = 32
+			multiplier = value:num_leaders_quarted
 		}
 		upkeep = {
 			trigger = {
 				is_lithoid_empire = yes
 			}
-			minerals = @hiveFood
-			multiplier = value:edict_size_effect
+			minerals = 32
+			multiplier = value:num_leaders_quarted
 		}
 	}
 

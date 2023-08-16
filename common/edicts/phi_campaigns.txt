@@ -1,6 +1,6 @@
 @Edict1Cost = 25
 @Edict2Cost = 30
-@Edict3Cost = 40
+@Edict3Cost = 50
 @EdictDuration = -1
 @campaignCost = 15
 @n50 = 2

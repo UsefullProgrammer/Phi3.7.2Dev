@@ -18,8 +18,9 @@ district_generator = {
 	}
 
 	allow = {
-		exists = owner
+		
 		OR = {
+			NOT = { exists = owner }
 			owner = { 
 				has_monthly_income = {
 					resource = energy

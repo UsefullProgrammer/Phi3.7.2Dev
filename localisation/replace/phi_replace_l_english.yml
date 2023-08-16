@@ -209,3 +209,5 @@ ap_voidborn_habitat_phi_effect:0 "$ap_voidborn_habitat_effect$\n\n§YUnlock§! n
 
 tr_genetics_finish_modifier_desc:0 "$SPECIES_TRAIT_PICKS$: §G+1§!\n$species_trait_points_add$: $POINTS|0=+$\n$TRADITIONS_FINISH_AP$"
 tr_genetics_finish_extra_traits_modifier_desc:0 "$SPECIES_TRAIT_PICKS$: §G+1§!\n$species_trait_points_add$: $POINTS|0=+$\nAllows research of rare §YTransgenesis§! technologies.\n$TRADITIONS_FINISH_AP$"
+
+tr_domination_federations_finish_desc:0 "$mod_campaigns_upkeep_mult$ §G-10%§!\n$MOD_EMPIRE_SIZE_POPS_MULT$ §G-10%§!\nGrants access to the §Y$hegemony_federation$§! Federation type.\nAscension Perks Unlocked: §G+1§!"

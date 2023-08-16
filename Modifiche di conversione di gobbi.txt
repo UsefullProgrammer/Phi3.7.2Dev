@@ -648,24 +648,30 @@ Tolto trade war policy
 Local guild fa 50% crime invece di 100% crime
 
 1.6 Balance
-
-Domination da 1 influencza invece di 0,5
 Migliorato statecraft :
 [list]
 [*]Bonus duration agenda da +20% a +25%
 [*]Finire statecraft da anche +10% di edicts fund
 [/list]
-Fix AI non invitano più gli altri imperi se hanno un truce
+
 Chi era umano non è mai considerato "debole" anche se lo è.
 Il research lab focus è disponibile per tutti se si ha almeno un habitat
+Aumentanto leggermente il costo degli editti standard così in early non puoi spammarli (+25%)
+Highpriest al posto di avere edicts fund add 3 hanno 3 unity in più come produzione base
+origin void dwellers non ha più empire size planet 10% quel bonus è stato trasferito nell'ascension perk void born
+Quando sblocchi l'ascension perk hai tutti i moduli spaziali speciali
+Genetics tradition completata invece di dare +2 trait point da +1 trait point  +1 trait pick point
+Bilanciato bonus skill edict funds % per i gestalt da 5% al 3%
+Fix distretti su pianeti da colonizzare che non si vedevano
+Education campaign costa in base ai leader posseduti (+25% per leader )
+Reciclyng campaign costa anche un pò di unity ora
+Il perk Modular ora da +10.000 di resource max.
+Ribilanciato domination ora è leggermente più forte
 
 1.7 Fix
 Ogni guerra ora costa 1 influenza ma non costa più 0,5 influenza per ogni partecipante nemico.
 Ora la policy politics per ogni tratto di migrazione ti fa guadagnare 10 unity e 10 research society
 Cambiato living_standard_stratified ora da +25% happines rules e -15% happines worker
-Ribilanciato domination ora è leggermente più forte
-Il perk Modular ora da +10.000 di resource max.
-Migliorato drasticamente ai.
 
 1.7.1 sperimentale
 Gli editti basati sul pop sono basati sul numero della pop (non comprende gli editti che aumentano la produzione di risporse )
@@ -679,11 +685,9 @@ Ora politici,execute,knight,nobles e merchants ,Synapse drone e evaluato danno e
 nobles danno 1 society research
 civic_aristocratic_elite da anche 1 society research aggiuntivo ai nobili
 Implementato bonus percentuali negli edicts funds
-Dominion ora da bonus anche a worker oltre agli slave
+Dominion ora da bonus production anche a worker oltre agli slave
 
-1.7.2 balance
-Aumentanto leggermente il costo degli editti standard così in early non puoi spammarli (+25%)
-Highpriest al posto di avere edicts fund add 3 hanno 3 unity in più come produzione base
-origin void dwellers non ha più empire size planet 10% quel bonus è stato trasferito nell'ascension perk void born
-Quando sblocchi l'ascension perk hai tutti i moduli spaziali speciali
-Genetics tradition completata invece di dare +2 trait point da +1 trait point  +1 trait pick point
+[b]AI[/b]
+Fix AI non invitano più gli altri imperi se hanno un truce
+Cambiato IA quando deve entrare in una guerra di survive
+Migliorato drasticamente ai.
