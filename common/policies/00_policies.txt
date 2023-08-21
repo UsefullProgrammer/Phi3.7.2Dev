@@ -2807,10 +2807,11 @@ economic_policy = {
 		
 		modifier = {
 			contact_produces_mult = 0.5
-			envoys_add = 2
-			country_leader_cap_add = -1
 			planet_pops_consumer_goods_upkeep_mult = 0.25
 			country_trust_cap_add = -50
+		}
+		on_enabled = {
+			custom_tooltip = "tooltip_economic_policy_politics_effects"
 		}
 		policy_flags = {
 			economic_policy_politics
@@ -2831,7 +2832,7 @@ economic_policy = {
 		# }
 		modifier = {
 			councilor_skill_add = 1
-			country_society_tech_research_speed = +0.05
+			country_society_tech_research_speed = +0.15
 			pop_amenities_usage_mult = 0.20
 			council_agenda_progress_speed = -0.15
 		}
@@ -3300,9 +3301,15 @@ drone_policy = {
 		
 		modifier = {
 			contact_produces_mult = 0.5
-			envoys_add = 2
+			envoys_add = 1
 			planet_pops_upkeep_mult = 0.25
 			country_trust_cap_add = -50
+		}
+		on_enabled = {
+			custom_tooltip = "tooltip_drone_economic_policy_politics_effects"
+		}
+		policy_flags = {
+			economic_policy_politics
 		}
 		AI_weight = {
 			factor = 0

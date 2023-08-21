@@ -646,7 +646,7 @@ can_colonize_planet = {
 	OR = {
 		root = { is_ai = no }
 		OR = {
-			root = { empire_sprawl_over_cap < -30 }
+			root = { empire_sprawl_over_cap < -27 }
 			solar_system = { is_bottleneck_system = no }
 		}
 	}

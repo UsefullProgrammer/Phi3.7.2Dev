@@ -637,6 +637,10 @@ archeologist_spedition = {
 				resource = minor_artifacts
 				value < 100
 			}
+			has_monthly_income = {
+				resource = energy
+				value > 50
+			}
 		}
 	}
 }
@@ -663,8 +667,15 @@ expansion_planer = {
 	ai_weight = {
 		weight = 0
 		modifier = {
-			weight = @EdictHighPrio
+			weight = 1000
 			empire_sprawl_over_cap >= 25
+		}
+		modifier = {
+			weight = @EdictHighPrio
+			AND = {
+				empire_sprawl_over_cap > -33
+				has_edict = expansion_planer
+			}
 		}
 	}
 }
@@ -677,11 +688,12 @@ expansion_planer_2 = {
 			influence = 2000
 		}
 		upkeep = {
-			influence = 5
+			influence = 3
 		}
 	}
 	potential = {
-		always = no
+		NOT = { has_country_flag = was_human }
+		is_ai = yes
 	}
 	modifier = {
 		all_technology_research_speed = -0.5
@@ -691,8 +703,15 @@ expansion_planer_2 = {
 	ai_weight = {
 		weight = 0
 		modifier = {
-			weight = @EdictHighPrio
+			weight = 1000
 			empire_sprawl_over_cap >= 25
+		}
+		modifier = {
+			weight = @EdictHighPrio
+			AND = {
+				empire_sprawl_over_cap > -33
+				has_edict = expansion_planer_2
+			}
 		}
 	}
 }

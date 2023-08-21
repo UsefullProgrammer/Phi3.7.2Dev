@@ -2414,6 +2414,13 @@ col_habitat_foundry = {
 		}
 		modifier = {
 			factor = 0
+			exists = owner
+			owner = {
+				has_deficit = consumer_goods
+			}
+		}
+		modifier = {
+			factor = 0
 			exists = sector
 			sector = {
 				has_any_sector_focus = yes
@@ -2494,6 +2501,13 @@ col_habitat_factory = {
 			}
 			mode = add
 			mult = 3
+		}
+		modifier = {
+			factor = 2
+			exists = owner
+			owner = {
+				has_deficit = consumer_goods
+			}
 		}
 		modifier = {
 			add = 10

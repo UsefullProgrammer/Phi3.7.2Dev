@@ -161,10 +161,18 @@ decision_end_phi_planet_resource_rationing = {
 	}
 
 	ai_weight = {
-		weight = 5
+		weight = 0
 		modifier = {
-			factor = 0
-			planet_stability > 50
+			weight = 2
+			planet_stability < 50
+		}
+		modifier = {
+			factor = 500
+			planet_stability <= 30
+		}
+		modifier = {
+			weight = 1000
+			planet_stability < 10
 		}
 	}
 }
@@ -254,10 +262,18 @@ decision_end_phi_planet_local_administration = {
 	}
 
 	ai_weight = {
-		weight = 5
+		weight = 0
 		modifier = {
-			factor = 0
-			planet_stability > 50
+			weight = 2
+			planet_stability < 50
+		}
+		modifier = {
+			factor = 500
+			planet_stability <= 30
+		}
+		modifier = {
+			weight = 1000
+			planet_stability < 10
 		}
 	}
 }
@@ -348,14 +364,23 @@ decision_end_phi_planet_trading_guilds = {
 	}
 
 	ai_weight = {
-		weight = 5
+		weight = 0
 
 		modifier = {
-			factor = 0
-			OR = {
-				planet_crime < 50	
-				planet_stability > 50
-			}
+			weight = 1000
+			planet_crime > 50	
+		}
+		modifier = {
+			weight = 2
+			planet_stability < 50
+		}
+		modifier = {
+			factor = 500
+			planet_stability <= 40
+		}
+		modifier = {
+			weight = 1000
+			planet_stability < 10
 		}
 	}
 }
@@ -438,7 +463,7 @@ decision_end_phi_planet_deviant_experiments = {
 	ai_weight = {
 		weight = 0
 		modifier = {
-			weight = 10
+			weight = 100
 			planet_crime > 50
 		}
 	}

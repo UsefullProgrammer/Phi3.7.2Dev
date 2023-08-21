@@ -87,7 +87,9 @@ on_monthly_pulse_country = {
 		phi_ai.14			#scorched earth tactics
 		rules.10
 		phi_notification.0
-		
+		naval_attrition.11 #Planet devastation -5 if lost 
+		naval_attrition.12 #Planet devastation -3 if have ally or overlord
+		naval_attrition.13 #Planet devastation -3 if have politics politic
 	}
 }
 

@@ -138,7 +138,7 @@ civic_hive_subsumed_will = {
 		councilor_gestalt_general_exp_gain = @gestalt_civic_node_xp_rate
 		empire_size_colonies_mult = -0.33
 		country_edict_fund_add = 25
-		country_edict_fund_mult = 0.05
+		country_edict_fund_mult = 0.025
 	}
 }
 
@@ -677,7 +677,7 @@ civic_machine_ota_updates = {
 		councilor_gestalt_admiral_exp_gain = @gestalt_civic_node_xp_rate
 		empire_size_mult = -0.20
 		country_edict_fund_add = 25
-		country_edict_fund_mult = 0.05
+		country_edict_fund_mult = 0.025
 	}
 }
 

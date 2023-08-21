@@ -1,4 +1,5 @@
 revolt_fleet_comparison_factor = {
+	base = 5
 	add = owner.trigger:fleet_power
 	modifier = {
         divide = event_target:rebel_empire.trigger:fleet_power
@@ -8,13 +9,13 @@ revolt_fleet_comparison_factor = {
 	}
     modifier = {
         pow = 3
-		event_target:rebel_empire = {
+		owner = {
 			fleet_power > 0
 		}
 	}
 	modifier = {
 		pow = 0
-		event_target:rebel_empire = {
+		owner = {
 			fleet_power <= 0
 		}
 	}

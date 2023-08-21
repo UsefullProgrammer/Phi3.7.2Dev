@@ -297,7 +297,7 @@ desired_colonizers_base = {
 		ai_colonize_plans > 0
 		OR = {
 			has_civic = civic_franchising
-			empire_sprawl_over_cap < -30
+			empire_sprawl_over_cap < -27
 		}
 		NOT = {
 		 	any_owned_planet = {

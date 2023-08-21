@@ -1314,3 +1314,10 @@ mod_job_society_researcher_per_pop:0 "§G+1§! Lavoro di $job_society_researcher
 mod_job_society_researcher_per_pop_short:0 "\n§G+1§! £mod_job_society_researcher_add£ per ogni £popolazione£ $VALUE$"
 job_society_researcher_plural:0 "Ricercatori Fisici"
 job_society_researcher_effect_desc:0 "I $job_society_researcher_plural$ £job_society_researcher£ trasformano §Y$risorsa di studio$§! in £society£ §Ypunti di ricerca§! per le nuove tecnologie"
+
+tooltip_economic_policy_politics_effects: "Guadagna 10 £unità£/mese e 10 £società£/mese per ogni patto di migrazione.\nOgni pianeta con una §Ydevastazione planetaria§! superiore a 10 riduce la §Ydevastazione planetaria§! di 3 ogni mese"
+migration: "Migrazioni"
+economic_policy_domination_name: "$economic_policy_domination$"
+economic_policy_politics_name: "$economic_policy_politics$"
+
+tooltip_drone_economic_policy_politics_effects: "Every planet with §Yplanet devastation§! over 10 reduce §Yplanet devastation§! every month of 3"

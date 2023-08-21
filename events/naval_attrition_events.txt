@@ -92,7 +92,10 @@ country_event = {
 	
 	immediate = {
 		every_owned_planet = {
-			limit = { is_occupied_flag = yes }
+			limit = { 
+				is_occupied_flag = yes
+				planet_devastation <= 90
+		 	}
 			add_planet_devastation = 5
 			owner = {
 				if = {
@@ -115,6 +118,7 @@ country_event = {
 	}
 }
 
+
 country_event = {
 	id = naval_attrition.10
 	hide_window = yes
@@ -130,5 +134,70 @@ country_event = {
 	immediate = {
 		set_country_flag = phi_colossus_project_enabled
 		country_event = { id = apoc.100 }
+	}
+}
+country_event = {
+	id = naval_attrition.11
+	hide_window = yes
+
+	is_triggered_only = yes
+	
+	trigger = {
+		is_at_war = no
+		recently_lost_war = yes
+	}
+	
+	immediate = {
+		every_owned_planet = {
+			limit = { 
+				OR = {
+					planet_devastation >= 50 
+					AND = {
+						planet_devastation >= 5
+						owner = { is_ai =  yes } 
+					}
+				}
+			}
+			add_planet_devastation = -5
+		}
+	}
+}
+country_event = {
+	id = naval_attrition.12
+	hide_window = yes
+
+	is_triggered_only = yes
+	
+	trigger = {
+		is_at_war = no
+		OR = {
+			has_federation = yes
+			is_subject = yes
+		}
+	}
+	
+	immediate = {
+		every_owned_planet = {
+			limit = { planet_devastation >= 50 }
+			add_planet_devastation = -3
+		}
+	}
+}
+country_event = {
+	id = naval_attrition.13
+	hide_window = yes
+
+	is_triggered_only = yes
+	
+	trigger = {
+		is_at_war = no
+		has_policy_flag = economic_policy_politics
+	}
+	
+	immediate = {
+		every_owned_planet = {
+			limit = { planet_devastation >= 10 }
+			add_planet_devastation = -3
+		}
 	}
 }

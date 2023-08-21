@@ -348,7 +348,7 @@
 @economic_plan_unity_target = 40
 @economic_plan_alloy_target = 10
 @economic_plan_fleet_cap_alloy_target = 50
-@economic_plan_machine_empire_alloy_target = 20
+@economic_plan_machine_empire_alloy_target = 18
 @economic_plan_pops_target = 9000
 @economic_plan_food_target = 10
 @economic_plan_food_target_extra = 20

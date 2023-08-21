@@ -1318,3 +1318,10 @@ mod_job_society_researcher_per_pop:0 "§G+1§! $job_society_researcher$ Job per 
 mod_job_society_researcher_per_pop_short:0 "\n§G+1§! £mod_job_society_researcher_add£ per $VALUE$ £pop£"
 job_society_researcher_plural:0 "society Researchers"
 job_society_researcher_effect_desc:0 "£job_society_researcher£ $job_society_researcher_plural$ turn §Y$resource of study$§! into £society£ §YResearch Points§! for new technologies"
+
+tooltip_economic_policy_politics_effects: "Gain 10 £unity£/month and 10 £society£/month for each migration pact.\nEvery planet with §Yplanet devastation§! over 10 reduce §Yplanet devastation§! every month of 3"
+migration: "Migrations"
+economic_policy_domination_name: "$economic_policy_domination$"
+economic_policy_politics_name: "$economic_policy_politics$"
+
+tooltip_drone_economic_policy_politics_effects: "Every planet with §Yplanet devastation§! over 10 reduce §Yplanet devastation§! every month of 3"

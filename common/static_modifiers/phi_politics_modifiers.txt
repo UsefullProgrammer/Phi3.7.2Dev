@@ -69,6 +69,7 @@ phi_planet_trading_guilds = {
 	icon = "gfx/interface/icons/planet_modifiers/pm_resources.dds"
 	icon_frame = 2
 	planet_stability_add = -10
+	planet_crime_add = 5
 	planet_crime_mult = 0.5
 	trade_value_mult = 0.5
 }

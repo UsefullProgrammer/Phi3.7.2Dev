@@ -22,9 +22,12 @@ district_generator = {
 		OR = {
 			NOT = { exists = owner }
 			owner = { 
-				has_monthly_income = {
-					resource = energy
-					value < 0
+				OR = {
+					is_ai = no
+					has_monthly_income = {
+						resource = energy
+						value < 10
+					}
 				}
 			} 
 			AND = {
@@ -191,7 +194,14 @@ district_mining = {
 		OR = {
 			owner = { is_ai = no }
 			owner = { is_machine_empire = yes }
-			is_capital = no
+			OR = {
+				is_capital = no
+				owner = {
+					count_owned_planet = {
+						count = 1
+					}
+				}
+			}
 		}
 	}
 
@@ -342,7 +352,7 @@ district_farming = {
 			 	is_capital = no
 			 	AND = {
 			 		owner = { 
-			 			has_resource = { type = food amount < 10 }
+			 			has_resource = { type = food amount < 100 }
 						has_monthly_income = {
 							resource = food
 							value < 0

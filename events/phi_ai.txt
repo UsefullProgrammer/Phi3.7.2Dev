@@ -819,7 +819,7 @@ country_event = {
 		
 		if = {
 			limit = {
-				
+				#
 				#check 1: if root is in a federation, is the prez weak?
 				OR = {
 					has_federation = no
@@ -832,7 +832,7 @@ country_event = {
 							relative_power = {
 								who = root
 								category = fleet
-								value > equivalent # io sono uguale o più debole di lui? <= equivalent?
+								value >= equivalent # io sono uguale o più debole di lui? <= equivalent?
 							}
 						}
 					}
@@ -856,7 +856,7 @@ country_event = {
 							}
 						}
 						AND = {
-							OR = { 
+							NOR = { 
 									has_policy_flag = diplo_stance_minimal_army
 									has_policy_flag = diplo_stance_disarmament
 							}

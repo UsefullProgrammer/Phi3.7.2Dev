@@ -84,7 +84,7 @@ tr_synchronicity_harmonious_directives = {
 	}
 
 	modifier = {
-		country_edict_fund_add = 50
+		country_edict_fund_add = 30
 		edicts_upkeep_mult = -0.5
 	}
 

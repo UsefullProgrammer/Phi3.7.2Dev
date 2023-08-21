@@ -208,7 +208,11 @@ district_city = {
 				owner = { is_ai = no } 
 			}
 			free_housing < 21
-			free_building_slots = 0
+			AND = {
+				free_building_slots = 0
+				num_buildings = { type = any value < 16 }
+			}
+			free_jobs > 10
 		}
 	}
 
@@ -356,8 +360,11 @@ district_hive = {
 				exists = owner
 				owner = { is_ai = no } 
 			}
-			free_housing < 3
-			free_building_slots = 0
+			free_housing < 21
+			AND = {
+				free_building_slots = 0
+				num_buildings = { type = any value < 16 }
+			}
 		}
 	}
 
@@ -458,8 +465,11 @@ district_nexus = {
 		OR = {
 			exists = owner
 			owner = { is_ai = no }
-			free_housing < 3
-			free_building_slots = 0
+			free_housing < 21
+			AND = {
+				free_building_slots = 0
+				num_buildings = { type = any value < 16 }
+			}
 		}
 	}
 

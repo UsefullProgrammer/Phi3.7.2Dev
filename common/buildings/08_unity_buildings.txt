@@ -3445,7 +3445,7 @@ building_league_offices = {
 	}
 
 	country_modifier = {
-		country_edict_fund_add = 50
+		country_edict_fund_add = 30
 		country_edict_fund_mult = 0.05
 	}
 
@@ -3453,7 +3453,7 @@ building_league_offices = {
 		potential = {
 			owner = { has_ascension_perk = ap_archaeoengineers }
 		}
-		country_edict_fund_add = 50
+		country_edict_fund_add = 30
 		country_edict_fund_mult = 0.05
 	}
 

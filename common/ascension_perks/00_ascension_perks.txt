@@ -1309,7 +1309,7 @@ ap_arcology_project = {
 	}
 
 	ai_weight = {
-		factor = 12
+		factor = 10
 		modifier = {
 			factor = 2
 			has_ethic = ethic_pacifist

@@ -536,6 +536,7 @@ tech_disruptors_1 = {
 	}
 
 	ai_weight = {
+		weight = 0.1
 		modifier = {
 			factor = 1.25
 			has_ethic = ethic_militarist

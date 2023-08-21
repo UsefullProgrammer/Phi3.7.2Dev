@@ -25,7 +25,7 @@ Count_planet_system = {
 		mode = mult
 	}
 }
-count_owned_planet = {
+count_phi_branch_owned_planet = {
 	base = 1
 	complex_trigger_modifier = {
 		trigger = count_owned_planet

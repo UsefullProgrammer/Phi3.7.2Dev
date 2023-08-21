@@ -1938,7 +1938,7 @@
 	
 		BOSS_MILITARY_POWER = 40000			# The military power at which AI feels safe to engage a 'boss' creature
 	
-		WAS_HUMAN_MONTHS = 360							# Amount of months that the AI will refrain from making large changes to the empire if it's taking over from a player
+		WAS_HUMAN_MONTHS = 1							# Amount of months that the AI will refrain from making large changes to the empire if it's taking over from a player
 	
 		MIN_FLEET_FOR_OPERATIONS = 500 				# Minimum fleet power to get assigned to missions like attacking targets etc
 		MIN_FLEET_TO_RESTRICT_SYSTEM = 3000
