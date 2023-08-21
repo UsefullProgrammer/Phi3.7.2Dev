@@ -18,8 +18,13 @@ namespace = phi_ai
 #	phi_ai.15	yearly checked - attack bbeg
 #	phi_ai.16	yearly checked - market simulator for gestalts empires
 #	phi_ai.17	yearly checked - refines the capital planet of gestalt 
+#   phi_ai.17   if declare war AI subjucation
+#   20-29		Replace Buildings
 #	phi_ai.20	yearly checked - replace up building of  gestalt empires
+#   30-39		Flags
 #	phi_ai.30	yearly checked - Set Flag washuman
+#   40-49			Mid Game District update
+	#	phi_ai.40	Mid game District update only artificial planet
 #	set_colony_type
 
 country_event = {
@@ -1138,6 +1143,15 @@ country_event = {
 	immediate = {
 		random_list = {
 			8  = {
+				modifier = {
+					factor = 2.5
+					OR = {
+						has_deficit = energy
+						has_deficit = consumer_goods
+						fleet_power < 1000
+						has_modifier = country_defaulted
+					}
+				}
 				every_war = {
 					limit = {
 						any_defender = {
@@ -1218,10 +1232,12 @@ country_event = {
 			5  = {
 				modifier = {
 					factor = 2
+					years_passed < 30
 					fleet_power > 8000
 				}
 				modifier = {
 					factor = 2
+					years_passed < 50
 					fleet_power > 16000
 				}
 				modifier = {
@@ -1308,6 +1324,8 @@ country_event = {
 					OR = {
 						has_deficit = energy
 						has_deficit = consumer_goods
+						fleet_power < 1000
+						has_modifier = country_defaulted
 					}
 				}
 			}
@@ -1994,6 +2012,7 @@ country_event = {
 							modifier = {
 								factor = 0
 								free_building_slots > 0
+								num_buildings = { type = any value = 12 }
 							}
 							owner = { add_resource = { minerals = -100 } }
 							add_district = district_city
@@ -2125,6 +2144,36 @@ country_event = {
 		}
 	}
 country_event = {
+	# if declare war AI subjucation
+		id = phi_ai.18
+	
+		hide_window = yes
+		is_triggered_only = yes
+		trigger = {
+			is_at_war = yes
+			any_war = {
+				any_attacker = {
+					is_same_value = root
+					is_war_leader = yes
+					is_ai = yes
+				}
+				any_defender = {
+					is_war_leader = yes
+					is_ai = yes
+				}
+				OR = {
+					using_war_goal = { type = wg_subjugation owner = attacker }
+					using_war_goal = { type = wg_tribute owner = attacker }
+				}
+			}
+		}
+		immediate = {
+			# THEN
+			add_resource = { influence = -150} #remove 150 influence
+		}
+	}
+	
+	country_event = {
 	#	phi_ai.30	yearly checked - Set Flag washuman
 	
 		id = phi_ai.30
@@ -2140,6 +2189,135 @@ country_event = {
 			set_country_flag = was_human
 		}
 }
+country_event = {
+	
+	#	phi_ai.40	YEARLI Mid game District update only artificial planet
+	
+	id = phi_ai.40
+	hide_window = yes
+
+	is_triggered_only = yes
+	
+	trigger = {
+		years_passed > 10
+		is_ai = yes
+		is_country_type = default
+		has_resource = { type = minerals amount >= 400 }
+		has_monthly_income = { resource = minerals value > 10 }
+	}
+	
+	immediate = {
+		every_owned_planet = {
+			limit = {
+				OR = {
+					num_unemployed > 1
+					free_jobs < 2 # if free jobs is < 2 probably use work clerk.
+				}
+				Can_remove_district_city = yes
+				has_resource = { type = minerals amount >= 400 }
+			}
+			if = {
+				limit = { has_district = district_city}
+				remove_district = district_city
+			}
+			else_if = {
+				limit = { has_district = district_hive}
+				remove_district = district_hive
+			}
+			else_if = {
+				limit = { has_district = district_nexus}
+				remove_district = district_nexus
+			}
+			else_if = {
+				limit = { has_district = district_crashed_slaver_ship}
+				remove_district = district_crashed_slaver_ship
+			}
+			
+			random_list = {
+				20 = {
+					modifier = {
+						factor = 0
+						num_free_districts = { type = district_generator value = 0 }
+					}
+					modifier = {
+						factor = 0.1
+						owner = { 
+							is_machine_empire = no
+							has_monthly_income = { resource = energy value > 50 } 
+						}
+					}
+					add_district = district_generator
+					owner = { add_resource = { minerals = -300 } }
+				}
+				15 = {
+					modifier = {
+						factor = 0
+						num_free_districts = { type = district_mining value = 0 }
+					}
+					modifier = {
+						factor = 0
+						owner = { has_monthly_income = { resource = minerals value > 100 } }
+					}
+					modifier = {
+						factor = 10
+						owner = { has_monthly_income = { resource = minerals value < 50 } }
+					}
+					add_district = district_mining
+					owner = { add_resource = { minerals = -300 } }
+				}
+				15 = {
+					modifier = {
+						factor = 0
+						num_free_districts = { type = district_farming value = 0 }
+					}
+					modifier = {
+						factor = 0.1
+						owner = { 
+							is_hive_empire = yes
+							has_monthly_income = { resource = food value > 10 } 
+						}
+					}
+					modifier = {
+						factor = 20
+						owner = { 
+							has_monthly_income = { resource = food value < 1 } 
+						}
+					}
+					add_district = district_farming
+					owner = { add_resource = { minerals = -300 } }
+				}
+				20 = {
+					modifier = {
+						factor = 0
+						num_free_districts = { type = district_industrial value = 0 }
+					}
+					modifier = {
+						factor = 1.1
+						owner = { 
+							is_machine_empire = yes
+						}
+					}
+					add_district = district_industrial
+					owner = { add_resource = { minerals = -400 } }
+					if = { 
+						limit = { owner = { has_tradition = tr_adaptability_recycling  }}
+						owner = { 
+							add_resource = { minerals = 15 } 
+						}
+					}
+				}
+			}
+			if = { 
+				limit = { owner = { has_tradition = tr_adaptability_recycling  }}
+				owner = { 
+					add_resource = { minerals = 45 } 
+				}
+			}
+		}
+	}
+}
+
+
 country_event = {
 #	phi_ai.777	test event
 
@@ -2313,6 +2491,7 @@ country_event = {
 					modifier = {
 						factor = 0.1
 						free_building_slots > 0
+						num_buildings = { type = any value = 12 }
 					}
 					modifier = {
 						factor = 100
@@ -2495,6 +2674,7 @@ country_event = {
 					modifier = {
 						factor = 0
 						free_building_slots > 0
+						num_buildings = { type = any value = 12 }
 					}
 					add_district = district_city
 					owner = { add_resource = { minerals = -400 } }
@@ -2502,32 +2682,4 @@ country_event = {
 			}
 		}
 	}
-}
-country_event = {
-    id = phi_ai.18
-
-    hide_window = yes
-    is_triggered_only = yes
-	trigger = {
-		is_at_war = yes
-		any_war = {
-			any_attacker = {
-				is_same_value = root
-				is_war_leader = yes
-				is_ai = yes
-			}
-			any_defender = {
-				is_war_leader = yes
-				is_ai = yes
-			}
-			OR = {
-				using_war_goal = { type = wg_subjugation owner = attacker }
-				using_war_goal = { type = wg_tribute owner = attacker }
-			}
-		}
-	}
-    immediate = {
-		# THEN
-		add_resource = { influence = -150} #remove 150 influence
-    }
 }

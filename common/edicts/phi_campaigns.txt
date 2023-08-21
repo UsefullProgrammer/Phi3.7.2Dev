@@ -212,7 +212,7 @@ phi_set_survive_wg = {
 					is_same_value = root
 				}
 			}
-			set_war_goal = { type = wg_phi_survive target = root }
+			set_war_goal = { type = wg_phi_survive target = root enemy = attacker }
 		}
 	}
 }

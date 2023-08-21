@@ -146,7 +146,7 @@ energy_expenditure_colonies = {
 		}
 		OR = {
 			has_civic = civic_franchising
-			empire_sprawl_over_cap < -30
+			empire_sprawl_over_cap < -27
 			# AND = {
 			# 	is_at_war = no
 			# 	empire_sprawl_over_cap < 30

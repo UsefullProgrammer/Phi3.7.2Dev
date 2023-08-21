@@ -4613,9 +4613,12 @@ declare_crisis_war_effect = {
 			}
 		}
 
-		join_war_on_side = {
-			war = event_target:crisis_war
-			side = event_target:community_war_leader
+		if = { 
+			limit = { NOT = { is_at_war_with = event_target:new_crisis } } # vfix - because some vassals are already at war having joined overlords
+			join_war_on_side = {
+				war = event_target:crisis_war
+				side = event_target:community_war_leader
+			}
 		}
 	}
 }
@@ -6102,7 +6105,10 @@ central_crystal_spawn_effect = {
 	}
 	else_if = {
 		limit = {
-			galaxy_size = small
+			OR = {
+				galaxy_size = small
+				galaxy_size = small10players
+			}
 		}
 		no_scope = {
 			# makes system positions originate from galactic core
@@ -6119,6 +6125,7 @@ central_crystal_spawn_effect = {
 	else_if = {
 		limit = {
 			galaxy_size = medium
+			galaxy_size = mediumover16
 		}
 		no_scope = {
 			# makes system positions originate from galactic core

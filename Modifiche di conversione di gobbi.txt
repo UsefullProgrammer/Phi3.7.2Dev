@@ -688,22 +688,51 @@ Implementato bonus percentuali negli edicts funds
 Dominion ora da bonus production anche a worker oltre agli slave
 
 [h1][b]1.8[/b[/h1]
-[h1][b]AI[/b][/h1]
-Fix AI non invitano più gli altri imperi se hanno un truce
-Cambiato IA quando deve entrare in una guerra di survive
-AI migliorata nella scelta di decisione planetarie e sclete in caso di deficit
-Migliorato drasticamente ai.
 
-[h1][b]Fix[/b][/h1]
-Fix bug paradox per cui un vassalo che ha i ribelli invece di combattere la guerra si arrende facendo perdere il vassalo all'overlord.
-Fix bug paradox per cui un ia in una federazione che ha i ribelli invece di combattere la guerra si arrende facendola in caso che ha un solo pianeta uscire dalla federazione.
-Fixato localization
-
-[h1][b]Altro[/b][/h1]
+[h1][b]Miglioramenti principali[/b][/h1]
 Miglorata selezione automatica ricerche
 Politica economica politica diminuisce planet devastation di 3 fino a 10
+Disarmament ora dà anche planet_building_build_speed_mult + 25%
+Aggiunto tooltip per sapere quanti building puoi fare così non devi contare a mano:
+[img]https://i.imgur.com/vnsVdQ0.png[/img]
+Se usate mod grafiche per il pianeta dovete scaricarvele a parte e dargli un altro nome e andare in interface/planet_view.guy nei parametri di title_buildings aggiungere 
+[code]
+effectButtonType = {
+	name = fl_planet_num_buildings
+	spriteType = GFX_fl_button_48_24
+	position = {
+		x = @fl_pos_van_x
+		y = @fl_pos_van_y
+	}
+	orientation = upper_right
+	buttonFont = @fl_font_van
+	buttonText = $fl_button_text$
+	effect = fl_num_building_effect
+}
+[/code]
+Ma attenzione funzionerà solo con la mod phigo!
+Se volete usare le vostre mod grafiche e non la phigo basta mettere la mod grafica [b]dopo[/b] nell'ordine del playset
+
+[h1][b]AI[/b][/h1]
+Fix AI non invitano più gli altri imperi nella federazione se hanno un truce
+Cambiato IA quando deve entrare in una guerra di survive
+AI migliorata nella scelta di decisione planetarie e sclete in caso di deficit
+La Ai rimpiazza i distretti city se non sono utili in distretti più utili
+Ai usa campagne e editti in modo più intelligente
+Migliorato ai.
+
+[h1][b]Fix[/b][/h1]
+Fix bug paradox per cui un vassalo AI che ha i ribelli invece di combattere la guerra si arrende facendo perdere il vassalo all'overlord.
+Fix bug paradox per cui un ia in una federazione che ha i ribelli invece di combattere la guerra si arrende facendola in caso che ha un solo pianeta uscire dalla federazione.
+Se i ribelli dovrebbero prendere la capitale ma l'impero ha una federazione o è un vassalo il pianeta sarà solo occupato e non posseduto per evitare di perdere l'impero causando altri bug.
+Fixato localization
+Nutritional_plenitude si disattiva in automatico se vai in negativo di cibo.
+Fisolto problema con galassia piccola media e media grande riguardo ad alcuni eventi su galaxysize
+Fix dozzine di bugs paradox sopratutto su exists mancanti
+Expel_corp non è più visualizzato come notifica
 
 [h1][b]Attrito planetario[/b][/h1]
 Modificato attrito planetario, ora massimo è 90 quando occupato
 Dopo la guerra se l'impero che ha perso avrà un bonus di -5 planet devastation al mese per recuperare l'attrito (fino a 50)
 Dopo la guerra se l'impero ha una federazione o un overlord avrà un bonus di -3 planet devastation al mese per recuperare l'attrito (fino a 50)
+

@@ -97,7 +97,15 @@ nutritional_plenitude = {
 		planet_pops_organics_food_upkeep_mult = 0.25
 		planet_pops_organics_minerals_upkeep_mult = 0.25
 	}
-
+	allow = {
+		NAND = {
+			has_resource = { type = food amount < 10 }
+			has_monthly_income = {
+				resource = food
+				value < 0
+			}
+		}
+	}
 	potential = {
 		is_gestalt = no
 	}
@@ -112,6 +120,10 @@ nutritional_plenitude = {
 
 	ai_weight = {
 		weight = @EdictHighPrio
+		modifier = {
+			factor = 0
+			has_resource = { type = food amount < 100 }
+		}
 	}
 }
 

@@ -74,10 +74,20 @@ education_campaign = {
 	}
 
 	ai_weight = {
-		weight = 0
+		weight = 1
 		modifier = {
 			weight = 1
 			has_edict = healthcare_campaign
+		}
+		modifier = {
+			weight = EdictHighPrio
+			AND = {
+				has_monthly_income = {
+					resource = energy
+					value > 32
+				}
+				has_resource = { type = energy amount > 1000 }
+			}
 		}
 	}
 }
@@ -109,11 +119,19 @@ recycling_campaign = {
 	ai_weight = {
 		weight = 0
 		modifier = {
-			weight = @EdictLowPrio
+			weight = @EdictMedPrio
 			has_monthly_income = {
 				resource = consumer_goods
 				value < 0
 			}
+		}
+		modifier = {
+			weight = @EdictMedPrio
+			count_owned_pop = { limit = { has_food_upkeep = yes }count > 100 }
+		}
+		modifier = {
+			factor = 2
+			count_owned_pop = { limit = { has_food_upkeep = yes }count > 50 }
 		}
 	}
 }

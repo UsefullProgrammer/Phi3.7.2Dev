@@ -149,3 +149,27 @@ is_a_total_war = {
 		has_valid_civic = civic_machine_assimilator
 	}
 }
+Can_remove_district_city = {
+	is_artificial = no
+	OR = {
+		free_amenities > 5 # clerk job produce essentially amenities
+		has_available_jobs = "clerk"
+	}
+	OR =  {
+		num_free_districts = { type = district_city value > 0 }
+		num_free_districts = { type = district_hive value > 0 }
+		num_free_districts = { type = district_nexus value > 0 }
+		num_free_districts = { type = district_crashed_slaver_ship value > 0 }
+	}
+	OR = {
+		free_housing > 21
+		AND = {
+			free_housing > 5 # 5+3 = 8
+			num_unemployed > 10
+		}
+	}
+	check_variable_arithmetic = { #will the revolt actually tick up?
+			which = value:bslot_capacity
+			value > 12
+	}
+}

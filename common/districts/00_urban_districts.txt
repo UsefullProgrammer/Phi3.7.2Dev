@@ -210,7 +210,7 @@ district_city = {
 			free_housing < 21
 			AND = {
 				free_building_slots = 0
-				num_buildings = { type = any value < 16 }
+				num_buildings = { type = any value < 12 }
 			}
 			free_jobs > 10
 		}
@@ -363,7 +363,7 @@ district_hive = {
 			free_housing < 21
 			AND = {
 				free_building_slots = 0
-				num_buildings = { type = any value < 16 }
+				num_buildings = { type = any value < 12 }
 			}
 		}
 	}
@@ -468,7 +468,7 @@ district_nexus = {
 			free_housing < 21
 			AND = {
 				free_building_slots = 0
-				num_buildings = { type = any value < 16 }
+				num_buildings = { type = any value < 12 }
 			}
 		}
 	}

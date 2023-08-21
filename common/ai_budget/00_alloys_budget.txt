@@ -48,6 +48,7 @@ alloys_expenditure_ships = {
 		modifier = {
 			factor = 0.25
 			AND = {
+				empire_sprawl_over_cap < -27
 				ai_colonize_plans > 0
 				is_at_war = no
 			}
@@ -229,7 +230,7 @@ alloys_expenditure_colonies_expand = {
 		ai_colonize_plans > 0
 		OR = {
 			has_civic = civic_franchising
-			empire_sprawl_over_cap < -30
+			empire_sprawl_over_cap < -27
 			# AND = {
 			# 	is_gestalt = no
 			# 	is_at_war = no
@@ -290,7 +291,7 @@ alloys_expenditure_colonies_expand_machine = {
 		ai_colonize_plans > 0
 		OR = {
 			has_civic = civic_franchising
-			empire_sprawl_over_cap < -30
+			empire_sprawl_over_cap < -27
 		}
 	}
 
@@ -352,7 +353,14 @@ alloys_expenditure_habitats = {
 			factor = 0
 			NOR = {
 				has_civic = civic_franchising
-				empire_sprawl_over_cap < -30
+				empire_sprawl_over_cap < -27
+			}
+		}
+		modifier = {
+			factor = 2.5
+			AND = {
+				ai_colonize_plans <= 0
+				empire_sprawl_over_cap < -27
 			}
 		}
 		modifier = {
@@ -367,14 +375,14 @@ alloys_expenditure_habitats = {
 				count < 4
 			}
 		}
-		modifier = {
-			factor = 2
-			has_origin = origin_void_dwellers
-			count_owned_planet = {
-				limit = { is_planet_class = pc_habitat }
-				count < 6
-			}
-		}
+		# modifier = {
+		# 	factor = 2
+		# 	has_origin = origin_void_dwellers
+		# 	count_owned_planet = {
+		# 		limit = { is_planet_class = pc_habitat }
+		# 		count < 6
+		# 	}
+		# }
 		modifier = {
 			factor = 5
 			mid_game_years_passed > 0
@@ -384,13 +392,14 @@ alloys_expenditure_habitats = {
 			factor = 0.5
 			has_trait = trait_aquatic
 		}
+		
 		modifier = { #Build fortress habitats
 			factor = 2
 			used_naval_capacity_percent > 0.95
 			used_starbase_capacity_percent >= 1
 		}
 		modifier = {
-			factor = 0.5
+			factor = 0
 			is_at_war = yes
 		}
 	}

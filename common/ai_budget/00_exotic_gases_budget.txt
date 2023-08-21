@@ -30,9 +30,48 @@ exotic_gases_expenditure_ships = {
 
 	weight = {
 		weight = 0.1
+		
 		modifier = {
 			factor = 5
 			is_dragon_breeder_country = yes
+		}
+		modifier = {
+			factor = 2
+			OR = {
+				recently_lost_war = yes
+				is_at_war = yes
+			}
+		}
+		modifier = {
+			factor = 2
+			years_passed > 15
+			is_homicidal = yes
+		}
+
+		# If we want to colonize and are at peace then prio that
+		modifier = {
+			factor = 0.25
+			AND = {
+				empire_sprawl_over_cap < -27
+				ai_colonize_plans > 0
+				is_at_war = no
+			}
+		}
+
+		# spend less alloys on ships if over capacity
+		modifier = {
+			factor = 0.5
+			used_naval_capacity_percent >= 1.0
+		}
+
+		modifier = {
+			factor = 5
+			used_naval_capacity_percent < 1.0
+			OR = {
+				any_neighbor_country = {
+					has_country_flag = phi_bbeg
+				}
+			}
 		}
 	}
 }

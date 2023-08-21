@@ -11,20 +11,23 @@ Autowar: se un total war confina con un total war scatena una guerra in automati
 Syndacato non può fare branch su alleanza membri e su patti di non agressioni. ok
 Inoltre se lo fa all'overlord l'overlord può tramite decisione distruggerlo. da testare ok
 Oppure se si diminuisce la decisione da +100% a OK
-
-
-
+Bug vassalo perso perchè ia finito guerra. OK
+FREE HEAVEN RIDURLO AL -33% NO
+CHAMP OF THE EMPIRE DA -2 A -1 OK
+Burocratici +1 society OK 
+Priest +1 society OK
 IA non può invitare in federazione chi ha un truce con lei OK
-FREE HEAVEN RIDURLO AL -33%
-CHAMP OF THE EMPIRE DA -2 A -1
-Burocratici +1 society
-Priest +1 society
 
-
-Bug vassalo perso perchè ia finito guerra. ?
 Politcs economy every migration pact +25 society e +25 unity test?
 
 building per mining
 Far fare spawning pools alle AI nelle non capitali
 AI costruisce lab di livello dopo trmaite evneto phi AI
 Consumer goods ogni tanto manca.
+
+Fare operazioni segrete:
+Investire su pirati, un impero non gestalt aumentare probabilità pirati del 50%
+Minare trattati commerciali: i trattati commerciali e i bonus da politiche come diplomazia sono ridotte per 10 anni dal 25 al 75% (random)
+Malfunzionamento aumentare per i robot probabilità di malfunzionamento leader
+Avvelenamento Aumentare probabilità di morte improvvisa
+Uccidi leader, uccidi un leader (casuale al 50%) ma dai un casus bellis non survie di vendetta uccisione leader che porta umiliazione

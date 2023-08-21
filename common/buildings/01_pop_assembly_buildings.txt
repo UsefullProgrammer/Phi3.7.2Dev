@@ -324,7 +324,7 @@ building_machine_assembly_plant = {
 				free_jobs < 1
 				OR = {
 					free_jobs < -10
-					num_buildings = { type = any value = 16 }
+					num_buildings = { type = any value = 12 }
 					is_planet_class = pc_habitat
 				}
 				#Merge 3.7.2
@@ -390,7 +390,7 @@ building_machine_assembly_complex = {
 				free_jobs < 1
 				OR = {
 					free_jobs < -10
-					num_buildings = { type = any value = 16 }
+					num_buildings = { type = any value = 12 }
 					is_planet_class = pc_habitat
 				}
 				#Merge 3.7.2
@@ -457,7 +457,7 @@ building_machine_assembly_complex_3 = {
 				free_jobs < 1
 				OR = {
 					free_jobs < -10
-					num_buildings = { type = any value = 16 }
+					num_buildings = { type = any value = 12 }
 					is_planet_class = pc_habitat
 				}
 				#Merge 3.7.2
@@ -513,7 +513,7 @@ building_spawning_pool = {
 		OR = {
 			AND = {
 				free_jobs > 0
-				num_buildings = { type = any value < 15 }
+				num_buildings = { type = any value < 11 }
 			}
 			owner = { is_ai = no }
 		}
@@ -627,7 +627,7 @@ building_offspring_nest = {
 		or = {
 			AND = {
 				free_jobs > 0
-				num_buildings = { type = any value < 15 }
+				num_buildings = { type = any value < 11 }
 			}
 			owner = { is_ai = no }
 		}

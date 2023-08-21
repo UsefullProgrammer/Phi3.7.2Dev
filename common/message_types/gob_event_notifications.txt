@@ -23,7 +23,7 @@ message_type = {
 	ping = "ping_notification_green"
 	auto_opens = others # all = Popup Window EVERY notification | others = seemingly never | yes = Popup Window only once| none = Popup Either EVERY notification or nothinf at all
 }
-
+#relics
 #########################################
 #
 # Survive

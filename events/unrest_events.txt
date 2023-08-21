@@ -1495,7 +1495,19 @@ situation_event = {
 						establish_communications_no_message = event_target:new_owner_empire
 					}
 					event_target:rebel_planet = { #Flip the target planet
-						set_owner = event_target:rebel_empire
+						if = { #not flip capital if can be helped
+							limit = { 
+								is_capital = yes 
+								OR = {
+									has_federation = yes
+									is_subject = yes
+								}
+							}
+							set_controller = event_target:rebel_empire
+						}
+						else = { 
+							set_owner = event_target:rebel_empire
+						}
 						if = {
 							limit = {
 								root = { has_situation_flag = slave_revolt }

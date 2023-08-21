@@ -279,7 +279,7 @@ building_bureaucratic_1 = {
 			}
 			AND = {
 				owner = { is_ai = yes }
-				num_buildings = { type = any value = 16 }
+				num_buildings = { type = any value = 12 }
 			}
 		}
 	}
