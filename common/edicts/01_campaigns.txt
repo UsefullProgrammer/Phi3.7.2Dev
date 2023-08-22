@@ -80,7 +80,7 @@ education_campaign = {
 			has_edict = healthcare_campaign
 		}
 		modifier = {
-			weight = EdictHighPrio
+			weight = @EdictHighPrio
 			AND = {
 				has_monthly_income = {
 					resource = energy

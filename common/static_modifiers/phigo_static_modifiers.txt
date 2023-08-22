@@ -48,6 +48,9 @@ phi_graygoo_country = {
 	empire_size_colonies_mult = -0.9
 	all_technology_research_speed = -0.99
 }
+Phi_auto_ai_malus = {
+	planet_building_build_speed_mult = -0.5
+}
 # centralization_colony = {
 # 	icon = "gfx/interface/icons/planet_modifiers/pm_resort_planet.dds"
 # 	icon_frame = 1

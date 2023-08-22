@@ -279,7 +279,10 @@ building_bureaucratic_1 = {
 			}
 			AND = {
 				owner = { is_ai = yes }
-				num_buildings = { type = any value = 12 }
+				OR = {
+					num_buildings = { type = any value = 12 }
+					NOT = { has_building = building_autochthon_monument }
+				}
 			}
 		}
 	}
@@ -288,6 +291,7 @@ building_bureaucratic_1 = {
 		building_temple
 		building_hive_node
 		building_uplink_node
+		building_autochthon_monument
 	}
 
 	resources = {

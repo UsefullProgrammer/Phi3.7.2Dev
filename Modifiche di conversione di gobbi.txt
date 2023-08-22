@@ -736,3 +736,7 @@ Modificato attrito planetario, ora massimo è 90 quando occupato
 Dopo la guerra se l'impero che ha perso avrà un bonus di -5 planet devastation al mese per recuperare l'attrito (fino a 50)
 Dopo la guerra se l'impero ha una federazione o un overlord avrà un bonus di -3 planet devastation al mese per recuperare l'attrito (fino a 50)
 
+[h1][b]1.8.1[/b][/h1]
+
+[h1][b]AI[/b][/h1]
+Miglioramenti gestione pop assembly per L'ai

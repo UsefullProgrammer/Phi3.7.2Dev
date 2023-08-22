@@ -8,6 +8,7 @@ l_german:
   fl_building_capacity_color: "§Y[This.fl_building_capacity]§!"
   fl_building_capacity: "[This.fl_building_capacity]"
   fl_building_constructing: "\n$DISTRICT_UNDER_CONSTRUCTION$[This.fl_building_constructing]"
+    fl_building_free_plus: : "§B[This.fl_building_plus]§!"
   fl_building_free_good: "§G[This.fl_building_free]§!"
   fl_building_free_zero: "§W[This.fl_building_free]§!"
   fl_building_free_bad: "§R[This.fl_building_free]§!"

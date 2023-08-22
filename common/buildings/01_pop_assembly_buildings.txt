@@ -44,6 +44,7 @@ building_robot_assembly_plant = {
 					is_capital = no
 					NOT = { is_planet_class = pc_habitat }
 				}
+				Planet_need_work_job = no
 				#merge 3.7.2
 				#NAND = {
 				#	free_district_slots = 0
@@ -65,22 +66,6 @@ building_robot_assembly_plant = {
 				}
 			}
 			has_modifier = slave_colony
-			AND = {
-				owner = { is_ai = yes }
-				free_jobs < 1
-				OR = {
-					num_buildings = {
-						type = any
-						value = 16
-					}
-					is_planet_class = pc_habitat
-				}
-				#merge3.7.2
-				#free_district_slots = 0
-				#free_building_slots = 0
-				#free_housing <= 0
-				#free_jobs <= 0
-			}
 			owner = {
 				is_ai = yes
 				has_ascension_perk = ap_engineered_evolution
@@ -193,13 +178,6 @@ building_robot_assembly_complex = {
 				}
 			}
 			has_modifier = slave_colony
-			AND = {
-				owner = { is_ai = yes }
-				free_district_slots = 0
-				free_building_slots = 0
-				free_housing <= 0
-				free_jobs <= 0
-			}
 			owner = {
 				is_ai = yes
 				has_ascension_perk = ap_engineered_evolution
@@ -300,10 +278,12 @@ building_machine_assembly_plant = {
 			OR = {
 				owner = { is_ai = no }
 				AND = {
-					free_jobs > 0
-					num_buildings = { type = building_machine_assembly_plant value <= 4 }
-					NOT = { is_planet_class = pc_habitat }
+					AND = {
+						is_capital = yes
+						num_buildings = { type = building_machine_assembly_plant value <= 4 }
+					}
 				}
+				Planet_need_work_job = no
 				#Merge 3.7.2
 				#NAND = {
 				#	free_district_slots = 0
@@ -321,12 +301,7 @@ building_machine_assembly_plant = {
 			owner = { is_robot_empire = no }
 			AND = {
 				owner = { is_ai = yes }
-				free_jobs < 1
-				OR = {
-					free_jobs < -10
-					num_buildings = { type = any value = 12 }
-					is_planet_class = pc_habitat
-				}
+				
 				#Merge 3.7.2
 				#free_district_slots = 0
 				#free_building_slots = 0
@@ -387,12 +362,7 @@ building_machine_assembly_complex = {
 			}
 			AND = {
 				owner = { is_ai = yes }
-				free_jobs < 1
-				OR = {
-					free_jobs < -10
-					num_buildings = { type = any value = 12 }
-					is_planet_class = pc_habitat
-				}
+				
 				#Merge 3.7.2
 				#free_district_slots = 0
 				#free_building_slots = 0
@@ -454,12 +424,7 @@ building_machine_assembly_complex_3 = {
 			}
 			AND = {
 				owner = { is_ai = yes }
-				free_jobs < 1
-				OR = {
-					free_jobs < -10
-					num_buildings = { type = any value = 12 }
-					is_planet_class = pc_habitat
-				}
+				
 				#Merge 3.7.2
 				#free_district_slots = 0
 				#free_building_slots = 0
@@ -510,13 +475,15 @@ building_spawning_pool = {
 			is_hive_empire = yes
 			NOT = { has_origin = origin_progenitor_hive }
 		}
+		
+	}
+	allow = {
 		OR = {
-			AND = {
-				free_jobs > 0
-				num_buildings = { type = any value < 11 }
-			}
+			num_buildings = { type = building_spawning_pool value <= 4 }
+			Planet_need_work_job = no
 			owner = { is_ai = no }
 		}
+		
 	}
 
 	destroy_trigger = {
@@ -530,15 +497,7 @@ building_spawning_pool = {
 			}
 			AND = {
 				owner = { is_ai = yes }
-				free_jobs < 1
-				OR = {
-					free_jobs < -10
-					num_buildings = {
-						type = any
-						value = 16
-					}
-					is_planet_class = pc_habitat
-				}
+				
 				#merge3.7.2
 				#free_district_slots = 0
 				#free_building_slots = 0
@@ -624,30 +583,16 @@ building_offspring_nest = {
 	potential = {
 		exists = owner
 		owner = { has_origin = origin_progenitor_hive }
-		or = {
-			AND = {
-				free_jobs > 0
-				num_buildings = { type = any value < 11 }
-			}
-			owner = { is_ai = no }
-		}
 	}
-
+	allow = {
+		Planet_need_work_job = no
+	}
 	destroy_trigger = {
 		exists = owner
 		OR = {
 			owner = { NOT = { has_origin = origin_progenitor_hive } }
 			AND = {
 				owner = { is_ai = yes }
-				free_jobs < 1
-				OR = {
-					free_jobs < -10
-					num_buildings = {
-						type = any
-						value = 16
-					}
-					is_planet_class = pc_habitat
-				}
 				#merge3.7.2
 				#free_district_slots = 0
 				#free_building_slots = 0
@@ -1062,27 +1007,18 @@ building_clone_vats = {
 			NOT = { exists = assembling_species }
 			assembling_species = { is_organic_species = yes }
 		}
+		
+	}
+	allow = {
 		OR = {
 			owner = { is_ai = no }
-			NAND = {
-				free_district_slots = 0
-				free_building_slots <= 1
-				free_housing <= 0
-				free_jobs <= 0
-			}
+			Planet_need_work_job = yes
 		}
 	}
 
 	destroy_trigger = {
 		exists = owner
 		OR = {
-			AND = {
-				owner = { is_ai = yes }
-				free_district_slots = 0
-				free_building_slots = 0
-				free_housing <= 0
-				free_jobs <= 0
-			}
 			NOT = { owner = { has_tradition = tr_genetics_adopt } }
 		}
 	}

@@ -137,7 +137,7 @@ Has_precursor_chain = {
 					}
 				}
 			}
-		}
+			}
 }
 
  
@@ -150,26 +150,61 @@ is_a_total_war = {
 	}
 }
 Can_remove_district_city = {
-	is_artificial = no
-	OR = {
-		free_amenities > 5 # clerk job produce essentially amenities
-		has_available_jobs = "clerk"
-	}
-	OR =  {
-		num_free_districts = { type = district_city value > 0 }
-		num_free_districts = { type = district_hive value > 0 }
-		num_free_districts = { type = district_nexus value > 0 }
-		num_free_districts = { type = district_crashed_slaver_ship value > 0 }
-	}
-	OR = {
-		free_housing > 21
-		AND = {
-			free_housing > 5 # 5+3 = 8
-			num_unemployed > 10
+	AND = {
+		is_scope_type = planet
+		is_artificial = no
+		check_variable_arithmetic = { which = value:bslot_capacity_ai value > 12 }
+		OR = {
+			free_amenities > 5 # clerk job produce essentially amenities
+			has_available_jobs = "clerk"
+		}
+		OR =  {
+			has_district = district_city
+			has_district = district_hive
+			has_district = district_nexus
+			has_district = district_crashed_slaver_ship
+		}
+		OR = {
+			free_housing > 21
+			AND = {
+				free_housing > 5 # 5+3 = 8
+				num_unemployed > 10
+			}
+			AND = {
+				free_housing > 5
+				planet_stability < 50
+			}
 		}
 	}
-	check_variable_arithmetic = { #will the revolt actually tick up?
-			which = value:bslot_capacity
-			value > 12
+	
+}
+Planet_need_work_job = {
+	exists = owner
+	OR = {
+		AND = { #normal empire
+			owner = { is_gestalt = no }
+			planet_stability < 70
+			num_unemployed > 5
+		}
+		AND = {
+			owner = { is_robot_empire = yes }
+			num_unemployed > 15
+		}
+		AND = {
+			owner = { is_hive_empire = yes }
+			planet_crime > 25
+		}
+	}
+}
+has_pop_assembly_buildings = {
+	OR = {
+		has_building = building_robot_assembly_plant
+		has_building = building_robot_assembly_complex
+		has_building = building_machine_assembly_plant
+		has_building = building_machine_assembly_complex
+		has_building = building_machine_assembly_complex_3
+		has_building = building_spawning_pool
+		has_building = building_offspring_nest
+		has_building = building_clone_vats
 	}
 }

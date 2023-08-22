@@ -46,7 +46,8 @@ on_yearly_pulse_country = {
 		phi_ai.17				#refines the capital planet of gestalt
 		phi_ai.30				#yearly checked - Set Flag washuman
 		phi_politics.10 # remove modifier embassy at not capital.
-		phi_ai.40
+		phi_ai.40 #Mid game District update only not artificial planet
+		phi_ai.41 #Universally remove/replace pop assembly
 		#enhanced_diplomacy.10 #give bonus galactic community to more weak.
 	}
 }

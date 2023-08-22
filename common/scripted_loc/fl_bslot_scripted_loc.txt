@@ -56,16 +56,37 @@ defined_text = {
         value = trigger:free_building_slots
 }
 defined_text = {
+        name = fl_building_surplus
+        value = value:bslot_surplus
+}
+
+defined_text = {
         name = fl_bslot_free_dyn
 
         text = {
                 trigger = {
+                        check_variable_arithmetic = { which = value:bslot_surplus value > 0 }
+                        check_variable_arithmetic = { which = trigger:free_building_slots value = 0 }
+                }
+                localization_key = fl_building_surplus_blue
+        }
+        text = {
+                trigger = {
+                        check_variable_arithmetic = { which = value:bslot_surplus value = 0 }
+                        check_variable_arithmetic = { which = trigger:free_building_slots value = 0 }
+                }
+                localization_key = fl_building_free_zero
+        }
+        text = {
+                trigger = {
+                        check_variable_arithmetic = { which = value:bslot_surplus value < 0 }
                         check_variable_arithmetic = { which = trigger:free_building_slots value > 0 }
                 }
                 localization_key = fl_building_free_good
         }
         text = {
                 trigger = {
+                        check_variable_arithmetic = { which = value:bslot_surplus value < 0 }
                         check_variable_arithmetic = { which = trigger:free_building_slots value = 0 }
                 }
                 localization_key = fl_building_free_zero
@@ -104,7 +125,6 @@ defined_text = {
         }
         default = BLANK_STRING
 }
-
 defined_text = {
         inline_script = {
                 script = fl_sloc_one_or_more
