@@ -902,6 +902,22 @@ entertainer = {
 			}
 		}
 		modifier = {
+			factor = 0.5
+			NOT = { has_job = entertainer }
+			exists = planet
+			planet = {
+				free_amenities > 15
+			}
+		}
+		modifier = {
+			factor = 0.5
+			NOT = { has_job = entertainer }
+			exists = planet
+			planet = {
+				free_amenities > 30
+			}
+		}
+		modifier = {
 			factor = 2
 			NOT = { has_job = entertainer }
 			exists = planet

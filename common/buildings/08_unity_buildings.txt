@@ -277,13 +277,6 @@ building_bureaucratic_1 = {
 					has_make_spiritualist_perk = yes
 				}
 			}
-			AND = {
-				owner = { is_ai = yes }
-				OR = {
-					num_buildings = { type = any value = 12 }
-					NOT = { has_building = building_autochthon_monument }
-				}
-			}
 		}
 	}
 

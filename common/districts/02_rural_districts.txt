@@ -26,7 +26,7 @@ district_generator = {
 					is_ai = no
 					has_monthly_income = {
 						resource = energy
-						value < 10
+						value < 100
 					}
 				}
 			} 
@@ -55,9 +55,9 @@ district_generator = {
 		owner = {
 			is_ai = yes
 			should_ai_focus_on_trade = yes
-			
+			has_active_tradition = tr_mercantile_commercial_enterprise
 		}
-		free_jobs > 2
+		free_jobs > 4
 	}
 
 	conversion_ratio = 1
@@ -355,7 +355,7 @@ district_farming = {
 			 			has_resource = { type = food amount < 100 }
 						has_monthly_income = {
 							resource = food
-							value < 0
+							value < 10
 						}
 					}
 				}

@@ -278,19 +278,12 @@ building_machine_assembly_plant = {
 			OR = {
 				owner = { is_ai = no }
 				AND = {
-					AND = {
-						is_capital = yes
-						num_buildings = { type = building_machine_assembly_plant value <= 4 }
-					}
+					is_capital = yes
+					num_buildings = { type = building_machine_assembly_plant value <= 4 }
+					num_buildings = { type = building_machine_assembly_complex value <= 4 }
+					
 				}
 				Planet_need_work_job = no
-				#Merge 3.7.2
-				#NAND = {
-				#	free_district_slots = 0
-				#	free_building_slots <= 1
-				#	free_housing <= 0
-				#	free_jobs <= 0
-				#}
 			}
 		}
 	}
@@ -299,15 +292,6 @@ building_machine_assembly_plant = {
 		exists = owner
 		OR = {
 			owner = { is_robot_empire = no }
-			AND = {
-				owner = { is_ai = yes }
-				
-				#Merge 3.7.2
-				#free_district_slots = 0
-				#free_building_slots = 0
-				#free_housing <= 0
-				#free_jobs <= 0
-			}
 		}
 	}
 
@@ -359,15 +343,6 @@ building_machine_assembly_complex = {
 		OR = {
 			owner = {
 				is_robot_empire = no
-			}
-			AND = {
-				owner = { is_ai = yes }
-				
-				#Merge 3.7.2
-				#free_district_slots = 0
-				#free_building_slots = 0
-				#free_housing <= 0
-				#free_jobs <= 0
 			}
 		}
 	}
@@ -421,15 +396,6 @@ building_machine_assembly_complex_3 = {
 		OR = {
 			owner = {
 				is_robot_empire = no
-			}
-			AND = {
-				owner = { is_ai = yes }
-				
-				#Merge 3.7.2
-				#free_district_slots = 0
-				#free_building_slots = 0
-				#free_housing <= 0
-				#free_jobs <= 0
 			}
 		}
 	}
@@ -494,15 +460,6 @@ building_spawning_pool = {
 					is_hive_empire = no
 					has_origin = origin_progenitor_hive
 				}
-			}
-			AND = {
-				owner = { is_ai = yes }
-				
-				#merge3.7.2
-				#free_district_slots = 0
-				#free_building_slots = 0
-				#free_housing <= 0
-				#free_jobs <= 0
 			}
 		}
 	}
@@ -591,14 +548,6 @@ building_offspring_nest = {
 		exists = owner
 		OR = {
 			owner = { NOT = { has_origin = origin_progenitor_hive } }
-			AND = {
-				owner = { is_ai = yes }
-				#merge3.7.2
-				#free_district_slots = 0
-				#free_building_slots = 0
-				#free_housing <= 0
-				#free_jobs <= 0
-			}
 		}
 	}
 

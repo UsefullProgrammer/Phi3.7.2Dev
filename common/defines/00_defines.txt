@@ -1834,10 +1834,10 @@
 		AI_FREE_JOBS_BUILDING_BUILD_CAP = 6						# AI will not build new buildings on a planet with more than this many free jobs
 		AI_DEFICIT_SCORE_MULT = 100		
 		AI_RARE_RESOURCE_SCORE_MULT = 10						# AI will score buildings producing resources in deficit this much more
-		AI_FOCUS_SCORE_MULT = 40								# AI will score buildings producing focus resources this much more
+		AI_FOCUS_SCORE_MULT = 5								# AI will score buildings producing focus resources this much more
 		AI_RESOURCE_PRODUCTION_SCORE_MULT = 1 
 		AI_AMENITIES_SCORE_MULT = 5							# AI will score amenity buildings this much more than other misc resources
-		AI_HOUSING_SCORE_MULT = 8								# AI will score housing buildings this much more than other misc resources
+		AI_HOUSING_SCORE_MULT = 10								# AI will score housing buildings this much more than other misc resources
 		AI_CRIME_REDUCTION_SCORE_MULT = 2						# AI will score crime fighting buildings this much more than other misc resource
 		AI_CRIME_REDUCTION_THRESHOLD = 15						# AI will start to think about reducing crime after this threshold has been reached
 		AI_ADMIN_CAP_SCORE_MULT = 2								# AI will score admin cap buildings this much more than other misc resource
@@ -1895,7 +1895,7 @@
 		# Defines used to enable AI to destroy buildings/districts if they are producing too much of a resource
 		# current income needs to surpass both the addative and the multiplicative check in order to be destroyed
 		AI_ADDITIVE_SUPERFLUOUS_INCOME_THRESOLD = 50 		# Addative threshold,
-		AI_MULTIPLICATIVE_SUPERFLUOUS_INCOME_THRESOLD = 1.3 	# Multiplicative threshold
+		AI_MULTIPLICATIVE_SUPERFLUOUS_INCOME_THRESOLD = 1.3	# Multiplicative threshold
 	
 		WAR_OCCUPIED_BORDER_PRIO = 20				# Priority on targeting systems that are bordering our occupied space
 		WAR_OWN_BORDER_PRIO	= 10					# Priority on targeting systems that are bordering us
@@ -1936,7 +1936,7 @@
 		CRISIS_MILITARY_POWER_MULT_DESPERATION = 0.10		# AI willing to engage crisis factions at these odds when down to their last few worlds
 		CRISIS_MILITARY_AGGRESSIVENESS = 2					# aggressiveness of crisis empires. This works the saame as the value in personalities (but crisis don't have personalities, and were using the default "1"
 	
-		BOSS_MILITARY_POWER = 40000			# The military power at which AI feels safe to engage a 'boss' creature
+		BOSS_MILITARY_POWER = 80000			# The military power at which AI feels safe to engage a 'boss' creature
 	
 		WAS_HUMAN_MONTHS = 1							# Amount of months that the AI will refrain from making large changes to the empire if it's taking over from a player
 	

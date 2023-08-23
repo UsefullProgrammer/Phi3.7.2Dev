@@ -693,25 +693,16 @@ Dominion ora da bonus production anche a worker oltre agli slave
 Miglorata selezione automatica ricerche
 Politica economica politica diminuisce planet devastation di 3 fino a 10
 Disarmament ora dà anche planet_building_build_speed_mult + 25%
-Aggiunto tooltip per sapere quanti building puoi fare così non devi contare a mano:
+Aggiunto mod grafica [url=https://steamcommunity.com/sharedfiles/filedetails/?edit=true&id=3024277504]link[/url] tooltip per sapere quanti building puoi fare così non devi contare a mano:
 [img]https://i.imgur.com/vnsVdQ0.png[/img]
-Se usate mod grafiche per il pianeta dovete scaricarvele a parte e dargli un altro nome e andare in interface/planet_view.guy nei parametri di title_buildings aggiungere 
+Se volete aggiungerla ma usare le vostre mod grafiche per il pianeta dovete scaricarvele a parte e dargli un altro nome e andare in interface/planet_view.guy nei parametri di title_buildings aggiungere button type fl_planet_num_buildings
 [code]
 effectButtonType = {
 	name = fl_planet_num_buildings
-	spriteType = GFX_fl_button_48_24
-	position = {
-		x = @fl_pos_van_x
-		y = @fl_pos_van_y
-	}
-	orientation = upper_right
-	buttonFont = @fl_font_van
-	buttonText = $fl_button_text$
-	effect = fl_num_building_effect
+	[...]
 }
 [/code]
 Ma attenzione funzionerà solo con la mod phigo!
-Se volete usare le vostre mod grafiche e non la phigo basta mettere la mod grafica [b]dopo[/b] nell'ordine del playset
 
 [h1][b]AI[/b][/h1]
 Fix AI non invitano più gli altri imperi nella federazione se hanno un truce
