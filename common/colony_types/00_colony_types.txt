@@ -94,11 +94,12 @@ col_city = {
 			has_designation = col_city
 		}
 		complex_trigger_modifier = {
-			trigger = num_districts
+			trigger = num_assigned_jobs
 			parameters = {
-				type = district_city
+				job = clerk
 			}
 			mode = add
+			mult = 0.5
 		}
 		complex_trigger_modifier = {
 			trigger = num_assigned_jobs
@@ -733,6 +734,14 @@ col_foundry = {
 					resource = alloys
 					value < trigger:years_passed
 				}
+			}
+		}
+		modifier = {
+			factor = 0
+			exists = owner
+			owner = {
+				has_monthly_income = { resource = consumer_goods value < 0 }
+				has_resource = { type = consumer_goods amount < 500 }
 			}
 		}
 		modifier = {

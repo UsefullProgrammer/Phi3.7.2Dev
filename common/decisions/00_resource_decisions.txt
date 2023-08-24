@@ -139,5 +139,9 @@ decision_planet_luxuries_boost = {
 			factor = 1000
 			free_amenities <= -5
 		}
+		modifier = {
+			factor = 1000
+			free_amenities <= -10
+		}
 	}
 }

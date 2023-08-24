@@ -1830,27 +1830,27 @@
 	}
 	
 	NAI = {
-		AI_FREE_JOBS_DISTRICT_BUILD_CAP = 2						# AI will not build new districts on a planet with more than this many free jobs
+		AI_FREE_JOBS_DISTRICT_BUILD_CAP = 6						# AI will not build new districts on a planet with more than this many free jobs
 		AI_FREE_JOBS_BUILDING_BUILD_CAP = 6						# AI will not build new buildings on a planet with more than this many free jobs
 		AI_DEFICIT_SCORE_MULT = 100		
 		AI_RARE_RESOURCE_SCORE_MULT = 10						# AI will score buildings producing resources in deficit this much more
-		AI_FOCUS_SCORE_MULT = 5								# AI will score buildings producing focus resources this much more
+		AI_FOCUS_SCORE_MULT = 30								# AI will score buildings producing focus resources this much more
 		AI_RESOURCE_PRODUCTION_SCORE_MULT = 1 
 		AI_AMENITIES_SCORE_MULT = 5							# AI will score amenity buildings this much more than other misc resources
-		AI_HOUSING_SCORE_MULT = 10								# AI will score housing buildings this much more than other misc resources
+		AI_HOUSING_SCORE_MULT = 15								# AI will score housing buildings this much more than other misc resources
 		AI_CRIME_REDUCTION_SCORE_MULT = 2						# AI will score crime fighting buildings this much more than other misc resource
 		AI_CRIME_REDUCTION_THRESHOLD = 15						# AI will start to think about reducing crime after this threshold has been reached
 		AI_ADMIN_CAP_SCORE_MULT = 2								# AI will score admin cap buildings this much more than other misc resource
-		AI_POPS_SCORE_MULT = 1									# AI will score pop growth and assembly buildings this much more ( already fairly high weighted in code )
+		AI_POPS_SCORE_MULT = 2									# AI will score pop growth and assembly buildings this much more ( already fairly high weighted in code )
 		AI_NAVAL_CAP_SCORE_MULT = 15 							# AI will score naval cap buildings this much more than other misc resource
 		AI_POP_GROWTH_JOB_TRESHOLD = 0.05 						# AI will consider a job defined as a giving pop growth if it gives at least this many % bonus
 		AI_UPGRADE_SCORE_MULT = 1.5								# AI will score building upgrades this much more ( since they don't take up a new building slot )
 		AI_MIN_CURRENCY_INCOME_TO_BUILD_STARBASE_MODULES = 50	# AI will not build starbase modules (or defensive platforms) if energy income is below this threshold
 		AI_MIN_NAVAL_CAP_USAGE_TO_BUILD_DEFENSE_PLATFORMS = 0.95	# AI will not build defensive platforms if it is using less than this amount of its naval cap
-	
-		AI_UPPER_AMENITIES_LIMIT = 125 							# AI will try to reduce the amount of amenities on a planet if it's above this number by downprioritizing amenity jobs
-		AI_LOWER_AMENITIES_LIMIT = 5 							# AI will try to increase amenities on a planet if it's below this number by increasing priority of amenity jobs
-	
+
+		AI_UPPER_AMENITIES_LIMIT = 5 							# AI will try to reduce the amount of amenities on a planet if it's above this number by downprioritizing amenity jobs
+		AI_LOWER_AMENITIES_LIMIT = 2 							# AI will try to increase amenities on a planet if it's below this number by increasing priority of amenity jobs
+
 		# If AI is either below -10 amenities or if both stability and amenity target is met
 		AI_PLANET_LOWER_THRESHOLD_AMENITY_CONSTRUCTION = -10 	# AI will try to build new amenity buildings if below this amenity target
 		# Both requirements need to be fulfilled
@@ -2180,7 +2180,7 @@
 	
 		# Above are various acceptance factors for specific actions
 	
-		AI_BUDGETING_START_YEARS = 15					# These variables are used for some of the AI's budgeting to ensure it prioritizes the right things early on
+		AI_BUDGETING_START_YEARS = 10					# These variables are used for some of the AI's budgeting to ensure it prioritizes the right things early on
 		AI_BUDGETING_MID_YEARS = 30
 		AI_BUDGETING_LATE_YEARS = 50
 	

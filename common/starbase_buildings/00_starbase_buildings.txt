@@ -125,6 +125,14 @@ hydroponics_bay = {
 	ai_build_outside_chokepoint = yes
 	ai_weight = {
 		weight = 200 #use same weight here - ai weighting is done in starbase_types.txt
+		modifier = {
+				factor = 10
+				owner = { has_monthly_income = { resource = food value < 20 } }
+		}
+		modifier = {
+			factor = 10
+			owner = { has_monthly_income = { resource = food value < 0 } }
+		}
 	}
 }
 
@@ -227,7 +235,7 @@ nebula_refinery = {
 	show_in_tech = "tech_space_mining_1"
 
 	ai_weight = {
-		weight = 100 #use same weight here - ai weighting is done in starbase_types.txt
+		weight = 10000 #use same weight here - ai weighting is done in starbase_types.txt
 	}
 }
 
@@ -318,7 +326,7 @@ listening_post = {
 	}
 
 	ai_weight = {
-		weight = 100 #use same weight here - ai weighting is done in starbase_types.txt
+		weight = 20 #use same weight here - ai weighting is done in starbase_types.txt
 	}
 
 	show_in_tech = "tech_sensors_2"
@@ -374,7 +382,7 @@ offworld_trading_company = {
 	show_in_tech = "tech_space_trading"
 
 	ai_weight = {
-		weight = 100 #use same weight here - ai weighting is done in starbase_types.txt
+		weight = 1000 #use same weight here - ai weighting is done in starbase_types.txt
 		modifier = {
 			factor = 0
 			count_starbase_modules = {
@@ -433,6 +441,25 @@ fleet_academy = {
 				count < 2
 			}
 		}
+		modifier = {
+			factor = 10
+			owner = { has_resource = { type = alloys amount > 5000 } }
+		}
+		modifier = {
+			factor = 10
+			owner = { has_resource = { type = alloys amount > 10000 } }
+		}
+		modifier = {
+			factor = 0.5
+			owner = { used_naval_capacity_percent > 0.5 }
+		}
+		modifier = { #ci doveva pensare prima
+			factor = 0.25
+			AND = {
+				owner = { is_at_war = yes }
+				owner = { used_naval_capacity_percent > 0.5 }
+			}
+		}
 	}
 }
 
@@ -486,6 +513,19 @@ naval_logistics_office = {
 				count < 1
 			}
 		}
+		modifier = {
+			factor = 2
+			count_starbase_modules = {
+				type = anchorage
+				count > 2
+			}
+		}
+		modifier = {
+			factor = 10
+			exists = owner
+			owner = { used_naval_capacity_percent > 0.8 }
+		}
+		
 	}
 }
 
@@ -1511,7 +1551,7 @@ communications_jammer = {
 	equipped_component = "STARBASE_AURA_COMMUNICATIONS_JAMMER"
 
 	ai_weight = {
-		weight = 100 #use same weight here - ai weighting is done in starbase_types.txt
+		weight = 10 #use same weight here - ai weighting is done in starbase_types.txt
 	}
 }
 
@@ -1673,7 +1713,7 @@ transit_hub = {
 	show_in_tech = "tech_hyper_drive_2"
 
 	ai_weight = {
-		weight = 100
+		weight = 10
 		modifier = {
 			factor = 0
 			NOT = {

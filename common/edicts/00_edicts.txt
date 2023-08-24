@@ -697,7 +697,11 @@ capacity_subsidies = {
 		weight = @EdictHighPrio
 		modifier = {
 			should_ai_focus_on_trade = yes
-			factor = 0 
+			factor = 0.1
+		}
+		modifier = {
+			has_deficit = energy
+			factor = 100
 		}
 	}
 }
@@ -726,6 +730,10 @@ mining_subsidies = {
 
 	ai_weight = {
 		weight = @EdictHighPrio
+		modifier = {
+			has_deficit = minerals
+			factor = 100
+		}
 	}
 }
 
@@ -755,6 +763,10 @@ farming_subsidies = {
 		modifier = {
 			country_uses_food = no
 			factor = 0
+		}
+		modifier = {
+			has_deficit = food
+			factor = 100
 		}
 	}
 }
@@ -842,6 +854,17 @@ research_subsidies = {
 
 	ai_weight = {
 		weight = 1000
+		modifier = {
+			has_deficit = energy
+			factor = 0
+		}
+		modifier = {
+			has_monthly_income = {
+				resource = energy
+				value < 25
+			}
+			factor = 0
+		}
 	}
 }
 
@@ -1367,8 +1390,8 @@ damn_the_consequences = {
 	resources = {
 		category = edicts
 		upkeep = {
-			unity = @EdictSpecialCost
-			multiplier = value:consequences_cost
+			unity = 1
+			multiplier = value:Count_pop_weight_overtunned
 		}
 	}
 

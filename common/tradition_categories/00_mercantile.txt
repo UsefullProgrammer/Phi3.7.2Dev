@@ -21,7 +21,7 @@ tradition_mercantile = {
 			has_authority = auth_corporate
 		}
 		modifier = {
-			factor = 2500
+			factor = 5000
 			should_ai_focus_on_trade = yes
 		}
 		modifier = {

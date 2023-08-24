@@ -146,7 +146,7 @@ basic_economy_plan = {
 
 		income = {
 			alloys = 11
-			minerals = 5
+			minerals = 10
 			energy = 10
 			physics_research = @economic_plan_scaling_research_target
 			society_research = @economic_plan_scaling_research_society_target_materialist
@@ -255,7 +255,7 @@ basic_economy_plan = {
 	 	set_name = "Scaling exotic gases"
 
 	 	potential = {
-			always = no
+			has_monthly_income = { resource = minerals value > 50 }
 	 		has_monthly_income = { resource = exotic_gases value < @economic_plan_rare_resource_limit }
 	 	}
 
@@ -270,7 +270,7 @@ basic_economy_plan = {
 		set_name = "Scaling volatile motes"
 
 		potential = {
-			always = no
+			has_monthly_income = { resource = minerals value > 50 }
 			has_monthly_income = { resource = volatile_motes value < @economic_plan_rare_resource_limit }
 		}
 
@@ -285,7 +285,7 @@ basic_economy_plan = {
 		set_name = "Scaling rare crystals"
 
 		potential = {
-			always = no
+			has_monthly_income = { resource = minerals value > 50 }
 			has_monthly_income = { resource = rare_crystals value < @economic_plan_rare_resource_limit }
 		}
 

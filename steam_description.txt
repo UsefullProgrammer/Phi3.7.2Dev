@@ -1,6 +1,7 @@
 This is the conversion of gobbibomb by [url=https://steamcommunity.com/sharedfiles/filedetails/?id=2274421915]phi dev[/url]
+
 If found bug write in comments.
-[b]PHIGO 1.5[/b]
+[b]PHIGO 1.8[/b]
 
 Wiki page --> In development, can use old version [url=https://stellaris.paradoxwikis.com/Phi_mp_balancing] [b]HERE[/b] [/url]
 
@@ -8,6 +9,7 @@ Wiki page --> In development, can use old version [url=https://stellaris.paradox
 This mod was inspired and copy by phy crated by [url=https://steamcommunity.com/id/mariominaccia]mariominaccia[/url]
 This mod is [b]actually in under further development[/b] by [url=https://steamcommunity.com/profiles/76561198021478310]gobbibomb[/url].
 
+Graphic mod with unique feature for phigo [url=https://steamcommunity.com/sharedfiles/filedetails/?edit=true&id=3024277504]Graphigo[/url]
 [hr][/hr]
 
 [h1][b]Overview[/b][/h1]

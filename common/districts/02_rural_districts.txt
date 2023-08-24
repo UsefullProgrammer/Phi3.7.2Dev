@@ -59,7 +59,24 @@ district_generator = {
 		}
 		free_jobs > 4
 	}
+	on_destroy = {
+		if = {
+			limit = { 
+				exists = owner
+				owner = {
+					is_ai = yes
+				}
 
+			}
+			owner = { 
+				add_resource = { minerals = @base_cost }  #AI is retard and destroy city district
+				if = { 
+					limit = { has_tradition = tr_adaptability_recycling } #15% già rimborsato
+						add_resource = { minerals = -45 } 
+				}
+			}
+		}
+	}
 	conversion_ratio = 1
 	convert_to = {
 		district_generator_uncapped
@@ -188,7 +205,24 @@ district_mining = {
 			owner = { is_subterranean_empire = yes }
 		}
 	}
+	on_destroy = {
+		if = {
+			limit = { 
+				exists = owner
+				owner = {
+					is_ai = yes
+				}
 
+			}
+			owner = { 
+				add_resource = { minerals = @base_cost }  #AI is retard and destroy city district
+				if = { 
+					limit = { has_tradition = tr_adaptability_recycling } #15% già rimborsato
+						add_resource = { minerals = -45 } 
+				}
+			}
+		}
+	}
 	allow = {
 		NOT = { has_modifier = resort_colony }
 		OR = {
@@ -342,7 +376,24 @@ district_farming = {
 			}
 		}
 	}
+	on_destroy = {
+		if = {
+			limit = { 
+				exists = owner
+				owner = {
+					is_ai = yes
+				}
 
+			}
+			owner = { 
+				add_resource = { minerals = @base_cost }  #AI is retard and destroy city district
+				if = { 
+					limit = { has_tradition = tr_adaptability_recycling } #15% già rimborsato
+						add_resource = { minerals = -45 } 
+				}
+			}
+		}
+	}
 	allow = {
 		NOT = { has_modifier = resort_colony }
 		OR = {
@@ -583,7 +634,24 @@ district_generator_uncapped = {
 			}
 		}
 	}
+	on_destroy = {
+		if = {
+			limit = { 
+				exists = owner
+				owner = {
+					is_ai = yes
+				}
 
+			}
+			owner = { 
+				add_resource = { minerals = @base_cost }  #AI is retard and destroy city district
+				if = { 
+					limit = { has_tradition = tr_adaptability_recycling } #15% già rimborsato
+						add_resource = { minerals = -45 } 
+				}
+			}
+		}
+	}
 	potential = {
 		OR = {
 			uses_district_set = hive_world
@@ -732,7 +800,24 @@ district_mining_uncapped = {
 		}
 		text = district_srw_mining_desc
 	}
+	on_destroy = {
+		if = {
+			limit = { 
+				exists = owner
+				owner = {
+					is_ai = yes
+				}
 
+			}
+			owner = { 
+				add_resource = { minerals = @base_cost }  #AI is retard and destroy city district
+				if = { 
+					limit = { has_tradition = tr_adaptability_recycling } #15% già rimborsato
+						add_resource = { minerals = -45 } 
+				}
+			}
+		}
+	}
 	show_on_uncolonized = {
 		OR = {
 			uses_district_set = hive_world
@@ -975,7 +1060,24 @@ district_farming_uncapped = {
 			uses_district_set = shattered_ring_world
 		}
 	}
+	on_destroy = {
+		if = {
+			limit = { 
+				exists = owner
+				owner = {
+					is_ai = yes
+				}
 
+			}
+			owner = { 
+				add_resource = { minerals = @base_cost }  #AI is retard and destroy city district
+				if = { 
+					limit = { has_tradition = tr_adaptability_recycling } #15% già rimborsato
+						add_resource = { minerals = -45 } 
+				}
+			}
+		}
+	}
 	potential = {
 		OR = {
 			uses_district_set = hive_world

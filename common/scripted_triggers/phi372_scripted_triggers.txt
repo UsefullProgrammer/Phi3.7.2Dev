@@ -153,6 +153,7 @@ Can_remove_district_city = {
 	AND = {
 		is_scope_type = planet
 		is_artificial = no
+		check_variable_arithmetic = { which = value:bslot_capacity_ai value > 12 }
 		OR = {
 			free_amenities > 5 # clerk job produce essentially amenities
 			has_available_jobs = "clerk"
@@ -178,7 +179,6 @@ Can_remove_district_city = {
 	
 }
 Planet_need_work_job = {
-	
 	OR = {
 		AND = { #normal empire
 			exists = owner

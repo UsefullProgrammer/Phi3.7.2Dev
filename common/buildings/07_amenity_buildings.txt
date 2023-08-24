@@ -562,7 +562,15 @@ building_holo_theatres = {
 		}
 		NOT = { has_building = building_low_tech_capital }
 	}
-
+	allow = {
+		OR = {
+			owner = {
+			is_ai = no
+			}
+			happiness_planet <= 0.7
+			planet_stability <= 75
+		}
+	}
 	destroy_trigger = {
 		exists = owner
 		OR = {

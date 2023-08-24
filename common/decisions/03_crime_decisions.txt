@@ -41,7 +41,7 @@ decision_launch_anticrime_campaign = {
 			planet_crime > 20
 		}
 		modifier = {
-			weight = 2
+			weight = 20
 			planet_crime > 50
 		}
 		modifier = {

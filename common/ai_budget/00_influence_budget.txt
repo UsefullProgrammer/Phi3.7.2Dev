@@ -118,7 +118,31 @@ influence_expenditure_agreement_proposals = {
 		weight = 1000
 	}
 }
+influence_upkeep_country = { # Covers most other things. Note: each category opts into using this pool via ai_use_parent_for_resources_upkeep in the category
+	resource = influence
+	type = upkeep
+	category = special
 
+	potential = {
+		always = yes
+	}
+
+	weight = {
+		weight = 1
+	}
+}
+influence_expenditure_special = {
+	resource = influence
+	type = expenditure
+	category = special
+
+	potential = {
+		always = yes
+	}
+	weight = {
+		weight = 1
+	}
+}
 influence_expenditure_edicts = {
 	resource = influence
 	type = expenditure
@@ -182,26 +206,6 @@ influence_expenditure_claims = {
 
 	weight = {
 		weight = 0.15
-	}
-}
-
-influence_expenditure_starbases = {
-	resource = alloys
-	type = expenditure
-	category = starbases
-
-	potential = {
-		NOT = {
-			is_country_type = fallen_empire
-		}
-	}
-
-	weight = {
-		weight = 0.3
-	}
-	
-	desired_min = {
-		base = 100
 	}
 }
 

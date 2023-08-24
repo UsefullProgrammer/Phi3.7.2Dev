@@ -687,7 +687,7 @@ civic_aristocratic_elite da anche 1 society research aggiuntivo ai nobili
 Implementato bonus percentuali negli edicts funds
 Dominion ora da bonus production anche a worker oltre agli slave
 
-[h1][b]1.8[/b[/h1]
+[h1][b]1.8 Release[/b[/h1]
 
 [h1][b]Miglioramenti principali[/b][/h1]
 Miglorata selezione automatica ricerche
@@ -699,7 +699,15 @@ Se volete aggiungerla ma usare le vostre mod grafiche per il pianeta dovete scar
 [code]
 effectButtonType = {
 	name = fl_planet_num_buildings
-	[...]
+	spriteType = GFX_fl_button_48_24
+	position = {
+		x = -73
+		y = 7
+	}
+	orientation = upper_right
+	buttonFont = "cg_16b"
+	buttonText = $fl_button_text$
+	effect = fl_num_building_effect
 }
 [/code]
 Ma attenzione funzionerà solo con la mod phigo!
@@ -728,6 +736,12 @@ Dopo la guerra se l'impero che ha perso avrà un bonus di -5 planet devastation 
 Dopo la guerra se l'impero ha una federazione o un overlord avrà un bonus di -3 planet devastation al mese per recuperare l'attrito (fino a 50)
 
 [h1][b]1.8.1[/b][/h1]
-
+[img]https://i.imgur.com/vnsVdQ0.png[/img]
 [h1][b]AI[/b][/h1]
-Miglioramenti gestione pop assembly per L'ai
+Migliorata AI, la miglior AI di sempre
+
+[h1][b]Altro rilevante[/b][/h1]
+Damn conseguence Overtunned  costa 1 unity per pop con tratto overtunned
+Ribuffato phi_planet_deviant_experiments a +70%
+
+Learning campaign per gestalt i 5 leader del concilio vengono considerati 2,5

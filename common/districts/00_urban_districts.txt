@@ -112,11 +112,27 @@ district_crashed_slaver_ship = {
 		potential = {
 			exists = owner
 			owner = { has_active_tradition = tr_mercantile_trickle_up_economics }
+			
 		}
 		modifier = {
 			job_clerk_add = 1
 		}
 	}
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { 
+				has_active_tradition = tr_mercantile_trickle_up_economics 
+				is_ai = yes
+				
+			}
+			years_passed < 1 #fix start bad
+		}
+		modifier = {
+			job_clerk_add = -1
+		}
+	}
+	
 
 	triggered_planet_modifier = {
 		potential = {
@@ -162,7 +178,6 @@ district_city = {
 	base_buildtime = 480
 	is_capped_by_modifier = no
 	exempt_from_ai_planet_specialization = yes
-	
 	show_on_uncolonized = {
 		exists = from
 		from = { is_regular_empire = yes }
@@ -211,7 +226,25 @@ district_city = {
 		district_nexus
 		district_hive
 	}
+	on_destroy = {
+		if = {
+			limit = { 
+				exists = owner
+				owner = {
+					is_ai = yes
+				}
 
+			}
+			owner = { 
+				add_resource = { minerals = @city_cost }  #AI is retard and destroy city district
+				if = { 
+					limit = { has_tradition = tr_adaptability_recycling } #15% già rimborsato
+						add_resource = { minerals = -75 } 
+				}
+			}
+			
+		}
+	}
 	resources = {
 		category = planet_districts_cities
 		cost = {
@@ -226,7 +259,29 @@ district_city = {
 		planet_housing_add = 5
 		planet_max_buildings_add = 1
 	}
-
+	# triggered_planet_modifier = {
+	# 	potential = {
+	# 		exists = owner
+	# 		owner = {
+	# 			is_ai = yes
+	# 		}
+	# 	}
+	# 	modifier = {
+	# 		planet_housing_add = 1
+	# 	}
+	# }
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+			 	is_ai = yes
+	 		}
+			years_passed < 1 #fix start bad
+		}
+		modifier = {
+			job_clerk_add = -1
+		}
+	}
 	triggered_planet_modifier = {
 		potential = {
 			exists = owner
@@ -247,6 +302,7 @@ district_city = {
 					is_regular_empire = yes
 					has_origin = origin_fear_of_the_dark
 				}
+				#is_ai = no
 			}
 		}
 		modifier = {

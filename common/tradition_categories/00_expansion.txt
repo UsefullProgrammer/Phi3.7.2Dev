@@ -35,5 +35,9 @@ tradition_expansion = {
 			factor = 5
 			years_passed < 20
 		}
+		modifier = {
+			factor = 10
+			ai_colonize_plans > 2
+		}
 	}
 }

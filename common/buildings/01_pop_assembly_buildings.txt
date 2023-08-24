@@ -26,7 +26,6 @@ building_robot_assembly_plant = {
 		}
 		NOT = { has_modifier = slave_colony }
 	}
-
 	convert_to = {
 		building_machine_assembly_plant
 	}
@@ -43,6 +42,10 @@ building_robot_assembly_plant = {
 					num_buildings = { type = building_robot_assembly_plant value <= 3 }
 					is_capital = no
 					NOT = { is_planet_class = pc_habitat }
+					NOR = {
+						has_modifier = planet_growth_discouraged
+						has_modifier = planet_population_control
+					}	
 				}
 				Planet_need_work_job = no
 				#merge 3.7.2
@@ -268,7 +271,6 @@ building_machine_assembly_plant = {
 		owner = { is_machine_empire = yes }
 		NOT = { has_modifier = crucible_colony }
 	}
-
 	convert_to = {
 		building_robot_assembly_plant
 	}
@@ -281,9 +283,13 @@ building_machine_assembly_plant = {
 					is_capital = yes
 					num_buildings = { type = building_machine_assembly_plant value <= 4 }
 					num_buildings = { type = building_machine_assembly_complex value <= 4 }
-					
+					NOR = {
+						has_modifier = planet_growth_discouraged
+						has_modifier = planet_population_control
+					}	
 				}
 				Planet_need_work_job = no
+
 			}
 		}
 	}
@@ -445,7 +451,13 @@ building_spawning_pool = {
 	}
 	allow = {
 		OR = {
-			num_buildings = { type = building_spawning_pool value <= 4 }
+			AND = {
+				num_buildings = { type = building_spawning_pool value <= 4 }
+				NOR = {
+					has_modifier = planet_growth_discouraged
+					has_modifier = planet_population_control
+				}	
+			}
 			Planet_need_work_job = no
 			owner = { is_ai = no }
 		}
@@ -542,7 +554,14 @@ building_offspring_nest = {
 		owner = { has_origin = origin_progenitor_hive }
 	}
 	allow = {
-		Planet_need_work_job = no
+		OR = {
+			owner = { is_ai = no }
+			Planet_need_work_job = no
+			NOR = {
+				has_modifier = planet_growth_discouraged
+				has_modifier = planet_population_control
+			}	
+		}
 	}
 	destroy_trigger = {
 		exists = owner
@@ -962,6 +981,10 @@ building_clone_vats = {
 		OR = {
 			owner = { is_ai = no }
 			Planet_need_work_job = yes
+			NOR = {
+				has_modifier = planet_growth_discouraged
+				has_modifier = planet_population_control
+			}
 		}
 	}
 

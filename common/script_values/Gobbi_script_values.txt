@@ -77,6 +77,14 @@ num_leaders_quarted = {
 	divide = 4
 	min = 1
 }
+num_leaders_quarted_gestalt = {
+	base = 1
+	mult = trigger:num_owned_leaders
+	subtract = 2.5
+	divide = 4
+	
+	min = 1
+}
 
 
 
@@ -225,6 +233,35 @@ Count_pop_SR = {
 	
 	
 }
+Count_pop_weight_overtunned = {
+	# if ai outlawed: SPECIALISTS * 0.5 + NONSPECIALIST * 0.5
+	#   not outlawed: SPECIALISTS * 2 + NONSPECIALIST * 0.5
+	#ruler
+	complex_trigger_modifier = {
+		trigger = count_owned_pop
+		parameters = {
+			limit = {
+				OR = {
+					has_trait = trait_spliced_adaptability
+					has_trait = trait_juiced_power
+					has_trait = trait_farm_hands
+					has_trait = trait_crack_miner
+					has_trait = trait_technical_skill
+					has_trait = trait_crafted_smiles
+					has_trait = trait_low_maintenance
+					has_trait = trait_artificial_intelligence
+					has_trait = trait_gene_mentorship
+					has_trait = trait_expressed_tradition
+					has_trait = trait_elevated_synapses
+					has_trait = trait_preplanned_growth
+					has_trait = trait_excessive_endurance
+				}
+			}
+		}
+		mode = add
+		multiplier = 1
+	}
+}
 Count_pop_weight = {
 	# if ai outlawed: SPECIALISTS * 0.5 + NONSPECIALIST * 0.5
 	#   not outlawed: SPECIALISTS * 2 + NONSPECIALIST * 0.5
@@ -292,4 +329,9 @@ society_scaling_factor = {
 	ceiling = yes
 	min = 5
 	max = 18
+}
+production_science_years_passed = {
+	base = 10
+	mult = trigger:years_passed
+	max = 500
 }

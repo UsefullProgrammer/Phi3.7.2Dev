@@ -40,6 +40,11 @@ tradition_diplomacy = {
 			has_ethic = ethic_fanatic_xenophile
 		}
 		modifier = {
+			factor = 2
+			has_valid_civic = civic_foreign_markets_arbitrage
+		}
+		
+		modifier = {
 			factor = 0
 			OR = {
 				is_xenophobe = yes

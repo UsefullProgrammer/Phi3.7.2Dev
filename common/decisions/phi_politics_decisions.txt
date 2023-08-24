@@ -215,6 +215,11 @@ decision_phi_planet_local_administration = {
 		weight = 10
 		modifier = {
 			factor = 5
+			num_assigned_jobs = { job = clerk value > 5 }
+			planet_stability > 90
+		}
+		modifier = {
+			factor = 5
 			solar_system = { has_collected_system_trade_value > 500 }
 		}
 		modifier = {
@@ -317,6 +322,11 @@ decision_phi_planet_trading_guilds = {
 		modifier = {
 			factor = 5
 			solar_system = { has_collected_system_trade_value > 500 }
+		}
+		modifier = {
+			factor = 5
+			num_assigned_jobs = { job = clerk value > 5 }
+			planet_stability > 90
 		}
 		modifier = {
 			factor = 0
@@ -580,9 +590,6 @@ decision_phi_release_client_state = {
 			}
 			solar_system = { is_bottleneck_system = no }
 			count_owned_pop = { count < 20 }
-			has_resource = { type = exotic_gases amount <= 0 }
-			has_resource = { type = rare_crystals amount <= 0 }
-			has_resource = { type = volatile_motes amount <= 0 }
 		}
 	}
 }
@@ -702,7 +709,7 @@ decision_phi_embassy_2 = {
 	}
 
 	ai_weight = {
-		weight = 1
+		weight = 10
 	}
 }
 decision_end_decision_phi_embassy_2 = {
@@ -745,7 +752,7 @@ decision_end_decision_phi_embassy_2 = {
 	ai_weight = {
 		weight = 0
 		modifier = {
-			weight = 20
+			weight = 1000
 			owner = { has_deficit = rare_crystals }
 		}
 	}
@@ -787,7 +794,7 @@ decision_end_decision_phi_embassy = {
 	ai_weight = {
 		weight = 0
 		modifier = {
-			weight = 20
+			weight = 1000
 			owner = { has_deficit = rare_crystals }
 		}
 	}

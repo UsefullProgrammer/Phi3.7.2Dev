@@ -893,12 +893,21 @@ entertainer = {
 			factor = 0.1
 			is_domestic_servant = yes
 		}
+		
 		modifier = {
 			factor = 0.1
 			NOT = { has_job = entertainer }
 			exists = planet
 			planet = {
-				free_amenities > 5
+				free_amenities > 9
+			}
+		}
+		modifier = {
+			factor = 0.01
+			NOT = { has_job = entertainer }
+			exists = planet
+			planet = {
+				free_amenities > 10
 			}
 		}
 		modifier = {

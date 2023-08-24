@@ -101,7 +101,7 @@ civic_imperial_cult = {
 			}
 		}
 	}
-	random_weight = { base = @civic_default_random_weight }
+	random_weight = { base = @civic_strong_random_weight }
 	ai_weight = {
 		base = @ai_civic_default_base_weight
 		modifier = {
@@ -314,7 +314,7 @@ civic_meritocracy = {
 			}
 		}
 	}
-	random_weight = { base = @civic_default_random_weight }
+	random_weight = { base = @civic_strong_random_weight }
 	ai_weight = {
 		base = @ai_civic_default_base_weight
 		modifier = {
@@ -946,6 +946,10 @@ civic_free_haven = {
 				has_ai_personality = harmonious_hierarchy
 				has_ai_personality = federation_builders
 				has_ai_personality = fanatic_befrienders
+				AND = {
+					num_pops > 300
+					empire_sprawl_over_cap > 25
+				}
 			}
 		}
 		modifier = {
@@ -1372,7 +1376,7 @@ civic_functional_architecture = {
 		ethics = { NOT = { value = ethic_gestalt_consciousness } }
 		authority = { NOT = { value = auth_corporate } }
 	}
-	random_weight = { base = @civic_default_random_weight }
+	random_weight = { base = @civic_strong_random_weight }
 	ai_weight = {
 		base = @ai_civic_default_base_weight
 		modifier = {
@@ -2356,7 +2360,7 @@ civic_scavengers = {
 		}
 	}
 	random_weight = {
-		base = @civic_default_random_weight
+		base = 0
 	}
 	ai_weight = {
 		base = @ai_civic_default_base_weight

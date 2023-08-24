@@ -119,8 +119,23 @@ anchorage = {
 			factor = 2
 			count_starbase_modules = {
 				type = anchorage
-				count < 2
+				count > 2
 			}
+		}
+		modifier = {
+			factor = 2
+			exists = owner
+			owner = { used_naval_capacity_percent > 0.5 }
+		}
+		modifier = {
+			factor = 2
+			exists = owner
+			owner = {used_naval_capacity_percent > 0.8 }
+		}
+		modifier = {
+			factor = 10
+			exists = owner
+			owner = {used_naval_capacity_percent > 1 }
 		}
 	}
 }

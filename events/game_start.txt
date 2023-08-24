@@ -1075,7 +1075,8 @@ planet_event = {
 			limit = { has_planet_flag = toxic_knights_homeworld }
 			toxic_knights_order_habitat_setup = yes
 		}
-
+		#phigo for ai remove commercial zone with physics
+		AI_replace_commercialzone_setup = yes
 	}
 }
 

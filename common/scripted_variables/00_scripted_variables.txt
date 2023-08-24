@@ -342,7 +342,7 @@
 
 # AI economic plans
 @economic_plan_rare_resource_target = 3
-@economic_plan_rare_resource_limit = 20
+@economic_plan_rare_resource_limit = 10
 @economic_plan_energy_target = 50
 @economic_plan_minerals_target = 50
 @economic_plan_unity_target = 40
@@ -374,3 +374,5 @@
 @instrument_upkeep_epic = 0.0025
 
 # The last line of this file must contain this comment
+
+@civic_strong_random_weight = 7

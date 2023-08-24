@@ -1,2 +1,8 @@
 In console
-trigger exists = owner 
+trigger = { exists = owner }
+
+
+resource_revenue_compare = {
+					resource = alloys
+					value < trigger:years_passed
+				}

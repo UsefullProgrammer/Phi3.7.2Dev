@@ -586,7 +586,7 @@ civic_machine_assimilator = {
 civic_machine_builder = {
 	description = "civic_tooltip_functional_architecture_effects"
 	potential = { authority = { value = auth_machine_intelligence } }
-	random_weight = { base = @civic_default_random_weight }
+	random_weight = { base = @civic_strong_random_weight }
 	ai_weight = { 
 		base = @ai_civic_default_base_weight 
 	}
@@ -950,7 +950,7 @@ civic_scavengers_machine = {
 		councilor_gestalt_scientist_exp_gain = @gestalt_civic_node_xp_rate
 	}
 	random_weight = {
-		base = @civic_uncommon_random_weight
+		base = 0
 	}
 	ai_weight = { 
 		base = 1

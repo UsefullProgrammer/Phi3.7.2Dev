@@ -354,7 +354,36 @@ miner = {
 			factor = 0.25
 			can_take_servant_job = yes
 		}
-
+		modifier = {
+			factor = 1.25
+			exists = planet
+			planet = {
+				has_available_jobs = "miner"
+			}
+			exists = owner
+			owner = {
+				is_ai = yes
+				has_monthly_income = {
+					resource = minerals
+					value < 20
+				}
+			}
+		}
+		modifier = {
+			factor = 1.5
+			exists = planet
+			planet = {
+				has_available_jobs = "miner"
+			}
+			exists = owner
+			owner = {
+				is_ai = yes
+				has_monthly_income = {
+					resource = minerals
+					value < 10
+				}
+			}
+		}
 		# low income modifier
 		modifier = {
 			factor = 1.1

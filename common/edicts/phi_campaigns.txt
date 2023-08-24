@@ -655,7 +655,6 @@ expansion_planer = {
 			influence = 1000
 		}
 		upkeep = {
-			
 			influence = 3
 		}
 	}
@@ -667,13 +666,21 @@ expansion_planer = {
 	ai_weight = {
 		weight = 0
 		modifier = {
-			weight = 1000
+			weight = 10000
 			empire_sprawl_over_cap >= 25
 		}
 		modifier = {
-			weight = @EdictHighPrio
+			factor = 1000
+			empire_sprawl_over_cap > 25
+		}
+		modifier = {
+			factor = 1000
+			empire_sprawl_over_cap > 40
+		}
+		modifier = {
+			weight = 1000
 			AND = {
-				empire_sprawl_over_cap > -33
+				empire_sprawl_over_cap > -30
 				has_edict = expansion_planer
 			}
 		}
@@ -703,13 +710,21 @@ expansion_planer_2 = {
 	ai_weight = {
 		weight = 0
 		modifier = {
-			weight = 1000
+			weight = 10000
 			empire_sprawl_over_cap >= 25
 		}
 		modifier = {
-			weight = @EdictHighPrio
+			factor = 1000
+			empire_sprawl_over_cap > 25
+		}
+		modifier = {
+			factor = 1000
+			empire_sprawl_over_cap > 40
+		}
+		modifier = {
+			weight = 1000
 			AND = {
-				empire_sprawl_over_cap > -33
+				empire_sprawl_over_cap > -30
 				has_edict = expansion_planer_2
 			}
 		}

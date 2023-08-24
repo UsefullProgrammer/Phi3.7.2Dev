@@ -56,7 +56,9 @@ edicts = {
 	modifier_category = country
 }
 special = {
+	use_for_ai_budget = yes
 	parent = country
+	
 	modifier_category = country
 }
 campaigns = {

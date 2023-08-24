@@ -199,7 +199,7 @@ machine_learning_campaign = {
 		category = campaigns
 		upkeep = {
 			energy = 32
-			multiplier = value:num_leaders_quarted
+			multiplier = value:num_leaders_quarted_gestalt
 		}
 	}
 
@@ -272,14 +272,14 @@ learning_campaign = {
 				is_lithoid_empire = no
 			}
 			food = 32
-			multiplier = value:num_leaders_quarted
+			multiplier = value:num_leaders_quarted_gestalt
 		}
 		upkeep = {
 			trigger = {
 				is_lithoid_empire = yes
 			}
 			minerals = 32
-			multiplier = value:num_leaders_quarted
+			multiplier = value:num_leaders_quarted_gestalt
 		}
 	}
 

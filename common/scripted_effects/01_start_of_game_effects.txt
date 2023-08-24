@@ -1947,6 +1947,12 @@ generate_start_buildings_and_districts = {
 						district = district_srw_commercial
 					}
 				}
+				else_if = {
+					limit = {
+						owner = { is_ai = yes }
+					}
+					add_building = building_physics_lab_1
+				}
 				else = {
 					add_building = building_commercial_zone
 				}
@@ -3123,6 +3129,15 @@ void_dweller_home_planet_setup = {
 					district = district_hab_commercial
 				}
 			}
+			else_if = {
+				limit = {
+					owner = { is_ai = yes }
+				}
+				add_building = building_physics_lab_1
+				add_district_and_planet_size_if_needed_effect = {
+					district = district_hab_mining
+				}
+			}
 			else = {
 				add_building = building_commercial_zone
 				add_district_and_planet_size_if_needed_effect = {
@@ -3558,7 +3573,28 @@ imperial_origin_vassal_backup_effect = {
 		}
 	}
 }
-
+AI_replace_commercialzone_setup = {
+	optimize_memory
+	if = {
+		limit = {
+			owner = { is_ai = yes }
+			num_pops > 21
+			is_low_tech_start = no
+			has_building = building_commercial_zone
+		}
+		remove_building = building_commercial_zone
+		add_building = building_physics_lab_1
+	}
+	if = {
+		limit = {
+			owner = { is_ai = yes }
+			num_pops <= 21
+			has_building = building_commercial_zone
+		}
+		remove_building = building_commercial_zone
+		owner = { owner = { add_resource = { minerals = 400 } } }
+	}
+}
 toxic_knights_order_habitat_setup = {
 	optimize_memory
 	owner = {

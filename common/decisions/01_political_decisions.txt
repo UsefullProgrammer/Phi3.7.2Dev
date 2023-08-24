@@ -254,8 +254,8 @@ decision_enact_population_control_gestalt = {
 	ai_weight = {
 		weight = 5
 		modifier = { # don't enable if you have free housing and no city districts left to build
-			factor = 0
-			planet_crime > 50
+		factor = 0
+			planet_crime < 50
 			OR = {
 				free_housing > 0
 				num_free_districts = {
@@ -295,6 +295,7 @@ decision_end_population_control_gestalt = {
 		modifier = { # don't end if less than 1 housing
 			factor = 0
 			free_housing < 1
+			free_jobs < 2
 		}
 	}
 }
@@ -372,6 +373,7 @@ decision_end_robot_assembly_control = {
 		modifier = { # don't end if less than 1 housing
 			factor = 0
 			free_housing < 1
+			free_jobs < 2
 		}
 	}
 }
@@ -510,6 +512,7 @@ decision_discourage_growth = {
 					value > 0
 				}
 				has_building_construction = yes #Added since they're probably building housing
+				num_unemployed = 0
 			}
 		}
 	}
@@ -533,11 +536,12 @@ decision_end_discourage_growth = {
 	}
 
 	ai_weight = {
-		weight = 20
+		weight = 2000
 
 		modifier = { # don't end if less than 1 housing
 			factor = 0
 			free_housing < 1
+			free_jobs < 2
 		}
 	}
 }
