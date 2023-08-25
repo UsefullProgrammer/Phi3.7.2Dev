@@ -138,10 +138,12 @@ decision_planet_luxuries_boost = {
 		modifier = {
 			factor = 1000
 			free_amenities <= -5
+			owner = { has_monthly_income = { resource = consumer_goods value > 0 } }
 		}
 		modifier = {
 			factor = 1000
 			free_amenities <= -10
+			owner = { has_monthly_income = { resource = consumer_goods value > 0 } }
 		}
 	}
 }

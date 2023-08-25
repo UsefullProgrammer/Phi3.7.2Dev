@@ -37,6 +37,8 @@
 @bslot_civic_functional_architecture_add = 2
 #
 @bslot_tr_adaptability_adaptive_ecology_add = 2
+
+@bslot_asc_mastery_of_nature = 2
 #
 
 #
@@ -332,6 +334,13 @@ bslot_from_cta = {
 		uses_district_set = habitat
 		add = @bslot_building_hab_capital_ap_voidborn_add
 	}
+	#mastery_of_nature
+	modifier = {
+		exists = owner
+		owner = { has_ascension_perk = ap_mastery_of_nature }
+		add = @bslot_asc_mastery_of_nature
+	}
+	
 	# Agrarian Idyll civic
 	add = value:bslot_farming_districts_buildings
 
@@ -712,6 +721,12 @@ bslot_from_cta_ai = {
 		owner = { has_ascension_perk = ap_voidborn }
 		uses_district_set = habitat
 		add = @bslot_building_hab_capital_ap_voidborn_add
+	}
+	#mastery_of_nature
+	modifier = {
+		exists = owner
+		owner = { has_ascension_perk = ap_mastery_of_nature }
+		add = @bslot_asc_mastery_of_nature
 	}
 	# Agrarian Idyll civic
 	add = value:bslot_farming_districts_buildings

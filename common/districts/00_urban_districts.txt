@@ -188,7 +188,6 @@ district_city = {
 			uses_district_set = shattered_ring_world
 		}
 	}
-
 	potential = {
 		OR = {
 			NOT = { exists = owner } #this condition is needed for galaxy generation

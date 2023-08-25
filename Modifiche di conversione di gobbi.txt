@@ -745,3 +745,7 @@ Damn conseguence Overtunned  costa 1 unity per pop con tratto overtunned
 Ribuffato phi_planet_deviant_experiments a +70%
 
 Learning campaign per gestalt i 5 leader del concilio vengono considerati 2,5
+
+[h1][b]Fix[/b][/h1]
+economy statecraft hanno planet_building_build_speed_mult +15%
+Fix calcolo slot capacity disponibili, prima non considerava mastery of nature
