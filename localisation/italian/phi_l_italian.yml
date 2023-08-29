@@ -1320,4 +1320,16 @@ migration: "Migrazioni"
 economic_policy_domination_name: "$economic_policy_domination$"
 economic_policy_politics_name: "$economic_policy_politics$"
 
-tooltip_drone_economic_policy_politics_effects: "Every planet with §Yplanet devastation§! over 10 reduce §Yplanet devastation§! every month of 3"
+tooltip_drone_economic_policy_politics_effects: "Ogni pianeta con una §Ydevastazione del pianeta§! superiore a 10 riduce la §Ydevastazione del pianeta§! di 3 ogni mese"
+
+tyni_galaxy_modifier: "galassia piccola"
+small_galaxy_modifier: "galassia minuscola"
+big_small_galaxy_modifier: "galassia grande piccola"
+medium_galaxy_modifier: "galassia media"
+large_galaxy_modifier: "galassia medio grande"
+very_large_galaxy_modifier: "galassia grande"
+huge_galaxy_modifier: "galassia enorme"
+
+mech_army:0 "Armata Mech"
+mech_army_plural:0 "Armate Mech"
+mech_army_desc:0 "Gli eserciti di Mech, semplicemente invadono il pianeta e distruggono tutto."

@@ -1,0 +1,115 @@
+tech_ground_offence_planning = {
+	cost = @tier2cost3
+	area = society
+	tier = 1
+	category = { military_theory }
+	prerequisites = { "tech_planetary_defenses" }
+	weight = @tier2weight3
+
+	modifier = {
+		army_attack_health_mult = 1
+	}
+	weight_modifier = {
+		factor = 2
+		modifier = {
+			factor = 2
+			is_militarist = yes
+		}
+		
+	}
+
+	ai_weight = {
+		modifier = {
+			factor = 2
+			is_militarist = yes
+		}
+		
+	}
+}
+tech_ground_offence_planning_2 = {
+	cost = @tier2cost3
+	area = society
+	tier = 2
+	category = { military_theory }
+	prerequisites = { "tech_ground_offence_planning" }
+	weight = @tier2weight3
+	is_rare = yes
+	modifier = {
+		army_attack_morale_mult = 1
+	}
+	weight_modifier = {
+		factor = 2
+		modifier = {
+			factor = 2
+			is_militarist = yes
+		}
+		
+	}
+
+	ai_weight = {
+		modifier = {
+			factor = 2
+			is_militarist = yes
+		}
+		
+	}
+}
+tech_ground_offence_planning_3 = {
+	cost = @tier3cost3
+	area = society
+	tier = 3
+	category = { military_theory }
+	prerequisites = { "tech_ground_offence_planning_2" }
+	is_rare = yes
+	weight = @tier3weight3
+
+	modifier = {
+		army_attack_damage_mult = 1
+	}
+	weight_modifier = {
+		factor = 2
+		modifier = {
+			factor = 2
+			is_militarist = yes
+		}
+		
+	}
+
+	ai_weight = {
+		modifier = {
+			factor = 2
+			is_militarist = yes
+		}
+		
+	}
+}
+tech_ground_offence_planning_repeatable = {
+	area = society
+	cost = @repeatableTechBaseCost
+	cost_per_level = @repeatableTechLevelCost
+	tier = @repeatableTechTier
+	category = { military_theory }
+	levels = -1
+	prerequisites = { "tech_ground_offence_planning_3" }
+	weight = @repeatableTechWeight
+
+	weight_modifier = {
+		factor = @repatableTechFactor
+	}
+
+	ai_weight = {
+		factor = 1.0
+	}
+
+	weight_groups = {
+		repeatable
+	}
+	mod_weight_if_group_picked = {
+		repeatable = 0.01
+	}
+	modifier = {
+		army_attack_damage_mult = 0.33
+		army_attack_health_mult = 0.1
+		army_attack_morale_mult = 0.33
+	}
+}

@@ -1180,6 +1180,13 @@ building_clone_army_clone_vat = {
 			}
 			energy = 20
 		}
+		produces = {
+			trigger = {
+				exists = owner
+				owner = { NOT = { has_country_flag = clone_army_full_potential } }
+			}
+			society_research = 15
+		}
 	}
 
 	upgrades = {

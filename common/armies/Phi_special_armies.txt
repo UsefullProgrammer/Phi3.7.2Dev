@@ -1,0 +1,60 @@
+mech_army = {
+	damage = 2.25
+	health = 3.00
+	morale = 1.50
+	morale_damage = 2.00
+	collateral_damage = 3.00
+	war_exhaustion = 1.00
+	time = 50
+	icon = GFX_mech_army
+	prerequisites = { "tech_combat_computers_3" }
+	resources = {
+		category = armies
+		cost = {
+			alloys = 75
+		}
+
+		upkeep = {
+			energy = 3
+		}
+	}
+
+	# show_tech_unlock_if = {
+	# 	OR = {
+	# 		NOT = { has_authority = auth_machine_intelligence }
+	# 		has_valid_civic = civic_machine_assimilator
+	# 	}
+	# }
+	# potential_country = {
+	# 	OR = {
+	# 		NOT = { has_authority = auth_machine_intelligence }
+	# 		has_valid_civic = civic_machine_assimilator
+	# 	}
+	# }
+	potential = {
+		from = {
+			NOR = {
+				is_sapient = no
+			}
+		}
+	}
+
+	ai_weight = {
+		base = 100
+		modifier = {
+			set = 10
+			OR = {
+				is_fallen_empire = yes
+				has_technology = tech_telepathy
+				has_technology = tech_gene_seed_purification
+				AND = {
+					OR = {
+						has_ethic = ethic_militarist
+						has_ethic = ethic_fanatic_militarist
+					}
+					has_technology = tech_gene_banks
+				}
+			}
+		}
+	}
+}

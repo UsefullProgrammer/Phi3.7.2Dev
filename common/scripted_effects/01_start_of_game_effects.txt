@@ -3579,7 +3579,7 @@ AI_replace_commercialzone_setup = {
 		limit = {
 			owner = { is_ai = yes }
 			num_pops > 21
-			is_low_tech_start = no
+			owner = { is_low_tech_start = no }
 			has_building = building_commercial_zone
 		}
 		remove_building = building_commercial_zone

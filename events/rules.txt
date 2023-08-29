@@ -278,6 +278,109 @@ country_event = { #autowar,nemesy #check
 		}
 	}
 }
+country_event = { #set bonus malus galaxy size
+	id = rules.30
+	hide_window = yes
+
+	is_triggered_only = yes
+
+	trigger = {
+		NOR = {
+			has_modifier = tyni_galaxy_modifier
+			has_modifier = small_galaxy_modifier
+			has_modifier = big_small_galaxy_modifier
+			has_modifier = medium_galaxy_modifier
+			has_modifier = large_galaxy_modifier
+			has_modifier = very_large_galaxy_modifier
+			has_modifier = huge_galaxy_modifier
+		}
+	}
+	immediate = { 
+		owner = { 
+			country_event = { 
+				id = rules.31
+				days = 15 #low prioriry
+			} 
+		} 
+	}
+}
+country_event = { #set bonus malus galaxy size
+	id = rules.31
+	hide_window = yes
+
+	is_triggered_only = yes
+
+	# trigger = {
+	# 	NOR = {
+	# 		has_modifier = tyni_galaxy_modifier
+	# 		has_modifier = small_galaxy_modifier
+	# 		has_modifier = small_galaxy_modifier
+	# 		has_modifier = medium_galaxy_modifier
+	# 		has_modifier = large_galaxy_modifier
+	# 		has_modifier = very_large_galaxy_modifier
+	# 		has_modifier = huge_galaxy_modifier
+	# 	}
+	# }
+	
+	immediate = {
+		if = {
+			limit = {
+				galaxy_size = tiny
+			}
+			add_modifier = {
+				modifier = tyni_galaxy_modifier
+			}
+		}
+		if = {
+			limit = {
+				galaxy_size = small
+			}
+			add_modifier = {
+				modifier = small_galaxy_modifier
+			}
+		}
+		if = {
+			limit = {
+				galaxy_size = small10players
+			}
+			add_modifier = {
+				modifier = big_small_galaxy_modifier
+			}
+		}
+		else_if = {
+			limit = {
+					galaxy_size = medium
+			}
+			add_modifier = {
+				modifier = medium_galaxy_modifier
+			}
+		}
+		else_if = {
+			limit = {
+				galaxy_size = mediumover16
+			}
+			add_modifier = {
+				modifier = large_galaxy_modifier
+			}
+		}
+		else_if = {
+			limit = {
+				galaxy_size = large
+			}
+			add_modifier = {
+				modifier = very_large_galaxy_modifier
+			}
+		}
+		else_if = {
+			limit = {
+				galaxy_size = huge
+			}
+			add_modifier = {
+				modifier = huge_galaxy_modifier
+			}
+		}
+	}
+}
 country_event = { #test
 	id = rules.99
 	hide_window = yes

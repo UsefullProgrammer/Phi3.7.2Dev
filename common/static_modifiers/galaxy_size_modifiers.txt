@@ -1,0 +1,55 @@
+
+tyni_galaxy_modifier = { #200 stars
+	empire_size_systems_mult = 0.5
+	ship_speed_mult = -0.5
+	empire_size_systems_mult = 0.5
+	country_starbase_influence_cost_mult = 0.5
+	country_claim_influence_cost_mult = 0.5
+	station_gatherers_produces_mult = 0.25
+	station_researchers_produces_mult = 0.25
+	station_observers_produces_mult = 0.25
+}
+small_galaxy_modifier = { #400stars
+	empire_size_systems_mult = 0.3
+	ship_speed_mult = -0.3
+	country_starbase_influence_cost_mult = 0.3
+	country_claim_influence_cost_mult = 0.3
+	station_gatherers_produces_mult = 0.15
+	station_researchers_produces_mult = 0.15
+	station_observers_produces_mult = 0.15
+}
+big_small_galaxy_modifier = { #500 stars
+	empire_size_systems_mult = 0.15
+	ship_speed_mult = -0.10
+	country_starbase_influence_cost_mult = 0.15
+	country_claim_influence_cost_mult = 0.15
+	station_gatherers_produces_mult = 0.05
+	station_researchers_produces_mult = 0.05
+	station_observers_produces_mult = 0.05
+}
+medium_galaxy_modifier = { #600 stars
+	empire_size_systems_mult = 0.01
+	ship_speed_mult = 0.03
+}
+large_galaxy_modifier = { #700 stars
+	empire_size_systems_mult = -0.1
+	ship_speed_mult = 0.10
+	empire_size_systems_mult = -0.1
+	country_starbase_influence_cost_mult = -0.10
+	country_claim_influence_cost_mult = -0.10
+}
+very_large_galaxy_modifier = { #800 stars
+	empire_size_systems_mult = -0.2
+	ship_speed_mult = 0.2
+	country_starbase_influence_cost_mult = -0.20
+	country_claim_influence_cost_mult = -0.20
+}
+huge_galaxy_modifier = { #1000 stars
+	empire_size_systems_mult = -0.5	
+	ship_speed_mult = 0.4
+	country_starbase_influence_cost_mult = -0.33
+	country_claim_influence_cost_mult = -0.33
+	station_gatherers_produces_mult = -0.1
+	station_researchers_produces_mult = -0.1
+	station_observers_produces_mult = -0.1
+}

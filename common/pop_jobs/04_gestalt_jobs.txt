@@ -1198,7 +1198,7 @@ patrol_drone = {
 		}
 	}
 	pop_modifier = {
-		pop_defense_armies_add = 2
+		pop_defense_armies_add = 1
 	}
 
 	weight = {
@@ -1775,7 +1775,7 @@ warrior_drone = {
 	}
 
 	pop_modifier = {
-		pop_defense_armies_add = 3
+		pop_defense_armies_add = 2
 	}
 
 	triggered_planet_modifier = {

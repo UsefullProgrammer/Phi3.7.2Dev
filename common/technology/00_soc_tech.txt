@@ -3193,8 +3193,8 @@ tech_combat_training = {
 	weight = @tier3weight1
 
 	modifier = {
-		army_attack_damage_mult = 0.15
-		army_attack_morale_mult = 0.15
+		army_attack_damage_mult = 1
+		army_attack_morale_mult = 1
 	}
 
 	weight_modifier = {

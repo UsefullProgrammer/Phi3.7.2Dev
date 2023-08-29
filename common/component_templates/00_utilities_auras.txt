@@ -645,7 +645,7 @@ utility_component_template = {
 		}
 
 		modifier = {
-			ship_orbital_bombardment_mult = 0.3
+			ship_orbital_bombardment_mult = 1
 		}
 
 		graphics = {

@@ -293,6 +293,10 @@ weapon_component_template = {
 			alloys = @m_t3_upkeep_alloys
 		}
 	}
+	modifier = {
+		ship_speed_mult = 0.05
+		ship_orbital_bombardment_mult = 0.25
+	}
 }
 
 ### Armored Torpedoes
@@ -334,6 +338,7 @@ weapon_component_template = {
 	}
 	modifier = {
 		ship_speed_mult = 0.1
+		ship_orbital_bombardment_mult = 0.3
 	}
 }
 
@@ -375,6 +380,7 @@ weapon_component_template = {
 	}
 	modifier = {
 		ship_speed_mult = 0.15
+		ship_orbital_bombardment_mult = 0.33
 	}
 }
 # ####################

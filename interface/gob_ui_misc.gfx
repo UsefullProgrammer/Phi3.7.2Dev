@@ -36,6 +36,11 @@ spriteTypes = {
     }
     spriteType = {
     	name = "GFX_wg_phi_nemesi"
-    	texturefile = "gfx/interface/icons/diplomacy/war_reparation.dds"
+        texturefile = "gfx/interface/icons/diplomacy/war_reparation.dds"
+	}
+    
+    spriteType = {
+    	name = "GFX_mech_army"
+    	texturefile = "gfx/interface/icons/army/mech_army.dds"
 	}
 }

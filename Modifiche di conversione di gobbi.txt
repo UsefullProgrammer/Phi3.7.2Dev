@@ -749,3 +749,45 @@ Learning campaign per gestalt i 5 leader del concilio vengono considerati 2,5
 [h1][b]Fix[/b][/h1]
 economy statecraft hanno planet_building_build_speed_mult +15%
 Fix calcolo slot capacity disponibili, prima non considerava mastery of nature
+
+
+[h1][b]1.9[/b][/h1]
+
+Ottimizzato eventi AI
+Random Planet devastation -1 finchè non arriva a 5 devastation
+Aggiunti [url=https://i.imgur.com/SfiJ5Az.png]modificatori[/url] in base alla galaxy size
+
+[h1][b]Origine cloni[/b][/h1]
+Il tratto di clone wars cost -1 (in pratica puoi piccare un tratto in più )
+Migliorata ancient clone, ora da un pizzico di society 
+[img]https://i.imgur.com/KGa9RME.png[/img]
+
+[h1][b]AI[/b][/h1]
+Migliorata ia nel budget di costruzione e aggiornamento navi, ora quando perde energy non le costruisce (perchè finirebbe per perdere ancora più energy credits )
+Le ai non entreranno in una guerra di survive se ci sono già 5 partecipanti in difensiva.
+Fix problem with campaign
+Fix problem with assault armies, now cost energy how before
+
+[h1][b]Weapons[/h1][/b]
+I distruptor danno un regen minimo degli scudo
+[img]https://i.imgur.com/n0w8lTW.png[/img]
+
+[h1][b]Planet invasion[/h1][/b]
+Ora già quando il pianeta a 10% devastation fai danno normale alle truppe
+Le truppe d'assalto si fanno nel 33% del tempo (invece di 90 giorni ce ne metti 30)
+Soldier danno 2 armate di difese invece di 3
+La tecnologia che dava +15% alle armate assalto ora da +100%
+Inoltre nuove tecnologie per le armate d'assalto:
+[img]https://i.imgur.com/sCf8ZUT.png[/img]
+
+SHIP_AURA_BOMBARDMENT del juggernaut applica 100% bombardament damage invece del 30%
+Ora i distruptor e i torpedo danno un bonus al planetary damage.
+[img]https://i.imgur.com/ztNNN5S.png[/img]
+building_planetary_shield_generator diminuito da 50% a 40% protezione bombardamento orbitale ma l'ultimo livello di capital building (system capital complex) garantisce un 10% di protezione bombardamento orbitale
+
+Cambiato champions of empire da -1 a -0.7
+
+Domination da un ulteriore 15% alle armate.
+Nuova armata "mech warrior" potente ma fa molti danni collaterali.
+[img]https://i.imgur.com/BHk88Qg.png[/img]
+

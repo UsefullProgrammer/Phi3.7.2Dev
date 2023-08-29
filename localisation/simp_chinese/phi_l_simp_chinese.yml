@@ -1318,3 +1318,15 @@ economic_policy_domination_name: "$economic_policy_domination$"
 economic_policy_politics_name: "$economic_policy_politics$"
 
 tooltip_drone_economic_policy_politics_effects: "Every planet with §Yplanet devastation§! over 10 reduce §Yplanet devastation§! every month of 3"
+
+tyni_galaxy_modifier: "tiny galaxy"
+small_galaxy_modifier: "small galaxy"
+big_small_galaxy_modifier: "big small galaxy"
+medium_galaxy_modifier: "Medium galaxy"
+large_galaxy_modifier: "Medium Large galaxy"
+very_large_galaxy_modifier: "Large galaxy"
+huge_galaxy_modifier: "Huge galaxy"
+
+ mech_army:0 "Mech Army"
+ mech_army_plural:0 "Assault Mechs"
+ mech_army_desc:0 "Mechs armies, is little simply with mech invade planet that destroy all."

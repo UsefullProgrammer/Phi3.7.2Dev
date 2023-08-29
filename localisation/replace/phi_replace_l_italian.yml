@@ -124,13 +124,12 @@ SWARMER_MISSILE_1:0 "Missili Enjambement"
 SWARMER_MISSILE_1_DESC:0 "Questi missili più piccoli vengono lanciati in volée e sono stati progettati specificamente per sopraffare i sistemi di difesa a punto nemico.\nVelocità della nave: §G+5%§!"
 SWARMER_MISSILE_2:0 "Missili Tromba d'Aria"
 SWARMER_MISSILE_2_DESC:0 "Le nuove tecniche di miniaturizzazione ci permetteranno di equipaggiare i missili enjambement con testate più potenti e prestazioni di volo migliorate.\nVelocità della nave: §G+10%§!"
-
 TORPEDO_1:0 "Siluri spaziali"
-TORPEDO_1_DESC:0 "Questi siluri sono essenzialmente missili molto grandi e lenti. Sono equipaggiati con testate più potenti e modulatori di scudo che li fanno scivolare indisturbati attraverso le schermature energetiche.\nVelocità della nave: §G+5%§!"
+TORPEDO_1_DESC:0 "Questi siluri sono essenzialmente missili molto grandi e lenti. Sono equipaggiati con testate più potenti e modulatori di scudo che li fanno scivolare indisturbati attraverso le schermature energetiche.\nVelocità della nave: §G+5%§!\nDanno bombardamento planetario §G+25%§!"
 TORPEDO_2:0 "Siluri Corazzati"
-TORPEDO_2_DESC:0 "Siluri spaziali aggiornati incapsulati in armatura, per resistere meglio al fuoco delle difese a punto nemico. L'armatura si frammenta in schegge che causano danni aggiuntivi quando il siluro esplode.\nVelocità della nave: §G+10%§!"
+TORPEDO_2_DESC:0 "Siluri spaziali aggiornati incapsulati in armatura, per resistere meglio al fuoco delle difese a punto nemico. L'armatura si frammenta in schegge che causano danni aggiuntivi quando il siluro esplode.\nVelocità della nave: §G+10%§!\nDanno bombardamento planetario §G+30%§!"
 TORPEDO_3:0 "Siluri Devastatori"
-TORPEDO_3_DESC:0 "Siluri avanzati con testate molto potenti. Hanno un design più elegante, motori più veloci e modulatori di scudo aggiornati per scivolare attraverso le schermature energetiche.\nVelocità della nave: §G+15%§!"
+TORPEDO_3_DESC:0 "Siluri avanzati con testate molto potenti. Hanno un design più elegante, motori più veloci e modulatori di scudo aggiornati per scivolare attraverso le schermature energetiche.\nVelocità della nave: §G+15%§!\nDanno bombardamento planetario §G+33%§!"
  #Policies
 trade_policy_trade_league_desc:1 "Unendoci in una lega commerciale, siamo in grado di prosperare e garantire profitti su un nuovo livello.\n\n§EPer ogni £trade_value£ §YValore Commerciale§! raccolto, guadagniamo £energy£ §Y0.3§!, £unity£ §Y0.2§!, £consumer_goods£ §Y0.2§! and £society_research£ §Y0.125§!"
 trade_policy_unity_desc:1 "Il commercio può essere utilizzato non solo per spostare beni, ma anche per facilitare la diffusione di idee. Dovremmo concentrare i nostri sforzi commerciali per assicurare che il messaggio del nostro governo sia ascoltato su tutti i pianeti dove facciamo affari.\n\n§EPer ogni £trade_value£ §YValore Commerciale§! raccolto, guadagniamo £energy£ §Y0.25§! e £unity£ §Y0.5§!"
@@ -208,7 +207,7 @@ wg_expel_corp_effects:2 "Tutte le Filiali possedute dalla §Y[From.GetName]§! n
 
 resort_colony_empire_effects:0 "Dimensione dell'Impero diminuita di 10 Colonie di altri Imperi:\n $MOD_PLANET_AMENITIES_MULT$: §G+15%§!\n $MOD_PLANET_IMMIGRATION_PULL_MULT$: §G+15%§!"
 origin_tooltip_clone_army_effects:1 "- Inizia con 2 Strutture £building£ £building£ §H$building_clone_army_clone_vat$§! sul tuo pianeta natale, che producono £pops£ Pop §H$clone_soldier$§!.\n- Le §HAntiche Vasche per Cloni§! hanno un §HLimite Imperiale§! di 2.\n- Gli §HAmmiragli§! dell'Esercito Clone concederanno un ulteriore §G25%§! di §H$MOD_SHIP_FIRE_RATE_MULT$§! e riducono del §G10%§! il §HMantenimento Nave§!."
-tr_aptitude_champions_of_the_empire_desc:1 "Per ammiraglio e generale di livello $admiral_with_icon$ e $general_with_icon$\n$t$$MOD_COUNTRY_NAVAL_CAP_ADD$: §G+2§!\nPer governatore di livello $governor_with_icon$\n$t$$MOD_EMPIRE_SIZE_MULT$: §G-1§!\nPer scienziato di livello $scientist_with_icon$\n$t$$MOD_LEADER_SPECIES_EXP_GAIN$: §G+0.5%§!"
+tr_aptitude_champions_of_the_empire_desc:1 "Per ammiraglio e generale di livello $admiral_with_icon$ e $general_with_icon$\n$t$$MOD_COUNTRY_NAVAL_CAP_ADD$: §G+2§!\nPer governatore di livello $governor_with_icon$\n$t$$MOD_EMPIRE_SIZE_MULT$: §G-0.7§!\nPer scienziato di livello $scientist_with_icon$\n$t$$MOD_LEADER_SPECIES_EXP_GAIN$: §G+0.5%§!"
 
  civic_tooltip_aristocratic_elite_effects:7 "I £building£ §YEdifici Capitali§! sostituiscono alcuni £job_politician£ §Y$job_politician$§! con £job_noble£ §Y$job_noble_plural$§!\nPuò costruire edifici £building£ §Y$building_noble_estates$§! che aggiungono ulteriori £job_noble£ §Y$job_noble$§! Jobs\nConcede accesso all'edificio £building£ §Y$holding_noble_vacation_homes$§!\nI lavori £job_noble£ §Y$job_noble$§! producono 1 £society_research£ aggiuntiva"
 
@@ -218,3 +217,7 @@ tr_genetics_finish_modifier_desc:0 "$SPECIES_TRAIT_PICKS$: §G+1§!\n$species_tr
 tr_genetics_finish_extra_traits_modifier_desc:0 "$SPECIES_TRAIT_PICKS$: §G+1§!\n$species_trait_points_add$: $POINTS|0=+$\nPermette la ricerca delle tecnologie di §YTransgenesis§! rare.\n$TRADITIONS_FINISH_AP$"
 
 tr_domination_federations_finish_desc:0 "$mod_campaigns_upkeep_mult$ §G-10%§!\n$MOD_EMPIRE_SIZE_POPS_MULT$ §G-10%§!\nConcede accesso al tipo di Federazione §Y$hegemony_federation$§!\nSblocchi ascensione: §G+1§!"
+
+DISRUPTOR_1_DESC:1 "I disruptor sparano raggi ad alta energia che indeboliscono e distruggono i legami molecolari che tengono insieme gli atomi costituenti del bersaglio.\nship shield regen add §G0.5§!\nDanno da bombardamento orbitale §G10%§!"
+DISRUPTOR_2_DESC:0 "Questi disruptor potenziati sparano raggi di particelle ioniche più distruttive verso i bersagli, senza sacrificare la velocità di fuoco dei loro predecessori.\nship shield regen add §G0.85§!\nDanno da bombardamento orbitale §G20%§!"
+DISRUPTOR_3_DESC:0 "Disruptor ad altissimo rendimento che sparano cariche di energia quantistica causando danni incredibili a coloro che si trovano sulla loro strada.\nship shield regen add §G1.25§!\nDanno da bombardamento orbitale §G30%§!"

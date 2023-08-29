@@ -37,46 +37,47 @@ automate_hive_amenity_management_job = {
 	category = "planet_automation_amenities"
 }
 #to do clerk
-automate_clerk_management = {
+# automate_clerk_management = {
 
-	available = {
-		always = yes
-		NOR = {
-			owner = {
-				has_authority = auth_machine_intelligence
-				has_authority = auth_hive_mind
-			}
-		}
-	}
+# 	available = {
+# 		always = yes
+# 		NOR = {
+# 			owner = {
+# 				has_authority = auth_machine_intelligence
+# 				has_authority = auth_hive_mind
+# 			}
+# 		}
+# 	}
 
-	emergency = yes
-	category = "planet_automation_amenities"
+# 	emergency = yes
+# 	category = "planet_automation_amenities"
 
-	job_changes = {
-		enforcer_reduce = {
-			available = {
-				has_available_jobs = clerk
-				free_amenities > 5
-			}
+# 	job_changes = {
+# 		enforcer_reduce = {
+# 			available = {
+# 				has_available_jobs = clerk
+# 				free_amenities > 5
+# 			}
 
-			job = clerk
-			amount = -1
-		}
-		enforcer_increase = {
-			available = {
-				#has_forbidden_jobs = @jobament
-                OR = {
-					num_unemployed > 0
-					free_amenities < 5
-				}
-                #free_jobs < 1 #this missing here wont cause it to try to add new job on a loop?
-			}
+# 			job = clerk
+# 			amount = -1
+# 		}
+# 		enforcer_increase = {
+# 			available = {
+# 				#has_forbidden_jobs = @jobament
+#                 OR = {
+# 					num_unemployed > 0
+# 					NOT = { has_available_jobs = clerk }
+# 					free_amenities < 5
+# 				}
+#                 #free_jobs < 1 #this missing here wont cause it to try to add new job on a loop?
+# 			}
 
-			job = clerk
-			amount = 1
-		}
-	}
-}
+# 			job = clerk
+# 			amount = 1
+# 		}
+# 	}
+# }
 automate_clerk_management_ai_first_year = {
 	should_ai_use_job_micro = yes
 
@@ -179,6 +180,60 @@ automate_clerk_management_ai_1 = {
 			}
 
 			job = clerk
+			amount = 1
+		}
+	}
+}
+automate_clerk_management_ai_gestalt = {
+	should_ai_use_job_micro = yes
+
+	available = {
+		years_passed >= 2 #fix start bad
+		owner = {
+			is_ai = yes
+		}
+		OR = {
+			owner = {
+				has_authority = auth_machine_intelligence
+				has_authority = auth_hive_mind
+			}
+		}
+	}
+
+	emergency = yes
+	category = "planet_automation_amenities"
+	#this code is perfect not touch
+	job_changes = {
+		maintenance_drone_reduce = {
+			available = {
+				
+				has_available_jobs = clerk
+				OR = {
+					free_jobs > 1
+					planet_stability > 70
+				}
+			}
+
+			job = maintenance_drone
+			amount = -1
+		}
+		
+		maintenance_drone_increase = {
+			available = {
+				OR = {
+					AND = { #minimum 1
+						NOT = { has_available_jobs = maintenance_drone }
+						has_forbidden_jobs = maintenance_drone
+						free_jobs < 2
+					}
+                	AND = { #only if not have other work
+						num_unemployed > 0
+						#free_jobs < 2 tolto
+					}
+				}
+			}
+
+			job = maintenance_drone
 			amount = 1
 		}
 	}

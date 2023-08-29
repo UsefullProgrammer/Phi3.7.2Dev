@@ -479,7 +479,7 @@ enforcer = {
 	}
 
 	pop_modifier = {
-		pop_defense_armies_add = 2
+		pop_defense_armies_add = 1
 	}
 
 	triggered_planet_modifier = {
@@ -1729,7 +1729,7 @@ necromancer = {
 	}
 
 	pop_modifier = {
-		pop_defense_armies_add = 3
+		pop_defense_armies_add = 2
 	}
 
 	triggered_pop_modifier = {
@@ -2790,7 +2790,7 @@ knight = {
 		potential = {
 			always = yes
 		}
-		pop_defense_armies_add = 2
+		pop_defense_armies_add = 1
 		mult = value:scripted_modifier_mult|MODIFIER|knights_independent_category_produces_mult|
 	}
 

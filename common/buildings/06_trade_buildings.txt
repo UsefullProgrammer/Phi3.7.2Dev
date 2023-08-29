@@ -24,13 +24,11 @@ building_commercial_zone = {
 
 	allow = {
 		exists = owner
-		owner = { 
-			OR = {
-				is_ai = no
-				has_active_tradition = tr_mercantile_commercial_enterprise
-			}
-		}
 		OR = {
+			owner = { is_ai = no }
+			owner = { 
+					has_active_tradition = tr_mercantile_commercial_enterprise
+			}
 			has_modifier = phi_planet_trading_guilds
 			has_modifier = phi_planet_local_administration
 		}

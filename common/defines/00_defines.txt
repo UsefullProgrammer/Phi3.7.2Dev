@@ -896,9 +896,9 @@
 		PLANET_HEALTH_REGEN_DELAY 			= 60		# Days since being bombarded before repairs can be done at full speed
 	
 		PLANET_HEALTH_PROTECT_POPS			 	 = 0.75			# At above this health fraction, pops will not die
-		PLANET_HEALTH_PROTECT_ARMIES			 = 0.75		# At above this health fraction, defending armies take half damage from bombardment
+		PLANET_HEALTH_PROTECT_ARMIES			 = 0.9		# At above this health fraction, defending armies take half damage from bombardment
 		PLANET_HEALTH_INHIBIT_FTL				 = 0.5		# At above this health fraction, planet FTL inhibitors are functional
-		PLANET_HEALTH_INCREASE_ARMY_DAMAGE		 = 0.25		# Below this health fraction, defending armies take double damage from bombardment
+		PLANET_HEALTH_INCREASE_ARMY_DAMAGE		 = 0.5		# Below this health fraction, defending armies take double damage from bombardment
 		PLANET_HEALTH_ARMY_PROTECTED_DAMAGE_MULT = 0.5
 		PLANET_HEALTH_ARMY_INCREASED_DAMAGE_MULT = 2.0
 		PLANET_ARMIES_PROTECT_POPS				 = 0.5		# Each army present on a planet will protect this many pops from raids.
@@ -1054,7 +1054,7 @@
 		# Higher number means more total bombardment damage
 		ORBITAL_BOMBARDMENT_FLEET_BASE_SIZE		= 100 # Over this amount of fleet cap bombarding we will start getting penalties to efficiency
 		# Smaller number means we lose efficiency faster going above the ORBITAL_BOMBARDMENT_FLEET_BASE_SIZE
-		ORBITAL_BOMBARDMENT_OVER_FLEET_FACTOR	= 0.7 # Each time we surpass ORBITAL_BOMBARDMENT_FLEET_BASE_SIZE we retain this factor of efficiency
+		ORBITAL_BOMBARDMENT_OVER_FLEET_FACTOR	= 0.9 # Each time we surpass ORBITAL_BOMBARDMENT_FLEET_BASE_SIZE we retain this factor of efficiency
 	
 		ORBITAL_BOMBARDMENT_COLONY_DMG_SCALE			= 0.01
 		ORBITAL_BOMBARDMENT_PLANET_DMG_SCALE			= 0.002

@@ -12,7 +12,7 @@ assault_army = {
 	morale_damage = 1.00
 	collateral_damage = 1.00
 	war_exhaustion = 1.00
-	time = 90
+	time = 30
 	icon = GFX_army_type_assault
 	prerequisites = { "tech_assault_armies" }
 	resources = {
@@ -22,8 +22,7 @@ assault_army = {
 		}
 
 		upkeep = {
-			energy = 0.5
-			food = 0.5
+			energy = 1
 		}
 	}
 
@@ -91,7 +90,7 @@ slave_army = {
 	morale_damage = 0.75
 	collateral_damage = 1.50
 	war_exhaustion = 0.50
-	time = 60
+	time = 20
 	icon = GFX_army_type_slave
 
 	resources = {
@@ -101,7 +100,7 @@ slave_army = {
 		}
 
 		upkeep = {
-			food = 0.5
+			energy = 0.5
 		}
 	}
 
@@ -177,7 +176,7 @@ clone_army = {
 	morale = 1.00
 	collateral_damage = 1.25
 	war_exhaustion = 0.50
-	time = 30
+	time = 10
 	icon = GFX_army_type_clone
 	pop_limited = no
 
@@ -188,8 +187,7 @@ clone_army = {
 		}
 
 		upkeep = {
-			energy = 0.25
-			food = 0.5
+			energy = 0.75
 		}
 	}
 
@@ -250,7 +248,7 @@ robotic_army = {
 	collateral_damage = 1.5
 	war_exhaustion = 0.50
 	has_morale = no
-	time = 90
+	time = 30
 	icon = GFX_army_type_robot
 	has_species = yes
 
@@ -310,7 +308,7 @@ psionic_army = {
 	morale = 2.5
 	collateral_damage = 0.5
 	war_exhaustion = 3.0
-	time = 120
+	time = 40
 	icon = GFX_army_type_psionic
 
 	resources = {
@@ -320,8 +318,7 @@ psionic_army = {
 		}
 
 		upkeep = {
-			energy = 2
-			food = 0.5
+			energy = 2.5
 		}
 	}
 
@@ -371,7 +368,7 @@ xenomorph_army = {
 	war_exhaustion = 0.25
 	health = 2.0
 	has_morale = no
-	time = 100
+	time = 35
 	icon = GFX_army_type_xenomorph
 	has_species = no
 
@@ -382,8 +379,7 @@ xenomorph_army = {
 		}
 
 		upkeep = {
-			energy = 1.5
-			food = 0.5
+			energy = 2
 		}
 	}
 
@@ -418,7 +414,7 @@ gene_warrior_army = {
 	morale_damage = 1.0
 	collateral_damage = 0.75
 	war_exhaustion = 3.0
-	time = 150
+	time = 50
 	icon = GFX_army_type_gene_warrior
 
 	resources = {
@@ -428,8 +424,7 @@ gene_warrior_army = {
 		}
 
 		upkeep = {
-			energy = 2
-			food = 1
+			energy = 3
 		}
 	}
 
@@ -467,7 +462,7 @@ machine_assault_1 = {
 	morale_damage = 1.00
 	collateral_damage = 2.0
 	war_exhaustion = 0.5
-	time = 90
+	time = 30
 	has_species = yes
 
 	icon = GFX_army_type_machine_assault
@@ -512,7 +507,7 @@ machine_assault_2 = {
 	morale_damage = 1.5
 	collateral_damage = 2.0
 	war_exhaustion = 1.0
-	time = 120
+	time = 40
 	has_species = yes
 
 	icon = GFX_army_type_machine_assault
@@ -551,7 +546,7 @@ machine_assault_3 = {
 	morale_damage = 1.5
 	collateral_damage = 4.0
 	war_exhaustion = 4.0
-	time = 500
+	time = 150
 	has_species = no
 
 	icon = GFX_army_type_machine_assault
@@ -586,7 +581,7 @@ undead_army = {
 	collateral_damage = 1.25
 	morale_damage = 1.75
 	war_exhaustion = 0.50
-	time = 60
+	time = 20
 	icon = GFX_army_type_undead
 	pop_limited = no
 	disband_if_species_lacks_rights = no #i.e. if you resurrect your enemies, you get to keep these armies, even if you are a purifier

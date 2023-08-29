@@ -23,6 +23,10 @@ fear_campaign = {
 			energy = @campaignCost
 			multiplier = value:edict_size_effect
 		}
+		
+	}
+	resources = {
+		category = edicts
 		upkeep = {
 			unity = @Edict1Cost
 			multiplier = value:edict_size_effect
@@ -101,6 +105,9 @@ recycling_campaign = {
 			energy = @campaignCost
 			multiplier = value:edict_size_effect
 		}
+	}
+	resources = {
+		category = edicts
 		upkeep = {
 			unity = @Edict1Cost
 			multiplier = value:edict_size_effect
@@ -145,6 +152,9 @@ healthcare_campaign = {
 			energy = @campaignCost
 			multiplier = value:pop_size_edicts_floor
 		}
+	}
+	resources = {
+		category = edicts
 		upkeep = {
 			unity = @Edict1Cost
 			multiplier = value:pop_size_edicts_floor

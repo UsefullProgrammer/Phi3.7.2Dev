@@ -6124,8 +6124,10 @@ central_crystal_spawn_effect = {
 	}
 	else_if = {
 		limit = {
-			galaxy_size = medium
-			galaxy_size = mediumover16
+			OR = {
+				galaxy_size = medium
+				galaxy_size = mediumover16
+			}
 		}
 		no_scope = {
 			# makes system positions originate from galactic core
