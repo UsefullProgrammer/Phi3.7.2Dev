@@ -2974,6 +2974,7 @@ tech_housing_2 = {
 	tier = 3
 	category = { industry }
 	prerequisites = { "tech_housing_1" }
+	iS_rare = yes
 	weight = @tier3weight1
 
 	modifier = {

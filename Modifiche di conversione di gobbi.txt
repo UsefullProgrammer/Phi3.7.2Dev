@@ -791,3 +791,10 @@ Domination da un ulteriore 15% alle armate.
 Nuova armata "mech warrior" potente ma fa molti danni collaterali.
 [img]https://i.imgur.com/BHk88Qg.png[/img]
 
+
+[h1][b]1.9.1[/b][/h1]
+
+tech_housing_2 diventata una rare technology
+
+ap_hydrocentric riallineata con le altre asc perks
+ap_transcendent_learning dà 150% xp to leader agli imperi macchina.
