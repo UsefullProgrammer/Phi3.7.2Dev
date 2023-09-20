@@ -1354,3 +1354,6 @@ huge_galaxy_modifier: "Huge galaxy"
  mech_army_desc:0 "Mechs armies, is little simply with mech invade planet that destroy all."
 
  trade_policy_mutual_aid_desc: "By reinvesting our surplus back into the cooperative, we ensure that all our members may thrive according to their needs and shared aspirations.\n\n§EEach collected £trade_value£ §YTrade Value§! earns us £energy£ §Y0.2§!, £minerals£ §Y0.2§!, and £food£ §Y0.2§!§!, £society_research£ 0.1, and £unity£ 0.1"
+sm_Governmental_manager_asset:0 "Manager great hall"
+
+origin_tooltip_void_dwellers_effects: "$origin_tooltip_void_dwellers_effects$\n\nNew Starbase modules with cost influence"

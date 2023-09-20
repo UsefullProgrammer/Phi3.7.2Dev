@@ -3,6 +3,6 @@ tags={
 	"Balance"
 	"Gameplay"
 }
-name="Phigo Dev 3.8.2"
+name="Phigo Dev"
 supported_version="3.9"
 remote_file_id="2969883685"
