@@ -597,10 +597,6 @@ tech_missiles_2 = {
 	ai_update_type = military
 	prerequisites = { "tech_missiles_1" "tech_fusion_power" }
 	weight = @tier1weight2
-	modifier = {
-		army_damage_mult = 0.1
-		army_collateral_damage_mult = 0.1
-	}
 	weight_modifier = {
 		modifier = {
 			factor = 1.25
@@ -614,6 +610,8 @@ tech_missiles_2 = {
 	
 	modifier = {
 		weapon_type_explosive_weapon_fire_rate_mult = 0.05
+		army_damage_mult = 0.1
+		army_collateral_damage_mult = 0.1
 	}
 
 	ai_weight = {
@@ -647,10 +645,6 @@ tech_missiles_3 = {
 	ai_update_type = military
 	prerequisites = { "tech_missiles_2" }
 	weight = @tier2weight1
-	modifier = {
-		army_damage_mult = 0.1
-		army_collateral_damage_mult = 0.1
-	}
 	weight_modifier = {
 		modifier = {
 			factor = 1.25
@@ -664,6 +658,8 @@ tech_missiles_3 = {
 	
 	modifier = {
 		weapon_type_explosive_weapon_fire_rate_mult = 0.05
+		army_damage_mult = 0.1
+		army_collateral_damage_mult = 0.1
 	}
 
 	ai_weight = {
@@ -697,10 +693,7 @@ tech_missiles_4 = {
 	ai_update_type = military
 	prerequisites = { "tech_missiles_3" }
 	weight = @tier3weight1
-	modifier = {
-		army_damage_mult = 0.1
-		army_collateral_damage_mult = 0.1
-	}
+
 	weight_modifier = {
 		modifier = {
 			factor = 1.25
@@ -714,6 +707,8 @@ tech_missiles_4 = {
 	
 	modifier = {
 		weapon_type_explosive_weapon_fire_rate_mult = 0.05
+		army_damage_mult = 0.1
+		army_collateral_damage_mult = 0.1
 	}
 
 	ai_weight = {
@@ -747,10 +742,6 @@ tech_missiles_5 = {
 	ai_update_type = military
 	prerequisites = { "tech_missiles_4" }
 	weight = @tier4weight2
-	modifier = {
-		army_damage_mult = 0.1
-		army_collateral_damage_mult = 0.1
-	}
 	weight_modifier = {
 		modifier = {
 			factor = 1.25
@@ -764,6 +755,8 @@ tech_missiles_5 = {
 	
 	modifier = {
 		weapon_type_explosive_weapon_fire_rate_mult = 0.05
+		army_damage_mult = 0.1
+		army_collateral_damage_mult = 0.1
 	}
 
 	ai_weight = {
@@ -797,11 +790,7 @@ tech_swarmer_missiles_1 = {
 	ai_update_type = military
 	prerequisites = { "tech_missiles_2" }
 	weight = @tier2weight2
-	modifier = {
-		army_damage_mult = 0.1
-		army_morale_damage_mult = 0.1
-		army_collateral_damage_mult = 0.1
-	}
+
 	weight_modifier = {
 		modifier = {
 			factor = 1.25
@@ -815,6 +804,9 @@ tech_swarmer_missiles_1 = {
 	
 	modifier = {
 		weapon_type_explosive_weapon_fire_rate_mult = 0.05
+		army_damage_mult = 0.1
+		army_morale_damage_mult = 0.1
+		army_collateral_damage_mult = 0.1
 	}
 
 	ai_weight = {
@@ -848,11 +840,6 @@ tech_swarmer_missiles_2 = {
 	ai_update_type = military
 	prerequisites = { "tech_swarmer_missiles_1" }
 	weight = @tier4weight2
-	modifier = {
-		army_damage_mult = 0.1
-		army_morale_damage_mult = 0.1
-		army_collateral_damage_mult = 0.1
-	}
 	weight_modifier = {
 		modifier = {
 			factor = 1.25
@@ -866,6 +853,9 @@ tech_swarmer_missiles_2 = {
 	
 	modifier = {
 		weapon_type_explosive_weapon_fire_rate_mult = 0.05
+		army_damage_mult = 0.1
+		army_morale_damage_mult = 0.1
+		army_collateral_damage_mult = 0.1
 	}
 
 	ai_weight = {
