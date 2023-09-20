@@ -136,7 +136,7 @@ automate_crime_management_gestalt = {
 
 automate_building_housing = {
 	available = {
-		free_housing < 1
+		free_housing < 0
 	}
 
 	emergency = yes
@@ -208,10 +208,6 @@ automate_biotrophy_management_servitor_hab = {
 
 	emergency = yes
 	category = "planet_automation_biotrophy_management"
-
-	prio_districts = {
-		district_hab_cultural
-	}
 }
 
 automate_hive_spawning_pool = {
@@ -574,7 +570,6 @@ automate_permanent_employment_building = {
 			colony_type = col_factory
 			colony_type = col_refinery
 			colony_type = col_research
-			colony_type = col_habitat_leisure
 			colony_type = col_habitat_trade
 			colony_type = col_habitat_foundry
 			colony_type = col_habitat_factory

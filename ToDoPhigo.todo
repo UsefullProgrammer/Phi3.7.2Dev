@@ -18,6 +18,19 @@ Burocratici +1 society OK
 Priest +1 society OK
 IA non può invitare in federazione chi ha un truce con lei OK
 
+
+TESTARE per 1.9
+
+trade_policy_mutual_aid
+Common Ground/Hegemon Setup è cambiata
+
+fare 
+[14:33:25][technology.cpp:861]: Failed to find icon for technology: tech_ground_offence_planning (gfx/interface/icons/technologies/tech_ground_offence_planning.dds)
+[14:33:25][technology.cpp:861]: Failed to find icon for technology: tech_ground_offence_planning_2 (gfx/interface/icons/technologies/tech_ground_offence_planning_2.dds)
+[14:33:25][technology.cpp:861]: Failed to find icon for technology: tech_ground_offence_planning_3 (gfx/interface/icons/technologies/tech_ground_offence_planning_3.dds)
+[14:33:25][technology.cpp:861]: Failed to find icon for technology: tech_ground_offence_planning_repeatable (gfx/interface/icons/technologies/tech_ground_offence_planning_repeatable.dds)
+
+
 Politcs economy every migration pact +25 society e +25 unity test?
 
 Migliorare AI replace buildings sopratutto qunado ci sono disoccupati > 5
@@ -36,3 +49,5 @@ Avvelenamento Aumentare probabilità di morte improvvisa (solo se bordi aperti)
 Uccidi leader, uccidi un leader (casuale al 50%) ma dai un casus bellis non survive di vendetta uccisione leader che porta umiliazione
 
 phiai40 bug rimuome distretto a caso
+
+

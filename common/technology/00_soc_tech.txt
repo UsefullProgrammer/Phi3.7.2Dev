@@ -50,7 +50,7 @@ tech_space_trading = {
 	}
 
 	ai_weight = {
-		
+
 	}
 }
 
@@ -85,7 +85,7 @@ tech_interstellar_economics = {
 	}
 
 	ai_weight = {
-		
+
 	}
 }
 
@@ -134,7 +134,7 @@ tech_galactic_markets = {
 	}
 
 	ai_weight = {
-		
+
 	}
 }
 
@@ -896,7 +896,7 @@ tech_colonization_1 = {
 	}
 
 	ai_weight = {
-		
+
 	}
 }
 
@@ -922,7 +922,7 @@ tech_colonization_2 = {
 	}
 
 	weight_modifier = {
-		
+
 		modifier = {
 			factor = 0.7
 			OR = {
@@ -933,7 +933,7 @@ tech_colonization_2 = {
 	}
 
 	ai_weight = {
-		
+
 	}
 }
 
@@ -959,7 +959,7 @@ tech_colonization_3 = {
 	}
 
 	weight_modifier = {
-		
+
 		modifier = {
 			factor = 0.7
 			OR = {
@@ -970,7 +970,7 @@ tech_colonization_3 = {
 	}
 
 	ai_weight = {
-		
+
 	}
 }
 
@@ -996,7 +996,7 @@ tech_colonization_4 = {
 	}
 
 	weight_modifier = {
-		
+
 		modifier = {
 			factor = 0.7
 			OR = {
@@ -1007,7 +1007,7 @@ tech_colonization_4 = {
 	}
 
 	ai_weight = {
-		
+
 	}
 }
 
@@ -1033,7 +1033,7 @@ tech_colonization_5 = {
 	}
 
 	weight_modifier = {
-		
+
 		modifier = {
 			factor = 0.7
 			OR = {
@@ -1044,7 +1044,7 @@ tech_colonization_5 = {
 	}
 
 	ai_weight = {
-		
+
 	}
 }
 
@@ -1100,7 +1100,7 @@ tech_tomb_world_adaption = {
 	}
 
 	ai_weight = {
-		
+
 	}
 }
 
@@ -1129,7 +1129,7 @@ tech_frontier_health = {
 		}
 		modifier = {
 			factor = 2
-			has_country_flag = payback_researching_gene_clinics 
+			has_country_flag = payback_researching_gene_clinics
 		}
 	}
 }
@@ -1202,7 +1202,7 @@ tech_mountain_range = {
 				}
 			}
 		}
-		
+
 		modifier = {
 			factor = 0
 			num_owned_planets < 2
@@ -1221,7 +1221,7 @@ tech_mountain_range = {
 				}
 			}
 		}
-		
+
 		modifier = {
 			factor = 0
 			num_owned_planets < 2
@@ -1264,7 +1264,7 @@ tech_volcano = {
 				}
 			}
 		}
-		
+
 		modifier = {
 			factor = 0
 			num_owned_planets < 2
@@ -1280,7 +1280,7 @@ tech_volcano = {
 				}
 			}
 		}
-		
+
 		modifier = {
 			factor = 0
 			num_owned_planets < 2
@@ -1324,7 +1324,7 @@ tech_dangerous_wildlife = {
 				}
 			}
 		}
-		
+
 		modifier = {
 			factor = 0
 			num_owned_planets < 2
@@ -1340,7 +1340,7 @@ tech_dangerous_wildlife = {
 				}
 			}
 		}
-		
+
 		modifier = {
 			factor = 0
 			num_owned_planets < 2
@@ -1383,7 +1383,7 @@ tech_dense_jungle = {
 				}
 			}
 		}
-		
+
 		modifier = {
 			factor = 0
 			num_owned_planets < 2
@@ -1399,7 +1399,7 @@ tech_dense_jungle = {
 				}
 			}
 		}
-		
+
 		modifier = {
 			factor = 0
 			num_owned_planets < 2
@@ -1442,7 +1442,7 @@ tech_quicksand_basin = {
 				}
 			}
 		}
-		
+
 		modifier = {
 			factor = 0
 			num_owned_planets < 2
@@ -1458,7 +1458,7 @@ tech_quicksand_basin = {
 				}
 			}
 		}
-		
+
 		modifier = {
 			factor = 0
 			num_owned_planets < 2
@@ -1501,7 +1501,7 @@ tech_noxious_swamp = {
 				}
 			}
 		}
-		
+
 		modifier = {
 			factor = 0
 			num_owned_planets < 2
@@ -1517,7 +1517,7 @@ tech_noxious_swamp = {
 				}
 			}
 		}
-		
+
 		modifier = {
 			factor = 0
 			num_owned_planets < 2
@@ -1560,7 +1560,7 @@ tech_massive_glacier = {
 				}
 			}
 		}
-		
+
 		modifier = {
 			factor = 0
 			num_owned_planets < 2
@@ -1576,7 +1576,7 @@ tech_massive_glacier = {
 				}
 			}
 		}
-		
+
 		modifier = {
 			factor = 0
 			num_owned_planets < 2
@@ -1619,7 +1619,7 @@ tech_toxic_kelp = {
 				}
 			}
 		}
-		
+
 		modifier = {
 			factor = 0
 			num_owned_planets < 2
@@ -1635,7 +1635,7 @@ tech_toxic_kelp = {
 				}
 			}
 		}
-		
+
 		modifier = {
 			factor = 0
 			num_owned_planets < 2
@@ -1678,7 +1678,7 @@ tech_deep_sinkhole = {
 				}
 			}
 		}
-		
+
 		modifier = {
 			factor = 0
 			num_owned_planets < 2
@@ -1694,7 +1694,7 @@ tech_deep_sinkhole = {
 				}
 			}
 		}
-		
+
 		modifier = {
 			factor = 0
 			num_owned_planets < 2
@@ -1747,7 +1747,44 @@ tech_terrestrial_sculpting = {
 	}
 
 	ai_weight = {
-		factor = 1000
+		factor = 500
+
+		modifier = {
+			factor = 2
+			is_xenophobe = yes
+		}
+		modifier = {
+			factor = 0
+			OR = {
+				has_origin = origin_shattered_ring
+				has_origin = origin_void_dwellers
+			}
+			is_ai = yes
+		}
+		modifier = {
+			factor = 5
+			any_system_within_border = {
+				any_system_planet = {
+					is_colonizable = yes
+					habitability = {
+						who = root
+						value < 0.5
+					}
+				}
+			}
+		}
+		modifier = { #Hydrocentric is really good and needs this
+			factor = 1000
+			has_trait = trait_aquatic
+		}
+		modifier = {
+			factor = 100
+			has_origin = origin_life_seeded
+		}
+		modifier = {
+			factor = 2
+			is_ai = no #auto-research
+		}
 	}
 }
 
@@ -1769,11 +1806,40 @@ tech_ecological_adaptation = {
 			factor = 1.25
 			has_tradition = tr_expansion_adopt
 		}
-		
+
 	}
 
 	ai_weight = {
-		weight = 1000
+		factor = 250
+
+		modifier = {
+			factor = 2
+			is_xenophobe = yes
+		}
+		modifier = {
+			factor = 5
+			OR = {
+				any_owned_planet = {
+					habitability = {
+						who = root
+						value < 0.5
+					}
+				}
+				any_system_within_border = {
+					any_system_planet = {
+						is_planet_class = pc_nuked
+					}
+				}
+			}
+		}
+		modifier = {
+			factor = 5
+			has_origin = origin_life_seeded
+		}
+		modifier = {
+			factor = 2
+			is_ai = no #auto-research
+		}
 	}
 }
 
@@ -1800,12 +1866,12 @@ tech_climate_restoration = {
 			factor = 1.25
 			has_tradition = tr_expansion_adopt
 		}
-		
+
 	}
 
 	ai_weight = {
 		factor = @terraforming_tech_ai_factor
-		
+
 		modifier = {
 			factor = 5
 			has_origin = origin_life_seeded
@@ -2087,6 +2153,9 @@ tech_gene_seed_purification = {
 		modifier = {
 			factor = 0
 			host_has_dlc = "Utopia"
+			NOT = {
+				has_ascension_perk = ap_engineered_evolution
+			}
 		}
 		modifier = {
 			factor = 1.25
@@ -2791,7 +2860,7 @@ tech_doctrine_fleet_size_1 = {
 			factor = 2
 			is_militarist = yes
 		}
-		
+
 	}
 
 	ai_weight = {
@@ -2799,7 +2868,7 @@ tech_doctrine_fleet_size_1 = {
 			factor = 2
 			is_militarist = yes
 		}
-		
+
 	}
 }
 
@@ -2822,7 +2891,7 @@ tech_doctrine_fleet_size_2 = {
 			factor = 2
 			is_militarist = yes
 		}
-		
+
 	}
 
 	ai_weight = {
@@ -2830,7 +2899,7 @@ tech_doctrine_fleet_size_2 = {
 			factor = 2
 			is_militarist = yes
 		}
-		
+
 	}
 }
 
@@ -2853,7 +2922,7 @@ tech_doctrine_fleet_size_3 = {
 			factor = 2
 			is_militarist = yes
 		}
-		
+
 	}
 
 	ai_weight = {
@@ -2861,7 +2930,7 @@ tech_doctrine_fleet_size_3 = {
 			factor = 2
 			is_militarist = yes
 		}
-		
+
 	}
 }
 
@@ -2884,7 +2953,7 @@ tech_doctrine_fleet_size_4 = {
 			factor = 2
 			is_militarist = yes
 		}
-		
+
 	}
 
 	ai_weight = {
@@ -2892,7 +2961,7 @@ tech_doctrine_fleet_size_4 = {
 			factor = 2
 			is_militarist = yes
 		}
-		
+
 	}
 }
 
@@ -2915,7 +2984,7 @@ tech_doctrine_fleet_size_5 = {
 			factor = 2
 			is_militarist = yes
 		}
-		
+
 	}
 
 	ai_weight = {
@@ -2923,7 +2992,7 @@ tech_doctrine_fleet_size_5 = {
 			factor = 2
 			is_militarist = yes
 		}
-		
+
 	}
 }
 
@@ -2942,7 +3011,7 @@ tech_interstellar_fleet_traditions = {
 			factor = 2
 			is_militarist = yes
 		}
-		
+
 	}
 
 	ai_weight = {
@@ -2950,7 +3019,7 @@ tech_interstellar_fleet_traditions = {
 			factor = 2
 			is_militarist = yes
 		}
-		
+
 	}
 }
 
@@ -2973,7 +3042,7 @@ tech_refit_standards = {
 			factor = 2
 			is_militarist = yes
 		}
-		
+
 	}
 
 	ai_weight = {
@@ -2981,7 +3050,7 @@ tech_refit_standards = {
 			factor = 2
 			is_militarist = yes
 		}
-		
+
 	}
 }
 
@@ -3005,7 +3074,7 @@ tech_command_matrix = {
 			factor = 2
 			is_militarist = yes
 		}
-		
+
 	}
 
 	ai_weight = {
@@ -3013,7 +3082,7 @@ tech_command_matrix = {
 			factor = 2
 			is_militarist = yes
 		}
-		
+
 	}
 }
 
@@ -3038,7 +3107,7 @@ tech_doctrine_navy_size_1 = {
 			factor = 2
 			is_militarist = yes
 		}
-		
+
 	}
 
 	ai_weight = {
@@ -3046,7 +3115,7 @@ tech_doctrine_navy_size_1 = {
 			factor = 2
 			is_militarist = yes
 		}
-		
+
 	}
 }
 
@@ -3071,7 +3140,7 @@ tech_doctrine_navy_size_2 = {
 			factor = 2
 			is_militarist = yes
 		}
-		
+
 	}
 
 	ai_weight = {
@@ -3079,7 +3148,7 @@ tech_doctrine_navy_size_2 = {
 			factor = 2
 			is_militarist = yes
 		}
-		
+
 	}
 }
 
@@ -3104,7 +3173,7 @@ tech_doctrine_navy_size_3 = {
 			factor = 2
 			is_militarist = yes
 		}
-		
+
 	}
 
 	ai_weight = {
@@ -3112,7 +3181,7 @@ tech_doctrine_navy_size_3 = {
 			factor = 2
 			is_militarist = yes
 		}
-		
+
 	}
 }
 
@@ -3137,7 +3206,7 @@ tech_doctrine_navy_size_4 = {
 			factor = 2
 			is_militarist = yes
 		}
-		
+
 	}
 
 	ai_weight = {
@@ -3145,7 +3214,7 @@ tech_doctrine_navy_size_4 = {
 			factor = 2
 			is_militarist = yes
 		}
-		
+
 	}
 }
 
@@ -3171,7 +3240,7 @@ tech_centralized_command = {
 			factor = 2
 			is_militarist = yes
 		}
-		
+
 	}
 
 	ai_weight = {
@@ -3179,7 +3248,7 @@ tech_centralized_command = {
 			factor = 2
 			is_militarist = yes
 		}
-		
+
 	}
 }
 
@@ -3202,7 +3271,7 @@ tech_combat_training = {
 			factor = 2
 			is_militarist = yes
 		}
-		
+
 	}
 
 	ai_weight = {
@@ -3210,7 +3279,7 @@ tech_combat_training = {
 			factor = 2
 			is_militarist = yes
 		}
-		
+
 	}
 }
 
@@ -3236,7 +3305,7 @@ tech_ground_defense_planning = {
 			factor = 2
 			is_militarist = yes
 		}
-		
+
 	}
 
 	ai_weight = {
@@ -3244,7 +3313,7 @@ tech_ground_defense_planning = {
 			factor = 2
 			is_militarist = yes
 		}
-		
+
 	}
 }
 
@@ -3269,7 +3338,7 @@ tech_global_defense_grid = {
 			factor = 2
 			is_militarist = yes
 		}
-		
+
 		modifier = {
 			factor = 1.5
 			is_specialist_subject_type = { TYPE = bulwark }
@@ -3281,7 +3350,7 @@ tech_global_defense_grid = {
 			factor = 2
 			is_militarist = yes
 		}
-		
+
 	}
 }
 
@@ -3312,6 +3381,8 @@ tech_psionic_theory = {
 
 	modifier = {
 		empire_size_pops_mult = -0.10
+		army_morale = 0.1
+		army_morale_damage_mult = 0.1
 	}
 
 	weight_modifier = {
@@ -3377,8 +3448,9 @@ tech_psionic_theory = {
 		}
 		modifier = {
 			factor = 2
-			any_owned_planet = {
-				has_modifier = pm_shroudwalker_teacher
+			has_paragon_dlc = no
+			any_owned_leader = {
+				has_trait = leader_trait_shroudwalker
 			}
 		}
 		modifier = {
@@ -3386,7 +3458,8 @@ tech_psionic_theory = {
 			AND = {
 				is_materialist = yes
 				NOR = {
-					has_trait_in_council = { TRAIT = leader_trait_expertise_psionics }
+					has_trait_tier1or2or3 = { TRAIT = leader_trait_expertise_psionics }
+					has_councilor = { COUNCILOR = "councilor_shroudwalker_teacher" }
 					any_owned_pop = {
 						OR = {
 							pop_has_trait = trait_psionic
@@ -3427,12 +3500,19 @@ tech_telepathy = {
 	potential = {
 		NOT = { has_ethic = ethic_gestalt_consciousness }
 	}
-
+	modifier = {
+		army_morale = 0.1
+		army_collateral_damage_mult = -0.1
+		army_morale_damage_mult = 0.1
+	}
 	weight_modifier = {
 		factor = 0.5
 		modifier = {
 			factor = 0
-			host_has_dlc = "Utopia" # Granted by Psionic Ascension Path
+			host_has_dlc = "Utopia"
+			NOT = {
+				has_ascension_perk = ap_mind_over_matter
+			}
 		}
 		modifier = {
 			factor = 0.50
@@ -3462,8 +3542,9 @@ tech_telepathy = {
 		}
 		modifier = {
 			factor = 3
-			any_owned_planet = {
-				has_modifier = pm_shroudwalker_teacher
+			has_paragon_dlc = no
+			any_owned_leader = {
+				has_trait = leader_trait_shroudwalker
 			}
 		}
 		modifier = {
@@ -3504,7 +3585,10 @@ tech_precognition_interface = {
 			desc = "TECH_UNLOCK_COMBAT_COMPUTER_PRECOG_DESC"
 		}
 	}
-
+	modifier = {
+		army_collateral_damage_mult = -0.25
+		army_morale_damage_mult = 0.1
+	}
 	potential = {
 		NOT = { has_ethic = ethic_gestalt_consciousness }
 	}
@@ -3543,8 +3627,9 @@ tech_precognition_interface = {
 		}
 		modifier = {
 			factor = 3
-			any_owned_planet = {
-				has_modifier = pm_shroudwalker_teacher
+			has_paragon_dlc = no
+			any_owned_leader = {
+				has_trait = leader_trait_shroudwalker
 			}
 		}
 		modifier = {
@@ -3581,12 +3666,17 @@ tech_thought_enforcement = {
 	potential = {
 		NOT = { has_ethic = ethic_gestalt_consciousness }
 	}
-
+	modifier = {
+		army_morale = 0.25
+	}
 	weight_modifier = {
 		factor = 0.5
 		modifier = {
 			factor = 0
 			host_has_dlc = "Utopia" # Granted by Psionic Ascension Path
+			NOT = {
+				has_ascension_perk = ap_mind_over_matter
+			}
 		}
 		modifier = {
 			factor = 0.50
@@ -3617,14 +3707,15 @@ tech_thought_enforcement = {
 			has_ethic = ethic_fanatic_authoritarian
 		}
 		modifier = {
-			factor = 3
-			any_owned_planet = {
-				has_modifier = pm_shroudwalker_teacher
-			}
-		}
-		modifier = {
 			factor = 2
 			has_valid_civic = civic_police_state
+		}
+		modifier = {
+			factor = 3
+			has_paragon_dlc = no
+			any_owned_leader = {
+				has_trait = leader_trait_shroudwalker
+			}
 		}
 		modifier = {
 			factor = 2
@@ -3743,7 +3834,7 @@ tech_galactic_ambitions = {
 			factor = 2
 			num_communications > 4
 		}
-		
+
 		modifier = {
 			factor = 0
 			num_communications < 1
@@ -3755,7 +3846,7 @@ tech_galactic_ambitions = {
 			factor = 2
 			is_militarist = yes
 		}
-		
+
 	}
 }
 
@@ -3770,8 +3861,11 @@ tech_manifest_destiny = {
 
 	modifier = {
 		country_starbase_capacity_add = 2
+		armies_upkeep_mult = -0.1
+		armies_cost_mult = -0.1
+		planet_army_build_speed_mult = 0.1
 	}
-
+	
 	weight_modifier = {
 		modifier = {
 			factor = 2
@@ -3785,7 +3879,7 @@ tech_manifest_destiny = {
 			factor = 2
 			num_communications > 4
 		}
-		
+
 		modifier = {
 			factor = 0
 			num_communications < 1
@@ -3801,7 +3895,7 @@ tech_manifest_destiny = {
 			factor = 2
 			has_ethic = ethic_fanatic_militarist
 		}
-		
+
 	}
 }
 
@@ -3816,6 +3910,7 @@ tech_interstellar_campaigns = {
 	modifier = {
 		country_claim_influence_cost_mult = -0.1
 		country_war_exhaustion_mult = -0.1
+		planet_army_build_speed_mult = 0.1
 	}
 
 	weight_modifier = {
@@ -3839,7 +3934,7 @@ tech_interstellar_campaigns = {
 			factor = 2
 			num_communications > 4
 		}
-		
+
 		modifier = {
 			factor = 0
 			num_communications < 1
@@ -3851,7 +3946,7 @@ tech_interstellar_campaigns = {
 			factor = 2
 			is_militarist = yes
 		}
-		
+
 	}
 }
 
@@ -3866,6 +3961,7 @@ tech_galactic_campaigns = {
 	modifier = {
 		country_claim_influence_cost_mult = -0.1
 		country_war_exhaustion_mult = -0.1
+		planet_army_build_speed_mult = 0.1
 	}
 
 	weight_modifier = {
@@ -3889,7 +3985,7 @@ tech_galactic_campaigns = {
 			factor = 2
 			num_communications > 4
 		}
-		
+
 		modifier = {
 			factor = 0
 			num_communications < 1
@@ -3905,7 +4001,7 @@ tech_galactic_campaigns = {
 			factor = 2
 			has_ethic = ethic_fanatic_militarist
 		}
-		
+
 	}
 }
 
@@ -3965,7 +4061,25 @@ tech_planetary_unification = {
 	}
 
 	ai_weight = {
-		weight = 2000
+		factor = 1500
+		modifier = {
+			factor = 0.75
+			NOT = {
+				OR = {
+					has_ethic = ethic_pacifist
+					has_ethic = ethic_fanatic_pacifist
+				}
+			}
+		}
+		modifier = {
+			factor = 1.25
+			has_ethic = ethic_authoritarian
+		}
+		modifier = {
+			factor = 1.5
+			has_ethic = ethic_fanatic_authoritarian
+		}
+
 	}
 }
 
@@ -3984,17 +4098,18 @@ tech_colonial_centralization = {
 	# unlocks production-targets edict
 
 	modifier = {
+		country_base_unity_produces_add = 10
 		country_leader_cap_add = 1
 	}
 
 	weight_modifier = {
 		factor = 4
-		
+
 	}
 
 	ai_weight = {
 		factor = @capital_tech_ai_factor
-		
+
 	}
 }
 
@@ -4010,6 +4125,7 @@ tech_galactic_administration = {
 	gateway = capital	# unlocks Empire Capital-Complex
 
 	modifier = {		# add civic slot
+		country_base_unity_produces_add = 10
 		country_government_civic_points_add = 1
 	}
 
@@ -4020,7 +4136,7 @@ tech_galactic_administration = {
 
 	ai_weight = {
 		factor = @capital_tech_ai_factor
-		
+
 	}
 }
 
@@ -4037,11 +4153,12 @@ tech_planetary_infrastructure_1 = {
 	modifier = {
 		planet_max_buildings_add = 1
 		planet_colony_development_speed_mult = 0.25
+		habitat_max_districts_mult = 0.10
 	}
 
 	weight_modifier = {
 		factor = 4
-		
+
 	}
 
 	ai_weight = {
@@ -4060,16 +4177,17 @@ tech_planetary_infrastructure_2 = {
 	modifier = {
 		planet_max_buildings_add = 1
 		planet_colony_development_speed_mult = 0.25
+		habitat_max_districts_mult = 0.10
 	}
 
 	weight_modifier = {
 		factor = 4
-		
+
 	}
 
 	ai_weight = {
 		factor = @building_slots_ai_tech_factor
-		
+
 	}
 }
 
@@ -4202,7 +4320,7 @@ tech_global_production_strategy = {
 	}
 
 	ai_weight = {
-		
+
 	}
 }
 
@@ -4558,7 +4676,6 @@ tech_embodied_dynamism = {
 			factor = 1.5
 			num_owned_planets > 10
 		}
-
 	}
 
 	ai_weight = {
@@ -4626,7 +4743,7 @@ tech_neural_implants = {
 				has_ethic = ethic_fanatic_authoritarian
 			}
 		}
-		
+
 	}
 }
 
@@ -4644,7 +4761,7 @@ tech_artificial_moral_codes = {
 
 	modifier = {
 		#PHI
-		planet_crime_mult = -0.15
+		planet_crime_mult = -0.10
 		planet_amenities_mult = 0.05
 		pop_factions_unity_produces_mult = 0.1
 	}
@@ -4686,7 +4803,7 @@ tech_synthetic_thought_patterns = {
 	}
 
 	ai_weight = {
-		
+
 	}
 }
 
@@ -4715,7 +4832,7 @@ tech_unity_of_purpose = {
 	}
 
 	ai_weight = {
-		
+
 	}
 }
 
@@ -4741,7 +4858,7 @@ tech_collective_production_methods = {
 	}
 
 	ai_weight = {
-		
+
 	}
 }
 
@@ -4767,7 +4884,7 @@ tech_resource_processing_algorithms = {
 	}
 
 	ai_weight = {
-		
+
 	}
 }
 
@@ -4831,7 +4948,9 @@ tech_paradise_dome = {
 			has_valid_civic = civic_machine_servitor
 		}
 	}
-
+	modifier = {
+		planet_amenities_mult = 0.01
+	}
 	weight_modifier = {
 		modifier = {
 			factor = 0
@@ -4873,7 +4992,7 @@ tech_cultural_heritage = {
 	}
 
 	ai_weight = {
-		
+
 	}
 }
 
@@ -5057,7 +5176,7 @@ tech_hive_node = {
 	}
 
 	ai_weight = {
-		
+
 	}
 }
 
@@ -5160,7 +5279,9 @@ tech_psionic_barrier = {
 	weight = 0
 	is_reverse_engineerable = no
 	icon = tech_psionic_barrier
-
+	modifier = {
+		army_health = 0.11
+	}
 	weight_modifier = {
 		factor = 0
 	}
@@ -5176,7 +5297,9 @@ tech_psionic_shield = {
 	prerequisites = { "tech_psionic_theory" }
 	weight = 0
 	is_reverse_engineerable = no
-
+	modifier = {
+		army_health = 0.22
+	}
 	weight_modifier = {
 		factor = 0
 	}
@@ -5233,7 +5356,7 @@ tech_penal_colonies = {
 	}
 
 	ai_weight = {
-		weight = 0.5
+		weight = 0
 	}
 }
 
@@ -5280,7 +5403,7 @@ tech_resort_colonies = {
 	}
 
 	ai_weight = {
-		weight = 0.5
+		weight = 0
 	}
 }
 
@@ -5321,7 +5444,7 @@ tech_slave_colonies = {
 	}
 
 	ai_weight = {
-		weight = 0.5
+		weight = 0
 	}
 }
 
@@ -5346,7 +5469,11 @@ tech_housing_agrarian_idyll = {
 	}
 
 	ai_weight = {
-		weight = 1000
+
+		modifier = {
+			factor = 1000
+			num_pops >= 100
+		}
 	}
 }
 
@@ -5390,7 +5517,7 @@ tech_xeno_diplomacy = {
 	}
 
 	ai_weight = {
-		
+
 		modifier = {
 			factor = 1.25
 			has_ethic = ethic_xenophile
@@ -5446,7 +5573,7 @@ tech_xeno_relations = {
 	}
 
 	ai_weight = {
-		
+
 		modifier = {
 			factor = 1.25
 			has_ethic = ethic_xenophile
@@ -5487,7 +5614,7 @@ tech_capital_productivity_1 = {
 	}
 
 	ai_weight = {
-		
+
 	}
 }
 
@@ -5515,7 +5642,7 @@ tech_capital_productivity_2 = {
 	}
 
 	ai_weight = {
-		
+
 	}
 }
 
@@ -5543,7 +5670,7 @@ tech_capital_productivity_3 = {
 	}
 
 	ai_weight = {
-		
+
 	}
 }
 
@@ -5651,5 +5778,397 @@ tech_xeno_linguistics = {
 				perc_communications_with_playable > 0
 			}
 		}
+	}
+}
+
+# Node Reformatting
+tech_node_reformatting_1 = {
+	cost = @tier2cost3
+	area = society
+	tier = 2
+	category = { statecraft }
+	prerequisites = { "tech_colonial_centralization" }
+	weight = @tier2weight3
+
+	potential = {
+		is_machine_empire = yes
+	}
+
+	gateway = node_reformatting
+
+	prereqfor_desc = {
+		custom = {
+			title = "AGENDA_UNLOCK_NODE_REFORMATTING_TITLE"
+			desc = "AGENDA_UNLOCK_NODE_REFORMATTING_DESC"
+		}
+	}
+
+	weight_modifier = {
+		modifier = {
+			factor = 0.5
+			any_owned_leader = {
+				is_councilor = yes
+				is_ruler = no
+				has_skill < 2
+			}
+		}
+		modifier = {
+			factor = 1.5
+			any_owned_leader = {
+				is_councilor = yes
+				is_ruler = no
+				has_skill >= 3
+			}
+		}
+		modifier = {
+			factor = 1.5
+			any_owned_leader = {
+				is_councilor = yes
+				is_ruler = no
+				has_skill  >= 5
+			}
+		}
+		modifier = {
+			factor = 1.5
+			any_owned_leader = {
+				is_councilor = yes
+				is_ruler = no
+				has_skill  >= 7
+			}
+		}
+		modifier = {
+			factor = 1.5
+			any_owned_leader = {
+				is_councilor = yes
+				is_ruler = no
+				has_skill  >= 9
+			}
+		}
+	}
+
+	ai_weight = {
+
+	}
+}
+
+tech_node_reformatting_2 = {
+	cost = @tier3cost3
+	area = society
+	tier = 3
+	category = { statecraft }
+	prerequisites = { "tech_node_reformatting_1" }
+	weight = @tier3weight3
+
+	potential = {
+		is_machine_empire = yes
+	}
+
+	modifier = {
+		restored_node_bonus_skill = 2
+		councilor_exp_gain = 0.25
+	}
+
+	weight_modifier = {
+		modifier = {
+			factor = 0.5
+			any_owned_leader = {
+				is_councilor = yes
+				is_ruler = no
+				has_skill < 4
+			}
+		}
+		modifier = {
+			factor = 1.5
+			any_owned_leader = {
+				is_councilor = yes
+				is_ruler = no
+				has_skill  >= 5
+			}
+		}
+		modifier = {
+			factor = 1.5
+			any_owned_leader = {
+				is_councilor = yes
+				is_ruler = no
+				has_skill  >= 7
+			}
+		}
+		modifier = {
+			factor = 1.5
+			any_owned_leader = {
+				is_councilor = yes
+				is_ruler = no
+				has_skill  >= 9
+			}
+		}
+	}
+
+	ai_weight = {
+
+	}
+}
+
+tech_node_reformatting_3 = {
+	cost = @tier4cost3
+	area = society
+	tier = 4
+	category = { statecraft }
+	prerequisites = { "tech_node_reformatting_2" }
+	weight = @tier4weight3
+	is_rare = yes
+
+	potential = {
+		is_machine_empire = yes
+	}
+
+	modifier = {
+		restored_node_bonus_skill = 2
+		councilor_skill_add = 1
+	}
+
+	weight_modifier = {
+		modifier = {
+			factor = 0.5
+			any_owned_leader = {
+				is_councilor = yes
+				is_ruler = no
+				has_skill < 6
+			}
+		}
+		modifier = {
+			factor = 1.5
+			any_owned_leader = {
+				is_councilor = yes
+				is_ruler = no
+				has_skill  >= 7
+			}
+		}
+		modifier = {
+			factor = 1.5
+			any_owned_leader = {
+				is_councilor = yes
+				is_ruler = no
+				has_skill  >= 9
+			}
+		}
+		modifier = {
+			factor = 0.25
+			NOR = {
+				has_trait_in_council = { TRAIT = leader_trait_expertise_statecraft }
+				has_trait_in_council = { TRAIT = leader_trait_curator }
+			}
+		}
+		modifier = {
+			factor = @ap_technological_ascendancy_rare_tech
+			has_ascension_perk = ap_technological_ascendancy
+		}
+		modifier = {
+			factor = @federation_perk_factor
+			has_federation = yes
+			federation = {
+				has_federation_perk = rare_tech_boost
+				any_member = { has_technology = tech_node_reformatting_3 }
+			}
+		}
+	}
+
+	ai_weight = {
+
+	}
+}
+
+# Node Culling
+tech_node_culling_1 = {
+	cost = @tier2cost3
+	area = society
+	tier = 2
+	category = { statecraft }
+	prerequisites = { "tech_colonial_centralization" }
+	weight = @tier2weight3
+
+	potential = {
+		is_hive_empire = yes
+	}
+
+	gateway = gateway_node_culling
+
+	prereqfor_desc = {
+		custom = {
+			title = "AGENDA_UNLOCK_NODE_CULLING_TITLE"
+			desc = "AGENDA_UNLOCK_NODE_CULLING_DESC"
+		}
+	}
+
+	weight_modifier = {
+		modifier = {
+			factor = 0.5
+			any_owned_leader = {
+				is_councilor = yes
+				is_ruler = no
+				has_skill < 2
+			}
+		}
+		modifier = {
+			factor = 1.5
+			any_owned_leader = {
+				is_councilor = yes
+				is_ruler = no
+				has_skill >= 3
+			}
+		}
+		modifier = {
+			factor = 1.5
+			any_owned_leader = {
+				is_councilor = yes
+				is_ruler = no
+				has_skill  >= 5
+			}
+		}
+		modifier = {
+			factor = 1.5
+			any_owned_leader = {
+				is_councilor = yes
+				is_ruler = no
+				has_skill  >= 7
+			}
+		}
+		modifier = {
+			factor = 1.5
+			any_owned_leader = {
+				is_councilor = yes
+				is_ruler = no
+				has_skill  >= 9
+			}
+		}
+	}
+
+	ai_weight = {
+
+	}
+}
+
+tech_node_culling_2 = {
+	cost = @tier3cost3
+	area = society
+	tier = 3
+	category = { statecraft }
+	prerequisites = { "tech_node_culling_1" }
+	weight = @tier3weight3
+
+	potential = {
+		is_hive_empire = yes
+	}
+
+	modifier = {
+		restored_node_bonus_skill = 2
+		councilor_exp_gain = 0.25
+	}
+
+	weight_modifier = {
+		modifier = {
+			factor = 0.5
+			any_owned_leader = {
+				is_councilor = yes
+				is_ruler = no
+				has_skill < 4
+			}
+		}
+		modifier = {
+			factor = 1.5
+			any_owned_leader = {
+				is_councilor = yes
+				is_ruler = no
+				has_skill  >= 5
+			}
+		}
+		modifier = {
+			factor = 1.5
+			any_owned_leader = {
+				is_councilor = yes
+				is_ruler = no
+				has_skill  >= 7
+			}
+		}
+		modifier = {
+			factor = 1.5
+			any_owned_leader = {
+				is_councilor = yes
+				is_ruler = no
+				has_skill  >= 9
+			}
+		}
+	}
+
+	ai_weight = {
+
+	}
+}
+
+tech_node_culling_3 = {
+	cost = @tier4cost3
+	area = society
+	tier = 4
+	category = { statecraft }
+	prerequisites = { "tech_node_culling_2" }
+	weight = @tier4weight3
+	is_rare = yes
+
+	potential = {
+		is_hive_empire = yes
+	}
+
+	modifier = {
+		restored_node_bonus_skill = 2
+		councilor_skill_add = 1
+	}
+
+	weight_modifier = {
+		modifier = {
+			factor = 0.5
+			any_owned_leader = {
+				is_councilor = yes
+				is_ruler = no
+				has_skill < 6
+			}
+		}
+		modifier = {
+			factor = 1.5
+			any_owned_leader = {
+				is_councilor = yes
+				is_ruler = no
+				has_skill  >= 7
+			}
+		}
+		modifier = {
+			factor = 1.5
+			any_owned_leader = {
+				is_councilor = yes
+				is_ruler = no
+				has_skill  >= 9
+			}
+		}
+		modifier = {
+			factor = 0.25
+			NOR = {
+				has_trait_in_council = { TRAIT = leader_trait_expertise_statecraft }
+				has_trait_in_council = { TRAIT = leader_trait_curator }
+			}
+		}
+		modifier = {
+			factor = @ap_technological_ascendancy_rare_tech
+			has_ascension_perk = ap_technological_ascendancy
+		}
+		modifier = {
+			factor = @federation_perk_factor
+			has_federation = yes
+			federation = {
+				has_federation_perk = rare_tech_boost
+				any_member = { has_technology = tech_node_culling_3 }
+			}
+		}
+	}
+
+	ai_weight = {
+
 	}
 }

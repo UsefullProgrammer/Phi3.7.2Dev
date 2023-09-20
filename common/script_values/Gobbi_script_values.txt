@@ -335,3 +335,16 @@ production_science_years_passed = {
 	mult = trigger:years_passed
 	max = 500
 }
+Count_malus_over_pop_nobles = {
+	complex_trigger_modifier = {
+		trigger = count_owned_pop
+		parameters = {
+			limit = {
+				has_job_category = noble
+			}
+		}
+		mode = add
+	}
+	substract = 2
+	min = 1
+}

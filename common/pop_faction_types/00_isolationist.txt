@@ -96,6 +96,17 @@ isolationist = {
 			is_event_leader = yes
 		}
 	}
+	# DEMAND: Faction Outraged (by a GalCom Resolution)
+	inline_script = {
+		script = pop_faction_types/demand_faction_outraged
+		FLAG = galcom_resolution_passed_anti_isolationist
+	}
+
+	# DEMAND: Faction Pleased (by a GalCom Resolution)
+	inline_script = {
+		script = pop_faction_types/demand_faction_pleased
+		FLAG = galcom_resolution_passed_pro_isolationist
+	}
 	#5|-20
 	demand = {
 		title = "ISOLATIONIST_NO_AGGRESSIVE_WAR"

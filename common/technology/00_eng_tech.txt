@@ -1122,7 +1122,7 @@ tech_habitat_1 = {
 	prereqfor_desc = {
 		ship = {
 			title = "allow_habitats"
-			desc = "habitat_0_MEGASTRUCTURE_DETAILS"
+			desc = "habitat_central_complex_MEGASTRUCTURE_DETAILS"
 		}
 	}
 
@@ -1130,6 +1130,14 @@ tech_habitat_1 = {
 		modifier = {
 			factor = 0
 			NOT = { has_origin = origin_void_dwellers }
+		}
+		modifier = {
+			factor = 100
+			OR = {
+				has_origin = origin_toxic_knights
+				has_country_flag = payback_habitat
+				has_valid_civic = civic_void_hive
+			}
 		}
 	}
 }
@@ -1152,9 +1160,12 @@ tech_habitat_2 = {
 
 	prereqfor_desc = {
 		ship = {
-			title = "allow_habitat_upgrade"
-			desc = "tech_habitat_2_effect"
+			title = "tech_habitat_2_effect"
 		}
+	}
+
+	modifier = {
+		habitat_max_districts_mult = 0.10
 	}
 
 	weight_modifier = {
@@ -1173,7 +1184,14 @@ tech_habitat_2 = {
 	}
 
 	ai_weight = {
-
+		modifier = {
+			factor = 100
+			OR = {
+				has_origin = origin_toxic_knights
+				has_country_flag = payback_habitat
+				has_valid_civic = civic_void_hive
+			}
+		}
 	}
 }
 
@@ -1195,9 +1213,12 @@ tech_habitat_3 = {
 
 	prereqfor_desc = {
 		ship = {
-			title = "allow_habitat_2_upgrade"
-			desc = "tech_habitat_3_effect"
+			title = "tech_habitat_3_effect"
 		}
+	}
+
+	modifier = {
+		habitat_max_districts_mult = 0.10
 	}
 
 	weight_modifier = {
@@ -1216,7 +1237,15 @@ tech_habitat_3 = {
 	}
 
 	ai_weight = {
-
+		modifier = {
+			factor = 100
+			OR = {
+				has_origin = origin_void_dwellers
+				has_origin = origin_toxic_knights
+				has_country_flag = payback_habitat
+				has_valid_civic = civic_void_hive
+			}
+		}
 	}
 }
 
@@ -1465,7 +1494,9 @@ tech_ship_armor_2 = {
 	ai_update_type = all
 	prerequisites = { "tech_ship_armor_1" }
 	weight = @tier1weight2
-
+	modifier = {
+		army_health = 0.1
+	}
 	gateway = infrastructure
 
 	weight_modifier = {
@@ -1493,7 +1524,9 @@ tech_ship_armor_3 = {
 	weight = @tier2weight2
 
 	gateway = infrastructure
-
+	modifier = {
+		army_health = 0.1
+	}
 	weight_modifier = {
 		factor = 1.25
 
@@ -1519,7 +1552,9 @@ tech_ship_armor_4 = {
 	weight = @tier3weight2
 
 	gateway = infrastructure
-
+	modifier = {
+		army_health = 0.1
+	}
 	weight_modifier = {
 		factor = 1.25
 
@@ -1543,7 +1578,9 @@ tech_ship_armor_5 = {
 	ai_update_type = all
 	prerequisites = { "tech_ship_armor_4" }
 	weight = @tier4weight2
-
+	modifier = {
+		army_health = 0.1
+	}
 	weight_modifier = {
 		factor = 1.25
 
@@ -1576,7 +1613,9 @@ tech_crystal_armor_1 = {
 			has_country_flag = crystal_armor_1_weight
 		}
 	}
-
+	modifier = {
+		army_health = 0.1
+	}
 	ai_weight = {
 
 	}
@@ -1591,7 +1630,9 @@ tech_crystal_armor_2 = {
 	category = { materials }
 	ai_update_type = all
 	weight = 0
-
+	modifier = {
+		army_health = 0.1
+	}
 	ai_weight = {
 
 	}
@@ -1623,7 +1664,9 @@ tech_armor_hardeners_2 = {
 	ai_update_type = all
 	prerequisites = { "tech_armor_hardeners_1" "tech_mine_living_metal" }
 	weight = @tier5weight3
-
+	modifier = {
+		army_health = 0.1
+	}
 	weight_modifier = {
 
 	}
@@ -1665,6 +1708,9 @@ tech_thrusters_2 = {
 	prerequisites = { "tech_thrusters_1" }
 	weight = @tier2weight1
 
+	modifier = {
+		army_disengage_chance_mult = 0.05
+	}
 	weight_modifier = {
 		factor = 1.25
 
@@ -1696,7 +1742,9 @@ tech_thrusters_3 = {
 	ai_update_type = all
 	prerequisites = { "tech_thrusters_2" }
 	weight = @tier3weight1
-
+	modifier = {
+		army_disengage_chance_mult = 0.05
+	}
 	weight_modifier = {
 		factor = 1.25
 
@@ -1728,7 +1776,9 @@ tech_thrusters_4 = {
 	ai_update_type = all
 	prerequisites = { "tech_thrusters_3" }
 	weight = @tier4weight1
-
+	modifier = {
+		army_disengage_chance_mult = 0.05
+	}
 	weight_modifier = {
 		factor = 1.25
 
@@ -1773,7 +1823,6 @@ tech_defense_platform_hull_1 = {
 	prerequisites = { "tech_starbase_3" }
 	is_rare = yes
 	weight = @tier2weight2
-
 	weight_modifier = {
 		factor = 0.50
 		modifier = {
@@ -1801,6 +1850,7 @@ tech_defense_platform_hull_1 = {
 
 	modifier = {
 		shipsize_military_station_small_hull_mult = 0.33
+		army_defense_health_mult = 0.1
 	}
 }
 
@@ -2417,7 +2467,10 @@ tech_robotic_workers = {
 		NOT = { has_ethic = "ethic_gestalt_consciousness" }
 		NOT = { has_policy_flag = robots_outlawed }
 	}
-
+	modifier = {
+		army_morale = 0.1
+		army_damage_mult = 0.1
+	}
 	weight_modifier = {
 		factor = 1.5
 		modifier = {
@@ -2480,7 +2533,9 @@ tech_droid_workers = {
 	potential = {
 		NOT = { has_ethic = "ethic_gestalt_consciousness" }
 	}
-
+	modifier = {
+		army_health = 0.1
+	}
 	weight_modifier = {
 		modifier = {
 			factor = 0

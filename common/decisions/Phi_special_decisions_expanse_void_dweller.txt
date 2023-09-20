@@ -7,24 +7,10 @@ decision_upgrade_habitat_3 = {
 	resources = {
 		category = decisions
 		cost = {
-			trigger = {
-				owner = {
-					NOT = {
-						has_active_tradition = tr_expansion_finish_void
-					}
-				}
-			}
+			
 			influence = 100
 			alloys = 1500
-		}
-		cost = {
-			trigger = {
-				owner = {
-					has_active_tradition = tr_expansion_finish_void
-				}
-			}
-			influence = 80
-			alloys = 1200
+			mult = owner.value:habitat_build_cost_mult
 		}
 	}
 
@@ -44,15 +30,11 @@ decision_upgrade_habitat_3 = {
 	}
 
 	effect = {
+		custom_tooltip = decision_upgrade_habitat_2_effects_short
 		hidden_effect = {
-			set_planet_entity = {
-				entity = "habitat_phase_03_entity"
-				graphical_culture = owner
-			}
-
 			set_planet_flag = advanced_habitat_3
+			increase_habitat_level_effect = yes
 		}
-		set_planet_size = 10
 	}
 
 	ai_weight = {
@@ -67,24 +49,10 @@ decision_upgrade_habitat_4 = {
 	resources = {
 		category = decisions
 		cost = {
-			trigger = {
-				owner = {
-					NOT = {
-						has_active_tradition = tr_expansion_finish_void
-					}
-				}
-			}
+			
 			influence = 125
 			alloys = 1750
-		}
-		cost = {
-			trigger = {
-				owner = {
-					has_active_tradition = tr_expansion_finish_void
-				}
-			}
-			influence = 100
-			alloys = 1400
+			mult = owner.value:habitat_build_cost_mult
 		}
 	}
 
@@ -104,15 +72,11 @@ decision_upgrade_habitat_4 = {
 	}
 
 	effect = {
+		custom_tooltip = decision_upgrade_habitat_2_effects_short
 		hidden_effect = {
-			set_planet_entity = {
-				entity = "habitat_phase_03_entity"
-				graphical_culture = owner
-			}
-
 			set_planet_flag = advanced_habitat_4
+			increase_habitat_level_effect = yes
 		}
-		set_planet_size = 12
 	}
 
 	ai_weight = {
@@ -127,24 +91,10 @@ decision_upgrade_habitat_5 = {
 	resources = {
 		category = decisions
 		cost = {
-			trigger = {
-				owner = {
-					NOT = {
-						has_active_tradition = tr_expansion_finish_void
-					}
-				}
-			}
 			influence = 150
 			alloys  = 2000
-		}
-		cost = {
-			trigger = {
-				owner = {
-					has_active_tradition = tr_expansion_finish_void
-				}
-			}
-			influence = 120
-			alloys  = 1600
+			sr_dark_matter = 50
+			mult = owner.value:habitat_build_cost_mult
 		}
 	}
 
@@ -164,15 +114,11 @@ decision_upgrade_habitat_5 = {
 	}
 
 	effect = {
+		custom_tooltip = decision_upgrade_habitat_2_effects_short
 		hidden_effect = {
-			set_planet_entity = {
-				entity = "habitat_phase_03_entity"
-				graphical_culture = owner
-			}
-
 			set_planet_flag = advanced_habitat_5
+			increase_habitat_level_effect = yes
 		}
-		set_planet_size = 15
 	}
 
 	ai_weight = {

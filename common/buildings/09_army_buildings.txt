@@ -47,7 +47,9 @@ building_military_academy = {
 	convert_to = {
 		building_dread_encampment
 	}
-
+	planet_modifier = {
+		planet_army_build_speed_mult = 0.5
+	}
 	army_modifier = {
 		army_starting_experience_add = 100
 	}
@@ -123,7 +125,6 @@ building_dread_encampment = {
 	allow = {
 		has_upgraded_capital = yes
 	}
-
 	army_modifier = {
 		army_starting_experience_add = 100
 	}

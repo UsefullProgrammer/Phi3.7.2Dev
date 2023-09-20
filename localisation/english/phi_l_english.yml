@@ -11,6 +11,15 @@ phi_ai0: "Phigo balance cheat AI N. 0"
 phi_ai1: "Phigo balance cheat AI N. 1"
 phi_rep_ai0: "Phigo balance cheat AI N. 0R"
 phi_ai42: "Phigo balance cheat AI N. 42"
+tech_ground_offence_planning: "Ground offence planning"
+tech_ground_offence_planning_desc: "Ground offence planning"
+tech_ground_offence_planning_2: "ground mass recruit "
+tech_ground_offence_planning_2_desc: "ground mass recruit"
+tech_ground_offence_planning_3: "Space Army project"
+tech_ground_offence_planning_3_desc: "Ever Army ready for deployement"
+tech_ground_offence_planning_repeatable: "Upgrade ground offence weapon"
+tech_ground_offence_planning_repeatable_desc: "More ground offence weapon"
+
 ##################
 ### START MENU ###
 ##################
@@ -1343,3 +1352,5 @@ huge_galaxy_modifier: "Huge galaxy"
  mech_army:0 "Mech Army"
  mech_army_plural:0 "Assault Mechs"
  mech_army_desc:0 "Mechs armies, is little simply with mech invade planet that destroy all."
+
+ trade_policy_mutual_aid_desc: "By reinvesting our surplus back into the cooperative, we ensure that all our members may thrive according to their needs and shared aspirations.\n\n§EEach collected £trade_value£ §YTrade Value§! earns us £energy£ §Y0.2§!, £minerals£ §Y0.2§!, and £food£ §Y0.2§!§!, £society_research£ 0.1, and £unity£ 0.1"

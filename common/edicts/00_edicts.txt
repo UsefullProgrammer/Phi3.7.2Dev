@@ -19,6 +19,10 @@ evacuation_protocols = {
 
 	resources = {
 		category = edicts
+		cost = {
+			unity = @Edict1Cost
+			multiplier = value:edict_size_effect
+		}
 		upkeep = {
 			unity = @Edict1Cost
 			multiplier = value:edict_size_effect
@@ -40,8 +44,11 @@ evacuation_protocols = {
 	allow = {
 		custom_tooltip = {
 			fail_text = "requires_doomsday_colony"
-			any_owned_planet = {
-				habitable_planet = yes
+			any_planet_within_border = {
+				OR = {
+					is_colonizable = yes
+					is_colony = yes
+				}
 				is_doomsday_planet = no
 			}
 		}
@@ -58,6 +65,10 @@ fortify_the_border = {
 
 	resources = {
 		category = edicts
+		cost = {
+			unity = @Edict1Cost
+			multiplier = value:edict_size_effect
+		}
 		upkeep = {
 			unity = @Edict1Cost
 			multiplier = value:edict_size_effect
@@ -84,6 +95,10 @@ nutritional_plenitude = {
 
 	resources = {
 		category = edicts
+		cost = {
+			unity = @Edict1Cost
+			multiplier = value:edict_size_effect
+		}
 		upkeep = {
 			unity = @Edict2Cost
 			multiplier = value:pop_size_edicts_floor
@@ -133,6 +148,10 @@ nutritional_plenitude_hive = {
 
 	resources = {
 		category = edicts
+		cost = {
+			unity = @Edict1Cost
+			multiplier = value:edict_size_effect
+		}
 		upkeep = {
 			unity = @Edict1Cost
 			multiplier = value:edict_size_effect
@@ -168,6 +187,10 @@ expanded_breeding_program_servitor = {
 
 	resources = {
 		category = edicts
+		cost = {
+			unity = @Edict1Cost
+			multiplier = value:edict_size_effect
+		}
 		upkeep = {
 			unity = @Edict1Cost
 			multiplier = value:edict_size_effect
@@ -205,6 +228,10 @@ fleet_supremacy = {
 
 	resources = {
 		category = edicts
+		cost = {
+			unity = @Edict1Cost
+			multiplier = value:edict_size_effect
+		}
 		upkeep = {
 			unity = @Edict1Cost
 			multiplier = value:edict_size_effect
@@ -232,6 +259,10 @@ diplomatic_grants = {
 
 	resources = {
 		category = edicts
+		cost = {
+			unity = @Edict1Cost
+			multiplier = value:edict_size_effect
+		}
 		upkeep = {
 			unity = @Edict1Cost
 			multiplier = value:edict_size_effect
@@ -259,6 +290,10 @@ enhanced_surveillance = {
 
 	resources = {
 		category = edicts
+		cost = {
+			unity = @Edict2Cost
+			multiplier = value:edict_size_effect
+		}
 		upkeep = {
 			unity = @Edict3Cost
 			multiplier = value:pop_size_edicts_floor
@@ -305,6 +340,10 @@ bureau_of_espionage = {
 
 	resources = {
 		category = edicts
+		cost = {
+			unity = @Edict2Cost
+			multiplier = value:edict_size_effect
+		}
 		upkeep = {
 			unity = @Edict2Cost
 			multiplier = value:edict_size_effect
@@ -354,6 +393,10 @@ observation_instinct = {
 
 	resources = {
 		category = edicts
+		cost = {
+			unity = @Edict1Cost
+			multiplier = value:edict_size_effect
+		}
 		upkeep = {
 			unity = @Edict1Cost
 			multiplier = value:edict_size_effect
@@ -403,6 +446,10 @@ covert_analysis_algorithm = {
 
 	resources = {
 		category = edicts
+		cost = {
+			unity = @Edict2Cost
+			multiplier = value:edict_size_effect
+		}
 		upkeep = {
 			unity = @Edict2Cost
 			multiplier = value:edict_size_effect
@@ -452,6 +499,10 @@ tracking_implants = {
 
 	resources = {
 		category = edicts
+		cost = {
+			unity = @Edict3Cost
+			multiplier = value:edict_size_effect
+		}
 		upkeep = {
 			unity = @Edict3Cost
 			multiplier = value:pop_size_edicts_floor
@@ -502,6 +553,10 @@ thought_enforcement = {
 
 	resources = {
 		category = edicts
+		cost = {
+			unity = @Edict3Cost
+			multiplier = value:edict_size_effect
+		}
 		upkeep = {
 			unity = @Edict3Cost
 			multiplier = value:pop_size_edicts_floor
@@ -550,6 +605,10 @@ extended_shifts = {
 
 	resources = {
 		category = edicts
+		cost = {
+			unity = @Edict1Cost
+			multiplier = value:edict_size_effect
+		}
 		upkeep = {
 			unity = @Edict1Cost
 			multiplier = value:worker_slave_edict_size_effect
@@ -586,6 +645,10 @@ synaptic_reinforcement = {
 
 	resources = {
 		category = edicts
+		cost = {
+			unity = @Edict1Cost
+			multiplier = value:edict_size_effect
+		}
 		upkeep = {
 			unity = @Edict1Cost
 			multiplier = value:edict_size_effect
@@ -616,6 +679,10 @@ industrial_maintenance = {
 
 	resources = {
 		category = edicts
+		cost = {
+			unity = @Edict1Cost
+			multiplier = value:edict_size_effect
+		}
 		upkeep = {
 			unity = @Edict1Cost
 			multiplier = value:edict_size_effect
@@ -643,6 +710,10 @@ drone_overdrive = {
 
 	resources = {
 		category = edicts
+		cost = {
+			unity = @Edict1Cost
+			multiplier = value:edict_size_effect
+		}
 		upkeep = {
 			unity = @Edict1Cost
 			multiplier = value:edict_size_effect
@@ -678,6 +749,10 @@ capacity_subsidies = {
 
 	resources = {
 		category = edicts
+		cost = {
+			unity = @Edict3Cost
+			multiplier = value:edict_size_effect
+		}
 		upkeep = {
 			unity = @Edict3Cost
 			multiplier = value:edict_size_effect
@@ -697,11 +772,7 @@ capacity_subsidies = {
 		weight = @EdictHighPrio
 		modifier = {
 			should_ai_focus_on_trade = yes
-			factor = 0.1
-		}
-		modifier = {
-			has_deficit = energy
-			factor = 100
+			factor = 0 
 		}
 	}
 }
@@ -712,6 +783,10 @@ mining_subsidies = {
 
 	resources = {
 		category = edicts
+		cost = {
+			unity = @Edict3Cost
+			multiplier = value:edict_size_effect
+		}
 		upkeep = {
 			unity = @Edict3Cost
 			multiplier = value:edict_size_effect
@@ -730,10 +805,6 @@ mining_subsidies = {
 
 	ai_weight = {
 		weight = @EdictHighPrio
-		modifier = {
-			has_deficit = minerals
-			factor = 100
-		}
 	}
 }
 
@@ -743,6 +814,10 @@ farming_subsidies = {
 
 	resources = {
 		category = edicts
+		cost = {
+			unity = @Edict3Cost
+			multiplier = value:edict_size_effect
+		}
 		upkeep = {
 			unity = @Edict3Cost
 			multiplier = value:edict_size_effect
@@ -764,10 +839,6 @@ farming_subsidies = {
 			country_uses_food = no
 			factor = 0
 		}
-		modifier = {
-			has_deficit = food
-			factor = 100
-		}
 	}
 }
 
@@ -777,6 +848,10 @@ industrial_subsidies = {
 
 	resources = {
 		category = edicts
+		cost = {
+			unity = @Edict3Cost
+			multiplier = value:edict_size_effect
+		}
 		upkeep = {
 			unity = @Edict3Cost
 			multiplier = value:edict_size_effect
@@ -811,6 +886,10 @@ forge_subsidies = {
 
 	resources = {
 		category = edicts
+		cost = {
+			unity = @Edict3Cost
+			multiplier = value:edict_size_effect
+		}
 		upkeep = {
 			unity = @Edict3Cost
 			multiplier = value:edict_size_effect
@@ -837,6 +916,10 @@ research_subsidies = {
 
 	resources = {
 		category = edicts
+		cost = {
+			unity = @Edict3Cost
+			multiplier = value:edict_size_effect
+		}
 		upkeep = {
 			unity = @Edict3Cost
 			multiplier = value:edict_size_effect
@@ -874,6 +957,10 @@ veneration_of_saints = {
 
 	resources = {
 		category = edicts
+		cost = {
+			unity = @Edict1Cost
+			multiplier = value:edict_size_effect
+		}
 		upkeep = {
 			unity = @Edict1Cost
 			multiplier = value:edict_size_effect
@@ -900,6 +987,10 @@ peace_festivals = {
 
 	resources = {
 		category = edicts
+		cost = {
+			unity = @Edict1Cost
+			multiplier = value:edict_size_effect
+		}
 		upkeep = {
 			unity = @Edict1Cost
 			multiplier = value:edict_size_effect
@@ -926,6 +1017,10 @@ information_quarantine = {
 
 	resources = {
 		category = edicts
+		cost = {
+			unity = @Edict1Cost
+			multiplier = value:edict_size_effect
+		}
 		upkeep = {
 			unity = @Edict1Cost
 			multiplier = value:pop_size_edicts_floor
@@ -953,6 +1048,10 @@ encourage_free_thought = {
 
 	resources = {
 		category = edicts
+		cost = {
+			unity = @Edict1Cost
+			multiplier = value:edict_size_effect
+		}
 		upkeep = {
 			unity = @Edict2Cost
 			multiplier = value:pop_size_edicts_floor
@@ -980,6 +1079,10 @@ map_the_stars = {
 
 	resources = {
 		category = edicts
+		cost = {
+			unity = @Edict1Cost
+			multiplier = value:edict_size_effect
+		}
 		upkeep = {
 			unity = @Edict1Cost
 			multiplier = value:edict_size_effect
@@ -1011,6 +1114,10 @@ land_of_opportunity = {
 
 	resources = {
 		category = edicts
+		cost = {
+			unity = @Edict2Cost
+			multiplier = value:edict_size_effect
+		}
 		upkeep = {
 			unity = @Edict2Cost
 			multiplier = value:edict_size_effect
@@ -1038,6 +1145,10 @@ greater_than_ourselves = {
 
 	resources = {
 		category = edicts
+		cost = {
+			unity = @Edict2Cost
+			multiplier = value:edict_size_effect
+		}
 		upkeep = {
 			unity = @Edict2Cost
 			multiplier = value:edict_size_effect
@@ -1071,6 +1182,10 @@ relay_network_dummy = {
 	}
 	resources = {
 		category = edicts
+		cost = {
+			unity = @Edict1Cost
+			multiplier = value:edict_size_effect
+		}
 		upkeep = {
 			unity = @Edict1Cost
 			multiplier = value:edict_size_effect
@@ -1095,6 +1210,10 @@ relay_network_stability = {
 
 	resources = {
 		category = edicts
+		cost = {
+			unity = @Edict1Cost
+			multiplier = value:edict_size_effect
+		}
 		upkeep = {
 			unity = @Edict1Cost
 			multiplier = value:edict_size_effect
@@ -1143,6 +1262,10 @@ relay_network_movement = {
 
 	resources = {
 		category = edicts
+		cost = {
+			unity = @Edict1Cost
+			multiplier = value:edict_size_effect
+		}
 		upkeep = {
 			unity = @Edict1Cost
 			multiplier = value:edict_size_effect
@@ -1192,6 +1315,10 @@ relay_network_amenities = {
 
 	resources = {
 		category = edicts
+		cost = {
+			unity = @Edict1Cost
+			multiplier = value:edict_size_effect
+		}
 		upkeep = {
 			unity = @Edict1Cost
 			multiplier = value:edict_size_effect
@@ -1245,6 +1372,10 @@ relay_network_amenities_gestalt = {
 
 	resources = {
 		category = edicts
+		cost = {
+			unity = @Edict1Cost
+			multiplier = value:edict_size_effect
+		}
 		upkeep = {
 			unity = @Edict1Cost
 			multiplier = value:edict_size_effect
@@ -1298,9 +1429,17 @@ zro_crystal = {
 
 	resources = {
 		category = edicts
+		cost = {
+			unity = @Edict1Cost
+			multiplier = value:edict_size_effect
+		}
 		upkeep = {
 			unity = @Edict1Cost
 			multiplier = value:edict_size_effect
+		}
+		cost = {
+			sr_zro = 0.2
+			multiplier = value:zro_crystal_leaders
 		}
 		upkeep = {
 			sr_zro = 0.2
@@ -1343,9 +1482,17 @@ zro_crystal_machine = {
 
 	resources = {
 		category = edicts
+		cost = {
+			unity = @Edict1Cost
+			multiplier = value:edict_size_effect
+		}
 		upkeep = {
 			unity = @Edict1Cost
 			multiplier = value:edict_size_effect
+		}
+		cost = {
+			sr_zro = 0.2
+			multiplier = value:zro_crystal_leaders
 		}
 		upkeep = {
 			sr_zro = 0.2
@@ -1389,6 +1536,10 @@ damn_the_consequences = {
 
 	resources = {
 		category = edicts
+		cost = {
+			unity = @EdictSpecialCost
+			multiplier = value:consequences_cost
+		}
 		upkeep = {
 			unity = 1
 			multiplier = value:Count_pop_weight_overtunned

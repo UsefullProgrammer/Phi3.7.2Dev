@@ -419,7 +419,7 @@ bio_trophy = {
 				happiness >= 0.5
 			}
 			unity = 3
-			society_research = 1
+			society_research = 0.5
 		}
 	}
 

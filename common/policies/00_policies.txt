@@ -255,6 +255,8 @@ diplomatic_stance = {
 			diplo_weight_economy_mult = -0.1
 			diplo_weight_naval_mult = 0.1
 			country_trust_cap_add = -25
+			armies_upkeep_mult = -0.1
+			planet_army_build_speed_mult = 0.1
 		}
 
 		on_enabled = {
@@ -332,6 +334,8 @@ diplomatic_stance = {
 			wars_influence_upkeep_mult = -0.33
 			diplomacy_influence_upkeep_mult = +0.1
 			country_trust_cap_add = -50
+			armies_upkeep_mult = -0.2
+			planet_army_build_speed_mult = 0.33
 			
 		}
 
@@ -784,6 +788,9 @@ war_philosophy = {
 			{
 				key = resolution_rulesofwar_last_resort_doctrine
 			}
+			{
+				key = resolution_rulesofwar_demobilization_initiative
+			}
 		}
 
 		valid = {
@@ -846,7 +853,7 @@ war_philosophy = {
 		policy_flags = {
 			liberation_wars
 		}
-		
+
 		modifier = {
 			planet_stability_add = 2
 			army_defense_morale_mult = 1
@@ -1446,6 +1453,12 @@ orbital_bombardment = {
 			{
 				key = resolution_rulesofwar_independent_tribunals
 			}
+			{
+				key = resolution_rulesofwar_last_resort_doctrine
+			}
+			{
+				key = resolution_rulesofwar_demobilization_initiative
+			}
 		}
 
 		policy_flags = {
@@ -1481,6 +1494,12 @@ orbital_bombardment = {
 		in_breach_of = {
 			{
 				key = resolution_rulesofwar_independent_tribunals
+			}
+			{
+				key = resolution_rulesofwar_last_resort_doctrine
+			}
+			{
+				key = resolution_rulesofwar_demobilization_initiative
 			}
 		}
 
@@ -1566,6 +1585,12 @@ interference = {
 		in_breach_of = {
 			{
 				key = resolution_galacticstudies_advanced_xenostudies
+			}
+			{
+				key = resolution_galacticstudies_ethical_guideline_refactoring
+			}
+			{
+				key = resolution_galacticstudies_extradimensional_experimentation
 			}
 			{
 				key = resolution_pre_ftl_stances_equal_standing
@@ -1950,6 +1975,15 @@ leader_enhancement = {
 					}
 				}
 			}
+			{
+				key = resolution_galacticstudies_extradimensional_experimentation
+				trigger = {
+					OR = {
+						has_technology = tech_selected_lineages
+						has_technology = tech_capacity_boosters
+					}
+				}
+			}
 		}
 
 		on_enabled = {
@@ -1975,6 +2009,12 @@ leader_enhancement = {
 		in_breach_of = {
 			{
 				key = resolution_phi_aristocracy_gifted_individuals
+				trigger = {
+					has_technology = tech_capacity_boosters
+				}
+			}
+			{
+				key = resolution_galacticstudies_extradimensional_experimentation
 				trigger = {
 					has_technology = tech_capacity_boosters
 				}
@@ -2545,6 +2585,7 @@ economic_policy = {
 		}
 		
 		modifier = {
+			planet_army_build_speed_mult = 0.25
 			country_alloys_produces_mult = -0.1
 			ships_upkeep_mult = -0.20
 			damage_vs_rival_mult = 0.1
@@ -2641,6 +2682,7 @@ economic_policy = {
 		}
 		
 		modifier = {
+			armies_cost_mult = -0.1
 			armies_upkeep_mult = -0.75
 			country_energy_produces_mult = -0.05
 		}
@@ -2983,6 +3025,23 @@ trade_policy = {
 		}
 	}
 	option = {
+		name = "trade_policy_mutual_aid"
+		potential = {
+			is_worker_coop_empire = yes
+		}
+	
+		policy_flags = {
+			trade_conversion_mutual_aid
+		}
+	
+		modifier = {
+		}
+	
+		AI_weight = {
+			factor = 1000
+		}
+	}
+	option = {
 		name = "trade_policy_science"
 		
 		valid = {
@@ -3150,6 +3209,7 @@ drone_policy = {
 		}
 		
 		modifier = {
+			planet_army_build_speed_mult = 0.25
 			country_alloys_produces_mult = -0.1
 			ships_upkeep_mult = -0.20
 			damage_vs_rival_mult = 0.1
@@ -3240,6 +3300,7 @@ drone_policy = {
 		}
 		
 		modifier = {
+			armies_cost_mult = -0.1
 			armies_upkeep_mult = -0.75
 			country_energy_produces_mult = -0.05
 		}
@@ -3367,6 +3428,12 @@ artificial_intelligence_policy = {
 			{
 				key = resolution_galacticstudies_advanced_xenostudies
 			}
+			{
+				key = resolution_galacticstudies_ethical_guideline_refactoring
+			}
+			{
+				key = resolution_galacticstudies_extradimensional_experimentation
+			}
 		}
 
 		AI_weight = {
@@ -3452,6 +3519,12 @@ artificial_intelligence_policy = {
 
 		policy_flags = {
 			ai_full_rights
+		}
+
+		in_breach_of = {
+			{
+				key = resolution_divinity_a_defined_purpose
+			}
 		}
 
 		modifier = {}
@@ -4032,6 +4105,15 @@ purge = {
 		in_breach_of = {
 			{
 				key = resolution_rulesofwar_reverence_for_life
+			}
+			{
+				key = resolution_rulesofwar_independent_tribunals
+			}
+			{
+				key = resolution_rulesofwar_last_resort_doctrine
+			}
+			{
+				key = resolution_rulesofwar_demobilization_initiative
 			}
 		}
 

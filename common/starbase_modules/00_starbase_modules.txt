@@ -14,7 +14,7 @@ shipyard = {
 	initial = yes
 
 	potential = {
-		is_orbital_ring = no
+		is_normal_starbase = yes
 	}
 
 	resources = {
@@ -91,7 +91,7 @@ anchorage = {
 	construction_days = 180
 
 	potential = {
-		is_orbital_ring = no
+		is_normal_starbase = yes
 	}
 
 	resources = {
@@ -146,7 +146,7 @@ gun_battery = {
 	construction_days = 180
 
 	potential = {
-		is_orbital_ring = no
+		is_normal_starbase = yes
 	}
 
 	resources = {
@@ -194,7 +194,7 @@ missile_battery = {
 	potential = {
 		exists = owner
 		owner = { has_technology = tech_torpedoes_1 }
-		is_orbital_ring = no
+		is_normal_starbase = yes
 	}
 
 	resources = {
@@ -238,7 +238,7 @@ hangar_bay = {
 	potential = {
 		exists = owner
 		owner = { has_technology = tech_strike_craft_1 }
-		is_orbital_ring = no
+		is_normal_starbase = yes
 	}
 
 	resources = {
@@ -281,7 +281,7 @@ solar_panel_network = {
 
 	potential = {
 		exists = owner
-		is_orbital_ring = no
+		is_normal_starbase = yes
 		owner = {
 			has_technology = "tech_solar_panel_network"
 		}
@@ -348,7 +348,7 @@ trading_hub = {
 		owner = {
 			is_gestalt = no
 		}
-		is_orbital_ring = no
+		is_normal_starbase = yes
 	}
 
 	resources = {
@@ -407,7 +407,7 @@ detection_array = {
 	potential = {
 		exists = owner
 		owner = { has_technology = tech_detection_array }
-		is_orbital_ring = no
+		is_normal_starbase = yes
 	}
 
 	possible = {
@@ -456,7 +456,7 @@ archaeo_rampart = {
 	construction_days = 180
 
 	potential = {
-		is_orbital_ring = no
+		is_normal_starbase = yes
 		owner = { has_technology = tech_archaeo_rampart }
 	}
 
@@ -486,7 +486,7 @@ archaeo_rampart = {
 	triggered_station_modifier = {
 		potential = {
 			owner = {
-				has_ascension_perk = ap_archaeoengineers 
+				has_ascension_perk = ap_archaeoengineers
 			}
 		}
 		ship_hull_mult = 0.15

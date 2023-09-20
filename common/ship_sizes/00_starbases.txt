@@ -11,7 +11,7 @@ starbase_outpost = {
 	rotation_speed = 0.0
 	modifier = {
 		ship_evasion_mult = -1
-		ship_armor_add = 1000
+		ship_armor_add = @outpost_armor 
 		ship_shield_add = @shield_S1
 		starbase_defense_platform_capacity_add = 3
 		ship_sensor_range_add = 1
@@ -80,7 +80,7 @@ starbase_starport = {
 	rotation_speed = 0.0
 	modifier = {
 		ship_evasion_mult = -1
-		ship_armor_add = 2000
+		ship_armor_add = @starport_armor
 		ship_shield_add = @shield_L1
 		starbase_module_capacity_add = 2
 		starbase_building_capacity_add = 1
@@ -154,7 +154,7 @@ starbase_starhold = {
 	rotation_speed = 0.0
 	modifier = {
 		ship_evasion_mult = -1
-		ship_armor_add = 5000
+		ship_armor_add = @starhold_armor
 		ship_shield_add = @shield_L1
 		starbase_module_capacity_add = 4
 		starbase_building_capacity_add = 2
@@ -229,7 +229,7 @@ starbase_starfortress = {
 	rotation_speed = 0.0
 	modifier = {
 		ship_evasion_mult = -1
-		ship_armor_add = 10000
+		ship_armor_add = @starfort_armor
 		ship_shield_add = @shield_L1
 		starbase_module_capacity_add = 6
 		starbase_building_capacity_add = 3
@@ -306,7 +306,7 @@ starbase_citadel = {
 	rotation_speed = 0.0
 	modifier = {
 		ship_evasion_mult = -1
-		ship_armor_add = 20000
+		ship_armor_add = @citadel_armor
 		ship_shield_add = @shield_L4
 		starbase_module_capacity_add = 6
 		starbase_building_capacity_add = 4
@@ -389,13 +389,13 @@ starbase_swarm = {
 	rotation_speed = 0.0
 	modifier = {
 		ship_evasion_mult = -1
-		ship_armor_add = 30000
+		ship_armor_add = 60000
 		ship_sensor_range_add = 1
 	}
 	ship_modifier = {
 		ship_weapon_range_mult = 0.20
 	}
-	max_hitpoints = @ship_7
+	
 	potential_construction = {
 		is_scope_type = planet
 		is_primary_star = yes
@@ -403,7 +403,9 @@ starbase_swarm = {
 			exists = orbital_defence
 		}
 	}
-	base_buildtime = 730
+	
+	max_hitpoints = @ship_7
+	base_buildtime = 720
 	combat_size_multiplier = 50
 	size_multiplier = 16
 	fleet_slot_size = 2
@@ -435,14 +437,14 @@ starbase_ai = {
 	rotation_speed = 0.0
 	modifier = {
 		ship_evasion_mult = -1
-		ship_armor_add = 20000
+		ship_armor_add = 40000
 		ship_shield_add = 20000
 		ship_sensor_range_add = 1
 	}
 	ship_modifier = {
 		ship_weapon_range_mult = 0.20
 	}
-	max_hitpoints = @ship_6
+	
 	potential_construction = {
 		is_scope_type = planet
 		is_primary_star = yes
@@ -450,7 +452,8 @@ starbase_ai = {
 			exists = orbital_defence
 		}
 	}
-	base_buildtime = 730
+	max_hitpoints = @ship_6
+	base_buildtime = 720
 	combat_size_multiplier = 50
 	size_multiplier = 16
 	fleet_slot_size = 2
@@ -490,7 +493,7 @@ starbase_exd_0 = {
 	ship_modifier = {
 		ship_weapon_range_mult = 0.20
 	}
-	max_hitpoints = @ship_6
+	
 	potential_construction = {
 		is_scope_type = planet
 		is_primary_star = yes
@@ -498,7 +501,8 @@ starbase_exd_0 = {
 			exists = orbital_defence
 		}
 	}
-	base_buildtime = 730
+	max_hitpoints = @ship_6
+	base_buildtime = 720
 	combat_size_multiplier = 50
 	size_multiplier = 16
 	fleet_slot_size = 2
@@ -533,14 +537,14 @@ starbase_exd = {
 	modifier = {
 		ship_evasion_mult = -1
 		ship_shield_add = 80000
-		ship_armor_add = 10000
+		ship_armor_add = 20000
 		ship_sensor_range_add = 1
 	}
 	ship_modifier = {
 		ship_weapon_range_mult = 0.20
 		ship_fire_rate_mult = 0.50
 	}
-	max_hitpoints = @ship_9
+	
 	potential_construction = {
 		is_scope_type = planet
 		is_primary_star = yes
@@ -548,7 +552,9 @@ starbase_exd = {
 			exists = orbital_defence
 		}
 	}
-	base_buildtime = 730
+	
+	max_hitpoints = @ship_9
+	base_buildtime = 720
 	combat_size_multiplier = 50
 	size_multiplier = 32
 	fleet_slot_size = 2
@@ -582,13 +588,13 @@ starbase_marauder = {
 	modifier = {
 		ship_evasion_mult = -1
 		ship_shield_add = 10000
-		ship_armor_add = 10000
+		ship_armor_add = 20000
 		ship_sensor_range_add = 1
 	}
 	ship_modifier = {
 		ship_weapon_range_mult = 0.20
 	}
-	max_hitpoints = @ship_6
+	
 	potential_construction = {
 		is_scope_type = planet
 		is_primary_star = yes
@@ -596,7 +602,9 @@ starbase_marauder = {
 			exists = orbital_defence
 		}
 	}
-	base_buildtime = 730
+	
+	max_hitpoints = @ship_6
+	base_buildtime = 720
 	combat_size_multiplier = 50
 	size_multiplier = 12
 	fleet_slot_size = 2
@@ -630,7 +638,7 @@ starbase_gatebuilders = {
 	modifier = {
 		ship_evasion_mult = -1
 		ship_shield_add = 10000
-		ship_armor_add = 10000
+		ship_armor_add = 20000
 		ship_sensor_range_add = 1
 	}
 	ship_modifier = {
@@ -646,7 +654,7 @@ starbase_gatebuilders = {
 	}
 	
 	max_hitpoints = @ship_6
-	base_buildtime = 730
+	base_buildtime = 720
 	combat_size_multiplier = 50
 	size_multiplier = 12
 	fleet_slot_size = 2
@@ -688,7 +696,7 @@ starbase_fe_outpost = {
 	rotation_speed = 0.0
 	modifier = {
 		ship_evasion_mult = -1
-		ship_armor_add = 1000
+		ship_armor_add = 2000
 		ship_shield_add = @shield_S2
 		starbase_defense_platform_capacity_add = 3
 		ship_sensor_range_add = 1

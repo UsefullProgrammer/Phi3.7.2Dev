@@ -122,6 +122,7 @@ ethic_authoritarian = {
 					has_living_standard = { type = living_standard_utopian country = root }
 					has_living_standard = { type = living_standard_good country = root }
 					has_living_standard = { type = living_standard_shared_burden country = root }
+					has_living_standard = { type = living_standard_worker_ownership country = root }
 				}
 			}
 		}
@@ -380,6 +381,7 @@ ethic_authoritarian = {
 				has_living_standard = { type = living_standard_utopian }
 				has_living_standard = { type = living_standard_good }
 				has_living_standard = { type = living_standard_shared_burden }
+				has_living_standard = { type = living_standard_worker_ownership }
 			}
 		}
 		modifier = {
@@ -487,6 +489,7 @@ ethic_egalitarian = {
 					has_living_standard = { type = living_standard_utopian country = root }
 					has_living_standard = { type = living_standard_good country = root }
 					has_living_standard = { type = living_standard_shared_burden country = root }
+					has_living_standard = { type = living_standard_worker_ownership country = root }
 				}
 			}
 		}
@@ -728,6 +731,7 @@ ethic_egalitarian = {
 				has_living_standard = { type = living_standard_utopian }
 				has_living_standard = { type = living_standard_good }
 				has_living_standard = { type = living_standard_shared_burden }
+				has_living_standard = { type = living_standard_worker_ownership }
 			}
 		}
 		modifier = {
@@ -765,6 +769,10 @@ ethic_fanatic_xenophobe = {
 
 	random_weight = {
 		base = 150
+		modifier = {
+			factor = 0.2
+			blocks_disruptive_gameplay = yes
+		}
 	}
 }
 
@@ -3133,14 +3141,11 @@ ethic_gestalt_consciousness = {
 	}
 
 	random_weight = {
-		base = 50
+		base = 150
 		modifier = {
 			factor = 0
 			has_global_flag = game_started # additional traits (trait_hive_mind, trait_machine_unit) are only assigned and verified for empire designs, no effect after game start
-		}
-		modifier = {
-			factor = 2
-			NOT = { has_global_flag = game_started }
+			NOT = { is_country_type = rebel }
 		}
 	}
 }

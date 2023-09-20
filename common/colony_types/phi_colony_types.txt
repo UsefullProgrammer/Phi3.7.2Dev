@@ -50,17 +50,6 @@ col_researchphy = {
 				has_deposit = d_central_spire
 			}
 		}
-		modifier = {
-			factor = 0
-			exists = sector
-			sector = {
-				has_any_sector_focus = yes
-				NOR = {
-					has_sector_focus = "research"
-					has_sector_focus = "balanced"
-				}
-			}
-		}
 	}
 }
 col_researcheng = {
@@ -110,17 +99,6 @@ col_researcheng = {
 				has_modifier = society_animal_life
 				has_modifier = tamed_nanite_swarm_modifier
 				has_deposit = d_central_spire
-			}
-		}
-		modifier = {
-			factor = 0
-			exists = sector
-			sector = {
-				has_any_sector_focus = yes
-				NOR = {
-					has_sector_focus = "research"
-					has_sector_focus = "balanced"
-				}
 			}
 		}
 	}

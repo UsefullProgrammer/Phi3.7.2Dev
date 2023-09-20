@@ -81,6 +81,7 @@ progressive = {
 			is_event_leader = yes
 		}
 	}
+	
 	#0|-20
 	demand = {
 		title = "PROGRESSIVE_NO_AUTO"

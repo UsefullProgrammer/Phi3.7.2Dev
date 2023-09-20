@@ -1333,3 +1333,5 @@ huge_galaxy_modifier: "galassia enorme"
 mech_army:0 "Armata Mech"
 mech_army_plural:0 "Armate Mech"
 mech_army_desc:0 "Gli eserciti di Mech, semplicemente invadono il pianeta e distruggono tutto."
+
+ trade_policy_mutual_aid_desc: "By reinvesting our surplus back into the cooperative, we ensure that all our members may thrive according to their needs and shared aspirations.\n\n§EEach collected £trade_value£ §YTrade Value§! earns us £energy£ §Y0.2§!, £minerals£ §Y0.2§!, and £food£ §Y0.2§!§!, £society_research£ 0.1, and £unity£ 0.1"

@@ -28,10 +28,10 @@ ap_archaeoengineers = {
 				is_owned_by = root
 				has_modifier = zroni_storm
 				starbase = {
-					count_starbase_buildings = { 
-						type = zroni_storm_caster 
-						include_being_constructed = no 
-						count = 1 
+					count_starbase_buildings = {
+						type = zroni_storm_caster
+						include_being_constructed = no
+						count = 1
 					}
 				}
 				any_ship_in_system = {
@@ -47,6 +47,7 @@ ap_archaeoengineers = {
 
 	modifier = {
 		weapon_archaeotech_weapon_damage_mult = 0.33
+		starbase_shipyard_build_minor_artifacts_cost_mult = -0.10
 	}
 
 	ai_weight = {
@@ -63,7 +64,7 @@ ap_archaeoengineers = {
 			factor = 5
 			count_archaeological_site = {
 				count > 3
-				limit = { 
+				limit = {
 					is_owned_by = root
 					is_site_completed = yes
 				}
@@ -223,6 +224,10 @@ ap_become_the_crisis = {
 				}
 			}
 		}
+		modifier = {
+			factor = 0
+			blocks_disruptive_gameplay = yes
+		}
 	}
 }
 
@@ -262,6 +267,8 @@ ap_hydrocentric = {
 
 	modifier = {
 		terraforming_ocean_cost_mult = -0.25
+		terraform_speed_mult = 0.25
+		planet_non_artificial_max_districts_add = 3
 	}
 
 	ai_weight = {
@@ -900,13 +907,28 @@ ap_transcendent_learning = {
 		leader_skill_levels = 1
 		species_leader_exp_gain = 1
 	}
-
+	
 	potential = {
 		NOT = {
 			has_ascension_perk = ap_transcendent_learning
 		}
 	}
+	tradition_swap = {
+		name = ap_transcendent_learning
+		inherit_effects = no
+		inherit_icon = yes
+		trigger = {
+			has_authority = "auth_machine_intelligence"
+		}
+		modifier = {
+			country_leader_cap_add = 2
+			species_leader_exp_gain = 1.5
+		}
 
+		weight = {
+			factor = 1
+		}
+	}
 	ai_weight = {
 		factor = 10
 	}
@@ -948,8 +970,9 @@ ap_shared_destiny = {
 ap_voidborn = {
 	potential = {
 		host_has_dlc = "Utopia"
-		NOT = {
+		NOR = {
 			has_ascension_perk = ap_voidborn
+			has_origin = origin_void_dwellers
 		}
 	}
 
@@ -979,50 +1002,20 @@ ap_voidborn = {
 	}
 
 	modifier = {
-		pc_habitat_habitability = 0.2
-		empire_size_systems_mult = -0.10
-		empire_size_colonies_mult = -0.10
-	}
-	tradition_swap = {
-		name = ap_voidborn
-		inherit_effects = no
-		inherit_icon = yes
-		trigger = {
-			has_origin = origin_void_dwellers
-		}
-		
-		on_enabled = {
-			custom_tooltip = "ap_voidborn_dweller_habitat_effect"
-			if = {
-				limit = {
-					NOT = { has_technology = tech_habitat_2 }
-				}
-				add_research_option = tech_habitat_2
-				custom_tooltip = "add_research_options_voidborn"
-			}
-			if = {
-				limit = {
-					has_technology = tech_habitat_2
-					NOT = { has_technology = tech_habitat_3 }
-				}
-				add_research_option = tech_habitat_3
-			}
-		}
-
-		modifier = {
-			empire_size_systems_mult = -0.10
-			empire_size_colonies_mult = -0.10
-		}
-
-		weight = {
-			factor = 1
-		}
+		megastructures_habitat_cost_mult = -0.20
+		habitat_districts_building_slots_add = 0.25
+		habitat_max_districts_add = 2
+		habitat_district_jobs_add = 1
 	}
 
 	ai_weight = {
 		modifier = {
-			factor = 1000
-			has_origin = origin_void_dwellers
+			factor = 100
+			OR = {
+				has_origin = origin_toxic_knights
+				has_country_flag = payback_habitat
+				has_valid_civic = civic_void_hive
+			}
 		}
 	}
 }
@@ -1431,5 +1424,68 @@ ap_detox = {
 
 	ai_weight = {
 		factor = 20
+	}
+}
+
+#################
+# MECHROMANCY ASCENSION PERK
+#################
+
+ap_mechromancy = {
+	potential = {
+		has_necroids = yes
+		has_authority = auth_machine_intelligence
+		NOT = {
+			has_ascension_perk = ap_mechromancy
+		}
+	}
+
+	modifier = {
+		l_slot_weapon_damage_mult = 0.15
+		x_slot_weapon_damage_mult = 0.15
+		t_slot_weapon_damage_mult = 0.15
+	}
+
+	on_enabled = {
+		custom_tooltip = "ap_mechromancy_tt"
+		hidden_effect = {
+			country_event = { id = necroids.20 }
+		}
+	}
+
+	ai_weight = {
+		factor = 4
+		modifier = {
+			factor = 0
+			has_valid_civic = civic_machine_servitor
+		}
+		modifier = {
+			factor = 2
+			has_valid_civic = civic_machine_assimilator
+		}
+		modifier = {
+			factor = 0
+			has_ai_personality = exterminators
+		}
+		modifier = {
+			factor = 10
+			any_neighbor_country = {
+				is_regular_empire = yes
+				OR = {
+					has_origin = origin_here_be_dragons
+					any_system_within_border = {
+						any_ship_in_system = {
+							OR = {
+								is_ship_size = space_dragon_blue
+								is_ship_size = space_dragon_red
+								is_ship_size = leviathan_01_elder_tiyanki
+								is_ship_size = leviathan_01_voidspawn
+							}
+						}
+					}
+				}
+
+			}
+		}
 	}
 }

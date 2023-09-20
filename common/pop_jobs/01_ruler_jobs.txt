@@ -21,7 +21,6 @@ head_researcher = {
 	resources = {
 		category = planet_researchers
 		produces = {
-			unity = 2
 			physics_research = 6
 			engineering_research = 6
 			society_research = 6
@@ -138,8 +137,8 @@ high_priest = {
 	resources = {
 		category = planet_priests
 		produces = {
-			unity = 9
-			society_research = 4
+			unity = 10
+			society_research = 3
 		}
 		upkeep = {
 			consumer_goods = 2
@@ -161,7 +160,7 @@ high_priest = {
 		potential = {
 			always = yes
 		}
-		planet_amenities_add = 5
+		planet_amenities_add = 3
 		mult = value:scripted_modifier_mult|MODIFIER|pop_job_amenities_mult|
 	}
 
@@ -307,12 +306,15 @@ noble = {
 				}
 			}
 			society_research = 1
+			unity = 1
 		}
+	}
+	planet_modifier = {
+		planet_stability_add = 2
 	}
 	country_modifier = {
 		country_edict_fund_add = 3
 	}
-	
 
 	triggered_planet_modifier = {
 		potential = {
@@ -321,9 +323,7 @@ noble = {
 		planet_amenities_add = 3
 		mult = value:scripted_modifier_mult|MODIFIER|pop_job_amenities_mult|
 	}
-	planet_modifier = {
-		planet_stability_add = 2
-	}
+
 
 	weight = {
 		weight = @ruler_job_weight
@@ -459,11 +459,12 @@ executive = {
 	resources = {
 		category = planet_executives
 		produces = {
-			unity = 6
-			society_research = 1
+			unity = 5
+			society_research = 0.75
 		}
 		upkeep = {
 			consumer_goods = 2
+			energy = 2
 		}
 		produces = {
 			trigger = {

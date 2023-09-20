@@ -5,7 +5,7 @@ mech_army = {
 	morale_damage = 2.00
 	collateral_damage = 3.00
 	war_exhaustion = 1.00
-	time = 60
+	time = 250
 	icon = GFX_mech_army
 	prerequisites = { "tech_combat_computers_3" }
 	resources = {
@@ -58,3 +58,152 @@ mech_army = {
 		}
 	}
 }
+# Air_army = {
+# 	damage = 3.00
+# 	health = 0.50
+# 	morale = 0.33
+# 	morale_damage = 1.00
+# 	collateral_damage = 21.00
+# 	war_exhaustion = 0.50
+# 	# starting_experience_add = 1
+# 	# experience_gain_mult = 1
+# 	# disengage_chance_mult = 1
+# 	time = 180
+# 	icon = GFX_army_type_assault
+# 	prerequisites = { "tech_assault_armies" }
+# 	resources = {
+# 		category = armies
+# 		cost = {
+# 			alloys = 50
+# 		}
+
+# 		upkeep = {
+# 			energy = 2
+# 		}
+# 	}
+
+# 	show_tech_unlock_if = {
+# 		NOT = { has_origin = origin_subterranean }
+		
+# 	}
+# 	potential_country = {
+# 		NOT = { has_origin = origin_subterranean }
+# 	}
+# 	potential = {
+# 		always = yes
+# 	}
+
+# 	ai_weight = {
+# 		base = 10
+# 		modifier = {
+# 			set = 0
+# 			OR = {
+# 				is_fallen_empire = yes
+# 				has_technology = tech_telepathy
+# 				has_technology = tech_gene_seed_purification
+# 				AND = {
+# 					OR = {
+# 						has_ethic = ethic_militarist
+# 						has_ethic = ethic_fanatic_militarist
+# 					}
+# 					has_technology = tech_gene_banks
+# 				}
+# 			}
+# 		}
+# 		modifier = {
+# 			factor = 0.01 #cannot guarantee that they actually have slaves/robots to get armies from
+# 			OR = {
+# 				AND = {
+# 					has_ai_personality_behaviour = slaver
+# 					has_technology = tech_neural_implants
+# 				}
+# 				AND = {
+# 					has_ai_personality_behaviour = robot_liberator
+# 					has_technology = tech_droid_workers
+# 				}
+# 				has_valid_civic = civic_reanimated_armies
+# 			}
+# 		}
+# 	}
+# }
+# elite_army = {
+# 	damage = 3.00
+# 	health = 1.00
+# 	morale = 2.00
+# 	morale_damage = 1.50
+# 	collateral_damage = 0.50
+# 	war_exhaustion = 1.00
+# 	# starting_experience_add = 1
+# 	# experience_gain_mult = 1
+# 	# disengage_chance_mult = 1
+# 	time = 365
+# 	icon = GFX_army_type_assault
+# 	prerequisites = { "tech_assault_armies" }
+# 	resources = {
+# 		category = armies
+# 		cost = {
+# 			minerals = 100
+# 			energy = 100
+# 		}
+
+# 		upkeep = {
+# 			energy = 1
+# 		}
+# 	}
+
+# 	show_tech_unlock_if = {
+# 		OR = {
+# 			NOT = { has_authority = auth_machine_intelligence }
+# 			has_valid_civic = civic_machine_assimilator
+# 		}
+# 	}
+# 	potential_country = {
+# 		OR = {
+# 			NOT = { has_authority = auth_machine_intelligence }
+# 			has_valid_civic = civic_machine_assimilator
+# 		}
+# 	}
+# 	potential = {
+# 		always = no
+# 		from = {
+# 			NOR = {
+# 				has_trait = "trait_mechanical"
+# 				has_trait = "trait_machine_unit"
+# 				is_sapient = no
+# 			}
+# 		}
+# 	}
+
+# 	ai_weight = {
+# 		base = 10
+# 		modifier = {
+# 			set = 0
+# 			OR = {
+# 				is_fallen_empire = yes
+# 				has_technology = tech_telepathy
+# 				has_technology = tech_gene_seed_purification
+# 				AND = {
+# 					OR = {
+# 						has_ethic = ethic_militarist
+# 						has_ethic = ethic_fanatic_militarist
+# 					}
+# 					has_technology = tech_gene_banks
+# 				}
+# 			}
+# 		}
+# 		modifier = {
+# 			factor = 0.01 #cannot guarantee that they actually have slaves/robots to get armies from
+# 			OR = {
+# 				AND = {
+# 					has_ai_personality_behaviour = slaver
+# 					has_technology = tech_neural_implants
+# 				}
+# 				AND = {
+# 					has_ai_personality_behaviour = robot_liberator
+# 					has_technology = tech_droid_workers
+# 				}
+# 				has_valid_civic = civic_reanimated_armies
+# 			}
+# 		}
+# 	}
+# }

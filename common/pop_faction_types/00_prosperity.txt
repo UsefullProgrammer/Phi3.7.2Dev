@@ -77,6 +77,17 @@ prosperity = {
 			is_event_leader = yes
 		}
 	}
+	# DEMAND: Faction Outraged (by a GalCom Resolution)
+	inline_script = {
+		script = pop_faction_types/demand_faction_outraged
+		FLAG = galcom_resolution_passed_anti_prosperity
+	}
+
+	# DEMAND: Faction Pleased (by a GalCom Resolution)
+	inline_script = {
+		script = pop_faction_types/demand_faction_pleased
+		FLAG = galcom_resolution_passed_pro_prosperity
+	}
 	#10|0
 	demand = {
 		title = "TRADITIONAL_MERCANTILISM"

@@ -798,3 +798,9 @@ tech_housing_2 diventata una rare technology
 
 ap_hydrocentric riallineata con le altre asc perks
 ap_transcendent_learning dà 150% xp to leader agli imperi macchina.
+
+Ora nuove tech per le armate danno vari bonus come produzione più rapida e potenza
+Tech ripetibile aumenta potenza armate offensive, ora più nesusno è al sicuro in late game.
+Compatibile con versione 1.9 (beta)
+
+Le tecnologie degli armamenti avanzate danno bnus anche alle armate, ora nessuno è più al sicuro
