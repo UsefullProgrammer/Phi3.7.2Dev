@@ -2766,7 +2766,7 @@ economic_policy = {
 		}
 		
 		modifier = {
-
+			rivalries_unity_produces_add = 10
 		}
 		
 		policy_flags = {

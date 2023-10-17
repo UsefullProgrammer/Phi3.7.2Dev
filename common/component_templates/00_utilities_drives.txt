@@ -114,7 +114,6 @@ utility_component_template = {
 	ship_modifier = {
 		ship_disengage_opportunities_add = 1
 		ship_windup_mult = -0.25
-		#ship_base_speed_mult = 0.05
 	}
 	modifier = {
 		ship_speed_mult = 0.05

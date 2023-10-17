@@ -1739,7 +1739,7 @@ col_habitat_energy = {
 # Habitat Trade
 col_habitat_trade = {
 	icon = GFX_colony_type_habitat_trade
-
+	custom_tooltip = col_habitat_trade_custom
 	potential = {
 		uses_district_set = habitat
 		exists = owner
@@ -1905,7 +1905,7 @@ col_habitat_mining = {
 # Habitat Farming
 col_habitat_farming = {
 	icon = GFX_colony_type_habitat_farming
-
+	custom_tooltip = col_habitat_farming_desc_custom
 	potential = {
 		uses_district_set = habitat
 		exists = owner
@@ -1967,7 +1967,7 @@ col_habitat_farming = {
 
 col_habitat_gestalt_farming = {
 	icon = GFX_colony_type_habitat_farming
-
+	custom_tooltip = col_habitat_gestalt_farming_desc_custom
 	potential = {
 		uses_district_set = habitat
 		exists = owner

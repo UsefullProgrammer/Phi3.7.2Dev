@@ -1852,9 +1852,14 @@ decision_lithoid_swarm_consume_world = {
 				}
 				variable = num_lithoid_blockers
 			}
-			subtract_variable = {
-				which = num_districts_terravore
-				value = num_lithoid_blockers
+			if = {
+				limit = {
+					is_variable_set = num_lithoid_blockers
+				}
+				subtract_variable = {
+					which = num_districts_terravore
+					value = num_lithoid_blockers
+				}
 			}
 		}
 		owner = {

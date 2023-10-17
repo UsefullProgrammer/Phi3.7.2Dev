@@ -31,6 +31,15 @@ district_hab_housing = {
 			free_housing < 0
 		}
 	}
+	
+	convert_to = {
+		district_orders_demesne
+	}
+	
+		convert_to = {
+		district_orders_demesne
+	}
+
 	resources = {
 		category = planet_districts
 		cost = {
@@ -38,99 +47,27 @@ district_hab_housing = {
 		}
 		upkeep = {
 			energy = @hab_maintenance
+			alloys = @low_hab_maintenance
 		}
 	}
 
 	planet_modifier = {
-		planet_structures_upkeep_mult = -0.03
-		planet_housing_add = 8
-	}
-	# triggered_planet_modifier = {
-	# 	potential = {
-	# 		exists = owner
-	# 		owner = {
-	# 			is_void_dweller_empire = yes
-	# 		}
-
-	# 	}
-	# 	modifier = {
-	# 		planet_housing_add = 1
-	# 	}
-	# }
-	triggered_planet_modifier = {
-		potential = {
-			exists = owner
-			owner = {
-				 is_gestalt = no
-	 		}
-		}
-		modifier = {
-			job_clerk_add = 1
-		}
-	}
-	triggered_planet_modifier = {
-		potential = {
-			exists = owner
-			owner = {
-			 	is_ai = yes
-				 is_gestalt = no
-	 		}
-			years_passed < 1 #fix start bad
-		}
-		modifier = {
-			job_clerk_add = -1
-		}
-	}
-	triggered_planet_modifier = {
-		potential = {
-			has_designation = col_habitat_farming
-		}
-		modifier = {
-			planet_housing_add = -2
-			job_farmer_add = 1
-		}
-	}
-
-	triggered_planet_modifier = {
-		potential = {
-			has_designation = col_habitat_gestalt_farming
-		}
-		modifier = {
-			planet_housing_add = -2
-			job_agri_drone_add = 1
-		}
+		planet_max_buildings_add = 0.50
+		planet_housing_add = 6
 	}
 
 	triggered_planet_modifier = {
 		potential = {
 			exists = owner
-			owner = { is_gestalt = yes }
+			owner = { has_active_tradition = tr_prosperity_void_works }
 		}
 		modifier = {
-			job_maintenance_drone_add = 2
+			planet_housing_add = 1
 		}
 	}
 
-	triggered_desc = {
-		trigger = {
-			has_designation = col_habitat_farming
-		}
-		text = job_farmer_effect_desc
-	}
-
-	triggered_desc = {
-		trigger = {
-			has_designation = col_habitat_gestalt_farming
-		}
-		text = job_agri_drone_effect_desc
-	}
-
-	triggered_desc = {
-		trigger = {
-			exists = owner
-			owner = { is_gestalt = yes }
-		}
-		text = job_maintenance_drone_effect_desc
+	inline_script = {
+		script = districts/habitat_housing_job_swaps
 	}
 }
 

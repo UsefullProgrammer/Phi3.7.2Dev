@@ -715,10 +715,10 @@ engineered_species_ownway = {
 }
 
 reaffirmed_superiority = {
-	country_physics_research_produces_mult = 0.1
-	country_society_research_produces_mult = 0.1
-	country_engineering_research_produces_mult = 0.1
-	country_unity_produces_mult = 0.1
+	country_physics_research_produces_mult = 0.01
+	country_society_research_produces_mult = 0.01
+	country_engineering_research_produces_mult = 0.01
+	country_unity_produces_mult = 0.01
 }
 
 #FUMONGUS MODIFIERS

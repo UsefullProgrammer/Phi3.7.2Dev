@@ -938,8 +938,8 @@
 		SUBJECT_LOYALTY_RELATION_FACTOR = 50		# Multiplied with relation (0-4) for initial loyalty
 		SUBJECT_LOYALTY_RELATION_SUBTRACT = 150		# Subtracted to balance out the relation loyalty weight
 		SUBJECT_LOYALTY_RELATIVE_POWER_FACTOR = 25		# Multiplied with relative military power (0-4) for initial loyalty
-		SUBJECT_LOYALTY_RELATIVE_POWER_SUBTRACT = 75		# Subtracted to balance out the relative military power loyalty weight
-	
+		SUBJECT_LOYALTY_RELATIVE_POWER_SUBTRACT = 100		# Subtracted to balance out the relative military power loyalty weight
+
 		SUBJECT_MONTHLY_LOYALTY_INTEGRATION = -5			# Each month the subject is being integrated, its loyalty is modified by this amount
 		SUBJECT_MONTHLY_LOYALTY_OPINION_MULTIPLIER = 0.01	# Each month, the subject's opinion of its overlord is multiplied by this amount & added to its loyalty
 	
@@ -1810,7 +1810,7 @@
 		FEDERATION_ACCEPTANCE_ATTITUDE_COEXIST = 0
 		FEDERATION_ACCEPTANCE_OTHER_ATTITUDE = -50
 		FEDERATION_ACCEPTANCE_SHARED_RIVAL = 10 # per rival
-		FEDERATION_ACCEPTANCE_SHARED_RIVAL_IN_FEDERATION = 5 # extra per rival in alliance
+		FEDERATION_ACCEPTANCE_SHARED_RIVAL_IN_FEDERATION = 10 # extra per rival in alliance
 		FEDERATION_ACCEPTANCE_SHARED_THREAT = 0.25	# scales with actual threat
 		FEDERATION_CONQUEROR_DIFFERENCE = 0	# penalty if one side wants to wage wars of conquest and the other doesn't
 		FEDERATION_ACCEPTANCE_RELATIVE_STRENGTH_FACTOR = 5 # For each 1x we are stronger than them
@@ -2118,10 +2118,7 @@
 		MIN_SUPPORT_PERCENTAGE_FOR_FAVORS_OPPOSING = 45		# if we are opposing the resolution, don't spend favors if support percentage is below this
 	
 		DIPLO_ACTION_FAVOR_AI_ACCEPTANCE_VALUE = 5		# AI acceptance boost per favor
-		TRADE_VALUE_FAVORS_MULT = 10					# Used as a multiple of DIPLO_ACTION_FAVOR_AI_ACCEPTANCE_VALUE for AI to evaluate acceptance in trade deals
-		EXISTING_FAVORS_MAX	= 5							# Max amount of existing favors for the AI to gift new favors in trades
-		GIFT_FAVORS_MAX = 2								# Max amount of favors to gift
-	
+
 		AGREEMENT_INFLUENCED_BY_FAVORS_AI_BREAK_COOLDOWN = 1800
 	
 		HORDE_INVASION_PLANNING_DEPTH = 5	# How far out does the Horde AI looks for invasion targets (in system hops)
