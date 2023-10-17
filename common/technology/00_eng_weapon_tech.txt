@@ -159,7 +159,7 @@ tech_mass_drivers_5 = {
 	category = { propulsion }
 	ai_update_type = military
 	prerequisites = { "tech_mass_drivers_4" }
-	weight = @tier4weight1
+	weight = @tier4weight2
 
 	gateway = kinetic_weapons
 

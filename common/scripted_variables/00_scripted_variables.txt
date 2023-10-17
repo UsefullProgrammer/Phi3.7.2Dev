@@ -178,13 +178,13 @@
 @tier3cost2 = 10000
 @tier3cost3 = 12000
 
-@tier4cost1 = 16000
-@tier4cost2 = 20000
-@tier4cost3 = 24000
+@tier4cost1 = 17600
+@tier4cost2 = 22000
+@tier4cost3 = 26400
 
-@tier5cost1 = 32000
-@tier5cost2 = 40000
-@tier5cost3 = 48000
+@tier5cost1 = 35200
+@tier5cost2 = 44000
+@tier5cost3 = 52800
 
 # TECH WEIGHTS
 @tier1weight1 = 100

@@ -1165,7 +1165,7 @@ sm_nebula_alloy_refinery_desc:0 "Hightechowa rafineria stopów przy 0 grawitacji
 sm_civilian_anchorage:0 "Kotwica cywilna"
 sm_civilian_anchorage_desc:0 "Kotwice cywilne, znane również jako porty kosmiczne."
 sm_civilian_shipyard:0 "Stocznia cywilna"
-sm_civilian_shipyard_desc:0 "Produkuje statki handlowe na sprzedaż energii dla populacji Void Dwellers. Im więcej stoczni cywilnych, tym mniej energii jest produkowane. Potrzebne są 0,5 stoczni, aby zbudować statek cywilny, a 2 stocznie, aby zbudować statek wojskowy."
+sm_civilian_shipyard_desc:0 "船を人口に売ることでエネルギーを生産します（帝国内の人口が多いほど、より多くのエネルギーを生産します）。市民船港が多いほど、生産量は減少します（唯一、虚空の居住者または虚空生まれの人々が1つ以上建設することができます）"
 
 sm_starm_science_hub:0 "Centrum badawcze"
 sm_starm_science_hub_desc:0 "Wysokotechnologiczna placówka, w której nasi naukowcy spotykają się, aby posuwać do przodu różne dziedziny badań.\n"

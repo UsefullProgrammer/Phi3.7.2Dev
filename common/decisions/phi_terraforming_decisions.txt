@@ -752,7 +752,7 @@ decision_phi_bush_wildfires_2_1 = {
 decision_phi_planet_teleporters_3_2 = {
 	owned_planets_only = yes
 	sound = event_laboratory_sound
-	icon = decision_satellite_in_orbit
+	icon = decision_gateway_activation
 
 	enactment_time = 360
 
@@ -786,7 +786,7 @@ decision_phi_planet_teleporters_3_2 = {
 decision_phi_planet_teleporters_2_1 = {
 	owned_planets_only = yes
 	sound = event_laboratory_sound
-	icon = decision_satellite_in_orbit
+	icon = decision_gateway_activation
 
 	enactment_time = 360
 
@@ -827,23 +827,44 @@ decision_phi_planet_teleporters_2_1 = {
 decision_phi_build_planet_teleporters = {
 	owned_planets_only = yes
 	sound = event_laboratory_sound
-	icon = decision_satellite_in_orbit
+	icon = decision_gateway_activation
 
 	enactment_time = 360
 
 	resources = {
 		category = decisions
 		cost = {
+			trigger = {
+				OR = {
+					is_planet_class = pc_machine
+					is_planet_class = pc_hive
+				}
+			}
+			alloys = 700
+			sr_dark_matter = 25
+		}
+		cost = {
+			trigger = {
+				NOR = {
+					is_planet_class = pc_machine
+					is_planet_class = pc_hive
+				}
+			}
 			energy = 2500
+			sr_dark_matter = 25
 		}
 	}
-
+	prerequisites = {
+		"tech_gateway_construction"
+	}
+	#155,2: 	show_in_tech = "tech_space_mining_1"
 	potential = {
 		OR = {
 			has_modifier = phi_pm_planet_teleporters_3
 			has_modifier = phi_pm_planet_teleporters_2
 			is_planet_class = pc_city
 			is_planet_class = pc_machine
+			is_planet_class = pc_hive
 		}
 		NOT = { has_modifier = phi_pm_planet_teleporters_1 }
 	}
@@ -955,6 +976,7 @@ decision_phi_build_planet_broadcasting = {
 		category = decisions
 		cost = {
 			energy = 2500
+			minor_artifacts = 25
 		}
 	}
 
@@ -963,14 +985,70 @@ decision_phi_build_planet_broadcasting = {
 			has_modifier = phi_pm_planet_broadcasting_3
 			has_modifier = phi_pm_planet_broadcasting_2
 			is_planet_class = pc_city
+
 		}
 		NOT = { has_modifier = phi_pm_planet_broadcasting_1 }
 	}
-
+	prerequisites = {
+		"tech_collective_self"
+	}
 	allow = {
 		exists = owner
 		owner = {
 			has_technology = tech_collective_self
+		}
+	}
+
+	effect = {
+		if = {
+			limit = { has_modifier = phi_pm_planet_broadcasting_3 }
+			remove_modifier = phi_pm_planet_broadcasting_3
+		}
+		if = {
+			limit = { has_modifier = phi_pm_planet_broadcasting_2 }
+			remove_modifier = phi_pm_planet_broadcasting_2
+		}
+		add_modifier = {
+			modifier = phi_pm_planet_broadcasting_1
+		}
+	}
+
+	ai_weight = {
+		weight = 1000
+	}
+}
+decision_phi_build_planet_broadcasting_gestalt = {
+	owned_planets_only = yes
+	sound = event_laboratory_sound
+	icon = decision_satellite_in_orbit
+
+	enactment_time = 360
+
+	resources = {
+		category = decisions
+		cost = {
+			energy = 2500
+			minor_artifacts = 25
+		}
+	}
+
+	potential = {
+		OR = {
+			has_modifier = phi_pm_planet_broadcasting_3
+			has_modifier = phi_pm_planet_broadcasting_2
+			is_planet_class = pc_machine
+			is_planet_class = pc_hive
+
+		}
+		NOT = { has_modifier = phi_pm_planet_broadcasting_1 }
+	}
+	prerequisites = {
+		"tech_autonomous_agents"
+	}
+	allow = {
+		exists = owner
+		owner = {
+			has_technology = tech_autonomous_agents
 		}
 	}
 
@@ -998,7 +1076,7 @@ decision_phi_build_planet_broadcasting = {
 decision_phi_planet_accelerators_3_2 = {
 	owned_planets_only = yes
 	sound = event_laboratory_sound
-	icon = decision_satellite_in_orbit
+	icon = decision_planet_accelerators
 
 	enactment_time = 360
 
@@ -1032,7 +1110,7 @@ decision_phi_planet_accelerators_3_2 = {
 decision_phi_planet_accelerators_2_1 = {
 	owned_planets_only = yes
 	sound = event_laboratory_sound
-	icon = decision_satellite_in_orbit
+	icon = decision_planet_accelerators
 
 	enactment_time = 360
 
@@ -1066,7 +1144,7 @@ decision_phi_planet_accelerators_2_1 = {
 decision_phi_build_planet_accelerators = {
 	owned_planets_only = yes
 	sound = event_laboratory_sound
-	icon = decision_satellite_in_orbit
+	icon = decision_planet_accelerators
 
 	enactment_time = 360
 
@@ -1074,6 +1152,7 @@ decision_phi_build_planet_accelerators = {
 		category = decisions
 		cost = {
 			energy = 2500
+			sr_dark_matter = 25
 		}
 	}
 
@@ -1085,7 +1164,9 @@ decision_phi_build_planet_accelerators = {
 		}
 		NOT = { has_modifier = phi_pm_planet_accelerators_1 }
 	}
-
+	prerequisites = {
+		"tech_physics_3"
+	}
 	allow = {
 		exists = owner
 		owner = {

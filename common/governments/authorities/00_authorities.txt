@@ -197,6 +197,7 @@ auth_hive_mind = {
 
 	country_modifier = {
 		pop_growth_speed = 0.25
+		pop_decline_speed = 0.5
 	}
 
 	tags = {
@@ -248,6 +249,7 @@ auth_machine_intelligence = {
 		planet_pop_assembly_add = 1
 		station_gatherers_produces_mult = 0.1
 		pop_growth_speed_reduction = 0.5
+		pop_decline_speed = 0.5
 	}
 
 	tags = {

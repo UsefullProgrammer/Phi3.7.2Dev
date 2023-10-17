@@ -1,3 +1,4 @@
+inline_script = "building_add/free_buind_slots" #obbligatoria
 random_list = {
 	20 = { #energy nexus
 		modifier = {

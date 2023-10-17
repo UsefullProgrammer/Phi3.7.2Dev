@@ -196,6 +196,7 @@ Planet_need_work_job = {
 			owner = { is_hive_empire = yes }
 			planet_crime > 25
 		}
+		num_unemployed > 20
 	}
 }
 has_pop_assembly_buildings = {
@@ -208,5 +209,23 @@ has_pop_assembly_buildings = {
 		has_building = building_spawning_pool
 		has_building = building_offspring_nest
 		has_building = building_clone_vats
+	}
+}
+has_upgradable_research_labs = {
+	OR ={
+		AND = {
+		OR = {
+			has_building = building_engineering_lab_1
+			has_building = building_physics_lab_1
+		}
+		owner = { has_technology = tech_basic_science_lab_2 }
+		}
+		AND = {
+			OR = {
+				has_building = building_engineering_lab_2
+				has_building = building_physics_lab_2
+			}
+			owner = { has_technology = tech_basic_science_lab_3 }
+		}
 	}
 }

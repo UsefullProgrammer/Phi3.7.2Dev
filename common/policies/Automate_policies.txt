@@ -1,0 +1,85 @@
+Starbase_automation = {
+	potential = {
+		always =  yes
+	}
+
+	option = {
+		name = "Nothing"
+
+		policy_flags = { Automation_Nothing }
+		modifier = {
+		}
+		
+		AI_weight = {
+			weight = 1000
+		}
+	}
+
+	option = {
+		name = "Hidroponic"
+		valid = {
+			OR = {
+				has_technology = "tech_hydroponics" 
+				has_technology = "tech_solar_panel_network"
+			}
+		}
+		
+		policy_flags = { Automation_hidrophic }
+		modifier = {
+		}
+		on_enabled = {
+			country_event = { 
+				id = phigo_automation.0
+			} 
+		}
+
+		AI_weight = {
+			weight = 0
+		}
+	}
+	option = {
+		name = "Anchorage"
+		potential = {
+			has_technology = "tech_hydroponics" 
+		}
+		
+		policy_flags = { Automation_anchorage }
+		modifier = {
+		}
+		on_enabled = {
+			country_event = { 
+				id = phigo_automation.0
+			} 
+		}
+
+		AI_weight = {
+			weight = 0
+		}
+	}
+	option = {
+		name = "full_automate_sm_buildings"
+		potential = {
+			always = no
+		}
+		policy_flags = { full_automate_sm_buildings }
+		modifier = {
+		}
+
+		AI_weight = {
+			weight = 0
+		}
+	}
+	option = {
+		name = "full_automate_sm"
+		potential = {
+			always = no
+		}
+		policy_flags = { full_automate_sm }
+		modifier = {
+		}
+
+		AI_weight = {
+			weight = 0
+		}
+	}
+}

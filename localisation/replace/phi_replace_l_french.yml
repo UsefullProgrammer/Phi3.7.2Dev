@@ -140,9 +140,9 @@ tradition_domination_desc:0 "If we do not impose our will on others, they will i
  tradition_domination_machine_desc:0 "We seek harmonious functionality throughout the entire galaxy. Other stellar beings resist this due to inefficient personal whims. We will remove their disorder like a malfunctioning part.\n\nIf §Gadopt§! we can propose that another Empire becomes our subject."
  tradition_domination_hive_desc:0 "Everything that is not Us must serve Us, either as servants, or as food.\n\nIf §Gadopt§! we can propose that another Empire becomes our subject."
 #error questo tag ha qualcosa di sbagliato @mario
- tech_capital_productivity_1_effect:0 "Capital Buildings:\n  $mod_planet_jobs_produces_mult$: §G+10%§!"
- tech_capital_productivity_2_effect:0 "Upgraded Capital Buildings:\n  $mod_planet_jobs_produces_mult$: §G+20%§!"
- tech_capital_productivity_3_effect:0 "Major Capital Buildings:\n  $mod_planet_jobs_produces_mult$: §G+30%§!"
+#  tech_capital_productivity_1_effect:0 "Capital Buildings:\n  $mod_planet_jobs_produces_mult$: §G+10%§!"
+#  tech_capital_productivity_2_effect:0 "Upgraded Capital Buildings:\n  $mod_planet_jobs_produces_mult$: §G+20%§!"
+#  tech_capital_productivity_3_effect:0 "Major Capital Buildings:\n  $mod_planet_jobs_produces_mult$: §G+30%§!"
 
  EMPIRE_SIZE_TOTAL_2:0 "$VALUE|0Y$"
  ADMIN_CAP_TOTAL_2:0 "$VALUE|Y$"
@@ -186,7 +186,6 @@ sm_naval_logistics_office_desc_modifier:2 "Anchors et Ports civils : §G+2§! §
 war_goal_wg_humiliation_desc:0 "War is waged to undermine the enemy regime and the populace's faith in their institutions. \n This war Not cost influence upkeep (for togheter) "
 war_goal_wg_independence_desc:0 "War is waged to secure independence.\nThis war Not cost influence upkeep ( Only for you) "
 
-ap_voidborn_habitat_effect:0 "§YHabitats§! owned by our Empire have §Y2 Additional Building Slots§!. Our upgraded habitats can support advanced housing buildings can, after Research §Y$tech_habitat_3$§! you will can upgrade 5 times habitat instead 1."
  add_research_options_voidborn:0 "Research options gained after upgrading a Habitat:\n£engineering_research£§Y$tech_habitat_3$§!"
 
  wg_expel_corp_status_quo_effects:1 "All Branch Offices owned by the §Y[From.GetName]§! in the §Y[Root.GetName]§! are closed.\n§Y[From.GetName]§! receives £energy£ §Y1000§! for each closed Branch Office."
@@ -205,6 +204,18 @@ tr_genetics_finish_modifier_desc:0 "$SPECIES_TRAIT_PICKS$: §G+1§!\n$species_tr
 tr_genetics_finish_extra_traits_modifier_desc:0 "$SPECIES_TRAIT_PICKS$: §G+1§!\n$species_trait_points_add$: $POINTS|0=+$\nAllows research of rare §YTransgenesis§! technologies.\n$TRADITIONS_FINISH_AP$"
 
 tr_domination_federations_finish_desc:0 "$mod_campaigns_upkeep_mult$ §G-10%§!\n$MOD_EMPIRE_SIZE_POPS_MULT$ §G-10%§!\nGrants access to the §Y$hegemony_federation$§! Federation type.\nAscension Perks Unlocked: §G+1§!"
+
+ap_voidborn_habitat_phi_effect:0 "$ap_voidborn_habitat_effect$\n\nAfter Research §Y$tech_habitat_3$§! you will can upgrade 5 times habitat instead 1\n\n§YUnlock§! new §Gpowerfull§! Starbase buildings and module with cost influence, that can add 1 work job at planet in system in base at starbase building type"
+
+ origin_tooltip_void_dwellers_effects:9 "- $HOMEWORLD$ ['concept_pc_habitat']$NEW_LINE$- $SPECIES_TRAITS$$TABBED_NEW_LINE$- ['concept_void_dweller', $trait_void_dweller_1$]$TABBED_NEW_LINE$- ['concept_habitat_preference', $trait_pc_habitat_preference$]$NEW_LINE$- $ADDITONAL_TECHNOLOGIES_STRING$ ['concept_habitat_1', £engineering_research£ $tech_habitat_1$]$NEW_LINE$- $GUARANTEED_RESEARCH_OPTION_STRING$ ['concept_habitat_2', £engineering_research£ $tech_habitat_2$]$NEW_LINE$- ['concept_guaranteed_colonies']: Resource-rich systems instead of Colonizable Planets $NEW_LINE$- $ap_voidborn_habitat_effect$"
+
+tr_expansion_finish_void_tooltip: "Habitat build cost: §G-20%§!\n$MOD_PLANET_MAX_DISTRICTS_ADD$ on Habitats: §G+1§!\nAscension Perks Unlocked: §G+1§!"
+
+triggered_opinion_diplo_stance_supremacy:0 "Have conscription or full mobilization"
+triggered_opinion_diplo_stance_fullmobilization_near:0 "Have full mobilization"
+
+ minor_orbital_effect: "$orbital_effect$\n$tt$- §G+2§! £housing£ is distribuite for every habitat"
+major_orbital_effect: "£mod_planet_max_districts_add£ Max District Slots: §G+0.50§!\n -$t$- $orbital_effect$\n$tt$- §G+2§! £housing£ is distribuite for every habitat"
 
  DISRUPTOR_1_DESC:1 "Disruptors fire high-energy bolts that weaken and destroy the molecular bonds that hold the target's constituent atoms together.\nship shield regen add §G0.5§!\nOrbital bombardament damage §G10%§!"
  DISRUPTOR_2_DESC:0 "These upgraded disruptors fire bolts of more destructive ion particles at targets, without sacrificing the firing rate of their predecessors.\nship shield regen add §G0.85§!\nOrbital bombardament damage §G20%§!"

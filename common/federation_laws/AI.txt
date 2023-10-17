@@ -1,0 +1,21 @@
+ai_minimal = {
+	
+	potential = {
+		NOT = { 
+			any_member = {
+				is_ai = no
+			}
+		}
+	}
+	allow = {
+		always = yes
+	}
+	cohesion_growth = 5
+	on_enact = {
+		add_cohesion = 50
+	}
+	
+	ai_weight = {
+		base = 100
+	}
+}

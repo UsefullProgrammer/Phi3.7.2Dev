@@ -18,7 +18,48 @@ opinion_hegemon = {
 		base = -50
 	}
 }
+triggered_opinion_diplo_stance_fullmobilization_near = {
+	trigger = {
+		OR = {
+			is_country_type = default
+			is_country_type = awakened_fallen_empire
+		}
+		has_policy_flag = diplo_stance_full_scale_mobilization
+		FROM = {
+			is_ai = yes
+			NOT = { has_policy_flag = diplo_stance_full_scale_mobilization }
+		}
+		NOR = {
+			has_defensive_pact = from
+			is_in_federation_with = from
+			FROM = { is_overlord_to = prev }
+		}
+		is_neighbor_of = FROM
+	}
 
+	opinion = {
+		base = -200
+	}
+}
+triggered_opinion_diplo_stance_disarmament = {
+	trigger = {
+		OR = {
+			is_country_type = default
+			is_country_type = awakened_fallen_empire
+		}
+		has_policy_flag = diplo_stance_disarmament
+		NOT = {
+			is_rival = from
+			#FROM = { is_rival = prev }
+		}
+		is_neighbor_of = FROM
+	}
+
+	opinion = {
+		base = 200
+	}
+}
+#triggered_opinion_diplo_stance_fullmobilization_near
 # opinion_test = {
 	# trigger = {
 		# from = { is_ai = no }

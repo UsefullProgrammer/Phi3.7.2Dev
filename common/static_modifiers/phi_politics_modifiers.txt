@@ -91,7 +91,8 @@ phi_planet_expropriation = {
 ### DIPLOMATIC STANCE ###
 
 phi_disarmament = {
-	job_merchant_per_pop = 0.05
+	job_merchant_per_pop = 0.04
+	job_trader_per_pop = 0.05
 	job_clerk_per_pop = 0.1
 }
 
@@ -99,7 +100,8 @@ phi_disarmament_gestalt = {
 	job_maintenance_drone_per_pop = 0.15
 }
 
-phi_minimal_army = {
+phi_minimal_army = { 
+	job_trader_per_pop = 0.02
 	job_clerk_per_pop = 0.05
 }
 

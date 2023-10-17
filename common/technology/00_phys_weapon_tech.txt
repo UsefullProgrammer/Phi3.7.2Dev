@@ -156,7 +156,7 @@ tech_lasers_5 = {
 	category = { particles }
 	ai_update_type = military
 	prerequisites = { "tech_lasers_4" }
-	weight = @tier4weight1
+	weight = @tier4weight2
 
 	gateway = energy_weapons
 	modifier = {

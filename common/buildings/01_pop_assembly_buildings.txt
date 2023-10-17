@@ -303,15 +303,16 @@ building_machine_assembly_plant = {
 
 	planet_modifier = {
 		job_replicator_add = 1
+		planet_max_buildings_add = 1
 	}
 
 	resources = {
 		category = planet_buildings
 		cost = {
-			minerals = @b1_minerals
+			minerals = @b2_minerals
 		}
 		upkeep = {
-			energy = @b1_upkeep
+			energy = @b2_upkeep
 		}
 	}
 
@@ -355,6 +356,7 @@ building_machine_assembly_complex = {
 
 	planet_modifier = {
 		job_replicator_add = 3
+		planet_max_buildings_add = 1
 	}
 
 	resources = {
@@ -408,16 +410,17 @@ building_machine_assembly_complex_3 = {
 
 	planet_modifier = {
 		job_replicator_add = 5
+		planet_max_buildings_add = 1
 	}
 
 	resources = {
 		category = planet_buildings
 		cost = {
-			minerals = @b3_minerals
+			minerals = @b4_minerals
 			rare_crystals = @b3_rare_cost
 		}
 		upkeep = {
-			energy = @b3_upkeep
+			energy = @b4_upkeep
 			rare_crystals = @b3_rare_upkeep
 		}
 	}

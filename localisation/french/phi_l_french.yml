@@ -1170,7 +1170,7 @@ sm_nebula_alloy_refinery_desc:0 "Raffinerie d'alliages de haute technologie en g
 sm_civilian_anchorage:0 "Ancre civile"
 sm_civilian_anchorage_desc:0 "Ancres civiles, également connues sous le nom de ports spatiaux."
 sm_civilian_shipyard:0 "Chantier naval civil"
-sm_civilian_shipyard_desc:0 "Produit des navires de vente d'énergie pour les populations de l'habitant du vide. Plus il y a de chantiers navals civils, moins il y a d'énergie produite. Il faut 0,5 chantiers pour construire un navire civil et 2 chantiers pour construire un navire militaire."
+sm_civilian_shipyard_desc:0 "Produces energy by sell ship at pop (more pop in empire more produces energy) for everyone more civilian more civilian shipyard less produces (only void dweller or void born can build more of 1)."
 
 sm_starm_science_hub:0 "Centre de recherche"
 sm_starm_science_hub_desc:0 "Un établissement de haute technologie où nos scientifiques se réunissent pour faire avancer différents domaines de recherche.\n"

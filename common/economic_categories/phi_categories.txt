@@ -37,3 +37,9 @@ galactic_community = {
 		upkeep
 	}
 }
+orbital_artifacts_deposits = {
+	parent = orbital_mining_deposits
+	generate_mult_modifiers = {
+		produces
+	}
+}

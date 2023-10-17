@@ -393,6 +393,7 @@ station_gatherers = {
 	modifier_category = deposit #it applies to the planet
 }
 
+
 station_researchers = {
 	parent = stations
 
@@ -459,7 +460,6 @@ starbase_constructions = {
 	}
 	modifier_category = starbase
 }
-
 starbase_buildings = {
 	parent = starbase_constructions
 

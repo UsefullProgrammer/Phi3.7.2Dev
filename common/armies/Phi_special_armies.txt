@@ -2,7 +2,7 @@ mech_army = {
 	damage = 2.25
 	health = 3.00
 	morale = 1.50
-	morale_damage = 2.00
+	morale_damage = 1.5
 	collateral_damage = 3.00
 	war_exhaustion = 1.00
 	time = 250
@@ -15,7 +15,7 @@ mech_army = {
 		}
 
 		upkeep = {
-			energy = 3
+			energy = 4
 		}
 	}
 

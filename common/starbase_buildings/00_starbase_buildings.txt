@@ -14,7 +14,9 @@ recruitment_office = {
 	}
 
 	possible = {
+		
 		owner = {
+			has_policy_flag = Automation_Nothing
 			count_starbase_buildings = {
 				type = recruitment_office
 				count < 1
@@ -115,6 +117,9 @@ mining_bay = {
 				}
 			}
 		}
+		#owner = {
+#			has_policy_flag = Automation_Nothing
+#		}
 	}
 
 	resources = {
@@ -131,15 +136,25 @@ mining_bay = {
 			energy = 1
 		}
 	}
-	triggered_system_modifier = {
+	triggered_country_modifier = {
 		potential = {
 			exists = owner
 			owner = { 
-				has_ascension_perk = ap_voidborn 
+				is_void_born = yes
 				is_gestalt = no
 			}
 		}
-		job_miner_per_pop = 0.04
+		job_miner_per_pop = 0.02
+	}
+	triggered_country_modifier = {
+		potential = {
+			exists = owner
+			owner = { 
+				is_void_born = yes
+				is_gestalt = yes
+			}
+		}
+		job_mining_drone_per_pop = 0.02
 	}
 
 	show_in_tech = "tech_space_mining_1"
@@ -158,7 +173,9 @@ hydroponics_bay = {
 	}
 
 	possible = {
-		exists = owner
+		#owner = {
+#			has_policy_flag = Automation_Nothing
+#		}
 		OR = {
 			owner = { is_ai = no }
 			owner = { country_uses_food = yes }
@@ -210,7 +227,11 @@ resource_silo = {
 			alloys = 50
 		}
 	}
-
+	possible = {
+		#owner = {
+#			has_policy_flag = Automation_Nothing
+#		}
+	}
 	triggered_country_modifier = {
 		potential = {
 			exists = owner
@@ -242,10 +263,17 @@ nebula_refinery = {
 
 	potential = {
 		exists = owner
-		owner = { has_technology = tech_space_mining_1 }
+		owner = {
+			 has_technology = tech_space_mining_1 
+			 is_gestalt = no
+		}
 	}
 
 	possible = {
+		
+		#owner = {
+#			has_policy_flag = Automation_Nothing
+#		}
 		custom_tooltip = {
 			fail_text = "requires_starport_or_ring"
 			OR = {
@@ -257,6 +285,7 @@ nebula_refinery = {
 			fail_text = "requires_nebula"
 			star = { is_inside_nebula = yes }
 		}
+		
 	}
 
 	resources = {
@@ -281,18 +310,72 @@ nebula_refinery = {
 			energy = 2
 		}
 	}
-	triggered_system_modifier = {
-		potential = {
-			star = { is_inside_nebula = yes }
-			exists = owner
-			owner = { 
-				has_ascension_perk = ap_voidborn 
-				is_gestalt = no
-			}
-		}
+	system_modifier = {
 		job_miner_add = 2
 	}
 
+	show_in_tech = "tech_space_mining_1"
+
+	ai_weight = {
+		weight = 10000 #use same weight here - ai weighting is done in starbase_types.txt
+	}
+}
+nebula_refinery_gestalt = {
+	icon = "GFX_spaceport_nebula_refinery"
+	construction_days = 360
+
+	potential = {
+		exists = owner
+		owner = { 
+			is_gestalt = yes
+			has_technology = tech_space_mining_1 
+		}
+	}
+
+	possible = {
+		
+		#owner = {
+#			has_policy_flag = Automation_Nothing
+#		}
+		custom_tooltip = {
+			fail_text = "requires_starport_or_ring"
+			OR = {
+				has_starbase_size >= starbase_starport
+				is_orbital_ring = yes
+			}
+		}
+		custom_tooltip = {
+			fail_text = "requires_nebula"
+			star = { is_inside_nebula = yes }
+		}
+		
+	}
+
+	resources = {
+		category = starbase_buildings
+		cost = {
+			alloys = 100
+		}
+
+		produces = {
+			minerals = 10
+		}
+
+		produces = {
+			trigger = {
+				exists = owner
+				owner = { has_technology = tech_mine_exotic_gases }
+			}
+			exotic_gases = 1
+		}
+
+		upkeep = {
+			energy = 2
+		}
+	}
+	system_modifier = {
+		job_mining_drone_add = 2
+	}
 	show_in_tech = "tech_space_mining_1"
 
 	ai_weight = {
@@ -330,6 +413,9 @@ listening_post = {
 		is_normal_starbase = yes
 	}
 	possible = {
+		#owner = {
+#			has_policy_flag = Automation_Nothing
+#		}
 		NOT = {
 			has_starbase_building = dark_matter_listening_post
 		}
@@ -408,6 +494,10 @@ offworld_trading_company = {
 	}
 
 	possible = {
+		
+		#owner = {
+#			has_policy_flag = Automation_Nothing
+#		}
 		custom_tooltip = {
 			fail_text = "requires_starport"
 			has_starbase_size >= starbase_starport
@@ -466,6 +556,10 @@ fleet_academy = {
 	}
 
 	possible = {
+		
+		#owner = {
+#			has_policy_flag = Automation_Nothing
+#		}
 		OR = {
 			has_starbase_module = shipyard
 			starbase_buildable_is_in_queue_before = {
@@ -534,6 +628,10 @@ naval_logistics_office = {
 	}
 
 	possible = {
+		
+		#owner = {
+#			has_policy_flag = Automation_Nothing
+#		}
 		custom_tooltip = {
 			fail_text = "requires_anchorage"
 			OR = {
@@ -601,6 +699,10 @@ titan_yards = {
 	}
 
 	possible = {
+		
+		#owner = {
+#			has_policy_flag = Automation_Nothing
+#		}
 		custom_tooltip = {
 			fail_text = "requires_citadel"
 			has_starbase_size >= starbase_citadel
@@ -667,6 +769,10 @@ colossus_yards = {
 	}
 
 	possible = {
+		
+		#owner = {
+#			has_policy_flag = Automation_Nothing
+#		}
 		custom_tooltip = {
 			fail_text = "requires_citadel"
 			has_starbase_size >= starbase_citadel
@@ -726,6 +832,10 @@ black_hole_observatory = {
 	}
 
 	possible = {
+		
+		#owner = {
+#			has_policy_flag = Automation_Nothing
+#		}
 		custom_tooltip = {
 			fail_text = "requires_starport_or_ring"
 			OR = {
@@ -793,6 +903,10 @@ target_uplink_computer = {
 	}
 
 	possible = {
+		
+		#owner = {
+#			has_policy_flag = Automation_Nothing
+#		}
 		custom_tooltip = {
 			fail_text = "requires_starport_or_ring"
 			OR = {
@@ -836,6 +950,10 @@ defense_grid = {
 	}
 
 	possible = {
+		
+		#owner = {
+#			has_policy_flag = Automation_Nothing
+#		}
 		custom_tooltip = {
 			fail_text = "requires_starport_or_ring"
 			OR = {
@@ -881,6 +999,10 @@ deep_space_black_site = {
 	}
 
 	possible = {
+		
+		#owner = {
+#			has_policy_flag = Automation_Nothing
+#		}
 		custom_tooltip = {
 			fail_text = "requires_starport"
 			has_starbase_size >= starbase_starport
@@ -936,6 +1058,10 @@ curator_think_tank = {
 	}
 
 	possible = {
+		
+		#owner = {
+#			has_policy_flag = Automation_Nothing
+#		}
 		custom_tooltip = {
 			fail_text = "requires_starport"
 			has_starbase_size >= starbase_starport
@@ -1021,6 +1147,10 @@ art_college = {
 	}
 
 	possible = {
+		
+		#owner = {
+#			has_policy_flag = Automation_Nothing
+#		}
 		custom_tooltip = {
 			fail_text = "requires_starport"
 			has_starbase_size >= starbase_starport
@@ -1102,6 +1232,10 @@ salvager_workshop = {
 	}
 
 	possible = {
+		
+		#owner = {
+#			has_policy_flag = Automation_Nothing
+#		}
 		custom_tooltip = {
 			fail_text = "requires_starport"
 			has_starbase_size >= starbase_starport
@@ -1184,6 +1318,10 @@ shroud_beacon = {
 	}
 
 	possible = {
+		
+		#owner = {
+#			has_policy_flag = Automation_Nothing
+#		}
 		custom_tooltip = {
 			fail_text = "requires_starport"
 			has_starbase_size >= starbase_starport
@@ -1350,6 +1488,10 @@ irassian_naval_yards = {
 	}
 
 	possible = {
+		
+		#owner = {
+#			has_policy_flag = Automation_Nothing
+#		}
 		custom_tooltip = {
 			fail_text = "requires_shipyard"
 			OR = {
@@ -1387,7 +1529,7 @@ irassian_naval_yards = {
 		potential = {
 			owner = { has_ascension_perk = ap_archaeoengineers }
 		}
-		starbase_shipyard_build_speed_mult = 0.3
+		starbase_shipyard_build_speed_mult = 0.34
 	}
 
 	custom_tooltip = sm_irassian_naval_yards_desc_modifier
@@ -1443,6 +1585,7 @@ yuht_detection_array = {
 		}
 		ship_sensor_range_add = 10
 		ship_hyperlane_range_add = 20
+		ship_cloaking_detection_add = 1
 	}
 
 	custom_tooltip = sm_yuht_detection_array_desc_modifier
@@ -1519,6 +1662,7 @@ archaeo_overcharger = {
 				owner = { has_ascension_perk = ap_archaeoengineers }
 			}
 		}
+		ship_shield_add = @shield_L1
 		ship_shield_mult = 0.33
 		ship_shield_hardening_add = 0.33
 	}
@@ -1528,12 +1672,11 @@ archaeo_overcharger = {
 			owner = { has_ascension_perk = ap_archaeoengineers }
 		}
 		ship_shield_add = @shield_L3
-		ship_shield_mult = 0.5
-		ship_shield_hardening_add = 0.5
+		ship_shield_mult = 0.66
+		ship_shield_hardening_add = 0.66
 	}
 
 	defense_platform_modifier = {
-		ship_shield_add = @shield_L1
 		ship_shield_mult = 0.25
 		ship_shield_hardening_add = 0.25
 		ship_shield_regen_add_perc = @regen_mult_lv3
@@ -1573,7 +1716,10 @@ feeder = {
 	}
 
 	possible = {
-		exists = owner
+		
+		#owner = {
+#			has_policy_flag = Automation_Nothing
+#		}
 	}
 
 	resources = {
@@ -1609,6 +1755,10 @@ communications_jammer = {
 	construction_days = 180
 
 	possible = {
+		
+		#owner = {
+#			has_policy_flag = Automation_Nothing
+#		}
 		custom_tooltip = {
 			fail_text = "requires_starport_or_ring"
 			OR = {
@@ -1658,6 +1808,10 @@ disruption_field = {
 	construction_days = 180
 
 	possible = {
+		exists = owner
+		#owner = {
+#			has_policy_flag = Automation_Nothing
+#		}
 		custom_tooltip = {
 			fail_text = "requires_starport_or_ring"
 			OR = {
@@ -1716,6 +1870,10 @@ warp_fluctuator = {
 	}
 
 	possible = {
+		
+		#owner = {
+#			has_policy_flag = Automation_Nothing
+#		}
 		custom_tooltip = {
 			fail_text = "requires_starport"
 			has_starbase_size >= starbase_starport
@@ -1756,6 +1914,10 @@ transit_hub = {
 	}
 
 	possible = {
+		
+		#owner = {
+#			has_policy_flag = Automation_Nothing
+#		}
 		custom_tooltip = {
 			fail_text = "requires_starport_or_ring"
 			OR = {
@@ -1836,6 +1998,10 @@ command_center = {
 	}
 
 	possible = {
+		
+		#owner = {
+#			has_policy_flag = Automation_Nothing
+#		}
 		custom_tooltip = {
 			fail_text = "requires_starfortress_or_ring_3"
 			OR = {
@@ -1902,6 +2068,10 @@ trader_proxy_office = {
 	}
 
 	possible = {
+		exists = owner
+		#owner = {
+#			has_policy_flag = Automation_Nothing
+#		}
 		custom_tooltip = {
 			fail_text = "requires_starport"
 			has_starbase_size >= starbase_starport
@@ -1997,6 +2167,10 @@ dragon_hatchery = {
 	}
 
 	possible = {
+		exists = owner
+		#owner = {
+#			has_policy_flag = Automation_Nothing
+#		}
 		custom_tooltip = {
 			fail_text = "requires_citadel"
 			has_starbase_size >= starbase_citadel
@@ -2050,6 +2224,10 @@ ice_mining_station = {
 	}
 
 	possible = {
+		exists = owner
+		#owner = {
+#			has_policy_flag = Automation_Nothing
+#		}
 		custom_tooltip = {
 			fail_text = "requires_starport"
 			has_starbase_size >= starbase_starport
@@ -2107,6 +2285,10 @@ offspring_outlook = {
 	}
 
 	possible = {
+		exists = owner
+		#owner = {
+#			has_policy_flag = Automation_Nothing
+#		}
 		custom_tooltip = {
 			fail_text = "requires_starport"
 			has_starbase_size >= starbase_starport
@@ -2144,6 +2326,10 @@ mercenary_garrison = {
 	}
 
 	possible = {
+		exists = owner
+		#owner = {
+#			has_policy_flag = Automation_Nothing
+#		}
 		custom_tooltip = {
 			fail_text = "requires_starport"
 			has_starbase_size >= starbase_starport
@@ -2219,6 +2405,10 @@ cordyceptic_reanimation_facility = {
 	}
 
 	possible = {
+		
+		#owner = {
+#			has_policy_flag = Automation_Nothing
+#		}
 		custom_tooltip = {
 			fail_text = "requires_tiyanki_spawning_system"
 			star.solar_system = {
@@ -2265,6 +2455,10 @@ dark_matter_detector = {
 	}
 
 	possible = {
+		
+		#owner = {
+#			has_policy_flag = Automation_Nothing
+#		}
 		custom_tooltip = {
 			fail_text = "requires_detection_array"
 			OR = {
@@ -2342,6 +2536,10 @@ dark_matter_listening_post = {
 	}
 
 	possible = {
+		exists = owner
+		#owner = {
+#			has_policy_flag = Automation_Nothing
+#		}
 		NOR = {
 			has_starbase_module = detection_array
 			has_starbase_building = dark_matter_detector

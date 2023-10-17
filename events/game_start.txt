@@ -420,7 +420,12 @@ event = {
 
 		# Legendary Leader
 		every_playable_country = {
-			limit = { has_origin = origin_legendary_leader }
+			limit = {
+				OR = {
+					has_origin = origin_legendary_leader 
+					has_origin = origin_legendary_leader_imperial
+				}
+			}
 			country_event = { id = paragon.5000 }
 		}
 
@@ -1102,6 +1107,11 @@ country_event = {
 			create_research_station = {
 				owner = ROOT
 			}
+		}
+
+		# Give them a situation to handle pulse random events
+		start_situation = {
+			type = fallen_empires_situation
 		}
 	}
 }

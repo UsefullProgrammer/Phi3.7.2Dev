@@ -664,7 +664,7 @@ building_wildcat_miners = {
 
 	planet_modifier = {
 		planet_crime_add = 25
-		trade_value_add = 5
+		trade_value_mult = 5
 	}
 
 	resources = {
@@ -1347,6 +1347,7 @@ building_executive_retreat = {
 
 	allow = {
 		num_pops >= 25
+		owner = { is_megacorp = no }
 	}
 
 	country_modifier = {
@@ -1400,6 +1401,7 @@ building_xeno_tourism_agency = {
 
 	allow = {
 		num_pops >= 25
+		owner = { is_megacorp = no }
 	}
 
 	country_modifier = {

@@ -231,9 +231,6 @@ politician = {
 		country_edict_fund_add = 3
 	}
 	triggered_planet_modifier = {
-		potential = {
-			always = yes
-		}
 		planet_amenities_add = 3
 		mult = value:scripted_modifier_mult|MODIFIER|pop_job_amenities_mult|
 	}
@@ -311,6 +308,7 @@ noble = {
 	}
 	planet_modifier = {
 		planet_stability_add = 2
+		#mult = value:Count_malus_over_pop_nobles
 	}
 	country_modifier = {
 		country_edict_fund_add = 3
@@ -481,6 +479,16 @@ executive = {
 	triggered_planet_modifier = {
 		potential = {
 			always = yes
+		}
+		trade_value_add = 4
+		mult = value:scripted_modifier_mult|MODIFIER|pop_job_trade_mult|
+	}
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				has_policy_flag = economic_policy_leader_focus
+			}
 		}
 		trade_value_add = 4
 		mult = value:scripted_modifier_mult|MODIFIER|pop_job_trade_mult|

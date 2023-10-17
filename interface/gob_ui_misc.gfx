@@ -43,4 +43,13 @@ spriteTypes = {
     	name = "GFX_mech_army"
     	texturefile = "gfx/interface/icons/army/mech_army.dds"
 	}
+    spriteType = {
+		name = "GFX_origin_legendary_leader_imp"
+		texturefile = "gfx/event_pictures/origins/origin_legendary_leader_imp.dds"
+		alwaystransparent = yes
+	}
+    spriteType = {
+		name = "GFX_council_agenda_icon_agenda_artifact_pursuit"
+		texturefile = "gfx/interface/icons/agenda_icons/agenda_chart_the_unknown.dds"
+	}
 }

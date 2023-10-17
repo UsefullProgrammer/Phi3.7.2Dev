@@ -1,0 +1,5 @@
+﻿l_english:
+  
+  Empire_size_long:2 "Empire size $Empire_size_use$ / $Empire_size_max$"
+  Empire_size_max: "[This.loc_max_empire_size]"
+  Empire_size_use: "[This.loc_empire_size]"

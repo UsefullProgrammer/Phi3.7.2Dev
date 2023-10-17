@@ -1152,7 +1152,7 @@ sm_nebula_alloy_refinery_desc:0 "Refinería de aleaciones de alta tecnología en
 sm_civilian_anchorage:0 "Anclaje civil"
 sm_civilian_anchorage_desc:0 "Anclajes civiles, también conocidos como puertos espaciales."
 sm_civilian_shipyard:0 "Astillero civil"
-sm_civilian_shipyard_desc:0 "Produce naves de venta de energía para las poblaciones habitantes del vacío. Cuantos más astilleros civiles, menos energía se produce. Se necesita 0,5 astilleros para construir una nave civil y 2 astilleros para construir una nave militar."
+sm_civilian_shipyard_desc:0 "船を人口に売ることでエネルギーを生産します（帝国内の人口が多いほど、より多くのエネルギーを生産します）。市民船港が多いほど、生産量は減少します（唯一、虚空の居住者または虚空生まれの人々が1つ以上建設することができます）"
 
 sm_starm_science_hub:0 "Centro de investigación"
 sm_starm_science_hub_desc:0 "Instalación de alta tecnología en la que nuestros científicos se reúnen para avanzar en diferentes áreas de investigación.\n"

@@ -195,6 +195,7 @@ civic_hive_devouring_swarm = {
 		category_biology_research_speed_mult = 0.20
 		starbase_shipyard_build_cost_mult = -0.25
 		country_naval_cap_mult = 0.33
+		pop_decline_speed = 0.5
 	}
 
 	swap_type = {
@@ -594,6 +595,7 @@ civic_machine_terminator = {
 		starbase_shipyard_build_cost_mult = -0.15
 		country_naval_cap_mult = 0.33
 		planet_pop_assembly_mult = 1
+		pop_decline_speed = 0.5
 	}
 }
 
@@ -1004,6 +1006,7 @@ civic_scavengers_machine = {
 	}
 	modifier = {
 		councilor_gestalt_scientist_exp_gain = @gestalt_civic_node_xp_rate
+		ship_speed_mult = -0.1
 	}
 	random_weight = {
 		base = 0

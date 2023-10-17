@@ -10,7 +10,7 @@ ap_archaeoengineers = {
 		host_has_dlc = "Ancient Relics Story Pack"
 		NOT = { has_ascension_perk = ap_archaeoengineers }
 	}
-
+	
 	possible = {
 		custom_tooltip = {
 			fail_text = "requires_technology_tech_archaeostudies"
@@ -44,10 +44,10 @@ ap_archaeoengineers = {
 			}
 		}
 	}
-
+	custom_tooltip_with_modifiers = ap_archaeoengineers_desc_effect
 	modifier = {
-		weapon_archaeotech_weapon_damage_mult = 0.33
 		starbase_shipyard_build_minor_artifacts_cost_mult = -0.10
+		ship_archaeological_site_excavation_speed_mult = 0.25
 	}
 
 	ai_weight = {

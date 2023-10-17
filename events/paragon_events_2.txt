@@ -639,6 +639,26 @@ country_event = {
 		salvage_ships_from_debris = {
 			CHANCE = value:country_salvage_ships_from_debris_chance
 		}
+		every_owned_leader = {
+			limit = {
+				has_trait = leader_trait_master_salvager
+				exists = solar_system
+				solar_system = {
+					is_same_value = from.solar_system
+				}
+			}
+			solar_system = {
+				every_fleet_in_system = {
+					limit = {
+						exists = owner
+						owner = {
+							is_same_value = event_target:leader_country
+						}
+					}
+					repair_percentage = 0.02
+				}
+			}
+		}
 	}
 }
 
@@ -664,27 +684,11 @@ event = {
 								is_same_value = event_target:leader_country
 							}
 						}
-						repair_percentage = 0.1
+						repair_percentage = 0.01
 					}
 				}
 			}
-			every_owned_leader = {
-				limit = {
-					has_trait = leader_trait_master_salvager
-					exists = solar_system
-				}
-				solar_system = {
-					every_fleet_in_system = {
-						limit = {
-							exists = owner
-							owner = {
-								is_same_value = event_target:leader_country
-							}
-						}
-						repair_percentage = 0.02
-					}
-				}
-			}
+			
 		}
 	}
 }

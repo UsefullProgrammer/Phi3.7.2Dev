@@ -1,3 +1,62 @@
+decision_automate_planet_luxuries_boost = {
+	owned_planets_only = yes
+	sound = event_administrative_work
+	icon = decision_auto_luxuries
+
+	resources = {
+		category = decisions
+		cost = {
+			consumer_goods = 10
+			mult = value:pop_size_10to10
+		}
+	}
+
+	potential = {
+		owner = { is_regular_empire = yes }
+	}
+
+	allow = {
+		NOR = { 
+			has_modifier = "planet_luxuries_boost"
+			has_modifier = "auto_planet_luxuries_boost"
+		}
+	}
+
+	effect = {
+		add_modifier = { modifier = "planet_luxuries_boost" days = 1 }
+		add_modifier = { modifier = "auto_planet_luxuries_boost" }
+	}
+
+	ai_weight = {
+		weight = 0
+	}
+}
+decision_disable_automate_planet_luxuries_boost = {
+	owned_planets_only = yes
+	sound = event_administrative_work
+	icon = decision_disable_auto_luxuries
+
+	resources = {
+		category = decisions
+		cost = {
+			consumer_goods = 10
+			mult = value:pop_size_10to10
+		}
+	}
+
+	potential = {
+		owner = { is_regular_empire = yes }
+		has_modifier = "auto_planet_luxuries_boost"
+	}
+
+	effect = {
+		remove_modifier = "auto_planet_luxuries_boost"
+	}
+
+	ai_weight = {
+		weight = 0
+	}
+}
 # centralization Colony
 # decision_centralization_colony = {
 # 	owned_planets_only = yes

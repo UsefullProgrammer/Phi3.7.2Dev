@@ -405,3 +405,22 @@ country_event = { #test
 	immediate = {
 	}
 }
+
+country_event = {
+	id = rules.100
+	hide_window = yes
+
+	is_triggered_only = yes
+	trigger = {
+		is_country_type = default 
+	}
+	immediate = { 
+		owner = { 
+			country_event = { 
+				id = phi_ai.100
+				days = 31 #gobbi fix anex vassal inoltre alleggerisce il carico nelle multiplayer
+			} 
+		} 
+	}
+	
+}

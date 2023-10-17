@@ -20,7 +20,7 @@ l_french:
   fl_bslot_from_demesne: "\n$d_dimensional_manipulation_device$: [This.fl_building_from_demesne]"
   fl_bslot_from_origin: "\n$ORIGIN$: [This.fl_building_from_origin]"
   fl_bslot_from_pc: "\n$PLANETVIEW_PLANET_CLASS$: [This.fl_building_from_pc]"
-  fl_bslot_from_housing: "\n$PLANET_HOUSING_TITLE$ $DISTRICTS$: [This.fl_building_from_housing]"
+  fl_bslot_from_housing: "\n $DISTRICTS$: [This.fl_building_from_housing]"
   fl_bslot_from_edicts: "\n$EDICTS$: [This.fl_building_from_edicts]"
   fl_scope_planet: "£trigger_yes£ Scope is $PLANET$"
   fl_scope_not_planet: "£trigger_no£ Scope is NOT $PLANET$"

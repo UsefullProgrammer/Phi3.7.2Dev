@@ -3165,6 +3165,7 @@ archaeoengineers = {
 					OR = {
 						is_planet_class = pc_relic 
 						has_deposit = d_phi_archaeology_site
+						owner = { has_tradition = tr_artifact_finish }
 					} 
 				}
 			}

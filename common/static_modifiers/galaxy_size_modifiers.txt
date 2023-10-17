@@ -28,7 +28,7 @@ big_small_galaxy_modifier = { #500 stars
 	station_observers_produces_mult = 0.05
 }
 medium_galaxy_modifier = { #600 stars
-	empire_size_systems_mult = 0.01
+	empire_size_systems_mult = 0.03
 	ship_speed_mult = 0.03
 }
 large_galaxy_modifier = { #700 stars

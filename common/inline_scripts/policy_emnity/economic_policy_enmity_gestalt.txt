@@ -1,0 +1,55 @@
+triggered_planet_modifier = {
+	potential = {
+		exists = owner
+		owner = { 
+			has_policy_flag = economic_policy_enmity 
+			num_rivals = 1
+		}
+	}
+	planet_crime_no_happiness_add  = -2
+	#mult = owner.value:rivalsNum
+}
+triggered_planet_modifier = {
+	potential = {
+		exists = owner
+		owner = { 
+			has_policy_flag = economic_policy_enmity 
+			num_rivals = 2
+		}
+	}
+	planet_crime_no_happiness_add  = -4
+	#mult = owner.value:rivalsNum
+}
+triggered_planet_modifier = {
+	potential = {
+		exists = owner
+		owner = { 
+			has_policy_flag = economic_policy_enmity 
+			num_rivals = 3
+		}
+	}
+	planet_crime_no_happiness_add  = -6
+	#mult = owner.value:rivalsNum
+}
+triggered_planet_modifier = {
+	potential = {
+		exists = owner
+		owner = { 
+			has_policy_flag = economic_policy_enmity 
+			num_rivals = 4
+		}
+	}
+	planet_crime_no_happiness_add  = -8
+	#mult = owner.value:rivalsNum
+}
+triggered_planet_modifier = {
+	potential = {
+		exists = owner
+		owner = { 
+			has_policy_flag = economic_policy_enmity 
+			num_rivals = 5
+		}
+	}
+	planet_crime_no_happiness_add  = -10
+	#mult = owner.value:rivalsNum
+}

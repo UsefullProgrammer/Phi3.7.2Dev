@@ -139,9 +139,9 @@ tradition_domination_desc:0 "If we do not impose our will on others, they will i
  tradition_domination_machine_desc:0 "We seek harmonious functionality throughout the entire galaxy. Other stellar beings resist this due to inefficient personal whims. We will remove their disorder like a malfunctioning part.\n\nIf §Gadopt§! we can propose that another Empire becomes our subject."
  tradition_domination_hive_desc:0 "Everything that is not Us must serve Us, either as servants, or as food.\n\nIf §Gadopt§! we can propose that another Empire becomes our subject."
 #error questo tag ha qualcosa di sbagliato @mario
- tech_capital_productivity_1_effect:0 "Capital Buildings:\n  $mod_planet_jobs_produces_mult$: §G+10%§!"
- tech_capital_productivity_2_effect:0 "Upgraded Capital Buildings:\n  $mod_planet_jobs_produces_mult$: §G+20%§!"
- tech_capital_productivity_3_effect:0 "Major Capital Buildings:\n  $mod_planet_jobs_produces_mult$: §G+30%§!"
+#  tech_capital_productivity_1_effect:0 "Capital Buildings:\n  $mod_planet_jobs_produces_mult$: §G+10%§!"
+#  tech_capital_productivity_2_effect:0 "Upgraded Capital Buildings:\n  $mod_planet_jobs_produces_mult$: §G+20%§!"
+#  tech_capital_productivity_3_effect:0 "Major Capital Buildings:\n  $mod_planet_jobs_produces_mult$: §G+30%§!"
 
  EMPIRE_SIZE_TOTAL_2:0 "$VALUE|0Y$"
  ADMIN_CAP_TOTAL_2:0 "$VALUE|Y$"
@@ -185,7 +185,7 @@ sm_naval_logistics_office_desc_modifier:2 "Fondeaderos y fondeaderos civiles: §
 war_goal_wg_humiliation_desc:0 "War is waged to undermine the enemy regime and the populace's faith in their institutions. \n This war Not cost influence upkeep (for togheter) "
 war_goal_wg_independence_desc:0 "War is waged to secure independence.\nThis war Not cost influence upkeep ( Only for you) "
 
-ap_voidborn_habitat_effect:0 "§YHabitats§! owned by our Empire have §Y2 Additional Building Slots§!. Our upgraded habitats can support advanced housing buildings can, after Research §Y$tech_habitat_3$§! you will can upgrade 5 times habitat instead 1."
+
  add_research_options_voidborn:0 "Research options gained after upgrading a Habitat:\n£engineering_research£§Y$tech_habitat_3$§!"
 
  wg_expel_corp_status_quo_effects:1 "All Branch Offices owned by the §Y[From.GetName]§! in the §Y[Root.GetName]§! are closed.\n§Y[From.GetName]§! receives £energy£ §Y1000§! for each closed Branch Office."

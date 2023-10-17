@@ -42,6 +42,27 @@ fleet_event = {
 			every_owned_ship = {
 				if = {
 					limit = {
+						from = { 
+							exists = space_owner
+							space_owner = { has_modifier = agenda_impenetrable_border_finish } # + 10% attrition
+						} 
+					}
+					if = {
+						limit = {
+							has_hp_percentage > 0.66
+							root.owner = { has_policy_flag = phi_no_retreat}
+						}
+						reduce_hp_percent = 8.8
+					}
+					else_if = {
+						limit = {
+							has_hp_percentage > 0.55
+						}
+						reduce_hp_percent = 11
+					}
+				}
+				if = {
+					limit = {
 						has_hp_percentage > 0.71
 						root.owner = { has_policy_flag = phi_no_retreat}
 					}
@@ -94,6 +115,7 @@ country_event = {
 		every_owned_planet = {
 			limit = { 
 				is_occupied_flag = yes
+				controller = { is_at_war = yes }
 		 	}
 			if = {
 				limit = { planet_devastation <= 60 }

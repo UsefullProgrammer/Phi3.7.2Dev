@@ -50,7 +50,7 @@ spriteTypes = {
 	spriteType = {
 		name = "GFX_ion_battery"
 		texturefile = "gfx/interface/icons/modules/sb_ion_battery.dds"
-	}
+	}	
 	spriteType = {
 		name = "GFX_resolution_phi_aristocracy"
 		texturefile = "gfx/interface/icons/resolutions/resolution_phi_aristocracy.dds"
@@ -156,5 +156,12 @@ spriteTypes = {
 		name = "GFX_starbase_Governmental_Orbital_Exchange_Market"
 		texturefile = "gfx/interface/icons/modules/starbase_Governmental_Orbital_Exchange_Market.dds"
 	}
-	
+	spriteType = {
+		name = "GFX_solar_food_network"
+		texturefile = "gfx/interface/icons/modules/solar_food_network.dds"
+	}
+	spriteType = {
+		name = "GFX_spaceport_automated_defenses"
+		texturefile = "gfx/interface/icons/modules/spaceport_automated_defenses.dds"
+	}
 }

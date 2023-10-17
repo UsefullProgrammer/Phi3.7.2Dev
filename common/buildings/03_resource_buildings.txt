@@ -21,6 +21,9 @@ building_hydroponics_farm = {
 		owner = { is_ai = no }
 		free_district_slots = 0
 	}
+	country_modifier = {
+		country_resource_max_food_add = 1500
+	}
 	destroy_trigger = {
 		exists = owner
 		OR = {
@@ -80,7 +83,9 @@ building_food_processing_facility = {
 			has_any_farming_district_or_buildings = yes
 		}
 	}
-
+	country_modifier = {
+		country_resource_max_food_add = 1500
+	}
 	destroy_trigger = {
 		exists = owner
 		OR = {
@@ -161,7 +166,9 @@ building_food_processing_center = {
 			has_modifier = crucible_colony
 		}
 	}
-
+	country_modifier = {
+		country_resource_max_food_add = 3000
+	}
 	planet_modifier = {
 		planet_farmers_food_produces_add = 2
 	}
@@ -244,7 +251,9 @@ building_baol_organic_plant = {
 			has_modifier = crucible_colony
 		}
 	}
-
+	country_modifier = {
+		country_resource_max_food_add = 1000
+	}
 	planet_modifier = {
 		planet_farmers_food_produces_add = 1
 	}
@@ -338,7 +347,9 @@ building_mineral_purification_plant = {
 			}
 		}
 	}
-
+	country_modifier = {
+		country_resource_max_minerals_add = 1500
+	}
 	potential = {
 		NOR = {
 			has_modifier = resort_colony
@@ -446,7 +457,9 @@ building_mineral_purification_hub = {
 			has_modifier = crucible_colony
 		}
 	}
-
+	country_modifier = {
+		country_resource_max_minerals_add = 3000
+	}
 	destroy_trigger = {
 		OR = {
 			has_modifier = resort_colony
@@ -580,7 +593,9 @@ building_energy_grid = {
 			}
 		}
 	}
-
+	country_modifier = {
+		country_resource_max_energy_add = 1500
+	}
 	potential = {
 		NOR = {
 			has_modifier = resort_colony
@@ -681,7 +696,9 @@ building_energy_nexus = {
 			}
 		}
 	}
-
+	country_modifier = {
+		country_resource_max_energy_add = 3000
+	}
 	planet_modifier = {
 		planet_technician_energy_produces_add = 2
 	}
@@ -864,6 +881,7 @@ building_bio_reactor = {
 		exists = owner
 		owner = {
 			OR = {
+				is_catalytic_empire = yes
 				is_machine_empire = yes
 				is_mechanical_empire = yes
 				is_lithoid_empire = yes

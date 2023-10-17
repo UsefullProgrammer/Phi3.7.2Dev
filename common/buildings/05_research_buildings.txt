@@ -37,24 +37,9 @@ building_research_lab_1 = {
 		}
 	}
 
-	triggered_planet_modifier = {
-		potential = {
-			exists = owner
-			owner = { is_hive_empire = yes }
-		}
-		modifier = {
-			job_brain_drone_add = @b1_jobs
-		}
-	}
-
-	triggered_planet_modifier = {
-		potential = {
-			exists = owner
-			owner = { is_machine_empire = yes }
-		}
-		modifier = {
-			job_calculator_add = @b1_jobs
-		}
+	inline_script = {
+		script = jobs/researchers_add
+		AMOUNT = @b1_jobs
 	}
 
 	resources = {
@@ -73,30 +58,6 @@ building_research_lab_1 = {
 
 	prerequisites = {
 		"tech_basic_science_lab_1"
-	}
-
-	triggered_desc = {
-		trigger = {
-			exists = owner
-			owner = { is_regular_empire = yes }
-		}
-		text = job_researcher_effect_desc
-	}
-
-	triggered_desc = {
-		trigger = {
-			exists = owner
-			owner = { is_hive_empire = yes }
-		}
-		text = job_brain_drone_effect_desc
-	}
-
-	triggered_desc = {
-		trigger = {
-			exists = owner
-			owner = { is_machine_empire = yes }
-		}
-		text = job_calculator_effect_desc
 	}
 }
 
@@ -132,24 +93,9 @@ building_research_lab_2 = {
 		}
 	}
 
-	triggered_planet_modifier = {
-		potential = {
-			exists = owner
-			owner = { is_hive_empire = yes }
-		}
-		modifier = {
-			job_brain_drone_add = @b2_jobs
-		}
-	}
-
-	triggered_planet_modifier = {
-		potential = {
-			exists = owner
-			owner = { is_machine_empire = yes }
-		}
-		modifier = {
-			job_calculator_add = @b2_jobs
-		}
+	inline_script = {
+		script = jobs/researchers_add
+		AMOUNT = @b2_jobs
 	}
 
 	resources = {
@@ -367,8 +313,8 @@ building_institute = {
 			exotic_gases = @b2_rare_cost
 		}
 		upkeep = {
-			energy = @b2_upkeep
-			exotic_gases = @b2_rare_upkeep
+			energy = @b3_upkeep
+			exotic_gases = @b3_rare_upkeep
 		}
 	}
 	# country_modifier = {
@@ -448,7 +394,7 @@ building_supercomputer = {
 			minerals = @b2_minerals
 		}
 		upkeep = {
-			energy = @b2_upkeep
+			energy = @b3_upkeep
 		}
 	}
 
@@ -459,44 +405,13 @@ building_supercomputer = {
 		planet_researchers_phi_engineering_research_produces_add = 1
 	}
 
-	triggered_planet_modifier = {
-		potential = {
-			exists = owner
-			owner = { is_hive_empire = yes }
-		}
-		modifier = {
-			job_brain_drone_add = 1
-		}
-	}
-
-	triggered_planet_modifier = {
-		potential = {
-			exists = owner
-			owner = { is_machine_empire = yes }
-		}
-		modifier = {
-			job_calculator_add = 1
-		}
+	inline_script = {
+		script = jobs/researchers_add
+		AMOUNT = 1
 	}
 
 	prerequisites = {
 		"tech_global_research_initiative"
-	}
-
-	triggered_desc = {
-		trigger = {
-			exists = owner
-			owner = { is_hive_empire = yes }
-		}
-		text = job_brain_drone_effect_desc
-	}
-
-	triggered_desc = {
-		trigger = {
-			exists = owner
-			owner = { is_machine_empire = yes }
-		}
-		text = job_calculator_effect_desc
 	}
 
 	show_tech_unlock_if = {
@@ -542,17 +457,28 @@ building_archaeostudies_faculty = {
 			has_modifier = crucible_colony
 		}
 		exists = owner
+		NAND ={
+			is_planet_class = pc_relic
+			owner = { has_tradition = tr_artifact_finish } #permit over build archeostudies
+		}
 	}
-
+						
 	destroy_trigger = {
 		exists = owner
 		OR = {
 			has_modifier = resort_colony
 			has_modifier = slave_colony
 			has_modifier = crucible_colony
+			AND ={
+				is_planet_class = pc_relic
+				owner = { has_tradition = tr_artifact_finish }
+			}
 		}
+		
 	}
-
+	convert_to = {
+		phi_building_archaeostudies_faculty
+	}
 	allow = {
 		has_upgraded_capital = yes
 	}
@@ -568,73 +494,10 @@ building_archaeostudies_faculty = {
 		}
 	}
 
-	triggered_planet_modifier = {
-		potential = {
-			exists = owner
-			owner = { is_gestalt = no }
-		}
-		modifier = {
-			job_archaeoengineers_add = 3
-		}
-	}
-
-	triggered_planet_modifier = {
-		potential = {
-			exists = owner
-			owner = { is_hive_empire = yes }
-		}
-		modifier = {
-			job_archaeo_drone_add = 3
-		}
-	}
-
-	triggered_planet_modifier = {
-		potential = {
-			exists = owner
-			owner = { is_machine_empire = yes }
-		}
-		modifier = {
-			job_archaeo_unit_add = 3
-		}
-	}
-
-	triggered_planet_modifier = {
-		potential = {
-			exists = owner
-			owner = {
-				is_gestalt = no
-				has_ascension_perk = ap_archaeoengineers
-			}
-		}
-		modifier = {
-			job_archaeoengineers_add = 2
-		}
-	}
-
-	triggered_planet_modifier = {
-		potential = {
-			exists = owner
-			owner = {
-				is_hive_empire = yes
-				has_ascension_perk = ap_archaeoengineers
-			}
-		}
-		modifier = {
-			job_archaeo_drone_add = 2
-		}
-	}
-
-	triggered_planet_modifier = {
-		potential = {
-			exists = owner
-			owner = {
-				is_machine_empire = yes
-				has_ascension_perk = ap_archaeoengineers
-			}
-		}
-		modifier = {
-			job_archaeo_unit_add = 2
-		}
+	inline_script = {
+		script = jobs/archaeoengineers_add
+		BASE_AMOUNT = 3
+		AP_AMOUNT = 2
 	}
 
 	country_modifier = {

@@ -7,7 +7,18 @@ law_category_centralization = {
 		centralization_high
 		centralization_very_high
 		centralization_imperial_loyalists # Event only
+		
 	}
+}
+law_category_ai = {
+	potential = {
+			NOT = { 
+				any_member = {
+					is_ai = no
+				}
+			}
+	}
+	laws = { ai_minimal }
 }
 
 law_category_fleet_contribution = {

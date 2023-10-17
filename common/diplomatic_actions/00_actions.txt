@@ -1972,8 +1972,91 @@ action_invite_to_federation = {
 				is_overlord_to = FROM
 			}
 		}
+		hidden_trigger = {
+			OR = {
+				is_ai = no
+				count_federation_ally = {
+					count < 7
+				}
+			}
+		}
 	}
-
+	should_ai_propose = {
+		weight = 10
+		modifier = {
+			factor = 0
+			exists = from
+			from = { is_ai = no }
+		}
+		modifier = {
+			factor = 0.5
+			count_federation_ally = {
+				count > 3
+			}
+		}
+		modifier = {
+			factor = 0.05 # = 0.5
+			count_federation_ally = {
+				count > 4
+			}
+		}
+		modifier = {
+			factor = 0.5
+			count_federation_ally = {
+				count > 5
+			}
+		}
+	}
+	ai_acceptance = {
+		modifier = {
+			add = -25
+			root = {
+				count_federation_ally = {
+					count = 2
+				}
+			}
+		}
+		modifier = {
+			add = -50
+			root = {
+				count_federation_ally = {
+					count = 3
+				}
+			}
+		}
+		modifier = {
+			add = -250
+			root = {
+				count_federation_ally = {
+					count = 4
+				}
+			}
+		}
+		modifier = {
+			add = -500
+			root = {
+				count_federation_ally = {
+					count > 4
+				}
+			}
+		}
+		modifier = {
+			add = -1500
+			root = {
+				count_federation_ally = {
+					count > 5
+				}
+			}
+		}
+		modifier = {
+			add = -3000
+			root = {
+				count_federation_ally = {
+					count > 6
+				}
+			}
+		}
+	}
 	possible = {
 		if = {
 			limit = {
@@ -2267,6 +2350,7 @@ action_ask_to_join_federation = {
 	action_type = positive
 
 	potential = {
+		is_ai = no
 		hidden_trigger = {
 			is_fallen_machine_empire = no
 			from = { is_fallen_machine_empire = no }
@@ -2740,12 +2824,6 @@ action_demand_subjugation = {
 			who = from
 			days = @cb_subjugation_length
 		}
-		#todo
-		#add_casus_belli = {
-		#	type = cb_subjugation_phi
-		#	who = from
-		#	days = @cb_subjugation_length
-		#}
 		
 	}
 }

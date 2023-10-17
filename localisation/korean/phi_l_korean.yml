@@ -1168,7 +1168,7 @@ sm_nebula_alloy_refinery_desc:0 "중력 0에서의 고급 합금 제련소"
 sm_civilian_anchorage:0 "민간 닻소"
 sm_civilian_anchorage_desc:0 "민간 닻소 또는 우주 항구로도 알려져 있습니다."
 sm_civilian_shipyard:0 "민간 조선소"
-sm_civilian_shipyard_desc:0 "Void Dwellers의 인구에게 에너지 판매 선박을 생산합니다. 민간 조선소가 많을수록 생산되는 에너지는 적어집니다. 0.5개의 조선소로 민간 선박을 건조하고, 군함을 건조하기 위해서는 2개의 조선소가 필요합니다."
+sm_civilian_shipyard_desc:0 "인구에게 선박을 판매하여 에너지를 생산합니다 (제국 내 인구가 많을수록 더 많은 에너지를 생산합니다). 시민 선박조선소가 많을수록 생산량이 감소합니다 (공허 주민이나 공허에서 태어난 사람들만 1개 이상 건설할 수 있습니다)."
 
 sm_starm_science_hub:0 "연구 허브"
 sm_starm_science_hub_desc:0 "다양한 연구 분야를 발전시키기 위해 과학자들이 모이는 고급 기술 시설.\n"

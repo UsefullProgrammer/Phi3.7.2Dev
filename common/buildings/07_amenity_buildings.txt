@@ -769,9 +769,11 @@ building_clinic = {
 			owner = {
 				NOT = { is_ai = yes }
 			}
-			has_branch_office = yes
-			branch_office_owner = {
-				has_valid_civic = civic_private_healthcare_corporate
+			AND = {
+				has_branch_office = yes
+				branch_office_owner = {
+					has_valid_civic = civic_private_healthcare_corporate
+				}
 			}
 			AND = {
 				NOT = { has_available_jobs = entertainer }

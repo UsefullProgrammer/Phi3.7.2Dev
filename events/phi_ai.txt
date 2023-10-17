@@ -19,14 +19,17 @@ namespace = phi_ai
 #	phi_ai.16	yearly checked - market simulator for gestalts empires
 #	phi_ai.17	yearly checked - refines the capital planet of gestalt 
 #   phi_ai.17   if declare war AI subjucation
-#   20-29		Replace Buildings
+#   20-29		Replace Buildings gestalt empire
 #	phi_ai.20	yearly checked - replace up building of  gestalt empires
 #   30-39		Flags
 #	phi_ai.30	yearly checked - Set Flag washuman
 #   40-49			Mid Game District update
 	#	phi_ai.41	Mid game District update only artificial planet
 	#	phi_ai.42	Universally remove/replace pop assembly
-	#   phi_ai.43 universally replace holo
+	#   phi_ai.43   Universally replace holo
+	#	phi_ai.44	YEARLI Universally upgrade buildings
+#50-59 # five years event
+#100 # market simulation event
 #	set_colony_type
 
 country_event = {
@@ -1043,6 +1046,16 @@ country_event = {
 							free_housing < 0
 						}
 						modifier = {
+							factor = 2
+							num_pops > 9
+							free_housing < 20
+						}
+						modifier = {
+							factor = 5
+							num_pops > 9
+							free_housing < 10
+						}
+						modifier = {
 							factor = 1000
 							free_building_slots <= 0
 							num_buildings = { type = any value < 12 }
@@ -1213,6 +1226,16 @@ country_event = {
 						modifier = {
 							factor = 100
 							free_housing < 0
+						}
+						modifier = {
+							factor = 2
+							num_pops > 9
+							free_housing < 20
+						}
+						modifier = {
+							factor = 5
+							num_pops > 9
+							free_housing < 10
 						}
 						modifier = {
 							factor = 1000
@@ -1556,15 +1579,25 @@ country_event = {
 	trigger = {
 		is_ai = yes
 		is_country_type = default
+		is_subject = no
+		# OR = {
+		# 	has_federation = no
+		# 	is_federation_leader = yes
+		# }
 		is_at_war = yes
+		has_resource = { type = influence amount >= 100 }
 		any_war = {
 			any_defender = {
 				is_same_value = root
 				is_war_leader = yes
 			}
 			NOR = {
+				any_defender = {
+					is_fallen_empire = yes
+				}
 				using_war_goal = { type = wg_phi_survive owner = root }
 				War_Valid_survive = no #wg border wg_end_threat_ae
+				using_war_goal = { type = wg_war_in_heaven owner = attacker }
 				using_war_goal = { type = wg_declared_crisis owner = attacker }
 				using_war_goal = { type = wg_humiliation owner = attacker }
 			}
@@ -1592,6 +1625,7 @@ country_event = {
 						has_modifier = country_defaulted
 					}
 				}
+				add_resource = { influence = -100 }
 				every_war = {
 					limit = {
 						any_defender = {
@@ -1605,6 +1639,10 @@ country_event = {
 							}
 						}
 						NOR = {
+							any_defender = {
+								is_fallen_empire = yes
+							}
+							using_war_goal = { type = wg_war_in_heaven owner = attacker }
 							using_war_goal = { type = wg_phi_survive owner = root }
 							using_war_goal = { type = wg_humiliation owner = attacker }
 							War_Valid_survive = no #wg border
@@ -1648,9 +1686,6 @@ country_event = {
 					any_attacker = {
 						is_same_value = root
 					}
-					count_defender = {
-						count >= 5
-					}
 				}
 			}
 			fleet_power > 2000
@@ -1665,6 +1700,10 @@ country_event = {
 				is_at_war = yes
 				any_war = {
 					using_war_goal = { type = wg_phi_survive owner = prev }
+					OR = {
+						NOT = { using_war_goal = { type = wg_plunder owner = attacker } }
+						root = { is_neighbor_of = prevprev }
+					}
 				}
 			}
 		}
@@ -1694,7 +1733,15 @@ country_event = {
 				modifier = {
 					factor = 0.5
 					has_ai_personality_behaviour = isolationist
-				}				
+				}
+				modifier = {
+					factor = 0.5
+					has_civic = civic_pompous_purists
+				}	
+				modifier = {
+					factor = 0.1
+					has_ethic = ethic_fanatic_pacifist
+				}		
 				random_country = {
 					limit = { #how need country that can help
 						AND = {
@@ -1704,6 +1751,10 @@ country_event = {
 							opinion_level = { who = root level >= neutral }
 							any_war = {
 								using_war_goal = { type = wg_phi_survive owner = prev }
+								OR = {
+									NOT = { using_war_goal = { type = wg_plunder owner = attacker } }
+									root = { is_neighbor_of = prevprev }
+								}
 								NOT = { is_war_participant = { who = root } }
 								defender_war_exhaustion < 0.5
 								attacker = {
@@ -1737,6 +1788,25 @@ country_event = {
 							using_war_goal = { type = wg_phi_survive owner = defender }
 							any_defender = {
 								is_same_value = prevprev
+							}
+						}
+						weights = { # TO DO test
+							base = 1
+							modifier = {
+								factor = 100
+								attacker = { is_homicidal = yes }
+							}
+							modifier = {
+								factor = 10
+								count_defender = {
+									count < 5
+								}
+							}
+							modifier = {
+								factor = 10
+								count_defender = {
+									count < 3
+								}
 							}
 						}
 						save_event_target_as = survive_cb_war
@@ -1773,7 +1843,7 @@ country_event = {
 					OR = {
 						has_deficit = energy
 						has_deficit = consumer_goods
-						fleet_power < 1000
+						fleet_power < 5000
 						has_modifier = country_defaulted
 					}
 				}
@@ -2268,7 +2338,11 @@ country_event = {
 					20 = {
 						modifier = {
 							factor = 0
-							num_free_districts = { type = district_city value = 0 }
+							NOR = {
+								num_free_districts = { type = district_city value > 0 }
+								num_free_districts = { type = district_hive value > 0 }
+								num_free_districts = { type = district_nexus value > 0 }
+							}
 						}
 						modifier = {
 							factor = 0.1
@@ -2277,6 +2351,11 @@ country_event = {
 						modifier = {
 							factor = 100
 							free_housing < 0
+						}
+						modifier = {
+							factor = 10
+							num_pops > 9
+							free_housing < 10
 						}
 						modifier = {
 							factor = 10
@@ -2861,7 +2940,10 @@ country_event = {
 			id = phi_ai.43
 			days = 7 #Alleggerisce il carico nelle multiplayer
 		} 
-		
+		country_event = { 
+			id = phi_ai.44
+			days = 8 #Alleggerisce il carico nelle multiplayer
+		} 
 	}
 }
 country_event = {
@@ -3110,8 +3192,307 @@ country_event = {#	phi_ai.43	YEARLI Universally remove/replace holo / ameninties
 		}
 	}
 }
+country_event = {#	phi_ai.44	YEARLI Universally upgrade buildings
+	
+	
+	id = phi_ai.44
+	hide_window = yes
 
+	is_triggered_only = yes
+	
+	trigger = {
+		has_resource = { type = minerals amount >= @b3_minerals }
+		has_resource = { type = exotic_gases amount >= @b3_rare_cost }
+		has_monthly_income = { resource = exotic_gases value > 2 }
+		has_monthly_income = { resource = energy value > 10 }
+	}
+	
+	immediate = {
+		#upgrade lab
+		random_owned_planet = {
+			weights = {
+				base = 1
+				modifier = { 
+					factor = 10
+					free_building_slots = 0
+				}
+			}
+			limit = {
+				OR = {
+					num_unemployed > 0
+					free_housing > 25
+				}
+				has_upgradable_research_labs = yes
+				has_upgraded_capital = yes
+				NOT = { has_modifier = phi_ai44 }
+			}
+			if = {
+				limit = { has_building = building_engineering_lab_1 }
+				remove_building = building_engineering_lab_1
+				owner = { add_resource = { minerals = @b2_minerals exotic_gases = @b2_rare_cost mult = -1 } }
+				add_building = building_engineering_lab_2
+				add_modifier = { modifier = phi_ai44 days = 730 } 
+			}
+			else_if = {
+				limit = { has_building = building_physics_lab_1 }
+				remove_building = building_physics_lab_1
+				owner = { add_resource = { minerals = @b2_minerals exotic_gases = @b2_rare_cost mult = -1 } }
+				add_building = building_physics_lab_2
+				add_modifier = { modifier = phi_ai44 days = 730 }
+			}
+			else_if = {
+				limit = { has_building = building_physics_lab_2 }
+				remove_building = building_physics_lab_2
+				owner = { add_resource = { minerals = @b3_minerals exotic_gases = @b3_rare_cost mult = -1 } }
+				add_building = building_physics_lab_3
+				add_modifier = { modifier = phi_ai44 days = 1095 }
+			}
+			else_if = {
+				limit = { has_building = building_engineering_lab_2 }
+				remove_building = building_engineering_lab_2
+				owner = { add_resource = { minerals = @b3_minerals exotic_gases = @b3_rare_cost mult = -1 } }
+				add_building = building_engineering_lab_3
+				add_modifier = { modifier = phi_ai44 days = 1095 }
+			}
+		}
+	}
+}
+country_event = {#	phi_ai.50	Five years game events
+	
+	id = phi_ai.50
+	hide_window = yes
 
+	is_triggered_only = yes
+	
+	trigger = {
+		is_ai = yes
+		is_country_type = default
+		has_resource = { type = minerals amount >= 200 }
+		has_monthly_income = { resource = energy value > 0 } 
+	}
+	immediate = { 
+		country_event = { 
+			id = phi_ai.51
+			days = 4 #Alleggerisce il carico nelle multiplayer
+		}
+	}
+}
+country_event = {#	phi_ai.51	experimental FIVE YEAR Universally add district
+	
+	id = phi_ai.51
+	hide_window = yes
+
+	is_triggered_only = yes
+	
+	trigger = {
+		owner = { has_resource = { type = minerals amount >= 200 } }
+	}
+	immediate = {
+		random_owned_planet = {
+			limit = {
+				NOT = { is_planet_class = pc_habitat }
+			}
+			random_list = {
+				10 = {
+					modifier = {
+						factor = 0
+						owner = { has_valid_civic = civic_agrarian_idyll }
+						num_free_districts = { type = district_farming value > 0 }
+					}
+					modifier = {
+						factor = 0
+						NOR = {
+							num_free_districts = { type = district_city value > 0 }
+							num_free_districts = { type = district_hive value > 0 }
+							num_free_districts = { type = district_nexus value > 0 }
+						}
+					}
+					modifier = {
+						factor = 0
+						owner = { has_resource = { type = minerals amount < 200 } }
+					}
+					modifier = {
+						factor = 100
+						free_housing < 0
+					}
+					modifier = {
+						factor = 2
+						num_pops > 9
+						free_housing < 20
+					}
+					modifier = {
+						factor = 5
+						num_pops > 9
+						free_housing < 10
+					}
+					modifier = {
+						factor = 1000
+						free_building_slots <= 0
+						num_buildings = { type = any value < 12 }
+					}
+					add_district = district_city
+					owner = { add_resource = { minerals = -200 } }
+					add_modifier = { modifier = phi_ai50 days = 365 } 
+				}
+				1 = {
+
+				}
+			}
+		}
+		random_owned_planet = {
+			limit = {
+				NOT = { is_planet_class = pc_habitat }
+				NOT = { has_modifier = phi_ai50 }
+			}
+			random_list = {
+				10 = {
+					modifier = {
+						factor = 0
+						owner = { has_resource = { type = minerals amount < 200 } }
+					}
+					modifier = {
+						factor = 0
+						owner = { has_valid_civic = civic_agrarian_idyll }
+						num_free_districts = { type = district_farming value > 0 }
+					}
+					modifier = {
+						factor = 0
+						NOR = {
+							num_free_districts = { type = district_city value > 0 }
+							num_free_districts = { type = district_hive value > 0 }
+							num_free_districts = { type = district_nexus value > 0 }
+						}
+						owner = { has_resource = { type = minerals amount < 200 } }
+					}
+					modifier = {
+						factor = 100
+						free_housing < 0
+					}
+					modifier = {
+						factor = 2
+						free_housing < 20
+					}
+					modifier = {
+						factor = 5
+						free_housing < 10
+					}
+					modifier = {
+						factor = 1000
+						free_building_slots <= 0
+						num_buildings = { type = any value < 12 }
+					}
+					add_district = district_city
+					owner = { add_resource = { minerals = -200 } }
+					add_modifier = { modifier = phi_ai50 days = 365 } 
+				}
+				1 = {
+
+				}
+			}
+		}
+	}
+}
+country_event = {#	phi_ai.100 simulation market internal
+	
+	id = phi_ai.100
+	hide_window = yes
+
+	is_triggered_only = yes
+	
+	trigger = {
+		is_ai = yes
+		is_at_war = no
+		is_country_type = default
+		OR = {
+			NOT = { 
+				has_global_flag = galactic_market_founded
+				is_galactic_community_member = yes
+			}
+			OR = {
+				has_civic = civic_fanatic_purifiers
+				has_civic = civic_hive_devouring_swarm
+				has_civic = civic_machine_terminator
+			}
+		}
+		OR = {
+			has_resource = { type = energy amount >= 500 }
+			AND = {
+				years_passed < 5
+				has_resource = { type = energy amount >= 100 }
+			}
+		}
+		
+	}
+	immediate = { 
+
+		if = {
+			limit = {
+				country_uses_consumer_goods = yes
+				has_resource = { type = consumer_goods amount < 90 }
+				has_monthly_income = { resource = consumer_goods value < 0 }
+				has_monthly_income = { resource = energy value >= 40 } 
+			}
+			add_modifier = { modifier = consumer_goods_market days = 300 } 
+		}
+		else_if = {
+			limit = {
+				country_uses_consumer_goods = yes
+				has_resource = { type = consumer_goods amount < 90 }
+				has_monthly_income = { resource = consumer_goods value < 0 }
+				has_monthly_income = { resource = energy value >= 12 } 
+			}
+			add_modifier = { modifier = consumer_goods_5_market days = 300 } 
+		}
+		else_if = {
+				limit = {
+					country_uses_food = yes
+					has_resource = { type = food amount < 100 }
+					has_monthly_income = { resource = food value < 1 }
+					has_monthly_income = { resource = energy value >= 50 } 
+				}
+			add_modifier = { modifier = food_market days = 300 } 
+		}
+		else_if = {
+			limit = {
+
+				has_resource = { type = minerals amount < 2000 }
+				has_monthly_income = { resource = minerals value < 50 }
+				has_monthly_income = { resource = energy value >= 50 } 
+			}
+			add_modifier = { modifier = minerals_40_market days = 300 } 
+		}
+		else_if = {
+			limit = {
+
+				has_resource = { type = minerals amount < 5000 }
+				has_monthly_income = { resource = minerals value < 50 }
+				has_monthly_income = { resource = energy value >= 25 } 
+			}
+			add_modifier = { modifier = minerals_20_market days = 300 } 
+		}
+		else_if = {
+			limit = {
+				has_monthly_income = { resource = minerals value < 50 }
+				has_monthly_income = { resource = energy value > 15 } 
+			}
+			add_modifier = { modifier = minerals_10_market days = 300 } 
+		}
+		else_if = {
+			limit = {
+				has_resource = { type = minerals amount < 2500 }
+				has_monthly_income = { resource = energy value > 100 } 
+			}
+			if = {
+				limit = { years_passed > 10}
+				add_modifier = { modifier = minerals_10_market days = 300 } 
+			}
+			else = { 
+				add_modifier = { modifier = minerals_40_market days = 300 } 
+			}
+			
+		}
+	}
+}
 country_event = {
 #	phi_ai.777	test event
 
@@ -3237,7 +3618,7 @@ country_event = {
 	}
 }
 planet_event = {
-	#	phi_ai.778	test event for planetsw
+#	phi_ai.778	test event for planetsw
 	
 	id = phi_ai.778
 	
@@ -3246,130 +3627,69 @@ planet_event = {
 	is_triggered_only = yes
 	
 	trigger = {
-		AND = {
-			OR = {
-				num_unemployed > 1
-				free_jobs < 4 # if free jobs is < 2 (4-work police) probably use work clerk.
-			}
-			check_variable_arithmetic = { which = value:bslot_capacity_ai value > 12 }
-			Can_remove_district_city = yes
+		owner = { has_resource = { type = minerals amount >= 200 } }
+		OR = {
+			num_unemployed > 0
+			free_housing > 25
+		}
+		has_upgradable_research_labs = yes
+		owner = {  
+			has_resource = { type = minerals amount >= @b3_minerals }
+			has_resource = { type = exotic_gases amount >= @b3_rare_cost }
+			has_monthly_income = { resource = exotic_gases value > 2 }
+			has_monthly_income = { resource = energy value > 10 }
 		}
 	}
 	immediate = {
-		if = {
-			limit = {
-				OR = {
-					num_unemployed > 1
-					free_jobs < 4 # if free jobs is < 2 (4-work police) probably use work clerk.
-				}
-				check_variable_arithmetic = { which = value:bslot_capacity_ai value > 12 }
-				Can_remove_district_city = yes
-			}
-			if = { limit = { has_resource = { type = minerals amount >= 400 } }
-			
+		random_list = {
+			100 = {
 				if = {
-					limit = { has_district = district_city}
-					remove_district = district_city
-				}
-				else_if = {
-					limit = { has_district = district_hive}
-					remove_district = district_hive
-				}
-				else_if = {
-					limit = { has_district = district_nexus}
-					remove_district = district_nexus
-				}
-				else_if = {
-					limit = { has_district = district_crashed_slaver_ship}
-					remove_district = district_crashed_slaver_ship
-				}
-				
-				random_list = {
-					20 = {
-						modifier = {
-							factor = 0
-							num_free_districts = { type = district_generator value = 0 }
+					limit = {
+						OR = {
+							num_unemployed > 0
+							free_housing > 25
 						}
-						modifier = {
-							factor = 0.1
-							owner = { 
-								is_machine_empire = no
-								has_monthly_income = { resource = energy value > 50 } 
-							}
+						has_upgradable_research_labs = yes
+						owner = {  
+							has_resource = { type = minerals amount >= @b3_minerals }
+							has_resource = { type = exotic_gases amount >= @b3_rare_cost }
+							has_monthly_income = { resource = exotic_gases value > 2 }
+							has_monthly_income = { resource = energy value > 10 }
 						}
-						modifier = {
-							factor = 3
-							has_building = building_energy_grid
-						}
-						modifier = {
-							factor = 5
-							has_building = building_energy_nexus
-						}
-						modifier = {
-							factor = 0.1
-							owner = { has_monthly_income = { resource = energy value > 100 } }
-						}
-						modifier = {
-							factor = 0.1
-							owner = { has_monthly_income = { resource = energy value > 150 } }
-						}
-						add_district = district_generator
-						owner = { add_resource = { minerals = -300 } }
+						has_upgraded_capital = yes
 					}
-					15 = {
-						modifier = {
-							factor = 0
-							num_free_districts = { type = district_mining value = 0 }
-						}
-						modifier = {
-							factor = 0
-							owner = { has_monthly_income = { resource = minerals value > 100 } }
-						}
-						modifier = {
-							factor = 10
-							owner = { has_monthly_income = { resource = minerals value < 50 } }
-						}
-						add_district = district_mining
-						owner = { add_resource = { minerals = -300 } }
+					if = {
+						limit = { has_building = building_engineering_lab_1 }
+						remove_building = building_engineering_lab_1
+						owner = { add_resource = { minerals = @b2_minerals exotic_gases = @b2_rare_cost mult = -1 } }
+						add_building = building_engineering_lab_2
+						add_modifier = { modifier = phi_ai44 days = 730 } 
 					}
-					15 = {
-						modifier = {
-							factor = 0
-							num_free_districts = { type = district_farming value = 0 }
-						}
-						modifier = {
-							factor = 0.1
-							owner = { 
-								is_hive_empire = yes
-								has_monthly_income = { resource = food value > 10 } 
-							}
-						}
-						modifier = {
-							factor = 20
-							owner = { 
-								has_monthly_income = { resource = food value < 1 } 
-							}
-						}
-						add_district = district_farming
-						owner = { add_resource = { minerals = -300 } }
+					else_if = {
+						limit = { has_building = building_physics_lab_1 }
+						remove_building = building_physics_lab_1
+						owner = { add_resource = { minerals = @b2_minerals exotic_gases = @b2_rare_cost mult = -1 } }
+						add_building = building_physics_lab_2
+						add_modifier = { modifier = phi_ai44 days = 730 }
 					}
-					20 = {
-						inline_script = "district_add/industrial" #mi sono stancato di fare script tutti uguali
-						owner = { add_resource = { minerals = -500 } }
-						if = { 
-							limit = { owner = { has_tradition = tr_adaptability_recycling  } }
-							owner = { 
-								add_resource = { minerals = 15 } 
-							}
-						}
+					else_if = {
+						limit = { has_building = building_physics_lab_2 }
+						remove_building = building_physics_lab_2
+						owner = { add_resource = { minerals = @b3_minerals exotic_gases = @b3_rare_cost mult = -1 } }
+						add_building = building_physics_lab_3
+						add_modifier = { modifier = phi_ai44 days = 1095 }
+					}
+					else_if = {
+						limit = { has_building = building_engineering_lab_2 }
+						remove_building = building_engineering_lab_2
+						owner = { add_resource = { minerals = @b3_minerals exotic_gases = @b3_rare_cost mult = -1 } }
+						add_building = building_engineering_lab_3
+						add_modifier = { modifier = phi_ai44 days = 1095 }
 					}
 				}
-				if = { 
-					limit = { owner = { has_tradition = tr_adaptability_recycling  } }
-					owner = { 
-						add_resource = { minerals = 45 } 
-					}
-				}
+			}
+			1 = {
+
 			}
 		}
 	}

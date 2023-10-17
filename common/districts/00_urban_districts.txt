@@ -252,8 +252,40 @@ district_city = {
 		}
 		modifier = {
 			job_clerk_add = -1
+			planet_housing_add = 2
 		}
 	}
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+			 	is_ai = yes
+	 		}
+			years_passed > 1 #fix problem housing ai
+			years_passed < 75
+			#has_forbidden_jobs = clerk
+		}
+		modifier = {
+			job_clerk_add = -0.5
+			planet_housing_add = 1
+		}
+	}
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+			 	is_ai = yes
+	 		}
+			years_passed > 75 #fix problem housing ia
+			years_passed < 125
+			#has_forbidden_jobs = clerk
+		}
+		modifier = {
+			job_clerk_add = -0.25
+			planet_housing_add = 0.5
+		}
+	}
+	
 	triggered_planet_modifier = {
 		potential = {
 			exists = owner

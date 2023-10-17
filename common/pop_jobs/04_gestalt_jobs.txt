@@ -391,7 +391,7 @@ coordinator = {
 			unity = 1
 		}
 		upkeep = {
-			energy = 4
+			energy = 7.5
 		}
 	}
 	country_modifier = {
@@ -453,7 +453,7 @@ evaluator = {
 			society_research = 1
 		}
 		upkeep = {
-			energy = 2
+			energy = 4
 		}
 		produces = {
 			trigger = {
@@ -521,16 +521,19 @@ synapse_drone = {
 			unity = 1
 		}
 		upkeep = {
+			energy = 2.5
+		}
+		upkeep = {
 			trigger = {
 				is_lithoid = no
 			}
-			food = 10
+			food = 5
 		}
 		upkeep = {
 			trigger = {
 				is_lithoid = yes
 			}
-			minerals = 10
+			minerals = 5
 		}
 	}
 	country_modifier = {

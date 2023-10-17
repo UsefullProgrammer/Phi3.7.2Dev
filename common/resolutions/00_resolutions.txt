@@ -9059,7 +9059,7 @@ resolution_galacticreforms_permanent_seat = {
 				AND = {
 					has_federation = yes
 					is_in_federation_with = from
-					opinion_level = { who = prev level >= neutral }
+					opinion_level = { who = from level >= neutral }
 				}
 			}
 		}

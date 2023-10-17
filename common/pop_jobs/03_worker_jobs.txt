@@ -868,7 +868,6 @@ soldier = {
 		}
 		mult = value:bellicose_naval_cap
 	}
-
 	triggered_planet_modifier = {
 		modifier = {
 			planet_stability_add = 1

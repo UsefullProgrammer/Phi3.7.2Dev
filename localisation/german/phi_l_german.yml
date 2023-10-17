@@ -1169,7 +1169,7 @@ sm_nebula_alloy_refinery_desc:0 "Hochtechnologie-Legierungsräffinerie bei 0 Sch
 sm_civilian_anchorage:0 "Zivile Verankerung"
 sm_civilian_anchorage_desc:0 "Zivile Verankerungen, auch als Raumhäfen bekannt."
 sm_civilian_shipyard:0 "Zivile Schiffswerft"
-sm_civilian_shipyard_desc:0 "Produziert Energieverkaufsschiffe für Bevölkerungen von Void Dwellers. Je mehr zivile Schiffswerften, desto weniger Energie wird produziert. Es werden 0,5 Schiffswerften benötigt, um ein ziviles Schiff zu bauen, und 2 Schiffswerften, um ein Militärschiff zu bauen."
+sm_civilian_shipyard_desc:0 "Produces energy by sell ship at pop (more pop in empire more produces energy) for everyone more civilian more civilian shipyard less produces (only void dweller or void born can build more of 1)."
 
 sm_starm_science_hub:0 "Forschungszentrum"
 sm_starm_science_hub_desc:0 "Eine High-Tech-Einrichtung, in der sich unsere Wissenschaftler treffen, um verschiedene Forschungsbereiche voranzutreiben.\n"

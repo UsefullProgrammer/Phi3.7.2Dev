@@ -1,0 +1,67 @@
+tr_artifact_adopt = {
+	possible = {
+		has_ascension_perk = ap_archaeoengineers
+	}
+	unlocks_agenda = agenda_artifact_pursuit
+	#custom_tooltip = tr_artifact_adopt_modifier_desc
+	modifier = {
+		weapon_archaeotech_weapon_damage_mult = 0.1
+	}
+	# Unlocks Clone Vats
+}
+		
+tr_artifact_finish = { #building archestudies possono fare arteffatti
+	custom_tooltip_with_modifiers = tr_artifact_finish_desc
+	modifier = {
+		ascension_perks_add = 1
+	}
+	# modifier = {
+	# 	starbase_shipyard_build_minor_artifacts_cost_mult = -0.10
+	# }
+}
+
+tr_artifact_resequencing = { #building_archaeo_refinery non costano più artefatti
+custom_tooltip_with_modifiers = tr_artifact_resequencing_desc	
+	modifier = {
+		pc_relic_habitability = 0.2
+	}
+}
+
+tr_artifact_creation = { # sblocca nuova building che fa SOLO artefatti
+	possible = {
+		has_tradition = tr_artifact_resequencing
+	}
+	# Unlocks Advanced Traits
+	# Unlocks Assimilation to add or remove the Hive-Minded trait.
+	custom_tooltip_with_modifiers = tr_artifact_creation_desc
+}
+
+tr_artifact_enhanced_expression = {
+	
+	modifier = {
+		country_resource_max_minor_artifacts_add = 5000
+	}
+}
+
+tr_artifact_efficient_extraction = {  #todo description raddoppia risorse estrattive artefatti depositi e aggiunge un ulteriore l'editto spedition
+	# Double Organic Pop Assembly from Clone Vats
+	possible = {
+		has_tradition = tr_artifact_enhanced_expression
+	}
+	modifier = {
+		orbital_artifacts_deposits_produces_mult = 0.25
+	}
+	custom_tooltip_with_modifiers = tr_artifact_efficient_extraction_desc
+	
+}
+
+tr_artifact_retroengineer = {
+	possible = {
+		has_tradition = tr_artifact_creation
+	}
+	modifier = {
+		starbase_shipyard_build_minor_artifacts_cost_mult = -0.10
+		weapon_archaeotech_speed_mult = 0.1
+		weapon_archaeotech_weapon_damage_mult = 0.25
+	}
+}

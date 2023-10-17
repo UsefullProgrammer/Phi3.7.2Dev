@@ -27,7 +27,6 @@ tech_repeatable_improved_tile_food_output = {
 		planet_jobs_food_produces_mult = 0.10
 	}
 }
-
 tech_repeatable_improved_core_system_cap = {
 	area = society
 	cost = @repeatableTechBaseCost

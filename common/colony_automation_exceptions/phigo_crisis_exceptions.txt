@@ -137,12 +137,13 @@ automate_clerk_management_ai_1 = {
 		years_passed >= 2 #fix start bad
 		owner = {
 			is_ai = yes 
-			NOT = { has_active_tradition = tr_mercantile_trickle_up_economics}
+			
 		}
-		NOR = {
-			owner = {
+		owner = {
+			
+			NOR = {
 				has_authority = auth_machine_intelligence
-				has_authority = auth_hive_mind
+				has_authority = auth_hive_mind	
 			}
 		}
 	}
@@ -153,7 +154,7 @@ automate_clerk_management_ai_1 = {
 	job_changes = {
 		clerk_reduce = {
 			available = {
-				
+				owner = { NOT = { has_active_tradition = tr_mercantile_trickle_up_economics} }
 				has_available_jobs = clerk
 				OR = {
 					free_jobs > 1

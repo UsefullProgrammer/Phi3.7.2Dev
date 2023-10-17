@@ -929,6 +929,7 @@ research_subsidies = {
 	modifier = {
 		planet_researchers_produces_mult = 0.10
 		planet_researchers_energy_upkeep_add = 1
+		planet_researchers_phi_energy_upkeep_add = 1
 	}
 
 	potential = {

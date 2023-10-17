@@ -1744,6 +1744,13 @@ tech_terrestrial_sculpting = {
 			factor = 50
 			has_trait = trait_aquatic
 		}
+		modifier = {
+			factor = 0.5
+			OR = {
+				has_origin = origin_shattered_ring
+				has_origin = origin_void_dwellers
+			}
+		}
 	}
 
 	ai_weight = {
@@ -2995,7 +3002,6 @@ tech_doctrine_fleet_size_5 = {
 
 	}
 }
-
 #Interstellar Fleet Traditions
 tech_interstellar_fleet_traditions = {
 	cost = @tier2cost2
@@ -3065,7 +3071,8 @@ tech_command_matrix = {
 	weight = @tier3weight3
 
 	modifier = {
-		ship_fire_rate_mult = 0.05
+		#ship_fire_rate_mult = 0.05
+		command_limit_mult = 0.05
 	}
 
 	weight_modifier = {
@@ -3163,7 +3170,7 @@ tech_doctrine_navy_size_3 = {
 
 	modifier = {
 		#country_naval_cap_add = 30
-		ship_starting_experience_add = 50
+		command_limit_add = 20
 		country_naval_cap_mult = 0.05
 	}
 
@@ -3263,7 +3270,7 @@ tech_combat_training = {
 
 	modifier = {
 		army_attack_damage_mult = 1
-		army_attack_morale_mult = 1
+		army_attack_morale_mult = 0.25
 	}
 
 	weight_modifier = {

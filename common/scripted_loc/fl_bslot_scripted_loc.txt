@@ -24,6 +24,11 @@ defined_text = {
         value = value:bslot_from_capital
 }
 defined_text = {
+        name = fl_building_from_assembly_plant
+        value = value:bslot_from_assembly_plant
+}
+
+defined_text = {
         name = fl_building_from_civic_trad_ap
         value = value:bslot_from_cta
 }
@@ -173,6 +178,13 @@ defined_text = {
                 KEY = edicts
         }
 }
+defined_text = {
+        inline_script = {
+                script = fl_sloc_one_or_more
+                KEY = assembly_plant
+        }
+}
+
 defined_text = {
         name = fl_scope_is_planet
 

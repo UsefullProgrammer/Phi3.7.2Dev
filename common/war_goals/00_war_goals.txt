@@ -2938,13 +2938,16 @@ wg_phi_survive = {
 		always = yes
 	}
 	possible = {
-		always = yes
+		has_resource = { type = influence amount >= 100 }
 	}
 	
 	on_wargoal_set = {
 		add_modifier = {
 			modifier = phi_survival_war
 			days = 2700
+		}
+		add_resource = {
+			influence = -100
 		}
 	}
 

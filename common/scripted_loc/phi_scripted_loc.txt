@@ -1,0 +1,8 @@
+defined_text = {
+	name = loc_max_empire_size
+	value = value:max_empire_size
+}
+defined_text = {
+	name = loc_empire_size
+	value = value:empire_size_value
+}

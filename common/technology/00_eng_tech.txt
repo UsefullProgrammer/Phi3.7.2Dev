@@ -1181,6 +1181,10 @@ tech_habitat_2 = {
 			factor = 10
 			has_origin = origin_void_dwellers
 		}
+		modifier = {
+			factor = @ap_technological_ascendancy_rare_tech
+			has_ascension_perk = ap_technological_ascendancy
+		}
 	}
 
 	ai_weight = {
@@ -1232,7 +1236,11 @@ tech_habitat_3 = {
 		}
 		modifier = {
 			factor = 10
-			has_origin = origin_void_dwellers
+			is_void_dweller_empire = yes
+		}
+		modifier = {
+			factor = @ap_technological_ascendancy_rare_tech
+			has_ascension_perk = ap_technological_ascendancy
 		}
 	}
 
@@ -1240,7 +1248,7 @@ tech_habitat_3 = {
 		modifier = {
 			factor = 100
 			OR = {
-				has_origin = origin_void_dwellers
+				is_void_dweller_empire = yes
 				has_origin = origin_toxic_knights
 				has_country_flag = payback_habitat
 				has_valid_civic = civic_void_hive
@@ -1451,6 +1459,10 @@ tech_strike_craft_skrand = {
 	}
 
 	weight_modifier = {
+		modifier = {
+			factor = @ap_technological_ascendancy_rare_tech
+			has_ascension_perk = ap_technological_ascendancy
+		}
 	}
 
 	ai_weight = {
@@ -1775,7 +1787,7 @@ tech_thrusters_4 = {
 	category = { propulsion }
 	ai_update_type = all
 	prerequisites = { "tech_thrusters_3" }
-	weight = @tier4weight1
+	weight = @tier4weight2
 	modifier = {
 		army_disengage_chance_mult = 0.05
 	}
@@ -3042,7 +3054,10 @@ tech_housing_2 = {
 			factor = 0
 			has_valid_civic = civic_agrarian_idyll
 		}
-
+		modifier = {
+			factor = @ap_technological_ascendancy_rare_tech
+			has_ascension_perk = ap_technological_ascendancy
+		}
 	}
 
 	ai_weight = {

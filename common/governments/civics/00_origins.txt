@@ -471,7 +471,7 @@ origin_void_dwellers = {
 	}
 
 	random_weight = {
-		base = 3
+		base = 1
 	}
 }
 
@@ -1473,6 +1473,10 @@ origin_legendary_leader_death = {
 				value = origin_legendary_leader_imperial
 			}
 		}
+		
+	}
+	playable = {
+		always = no # Non-player origin
 	}
 
 	description = origin_tooltip_legendary_leader_effects
@@ -1491,21 +1495,23 @@ origin_legendary_leader_death = {
 origin_legendary_leader_imperial = {
 	is_origin = yes
 	icon = "gfx/interface/icons/origins/origins_under_one_rule.dds"
-	picture = GFX_origin_legendary_leader
+	picture = GFX_origin_legendary_leader_imp
 
-	potential = { #Origin related to the story and player choices
-		origin = {
-			OR = {
-				value = origin_legendary_leader_death
-				value = origin_legendary_leader_dictatorial
-				value = origin_legendary_leader_imperial
-			}
-		}
+	# potential = { #Origin related to the story and player choices
+	# 	origin = {
+	# 		OR = {
+	# 			value = origin_legendary_leader_death
+	# 			value = origin_legendary_leader_dictatorial
+	# 			value = origin_legendary_leader_imperial
+	# 		}
+	# 	}
+	# }
+	possible = {
+		authority = { value = auth_imperial }
 	}
-
 	description = origin_tooltip_legendary_leader_effects
 
-	advanced_start = yes
+	advanced_start = no
 
 	traits = {
 		trait = trait_perfected_genes
@@ -1529,6 +1535,9 @@ origin_legendary_leader_dictatorial = {
 				value = origin_legendary_leader_imperial
 			}
 		}
+	}
+	playable = {
+		always = no # Non-player origin
 	}
 
 	description = origin_tooltip_legendary_leader_effects

@@ -310,6 +310,7 @@ building_planetary_shield_generator = {
 
 	planet_modifier = {
 		planet_orbital_bombardment_damage = -0.4
+		defense_armies_add = 1
 	}
 
 	resources = {

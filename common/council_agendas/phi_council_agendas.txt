@@ -1,0 +1,21 @@
+@base_tradition_agenda_cost = 7000
+@short_agenda_cost = 3500
+agenda_artifact_pursuit = {
+	agenda_cost = @base_tradition_agenda_cost
+	allow = {
+		has_tradition = tr_artifact_adopt
+	}
+	#custom_tooltip = found_relic
+	potential = {
+		has_paragon_dlc = yes
+		is_machine_empire = no
+	}
+	modifier = {
+		orbital_artifacts_deposits_produces_mult = 0.1
+	}
+	finish_modifier = agenda_artifact_finish
+	effect = {
+		custom_tooltip = agenda_artifact_finish_desc
+		survey_relic_planet_system = yes
+	}
+}

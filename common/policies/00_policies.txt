@@ -794,7 +794,7 @@ war_philosophy = {
 		}
 
 		valid = {
-			always = yes
+			NOT = { has_civic = "civic_crusader_spirit" }
 		}
 
 		AI_weight = {
@@ -858,7 +858,7 @@ war_philosophy = {
 			planet_stability_add = 2
 			army_defense_morale_mult = 1
 			army_defense_damage_mult = 0.5
-			army_attack_morale_mult = 1
+			army_attack_morale_mult = 0.25
 			army_attack_damage_mult = 0.5
 			wars_influence_upkeep_mult = -0.25
 		}
@@ -2562,6 +2562,8 @@ economic_policy = {
 		}
 		
 		modifier = {
+			megastructures_habitat_influence_cost_mult = -0.25
+			
 			planet_colony_development_speed_mult = 0.1
 			pop_environment_tolerance = 0.20
 			terraform_speed_mult = 1
@@ -2604,6 +2606,7 @@ economic_policy = {
 		}
 		
 		modifier = {
+			megastructures_habitat_alloys_cost_mult = -0.10
 			trade_value_mult = 0.20
 			planet_pops_consumer_goods_upkeep_mult = 0.1
 		}
@@ -2799,6 +2802,22 @@ economic_policy = {
 	# 		factor = 30
 	# 	}
 	# }
+	option = {
+		name = "economic_policy_artifact"
+		
+		valid = {
+			has_tradition = tr_artifact_finish
+		}
+		
+		modifier = {
+			country_minor_artifacts_produces_mult = 0.20
+			ship_archaeological_site_excavation_speed_mult = 0.15
+			ship_archaeological_site_clues_add = 1
+		}
+		AI_weight = {
+			factor = 0
+		}
+	}
 	
 	option = {
 		name = "economic_policy_adaptability"
@@ -2827,16 +2846,15 @@ economic_policy = {
 		}
 		
 		modifier = {
-			envoys_add = 1
 			country_leader_cap_add = 1
 			external_leader_pool_add = 1
-			planet_jobs_ruler_produces_mult = 1
-			planet_jobs_ruler_upkeep_mult = 1.1
-			leaders_upkeep_mult = 0.2
+			planetary_ascension_effect_mult = 0.25
 			pop_cat_specialist_happiness = -0.05
 			pop_cat_worker_happiness = -0.05
 		}
-
+		policy_flags = {
+			economic_policy_leader_focus
+		}
 		AI_weight = {
 			factor = 0
 		}
@@ -2885,9 +2903,32 @@ economic_policy = {
 			factor = 0
 		}
 	}
+	option = {
+		name = "economic_policy_enmity"
+		
+		valid = {
+			has_tradition = tr_enmity_adopt
+		}
+		policy_flags = {
+			economic_policy_enmity
+		}
+		on_enabled = {
+			custom_tooltip = "tooltip_economic_policy_enmity_effects"
+		}
+		modifier = {
+			diplo_weight_naval_mult = 0.25
+			intel_encryption_add = 6
+			intel_decryption_add = -3
+		}
+		
+		AI_weight = {
+			factor = 0
+		}
+	}
 	
 	
 }
+
 
 trade_policy = {
 	potential = {
@@ -3166,6 +3207,7 @@ drone_policy = {
 		}
 		
 		modifier = {
+			megastructures_habitat_influence_cost_mult = -0.25
 			pop_environment_tolerance = 0.20
 			terraform_speed_mult = 1
 			planet_jobs_minerals_produces_mult = -0.2
@@ -3228,6 +3270,7 @@ drone_policy = {
 		}
 		
 		modifier = {
+			megastructures_habitat_alloys_cost_mult = -0.10
 			planet_jobs_upkeep_mult = 0.05
 			country_energy_produces_mult = 0.1
 		}
@@ -3345,10 +3388,9 @@ drone_policy = {
 		}
 		
 		modifier = {
-			envoys_add = 1
-			country_leader_cap_add = 2
-			external_leader_pool_add = 1
-            leaders_upkeep_mult = -0.3
+			planetary_ascension_effect_mult = 0.25
+			negative_leader_traits_species = -1
+            leader_age = 5
 		}
 
 		AI_weight = {
@@ -3392,6 +3434,33 @@ drone_policy = {
 			empire_size_pops_mult = -0.10
 		}
 
+		AI_weight = {
+			factor = 0
+		}
+	}
+	option = {
+		name = "drone_economic_policy_enmity"
+		
+		valid = {
+			has_tradition = tr_enmity_adopt
+		}
+		on_enabled = {
+			custom_tooltip = "tooltip_drone_economic_policy_enmity_effects"
+		}
+		policy_flags = {
+			economic_policy_enmity
+		}
+		
+		modifier = {
+			diplo_weight_naval_mult = 0.25
+			intel_encryption_add = 6
+			intel_decryption_add = -3
+			#planet_crime_no_happiness_add = -10
+		}
+		# modifier = {
+		# 	planet_crime_no_happiness_add = -3
+		# 	mult = value:phigo_num_rivals
+		# }
 		AI_weight = {
 			factor = 0
 		}

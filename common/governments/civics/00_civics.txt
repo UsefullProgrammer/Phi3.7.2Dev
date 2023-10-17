@@ -2374,6 +2374,9 @@ civic_scavengers = {
 			}
 		}
 	}
+	 modifier = {
+		ship_speed_mult = -0.1
+	 }
 	random_weight = {
 		base = 0
 	}

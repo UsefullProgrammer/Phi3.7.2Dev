@@ -77,9 +77,10 @@ fleet_contribution_20 = {
 	required_centralization = {
 		base = 2
 	}
+	
 	modifier = 	{
 		federation_fleet_contribution_factor = 0.2
-		federation_fleet_cap_add = 300
+		federation_fleet_cap_add = 330
 	}
 	cohesion_growth = -1
 	on_enact = {
@@ -139,7 +140,7 @@ fleet_contribution_40 = {
 	}
 	modifier = 	{
 		federation_fleet_contribution_factor = 0.4
-		federation_fleet_cap_add = 600
+		federation_fleet_cap_add = 660
 	}
 	cohesion_growth = -2
 	on_enact = {
@@ -199,7 +200,7 @@ fleet_contribution_60 = {
 	}
 	modifier = 	{
 		federation_fleet_contribution_factor = 0.6
-		federation_fleet_cap_add = 900
+		federation_fleet_cap_add = 1000
 	}
 	cohesion_growth = -3
 	on_enact = {
@@ -259,7 +260,7 @@ fleet_contribution_80 = {
 	}
 	modifier = 	{
 		federation_fleet_contribution_factor = 0.8
-		federation_fleet_cap_add = 1200
+		federation_fleet_cap_add = 1400
 	}
 	cohesion_growth = -4
 	on_enact = {

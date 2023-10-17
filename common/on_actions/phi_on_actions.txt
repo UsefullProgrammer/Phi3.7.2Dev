@@ -2,6 +2,7 @@ on_game_start_country = {
 	events = {
 		phi_game_start.0 #PHI start menu launcher
 		rules.31 #PHIGO set bonus malus for galaxy size
+		rules.100 #Phigo AI
 	}
 }
 
@@ -48,11 +49,18 @@ on_yearly_pulse_country = {
 		phi_ai.30				#yearly checked - Set Flag washuman
 		phi_politics.10 # remove modifier embassy at not capital.
 		phi_ai.40 #Mid game District update only not artificial planet fire phi_ai.41 to phi_ai.49
+		phi_ai.100 # simulation market internal until galactic market.
 		#enhanced_diplomacy.10 #give bonus galactic community to more weak.
+		phigo_automation.0 #automation buildings
+		phigo_automation.100 #automation luxury
 		rules.30 # bonus malus in base galaxy size
 	}
 }
-
+on_ship_destroyed_perp = {
+	events = {
+		phigo_civic_event.1 # On ship destroyed civic
+	}
+}
 # No scope, like on_game_start
 # on_five_year_pulse = {
 # 	events = {
@@ -63,7 +71,7 @@ on_yearly_pulse_country = {
 on_five_year_pulse_country = {
 	events = {
 		phi_ai.13				#shifts ethics towards fed type
-		
+		phi_ai.50				#build disctrict city usefull when housing is < 20
 	}
 }
 

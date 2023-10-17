@@ -1118,7 +1118,7 @@ edict_dark_matter_ammunition: "Dark Matter air strike"
 edict_dark_matter_ammunition_desc:0 "Use dark matter for ammunition of air strike"
 
 economic_policy_leader_focus: "Leader Focus"
-economic_policy_leader_focus_desc: "We allocate the necessary resources for our leaders to be the best."
+economic_policy_leader_focus_desc: "We allocate the necessary resources for our leaders to be the best.\nExecutive trade value: §G+100%§!"
 economic_policy_politics: "Politics Focus"
 economic_policy_politics_desc: "We allocate the necessary resources for our politics have power and resource for all.."
 economic_policy_statecraft: "Statecraft Focus"
@@ -1159,7 +1159,7 @@ sm_nebula_alloy_refinery_desc:0 "Refinaria de ligas de alta tecnologia em gravid
 sm_civilian_anchorage:0 "Porto civil"
 sm_civilian_anchorage_desc:0 "Portos civis, também conhecidos como portos espaciais."
 sm_civilian_shipyard:0 "Estaleiro civil"
-sm_civilian_shipyard_desc:0 "Produz naves de venda de energia para as populações moradoras do vácuo. Para cada estaleiro civil a menos, mais energia é produzida. Para construir uma nave civil, é necessário 0,5 estaleiros, e para construir uma nave militar, 2 estaleiros são necessários."
+sm_civilian_shipyard_desc:0 "Produces energy by sell ship at pop (more pop in empire more produces energy) for everyone more civilian more civilian shipyard less produces (only void dweller or void born can build more of 1)."
 
 sm_starm_science_hub:0 "Centro de Pesquisa"
 sm_starm_science_hub_desc:0 "Uma instalação de alta tecnologia onde nossos cientistas se reúnem para avançar em diversos campos de pesquisa.\n"

@@ -519,7 +519,7 @@ resort_colony = {
 	icon_frame = 1
 	pop_environment_tolerance = 1
 	job_clerk_per_pop = 0.5
-	custom_tooltip = resort_colony_empire_effects
+	custom_tooltip = resort_colony_empire_effects_phi
 	show_only_custom_tooltip = no
 	# This only works on timed planet modifiers!
 	apply_modifier_to_other_planets = resort_colony_other_planets

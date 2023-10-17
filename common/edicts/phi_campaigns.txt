@@ -164,6 +164,11 @@ phi_join_defensive_war = {
 		is_subject = no
 	}
 	allow = {
+		is_subject = no
+		OR = {
+			has_federation = no
+			is_federation_leader = yes
+		}
 		any_country = {
 			root = {
 				is_improving_relations_with = prev
@@ -195,6 +200,11 @@ phi_set_survive_wg = {
 	}
 	allow = {
 		is_at_war = yes
+		is_subject = no
+		# OR = {
+		# 	has_federation = no
+		# 	is_federation_leader = yes
+		# }
 		any_war = {
 			any_defender = {
 				is_same_value = root
@@ -203,6 +213,12 @@ phi_set_survive_wg = {
 			}
 			War_Valid_survive = yes
 			#root = { Valid_survive = yes }
+		}
+	}
+	resources = {
+		category = special
+		cost = {
+			influence = 100
 		}
 	}
 	effect = {
@@ -600,50 +616,7 @@ illuminate_vassal = {
 	}
 }
 
-archeologist_spedition = {
-	length = @EdictDuration
-	icon = "GFX_resource_minor_artifacts"
-	potential = {
-		has_ancrel = yes
-	}
-	resources = {
-		category = campaigns
-		upkeep = {
-			energy = @campaignCost
-			multiplier = value:edict_size_effect
-		}
-	}
-	modifier = {
-		country_base_minor_artifacts_produces_add = 1
-	}
-	# trigger = {
-	# 	potential = {
-	# 		has_country_flag = have_archaeostudies_faculty
-	# 	}
-	# 	modifier = {
-	# 		country_base_minor_artifacts_produces_add = 0.1
-	# 		multiplier = value:edict_size_effect
-	# 	}
-	# }
-	prerequisites = {
-		"tech_archaeostudies"
-	}
 
-	ai_weight = {
-		weight = 0
-		modifier = {
-			weight = @EdictMedPrio
-			has_monthly_income = {
-				resource = minor_artifacts
-				value < 100
-			}
-			has_monthly_income = {
-				resource = energy
-				value > 50
-			}
-		}
-	}
-}
 
 
 expansion_planer = {
@@ -655,6 +628,22 @@ expansion_planer = {
 			influence = 1000
 		}
 		upkeep = {
+			influence = 3
+		}
+		cost = {
+			trigger = {
+				owner = {
+					is_a_total_war = yes
+				}
+			}
+			influence = 1000
+		}
+		upkeep = {
+			trigger = {
+				owner = {
+					is_a_total_war = yes
+				}
+			}
 			influence = 3
 		}
 	}

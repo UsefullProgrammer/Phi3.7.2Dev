@@ -34,9 +34,15 @@ hyper_relay = {
 				AND = {
 					exists = owner
 					owner = {
-						is_subject = yes
-						overlord = { is_same_value = from }
+						OR = {
+							AND = { 
+								is_subject = yes
+								overlord = { is_same_value = from }
+							}
+							is_in_federation_with = from
+						}
 					}
+
 				}
 			}
 		}

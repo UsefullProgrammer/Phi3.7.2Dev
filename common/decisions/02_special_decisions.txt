@@ -1272,7 +1272,7 @@ decision_arcology_project_relic = {
 	}
 
 	ai_weight = {
-		weight = 100
+		weight = 10000
 	}
 }
 
@@ -1942,7 +1942,7 @@ decision_upgrade_habitat = {
 		category = decisions
 		cost = {
 			influence = 25
-			alloys = 1000
+			alloys = 500
 			mult = owner.value:habitat_build_cost_mult
 		}
 	}
@@ -2002,8 +2002,8 @@ decision_upgrade_habitat_2 = {
 	resources = {
 		category = decisions
 		cost = {
-			influence = 50
-			alloys = 1250
+			influence = 25
+			alloys = 750
 			mult = owner.value:habitat_build_cost_mult
 		}
 	}

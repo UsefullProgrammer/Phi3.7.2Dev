@@ -52,3 +52,35 @@ origin_franchise_state = {
 		base = 0
 	}
 }
+civic_hive_ascetic_2 = {
+	potential = { authority = { value = auth_hive_mind } }
+	random_weight = { base = @civic_default_random_weight }
+	ai_weight = {
+		base = @ai_civic_default_base_weight
+	}
+	possible = {
+		civics = {
+			NOT = { value = civic_hive_devouring_swarm }
+		}
+	}
+	modifier = {
+		councilor_gestalt_governor_exp_gain = @gestalt_civic_node_xp_rate
+		diplo_weight_opposing_mult = 0.5
+	}
+}
+civic_machine_unitary_cohesion_2 = {
+	potential = { authority = { value = auth_machine_intelligence } }
+	random_weight = { base = @civic_default_random_weight }
+	possible = {
+		civics = {
+			NOT = { value = civic_machine_terminator }
+		}
+	}
+	ai_weight = {
+		base = @ai_civic_default_base_weight
+	}
+	modifier = {
+		councilor_gestalt_governor_exp_gain = @gestalt_civic_node_xp_rate
+		diplo_weight_opposing_mult = 0.5
+	}
+}

@@ -1,5 +1,5 @@
 # Regex string replace using line seperated list of relic keys:
-#   trade_action_$1 = {\n\tfire_and_forget = yes\n\n\tpotential = {\n\t\thas_relic = $1\n\t\tis_country_type = default\n\t\tfrom = {\n\t\t\tis_country_type = default\n\t\t\tnot = { has_relic = $1 }\n\t\t}\n\t}\n\n\ton_traded_effect = {\n\t\tremove_relic = $1\n\t\tfrom = { add_relic = $1 }\n\t}\n\n\tai_weight = {\n\t\tweight = 1000\n\t}\n}\n
+#   trade_action_$1 = {\n\tfire_and_forget = yes\n\n\tpotential = {\n\t\thas_relic = $1\n\t\tis_country_type = default\n\t\tfrom = {\n\tfactor = 0.51\t\tis_country_type = default\n\t\t\tnot = { has_relic = $1 }\n\t\t}\n\t}\n\n\ton_traded_effect = {\n\t\tremove_relic = $1\n\t\tfrom = { add_relic = $1 }\n\t}\n\n\tai_weight = {\n\t\tweight = 5000\n\t}\n}\n
 
 # Relic Rankings:   (For determining ai_weight)
 # Isolated Contingency Core
@@ -24,11 +24,21 @@ trade_action_r_dragon_trophy = {
 	}
 
 	ai_weight = {
-		weight = 1000
+		weight = 5000
 		modifier = {
-			factor = 1.5
+			factor = 1
 			is_ai = yes
 			from = { is_ai = no }
+		}
+		modifier = {
+			factor = 0.51
+			is_ai = no
+			from = { is_ai = yes }
+		}
+		modifier = {
+			factor = 0.1
+			is_ai = yes
+			from = { is_ai = yes }
 		}
 	}
 }
@@ -51,11 +61,21 @@ trade_action_r_khans_throne = {
 	}
 
 	ai_weight = {
-		weight = 1000
+		weight = 5000
 		modifier = {
-			factor = 1.5
+			factor = 1
 			is_ai = yes
 			from = { is_ai = no }
+		}
+		modifier = {
+			factor = 0.51
+			is_ai = no
+			from = { is_ai = yes }
+		}
+		modifier = {
+			factor = 0.1
+			is_ai = yes
+			from = { is_ai = yes }
 		}
 		modifier = {
 			factor = 1.2
@@ -86,11 +106,21 @@ trade_action_r_worm_scales = {
 	}
 
 	ai_weight = {
-		weight = 1000
+		weight = 5000
 		modifier = {
-			factor = 1.5
+			factor = 1
 			is_ai = yes
 			from = { is_ai = no }
+		}
+		modifier = {
+			factor = 0.51
+			is_ai = no
+			from = { is_ai = yes }
+		}
+		modifier = {
+			factor = 0.1
+			is_ai = yes
+			from = { is_ai = yes }
 		}
 	}
 }
@@ -113,11 +143,21 @@ trade_action_r_rubricator = {
 	}
 
 	ai_weight = {
-		weight = 1000
+		weight = 5000
 		modifier = {
-			factor = 1.5
+			factor = 1
 			is_ai = yes
 			from = { is_ai = no }
+		}
+		modifier = {
+			factor = 0.51
+			is_ai = no
+			from = { is_ai = yes }
+		}
+		modifier = {
+			factor = 0.1
+			is_ai = yes
+			from = { is_ai = yes }
 		}
 		modifier = {
 			factor = 0.7
@@ -144,11 +184,21 @@ trade_action_r_galaxy = {
 	}
 
 	ai_weight = {
-		weight = 1000
+		weight = 5000
 		modifier = {
-			factor = 1.5
+			factor = 1
 			is_ai = yes
 			from = { is_ai = no }
+		}
+		modifier = {
+			factor = 0.51
+			is_ai = no
+			from = { is_ai = yes }
+		}
+		modifier = {
+			factor = 0.1
+			is_ai = yes
+			from = { is_ai = yes }
 		}
 		modifier = {
 			factor = 1.2
@@ -175,11 +225,21 @@ trade_action_r_omnicodex = {
 	}
 
 	ai_weight = {
-		weight = 1000
+		weight = 5000
 		modifier = {
-			factor = 1.5
+			factor = 1
 			is_ai = yes
 			from = { is_ai = no }
+		}
+		modifier = {
+			factor = 0.51
+			is_ai = no
+			from = { is_ai = yes }
+		}
+		modifier = {
+			factor = 0.1
+			is_ai = yes
+			from = { is_ai = yes }
 		}
 		modifier = {
 			factor = 1.2
@@ -206,11 +266,21 @@ trade_action_r_surveyor = {
 	}
 
 	ai_weight = {
-		weight = 1000
+		weight = 5000
 		modifier = {
-			factor = 1.5
+			factor = 1
 			is_ai = yes
 			from = { is_ai = no }
+		}
+		modifier = {
+			factor = 0.51
+			is_ai = no
+			from = { is_ai = yes }
+		}
+		modifier = {
+			factor = 0.1
+			is_ai = yes
+			from = { is_ai = yes }
 		}
 	}
 }
@@ -233,11 +303,21 @@ trade_action_r_galatron = {
 	}
 
 	ai_weight = {
-		weight = 1000
+		weight = 5000
 		modifier = {
-			factor = 1.5
+			factor = 1
 			is_ai = yes
 			from = { is_ai = no }
+		}
+		modifier = {
+			factor = 0.51
+			is_ai = no
+			from = { is_ai = yes }
+		}
+		modifier = {
+			factor = 0.1
+			is_ai = yes
+			from = { is_ai = yes }
 		}
 	}
 }
@@ -260,11 +340,21 @@ trade_action_r_ancient_sword = {
 	}
 
 	ai_weight = {
-		weight = 1000
+		weight = 5000
 		modifier = {
-			factor = 1.5
+			factor = 1
 			is_ai = yes
 			from = { is_ai = no }
+		}
+		modifier = {
+			factor = 0.51
+			is_ai = no
+			from = { is_ai = yes }
+		}
+		modifier = {
+			factor = 0.1
+			is_ai = yes
+			from = { is_ai = yes }
 		}
 	}
 }
@@ -287,11 +377,21 @@ trade_action_r_severed_head = {
 	}
 
 	ai_weight = {
-		weight = 1000
+		weight = 5000
 		modifier = {
-			factor = 1.5
+			factor = 1
 			is_ai = yes
 			from = { is_ai = no }
+		}
+		modifier = {
+			factor = 0.51
+			is_ai = no
+			from = { is_ai = yes }
+		}
+		modifier = {
+			factor = 0.1
+			is_ai = yes
+			from = { is_ai = yes }
 		}
 	}
 }
@@ -314,11 +414,21 @@ trade_action_r_prethoryn_queen = {
 	}
 
 	ai_weight = {
-		weight = 1000
+		weight = 5000
 		modifier = {
-			factor = 1.5
+			factor = 1
 			is_ai = yes
 			from = { is_ai = no }
+		}
+		modifier = {
+			factor = 0.51
+			is_ai = no
+			from = { is_ai = yes }
+		}
+		modifier = {
+			factor = 0.1
+			is_ai = yes
+			from = { is_ai = yes }
 		}
 	}
 }
@@ -341,11 +451,21 @@ trade_action_r_unbidden_warlock = {
 	}
 
 	ai_weight = {
-		weight = 1000
+		weight = 5000
 		modifier = {
-			factor = 1.5
+			factor = 1
 			is_ai = yes
 			from = { is_ai = no }
+		}
+		modifier = {
+			factor = 0.51
+			is_ai = no
+			from = { is_ai = yes }
+		}
+		modifier = {
+			factor = 0.1
+			is_ai = yes
+			from = { is_ai = yes }
 		}
 		modifier = {
 			factor = 1.3
@@ -379,11 +499,21 @@ trade_action_r_contingency_core = {
 	}
 
 	ai_weight = {
-		weight = 1000
+		weight = 5000
 		modifier = {
-			factor = 1.5
+			factor = 1
 			is_ai = yes
 			from = { is_ai = no }
+		}
+		modifier = {
+			factor = 0.51
+			is_ai = no
+			from = { is_ai = yes }
+		}
+		modifier = {
+			factor = 0.1
+			is_ai = yes
+			from = { is_ai = yes }
 		}
 	}
 }
@@ -406,14 +536,24 @@ trade_action_r_zro_crystal = {
 	}
 
 	ai_weight = {
-		weight = 1000
+		weight = 5000
 		modifier = {
-			factor = 1.5
+			factor = 1
 			is_ai = yes
 			from = { is_ai = no }
 		}
 		modifier = {
-			factor = 1.5
+			factor = 0.51
+			is_ai = no
+			from = { is_ai = yes }
+		}
+		modifier = {
+			factor = 0.1
+			is_ai = yes
+			from = { is_ai = yes }
+		}
+		modifier = {
+			factor = 1
 			has_ascension_perk = ap_transcendence
 		}
 	}
@@ -437,11 +577,21 @@ trade_action_r_the_last_baol = {
 	}
 
 	ai_weight = {
-		weight = 1000
+		weight = 5000
 		modifier = {
-			factor = 1.5
+			factor = 1
 			is_ai = yes
 			from = { is_ai = no }
+		}
+		modifier = {
+			factor = 0.51
+			is_ai = no
+			from = { is_ai = yes }
+		}
+		modifier = {
+			factor = 0.1
+			is_ai = yes
+			from = { is_ai = yes }
 		}
 	}
 }
@@ -464,11 +614,21 @@ trade_action_r_the_defragmentor = {
 	}
 
 	ai_weight = {
-		weight = 1000
+		weight = 5000
 		modifier = {
-			factor = 1.5
+			factor = 1
 			is_ai = yes
 			from = { is_ai = no }
+		}
+		modifier = {
+			factor = 0.51
+			is_ai = no
+			from = { is_ai = yes }
+		}
+		modifier = {
+			factor = 0.1
+			is_ai = yes
+			from = { is_ai = yes }
 		}
 		modifier = {
 			factor = 1.3
@@ -495,11 +655,21 @@ trade_action_r_reality_perforator = {
 	}
 
 	ai_weight = {
-		weight = 1000
+		weight = 5000
 		modifier = {
-			factor = 1.5
+			factor = 1
 			is_ai = yes
 			from = { is_ai = no }
+		}
+		modifier = {
+			factor = 0.51
+			is_ai = no
+			from = { is_ai = yes }
+		}
+		modifier = {
+			factor = 0.1
+			is_ai = yes
+			from = { is_ai = yes }
 		}
 	}
 }
@@ -522,11 +692,21 @@ trade_action_r_pox_sample = {
 	}
 
 	ai_weight = {
-		weight = 1000
+		weight = 5000
 		modifier = {
-			factor = 1.5
+			factor = 1
 			is_ai = yes
 			from = { is_ai = no }
+		}
+		modifier = {
+			factor = 0.51
+			is_ai = no
+			from = { is_ai = yes }
+		}
+		modifier = {
+			factor = 0.1
+			is_ai = yes
+			from = { is_ai = yes }
 		}
 	}
 }
@@ -549,11 +729,21 @@ trade_action_r_cryo_core = {
 	}
 
 	ai_weight = {
-		weight = 1000
+		weight = 5000
 		modifier = {
-			factor = 1.5
+			factor = 1
 			is_ai = yes
 			from = { is_ai = no }
+		}
+		modifier = {
+			factor = 0.51
+			is_ai = no
+			from = { is_ai = yes }
+		}
+		modifier = {
+			factor = 0.1
+			is_ai = yes
+			from = { is_ai = yes }
 		}
 	}
 }
@@ -576,11 +766,21 @@ trade_action_r_war_forge = {
 	}
 
 	ai_weight = {
-		weight = 1000
+		weight = 5000
 		modifier = {
-			factor = 1.5
+			factor = 1
 			is_ai = yes
 			from = { is_ai = no }
+		}
+		modifier = {
+			factor = 0.51
+			is_ai = no
+			from = { is_ai = yes }
+		}
+		modifier = {
+			factor = 0.1
+			is_ai = yes
+			from = { is_ai = yes }
 		}
 	}
 }
@@ -602,9 +802,9 @@ trade_action_r_war_forge = {
 #	}
 
 #	ai_weight = {
-#		weight = 1000
+#		weight = 5000
 #		modifier = {
-#			factor = 1.5
+#			factor = 1
 #			is_ai = yes
 #			from = { is_ai = no }
 #		}
@@ -628,11 +828,21 @@ trade_action_r_toxic_god = {
 	}
 
 	ai_weight = {
-		weight = 1000
+		weight = 5000
 		modifier = {
-			factor = 1.5
+			factor = 1
 			is_ai = yes
 			from = { is_ai = no }
+		}
+		modifier = {
+			factor = 0.51
+			is_ai = no
+			from = { is_ai = yes }
+		}
+		modifier = {
+			factor = 0.1
+			is_ai = yes
+			from = { is_ai = yes }
 		}
 	}
 }
@@ -654,11 +864,21 @@ trade_action_r_odryskan_crystal = {
 	}
 
 	ai_weight = {
-		weight = 1000
+		weight = 5000
 		modifier = {
-			factor = 1.5
+			factor = 1
 			is_ai = yes
 			from = { is_ai = no }
+		}
+		modifier = {
+			factor = 0.51
+			is_ai = no
+			from = { is_ai = yes }
+		}
+		modifier = {
+			factor = 0.1
+			is_ai = yes
+			from = { is_ai = yes }
 		}
 	}
 }
@@ -680,11 +900,21 @@ trade_action_r_wormhole_key_fragment_1 = {
 	}
 
 	ai_weight = {
-		weight = 1000
+		weight = 5000
 		modifier = {
-			factor = 1.5
+			factor = 1
 			is_ai = yes
 			from = { is_ai = no }
+		}
+		modifier = {
+			factor = 0.51
+			is_ai = no
+			from = { is_ai = yes }
+		}
+		modifier = {
+			factor = 0.1
+			is_ai = yes
+			from = { is_ai = yes }
 		}
 	}
 }
@@ -706,11 +936,21 @@ trade_action_r_wormhole_key_fragment_2 = {
 	}
 
 	ai_weight = {
-		weight = 1000
+		weight = 5000
 		modifier = {
-			factor = 1.5
+			factor = 1
 			is_ai = yes
 			from = { is_ai = no }
+		}
+		modifier = {
+			factor = 0.51
+			is_ai = no
+			from = { is_ai = yes }
+		}
+		modifier = {
+			factor = 0.1
+			is_ai = yes
+			from = { is_ai = yes }
 		}
 	}
 }
@@ -732,11 +972,21 @@ trade_action_r_wormhole_key_fragment_3 = {
 	}
 
 	ai_weight = {
-		weight = 1000
+		weight = 5000
 		modifier = {
-			factor = 1.5
+			factor = 1
 			is_ai = yes
 			from = { is_ai = no }
+		}
+		modifier = {
+			factor = 0.51
+			is_ai = no
+			from = { is_ai = yes }
+		}
+		modifier = {
+			factor = 0.1
+			is_ai = yes
+			from = { is_ai = yes }
 		}
 	}
 }
@@ -758,11 +1008,21 @@ trade_action_r_wormhole_key_fragment_4 = {
 	}
 
 	ai_weight = {
-		weight = 1000
+		weight = 5000
 		modifier = {
-			factor = 1.5
+			factor = 1
 			is_ai = yes
 			from = { is_ai = no }
+		}
+		modifier = {
+			factor = 0.51
+			is_ai = no
+			from = { is_ai = yes }
+		}
+		modifier = {
+			factor = 0.1
+			is_ai = yes
+			from = { is_ai = yes }
 		}
 	}
 }
@@ -784,11 +1044,21 @@ trade_action_r_wormhole_key = {
 	}
 
 	ai_weight = {
-		weight = 1000
+		weight = 5000
 		modifier = {
-			factor = 1.5
+			factor = 1
 			is_ai = yes
 			from = { is_ai = no }
+		}
+		modifier = {
+			factor = 0.51
+			is_ai = no
+			from = { is_ai = yes }
+		}
+		modifier = {
+			factor = 0.1
+			is_ai = yes
+			from = { is_ai = yes }
 		}
 	}
 }

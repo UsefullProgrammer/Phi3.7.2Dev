@@ -20,6 +20,10 @@ black_hole_signal_transmitter = {
 	}
 
 	possible = {
+		
+		#owner = {
+#			has_policy_flag = Automation_Nothing
+#		}
 		custom_tooltip = {
 			fail_text = "requires_starport"
 			has_starbase_size >= starbase_starport
@@ -91,6 +95,9 @@ pulsar_signal_receiver = {
 	}
 
 	possible = {
+		#owner = {
+#			has_policy_flag = Automation_Nothing
+#		}
 		custom_tooltip = {
 			fail_text = "requires_starport"
 			has_starbase_size >= starbase_starport
@@ -166,6 +173,9 @@ allied_black_hole_signal_transmitter = {
 	}
 
 	possible = {
+		#owner = {
+#			has_policy_flag = Automation_Nothing
+#		}
 		owner = {
 			OR = {
 				any_subject = {
@@ -247,6 +257,9 @@ allied_pulsar_signal_receiver = {
 	}
 
 	possible = {
+		#owner = {
+#			has_policy_flag = Automation_Nothing
+#		}
 		owner = {
 			OR = {
 				any_subject = {

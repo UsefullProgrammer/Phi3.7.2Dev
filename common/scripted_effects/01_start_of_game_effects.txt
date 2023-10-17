@@ -85,6 +85,7 @@ generate_home_system_resources = {
 			50 = { set_deposit = d_energy_3 }
 		}
 	}
+	
 
 	random_system_planet = {
 		limit = {
@@ -177,6 +178,12 @@ generate_home_system_resources = {
 		else = {
 			set_deposit = d_engineering_2
 		}
+	}
+	random_system_planet = {
+		limit = {
+			has_deposit = no
+		}
+		set_deposit = d_alloys_1
 	}
 }
 
@@ -1333,7 +1340,7 @@ generate_start_buildings_and_districts = {
 			add_building = building_hive_capital
 
 			# 2 jobs
-			add_building = building_hive_node
+			add_building = building_engineering_lab_1
 
 			# 2 jobs
 			add_district_and_planet_size_if_needed_effect = {
@@ -2209,6 +2216,22 @@ generate_start_buildings_and_districts = {
 		remove_building = building_engineering_lab_1
 		add_building = building_archaeostudies_faculty
 	}
+	if = {
+		limit = {
+			owner = {
+				OR = {
+					is_hive_empire = yes
+					has_valid_civic = civic_agrarian_idyll
+				}
+			}
+		}
+		owner = {
+			give_technology = {
+				tech = tech_food_processing_1
+				message = no
+			}
+		}
+	}
 
 	# Additional resources based on empire type and possible subspecies
 	owner = {
@@ -2653,7 +2676,7 @@ generate_start_pops = {
 			}
 		}
 		while = {
-			count = 10
+			count = 8
 			random_owned_pop = {
 				limit = {
 					is_same_species = root.owner.species
@@ -2921,6 +2944,7 @@ void_dweller_home_planet_setup = {
 		save_event_target_as = void_dweller_owner
 	}
 	solar_system = {
+		
 		random_system_planet = {
 			limit = { has_planet_flag = habitat_1_planet }
 			save_event_target_as = habitat_1_planet
@@ -3052,15 +3076,6 @@ void_dweller_home_planet_setup = {
 				tech = tech_hydroponics
 				message = no
 			}
-			root.solar_system.starbase = {
-				remove_starbase_building = {
-					slot = 1
-				}
-				set_starbase_building = {
-					slot = 1
-					building = hydroponics_bay
-				}
-			}
 		}
 		else = {
 			give_technology = {
@@ -3071,13 +3086,26 @@ void_dweller_home_planet_setup = {
 				tech = tech_space_mining_1
 				message = no
 			}
+		}
+		root.solar_system.starbase = {
+			remove_starbase_building = {
+				slot = 1
+			}
+			set_starbase_building = {
+				slot = 1
+				building = listening_post
+			}
+		}
+		if = {
+			limit = {
+				is_hive_empire = yes
+				is_lithoid_empire = no
+			}
 			root.solar_system.starbase = {
-				remove_starbase_building = {
-					slot = 1
-				}
-				set_starbase_building = {
-					slot = 1
-					building = mining_bay
+				remove_starbase_module = { module = solar_panel_network }
+				set_starbase_module = {
+					slot = 2
+					module = solar_food_network
 				}
 			}
 		}
@@ -3165,7 +3193,7 @@ void_dweller_home_planet_setup = {
 		entity = "habitat_phase_03_entity"
 		graphical_culture = owner
 	}
-	set_planet_size = 6
+	set_planet_size = 7
 	add_deposit = d_arcane_replicator
 	while = {
 		count = 2

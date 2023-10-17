@@ -25,6 +25,7 @@ r_dragon_trophy = {
 			always = yes
 		}
 		country_unity_produces_mult = 0.10
+		mult = value:has_artifact_tradition_finish
 	}
 
 	score = 1000
@@ -32,6 +33,7 @@ r_dragon_trophy = {
 	active_effect = {
 		add_modifier = {
 			modifier = "ether_drake_triumph"
+			
 			days = @triumph_duration
 		}
 		custom_tooltip = relic_triumph_cooldown
@@ -82,6 +84,7 @@ r_khans_throne = {
 			always = yes
 		}
 		country_claim_influence_cost_mult = -0.20
+		mult = value:has_artifact_smurf_tradition_finish
 	}
 	triggered_country_modifier = {
 		potential = {
@@ -137,6 +140,7 @@ r_worm_scales = {
 			always = yes
 		}
 		country_physics_tech_research_speed = 0.10
+		mult = value:has_artifact_tradition_finish
 	}
 
 	score = 1000
@@ -245,6 +249,7 @@ r_galaxy = {
 			always = yes
 		}
 		all_technology_research_speed = 0.05
+		mult = value:has_artifact_tradition_finish
 	}
 
 	score = 1000
@@ -349,6 +354,7 @@ r_surveyor = {
 			always = yes
 		}
 		ship_sensor_range_add = 1
+		mult = value:has_artifact_tradition_finish
 	}
 
 	score = 1000
@@ -365,12 +371,17 @@ r_surveyor = {
 
 			# Chance for additional deposits
 			random_list = {
-				50 = { country_event = { id = story.335 days = 720 random = 360 } }
+				50 = { 
+					modifier = { factor = 2 has_tradition = tr_artifact_finish }
+					country_event = { id = story.335 days = 720 random = 360 } }
 				50 = {}
 			}
 
 			random_list = {
-				20 = { country_event = { id = story.335 days = 1440 random = 360 } }
+				20 = { 
+					modifier = { factor = 2 has_tradition = tr_artifact_finish }
+					country_event = { id = story.335 days = 1440 random = 360 } 
+				}
 				80 = {}
 			}
 		}
@@ -410,6 +421,7 @@ r_galatron = {
 			always = yes
 		}
 		diplo_weight_mult = 1.0
+		mult = value:has_artifact_tradition_finish
 	}
 
 	score = 1000
@@ -460,6 +472,7 @@ r_ancient_sword = {
 		army_morale = 0.25
 		planet_sensor_range_add = 2
 		diplo_weight_mult = 0.10
+		mult = value:has_artifact_tradition_finish
 	}
 
 	score = 1000
@@ -467,12 +480,14 @@ r_ancient_sword = {
 	active_effect = {
 		add_modifier = {
 			modifier = "ancient_sword"
+			multiplier = value:has_artifact_smurf_tradition_finish
 			days = @triumph_duration
 		}
 		custom_tooltip = relic_triumph_cooldown
 		hidden_effect = {
 			add_modifier = {
 				modifier = "relic_activation_cooldown"
+				
 				days = @triumph_duration
 			}
 		}
@@ -564,13 +579,14 @@ r_prethoryn_queen = {
 			always = yes
 		}
 		country_society_tech_research_speed = 0.5
+		mult = value:has_artifact_tradition_finish
 	}
 	triggered_country_modifier = {
 		potential = {
 			always = yes
 		}
 		weapon_swarm_weapon_fire_rate_mult = 0.05
-			mult = brood_usage
+		mult = brood_usage
 	}
 
 	score = 1000
@@ -630,6 +646,7 @@ r_unbidden_warlock = {
 		}
 		ship_speed_mult = 0.30
 		ship_weapon_range_mult = 0.30
+		mult = value:has_artifact_smurf_tradition_finish
 	}
 
 	score = 1000
@@ -637,7 +654,9 @@ r_unbidden_warlock = {
 	active_effect = {
 		add_modifier = {
 			modifier = "unbidden_ritual"
+			multiplier = value:has_artifact_smurf_tradition_finish
 			days = @triumph_duration
+			
 		}
 		custom_tooltip = relic_triumph_cooldown
 		hidden_effect = {
@@ -679,6 +698,7 @@ r_contingency_core = {
 			always = yes
 		}
 		planet_pop_assembly_mult = 1.00
+		mult = value:has_artifact_tradition_finish
 		show_only_custom_tooltip = no
 		custom_tooltip = relic_contingecy_core
 	}
@@ -688,6 +708,7 @@ r_contingency_core = {
 	active_effect = {
 		add_modifier = {
 			modifier = "contingency_calculation"
+			multiplier = value:has_artifact_smurf_tradition_finish
 			days = @triumph_duration
 		}
 		custom_tooltip = relic_triumph_cooldown
@@ -734,7 +755,8 @@ r_zro_crystal = {
 			always = yes
 		}
 		shroud_delve_cooldown = -0.5
-		custom_tooltip = relic_zro_crystal_passive
+		mult = value:has_artifact_smurf_tradition_finish
+		#custom_tooltip = relic_zro_crystal_passive
 	}
 
 	score = 1000
@@ -870,6 +892,7 @@ r_the_defragmentor = {
 	active_effect = {
 		add_modifier = {
 			modifier = "relic_defragmentor"
+			multiplier = value:has_artifact_smurf_tradition_finish
 			days = @triumph_duration
 		}
 		custom_tooltip = relic_triumph_cooldown
@@ -968,6 +991,7 @@ r_pox_sample = {
 	active_effect = {
 		add_modifier = {
 			modifier = "javorian_pox"
+			multiplier = value:has_artifact_smurf_tradition_finish
 			days = @triumph_duration
 		}
 		custom_tooltip = relic_triumph_cooldown
@@ -1010,8 +1034,9 @@ r_cryo_core = {
 			always = yes
 		}
 		colony_start_num_pops_add = 1
+		mult = value:has_artifact_tradition_finish
 		#custom_tooltip = r_cryo_core_effect
-		weapon_type_energy_weapon_fire_rate_mult = 0.2
+		weapon_type_energy_weapon_fire_rate_mult = 0.1
 	}
 
 	score = 1000
@@ -1129,6 +1154,7 @@ r_vacuum_flower = {
 			always = yes
 		}
 		country_energy_produces_mult = 0.10
+		mult = value:has_artifact_tradition_finish
 	}
 
 	score = 1000
@@ -1467,7 +1493,8 @@ r_toxic_god = {
 		potential = {
 			always = yes
 		}
-		weapon_type_strike_craft_weapon_damage_mult = 0.15
+		weapon_type_strike_craft_weapon_damage_mult = 0.2
+		mult = value:has_artifact_smurf_tradition_finish
 	}
 	
 	triggered_country_modifier = {
@@ -1537,7 +1564,8 @@ r_odryskan_crystal = {
 		potential = {
 			always = yes
 		}
-		country_rare_crystals_produces_mult = 0.15
+		country_rare_crystals_produces_mult = 0.2
+		mult = value:has_artifact_smurf_tradition_finish
 	}
 
 	score = 1000
@@ -1690,18 +1718,20 @@ r_wormhole_key = {
 	active_effect = {
 		add_modifier = {
 			modifier = "paragon_relic_wormhole_key"
-			days = 100
+			time_multiplier = value:has_artifact_tradition_finish
+			days = 120
 		}
 		custom_tooltip = relic_triumph_cooldown
 		hidden_effect = {
 			add_modifier = {
 				modifier = "relic_activation_cooldown"
+				time_multiplier = value:has_artifact_tradition_finish_dim
 				days = @triumph_duration
 			}
 		}
 		set_timed_country_flag = {
 			flag = jump_drive_allowed
-			days = 100
+			days = 120
 		}
 	}
 

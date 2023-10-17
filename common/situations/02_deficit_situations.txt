@@ -44,9 +44,9 @@ situation_energy_deficit = {
 			end = 25
 			modifier = {
 		#		planet_crime_per_pop = 0.1 #todo: doesn't exist
-				planet_researchers_physics_research_produces_add = -0.5
-				planet_researchers_society_research_produces_add = -0.5
-				planet_researchers_engineering_research_produces_add = -0.5
+				planet_researchers_phi_physics_research_produces_add = -0.5
+				planet_researchers_phi_society_research_produces_add = -0.5
+				planet_researchers_phi_engineering_research_produces_add = -0.5
 				diplo_weight_economy_mult = -0.1
 				planet_pop_assembly_reduction = 0.1
 				ship_disengage_chance_mult = -0.1
@@ -60,9 +60,9 @@ situation_energy_deficit = {
 			end = 50
 			modifier = {
 		#		planet_crime_per_pop = 0.2 #todo: doesn't exist
-				planet_researchers_physics_research_produces_add = -1
-				planet_researchers_society_research_produces_add = -1
-				planet_researchers_engineering_research_produces_add = -1
+				planet_researchers_phi_physics_research_produces_add = -1
+				planet_researchers_phi_society_research_produces_add = -1
+				planet_researchers_phi_engineering_research_produces_add = -1
 				diplo_weight_economy_mult = -0.2
 				planet_pop_assembly_reduction = 0.2
 				ship_disengage_chance_mult = -0.25
@@ -76,9 +76,9 @@ situation_energy_deficit = {
 			end = 75
 			modifier = {
 		#		planet_crime_per_pop = 0.3 #todo: doesn't exist
-				planet_researchers_physics_research_produces_add = -1.5
-				planet_researchers_society_research_produces_add = -1.5
-				planet_researchers_engineering_research_produces_add = -1.5
+				planet_researchers_phi_physics_research_produces_add = -1.5
+				planet_researchers_phi_society_research_produces_add = -1.5
+				planet_researchers_phi_engineering_research_produces_add = -1.5
 				diplo_weight_economy_mult = -0.33
 				planet_pop_assembly_reduction = 0.33
 				ship_disengage_chance_mult = -0.50
@@ -95,9 +95,9 @@ situation_energy_deficit = {
 			}
 			modifier = {
 		#		planet_crime_per_pop = 0.5 #todo: doesn't exist
-				planet_researchers_physics_research_produces_add = -2
-				planet_researchers_society_research_produces_add = -2
-				planet_researchers_engineering_research_produces_add = -2
+				planet_researchers_phi_physics_research_produces_add = -2
+				planet_researchers_phi_society_research_produces_add = -2
+				planet_researchers_phi_engineering_research_produces_add = -2
 				diplo_weight_economy_mult = -0.5
 				planet_pop_assembly_reduction = 0.5
 				ship_disengage_chance_mult = -0.75
@@ -234,9 +234,11 @@ situation_mineral_deficit = {
 					owner = { is_hive_empire = yes }
 				}
 				modifier = {
-					planet_researchers_physics_research_produces_add = -1
-					planet_researchers_society_research_produces_add = -1
-					planet_researchers_engineering_research_produces_add = -1
+					planet_researchers_phi_physics_research_produces_add = -1
+					planet_researchers_phi_society_research_produces_add = -1
+					planet_researchers_phi_engineering_research_produces_add = -1
+					planet_researchers_phi_energy_upkeep_add = 0.1
+					
 				}
 			}
 			triggered_modifier = {
@@ -286,9 +288,10 @@ situation_mineral_deficit = {
 					owner = { is_hive_empire = yes }
 				}
 				modifier = {
-					planet_researchers_physics_research_produces_add = -1.5
-					planet_researchers_society_research_produces_add = -1.5
-					planet_researchers_engineering_research_produces_add = -1.5
+					planet_researchers_phi_physics_research_produces_add = -1.5
+					planet_researchers_phi_society_research_produces_add = -1.5
+					planet_researchers_phi_engineering_research_produces_add = -1.5
+					planet_researchers_phi_energy_upkeep_add = 0.2
 				}
 			}
 			triggered_modifier = {
@@ -338,9 +341,10 @@ situation_mineral_deficit = {
 					owner = { is_hive_empire = yes }
 				}
 				modifier = {
-					planet_researchers_physics_research_produces_add = -2.5
-					planet_researchers_society_research_produces_add = -2.5
-					planet_researchers_engineering_research_produces_add = -2.5
+					planet_researchers_phi_physics_research_produces_add = -2.5
+					planet_researchers_phi_society_research_produces_add = -2.5
+					planet_researchers_phi_engineering_research_produces_add = -2.5
+					planet_researchers_phi_energy_upkeep_add = 0.3
 				}
 			}
 			triggered_modifier = {
@@ -393,9 +397,10 @@ situation_mineral_deficit = {
 					owner = { is_hive_empire = yes }
 				}
 				modifier = {
-					planet_researchers_physics_research_produces_add = -3
-					planet_researchers_society_research_produces_add = -3
-					planet_researchers_engineering_research_produces_add = -3
+					planet_researchers_phi_physics_research_produces_add = -3
+					planet_researchers_phi_society_research_produces_add = -3
+					planet_researchers_phi_engineering_research_produces_add = -3
+					planet_researchers_phi_energy_upkeep_add = 0.4
 				}
 			}
 			triggered_modifier = {
@@ -893,9 +898,9 @@ situation_consumer_goods_deficit = {
 					owner = { is_gestalt = no }
 				}
 				modifier = {
-					planet_researchers_physics_research_produces_add = -1
-					planet_researchers_society_research_produces_add = -1
-					planet_researchers_engineering_research_produces_add = -1
+					planet_researchers_phi_physics_research_produces_add = -1
+					planet_researchers_phi_society_research_produces_add = -1
+					planet_researchers_phi_engineering_research_produces_add = -1
 				}
 			}
 			triggered_modifier = {
@@ -920,9 +925,9 @@ situation_consumer_goods_deficit = {
 					owner = { is_gestalt = no }
 				}
 				modifier = {
-					planet_researchers_physics_research_produces_add = -1.5
-					planet_researchers_society_research_produces_add = -1.5
-					planet_researchers_engineering_research_produces_add = -1.5
+					planet_researchers_phi_physics_research_produces_add = -1.5
+					planet_researchers_phi_society_research_produces_add = -1.5
+					planet_researchers_phi_engineering_research_produces_add = -1.5
 				}
 			}
 			triggered_modifier = {
@@ -947,9 +952,9 @@ situation_consumer_goods_deficit = {
 					owner = { is_gestalt = no }
 				}
 				modifier = {
-					planet_researchers_physics_research_produces_add = -2.5
-					planet_researchers_society_research_produces_add = -2.5
-					planet_researchers_engineering_research_produces_add = -2.5
+					planet_researchers_phi_physics_research_produces_add = -2.5
+					planet_researchers_phi_society_research_produces_add = -2.5
+					planet_researchers_phi_engineering_research_produces_add = -2.5
 				}
 			}
 			triggered_modifier = {
@@ -974,9 +979,9 @@ situation_consumer_goods_deficit = {
 					owner = { is_gestalt = no }
 				}
 				modifier = {
-					planet_researchers_physics_research_produces_add = -3
-					planet_researchers_society_research_produces_add = -3
-					planet_researchers_engineering_research_produces_add = -3
+					planet_researchers_phi_physics_research_produces_add = -3
+					planet_researchers_phi_society_research_produces_add = -3
+					planet_researchers_phi_engineering_research_produces_add = -3
 				}
 			}
 			triggered_modifier = {

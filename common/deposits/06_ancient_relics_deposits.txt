@@ -301,7 +301,7 @@ d_mutation_vats = {
 # Artifacts Deposits
 d_artifacts_1 = {
 	resources = {
-		category = orbital_mining_deposits
+		category = orbital_artifacts_deposits
 		produces = {
 			minor_artifacts = 1
 		}
@@ -316,7 +316,7 @@ d_artifacts_1 = {
 }
 d_artifacts_2 = {
 	resources = {
-		category = orbital_mining_deposits
+		category = orbital_artifacts_deposits
 		produces = {
 			minor_artifacts = 2
 		}
@@ -331,7 +331,7 @@ d_artifacts_2 = {
 }
 d_artifacts_3 = {
 	resources = {
-		category = orbital_mining_deposits
+		category = orbital_artifacts_deposits
 		produces = {
 			minor_artifacts = 3
 		}
@@ -347,7 +347,7 @@ d_artifacts_3 = {
 
 d_artifacts_mining_1 = {
 	resources = {
-		category = orbital_mining_deposits
+		category = orbital_artifacts_deposits
 		produces = {
 			minor_artifacts = 1
 		}
@@ -363,7 +363,7 @@ d_artifacts_mining_1 = {
 
 d_artifacts_mining_2 = {
 	resources = {
-		category = orbital_mining_deposits
+		category = orbital_artifacts_deposits
 		produces = {
 			minor_artifacts = 2
 		}
@@ -379,7 +379,7 @@ d_artifacts_mining_2 = {
 
 d_artifacts_mining_3 = {
 	resources = {
-		category = orbital_mining_deposits
+		category = orbital_artifacts_deposits
 		produces = {
 			minor_artifacts = 3
 		}
@@ -401,7 +401,7 @@ d_artifacts_planet_1 = {
 	potential = { always = no }
 
 	resources = {
-		category = orbital_research_deposits
+		category = orbital_artifacts_deposits
 		produces = {
 			minor_artifacts = 1
 		}
@@ -416,7 +416,7 @@ d_artifacts_planet_2 = {
 	potential = { always = no }
 
 	resources = {
-		category = orbital_research_deposits
+		category = orbital_artifacts_deposits
 		produces = {
 			minor_artifacts = 2
 		}
@@ -431,7 +431,7 @@ d_artifacts_planet_3 = {
 	potential = { always = no }
 
 	resources = {
-		category = orbital_research_deposits
+		category = orbital_artifacts_deposits
 		produces = {
 			minor_artifacts = 3
 		}

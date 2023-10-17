@@ -35,8 +35,10 @@ gateway_0 = {
 				AND = {
 					exists = owner
 					owner = {
-						is_subject = yes
-						overlord = { is_same_value = from }
+						AND = {
+							is_subject = yes
+							overlord = { is_same_value = from }
+						}
 					}
 				}
 			}

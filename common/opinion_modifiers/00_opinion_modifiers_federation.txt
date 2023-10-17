@@ -86,6 +86,7 @@ triggered_opinion_diplo_stance_supremacy = {
 		NOR = {
 			has_defensive_pact = from
 			is_in_federation_with = from
+			FROM = { is_overlord_to = prev }
 		}
 	}
 

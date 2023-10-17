@@ -37,12 +37,14 @@ phi_criminal_expropriation = {
 	country_base_energy_produces_add = -50
 }
 phi_megacorp_competition = {
-	trade_value_mult = -0.25
+	trade_value_mult = -0.5
+	planet_crime_add = 5
 }
 Phi_nemesis_white_peace = {
-	country_unity_produces_mult = -0.30
-	country_society_research_produces_mult = -0.15
-	wars_influence_upkeep_mult = 1
+	country_unity_produces_mult = -0.75
+	country_society_research_produces_mult = -0.3
+	wars_influence_upkeep_mult = 2
+	empire_size_mult = 0.1
 }
 phi_graygoo_country = {
 	empire_size_colonies_mult = -0.9
@@ -66,9 +68,21 @@ phi_ai1 = {
 phi_ai42 = {
 	planet_building_build_speed_mult = -0.5
 }
+phi_ai50 = {
+	planet_building_build_speed_mult = -0.5
+}
+phi_ai44 = {
+	planet_building_build_speed_mult = -0.5
+}
 
+agenda_artifact_finish = {
+	starbase_shipyard_build_minor_artifacts_cost_mult = -0.1
+	country_minor_artifacts_produces_mult = 0.1
+}
 
-
+auto_planet_luxuries_boost = { 
+	icon = "gfx/interface/icons/modifiers/mod_auto_luxuries.dds"
+}
 # centralization_colony = {
 # 	icon = "gfx/interface/icons/planet_modifiers/pm_resort_planet.dds"
 # 	icon_frame = 1
@@ -79,3 +93,4 @@ phi_ai42 = {
 # 	# This only works on timed planet modifiers!
 # 	apply_modifier_to_other_planets = resort_colony_other_planets
 # }
+

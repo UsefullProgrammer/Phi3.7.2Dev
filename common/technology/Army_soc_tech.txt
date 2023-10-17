@@ -8,7 +8,7 @@ tech_ground_offence_planning = {
 
 	modifier = {
 		planet_army_build_speed_mult = 0.25
-		army_attack_health_mult = 1
+		army_attack_health_mult = 0.25
 		army_attack_damage_mult = 0.25
 	}
 	weight_modifier = {
@@ -17,10 +17,13 @@ tech_ground_offence_planning = {
 			is_militarist = yes
 		}
 		modifier = {
-			factor = 0.5
+			factor = 0.1
 			is_pacifist = yes
 		}
-		
+		modifier = {
+			factor = 0.5
+			is_militarist = no
+		}
 	}
 
 	ai_weight = {
@@ -75,7 +78,7 @@ tech_ground_offence_planning_3 = {
 	modifier = {
 		
 		planet_army_build_speed_mult = 0.25
-		army_attack_morale_mult = 1
+		army_attack_morale_mult = 0.25
 		army_attack_damage_mult = 1
 	}
 	weight_modifier = {

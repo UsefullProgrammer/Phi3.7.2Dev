@@ -189,3 +189,64 @@ d_phi_archaeology_site = {
 		job_archaeo_unit_add = 1
 	}
 }
+
+d_arcane_replicator = {
+	is_for_colonizable = yes
+	icon = "d_station_reactor"
+	category = deposit_cat_rare
+
+	potential = { always = no }
+
+	resources = {
+		category = hab_deposits
+		produces = {
+			alloys = 3
+		}
+		produces = {
+			trigger = {
+				exists = owner
+				owner = {
+					country_uses_consumer_goods = yes
+				}
+			}
+			consumer_goods = 6
+		}
+		produces = {
+			trigger = {
+				exists = owner
+				owner = {
+					is_hive_empire = yes
+					country_uses_consumer_goods = no
+				}
+			}
+			food = 10
+		}
+		produces = {
+			trigger = {
+				exists = owner
+				owner = {
+					OR = {
+						AND ={
+							is_machine_empire = yes
+							country_uses_consumer_goods = no
+						}
+						is_ai = yes
+					}
+				}
+			}
+			energy = 10
+		}
+		
+		produces = {
+			trigger = {
+				exists = owner
+				owner = {
+					any_owned_pop = {
+						has_trait = trait_exotic_metabolism
+					}
+				}
+			}
+			exotic_gases = 1
+		}
+	}
+}

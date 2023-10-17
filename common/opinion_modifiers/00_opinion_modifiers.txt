@@ -3856,7 +3856,6 @@ triggered_opinion_galatron_denier = {
 triggered_opinion_crime_corp = {
 	trigger = {
 		is_gestalt = no
-		is_megacorp = no
 		FROM = {
 			is_criminal_syndicate = yes
 		}
@@ -3876,7 +3875,6 @@ opinion_crime_corp_branch_offices = {
 			is_criminal_syndicate = yes
 		}
 		is_gestalt = no
-		is_megacorp = no
 	}
 
 	opinion = {

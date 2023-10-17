@@ -38,7 +38,7 @@ fleet_event = {
 	trigger = {
 		has_first_contact_dlc = yes
 		is_cloaked = no
-		
+		exists = from
 		from = {
 			exists = solar_system
 			solar_system = {

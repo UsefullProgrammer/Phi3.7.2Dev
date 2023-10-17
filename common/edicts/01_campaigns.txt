@@ -419,6 +419,50 @@ war_drone_campaign = {
 	}
 }
 
+archeologist_spedition = {
+	length = @EdictDuration
+	icon = "GFX_resource_minor_artifacts"
+	potential = {
+		has_ancrel = yes
+	}
+	resources = {
+		category = campaigns
+		upkeep = {
+			energy = @campaignCost
+			multiplier = value:edict_size_effect
+		}
+	}
+	modifier = {
+		country_base_minor_artifacts_produces_add = 1
+	}
+	# trigger = {
+	# 	potential = {
+	# 		has_country_flag = have_archaeostudies_faculty
+	# 	}
+	# 	modifier = {
+	# 		country_base_minor_artifacts_produces_add = 0.1
+	# 		multiplier = value:edict_size_effect
+	# 	}
+	# }
+	prerequisites = {
+		"tech_archaeostudies"
+	}
+
+	ai_weight = {
+		weight = 0
+		modifier = {
+			weight = @EdictMedPrio
+			has_monthly_income = {
+				resource = minor_artifacts
+				value < 100
+			}
+			has_monthly_income = {
+				resource = energy
+				value > 50
+			}
+		}
+	}
+}
 
 ##########################################################################
 # Rare resource edicts

@@ -1163,7 +1163,7 @@ sm_nebula_alloy_refinery_desc:0 "零重力下的高科技合金精炼厂"
 sm_civilian_anchorage:0 "民用锚地"
 sm_civilian_anchorage_desc:0 "民用锚地，也称为空间港口。"
 sm_civilian_shipyard:0 "民用造船厂"
-sm_civilian_shipyard_desc:0 "为虚空居民的人口生产能源销售船。民用造船厂越多，产生的能源越少。建造民用船需要0.5个造船厂，而建造军舰则需要2个造船厂。"
+sm_civilian_shipyard_desc:0 "船を人口に売ることでエネルギーを生産します（帝国内の人口が多いほど、より多くのエネルギーを生産します）。市民船港が多いほど、生産量は減少します（唯一、虚空の居住者または虚空生まれの人々が1つ以上建設することができます）"
 
 sm_starm_science_hub:0 "研究中心"
 sm_starm_science_hub_desc:0 "高科技设施，我们的科学家在此会面，推进不同领域的研究。\n"

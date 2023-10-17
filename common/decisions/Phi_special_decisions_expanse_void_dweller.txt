@@ -8,8 +8,8 @@ decision_upgrade_habitat_3 = {
 		category = decisions
 		cost = {
 			
-			influence = 100
-			alloys = 1500
+			influence = 25
+			alloys = 1000
 			mult = owner.value:habitat_build_cost_mult
 		}
 	}
@@ -26,11 +26,11 @@ decision_upgrade_habitat_3 = {
 	allow = {
 		free_district_slots = 0
 		has_major_upgraded_capital = yes
-		owner = { has_ascension_perk = ap_voidborn }
+		owner = { is_void_born = yes}
 	}
 
 	effect = {
-		custom_tooltip = decision_upgrade_habitat_2_effects_short
+		custom_tooltip = decision_upgrade_habitat_3_effects_short
 		hidden_effect = {
 			set_planet_flag = advanced_habitat_3
 			increase_habitat_level_effect = yes
@@ -45,13 +45,12 @@ decision_upgrade_habitat_4 = {
 	owned_planets_only = yes
 	icon = decision_satellite_in_orbit
 
-	enactment_time = 2160
+	enactment_time = 1440
 	resources = {
 		category = decisions
 		cost = {
-			
-			influence = 125
-			alloys = 1750
+			influence = 25
+			alloys = 1250
 			mult = owner.value:habitat_build_cost_mult
 		}
 	}
@@ -68,11 +67,11 @@ decision_upgrade_habitat_4 = {
 	allow = {
 		free_district_slots = 0
 		has_major_upgraded_capital = yes
-		owner = { has_ascension_perk = ap_voidborn }
+		owner = { is_void_born = yes}
 	}
 
 	effect = {
-		custom_tooltip = decision_upgrade_habitat_2_effects_short
+		custom_tooltip = decision_upgrade_habitat_3_effects_short
 		hidden_effect = {
 			set_planet_flag = advanced_habitat_4
 			increase_habitat_level_effect = yes
@@ -87,12 +86,12 @@ decision_upgrade_habitat_5 = {
 	owned_planets_only = yes
 	icon = decision_satellite_in_orbit
 
-	enactment_time = 2700
+	enactment_time = 2880
 	resources = {
 		category = decisions
 		cost = {
-			influence = 150
-			alloys  = 2000
+			influence = 25
+			alloys  = 5000
 			sr_dark_matter = 50
 			mult = owner.value:habitat_build_cost_mult
 		}
@@ -110,11 +109,11 @@ decision_upgrade_habitat_5 = {
 	allow = {
 		free_district_slots = 0
 		has_major_upgraded_capital = yes
-		owner = { has_ascension_perk = ap_voidborn }
+		owner = { is_void_born = yes}
 	}
 
 	effect = {
-		custom_tooltip = decision_upgrade_habitat_2_effects_short
+		custom_tooltip = decision_upgrade_habitat_4_effects_short
 		hidden_effect = {
 			set_planet_flag = advanced_habitat_5
 			increase_habitat_level_effect = yes

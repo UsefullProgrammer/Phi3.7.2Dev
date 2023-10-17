@@ -1,0 +1,132 @@
+namespace = phigo_civic_event
+
+#root owner winning ship
+#root.FROMFROM # ship
+#root.FROMFROM.fleet.leader # 
+country_event = {
+	id = phigo_civic_event.1
+	hide_window = yes
+	is_triggered_only = yes
+	trigger = {
+		exists = ROOT
+		ROOT = { is_scavenger = yes }
+	}
+	immediate = {
+		ROOT = {#FROMFROM = { # Winning ship.
+
+			# is_scavenger
+			if = {
+				if = {			
+					#limit = { is_scavenger = yes }
+					add_resource = { 
+						alloys = @alloys_scavengers
+						#mult = value:agenda_scavengers
+					}
+					FROMFROM = {
+						repair_percentage = @repair_scavengers
+					}
+				}
+			}
+		}
+	}
+}
+country_event = {
+	id = phigo_civic_event.2
+	hide_window = yes
+	is_triggered_only = yes
+	trigger = {
+		exists = ROOT
+		ROOT = { is_country_type = swarm }
+	}
+	immediate = {
+		ROOT = {
+			# is swarm
+			if = {
+				if = {
+					FROMFROM = { #FROMFROM = { # Winning ship.
+						repair_percentage = @repair_swarms
+					}
+				}
+			}
+		}
+	}
+}
+				# Scholar of War / Scholar of War II
+				# if = {
+				# 	limit = {
+				# 		OR = {
+				# 			has_trait = leader_trait_scholar_of_war
+				# 			has_trait = leader_trait_scholar_of_war_2
+				# 			has_trait = leader_trait_scholar_of_war_3
+				# 		}
+				# 	}
+				# 	if = {
+				# 		limit = { has_trait = leader_trait_scholar_of_war }
+				# 		add_experience = @trait_scholar_of_war_amt
+				# 	}
+				# 	else = {
+				# 		add_experience = @trait_scholar_of_war_2_amt
+				# 	}
+				# }
+
+				# Corsair / Corsair II
+				# if = {
+				# 	limit = {
+				# 		OR = {
+				# 			has_trait = leader_trait_corsair
+				# 			has_trait = leader_trait_corsair_2
+				# 			has_trait = leader_trait_corsair_3
+				# 		}
+				# 		ROOT.FROM = { # Owner of losing ship.
+				# 			is_default_or_fallen = yes
+				# 		}
+				# 	}
+				# 	if = {
+				# 		limit = { has_trait = leader_trait_corsair }
+				# 		ROOT = { # Owner of winning ship.
+				# 			add_resource = {
+				# 				energy = @trait_corsair_amt
+				# 				mult = value:hells_heart_effect
+				# 			}
+				# 		}
+				# 	}
+				# 	else = {
+				# 		ROOT = { # Owner of winning ship.
+				# 			add_resource = {
+				# 				energy = @trait_corsair_2_amt
+				# 				mult = value:hells_heart_effect
+				# 			}
+				# 		}
+				# 	}
+				# }
+
+				# Zealot / Zealot II
+				# if = {
+				# 	limit = {
+				# 		OR = {
+				# 			has_trait = leader_trait_par_zealot
+				# 			has_trait = leader_trait_par_zealot_2
+				# 			has_trait = leader_trait_par_zealot_3
+				# 		}
+				# 		ROOT.FROM = { # Owner of losing ship.
+				# 			is_default_or_fallen = yes
+				# 		}
+				# 	}
+					
+				# 	ROOT = {
+				# 		if = {
+				# 			limit = { PREV = { has_trait = leader_trait_par_zealot } }
+				# 			add_resource = {
+				# 				unity = @trait_zealot_amt
+				# 				mult = value:calculate_ethics_divergence
+				# 			}
+				# 		}
+				# 		else = {
+				# 			add_resource = {
+				# 				unity = @trait_zealot_2_amt
+				# 				mult = value:calculate_ethics_divergence
+				# 			}
+				# 		}
+				# 		clear_variable = ethics_divergence_mult
+				# 	}
+				# }

@@ -52,72 +52,8 @@ decision_planet_luxuries_boost = {
 	resources = {
 		category = decisions
 		cost = {
-			trigger = {
-				num_pops < 10
-			}
-			consumer_goods = 100
-		}
-		cost = {
-			trigger = {
-				num_pops >= 10
-				num_pops < 20
-			}
-			consumer_goods = 200
-		}
-		cost = {
-			trigger = {
-				num_pops >= 20
-				num_pops < 30
-			}
-			consumer_goods = 300
-		}
-		cost = {
-			trigger = {
-				num_pops >= 30
-				num_pops < 40
-			}
-			consumer_goods = 400
-		}
-		cost = {
-			trigger = {
-				num_pops >= 40
-				num_pops < 50
-			}
-			consumer_goods = 500
-		}
-		cost = {
-			trigger = {
-				num_pops >= 50
-				num_pops < 60
-			}
-			consumer_goods = 600
-		}
-		cost = {
-			trigger = {
-				num_pops >= 60
-				num_pops < 70
-			}
-			consumer_goods = 700
-		}
-		cost = {
-			trigger = {
-				num_pops >= 70
-				num_pops < 85
-			}
-			consumer_goods = 800
-		}
-		cost = {
-			trigger = {
-				num_pops >= 85
-				num_pops < 100
-			}
-			consumer_goods = 900
-		}
-		cost = {
-			trigger = {
-				num_pops >= 100
-			}
-			consumer_goods = 1000
+			consumer_goods = 10
+			mult = value:pop_size_10to10
 		}
 	}
 
@@ -139,6 +75,12 @@ decision_planet_luxuries_boost = {
 			factor = 1000
 			free_amenities <= -5
 			owner = { has_monthly_income = { resource = consumer_goods value > 0 } }
+		}
+		modifier = {
+			factor = 10
+			free_amenities <= 3
+			planet_stability <= 25
+			owner = { has_monthly_income = { resource = consumer_goods value > 1 } }
 		}
 		modifier = {
 			factor = 1000

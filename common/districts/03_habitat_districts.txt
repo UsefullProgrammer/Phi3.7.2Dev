@@ -45,7 +45,42 @@ district_hab_housing = {
 		planet_structures_upkeep_mult = -0.03
 		planet_housing_add = 8
 	}
+	# triggered_planet_modifier = {
+	# 	potential = {
+	# 		exists = owner
+	# 		owner = {
+	# 			is_void_dweller_empire = yes
+	# 		}
 
+	# 	}
+	# 	modifier = {
+	# 		planet_housing_add = 1
+	# 	}
+	# }
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				 is_gestalt = no
+	 		}
+		}
+		modifier = {
+			job_clerk_add = 1
+		}
+	}
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+			 	is_ai = yes
+				 is_gestalt = no
+	 		}
+			years_passed < 1 #fix start bad
+		}
+		modifier = {
+			job_clerk_add = -1
+		}
+	}
 	triggered_planet_modifier = {
 		potential = {
 			has_designation = col_habitat_farming
@@ -697,6 +732,21 @@ district_hab_science = {
 
 	potential = {
 		uses_district_set = habitat
+	}
+
+	prerequisites = {
+		tech_basic_science_lab_1
+	}
+
+	allow = {
+		hidden_trigger = {
+			OR = {
+				NOT = { exists = owner }
+				owner = {
+					has_technology = tech_basic_science_lab_1
+				}
+			}
+		}
 	}
 
 	resources = {

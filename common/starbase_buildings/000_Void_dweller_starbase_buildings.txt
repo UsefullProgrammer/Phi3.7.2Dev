@@ -7,13 +7,14 @@ nebula_alloy_refinery = {
 		exists = owner
 		owner = { 
             has_technology = tech_space_mining_1 
-			OR = {
-				has_origin = origin_void_dwellers
-				has_ascension_perk = ap_voidborn
-			}
+			is_void_born = yes
         }
 	}
-
+	possible = {
+		owner = {
+			has_policy_flag = Automation_Nothing 
+		}
+	}
 	resources = {
 		category = starbase_buildings
 		cost = {
@@ -49,7 +50,7 @@ nebula_alloy_refinery = {
 		potential = {
 			exists = owner
 			owner = { 
-				has_ascension_perk = ap_voidborn 
+				is_void_born = yes
 				is_gestalt = no
 			}
 		}
@@ -59,7 +60,7 @@ nebula_alloy_refinery = {
 		potential = {
 			exists = owner
 			owner = {
-				has_ascension_perk = ap_voidborn 
+				is_void_born = yes
 				is_hive_empire = yes
 			}
 		}
@@ -72,7 +73,7 @@ nebula_alloy_refinery = {
 		potential = {
 			exists = owner
 			owner = {
-				has_ascension_perk = ap_voidborn 
+				is_void_born = yes
 				is_machine_empire = yes
 			}
 		}
@@ -94,16 +95,16 @@ starm_culture_booster = {
 	potential = {
 		exists = owner
 		owner = {
-			OR = {
-				has_origin = origin_void_dwellers
-				has_ascension_perk = ap_voidborn
-			}
-
+			is_void_born = yes
+			is_gestalt = no
 			#has_technology = tech_hypercomms_forum
 		}
 	}
 	
 	possible = {
+		owner = {
+			has_policy_flag = Automation_Nothing 
+		}
 		has_starbase_module = starm_culture_hub
 	}
 
@@ -122,7 +123,7 @@ starm_culture_booster = {
 		potential = {
 			exists = owner
 			owner = { 
-				has_ascension_perk = ap_voidborn 
+				is_void_born = yes
 				is_gestalt = no
 			}
 		}
@@ -156,15 +157,15 @@ starm_science_booster = {
 	potential = {
 		exists = owner
 		owner = {
-			OR = {
-				has_origin = origin_void_dwellers
-				has_ascension_perk = ap_voidborn
-			}
+			is_void_born = yes
 			#has_technology = tech_space_science_2
 		}
 	}
 	
 	possible = {
+		owner = {
+			has_policy_flag = Automation_Nothing 
+		}
 		has_starbase_module = starm_science_hub
 	}
 
@@ -184,7 +185,7 @@ starm_science_booster = {
 			exists = owner
 			owner = { 
 				AND = {
-					has_ascension_perk = ap_voidborn 
+					is_void_born = yes
 					is_gestalt = no
 					has_policy_flag = focus_physics
 				}
@@ -198,7 +199,7 @@ starm_science_booster = {
 			exists = owner
 			owner = { 
 				AND = {
-					has_ascension_perk = ap_voidborn 
+					is_void_born = yes
 					is_gestalt = no
 					has_policy_flag = focus_engineering
 				}
@@ -211,7 +212,7 @@ starm_science_booster = {
 		potential = {
 			exists = owner
 			owner = { 
-				has_ascension_perk = ap_voidborn 
+				is_void_born = yes
 				is_hive_empire = yes 
 				has_policy_flag = focus_engineering
 			}
@@ -225,7 +226,7 @@ starm_science_booster = {
 		potential = {
 			exists = owner
 			owner = { 
-				has_ascension_perk = ap_voidborn 
+				is_void_born = yes
 				is_machine_empire = yes 
 				has_policy_flag = focus_engineering
 			}
@@ -238,7 +239,7 @@ starm_science_booster = {
 		potential = {
 			exists = owner
 			owner = { 
-				has_ascension_perk = ap_voidborn 
+				is_void_born = yes
 				is_hive_empire = yes 
 				has_policy_flag = focus_physics
 			}
@@ -252,7 +253,7 @@ starm_science_booster = {
 		potential = {
 			exists = owner
 			owner = { 
-				has_ascension_perk = ap_voidborn 
+				is_void_born = yes
 				is_machine_empire = yes 
 				has_policy_flag = focus_physics
 			}
@@ -284,12 +285,14 @@ Governmental_Orbital_Exchange_Market = {
 	potential = {
 		exists = owner
 		owner = { 
-            OR = {
-				has_origin = origin_void_dwellers
-				has_ascension_perk = ap_voidborn
-			}
+            is_void_born = yes
 			is_gestalt = no
         }
+	}
+	possible = { 
+		owner = {
+			has_policy_flag = Automation_Nothing 
+		}
 	}
 	resources = {
 		category = starbase_buildings
@@ -307,7 +310,7 @@ Governmental_Orbital_Exchange_Market = {
 		potential = {
 			exists = owner
 			owner = { 
-				has_ascension_perk = ap_voidborn 
+				is_void_born = yes
 				is_gestalt = no
 			}
 		}
@@ -327,11 +330,13 @@ Governmental_diplomatic_asset = {
 	potential = {
 		exists = owner
 		owner = { 
-            OR = {
-				has_origin = origin_void_dwellers
-				has_ascension_perk = ap_voidborn
-			}
+            is_void_born = yes
         }
+	}
+	possible = {
+		owner = {
+			has_policy_flag = Automation_Nothing 
+		}
 	}
 	resources = {
 		category = starbase_buildings
@@ -348,7 +353,7 @@ Governmental_diplomatic_asset = {
 		potential = {
 			exists = owner
 			owner = { 
-				has_ascension_perk = ap_voidborn 
+				is_void_born = yes
 				is_gestalt = no
 				owner = { is_megacorp = no }
 			}
@@ -359,14 +364,36 @@ Governmental_diplomatic_asset = {
 		potential = {
 			exists = owner
 			owner = { 
-				has_ascension_perk = ap_voidborn 
+				is_void_born = yes
 				is_megacorp = yes
+				is_gestalt = no
 			}
 		}
 		modifier = {
 			job_manager_add = 1
 		}
 	}
+	triggered_system_modifier = {
+		potential = {
+			exists = owner
+			owner = { 
+				is_void_born = yes
+				is_machine_empire = yes
+			}
+		}
+		job_maintenance_drone_add = 1
+	}
+	triggered_system_modifier = {
+		potential = {
+			exists = owner
+			owner = { 
+				is_void_born = yes
+				is_hive_empire = yes
+			}
+		}
+		job_synapse_drone_add = 1
+	}
+	
 	country_modifier = {
 		diplo_weight_envoys_mult = 0.025
 	}
@@ -381,12 +408,14 @@ Governmental_manager_asset = {
 	potential = {
 		exists = owner
 		owner = { 
-            OR = {
-				has_origin = origin_void_dwellers
-				has_ascension_perk = ap_voidborn
-			}
+            is_void_born = yes
 			is_gestalt = no
         }
+	}
+	possible = {
+		owner = {
+			has_policy_flag = Automation_Nothing 
+		}
 	}
 	resources = {
 		category = starbase_buildings
@@ -404,7 +433,7 @@ Governmental_manager_asset = {
 		potential = {
 			exists = owner
 			owner = { 
-				has_ascension_perk = ap_voidborn 
+				is_void_born = yes
 				is_gestalt = no
 			}
 		}
@@ -416,7 +445,7 @@ Governmental_manager_asset = {
 			exists = owner
 			owner = { 
 				is_megacorp = no 
-				has_ascension_perk = ap_voidborn 
+				is_void_born = yes
 				is_gestalt = no
 			}
 		}
@@ -428,7 +457,7 @@ Governmental_manager_asset = {
 		potential = {
 			exists = owner
 			owner = { 
-				has_ascension_perk = ap_voidborn 
+				is_void_born = yes
 				owner = { is_megacorp = yes }
 			}
 		}
@@ -452,12 +481,15 @@ Research_relic = {
 		exists = owner
 		owner = { 
             OR = {
-				has_origin = origin_void_dwellers
-				has_ascension_perk = ap_voidborn
+				is_void_born = yes
+				has_tradition = tr_artifact_efficient_extraction
 			}
         }
 	}
 	possible = {
+		#owner = {
+#			has_policy_flag = Automation_Nothing
+#		}
 		owner = { has_technology = tech_archaeostudies }
 	}
 	resources = {
@@ -477,7 +509,7 @@ Research_relic = {
 		potential = {
 			exists = owner
 			owner = { 
-				has_ascension_perk = ap_voidborn 
+				is_void_born = yes
 				is_gestalt = no
 			}
 		}
@@ -487,7 +519,7 @@ Research_relic = {
 		potential = {
 			exists = owner
 			owner = { 
-				has_ascension_perk = ap_voidborn 
+				is_void_born = yes
 				is_hive_empire = yes 
 			}
 		}
@@ -500,7 +532,7 @@ Research_relic = {
 		potential = {
 			exists = owner
 			owner = { 
-				has_ascension_perk = ap_voidborn 
+				is_void_born = yes
 				is_machine_empire = yes 
 			}
 		}
@@ -513,6 +545,131 @@ Research_relic = {
 	}
 	ai_weight = {
 		weight = 0 #use same weight here - ai weighting is done in starbase_types.txt
+	}
+}
+
+civilian_shipyard = {
+	icon = "GFX_civilian_starbase_shipyard"
+	#section = "ASSEMBLYYARD_STARBASE_SECTION"
+	construction_days = 180
+	initial = no
+
+	potential = {
+		exists = owner
+		owner = { 
+			is_gestalt = no
+		}
+	}
+	possible = {
+		exists = owner
+		owner = {
+			has_policy_flag = Automation_Nothing 
+		}
+		owner = { 
+			OR = {
+				AND ={
+					is_void_dweller_empire = yes
+					count_starbase_buildings = { type = civilian_shipyard include_being_constructed = yes count < 10 }
+				}
+				NOT = {
+					any_owned_starbase = {
+						NOT = { is_same_value = root }
+						OR = {
+							has_starbase_building = civilian_shipyard
+						}
+					}
+				}
+			}
+		}
+	}
+	abort_construction_trigger = {
+		owner = {
+			count_starbase_buildings = {
+				type = recruitment_office
+				count > 10
+				include_being_constructed = yes
+			}
+		}
+	}
+	resources = {
+		category = starbase_modules
+		cost = {
+			alloys = 50
+			influence = 50
+		}
+		produces = {
+			energy = 0.5
+			mult = value:Count_pop_Shypiard_modifier
+		}
+		produces = {
+			energy = 0.25
+			mult = value:Count_pop_Shypiard_universal_modifier
+		}
+		upkeep = {
+			alloys = 1
+			energy = 2
+		}
+	}
+	orbit_modifier = {
+		ship_hull_regen_add_perc = 0.1
+		ship_armor_regen_add_perc = 0.1
+	}
+	# country_modifier = {
+		
+	# }
+	station_modifier = {
+		starbase_shipyard_build_speed_mult = 0.1
+	}
+	country_modifier = {
+		country_naval_cap_add = 4
+		job_clerk_spaceship_per_pop = 0.02
+		empire_size_add = 1
+		piracy_growth_mult = 1
+	}
+
+	ai_weight = {
+		weight = 50 #use same weight here - ai weighting is done in starbase_types.txt
+		modifier = {
+			factor = 100
+			owner = {
+				OR = {
+					count_owned_starbase = {
+						count = 0
+						limit = { has_starbase_building = civilian_shipyard }
+					}
+					AND = {
+						controlled_systems > 30
+						count_owned_starbase = {
+							count < 2
+							limit = { has_starbase_building = civilian_shipyard }
+						}
+					}
+					AND = {
+						controlled_systems > 60
+						count_owned_starbase = {
+							count < 3
+							limit = { has_starbase_building = civilian_shipyard }
+						}
+					}
+				}
+			}
+		}
+		modifier = {
+			factor = 3
+			has_starbase_module = shipyard
+			count_starbase_modules = {
+				count > 1
+				type = shipyard
+			}
+		}
+		modifier = {
+			factor = 3
+			has_starbase_module = shipyard
+			count_starbase_modules = {
+				count > 2
+				type = shipyard
+			}
+		}
 	}
 }
 

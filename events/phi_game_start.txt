@@ -28,7 +28,13 @@ event = {
 				#add_modifier = { modifier = phi_pm_atmospheric_pollution }
 				if = {
 					limit = {
-						NOT = { owner = { has_origin = origin_void_dwellers } } #gobbi non volevo darglielo ma il deposit da risorsa rara quindi lascio così per ora.
+						owner = { 
+							NOR = {
+								has_origin = origin_void_dwellers #il deposito phi_pm_atmospheric non ha senso in un habitat
+								is_primitive = yes #il deposito phi_pm_atmospheric non ha senso in un primitivo
+								is_eager_explorer_empire = yes # non hanno avuto tempo di inquinare
+							} 
+						} 
 					}
 					add_modifier = { modifier = phi_pm_atmospheric_pollution }
 				}
@@ -56,7 +62,7 @@ event = {
 		set_global_flag = phi_border_gore_disallowed
 		set_global_flag = phi_sublimation_allowed
 		set_global_flag = phi_emperor_win_allowed
-		set_global_flag = phi_realistic_upkeep_researcher_disallowed
+		set_global_flag = phi_realistic_upkeep_researcher
 		
 		every_country = {
 			limit = { is_ai = no }

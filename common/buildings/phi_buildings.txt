@@ -693,3 +693,213 @@ building_physics_lab_3 = {
 		text = job_physics_calculator_effect_desc
 	}
 }
+building_archaeo_industry = {
+	base_buildtime = @b2_time
+
+	category = manufacturing
+
+	potential = {
+		NOR = {
+			has_modifier = resort_colony
+			has_modifier = slave_colony
+			has_modifier = crucible_colony
+		}
+		exists = owner
+		owner = {
+			has_tradition = tr_artifact_creation
+		}
+	}
+
+	destroy_trigger = {
+		exists = owner
+		OR = {
+			has_modifier = resort_colony
+			has_modifier = slave_colony
+			has_modifier = crucible_colony
+			NOT = { owner = { has_tradition = tr_artifact_creation  } }
+		}
+	}
+	country_modifier = {
+		country_resource_max_minor_artifacts_add = 750
+	}
+	allow = {
+		has_upgraded_capital = yes
+	}
+
+	resources = {
+		category = planet_buildings
+		cost = {
+			minerals = @b3_minerals
+			minor_artifacts = @b2_rare_cost
+		}
+		upkeep = {
+			energy = @b2_upkeep
+		}
+	}
+	upgrades = {
+		building_archaeo_industry_2
+	}
+	planet_modifier = {
+		job_archaeocreator_add = 2
+	}
+}
+
+building_archaeo_industry_2 = {
+	base_buildtime = @b4_time
+	can_build = no
+	category = manufacturing
+
+	potential = {
+		NOR = {
+			has_modifier = resort_colony
+			has_modifier = slave_colony
+			has_modifier = crucible_colony
+		}
+		exists = owner
+		owner = {
+			has_tradition = tr_artifact_creation
+		}
+	}
+
+	destroy_trigger = {
+		exists = owner
+		OR = {
+			has_modifier = resort_colony
+			has_modifier = slave_colony
+			has_modifier = crucible_colony
+			NOT = { owner = { has_tradition = tr_artifact_creation  } }
+		}
+	}
+	country_modifier = {
+		country_resource_max_minor_artifacts_add = 1500
+	}
+	allow = {
+		has_upgraded_capital = yes
+	}
+
+	resources = {
+		category = planet_buildings
+		cost = {
+			minerals = @b4_minerals
+			minor_artifacts = @b2_rare_cost
+			sr_dark_matter = @b2_rare_cost
+		}
+		upkeep = {
+			energy = @b4_upkeep
+			sr_dark_matter = 0.5
+		}
+	}
+
+	planet_modifier = {
+		job_archaeocreator_add = 4
+	}
+}
+
+phi_building_archaeostudies_faculty = {
+	base_buildtime = @b2_time
+
+	category = research
+
+	base_cap_amount = 1
+
+	potential = {
+		NOR = {
+			has_modifier = resort_colony
+			has_modifier = slave_colony
+			has_modifier = crucible_colony
+		}
+		exists = owner
+		owner = { has_tradition = tr_artifact_finish } #permit over build archeostudies
+	}
+						
+	destroy_trigger = {
+		exists = owner
+		OR = {
+			has_modifier = resort_colony
+			has_modifier = slave_colony
+			has_modifier = crucible_colony
+			NAND ={
+				is_planet_class = pc_relic
+				owner = { has_tradition = tr_artifact_finish }
+			}
+			owner = { NOT = { has_tradition = tr_artifact_finish  } }
+		}
+		
+	}
+	# convert = {
+	# 	building_archaeostudies_faculty
+	# }
+	allow = {
+		has_upgraded_capital = yes
+			is_planet_class = pc_relic
+	}
+
+	resources = {
+		category = planet_buildings
+		cost = {
+			minerals = @b2_minerals
+			minor_artifacts = @b2_rare_cost
+		}
+		upkeep = {
+			energy = @b4_upkeep
+		}
+	}
+
+	inline_script = {
+		script = jobs/archaeoengineers_add
+		BASE_AMOUNT = 3
+		AP_AMOUNT = 2
+	}
+
+	country_modifier = {
+		category_archaeostudies_research_speed_mult = 1.0
+		country_resource_max_minor_artifacts_add = 1000
+	}
+
+	triggered_country_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				has_ascension_perk = ap_archaeoengineers
+			}
+		}
+		country_resource_max_minor_artifacts_add = 2000
+	}
+
+	triggered_country_modifier = {
+		potential = { planet = { is_planet_class = pc_relic } }
+		category_archaeostudies_research_speed_mult = 0.5
+	}
+
+	prerequisites = {
+		"tech_archaeostudies"
+	}
+
+	triggered_desc = {
+		trigger = {
+			exists = owner
+			owner = { is_gestalt = no }
+		}
+		text = job_archaeoengineers_effect_desc
+	}
+
+	triggered_desc = {
+		trigger = {
+			exists = owner
+			owner = { is_hive_empire = yes }
+		}
+		text = job_archaeo_drone_effect_desc
+	}
+
+	triggered_desc = {
+		trigger = {
+			exists = owner
+			owner = { is_machine_empire = yes }
+		}
+		text = job_archaeo_unit_effect_desc
+	}
+
+	triggered_desc = {
+		text = building_archaeostudies_faculty_relic_effect
+	}
+}

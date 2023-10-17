@@ -328,6 +328,15 @@ solar_panel_network = {
 			}
 			energy = 6
 		}
+		produces = {
+			trigger = {
+				exists = owner
+				owner = {
+					has_technology = tech_archaeo_dimensional_space
+				}
+			}
+			energy = 3
+		}
 	}
 
 
@@ -375,7 +384,15 @@ trading_hub = {
 		trade_value_add = 0.5
 		mult = value:councilor_level|TYPE|councilor_trading_posts|
 	}
-	
+	triggered_station_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				has_technology = tech_archaeo_dimensional_space
+			}
+		}
+		trade_value_add = 1
+	}
 	triggered_station_modifier = {
 		potential = {
 			exists = owner
@@ -383,7 +400,9 @@ trading_hub = {
 		}
 		trade_value_add = 1
 	}
-
+	system_modifier = {
+		trade_value_mult = 0.01
+	}
 
 	ai_weight = {
 		weight = 100 #use same weight here - ai weighting is done in starbase_types.txt
@@ -434,9 +453,9 @@ detection_array = {
 	ai_build_at_chokepoint = yes
 	ai_build_outside_chokepoint = yes
 	ai_weight = {
-		weight = 100 #use same weight here - ai weighting is done in starbase_types.txt
+		weight = 10 #use same weight here - ai weighting is done in starbase_types.txt
 		modifier = {
-			add = 1000
+			add = 10
 			owner = {
 				NOT = {
 					any_owned_starbase = {
@@ -549,6 +568,7 @@ defense_post = {
 }
 
 pd_battery = {
+	icon = "GFX_spaceport_automated_defenses"
 	section = "PD_STARBASE_SECTION"
 	construction_days = 180
 

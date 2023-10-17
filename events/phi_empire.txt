@@ -37,3 +37,87 @@ country_event = {
 		win = yes
 	}
 }
+country_event = {
+	id = phi_empire.10
+	title = "phi_empire.10name"
+	desc = "phi_empire.10desc"
+	hide_window = no
+	picture = GFX_evt_satellite_in_orbit
+	show_sound = event_ship_bridge
+	location = event_target:found_pc_relic
+	#prev
+	#event_target:found_pc_relic
+
+	is_triggered_only = yes
+	option = {
+		name = EXCELLENT
+	}
+}
+country_event = {
+	id = phi_empire.11
+	title = "phi_empire.10name"
+	desc = "phi_empire.10desc"
+	hide_window = yes
+	picture = GFX_evt_satellite_in_orbit
+	show_sound = event_ship_bridge
+	location = event_target:found_pc_relic
+	#prev
+	#event_target:found_pc_relic
+
+	is_triggered_only = yes
+	immediate = {
+		random_system = {
+			limit = { 
+				has_planet_class = pc_relic 
+				is_surveyed = {
+					who = prev
+					status = no
+				}
+			}
+			weights = {
+				base = 1
+				modifier = { factor = 0.1 has_owner = yes }
+				modifier = {
+					factor = 100
+					distance = {
+						source = root.capital_scope
+						max_distance <= 60
+						type = euclidean
+					}
+				}
+				modifier = {
+					factor = 10
+					distance = {
+						source = root.capital_scope
+						min_distance >= 60
+						max_distance <= 120
+						type = euclidean
+					}
+				}
+				modifier = {
+					factor = 0.5
+					distance = {
+						source = root.capital_scope
+						min_distance  >= 120
+						type = euclidean
+					}
+				}
+			}
+			random_system_planet = {
+				limit = { is_planet_class = pc_relic }
+				#set_surveyed = yes
+				save_event_target_as = found_pc_relic
+				#effect = {
+				
+				#}
+			}
+			
+			root = { set_visited = prev }
+		}
+		#root = { 
+		if = {
+			limit = { exists = event_target:found_pc_relic }
+			country_event = { id = phi_empire.10 }
+		}
+	}
+}
